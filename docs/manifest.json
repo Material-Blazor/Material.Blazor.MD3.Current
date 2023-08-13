@@ -120,8 +120,8 @@
     },
     {
       "log_codes": [
-        "UidNotFound",
-        "DuplicateUids"
+        "DuplicateUids",
+        "UidNotFound"
       ],
       "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Articles/Installation.md",
@@ -134,8 +134,8 @@
     },
     {
       "log_codes": [
-        "UidNotFound",
-        "DuplicateUids"
+        "DuplicateUids",
+        "UidNotFound"
       ],
       "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Articles/Introduction.md",
