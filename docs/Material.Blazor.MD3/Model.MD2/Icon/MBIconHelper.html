@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>MBIconHelper </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="MBIconHelper ">
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Model.MD2/Icon/MBIconHelper.md/#L1">
+  </head>
+
+  <script type="module">
+    import options from './../../../public/main.js'
+    import { init } from './../../../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="U.MBIconHelper">
+<h1 id="mbiconhelper">MBIconHelper</h1>
+
+<h2 id="summary">Summary</h2>
+<p>A helper class returning icon foundries for icons in use across Material.Blazor components.</p>
+<h2 id="details">Details</h2>
+<ul>
+<li>Has <a href="xref:Material.Blazor.MBIconHelper#methods">three static methods (click for API documentation)</a> to return one of the following three icon foundries for any <code>IconFoundry</code> component parameter:
+<ul>
+<li>Material Icons via <code>MBIconHelper.MIFoundry(Nullable&lt;MBIconMITheme&gt;)</code>;</li>
+<li>Font Awesome Icons via <code>MBIconHelper.FAFoundry(Nullable&lt;MBIconFAStyle&gt;, Nullable&lt;MBIconFARelativeSize&gt;)</code>; and</li>
+<li>Open Iconic Icons via <code>MBIconHelper.OIFoundry()</code>;</li>
+</ul>
+</li>
+<li>Material Icons are included in the Material.Blazor bundled CSS;</li>
+<li><a href="https://fontawesome.com/changelog/latest">Font Awesome Icons version 5</a> are optional and can be included in your HTML <code>&lt;head&gt;</code> with the CDN link:
+<pre><code class="lang-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css&quot; integrity=&quot;sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==&quot; crossorigin=&quot;anonymous&quot; /&gt;
+</code></pre>
+</li>
+<li><a href="https://useiconic.com/open">Open Iconic Icons version 1.1</a> are also optional and can be included in your HTML <code>&lt;head&gt;</code> with the CDN link:
+<pre><code class="lang-html">&lt;link href=&quot;https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic.min.css&quot; crossorigin=&quot;anonymous&quot; rel=&quot;stylesheet&quot; /&gt;
+</code></pre>
+</li>
+</ul>
+<p> </p>
+<p> </p>
+<p><a href="xref:A.Utilities"><img src="https://img.shields.io/static/v1?label=See&amp;message=Utilities&amp;color=orange" alt="Components"></a>
+<a href="xref:Material.Blazor.MBIconHelper"><img src="https://img.shields.io/static/v1?label=API%20Documentation&amp;message=MBIconHelper&amp;color=brightgreen" alt="Docs"></a></p>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Model.MD2/Icon/MBIconHelper.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
