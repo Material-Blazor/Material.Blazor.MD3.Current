@@ -5,75 +5,6 @@
   "files": [
     {
       "type": "Conceptual",
-      "source_relative_path": "Articles/CoreComponents.md",
-      "output": {
-        ".html": {
-          "relative_path": "Articles/CoreComponents.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Articles/DevelopmentEnvironment.md",
-      "output": {
-        ".html": {
-          "relative_path": "Articles/DevelopmentEnvironment.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "UidNotFound"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Articles/Installation.md",
-      "output": {
-        ".html": {
-          "relative_path": "Articles/Installation.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "UidNotFound"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Articles/Introduction.md",
-      "output": {
-        ".html": {
-          "relative_path": "Articles/Introduction.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Articles/PlusComponents.md",
-      "output": {
-        ".html": {
-          "relative_path": "Articles/PlusComponents.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Articles/Principles.md",
-      "output": {
-        ".html": {
-          "relative_path": "Articles/Principles.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "CODE_OF_CONDUCT.md",
       "output": {
         ".html": {
@@ -93,9 +24,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Articles/CoreComponents.md",
       "output": {
@@ -106,9 +34,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Articles/DevelopmentEnvironment.md",
       "output": {
@@ -120,7 +45,6 @@
     },
     {
       "log_codes": [
-        "DuplicateUids",
         "UidNotFound"
       ],
       "type": "Conceptual",
@@ -134,7 +58,6 @@
     },
     {
       "log_codes": [
-        "DuplicateUids",
         "UidNotFound"
       ],
       "type": "Conceptual",
@@ -147,9 +70,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Articles/PlusComponents.md",
       "output": {
@@ -160,9 +80,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Articles/Principles.md",
       "output": {
@@ -258,6 +175,19 @@
       "output": {
         "resource": {
           "relative_path": "Material.Blazor.MD3/Articles/images/vs-extensions.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "Material.Blazor.MD3/Articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Material.Blazor.MD3/Articles/toc.html"
+        },
+        ".json": {
+          "relative_path": "Material.Blazor.MD3/Articles/toc.json"
         }
       },
       "version": ""
@@ -476,6 +406,19 @@
       "output": {
         ".html": {
           "relative_path": "Material.Blazor.MD3/Components/intro.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "Material.Blazor.MD3/Components/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Material.Blazor.MD3/Components/toc.html"
+        },
+        ".json": {
+          "relative_path": "Material.Blazor.MD3/Components/toc.json"
         }
       },
       "version": ""

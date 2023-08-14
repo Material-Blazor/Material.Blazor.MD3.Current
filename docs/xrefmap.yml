@@ -6,25 +6,25 @@ references:
   href: CODE_OF_CONDUCT.html
 - uid: A.CoreComponents
   name: CoreComponents
-  href: Articles/CoreComponents.html
+  href: Material.Blazor.MD3/Articles/CoreComponents.html
 - uid: A.DevelopmentEnvironment
   name: DevelopmentEnvironment
-  href: Articles/DevelopmentEnvironment.html
+  href: Material.Blazor.MD3/Articles/DevelopmentEnvironment.html
 - uid: A.Installation
   name: Installation
-  href: Articles/Installation.html
+  href: Material.Blazor.MD3/Articles/Installation.html
 - uid: A.Introduction
   name: Introduction
-  href: Articles/Introduction.html
+  href: Material.Blazor.MD3/Articles/Introduction.html
 - uid: A.License
   name: License
   href: LICENSE.html
 - uid: A.PlusComponents
   name: PlusComponents
-  href: Articles/PlusComponents.html
+  href: Material.Blazor.MD3/Articles/PlusComponents.html
 - uid: A.Principles
   name: Principles
-  href: Articles/Principles.html
+  href: Material.Blazor.MD3/Articles/Principles.html
 - uid: A.ReleaseNotes
   name: ReleaseNotes
   href: ReleaseNotes.html
