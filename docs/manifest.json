@@ -489,19 +489,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Material.Blazor.MD3/indexMD3.md",
-      "output": {
-        ".html": {
-          "relative_path": "Material.Blazor.MD3/indexMD3.html"
-        }
-      },
-      "version": ""
-    },
-    {
       "type": "Resource",
       "source_relative_path": "Material.Blazor.MD3/node_modules/@material/banner/images/banner.png",
       "output": {
