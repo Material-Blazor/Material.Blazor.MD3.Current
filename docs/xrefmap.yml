@@ -31,51 +31,18 @@ references:
 - uid: C.MBAnchor
   name: MBAnchor
   href: Material.Blazor.MD3/Components/Anchor/MBAnchor.html
-- uid: C.MBCard
-  name: MBCard
-  href: Material.Blazor.MD3/Components.MD2/Card/MBCard.html
 - uid: C.MBCircularProgressIndicator
   name: MBCircularProgressIndicator
   href: Material.Blazor.MD3/Components/ProgressIndicator/MBCircularProgressIndicator.html
-- uid: C.MBDataTable
-  name: MBDataTable
-  href: Material.Blazor.MD3/Components.MD2/DataTable/MBDataTable.html
-- uid: C.MBDialog
-  name: MBDialog
-  href: Material.Blazor.MD3/Components.MD2/Dialog/MBDialog.html
-- uid: C.MBDrawer
-  name: MBDrawer
-  href: Material.Blazor.MD3/Components.MD2/Drawer/MBDrawer.html
 - uid: C.MBIcon
   name: MBIcon
   href: Material.Blazor.MD3/Components/Icon/MBIcon.html
-- uid: C.MBIconButton
-  name: MBIconButton
-  href: Material.Blazor.MD3/Components.MD2/IconButton/MBIconButton.html
 - uid: C.MBLinearProgressIndicator
   name: MBLinearProgressIndicator
   href: Material.Blazor.MD3/Components/ProgressIndicator/MBLinearProgressIndicator.html
-- uid: C.MBListItem
-  name: MBListItem
-  href: Material.Blazor.MD3/Components.MD2/ListItem/MBListItem.html
-- uid: C.MBMenu
-  name: MBMenu
-  href: Material.Blazor.MD3/Components.MD2/Menu/MBMenu.html
-- uid: C.MBRadioButton
-  name: MBRadioButton
-  href: Material.Blazor.MD3/Components.MD2/RadioButton/MBRadioButton.html
-- uid: C.MBRadioButtonGroup
-  name: MBRadioButtonGroup
-  href: Material.Blazor.MD3/Components.MD2/RadioButtonGroup/MBRadioButtonGroup.html
-- uid: C.MBSelect
-  name: MBSelect
-  href: Material.Blazor.MD3/Components.MD2/Select/MBSelect.html
 - uid: C.MBSwitch
   name: MBSwitch
   href: Material.Blazor.MD3/Components/Switch/MBSwitch.html
-- uid: C.MBTopAppBar
-  name: MBTopAppBar
-  href: Material.Blazor.MD3/Components.MD2/TopAppBar/MBTopAppBar.html
 - uid: Material.Blazor
   name: Material.Blazor
   href: api/Material.Blazor.html
