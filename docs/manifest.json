@@ -1340,6 +1340,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBProgressType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBProgressType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.MBServicesOptions.yml",
       "output": {
         ".html": {

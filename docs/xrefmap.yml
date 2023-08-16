@@ -1154,6 +1154,42 @@ references:
   commentId: Overload:Material.Blazor.Internal.InternalProgressIndicator.BuildRenderTree
   fullName: Material.Blazor.Internal.InternalProgressIndicator.BuildRenderTree
   nameWithType: InternalProgressIndicator.BuildRenderTree
+- uid: Material.Blazor.Internal.InternalProgressIndicator.ProgressIsFourColor
+  name: ProgressIsFourColor
+  href: api/Material.Blazor.Internal.InternalProgressIndicator.html#Material_Blazor_Internal_InternalProgressIndicator_ProgressIsFourColor
+  commentId: P:Material.Blazor.Internal.InternalProgressIndicator.ProgressIsFourColor
+  fullName: Material.Blazor.Internal.InternalProgressIndicator.ProgressIsFourColor
+  nameWithType: InternalProgressIndicator.ProgressIsFourColor
+- uid: Material.Blazor.Internal.InternalProgressIndicator.ProgressIsFourColor*
+  name: ProgressIsFourColor
+  href: api/Material.Blazor.Internal.InternalProgressIndicator.html#Material_Blazor_Internal_InternalProgressIndicator_ProgressIsFourColor_
+  commentId: Overload:Material.Blazor.Internal.InternalProgressIndicator.ProgressIsFourColor
+  fullName: Material.Blazor.Internal.InternalProgressIndicator.ProgressIsFourColor
+  nameWithType: InternalProgressIndicator.ProgressIsFourColor
+- uid: Material.Blazor.Internal.InternalProgressIndicator.ProgressLevel
+  name: ProgressLevel
+  href: api/Material.Blazor.Internal.InternalProgressIndicator.html#Material_Blazor_Internal_InternalProgressIndicator_ProgressLevel
+  commentId: P:Material.Blazor.Internal.InternalProgressIndicator.ProgressLevel
+  fullName: Material.Blazor.Internal.InternalProgressIndicator.ProgressLevel
+  nameWithType: InternalProgressIndicator.ProgressLevel
+- uid: Material.Blazor.Internal.InternalProgressIndicator.ProgressLevel*
+  name: ProgressLevel
+  href: api/Material.Blazor.Internal.InternalProgressIndicator.html#Material_Blazor_Internal_InternalProgressIndicator_ProgressLevel_
+  commentId: Overload:Material.Blazor.Internal.InternalProgressIndicator.ProgressLevel
+  fullName: Material.Blazor.Internal.InternalProgressIndicator.ProgressLevel
+  nameWithType: InternalProgressIndicator.ProgressLevel
+- uid: Material.Blazor.Internal.InternalProgressIndicator.ProgressType
+  name: ProgressType
+  href: api/Material.Blazor.Internal.InternalProgressIndicator.html#Material_Blazor_Internal_InternalProgressIndicator_ProgressType
+  commentId: P:Material.Blazor.Internal.InternalProgressIndicator.ProgressType
+  fullName: Material.Blazor.Internal.InternalProgressIndicator.ProgressType
+  nameWithType: InternalProgressIndicator.ProgressType
+- uid: Material.Blazor.Internal.InternalProgressIndicator.ProgressType*
+  name: ProgressType
+  href: api/Material.Blazor.Internal.InternalProgressIndicator.html#Material_Blazor_Internal_InternalProgressIndicator_ProgressType_
+  commentId: Overload:Material.Blazor.Internal.InternalProgressIndicator.ProgressType
+  fullName: Material.Blazor.Internal.InternalProgressIndicator.ProgressType
+  nameWithType: InternalProgressIndicator.ProgressType
 - uid: Material.Blazor.Internal.InternalTextFieldBase
   name: InternalTextFieldBase
   href: api/Material.Blazor.Internal.InternalTextFieldBase.html
@@ -3373,6 +3409,30 @@ references:
   fullName.vb: Material.Blazor.MBOutlinedTextField.New
   nameWithType: MBOutlinedTextField.MBOutlinedTextField
   nameWithType.vb: MBOutlinedTextField.New
+- uid: Material.Blazor.MBProgressType
+  name: MBProgressType
+  href: api/Material.Blazor.MBProgressType.html
+  commentId: T:Material.Blazor.MBProgressType
+  fullName: Material.Blazor.MBProgressType
+  nameWithType: MBProgressType
+- uid: Material.Blazor.MBProgressType.Closed
+  name: Closed
+  href: api/Material.Blazor.MBProgressType.html#Material_Blazor_MBProgressType_Closed
+  commentId: F:Material.Blazor.MBProgressType.Closed
+  fullName: Material.Blazor.MBProgressType.Closed
+  nameWithType: MBProgressType.Closed
+- uid: Material.Blazor.MBProgressType.Determinate
+  name: Determinate
+  href: api/Material.Blazor.MBProgressType.html#Material_Blazor_MBProgressType_Determinate
+  commentId: F:Material.Blazor.MBProgressType.Determinate
+  fullName: Material.Blazor.MBProgressType.Determinate
+  nameWithType: MBProgressType.Determinate
+- uid: Material.Blazor.MBProgressType.Indeterminate
+  name: Indeterminate
+  href: api/Material.Blazor.MBProgressType.html#Material_Blazor_MBProgressType_Indeterminate
+  commentId: F:Material.Blazor.MBProgressType.Indeterminate
+  fullName: Material.Blazor.MBProgressType.Indeterminate
+  nameWithType: MBProgressType.Indeterminate
 - uid: Material.Blazor.MBServicesOptions
   name: MBServicesOptions
   href: api/Material.Blazor.MBServicesOptions.html
