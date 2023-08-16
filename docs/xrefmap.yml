@@ -10,6 +10,9 @@ references:
 - uid: A.DevelopmentEnvironment
   name: DevelopmentEnvironment
   href: Material.Blazor.MD3/Articles/DevelopmentEnvironment.html
+- uid: A.Icon
+  name: Icon
+  href: Material.Blazor.MD3/Articles/Icon.html
 - uid: A.Installation
   name: Installation
   href: Material.Blazor.MD3/Articles/Installation.html
@@ -34,9 +37,6 @@ references:
 - uid: C.MBCircularProgressIndicator
   name: MBCircularProgressIndicator
   href: Material.Blazor.MD3/Components/ProgressIndicator/MBCircularProgressIndicator.html
-- uid: C.MBCircularProgressIndicatorDetailed
-  name: MBCircularProgressIndicatorDetailed
-  href: Material.Blazor.MD3/Components/ProgressIndicator/MBCircularProgressIndicator.Detailed.html
 - uid: C.MBIcon
   name: MBIcon
   href: Material.Blazor.MD3/Components/Icon/MBIcon.html

@@ -48,6 +48,19 @@
         "UidNotFound"
       ],
       "type": "Conceptual",
+      "source_relative_path": "Material.Blazor.MD3/Articles/Icon.md",
+      "output": {
+        ".html": {
+          "relative_path": "Material.Blazor.MD3/Articles/Icon.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "UidNotFound"
+      ],
+      "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Articles/Installation.md",
       "output": {
         ".html": {
@@ -211,19 +224,6 @@
       "output": {
         ".html": {
           "relative_path": "Material.Blazor.MD3/Components/Icon/MBIcon.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "UidNotFound"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Material.Blazor.MD3/Components/ProgressIndicator/MBCircularProgressIndicator.Detailed.md",
-      "output": {
-        ".html": {
-          "relative_path": "Material.Blazor.MD3/Components/ProgressIndicator/MBCircularProgressIndicator.Detailed.html"
         }
       },
       "version": ""
