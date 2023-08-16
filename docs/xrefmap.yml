@@ -34,6 +34,9 @@ references:
 - uid: C.MBCircularProgressIndicator
   name: MBCircularProgressIndicator
   href: Material.Blazor.MD3/Components/ProgressIndicator/MBCircularProgressIndicator.html
+- uid: C.MBCircularProgressIndicatorDetailed
+  name: MBCircularProgressIndicatorDetailed
+  href: Material.Blazor.MD3/Components/ProgressIndicator/MBCircularProgressIndicator.Detailed.html
 - uid: C.MBIcon
   name: MBIcon
   href: Material.Blazor.MD3/Components/Icon/MBIcon.html
