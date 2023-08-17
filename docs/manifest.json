@@ -24,6 +24,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
       "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Articles/CoreComponents.md",
       "output": {
@@ -233,10 +236,10 @@
         "UidNotFound"
       ],
       "type": "Conceptual",
-      "source_relative_path": "Material.Blazor.MD3/Components/ProgressIndicator/MBCircularProgressIndicator.md",
+      "source_relative_path": "Material.Blazor.MD3/Components/ProgressIndicator/MBCircularProgress.md",
       "output": {
         ".html": {
-          "relative_path": "Material.Blazor.MD3/Components/ProgressIndicator/MBCircularProgressIndicator.html"
+          "relative_path": "Material.Blazor.MD3/Components/ProgressIndicator/MBCircularProgress.html"
         }
       },
       "version": ""
@@ -246,10 +249,10 @@
         "UidNotFound"
       ],
       "type": "Conceptual",
-      "source_relative_path": "Material.Blazor.MD3/Components/ProgressIndicator/MBLinearProgressIndicator.md",
+      "source_relative_path": "Material.Blazor.MD3/Components/ProgressIndicator/MBLinearProgress.md",
       "output": {
         ".html": {
-          "relative_path": "Material.Blazor.MD3/Components/ProgressIndicator/MBLinearProgressIndicator.html"
+          "relative_path": "Material.Blazor.MD3/Components/ProgressIndicator/MBLinearProgress.html"
         }
       },
       "version": ""
@@ -281,6 +284,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
       "type": "Toc",
       "source_relative_path": "Material.Blazor.MD3/Components/toc.yml",
       "output": {
@@ -850,10 +856,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.Internal.InternalProgressIndicator.yml",
+      "source_relative_path": "api/Material.Blazor.Internal.InternalProgressBase.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Material.Blazor.Internal.InternalProgressIndicator.html"
+          "relative_path": "api/Material.Blazor.Internal.InternalProgressBase.html"
         }
       },
       "version": ""
@@ -1000,10 +1006,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MBCircularProgressIndicator.yml",
+      "source_relative_path": "api/Material.Blazor.MBCircularProgress.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Material.Blazor.MBCircularProgressIndicator.html"
+          "relative_path": "api/Material.Blazor.MBCircularProgress.html"
         }
       },
       "version": ""
@@ -1120,10 +1126,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MBLinearProgressIndicator.yml",
+      "source_relative_path": "api/Material.Blazor.MBLinearProgress.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Material.Blazor.MBLinearProgressIndicator.html"
+          "relative_path": "api/Material.Blazor.MBLinearProgress.html"
         }
       },
       "version": ""

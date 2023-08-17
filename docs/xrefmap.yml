@@ -34,15 +34,15 @@ references:
 - uid: C.MBAnchor
   name: MBAnchor
   href: Material.Blazor.MD3/Components/Anchor/MBAnchor.html
-- uid: C.MBCircularProgressIndicator
-  name: MBCircularProgressIndicator
-  href: Material.Blazor.MD3/Components/ProgressIndicator/MBCircularProgressIndicator.html
+- uid: C.MBCircularProgress
+  name: MBCircularProgress
+  href: Material.Blazor.MD3/Components/ProgressIndicator/MBCircularProgress.html
 - uid: C.MBIcon
   name: MBIcon
   href: Material.Blazor.MD3/Components/Icon/MBIcon.html
-- uid: C.MBLinearProgressIndicator
-  name: MBLinearProgressIndicator
-  href: Material.Blazor.MD3/Components/ProgressIndicator/MBLinearProgressIndicator.html
+- uid: C.MBLinearProgress
+  name: MBLinearProgress
+  href: Material.Blazor.MD3/Components/ProgressIndicator/MBLinearProgress.html
 - uid: C.MBSwitch
   name: MBSwitch
   href: Material.Blazor.MD3/Components/Switch/MBSwitch.html
@@ -1088,78 +1088,78 @@ references:
   fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase(Of T, U).ValidationMessageFor
   nameWithType: InternalNumericFieldBase<T, U>.ValidationMessageFor
   nameWithType.vb: InternalNumericFieldBase(Of T, U).ValidationMessageFor
-- uid: Material.Blazor.Internal.InternalProgressIndicator
-  name: InternalProgressIndicator
-  href: api/Material.Blazor.Internal.InternalProgressIndicator.html
-  commentId: T:Material.Blazor.Internal.InternalProgressIndicator
-  fullName: Material.Blazor.Internal.InternalProgressIndicator
-  nameWithType: InternalProgressIndicator
-- uid: Material.Blazor.Internal.InternalProgressIndicator.#ctor
-  name: InternalProgressIndicator()
-  href: api/Material.Blazor.Internal.InternalProgressIndicator.html#Material_Blazor_Internal_InternalProgressIndicator__ctor
-  commentId: M:Material.Blazor.Internal.InternalProgressIndicator.#ctor
+- uid: Material.Blazor.Internal.InternalProgressBase
+  name: InternalProgressBase
+  href: api/Material.Blazor.Internal.InternalProgressBase.html
+  commentId: T:Material.Blazor.Internal.InternalProgressBase
+  fullName: Material.Blazor.Internal.InternalProgressBase
+  nameWithType: InternalProgressBase
+- uid: Material.Blazor.Internal.InternalProgressBase.#ctor
+  name: InternalProgressBase()
+  href: api/Material.Blazor.Internal.InternalProgressBase.html#Material_Blazor_Internal_InternalProgressBase__ctor
+  commentId: M:Material.Blazor.Internal.InternalProgressBase.#ctor
   name.vb: New()
-  fullName: Material.Blazor.Internal.InternalProgressIndicator.InternalProgressIndicator()
-  fullName.vb: Material.Blazor.Internal.InternalProgressIndicator.New()
-  nameWithType: InternalProgressIndicator.InternalProgressIndicator()
-  nameWithType.vb: InternalProgressIndicator.New()
-- uid: Material.Blazor.Internal.InternalProgressIndicator.#ctor*
-  name: InternalProgressIndicator
-  href: api/Material.Blazor.Internal.InternalProgressIndicator.html#Material_Blazor_Internal_InternalProgressIndicator__ctor_
-  commentId: Overload:Material.Blazor.Internal.InternalProgressIndicator.#ctor
+  fullName: Material.Blazor.Internal.InternalProgressBase.InternalProgressBase()
+  fullName.vb: Material.Blazor.Internal.InternalProgressBase.New()
+  nameWithType: InternalProgressBase.InternalProgressBase()
+  nameWithType.vb: InternalProgressBase.New()
+- uid: Material.Blazor.Internal.InternalProgressBase.#ctor*
+  name: InternalProgressBase
+  href: api/Material.Blazor.Internal.InternalProgressBase.html#Material_Blazor_Internal_InternalProgressBase__ctor_
+  commentId: Overload:Material.Blazor.Internal.InternalProgressBase.#ctor
   name.vb: New
-  fullName: Material.Blazor.Internal.InternalProgressIndicator.InternalProgressIndicator
-  fullName.vb: Material.Blazor.Internal.InternalProgressIndicator.New
-  nameWithType: InternalProgressIndicator.InternalProgressIndicator
-  nameWithType.vb: InternalProgressIndicator.New
-- uid: Material.Blazor.Internal.InternalProgressIndicator.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  fullName: Material.Blazor.Internal.InternalProgressBase.InternalProgressBase
+  fullName.vb: Material.Blazor.Internal.InternalProgressBase.New
+  nameWithType: InternalProgressBase.InternalProgressBase
+  nameWithType.vb: InternalProgressBase.New
+- uid: Material.Blazor.Internal.InternalProgressBase.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
   name: BuildRenderTree(RenderTreeBuilder)
-  href: api/Material.Blazor.Internal.InternalProgressIndicator.html#Material_Blazor_Internal_InternalProgressIndicator_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
-  commentId: M:Material.Blazor.Internal.InternalProgressIndicator.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
-  fullName: Material.Blazor.Internal.InternalProgressIndicator.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
-  nameWithType: InternalProgressIndicator.BuildRenderTree(RenderTreeBuilder)
-- uid: Material.Blazor.Internal.InternalProgressIndicator.BuildRenderTree*
+  href: api/Material.Blazor.Internal.InternalProgressBase.html#Material_Blazor_Internal_InternalProgressBase_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
+  commentId: M:Material.Blazor.Internal.InternalProgressBase.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  fullName: Material.Blazor.Internal.InternalProgressBase.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  nameWithType: InternalProgressBase.BuildRenderTree(RenderTreeBuilder)
+- uid: Material.Blazor.Internal.InternalProgressBase.BuildRenderTree*
   name: BuildRenderTree
-  href: api/Material.Blazor.Internal.InternalProgressIndicator.html#Material_Blazor_Internal_InternalProgressIndicator_BuildRenderTree_
-  commentId: Overload:Material.Blazor.Internal.InternalProgressIndicator.BuildRenderTree
-  fullName: Material.Blazor.Internal.InternalProgressIndicator.BuildRenderTree
-  nameWithType: InternalProgressIndicator.BuildRenderTree
-- uid: Material.Blazor.Internal.InternalProgressIndicator.ProgressIsFourColor
+  href: api/Material.Blazor.Internal.InternalProgressBase.html#Material_Blazor_Internal_InternalProgressBase_BuildRenderTree_
+  commentId: Overload:Material.Blazor.Internal.InternalProgressBase.BuildRenderTree
+  fullName: Material.Blazor.Internal.InternalProgressBase.BuildRenderTree
+  nameWithType: InternalProgressBase.BuildRenderTree
+- uid: Material.Blazor.Internal.InternalProgressBase.ProgressIsFourColor
   name: ProgressIsFourColor
-  href: api/Material.Blazor.Internal.InternalProgressIndicator.html#Material_Blazor_Internal_InternalProgressIndicator_ProgressIsFourColor
-  commentId: P:Material.Blazor.Internal.InternalProgressIndicator.ProgressIsFourColor
-  fullName: Material.Blazor.Internal.InternalProgressIndicator.ProgressIsFourColor
-  nameWithType: InternalProgressIndicator.ProgressIsFourColor
-- uid: Material.Blazor.Internal.InternalProgressIndicator.ProgressIsFourColor*
+  href: api/Material.Blazor.Internal.InternalProgressBase.html#Material_Blazor_Internal_InternalProgressBase_ProgressIsFourColor
+  commentId: P:Material.Blazor.Internal.InternalProgressBase.ProgressIsFourColor
+  fullName: Material.Blazor.Internal.InternalProgressBase.ProgressIsFourColor
+  nameWithType: InternalProgressBase.ProgressIsFourColor
+- uid: Material.Blazor.Internal.InternalProgressBase.ProgressIsFourColor*
   name: ProgressIsFourColor
-  href: api/Material.Blazor.Internal.InternalProgressIndicator.html#Material_Blazor_Internal_InternalProgressIndicator_ProgressIsFourColor_
-  commentId: Overload:Material.Blazor.Internal.InternalProgressIndicator.ProgressIsFourColor
-  fullName: Material.Blazor.Internal.InternalProgressIndicator.ProgressIsFourColor
-  nameWithType: InternalProgressIndicator.ProgressIsFourColor
-- uid: Material.Blazor.Internal.InternalProgressIndicator.ProgressLevel
+  href: api/Material.Blazor.Internal.InternalProgressBase.html#Material_Blazor_Internal_InternalProgressBase_ProgressIsFourColor_
+  commentId: Overload:Material.Blazor.Internal.InternalProgressBase.ProgressIsFourColor
+  fullName: Material.Blazor.Internal.InternalProgressBase.ProgressIsFourColor
+  nameWithType: InternalProgressBase.ProgressIsFourColor
+- uid: Material.Blazor.Internal.InternalProgressBase.ProgressLevel
   name: ProgressLevel
-  href: api/Material.Blazor.Internal.InternalProgressIndicator.html#Material_Blazor_Internal_InternalProgressIndicator_ProgressLevel
-  commentId: P:Material.Blazor.Internal.InternalProgressIndicator.ProgressLevel
-  fullName: Material.Blazor.Internal.InternalProgressIndicator.ProgressLevel
-  nameWithType: InternalProgressIndicator.ProgressLevel
-- uid: Material.Blazor.Internal.InternalProgressIndicator.ProgressLevel*
+  href: api/Material.Blazor.Internal.InternalProgressBase.html#Material_Blazor_Internal_InternalProgressBase_ProgressLevel
+  commentId: P:Material.Blazor.Internal.InternalProgressBase.ProgressLevel
+  fullName: Material.Blazor.Internal.InternalProgressBase.ProgressLevel
+  nameWithType: InternalProgressBase.ProgressLevel
+- uid: Material.Blazor.Internal.InternalProgressBase.ProgressLevel*
   name: ProgressLevel
-  href: api/Material.Blazor.Internal.InternalProgressIndicator.html#Material_Blazor_Internal_InternalProgressIndicator_ProgressLevel_
-  commentId: Overload:Material.Blazor.Internal.InternalProgressIndicator.ProgressLevel
-  fullName: Material.Blazor.Internal.InternalProgressIndicator.ProgressLevel
-  nameWithType: InternalProgressIndicator.ProgressLevel
-- uid: Material.Blazor.Internal.InternalProgressIndicator.ProgressType
+  href: api/Material.Blazor.Internal.InternalProgressBase.html#Material_Blazor_Internal_InternalProgressBase_ProgressLevel_
+  commentId: Overload:Material.Blazor.Internal.InternalProgressBase.ProgressLevel
+  fullName: Material.Blazor.Internal.InternalProgressBase.ProgressLevel
+  nameWithType: InternalProgressBase.ProgressLevel
+- uid: Material.Blazor.Internal.InternalProgressBase.ProgressType
   name: ProgressType
-  href: api/Material.Blazor.Internal.InternalProgressIndicator.html#Material_Blazor_Internal_InternalProgressIndicator_ProgressType
-  commentId: P:Material.Blazor.Internal.InternalProgressIndicator.ProgressType
-  fullName: Material.Blazor.Internal.InternalProgressIndicator.ProgressType
-  nameWithType: InternalProgressIndicator.ProgressType
-- uid: Material.Blazor.Internal.InternalProgressIndicator.ProgressType*
+  href: api/Material.Blazor.Internal.InternalProgressBase.html#Material_Blazor_Internal_InternalProgressBase_ProgressType
+  commentId: P:Material.Blazor.Internal.InternalProgressBase.ProgressType
+  fullName: Material.Blazor.Internal.InternalProgressBase.ProgressType
+  nameWithType: InternalProgressBase.ProgressType
+- uid: Material.Blazor.Internal.InternalProgressBase.ProgressType*
   name: ProgressType
-  href: api/Material.Blazor.Internal.InternalProgressIndicator.html#Material_Blazor_Internal_InternalProgressIndicator_ProgressType_
-  commentId: Overload:Material.Blazor.Internal.InternalProgressIndicator.ProgressType
-  fullName: Material.Blazor.Internal.InternalProgressIndicator.ProgressType
-  nameWithType: InternalProgressIndicator.ProgressType
+  href: api/Material.Blazor.Internal.InternalProgressBase.html#Material_Blazor_Internal_InternalProgressBase_ProgressType_
+  commentId: Overload:Material.Blazor.Internal.InternalProgressBase.ProgressType
+  fullName: Material.Blazor.Internal.InternalProgressBase.ProgressType
+  nameWithType: InternalProgressBase.ProgressType
 - uid: Material.Blazor.Internal.InternalTextFieldBase
   name: InternalTextFieldBase
   href: api/Material.Blazor.Internal.InternalTextFieldBase.html
@@ -2719,30 +2719,30 @@ references:
   commentId: Overload:Material.Blazor.MBCascadingDefaults.Version
   fullName: Material.Blazor.MBCascadingDefaults.Version
   nameWithType: MBCascadingDefaults.Version
-- uid: Material.Blazor.MBCircularProgressIndicator
-  name: MBCircularProgressIndicator
-  href: api/Material.Blazor.MBCircularProgressIndicator.html
-  commentId: T:Material.Blazor.MBCircularProgressIndicator
-  fullName: Material.Blazor.MBCircularProgressIndicator
-  nameWithType: MBCircularProgressIndicator
-- uid: Material.Blazor.MBCircularProgressIndicator.#ctor
-  name: MBCircularProgressIndicator()
-  href: api/Material.Blazor.MBCircularProgressIndicator.html#Material_Blazor_MBCircularProgressIndicator__ctor
-  commentId: M:Material.Blazor.MBCircularProgressIndicator.#ctor
+- uid: Material.Blazor.MBCircularProgress
+  name: MBCircularProgress
+  href: api/Material.Blazor.MBCircularProgress.html
+  commentId: T:Material.Blazor.MBCircularProgress
+  fullName: Material.Blazor.MBCircularProgress
+  nameWithType: MBCircularProgress
+- uid: Material.Blazor.MBCircularProgress.#ctor
+  name: MBCircularProgress()
+  href: api/Material.Blazor.MBCircularProgress.html#Material_Blazor_MBCircularProgress__ctor
+  commentId: M:Material.Blazor.MBCircularProgress.#ctor
   name.vb: New()
-  fullName: Material.Blazor.MBCircularProgressIndicator.MBCircularProgressIndicator()
-  fullName.vb: Material.Blazor.MBCircularProgressIndicator.New()
-  nameWithType: MBCircularProgressIndicator.MBCircularProgressIndicator()
-  nameWithType.vb: MBCircularProgressIndicator.New()
-- uid: Material.Blazor.MBCircularProgressIndicator.#ctor*
-  name: MBCircularProgressIndicator
-  href: api/Material.Blazor.MBCircularProgressIndicator.html#Material_Blazor_MBCircularProgressIndicator__ctor_
-  commentId: Overload:Material.Blazor.MBCircularProgressIndicator.#ctor
+  fullName: Material.Blazor.MBCircularProgress.MBCircularProgress()
+  fullName.vb: Material.Blazor.MBCircularProgress.New()
+  nameWithType: MBCircularProgress.MBCircularProgress()
+  nameWithType.vb: MBCircularProgress.New()
+- uid: Material.Blazor.MBCircularProgress.#ctor*
+  name: MBCircularProgress
+  href: api/Material.Blazor.MBCircularProgress.html#Material_Blazor_MBCircularProgress__ctor_
+  commentId: Overload:Material.Blazor.MBCircularProgress.#ctor
   name.vb: New
-  fullName: Material.Blazor.MBCircularProgressIndicator.MBCircularProgressIndicator
-  fullName.vb: Material.Blazor.MBCircularProgressIndicator.New
-  nameWithType: MBCircularProgressIndicator.MBCircularProgressIndicator
-  nameWithType.vb: MBCircularProgressIndicator.New
+  fullName: Material.Blazor.MBCircularProgress.MBCircularProgress
+  fullName.vb: Material.Blazor.MBCircularProgress.New
+  nameWithType: MBCircularProgress.MBCircularProgress
+  nameWithType.vb: MBCircularProgress.New
 - uid: Material.Blazor.MBDensity
   name: MBDensity
   href: api/Material.Blazor.MBDensity.html
@@ -3121,30 +3121,30 @@ references:
   commentId: F:Material.Blazor.MBItemValidation.NoSelection
   fullName: Material.Blazor.MBItemValidation.NoSelection
   nameWithType: MBItemValidation.NoSelection
-- uid: Material.Blazor.MBLinearProgressIndicator
-  name: MBLinearProgressIndicator
-  href: api/Material.Blazor.MBLinearProgressIndicator.html
-  commentId: T:Material.Blazor.MBLinearProgressIndicator
-  fullName: Material.Blazor.MBLinearProgressIndicator
-  nameWithType: MBLinearProgressIndicator
-- uid: Material.Blazor.MBLinearProgressIndicator.#ctor
-  name: MBLinearProgressIndicator()
-  href: api/Material.Blazor.MBLinearProgressIndicator.html#Material_Blazor_MBLinearProgressIndicator__ctor
-  commentId: M:Material.Blazor.MBLinearProgressIndicator.#ctor
+- uid: Material.Blazor.MBLinearProgress
+  name: MBLinearProgress
+  href: api/Material.Blazor.MBLinearProgress.html
+  commentId: T:Material.Blazor.MBLinearProgress
+  fullName: Material.Blazor.MBLinearProgress
+  nameWithType: MBLinearProgress
+- uid: Material.Blazor.MBLinearProgress.#ctor
+  name: MBLinearProgress()
+  href: api/Material.Blazor.MBLinearProgress.html#Material_Blazor_MBLinearProgress__ctor
+  commentId: M:Material.Blazor.MBLinearProgress.#ctor
   name.vb: New()
-  fullName: Material.Blazor.MBLinearProgressIndicator.MBLinearProgressIndicator()
-  fullName.vb: Material.Blazor.MBLinearProgressIndicator.New()
-  nameWithType: MBLinearProgressIndicator.MBLinearProgressIndicator()
-  nameWithType.vb: MBLinearProgressIndicator.New()
-- uid: Material.Blazor.MBLinearProgressIndicator.#ctor*
-  name: MBLinearProgressIndicator
-  href: api/Material.Blazor.MBLinearProgressIndicator.html#Material_Blazor_MBLinearProgressIndicator__ctor_
-  commentId: Overload:Material.Blazor.MBLinearProgressIndicator.#ctor
+  fullName: Material.Blazor.MBLinearProgress.MBLinearProgress()
+  fullName.vb: Material.Blazor.MBLinearProgress.New()
+  nameWithType: MBLinearProgress.MBLinearProgress()
+  nameWithType.vb: MBLinearProgress.New()
+- uid: Material.Blazor.MBLinearProgress.#ctor*
+  name: MBLinearProgress
+  href: api/Material.Blazor.MBLinearProgress.html#Material_Blazor_MBLinearProgress__ctor_
+  commentId: Overload:Material.Blazor.MBLinearProgress.#ctor
   name.vb: New
-  fullName: Material.Blazor.MBLinearProgressIndicator.MBLinearProgressIndicator
-  fullName.vb: Material.Blazor.MBLinearProgressIndicator.New
-  nameWithType: MBLinearProgressIndicator.MBLinearProgressIndicator
-  nameWithType.vb: MBLinearProgressIndicator.New
+  fullName: Material.Blazor.MBLinearProgress.MBLinearProgress
+  fullName.vb: Material.Blazor.MBLinearProgress.New
+  nameWithType: MBLinearProgress.MBLinearProgress
+  nameWithType.vb: MBLinearProgress.New
 - uid: Material.Blazor.MBLoggingLevel
   name: MBLoggingLevel
   href: api/Material.Blazor.MBLoggingLevel.html
