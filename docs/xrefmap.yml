@@ -34,6 +34,9 @@ references:
 - uid: C.MBAnchor
   name: MBAnchor
   href: Material.Blazor.MD3/Components/Anchor/MBAnchor.html
+- uid: C.MBCheckbox
+  name: MBCheckbox
+  href: Material.Blazor.MD3/Components/Checkbox/MBCheckbox.html
 - uid: C.MBCircularProgress
   name: MBCircularProgress
   href: Material.Blazor.MD3/Components/ProgressIndicator/MBCircularProgress.html
@@ -2719,6 +2722,102 @@ references:
   commentId: Overload:Material.Blazor.MBCascadingDefaults.Version
   fullName: Material.Blazor.MBCascadingDefaults.Version
   nameWithType: MBCascadingDefaults.Version
+- uid: Material.Blazor.MBCheckbox
+  name: MBCheckbox
+  href: api/Material.Blazor.MBCheckbox.html
+  commentId: T:Material.Blazor.MBCheckbox
+  fullName: Material.Blazor.MBCheckbox
+  nameWithType: MBCheckbox
+- uid: Material.Blazor.MBCheckbox.#ctor
+  name: MBCheckbox()
+  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox__ctor
+  commentId: M:Material.Blazor.MBCheckbox.#ctor
+  name.vb: New()
+  fullName: Material.Blazor.MBCheckbox.MBCheckbox()
+  fullName.vb: Material.Blazor.MBCheckbox.New()
+  nameWithType: MBCheckbox.MBCheckbox()
+  nameWithType.vb: MBCheckbox.New()
+- uid: Material.Blazor.MBCheckbox.#ctor*
+  name: MBCheckbox
+  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox__ctor_
+  commentId: Overload:Material.Blazor.MBCheckbox.#ctor
+  name.vb: New
+  fullName: Material.Blazor.MBCheckbox.MBCheckbox
+  fullName.vb: Material.Blazor.MBCheckbox.New
+  nameWithType: MBCheckbox.MBCheckbox
+  nameWithType.vb: MBCheckbox.New
+- uid: Material.Blazor.MBCheckbox.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  name: BuildRenderTree(RenderTreeBuilder)
+  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
+  commentId: M:Material.Blazor.MBCheckbox.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  fullName: Material.Blazor.MBCheckbox.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  nameWithType: MBCheckbox.BuildRenderTree(RenderTreeBuilder)
+- uid: Material.Blazor.MBCheckbox.BuildRenderTree*
+  name: BuildRenderTree
+  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_BuildRenderTree_
+  commentId: Overload:Material.Blazor.MBCheckbox.BuildRenderTree
+  fullName: Material.Blazor.MBCheckbox.BuildRenderTree
+  nameWithType: MBCheckbox.BuildRenderTree
+- uid: Material.Blazor.MBCheckbox.IsDisabled
+  name: IsDisabled
+  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_IsDisabled
+  commentId: P:Material.Blazor.MBCheckbox.IsDisabled
+  fullName: Material.Blazor.MBCheckbox.IsDisabled
+  nameWithType: MBCheckbox.IsDisabled
+- uid: Material.Blazor.MBCheckbox.IsDisabled*
+  name: IsDisabled
+  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_IsDisabled_
+  commentId: Overload:Material.Blazor.MBCheckbox.IsDisabled
+  fullName: Material.Blazor.MBCheckbox.IsDisabled
+  nameWithType: MBCheckbox.IsDisabled
+- uid: Material.Blazor.MBCheckbox.IsIndeterminate
+  name: IsIndeterminate
+  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_IsIndeterminate
+  commentId: P:Material.Blazor.MBCheckbox.IsIndeterminate
+  fullName: Material.Blazor.MBCheckbox.IsIndeterminate
+  nameWithType: MBCheckbox.IsIndeterminate
+- uid: Material.Blazor.MBCheckbox.IsIndeterminate*
+  name: IsIndeterminate
+  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_IsIndeterminate_
+  commentId: Overload:Material.Blazor.MBCheckbox.IsIndeterminate
+  fullName: Material.Blazor.MBCheckbox.IsIndeterminate
+  nameWithType: MBCheckbox.IsIndeterminate
+- uid: Material.Blazor.MBCheckbox.LabelLocationIsRightPLUS
+  name: LabelLocationIsRightPLUS
+  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_LabelLocationIsRightPLUS
+  commentId: P:Material.Blazor.MBCheckbox.LabelLocationIsRightPLUS
+  fullName: Material.Blazor.MBCheckbox.LabelLocationIsRightPLUS
+  nameWithType: MBCheckbox.LabelLocationIsRightPLUS
+- uid: Material.Blazor.MBCheckbox.LabelLocationIsRightPLUS*
+  name: LabelLocationIsRightPLUS
+  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_LabelLocationIsRightPLUS_
+  commentId: Overload:Material.Blazor.MBCheckbox.LabelLocationIsRightPLUS
+  fullName: Material.Blazor.MBCheckbox.LabelLocationIsRightPLUS
+  nameWithType: MBCheckbox.LabelLocationIsRightPLUS
+- uid: Material.Blazor.MBCheckbox.LabelPLUS
+  name: LabelPLUS
+  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_LabelPLUS
+  commentId: P:Material.Blazor.MBCheckbox.LabelPLUS
+  fullName: Material.Blazor.MBCheckbox.LabelPLUS
+  nameWithType: MBCheckbox.LabelPLUS
+- uid: Material.Blazor.MBCheckbox.LabelPLUS*
+  name: LabelPLUS
+  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_LabelPLUS_
+  commentId: Overload:Material.Blazor.MBCheckbox.LabelPLUS
+  fullName: Material.Blazor.MBCheckbox.LabelPLUS
+  nameWithType: MBCheckbox.LabelPLUS
+- uid: Material.Blazor.MBCheckbox.OnInitializedAsync
+  name: OnInitializedAsync()
+  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_OnInitializedAsync
+  commentId: M:Material.Blazor.MBCheckbox.OnInitializedAsync
+  fullName: Material.Blazor.MBCheckbox.OnInitializedAsync()
+  nameWithType: MBCheckbox.OnInitializedAsync()
+- uid: Material.Blazor.MBCheckbox.OnInitializedAsync*
+  name: OnInitializedAsync
+  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_OnInitializedAsync_
+  commentId: Overload:Material.Blazor.MBCheckbox.OnInitializedAsync
+  fullName: Material.Blazor.MBCheckbox.OnInitializedAsync
+  nameWithType: MBCheckbox.OnInitializedAsync
 - uid: Material.Blazor.MBCircularProgress
   name: MBCircularProgress
   href: api/Material.Blazor.MBCircularProgress.html

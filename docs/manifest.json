@@ -222,6 +222,19 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "Material.Blazor.MD3/Components/Checkbox/MBCheckbox.md",
+      "output": {
+        ".html": {
+          "relative_path": "Material.Blazor.MD3/Components/Checkbox/MBCheckbox.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Components/Icon/MBIcon.md",
       "output": {
@@ -1000,6 +1013,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBCascadingDefaults.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBCheckbox.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBCheckbox.html"
         }
       },
       "version": ""
