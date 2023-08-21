@@ -2806,18 +2806,6 @@ references:
   commentId: Overload:Material.Blazor.MBCheckbox.LabelPLUS
   fullName: Material.Blazor.MBCheckbox.LabelPLUS
   nameWithType: MBCheckbox.LabelPLUS
-- uid: Material.Blazor.MBCheckbox.OnInitializedAsync
-  name: OnInitializedAsync()
-  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_OnInitializedAsync
-  commentId: M:Material.Blazor.MBCheckbox.OnInitializedAsync
-  fullName: Material.Blazor.MBCheckbox.OnInitializedAsync()
-  nameWithType: MBCheckbox.OnInitializedAsync()
-- uid: Material.Blazor.MBCheckbox.OnInitializedAsync*
-  name: OnInitializedAsync
-  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_OnInitializedAsync_
-  commentId: Overload:Material.Blazor.MBCheckbox.OnInitializedAsync
-  fullName: Material.Blazor.MBCheckbox.OnInitializedAsync
-  nameWithType: MBCheckbox.OnInitializedAsync
 - uid: Material.Blazor.MBCircularProgress
   name: MBCircularProgress
   href: api/Material.Blazor.MBCircularProgress.html
@@ -3610,18 +3598,30 @@ references:
   commentId: Overload:Material.Blazor.MBSwitch.Icons
   fullName: Material.Blazor.MBSwitch.Icons
   nameWithType: MBSwitch.Icons
-- uid: Material.Blazor.MBSwitch.OnInitializedAsync
-  name: OnInitializedAsync()
-  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_OnInitializedAsync
-  commentId: M:Material.Blazor.MBSwitch.OnInitializedAsync
-  fullName: Material.Blazor.MBSwitch.OnInitializedAsync()
-  nameWithType: MBSwitch.OnInitializedAsync()
-- uid: Material.Blazor.MBSwitch.OnInitializedAsync*
-  name: OnInitializedAsync
-  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_OnInitializedAsync_
-  commentId: Overload:Material.Blazor.MBSwitch.OnInitializedAsync
-  fullName: Material.Blazor.MBSwitch.OnInitializedAsync
-  nameWithType: MBSwitch.OnInitializedAsync
+- uid: Material.Blazor.MBSwitch.LabelLocationIsRightPLUS
+  name: LabelLocationIsRightPLUS
+  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_LabelLocationIsRightPLUS
+  commentId: P:Material.Blazor.MBSwitch.LabelLocationIsRightPLUS
+  fullName: Material.Blazor.MBSwitch.LabelLocationIsRightPLUS
+  nameWithType: MBSwitch.LabelLocationIsRightPLUS
+- uid: Material.Blazor.MBSwitch.LabelLocationIsRightPLUS*
+  name: LabelLocationIsRightPLUS
+  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_LabelLocationIsRightPLUS_
+  commentId: Overload:Material.Blazor.MBSwitch.LabelLocationIsRightPLUS
+  fullName: Material.Blazor.MBSwitch.LabelLocationIsRightPLUS
+  nameWithType: MBSwitch.LabelLocationIsRightPLUS
+- uid: Material.Blazor.MBSwitch.LabelPLUS
+  name: LabelPLUS
+  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_LabelPLUS
+  commentId: P:Material.Blazor.MBSwitch.LabelPLUS
+  fullName: Material.Blazor.MBSwitch.LabelPLUS
+  nameWithType: MBSwitch.LabelPLUS
+- uid: Material.Blazor.MBSwitch.LabelPLUS*
+  name: LabelPLUS
+  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_LabelPLUS_
+  commentId: Overload:Material.Blazor.MBSwitch.LabelPLUS
+  fullName: Material.Blazor.MBSwitch.LabelPLUS
+  nameWithType: MBSwitch.LabelPLUS
 - uid: Material.Blazor.MBSwitch.ShowOnlySelectedIcon
   name: ShowOnlySelectedIcon
   href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_ShowOnlySelectedIcon
