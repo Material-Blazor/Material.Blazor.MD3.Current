@@ -2782,30 +2782,30 @@ references:
   commentId: Overload:Material.Blazor.MBCheckbox.IsIndeterminate
   fullName: Material.Blazor.MBCheckbox.IsIndeterminate
   nameWithType: MBCheckbox.IsIndeterminate
-- uid: Material.Blazor.MBCheckbox.LabelLocationIsRightPLUS
-  name: LabelLocationIsRightPLUS
-  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_LabelLocationIsRightPLUS
-  commentId: P:Material.Blazor.MBCheckbox.LabelLocationIsRightPLUS
-  fullName: Material.Blazor.MBCheckbox.LabelLocationIsRightPLUS
-  nameWithType: MBCheckbox.LabelLocationIsRightPLUS
-- uid: Material.Blazor.MBCheckbox.LabelLocationIsRightPLUS*
-  name: LabelLocationIsRightPLUS
-  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_LabelLocationIsRightPLUS_
-  commentId: Overload:Material.Blazor.MBCheckbox.LabelLocationIsRightPLUS
-  fullName: Material.Blazor.MBCheckbox.LabelLocationIsRightPLUS
-  nameWithType: MBCheckbox.LabelLocationIsRightPLUS
-- uid: Material.Blazor.MBCheckbox.LabelPLUS
-  name: LabelPLUS
-  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_LabelPLUS
-  commentId: P:Material.Blazor.MBCheckbox.LabelPLUS
-  fullName: Material.Blazor.MBCheckbox.LabelPLUS
-  nameWithType: MBCheckbox.LabelPLUS
-- uid: Material.Blazor.MBCheckbox.LabelPLUS*
-  name: LabelPLUS
-  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_LabelPLUS_
-  commentId: Overload:Material.Blazor.MBCheckbox.LabelPLUS
-  fullName: Material.Blazor.MBCheckbox.LabelPLUS
-  nameWithType: MBCheckbox.LabelPLUS
+- uid: Material.Blazor.MBCheckbox.LeadingLabelPLUS
+  name: LeadingLabelPLUS
+  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_LeadingLabelPLUS
+  commentId: P:Material.Blazor.MBCheckbox.LeadingLabelPLUS
+  fullName: Material.Blazor.MBCheckbox.LeadingLabelPLUS
+  nameWithType: MBCheckbox.LeadingLabelPLUS
+- uid: Material.Blazor.MBCheckbox.LeadingLabelPLUS*
+  name: LeadingLabelPLUS
+  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_LeadingLabelPLUS_
+  commentId: Overload:Material.Blazor.MBCheckbox.LeadingLabelPLUS
+  fullName: Material.Blazor.MBCheckbox.LeadingLabelPLUS
+  nameWithType: MBCheckbox.LeadingLabelPLUS
+- uid: Material.Blazor.MBCheckbox.TrailingLabelPLUS
+  name: TrailingLabelPLUS
+  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_TrailingLabelPLUS
+  commentId: P:Material.Blazor.MBCheckbox.TrailingLabelPLUS
+  fullName: Material.Blazor.MBCheckbox.TrailingLabelPLUS
+  nameWithType: MBCheckbox.TrailingLabelPLUS
+- uid: Material.Blazor.MBCheckbox.TrailingLabelPLUS*
+  name: TrailingLabelPLUS
+  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_TrailingLabelPLUS_
+  commentId: Overload:Material.Blazor.MBCheckbox.TrailingLabelPLUS
+  fullName: Material.Blazor.MBCheckbox.TrailingLabelPLUS
+  nameWithType: MBCheckbox.TrailingLabelPLUS
 - uid: Material.Blazor.MBCircularProgress
   name: MBCircularProgress
   href: api/Material.Blazor.MBCircularProgress.html
@@ -3598,30 +3598,18 @@ references:
   commentId: Overload:Material.Blazor.MBSwitch.Icons
   fullName: Material.Blazor.MBSwitch.Icons
   nameWithType: MBSwitch.Icons
-- uid: Material.Blazor.MBSwitch.LabelLocationIsRightPLUS
-  name: LabelLocationIsRightPLUS
-  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_LabelLocationIsRightPLUS
-  commentId: P:Material.Blazor.MBSwitch.LabelLocationIsRightPLUS
-  fullName: Material.Blazor.MBSwitch.LabelLocationIsRightPLUS
-  nameWithType: MBSwitch.LabelLocationIsRightPLUS
-- uid: Material.Blazor.MBSwitch.LabelLocationIsRightPLUS*
-  name: LabelLocationIsRightPLUS
-  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_LabelLocationIsRightPLUS_
-  commentId: Overload:Material.Blazor.MBSwitch.LabelLocationIsRightPLUS
-  fullName: Material.Blazor.MBSwitch.LabelLocationIsRightPLUS
-  nameWithType: MBSwitch.LabelLocationIsRightPLUS
-- uid: Material.Blazor.MBSwitch.LabelPLUS
-  name: LabelPLUS
-  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_LabelPLUS
-  commentId: P:Material.Blazor.MBSwitch.LabelPLUS
-  fullName: Material.Blazor.MBSwitch.LabelPLUS
-  nameWithType: MBSwitch.LabelPLUS
-- uid: Material.Blazor.MBSwitch.LabelPLUS*
-  name: LabelPLUS
-  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_LabelPLUS_
-  commentId: Overload:Material.Blazor.MBSwitch.LabelPLUS
-  fullName: Material.Blazor.MBSwitch.LabelPLUS
-  nameWithType: MBSwitch.LabelPLUS
+- uid: Material.Blazor.MBSwitch.LeadingLabelPLUS
+  name: LeadingLabelPLUS
+  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_LeadingLabelPLUS
+  commentId: P:Material.Blazor.MBSwitch.LeadingLabelPLUS
+  fullName: Material.Blazor.MBSwitch.LeadingLabelPLUS
+  nameWithType: MBSwitch.LeadingLabelPLUS
+- uid: Material.Blazor.MBSwitch.LeadingLabelPLUS*
+  name: LeadingLabelPLUS
+  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_LeadingLabelPLUS_
+  commentId: Overload:Material.Blazor.MBSwitch.LeadingLabelPLUS
+  fullName: Material.Blazor.MBSwitch.LeadingLabelPLUS
+  nameWithType: MBSwitch.LeadingLabelPLUS
 - uid: Material.Blazor.MBSwitch.ShowOnlySelectedIcon
   name: ShowOnlySelectedIcon
   href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_ShowOnlySelectedIcon
@@ -3634,6 +3622,18 @@ references:
   commentId: Overload:Material.Blazor.MBSwitch.ShowOnlySelectedIcon
   fullName: Material.Blazor.MBSwitch.ShowOnlySelectedIcon
   nameWithType: MBSwitch.ShowOnlySelectedIcon
+- uid: Material.Blazor.MBSwitch.TrailingLabelPLUS
+  name: TrailingLabelPLUS
+  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_TrailingLabelPLUS
+  commentId: P:Material.Blazor.MBSwitch.TrailingLabelPLUS
+  fullName: Material.Blazor.MBSwitch.TrailingLabelPLUS
+  nameWithType: MBSwitch.TrailingLabelPLUS
+- uid: Material.Blazor.MBSwitch.TrailingLabelPLUS*
+  name: TrailingLabelPLUS
+  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_TrailingLabelPLUS_
+  commentId: Overload:Material.Blazor.MBSwitch.TrailingLabelPLUS
+  fullName: Material.Blazor.MBSwitch.TrailingLabelPLUS
+  nameWithType: MBSwitch.TrailingLabelPLUS
 - uid: Material.Blazor.MBTextAlignStyle
   name: MBTextAlignStyle
   href: api/Material.Blazor.MBTextAlignStyle.html
