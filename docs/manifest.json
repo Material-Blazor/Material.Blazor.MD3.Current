@@ -288,6 +288,19 @@
         "UidNotFound"
       ],
       "type": "Conceptual",
+      "source_relative_path": "Material.Blazor.MD3/Components/TextField2/MBTextField2.md",
+      "output": {
+        ".html": {
+          "relative_path": "Material.Blazor.MD3/Components/TextField2/MBTextField2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "UidNotFound"
+      ],
+      "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Components/intro.md",
       "output": {
         ".html": {
@@ -879,6 +892,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.Internal.InternalTextField2Base.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.Internal.InternalTextField2Base.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.Internal.InternalTextFieldBase.yml",
       "output": {
         ".html": {
@@ -1273,6 +1296,36 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBTextAlignStyle.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBTextField.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBTextField.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBTextField2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBTextField2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBTextInputStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBTextInputStyle.html"
         }
       },
       "version": ""
