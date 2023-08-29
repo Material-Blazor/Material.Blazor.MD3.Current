@@ -852,6 +852,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.Internal.InternalFloatingPointField2Base-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.Internal.InternalFloatingPointField2Base-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.Internal.InternalFloatingPointFieldBase-2.yml",
       "output": {
         ".html": {
@@ -866,6 +876,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.Internal.InternalIntFieldBase-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.Internal.InternalNumericField2Base-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.Internal.InternalNumericField2Base-2.html"
         }
       },
       "version": ""
@@ -1056,6 +1076,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBCircularProgress.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBDecimalField2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBDecimalField2.html"
         }
       },
       "version": ""
