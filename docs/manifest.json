@@ -275,6 +275,19 @@
         "UidNotFound"
       ],
       "type": "Conceptual",
+      "source_relative_path": "Material.Blazor.MD3/Components/ProgressIndicator/MBProgress.md",
+      "output": {
+        ".html": {
+          "relative_path": "Material.Blazor.MD3/Components/ProgressIndicator/MBProgress.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "UidNotFound"
+      ],
+      "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Components/Switch/MBSwitch.md",
       "output": {
         ".html": {
@@ -310,9 +323,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Toc",
       "source_relative_path": "Material.Blazor.MD3/Components/toc.yml",
       "output": {
@@ -334,19 +344,6 @@
       "output": {
         ".html": {
           "relative_path": "Material.Blazor.MD3/Model.MD2/Icon/MBIconHelper.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "UidNotFound"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Material.Blazor.MD3/Model.MD2/Snackbar/IMBSnackbarService.md",
-      "output": {
-        ".html": {
-          "relative_path": "Material.Blazor.MD3/Model.MD2/Snackbar/IMBSnackbarService.html"
         }
       },
       "version": ""
@@ -952,40 +949,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.Internal.MD2.InternalSnackbar.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.Internal.MD2.InternalSnackbar.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.Internal.MD2.InternalSnackbarAnchor.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.Internal.MD2.InternalSnackbarAnchor.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.Internal.MD2.SingleSelectComponentMD2-2.yml",
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.Internal.MD2.SingleSelectComponentMD2-2.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.Internal.MD2.SnackbarInstance.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.Internal.MD2.SnackbarInstance.html"
         }
       },
       "version": ""
@@ -1292,6 +1259,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBProgress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBProgress.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBProgressStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBProgressStyle.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.MBProgressType.yml",
       "output": {
         ".html": {
@@ -1436,16 +1423,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MD2.IMBIconFoundry.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MD2.IMBSnackbarService.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MD2.IMBSnackbarService.html"
         }
       },
       "version": ""
@@ -1836,26 +1813,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MD2.MBSliderType.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MD2.MBSnackbarServiceConfiguration.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MD2.MBSnackbarServiceConfiguration.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MD2.MBSnackbarSettings.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MD2.MBSnackbarSettings.html"
         }
       },
       "version": ""
