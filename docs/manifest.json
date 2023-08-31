@@ -37,6 +37,19 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "Material.Blazor.MD3/Articles/Density.md",
+      "output": {
+        ".html": {
+          "relative_path": "Material.Blazor.MD3/Articles/Density.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Articles/DevelopmentEnvironment.md",
       "output": {
@@ -101,6 +114,36 @@
       "output": {
         ".html": {
           "relative_path": "Material.Blazor.MD3/Articles/Principles.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Material.Blazor.MD3/Articles/Services.md",
+      "output": {
+        ".html": {
+          "relative_path": "Material.Blazor.MD3/Articles/Services.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Material.Blazor.MD3/Articles/Toast.md",
+      "output": {
+        ".html": {
+          "relative_path": "Material.Blazor.MD3/Articles/Toast.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Material.Blazor.MD3/Articles/Utilities.md",
+      "output": {
+        ".html": {
+          "relative_path": "Material.Blazor.MD3/Articles/Utilities.html"
         }
       },
       "version": ""
@@ -222,9 +265,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Components/Checkbox/MBCheckbox.md",
       "output": {
@@ -284,9 +324,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Components/Switch/MBSwitch.md",
       "output": {
@@ -310,9 +347,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Components/intro.md",
       "output": {
@@ -349,9 +383,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Model.MD2/Tooltip/IMBTooltipService.md",
       "output": {
@@ -362,9 +393,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Model/MBCascadingDefaults.md",
       "output": {
@@ -375,9 +403,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Model/Toast/IMBToastService.md",
       "output": {
@@ -1159,16 +1184,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MBItemValidation.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MBItemValidation.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.MBLinearProgress.yml",
       "output": {
         ".html": {
@@ -1453,6 +1468,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MD2.MBBadgeStyle.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MD2.MBButton.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MD2.MBButton.html"
         }
       },
       "version": ""
@@ -1961,9 +1986,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
