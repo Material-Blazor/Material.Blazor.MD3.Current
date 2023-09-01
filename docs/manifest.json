@@ -384,16 +384,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "Material.Blazor.MD3/Model.MD2/Tooltip/IMBTooltipService.md",
-      "output": {
-        ".html": {
-          "relative_path": "Material.Blazor.MD3/Model.MD2/Tooltip/IMBTooltipService.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Model/MBCascadingDefaults.md",
       "output": {
         ".html": {
@@ -834,16 +824,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.IMBTooltipService.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.IMBTooltipService.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.Internal.ComponentFoundation.yml",
       "output": {
         ".html": {
@@ -968,6 +948,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.Internal.MD2.InputComponentMD2-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.Internal.MD2.InternalTooltipAnchor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.Internal.MD2.InternalTooltipAnchor.html"
         }
       },
       "version": ""
@@ -1444,6 +1434,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MD2.IMBTooltipService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MD2.IMBTooltipService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.MD2.MBAnchor.yml",
       "output": {
         ".html": {
@@ -1868,6 +1868,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MD2.MBToastPosition.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MD2.MBTooltip.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MD2.MBTooltip.html"
         }
       },
       "version": ""

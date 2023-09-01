@@ -253,69 +253,6 @@ references:
   commentId: Overload:Material.Blazor.IMBToastService.ShowToast
   fullName: Material.Blazor.IMBToastService.ShowToast
   nameWithType: IMBToastService.ShowToast
-- uid: Material.Blazor.IMBTooltipService
-  name: IMBTooltipService
-  href: api/Material.Blazor.IMBTooltipService.html
-  commentId: T:Material.Blazor.IMBTooltipService
-  fullName: Material.Blazor.IMBTooltipService
-  nameWithType: IMBTooltipService
-- uid: Material.Blazor.IMBTooltipService.AddTooltip(System.Int64,Microsoft.AspNetCore.Components.MarkupString)
-  name: AddTooltip(long, MarkupString)
-  href: api/Material.Blazor.IMBTooltipService.html#Material_Blazor_IMBTooltipService_AddTooltip_System_Int64_Microsoft_AspNetCore_Components_MarkupString_
-  commentId: M:Material.Blazor.IMBTooltipService.AddTooltip(System.Int64,Microsoft.AspNetCore.Components.MarkupString)
-  name.vb: AddTooltip(Long, MarkupString)
-  fullName: Material.Blazor.IMBTooltipService.AddTooltip(long, Microsoft.AspNetCore.Components.MarkupString)
-  fullName.vb: Material.Blazor.IMBTooltipService.AddTooltip(Long, Microsoft.AspNetCore.Components.MarkupString)
-  nameWithType: IMBTooltipService.AddTooltip(long, MarkupString)
-  nameWithType.vb: IMBTooltipService.AddTooltip(Long, MarkupString)
-- uid: Material.Blazor.IMBTooltipService.AddTooltip(System.Int64,Microsoft.AspNetCore.Components.RenderFragment)
-  name: AddTooltip(long, RenderFragment)
-  href: api/Material.Blazor.IMBTooltipService.html#Material_Blazor_IMBTooltipService_AddTooltip_System_Int64_Microsoft_AspNetCore_Components_RenderFragment_
-  commentId: M:Material.Blazor.IMBTooltipService.AddTooltip(System.Int64,Microsoft.AspNetCore.Components.RenderFragment)
-  name.vb: AddTooltip(Long, RenderFragment)
-  fullName: Material.Blazor.IMBTooltipService.AddTooltip(long, Microsoft.AspNetCore.Components.RenderFragment)
-  fullName.vb: Material.Blazor.IMBTooltipService.AddTooltip(Long, Microsoft.AspNetCore.Components.RenderFragment)
-  nameWithType: IMBTooltipService.AddTooltip(long, RenderFragment)
-  nameWithType.vb: IMBTooltipService.AddTooltip(Long, RenderFragment)
-- uid: Material.Blazor.IMBTooltipService.AddTooltip*
-  name: AddTooltip
-  href: api/Material.Blazor.IMBTooltipService.html#Material_Blazor_IMBTooltipService_AddTooltip_
-  commentId: Overload:Material.Blazor.IMBTooltipService.AddTooltip
-  fullName: Material.Blazor.IMBTooltipService.AddTooltip
-  nameWithType: IMBTooltipService.AddTooltip
-- uid: Material.Blazor.IMBTooltipService.OnAddMarkupString
-  name: OnAddMarkupString
-  href: api/Material.Blazor.IMBTooltipService.html#Material_Blazor_IMBTooltipService_OnAddMarkupString
-  commentId: E:Material.Blazor.IMBTooltipService.OnAddMarkupString
-  fullName: Material.Blazor.IMBTooltipService.OnAddMarkupString
-  nameWithType: IMBTooltipService.OnAddMarkupString
-- uid: Material.Blazor.IMBTooltipService.OnAddRenderFragment
-  name: OnAddRenderFragment
-  href: api/Material.Blazor.IMBTooltipService.html#Material_Blazor_IMBTooltipService_OnAddRenderFragment
-  commentId: E:Material.Blazor.IMBTooltipService.OnAddRenderFragment
-  fullName: Material.Blazor.IMBTooltipService.OnAddRenderFragment
-  nameWithType: IMBTooltipService.OnAddRenderFragment
-- uid: Material.Blazor.IMBTooltipService.OnRemove
-  name: OnRemove
-  href: api/Material.Blazor.IMBTooltipService.html#Material_Blazor_IMBTooltipService_OnRemove
-  commentId: E:Material.Blazor.IMBTooltipService.OnRemove
-  fullName: Material.Blazor.IMBTooltipService.OnRemove
-  nameWithType: IMBTooltipService.OnRemove
-- uid: Material.Blazor.IMBTooltipService.RemoveTooltip(System.Int64)
-  name: RemoveTooltip(long)
-  href: api/Material.Blazor.IMBTooltipService.html#Material_Blazor_IMBTooltipService_RemoveTooltip_System_Int64_
-  commentId: M:Material.Blazor.IMBTooltipService.RemoveTooltip(System.Int64)
-  name.vb: RemoveTooltip(Long)
-  fullName: Material.Blazor.IMBTooltipService.RemoveTooltip(long)
-  fullName.vb: Material.Blazor.IMBTooltipService.RemoveTooltip(Long)
-  nameWithType: IMBTooltipService.RemoveTooltip(long)
-  nameWithType.vb: IMBTooltipService.RemoveTooltip(Long)
-- uid: Material.Blazor.IMBTooltipService.RemoveTooltip*
-  name: RemoveTooltip
-  href: api/Material.Blazor.IMBTooltipService.html#Material_Blazor_IMBTooltipService_RemoveTooltip_
-  commentId: Overload:Material.Blazor.IMBTooltipService.RemoveTooltip
-  fullName: Material.Blazor.IMBTooltipService.RemoveTooltip
-  nameWithType: IMBTooltipService.RemoveTooltip
 - uid: Material.Blazor.Internal
   name: Material.Blazor.Internal
   href: api/Material.Blazor.Internal.html
@@ -2487,6 +2424,69 @@ references:
   fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T).ValueExpression
   nameWithType: InputComponentMD2<T>.ValueExpression
   nameWithType.vb: InputComponentMD2(Of T).ValueExpression
+- uid: Material.Blazor.Internal.MD2.InternalTooltipAnchor
+  name: InternalTooltipAnchor
+  href: api/Material.Blazor.Internal.MD2.InternalTooltipAnchor.html
+  commentId: T:Material.Blazor.Internal.MD2.InternalTooltipAnchor
+  fullName: Material.Blazor.Internal.MD2.InternalTooltipAnchor
+  nameWithType: InternalTooltipAnchor
+- uid: Material.Blazor.Internal.MD2.InternalTooltipAnchor.#ctor
+  name: InternalTooltipAnchor()
+  href: api/Material.Blazor.Internal.MD2.InternalTooltipAnchor.html#Material_Blazor_Internal_MD2_InternalTooltipAnchor__ctor
+  commentId: M:Material.Blazor.Internal.MD2.InternalTooltipAnchor.#ctor
+  name.vb: New()
+  fullName: Material.Blazor.Internal.MD2.InternalTooltipAnchor.InternalTooltipAnchor()
+  fullName.vb: Material.Blazor.Internal.MD2.InternalTooltipAnchor.New()
+  nameWithType: InternalTooltipAnchor.InternalTooltipAnchor()
+  nameWithType.vb: InternalTooltipAnchor.New()
+- uid: Material.Blazor.Internal.MD2.InternalTooltipAnchor.#ctor*
+  name: InternalTooltipAnchor
+  href: api/Material.Blazor.Internal.MD2.InternalTooltipAnchor.html#Material_Blazor_Internal_MD2_InternalTooltipAnchor__ctor_
+  commentId: Overload:Material.Blazor.Internal.MD2.InternalTooltipAnchor.#ctor
+  name.vb: New
+  fullName: Material.Blazor.Internal.MD2.InternalTooltipAnchor.InternalTooltipAnchor
+  fullName.vb: Material.Blazor.Internal.MD2.InternalTooltipAnchor.New
+  nameWithType: InternalTooltipAnchor.InternalTooltipAnchor
+  nameWithType.vb: InternalTooltipAnchor.New
+- uid: Material.Blazor.Internal.MD2.InternalTooltipAnchor.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  name: BuildRenderTree(RenderTreeBuilder)
+  href: api/Material.Blazor.Internal.MD2.InternalTooltipAnchor.html#Material_Blazor_Internal_MD2_InternalTooltipAnchor_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
+  commentId: M:Material.Blazor.Internal.MD2.InternalTooltipAnchor.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  fullName: Material.Blazor.Internal.MD2.InternalTooltipAnchor.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  nameWithType: InternalTooltipAnchor.BuildRenderTree(RenderTreeBuilder)
+- uid: Material.Blazor.Internal.MD2.InternalTooltipAnchor.BuildRenderTree*
+  name: BuildRenderTree
+  href: api/Material.Blazor.Internal.MD2.InternalTooltipAnchor.html#Material_Blazor_Internal_MD2_InternalTooltipAnchor_BuildRenderTree_
+  commentId: Overload:Material.Blazor.Internal.MD2.InternalTooltipAnchor.BuildRenderTree
+  fullName: Material.Blazor.Internal.MD2.InternalTooltipAnchor.BuildRenderTree
+  nameWithType: InternalTooltipAnchor.BuildRenderTree
+- uid: Material.Blazor.Internal.MD2.InternalTooltipAnchor.OnAfterRenderAsync(System.Boolean)
+  name: OnAfterRenderAsync(bool)
+  href: api/Material.Blazor.Internal.MD2.InternalTooltipAnchor.html#Material_Blazor_Internal_MD2_InternalTooltipAnchor_OnAfterRenderAsync_System_Boolean_
+  commentId: M:Material.Blazor.Internal.MD2.InternalTooltipAnchor.OnAfterRenderAsync(System.Boolean)
+  name.vb: OnAfterRenderAsync(Boolean)
+  fullName: Material.Blazor.Internal.MD2.InternalTooltipAnchor.OnAfterRenderAsync(bool)
+  fullName.vb: Material.Blazor.Internal.MD2.InternalTooltipAnchor.OnAfterRenderAsync(Boolean)
+  nameWithType: InternalTooltipAnchor.OnAfterRenderAsync(bool)
+  nameWithType.vb: InternalTooltipAnchor.OnAfterRenderAsync(Boolean)
+- uid: Material.Blazor.Internal.MD2.InternalTooltipAnchor.OnAfterRenderAsync*
+  name: OnAfterRenderAsync
+  href: api/Material.Blazor.Internal.MD2.InternalTooltipAnchor.html#Material_Blazor_Internal_MD2_InternalTooltipAnchor_OnAfterRenderAsync_
+  commentId: Overload:Material.Blazor.Internal.MD2.InternalTooltipAnchor.OnAfterRenderAsync
+  fullName: Material.Blazor.Internal.MD2.InternalTooltipAnchor.OnAfterRenderAsync
+  nameWithType: InternalTooltipAnchor.OnAfterRenderAsync
+- uid: Material.Blazor.Internal.MD2.InternalTooltipAnchor.OnInitializedAsync
+  name: OnInitializedAsync()
+  href: api/Material.Blazor.Internal.MD2.InternalTooltipAnchor.html#Material_Blazor_Internal_MD2_InternalTooltipAnchor_OnInitializedAsync
+  commentId: M:Material.Blazor.Internal.MD2.InternalTooltipAnchor.OnInitializedAsync
+  fullName: Material.Blazor.Internal.MD2.InternalTooltipAnchor.OnInitializedAsync()
+  nameWithType: InternalTooltipAnchor.OnInitializedAsync()
+- uid: Material.Blazor.Internal.MD2.InternalTooltipAnchor.OnInitializedAsync*
+  name: OnInitializedAsync
+  href: api/Material.Blazor.Internal.MD2.InternalTooltipAnchor.html#Material_Blazor_Internal_MD2_InternalTooltipAnchor_OnInitializedAsync_
+  commentId: Overload:Material.Blazor.Internal.MD2.InternalTooltipAnchor.OnInitializedAsync
+  fullName: Material.Blazor.Internal.MD2.InternalTooltipAnchor.OnInitializedAsync
+  nameWithType: InternalTooltipAnchor.OnInitializedAsync
 - uid: Material.Blazor.Internal.MD2.SingleSelectComponentMD2`2
   name: SingleSelectComponentMD2<T, TListElement>
   href: api/Material.Blazor.Internal.MD2.SingleSelectComponentMD2-2.html
@@ -4584,6 +4584,69 @@ references:
   commentId: Overload:Material.Blazor.MD2.IMBIconFoundry.FoundryName
   fullName: Material.Blazor.MD2.IMBIconFoundry.FoundryName
   nameWithType: IMBIconFoundry.FoundryName
+- uid: Material.Blazor.MD2.IMBTooltipService
+  name: IMBTooltipService
+  href: api/Material.Blazor.MD2.IMBTooltipService.html
+  commentId: T:Material.Blazor.MD2.IMBTooltipService
+  fullName: Material.Blazor.MD2.IMBTooltipService
+  nameWithType: IMBTooltipService
+- uid: Material.Blazor.MD2.IMBTooltipService.AddTooltip(System.Int64,Microsoft.AspNetCore.Components.MarkupString)
+  name: AddTooltip(long, MarkupString)
+  href: api/Material.Blazor.MD2.IMBTooltipService.html#Material_Blazor_MD2_IMBTooltipService_AddTooltip_System_Int64_Microsoft_AspNetCore_Components_MarkupString_
+  commentId: M:Material.Blazor.MD2.IMBTooltipService.AddTooltip(System.Int64,Microsoft.AspNetCore.Components.MarkupString)
+  name.vb: AddTooltip(Long, MarkupString)
+  fullName: Material.Blazor.MD2.IMBTooltipService.AddTooltip(long, Microsoft.AspNetCore.Components.MarkupString)
+  fullName.vb: Material.Blazor.MD2.IMBTooltipService.AddTooltip(Long, Microsoft.AspNetCore.Components.MarkupString)
+  nameWithType: IMBTooltipService.AddTooltip(long, MarkupString)
+  nameWithType.vb: IMBTooltipService.AddTooltip(Long, MarkupString)
+- uid: Material.Blazor.MD2.IMBTooltipService.AddTooltip(System.Int64,Microsoft.AspNetCore.Components.RenderFragment)
+  name: AddTooltip(long, RenderFragment)
+  href: api/Material.Blazor.MD2.IMBTooltipService.html#Material_Blazor_MD2_IMBTooltipService_AddTooltip_System_Int64_Microsoft_AspNetCore_Components_RenderFragment_
+  commentId: M:Material.Blazor.MD2.IMBTooltipService.AddTooltip(System.Int64,Microsoft.AspNetCore.Components.RenderFragment)
+  name.vb: AddTooltip(Long, RenderFragment)
+  fullName: Material.Blazor.MD2.IMBTooltipService.AddTooltip(long, Microsoft.AspNetCore.Components.RenderFragment)
+  fullName.vb: Material.Blazor.MD2.IMBTooltipService.AddTooltip(Long, Microsoft.AspNetCore.Components.RenderFragment)
+  nameWithType: IMBTooltipService.AddTooltip(long, RenderFragment)
+  nameWithType.vb: IMBTooltipService.AddTooltip(Long, RenderFragment)
+- uid: Material.Blazor.MD2.IMBTooltipService.AddTooltip*
+  name: AddTooltip
+  href: api/Material.Blazor.MD2.IMBTooltipService.html#Material_Blazor_MD2_IMBTooltipService_AddTooltip_
+  commentId: Overload:Material.Blazor.MD2.IMBTooltipService.AddTooltip
+  fullName: Material.Blazor.MD2.IMBTooltipService.AddTooltip
+  nameWithType: IMBTooltipService.AddTooltip
+- uid: Material.Blazor.MD2.IMBTooltipService.OnAddMarkupString
+  name: OnAddMarkupString
+  href: api/Material.Blazor.MD2.IMBTooltipService.html#Material_Blazor_MD2_IMBTooltipService_OnAddMarkupString
+  commentId: E:Material.Blazor.MD2.IMBTooltipService.OnAddMarkupString
+  fullName: Material.Blazor.MD2.IMBTooltipService.OnAddMarkupString
+  nameWithType: IMBTooltipService.OnAddMarkupString
+- uid: Material.Blazor.MD2.IMBTooltipService.OnAddRenderFragment
+  name: OnAddRenderFragment
+  href: api/Material.Blazor.MD2.IMBTooltipService.html#Material_Blazor_MD2_IMBTooltipService_OnAddRenderFragment
+  commentId: E:Material.Blazor.MD2.IMBTooltipService.OnAddRenderFragment
+  fullName: Material.Blazor.MD2.IMBTooltipService.OnAddRenderFragment
+  nameWithType: IMBTooltipService.OnAddRenderFragment
+- uid: Material.Blazor.MD2.IMBTooltipService.OnRemove
+  name: OnRemove
+  href: api/Material.Blazor.MD2.IMBTooltipService.html#Material_Blazor_MD2_IMBTooltipService_OnRemove
+  commentId: E:Material.Blazor.MD2.IMBTooltipService.OnRemove
+  fullName: Material.Blazor.MD2.IMBTooltipService.OnRemove
+  nameWithType: IMBTooltipService.OnRemove
+- uid: Material.Blazor.MD2.IMBTooltipService.RemoveTooltip(System.Int64)
+  name: RemoveTooltip(long)
+  href: api/Material.Blazor.MD2.IMBTooltipService.html#Material_Blazor_MD2_IMBTooltipService_RemoveTooltip_System_Int64_
+  commentId: M:Material.Blazor.MD2.IMBTooltipService.RemoveTooltip(System.Int64)
+  name.vb: RemoveTooltip(Long)
+  fullName: Material.Blazor.MD2.IMBTooltipService.RemoveTooltip(long)
+  fullName.vb: Material.Blazor.MD2.IMBTooltipService.RemoveTooltip(Long)
+  nameWithType: IMBTooltipService.RemoveTooltip(long)
+  nameWithType.vb: IMBTooltipService.RemoveTooltip(Long)
+- uid: Material.Blazor.MD2.IMBTooltipService.RemoveTooltip*
+  name: RemoveTooltip
+  href: api/Material.Blazor.MD2.IMBTooltipService.html#Material_Blazor_MD2_IMBTooltipService_RemoveTooltip_
+  commentId: Overload:Material.Blazor.MD2.IMBTooltipService.RemoveTooltip
+  fullName: Material.Blazor.MD2.IMBTooltipService.RemoveTooltip
+  nameWithType: IMBTooltipService.RemoveTooltip
 - uid: Material.Blazor.MD2.MBAnchor
   name: MBAnchor
   href: api/Material.Blazor.MD2.MBAnchor.html
@@ -7639,6 +7702,99 @@ references:
   commentId: F:Material.Blazor.MD2.MBToastPosition.TopRight
   fullName: Material.Blazor.MD2.MBToastPosition.TopRight
   nameWithType: MBToastPosition.TopRight
+- uid: Material.Blazor.MD2.MBTooltip
+  name: MBTooltip
+  href: api/Material.Blazor.MD2.MBTooltip.html
+  commentId: T:Material.Blazor.MD2.MBTooltip
+  fullName: Material.Blazor.MD2.MBTooltip
+  nameWithType: MBTooltip
+- uid: Material.Blazor.MD2.MBTooltip.#ctor
+  name: MBTooltip()
+  href: api/Material.Blazor.MD2.MBTooltip.html#Material_Blazor_MD2_MBTooltip__ctor
+  commentId: M:Material.Blazor.MD2.MBTooltip.#ctor
+  name.vb: New()
+  fullName: Material.Blazor.MD2.MBTooltip.MBTooltip()
+  fullName.vb: Material.Blazor.MD2.MBTooltip.New()
+  nameWithType: MBTooltip.MBTooltip()
+  nameWithType.vb: MBTooltip.New()
+- uid: Material.Blazor.MD2.MBTooltip.#ctor*
+  name: MBTooltip
+  href: api/Material.Blazor.MD2.MBTooltip.html#Material_Blazor_MD2_MBTooltip__ctor_
+  commentId: Overload:Material.Blazor.MD2.MBTooltip.#ctor
+  name.vb: New
+  fullName: Material.Blazor.MD2.MBTooltip.MBTooltip
+  fullName.vb: Material.Blazor.MD2.MBTooltip.New
+  nameWithType: MBTooltip.MBTooltip
+  nameWithType.vb: MBTooltip.New
+- uid: Material.Blazor.MD2.MBTooltip.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  name: BuildRenderTree(RenderTreeBuilder)
+  href: api/Material.Blazor.MD2.MBTooltip.html#Material_Blazor_MD2_MBTooltip_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
+  commentId: M:Material.Blazor.MD2.MBTooltip.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  fullName: Material.Blazor.MD2.MBTooltip.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  nameWithType: MBTooltip.BuildRenderTree(RenderTreeBuilder)
+- uid: Material.Blazor.MD2.MBTooltip.BuildRenderTree*
+  name: BuildRenderTree
+  href: api/Material.Blazor.MD2.MBTooltip.html#Material_Blazor_MD2_MBTooltip_BuildRenderTree_
+  commentId: Overload:Material.Blazor.MD2.MBTooltip.BuildRenderTree
+  fullName: Material.Blazor.MD2.MBTooltip.BuildRenderTree
+  nameWithType: MBTooltip.BuildRenderTree
+- uid: Material.Blazor.MD2.MBTooltip.Content
+  name: Content
+  href: api/Material.Blazor.MD2.MBTooltip.html#Material_Blazor_MD2_MBTooltip_Content
+  commentId: P:Material.Blazor.MD2.MBTooltip.Content
+  fullName: Material.Blazor.MD2.MBTooltip.Content
+  nameWithType: MBTooltip.Content
+- uid: Material.Blazor.MD2.MBTooltip.Content*
+  name: Content
+  href: api/Material.Blazor.MD2.MBTooltip.html#Material_Blazor_MD2_MBTooltip_Content_
+  commentId: Overload:Material.Blazor.MD2.MBTooltip.Content
+  fullName: Material.Blazor.MD2.MBTooltip.Content
+  nameWithType: MBTooltip.Content
+- uid: Material.Blazor.MD2.MBTooltip.Dispose
+  name: Dispose()
+  href: api/Material.Blazor.MD2.MBTooltip.html#Material_Blazor_MD2_MBTooltip_Dispose
+  commentId: M:Material.Blazor.MD2.MBTooltip.Dispose
+  fullName: Material.Blazor.MD2.MBTooltip.Dispose()
+  nameWithType: MBTooltip.Dispose()
+- uid: Material.Blazor.MD2.MBTooltip.Dispose(System.Boolean)
+  name: Dispose(bool)
+  href: api/Material.Blazor.MD2.MBTooltip.html#Material_Blazor_MD2_MBTooltip_Dispose_System_Boolean_
+  commentId: M:Material.Blazor.MD2.MBTooltip.Dispose(System.Boolean)
+  name.vb: Dispose(Boolean)
+  fullName: Material.Blazor.MD2.MBTooltip.Dispose(bool)
+  fullName.vb: Material.Blazor.MD2.MBTooltip.Dispose(Boolean)
+  nameWithType: MBTooltip.Dispose(bool)
+  nameWithType.vb: MBTooltip.Dispose(Boolean)
+- uid: Material.Blazor.MD2.MBTooltip.Dispose*
+  name: Dispose
+  href: api/Material.Blazor.MD2.MBTooltip.html#Material_Blazor_MD2_MBTooltip_Dispose_
+  commentId: Overload:Material.Blazor.MD2.MBTooltip.Dispose
+  fullName: Material.Blazor.MD2.MBTooltip.Dispose
+  nameWithType: MBTooltip.Dispose
+- uid: Material.Blazor.MD2.MBTooltip.OnInitializedAsync
+  name: OnInitializedAsync()
+  href: api/Material.Blazor.MD2.MBTooltip.html#Material_Blazor_MD2_MBTooltip_OnInitializedAsync
+  commentId: M:Material.Blazor.MD2.MBTooltip.OnInitializedAsync
+  fullName: Material.Blazor.MD2.MBTooltip.OnInitializedAsync()
+  nameWithType: MBTooltip.OnInitializedAsync()
+- uid: Material.Blazor.MD2.MBTooltip.OnInitializedAsync*
+  name: OnInitializedAsync
+  href: api/Material.Blazor.MD2.MBTooltip.html#Material_Blazor_MD2_MBTooltip_OnInitializedAsync_
+  commentId: Overload:Material.Blazor.MD2.MBTooltip.OnInitializedAsync
+  fullName: Material.Blazor.MD2.MBTooltip.OnInitializedAsync
+  nameWithType: MBTooltip.OnInitializedAsync
+- uid: Material.Blazor.MD2.MBTooltip.Target
+  name: Target
+  href: api/Material.Blazor.MD2.MBTooltip.html#Material_Blazor_MD2_MBTooltip_Target
+  commentId: P:Material.Blazor.MD2.MBTooltip.Target
+  fullName: Material.Blazor.MD2.MBTooltip.Target
+  nameWithType: MBTooltip.Target
+- uid: Material.Blazor.MD2.MBTooltip.Target*
+  name: Target
+  href: api/Material.Blazor.MD2.MBTooltip.html#Material_Blazor_MD2_MBTooltip_Target_
+  commentId: Overload:Material.Blazor.MD2.MBTooltip.Target
+  fullName: Material.Blazor.MD2.MBTooltip.Target
+  nameWithType: MBTooltip.Target
 - uid: Material.Blazor.MD2.MBTopAppBar
   name: MBTopAppBar
   href: api/Material.Blazor.MD2.MBTopAppBar.html
@@ -7975,9 +8131,6 @@ references:
 - uid: S.IMBToastService
   name: IMBToastService
   href: Material.Blazor.MD3/Model/Toast/IMBToastService.html
-- uid: S.IMBTooltipService
-  name: IMBTooltipService
-  href: Material.Blazor.MD3/Model.MD2/Tooltip/IMBTooltipService.html
 - uid: U.MBCascadingDefaults
   name: MBCascadingDefaults
   href: Material.Blazor.MD3/Model/MBCascadingDefaults.html
