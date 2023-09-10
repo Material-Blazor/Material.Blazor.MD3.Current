@@ -18,6 +18,17 @@
       
       
       
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
   </head>
 
   <script type="module">
@@ -129,7 +140,9 @@
       <div><a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html">InternalNumericFieldBase&lt;T, U&gt;</a></div>
       <div><a class="xref" href="Material.Blazor.Internal.InternalTextField2Base.html">InternalTextField2Base</a></div>
       <div><a class="xref" href="Material.Blazor.Internal.InternalTextFieldBase.html">InternalTextFieldBase</a></div>
+      <div><a class="xref" href="Material.Blazor.Internal.SingleSelectComponent-2.html">SingleSelectComponent&lt;T, TListElement&gt;</a></div>
       <div><a class="xref" href="Material.Blazor.MBCheckbox.html">MBCheckbox</a></div>
+      <div><a class="xref" href="Material.Blazor.MBRadioButton-1.html">MBRadioButton&lt;TItem&gt;</a></div>
       <div><a class="xref" href="Material.Blazor.MBSwitch.html">MBSwitch</a></div>
     </dd>
   </dl>
@@ -172,6 +185,9 @@
     </div>
     <div>
       <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_class">ComponentFoundation.class</a>
+    </div>
+    <div>
+      <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_ActiveConditionalClasses">ComponentFoundation.ActiveConditionalClasses</a>
     </div>
     <div>
       <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_style">ComponentFoundation.style</a>
@@ -257,6 +273,37 @@
 
   <h2 class="section" id="properties">Properties
 </h2>
+
+
+  <a id="Material_Blazor_Internal_InputComponent_1_ComponentValueAsString_" data-uid="Material.Blazor.Internal.InputComponent`1.ComponentValueAsString*"></a>
+
+  <h3 id="Material_Blazor_Internal_InputComponent_1_ComponentValueAsString" data-uid="Material.Blazor.Internal.InputComponent`1.ComponentValueAsString">
+  ComponentValueAsString
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Foundation/InputComponent.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected string ComponentValueAsString { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
 
 
   <a id="Material_Blazor_Internal_InputComponent_1_EditContext_" data-uid="Material.Blazor.Internal.InputComponent`1.EditContext*"></a>
@@ -540,6 +587,46 @@ want the component to refresh when that operation is completed.</p>
             will be unchanged.
             </p>
 </div>
+
+
+
+
+  <a id="Material_Blazor_Internal_InputComponent_1_TryParseValueFromString_" data-uid="Material.Blazor.Internal.InputComponent`1.TryParseValueFromString*"></a>
+
+  <h3 id="Material_Blazor_Internal_InputComponent_1_TryParseValueFromString_System_String__0__System_String__" data-uid="Material.Blazor.Internal.InputComponent`1.TryParseValueFromString(System.String,`0@,System.String@)">
+  TryParseValueFromString(string, out T, out string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Foundation/InputComponent.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool TryParseValueFromString(string value, out T result, out string validationErrorMessage)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>result</code> <span class="xref">T</span></dt>
+    <dd></dd>
+    <dt><code>validationErrorMessage</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
 
 
 

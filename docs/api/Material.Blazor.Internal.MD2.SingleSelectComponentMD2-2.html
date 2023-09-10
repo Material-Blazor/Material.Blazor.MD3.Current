@@ -18,6 +18,17 @@
       
       
       
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
   </head>
 
   <script type="module">
@@ -91,7 +102,7 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class SingleSelectComponentMD2&lt;T, TListElement&gt; : InputComponentMD2&lt;T&gt;, IComponent, IHandleEvent, IHandleAfterRender, IDisposable where TListElement : MBSelectElement&lt;T&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class SingleSelectComponentMD2&lt;T, TListElement&gt; : InputComponentMD2&lt;T&gt;, IComponent, IHandleEvent, IHandleAfterRender, IDisposable where TListElement : MBSelectElementMD2&lt;T&gt;</code></pre>
   </div>
 
 
@@ -128,7 +139,6 @@
   <dl class="typelist derived">
     <dt>Derived</dt>
     <dd>
-      <div><a class="xref" href="Material.Blazor.MD2.MBRadioButtonGroup-1.html">MBRadioButtonGroup&lt;TItem&gt;</a></div>
       <div><a class="xref" href="Material.Blazor.MD2.MBSelect-1.html">MBSelect&lt;TItem&gt;</a></div>
     </dd>
   </dl>
@@ -424,8 +434,8 @@ the render tree, and the incoming values have been assigned to properties.</p>
 
   <a id="Material_Blazor_Internal_MD2_SingleSelectComponentMD2_2_ValidateItemList_" data-uid="Material.Blazor.Internal.MD2.SingleSelectComponentMD2`2.ValidateItemList*"></a>
 
-  <h3 id="Material_Blazor_Internal_MD2_SingleSelectComponentMD2_2_ValidateItemList_System_Collections_Generic_IEnumerable_Material_Blazor_MD2_MBSelectElement__0___Material_Blazor_MD2_MBItemValidation_" data-uid="Material.Blazor.Internal.MD2.SingleSelectComponentMD2`2.ValidateItemList(System.Collections.Generic.IEnumerable{Material.Blazor.MD2.MBSelectElement{`0}},Material.Blazor.MD2.MBItemValidation)">
-  ValidateItemList(IEnumerable&lt;MBSelectElement&lt;T&gt;&gt;, MBItemValidation)
+  <h3 id="Material_Blazor_Internal_MD2_SingleSelectComponentMD2_2_ValidateItemList_System_Collections_Generic_IEnumerable_Material_Blazor_MD2_MBSelectElementMD2__0___Material_Blazor_MD2_MBItemValidation_" data-uid="Material.Blazor.Internal.MD2.SingleSelectComponentMD2`2.ValidateItemList(System.Collections.Generic.IEnumerable{Material.Blazor.MD2.MBSelectElementMD2{`0}},Material.Blazor.MD2.MBItemValidation)">
+  ValidateItemList(IEnumerable&lt;MBSelectElementMD2&lt;T&gt;&gt;, MBItemValidation)
   <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Foundation.MD2/SingleSelectComponent.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -433,12 +443,12 @@ the render tree, and the incoming values have been assigned to properties.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public (bool hasValue, T value) ValidateItemList(IEnumerable&lt;MBSelectElement&lt;T&gt;&gt; items, MBItemValidation appliedItemValidation)</code></pre>
+    <pre><code class="lang-csharp hljs">public (bool hasValue, T value) ValidateItemList(IEnumerable&lt;MBSelectElementMD2&lt;T&gt;&gt; items, MBItemValidation appliedItemValidation)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>items</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Material.Blazor.MD2.MBSelectElement-1.html">MBSelectElement</a>&lt;T&gt;&gt;</dt>
+    <dt><code>items</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Material.Blazor.MD2.MBSelectElementMD2-1.html">MBSelectElementMD2</a>&lt;T&gt;&gt;</dt>
     <dd></dd>
     <dt><code>appliedItemValidation</code> <a class="xref" href="Material.Blazor.MD2.MBItemValidation.html">MBItemValidation</a></dt>
     <dd></dd>

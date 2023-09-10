@@ -16,6 +16,17 @@
       
       
       <meta name="docfx:docurl" content="https://github.com/Material-Blazor/Material.Blazor/blob/main/ReleaseNotes.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
   </head>
 
   <script type="module">
@@ -79,7 +90,9 @@
 <p>Released 2023-09-??</p>
 <p><strong>Updates</strong></p>
 <ul>
-<li>Dependabot updates, migrate all projects to .Net 8 RC 1, migrate @material/web to 1.0.0-pre.16</li>
+<li>Dependabot updates</li>
+<li>Migrate all projects to .Net 8 RC 1</li>
+<li>Migrate @material/web to 1.0.0-pre.19</li>
 <li>Our use of the MOQ library has been deprecated. The replacement library is NSubstitute. The pattern for adding additional tests
 remains unchanged.</li>
 </ul>
@@ -88,7 +101,15 @@ remains unchanged.</li>
 <li>Added preview of Material Design 3 components:
 <ul>
 <li>MBCheckbox (with PLUS label parameters)</li>
+<li>MBRadioButton (added PLUS label parameters)</li>
+<li>MBRadioButtonGroup (added PLUS label parameters)</li>
 <li>MBSwitch (added PLUS label parameters)</li>
+</ul>
+</li>
+<li>There are also some experimental MD3 components as we explore the best way to deliver MD3 functionality to MB:
+<ul>
+<li>MBProgress (implements both circular &amp; linear progress)</li>
+<li>MBTextField (implements both filled and outlined text fields)</li>
 </ul>
 </li>
 </ul>
