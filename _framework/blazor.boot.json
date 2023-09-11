@@ -16,9 +16,9 @@
     "assembly": {
       "GoogleAnalytics.Blazor.wasm": "sha256-9maxHDA0ezDRT79XvPIZi411ySyG96k1lUuuu9NbGEE=",
       "Humanizer.wasm": "sha256-4NbSboZzzP9nikRtXapUZNzOyITt7ht9TNqCIQHr5OE=",
-      "Material.Blazor.MD3.wasm": "sha256-7p5Rjfo7FdhIVJJe7RCpqO3+5ivP0mR9romoEShCYuc=",
-      "Material.Blazor.Website.MD3.wasm": "sha256-kt4HSsZKaZwL87YQHwpKz8ot2va2CjBk2FKTwvtfyg4=",
-      "Material.Blazor.Website.WebAssembly.MD3.wasm": "sha256-ula7fF7J0hPlKQGOL0lbU9l3\/ZVs3zz+WLDgoKF6wNU=",
+      "Material.Blazor.MD3.wasm": "sha256-BDXSUwAY1Cxa3MQNzLZqz+VJHiGpF0JO8pcpUjpfG9k=",
+      "Material.Blazor.Website.MD3.wasm": "sha256-\/+WxhBMB6bLLLmF6LQjH3LRN9AwkjEEaA9T8+KT0uqo=",
+      "Material.Blazor.Website.WebAssembly.MD3.wasm": "sha256-AzuRjmgh1YcgXgs3Nd61h7sY8NSVLnWjLPfzuezgqPY=",
       "Microsoft.AspNetCore.Components.Forms.wasm": "sha256-zfP3A+xOueOlb9\/RZUGcl19w1ra\/rFwsZ8rtlhbmt90=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-8ArNweqewsRRIAo+IJwRC0zN49Ydh8Yh0gXpzj0dZW0=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-9Q+ilML2Ru2zCKiv+YrbvKD2Ylu+MvSrNEuNTq4Y5SM=",

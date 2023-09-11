@@ -4040,22 +4040,6 @@ references:
   fullName.vb: Material.Blazor.MBRadioButtonGroup(Of TItem).OnParametersSetAsync
   nameWithType: MBRadioButtonGroup<TItem>.OnParametersSetAsync
   nameWithType.vb: MBRadioButtonGroup(Of TItem).OnParametersSetAsync
-- uid: Material.Blazor.MBRadioButtonGroup`1.UseLeadingLabel
-  name: UseLeadingLabel
-  href: api/Material.Blazor.MBRadioButtonGroup-1.html#Material_Blazor_MBRadioButtonGroup_1_UseLeadingLabel
-  commentId: P:Material.Blazor.MBRadioButtonGroup`1.UseLeadingLabel
-  fullName: Material.Blazor.MBRadioButtonGroup<TItem>.UseLeadingLabel
-  fullName.vb: Material.Blazor.MBRadioButtonGroup(Of TItem).UseLeadingLabel
-  nameWithType: MBRadioButtonGroup<TItem>.UseLeadingLabel
-  nameWithType.vb: MBRadioButtonGroup(Of TItem).UseLeadingLabel
-- uid: Material.Blazor.MBRadioButtonGroup`1.UseLeadingLabel*
-  name: UseLeadingLabel
-  href: api/Material.Blazor.MBRadioButtonGroup-1.html#Material_Blazor_MBRadioButtonGroup_1_UseLeadingLabel_
-  commentId: Overload:Material.Blazor.MBRadioButtonGroup`1.UseLeadingLabel
-  fullName: Material.Blazor.MBRadioButtonGroup<TItem>.UseLeadingLabel
-  fullName.vb: Material.Blazor.MBRadioButtonGroup(Of TItem).UseLeadingLabel
-  nameWithType: MBRadioButtonGroup<TItem>.UseLeadingLabel
-  nameWithType.vb: MBRadioButtonGroup(Of TItem).UseLeadingLabel
 - uid: Material.Blazor.MBRadioButton`1
   name: MBRadioButton<TItem>
   href: api/Material.Blazor.MBRadioButton-1.html
@@ -4099,6 +4083,22 @@ references:
   fullName.vb: Material.Blazor.MBRadioButton(Of TItem).BuildRenderTree
   nameWithType: MBRadioButton<TItem>.BuildRenderTree
   nameWithType.vb: MBRadioButton(Of TItem).BuildRenderTree
+- uid: Material.Blazor.MBRadioButton`1.Density
+  name: Density
+  href: api/Material.Blazor.MBRadioButton-1.html#Material_Blazor_MBRadioButton_1_Density
+  commentId: P:Material.Blazor.MBRadioButton`1.Density
+  fullName: Material.Blazor.MBRadioButton<TItem>.Density
+  fullName.vb: Material.Blazor.MBRadioButton(Of TItem).Density
+  nameWithType: MBRadioButton<TItem>.Density
+  nameWithType.vb: MBRadioButton(Of TItem).Density
+- uid: Material.Blazor.MBRadioButton`1.Density*
+  name: Density
+  href: api/Material.Blazor.MBRadioButton-1.html#Material_Blazor_MBRadioButton_1_Density_
+  commentId: Overload:Material.Blazor.MBRadioButton`1.Density
+  fullName: Material.Blazor.MBRadioButton<TItem>.Density
+  fullName.vb: Material.Blazor.MBRadioButton(Of TItem).Density
+  nameWithType: MBRadioButton<TItem>.Density
+  nameWithType.vb: MBRadioButton(Of TItem).Density
 - uid: Material.Blazor.MBRadioButton`1.IsDisabled
   name: IsDisabled
   href: api/Material.Blazor.MBRadioButton-1.html#Material_Blazor_MBRadioButton_1_IsDisabled
@@ -4289,22 +4289,22 @@ references:
   fullName.vb: Material.Blazor.MBSelectElement(Of T).GetHashCode
   nameWithType: MBSelectElement<T>.GetHashCode
   nameWithType.vb: MBSelectElement(Of T).GetHashCode
-- uid: Material.Blazor.MBSelectElement`1.Label
-  name: Label
-  href: api/Material.Blazor.MBSelectElement-1.html#Material_Blazor_MBSelectElement_1_Label
-  commentId: P:Material.Blazor.MBSelectElement`1.Label
-  fullName: Material.Blazor.MBSelectElement<T>.Label
-  fullName.vb: Material.Blazor.MBSelectElement(Of T).Label
-  nameWithType: MBSelectElement<T>.Label
-  nameWithType.vb: MBSelectElement(Of T).Label
-- uid: Material.Blazor.MBSelectElement`1.Label*
-  name: Label
-  href: api/Material.Blazor.MBSelectElement-1.html#Material_Blazor_MBSelectElement_1_Label_
-  commentId: Overload:Material.Blazor.MBSelectElement`1.Label
-  fullName: Material.Blazor.MBSelectElement<T>.Label
-  fullName.vb: Material.Blazor.MBSelectElement(Of T).Label
-  nameWithType: MBSelectElement<T>.Label
-  nameWithType.vb: MBSelectElement(Of T).Label
+- uid: Material.Blazor.MBSelectElement`1.LeadingLabel
+  name: LeadingLabel
+  href: api/Material.Blazor.MBSelectElement-1.html#Material_Blazor_MBSelectElement_1_LeadingLabel
+  commentId: P:Material.Blazor.MBSelectElement`1.LeadingLabel
+  fullName: Material.Blazor.MBSelectElement<T>.LeadingLabel
+  fullName.vb: Material.Blazor.MBSelectElement(Of T).LeadingLabel
+  nameWithType: MBSelectElement<T>.LeadingLabel
+  nameWithType.vb: MBSelectElement(Of T).LeadingLabel
+- uid: Material.Blazor.MBSelectElement`1.LeadingLabel*
+  name: LeadingLabel
+  href: api/Material.Blazor.MBSelectElement-1.html#Material_Blazor_MBSelectElement_1_LeadingLabel_
+  commentId: Overload:Material.Blazor.MBSelectElement`1.LeadingLabel
+  fullName: Material.Blazor.MBSelectElement<T>.LeadingLabel
+  fullName.vb: Material.Blazor.MBSelectElement(Of T).LeadingLabel
+  nameWithType: MBSelectElement<T>.LeadingLabel
+  nameWithType.vb: MBSelectElement(Of T).LeadingLabel
 - uid: Material.Blazor.MBSelectElement`1.PrintMembers(System.Text.StringBuilder)
   name: PrintMembers(StringBuilder)
   href: api/Material.Blazor.MBSelectElement-1.html#Material_Blazor_MBSelectElement_1_PrintMembers_System_Text_StringBuilder_
@@ -4353,6 +4353,22 @@ references:
   fullName.vb: Material.Blazor.MBSelectElement(Of T).ToString
   nameWithType: MBSelectElement<T>.ToString
   nameWithType.vb: MBSelectElement(Of T).ToString
+- uid: Material.Blazor.MBSelectElement`1.TrailingLabel
+  name: TrailingLabel
+  href: api/Material.Blazor.MBSelectElement-1.html#Material_Blazor_MBSelectElement_1_TrailingLabel
+  commentId: P:Material.Blazor.MBSelectElement`1.TrailingLabel
+  fullName: Material.Blazor.MBSelectElement<T>.TrailingLabel
+  fullName.vb: Material.Blazor.MBSelectElement(Of T).TrailingLabel
+  nameWithType: MBSelectElement<T>.TrailingLabel
+  nameWithType.vb: MBSelectElement(Of T).TrailingLabel
+- uid: Material.Blazor.MBSelectElement`1.TrailingLabel*
+  name: TrailingLabel
+  href: api/Material.Blazor.MBSelectElement-1.html#Material_Blazor_MBSelectElement_1_TrailingLabel_
+  commentId: Overload:Material.Blazor.MBSelectElement`1.TrailingLabel
+  fullName: Material.Blazor.MBSelectElement<T>.TrailingLabel
+  fullName.vb: Material.Blazor.MBSelectElement(Of T).TrailingLabel
+  nameWithType: MBSelectElement<T>.TrailingLabel
+  nameWithType.vb: MBSelectElement(Of T).TrailingLabel
 - uid: Material.Blazor.MBSelectElement`1.op_Equality(Material.Blazor.MBSelectElement{`0},Material.Blazor.MBSelectElement{`0})
   name: operator ==(MBSelectElement<T>?, MBSelectElement<T>?)
   href: api/Material.Blazor.MBSelectElement-1.html#Material_Blazor_MBSelectElement_1_op_Equality_Material_Blazor_MBSelectElement__0__Material_Blazor_MBSelectElement__0__
