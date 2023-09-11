@@ -263,6 +263,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "Material.Blazor.MD3/Components/Badge/MBBadge.md",
+      "output": {
+        ".html": {
+          "relative_path": "Material.Blazor.MD3/Components/Badge/MBBadge.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Components/Checkbox/MBCheckbox.md",
       "output": {
         ".html": {
@@ -981,6 +991,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.Internal.MD2.MultiSelectComponentMD2-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.Internal.MD2.MultiSelectComponentMD2-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.Internal.MD2.SingleSelectComponentMD2-2.yml",
       "output": {
         ".html": {
@@ -1035,6 +1055,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBAnchor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBBadge.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBBadge.html"
         }
       },
       "version": ""
@@ -1241,6 +1271,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBMenuSurfacePositioning.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBMenuSurfacePositioning.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.MBNotifierCloseMethod.yml",
       "output": {
         ".html": {
@@ -1391,16 +1431,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MBTextField.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MBTextField.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.MBTextField2.yml",
       "output": {
         ".html": {
@@ -1515,26 +1545,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MD2.MBAnchor.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MD2.MBBadge.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MD2.MBBadge.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MD2.MBBadgeStyle.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MD2.MBBadgeStyle.html"
         }
       },
       "version": ""
@@ -1665,6 +1675,26 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MD2.MBFloatingActionButtonType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MD2.MBIconBearingSelectElement-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MD2.MBIconBearingSelectElement-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MD2.MBIconBearingSelectElementMD2-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MD2.MBIconBearingSelectElementMD2-1.html"
         }
       },
       "version": ""

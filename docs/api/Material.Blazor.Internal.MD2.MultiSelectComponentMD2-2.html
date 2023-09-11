@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class MBBadge
+      <title>Class MultiSelectComponentMD2&lt;T, TListElement&gt;
  </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class MBBadge
+      <meta name="title" content="Class MultiSelectComponentMD2&lt;T, TListElement&gt;
  ">
       
       <link rel="icon" href="../favicon.ico">
@@ -84,17 +84,17 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Material.Blazor.MD2.MBBadge">
+        <article data-uid="Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2">
 
 
 
-  <h1 id="Material_Blazor_MD2_MBBadge" data-uid="Material.Blazor.MD2.MBBadge" class="text-break">
-    Class MBBadge
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components.MD2/Badge/MBBadge.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <h1 id="Material_Blazor_Internal_MD2_MultiSelectComponentMD2_2" data-uid="Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2" class="text-break">
+    Class MultiSelectComponentMD2&lt;T, TListElement&gt;
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Foundation.MD2/MultiSelectComponent.cs"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="Material.html">Material</a>.<a class="xref" href="Material.Blazor.html">Blazor</a>.<a class="xref" href="Material.Blazor.MD2.html">MD2</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Material.html">Material</a>.<a class="xref" href="Material.Blazor.html">Blazor</a>.<a class="xref" href="Material.Blazor.Internal.html">Internal</a>.<a class="xref" href="Material.Blazor.Internal.MD2.html">MD2</a></dd></dl>
   <dl><dt>Assembly</dt><dd>Material.Blazor.MD3.dll</dd></dl>
   </div>
 
@@ -102,11 +102,18 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MBBadge : ComponentFoundationMD2, IComponent, IHandleEvent, IHandleAfterRender, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class MultiSelectComponentMD2&lt;T, TListElement&gt; : InputComponentMD2&lt;IList&lt;T&gt;&gt;, IComponent, IHandleEvent, IHandleAfterRender, IDisposable where TListElement : MBSelectElementMD2&lt;T&gt;</code></pre>
   </div>
 
 
 
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+    <dt><code>TListElement</code></dt>
+    <dd></dd>
+  </dl>
 
   <dl class="typelist inheritance">
     <dt>Inheritance</dt>
@@ -114,7 +121,8 @@
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase">ComponentBase</a></div>
       <div><a class="xref" href="Material.Blazor.Internal.MD2.ComponentFoundationMD2.html">ComponentFoundationMD2</a></div>
-      <div><span class="xref">MBBadge</span></div>
+      <div><a class="xref" href="Material.Blazor.Internal.MD2.InputComponentMD2-1.html">InputComponentMD2</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;T&gt;&gt;</div>
+      <div><span class="xref">MultiSelectComponentMD2&lt;T, TListElement&gt;</span></div>
     </dd>
   </dl>
 
@@ -132,6 +140,42 @@
   <dl class="typelist derived">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_FormatValueToString__0_">InputComponentMD2&lt;IList&lt;T&gt;&gt;.FormatValueToString(IList&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_OnInitializedAsync">InputComponentMD2&lt;IList&lt;T&gt;&gt;.OnInitializedAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_SetParametersAsync_Microsoft_AspNetCore_Components_ParameterView_">InputComponentMD2&lt;IList&lt;T&gt;&gt;.SetParametersAsync(ParameterView)</a>
+    </div>
+    <div>
+      <a class="xref" href="Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_ShouldRender">InputComponentMD2&lt;IList&lt;T&gt;&gt;.ShouldRender()</a>
+    </div>
+    <div>
+      <a class="xref" href="Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_TryParseValueFromString_System_String__0__System_String__">InputComponentMD2&lt;IList&lt;T&gt;&gt;.TryParseValueFromString(string, out IList&lt;T&gt;, out string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_EditContext">InputComponentMD2&lt;IList&lt;T&gt;&gt;.EditContext</a>
+    </div>
+    <div>
+      <a class="xref" href="Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_FieldIdentifier">InputComponentMD2&lt;IList&lt;T&gt;&gt;.FieldIdentifier</a>
+    </div>
+    <div>
+      <a class="xref" href="Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_FieldClass">InputComponentMD2&lt;IList&lt;T&gt;&gt;.FieldClass</a>
+    </div>
+    <div>
+      <a class="xref" href="Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_Value">InputComponentMD2&lt;IList&lt;T&gt;&gt;.Value</a>
+    </div>
+    <div>
+      <a class="xref" href="Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_ValueChanged">InputComponentMD2&lt;IList&lt;T&gt;&gt;.ValueChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_ValueExpression">InputComponentMD2&lt;IList&lt;T&gt;&gt;.ValueExpression</a>
+    </div>
+    <div>
+      <a class="xref" href="Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_ComponentValueAsString">InputComponentMD2&lt;IList&lt;T&gt;&gt;.ComponentValueAsString</a>
+    </div>
     <div>
       <a class="xref" href="Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_Dispose_System_Boolean_">ComponentFoundationMD2.Dispose(bool)</a>
     </div>
@@ -151,7 +195,7 @@
       <a class="xref" href="Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_OnParametersSet">ComponentFoundationMD2.OnParametersSet()</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_OnParametersSetAsync">ComponentFoundationMD2.OnParametersSetAsync()</a>
+      <a class="xref" href="Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_CascadingDefaults">ComponentFoundationMD2.CascadingDefaults</a>
     </div>
     <div>
       <a class="xref" href="Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_UnmatchedAttributes">ComponentFoundationMD2.UnmatchedAttributes</a>
@@ -181,9 +225,6 @@
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.statehaschanged">ComponentBase.StateHasChanged()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.shouldrender">ComponentBase.ShouldRender()</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.invokeasync#microsoft-aspnetcore-components-componentbase-invokeasync(system-action)">ComponentBase.InvokeAsync(Action)</a>
     </div>
     <div>
@@ -191,9 +232,6 @@
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.dispatchexceptionasync">ComponentBase.DispatchExceptionAsync(Exception)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.setparametersasync">ComponentBase.SetParametersAsync(ParameterView)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
@@ -227,18 +265,18 @@
 </h2>
 
 
-  <a id="Material_Blazor_MD2_MBBadge__ctor_" data-uid="Material.Blazor.MD2.MBBadge.#ctor*"></a>
+  <a id="Material_Blazor_Internal_MD2_MultiSelectComponentMD2_2__ctor_" data-uid="Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.#ctor*"></a>
 
-  <h3 id="Material_Blazor_MD2_MBBadge__ctor" data-uid="Material.Blazor.MD2.MBBadge.#ctor">
-  MBBadge()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components.MD2/Badge/MBBadge.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Material_Blazor_Internal_MD2_MultiSelectComponentMD2_2__ctor" data-uid="Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.#ctor">
+  MultiSelectComponentMD2()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Foundation.MD2/MultiSelectComponent.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MBBadge()</code></pre>
+    <pre><code class="lang-csharp hljs">protected MultiSelectComponentMD2()</code></pre>
   </div>
 
 
@@ -257,11 +295,11 @@
 </h2>
 
 
-  <a id="Material_Blazor_MD2_MBBadge_BadgeStyle_" data-uid="Material.Blazor.MD2.MBBadge.BadgeStyle*"></a>
+  <a id="Material_Blazor_Internal_MD2_MultiSelectComponentMD2_2_GetKeysFunc_" data-uid="Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.GetKeysFunc*"></a>
 
-  <h3 id="Material_Blazor_MD2_MBBadge_BadgeStyle" data-uid="Material.Blazor.MD2.MBBadge.BadgeStyle">
-  BadgeStyle
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components.MD2/Badge/MBBadge.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Material_Blazor_Internal_MD2_MultiSelectComponentMD2_2_GetKeysFunc" data-uid="Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.GetKeysFunc">
+  GetKeysFunc
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Foundation.MD2/MultiSelectComponent.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -269,7 +307,7 @@
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Parameter]
-public MBBadgeStyle BadgeStyle { get; set; }</code></pre>
+public Func&lt;T, object&gt; GetKeysFunc { get; set; }</code></pre>
   </div>
 
 
@@ -278,7 +316,7 @@ public MBBadgeStyle BadgeStyle { get; set; }</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Material.Blazor.MD2.MBBadgeStyle.html">MBBadgeStyle</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -289,11 +327,11 @@ public MBBadgeStyle BadgeStyle { get; set; }</code></pre>
 
 
 
-  <a id="Material_Blazor_MD2_MBBadge_Exited_" data-uid="Material.Blazor.MD2.MBBadge.Exited*"></a>
+  <a id="Material_Blazor_Internal_MD2_MultiSelectComponentMD2_2_IconFoundry_" data-uid="Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.IconFoundry*"></a>
 
-  <h3 id="Material_Blazor_MD2_MBBadge_Exited" data-uid="Material.Blazor.MD2.MBBadge.Exited">
-  Exited
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components.MD2/Badge/MBBadge.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Material_Blazor_Internal_MD2_MultiSelectComponentMD2_2_IconFoundry" data-uid="Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.IconFoundry">
+  IconFoundry
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Foundation.MD2/MultiSelectComponent.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -301,7 +339,7 @@ public MBBadgeStyle BadgeStyle { get; set; }</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Parameter]
-public bool Exited { get; set; }</code></pre>
+public IMBIconFoundry? IconFoundry { get; set; }</code></pre>
   </div>
 
 
@@ -310,7 +348,7 @@ public bool Exited { get; set; }</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dt><a class="xref" href="Material.Blazor.MD2.IMBIconFoundry.html">IMBIconFoundry</a></dt>
     <dd></dd>
   </dl>
 
@@ -321,11 +359,11 @@ public bool Exited { get; set; }</code></pre>
 
 
 
-  <a id="Material_Blazor_MD2_MBBadge_Value_" data-uid="Material.Blazor.MD2.MBBadge.Value*"></a>
+  <a id="Material_Blazor_Internal_MD2_MultiSelectComponentMD2_2_Items_" data-uid="Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.Items*"></a>
 
-  <h3 id="Material_Blazor_MD2_MBBadge_Value" data-uid="Material.Blazor.MD2.MBBadge.Value">
-  Value
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components.MD2/Badge/MBBadge.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Material_Blazor_Internal_MD2_MultiSelectComponentMD2_2_Items" data-uid="Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.Items">
+  Items
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Foundation.MD2/MultiSelectComponent.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -333,7 +371,7 @@ public bool Exited { get; set; }</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Parameter]
-public string Value { get; set; }</code></pre>
+public IEnumerable&lt;TListElement&gt; Items { get; set; }</code></pre>
   </div>
 
 
@@ -342,7 +380,7 @@ public string Value { get; set; }</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TListElement&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -357,22 +395,20 @@ public string Value { get; set; }</code></pre>
 </h2>
 
 
-  <a id="Material_Blazor_MD2_MBBadge_OnInitializedAsync_" data-uid="Material.Blazor.MD2.MBBadge.OnInitializedAsync*"></a>
+  <a id="Material_Blazor_Internal_MD2_MultiSelectComponentMD2_2_OnParametersSetAsync_" data-uid="Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.OnParametersSetAsync*"></a>
 
-  <h3 id="Material_Blazor_MD2_MBBadge_OnInitializedAsync" data-uid="Material.Blazor.MD2.MBBadge.OnInitializedAsync">
-  OnInitializedAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components.MD2/Badge/MBBadge.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Material_Blazor_Internal_MD2_MultiSelectComponentMD2_2_OnParametersSetAsync" data-uid="Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.OnParametersSetAsync">
+  OnParametersSetAsync()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Foundation.MD2/MultiSelectComponent.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Method invoked when the component is ready to start, having received its
-initial parameters from its parent in the render tree.</p>
-<p>Override this method if you will perform an asynchronous operation and
-want the component to refresh when that operation is completed.</p>
+  <div class="markdown level1 summary"><p>Method invoked when the component has received parameters from its parent in
+the render tree, and the incoming values have been assigned to properties.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override Task OnInitializedAsync()</code></pre>
+    <pre><code class="lang-csharp hljs">protected override Task OnParametersSetAsync()</code></pre>
   </div>
 
 
@@ -397,7 +433,7 @@ want the component to refresh when that operation is completed.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components.MD2/Badge/MBBadge.razor.cs" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Foundation.MD2/MultiSelectComponent.cs" class="edit-link">Edit this page</a>
         </div>
 
         
