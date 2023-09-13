@@ -3253,42 +3253,42 @@ references:
   fullName.vb: Material.Blazor.MBCheckbox.New
   nameWithType: MBCheckbox.MBCheckbox
   nameWithType.vb: MBCheckbox.New
-- uid: Material.Blazor.MBCheckbox.BadgeExited
-  name: BadgeExited
-  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_BadgeExited
-  commentId: P:Material.Blazor.MBCheckbox.BadgeExited
-  fullName: Material.Blazor.MBCheckbox.BadgeExited
-  nameWithType: MBCheckbox.BadgeExited
-- uid: Material.Blazor.MBCheckbox.BadgeExited*
-  name: BadgeExited
-  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_BadgeExited_
-  commentId: Overload:Material.Blazor.MBCheckbox.BadgeExited
-  fullName: Material.Blazor.MBCheckbox.BadgeExited
-  nameWithType: MBCheckbox.BadgeExited
-- uid: Material.Blazor.MBCheckbox.BadgeStyle
-  name: BadgeStyle
-  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_BadgeStyle
-  commentId: P:Material.Blazor.MBCheckbox.BadgeStyle
-  fullName: Material.Blazor.MBCheckbox.BadgeStyle
-  nameWithType: MBCheckbox.BadgeStyle
-- uid: Material.Blazor.MBCheckbox.BadgeStyle*
-  name: BadgeStyle
-  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_BadgeStyle_
-  commentId: Overload:Material.Blazor.MBCheckbox.BadgeStyle
-  fullName: Material.Blazor.MBCheckbox.BadgeStyle
-  nameWithType: MBCheckbox.BadgeStyle
-- uid: Material.Blazor.MBCheckbox.BadgeValue
-  name: BadgeValue
-  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_BadgeValue
-  commentId: P:Material.Blazor.MBCheckbox.BadgeValue
-  fullName: Material.Blazor.MBCheckbox.BadgeValue
-  nameWithType: MBCheckbox.BadgeValue
-- uid: Material.Blazor.MBCheckbox.BadgeValue*
-  name: BadgeValue
-  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_BadgeValue_
-  commentId: Overload:Material.Blazor.MBCheckbox.BadgeValue
-  fullName: Material.Blazor.MBCheckbox.BadgeValue
-  nameWithType: MBCheckbox.BadgeValue
+- uid: Material.Blazor.MBCheckbox.BadgeExitedPLUS
+  name: BadgeExitedPLUS
+  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_BadgeExitedPLUS
+  commentId: P:Material.Blazor.MBCheckbox.BadgeExitedPLUS
+  fullName: Material.Blazor.MBCheckbox.BadgeExitedPLUS
+  nameWithType: MBCheckbox.BadgeExitedPLUS
+- uid: Material.Blazor.MBCheckbox.BadgeExitedPLUS*
+  name: BadgeExitedPLUS
+  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_BadgeExitedPLUS_
+  commentId: Overload:Material.Blazor.MBCheckbox.BadgeExitedPLUS
+  fullName: Material.Blazor.MBCheckbox.BadgeExitedPLUS
+  nameWithType: MBCheckbox.BadgeExitedPLUS
+- uid: Material.Blazor.MBCheckbox.BadgeStylePLUS
+  name: BadgeStylePLUS
+  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_BadgeStylePLUS
+  commentId: P:Material.Blazor.MBCheckbox.BadgeStylePLUS
+  fullName: Material.Blazor.MBCheckbox.BadgeStylePLUS
+  nameWithType: MBCheckbox.BadgeStylePLUS
+- uid: Material.Blazor.MBCheckbox.BadgeStylePLUS*
+  name: BadgeStylePLUS
+  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_BadgeStylePLUS_
+  commentId: Overload:Material.Blazor.MBCheckbox.BadgeStylePLUS
+  fullName: Material.Blazor.MBCheckbox.BadgeStylePLUS
+  nameWithType: MBCheckbox.BadgeStylePLUS
+- uid: Material.Blazor.MBCheckbox.BadgeValuePLUS
+  name: BadgeValuePLUS
+  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_BadgeValuePLUS
+  commentId: P:Material.Blazor.MBCheckbox.BadgeValuePLUS
+  fullName: Material.Blazor.MBCheckbox.BadgeValuePLUS
+  nameWithType: MBCheckbox.BadgeValuePLUS
+- uid: Material.Blazor.MBCheckbox.BadgeValuePLUS*
+  name: BadgeValuePLUS
+  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_BadgeValuePLUS_
+  commentId: Overload:Material.Blazor.MBCheckbox.BadgeValuePLUS
+  fullName: Material.Blazor.MBCheckbox.BadgeValuePLUS
+  nameWithType: MBCheckbox.BadgeValuePLUS
 - uid: Material.Blazor.MBCheckbox.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
   name: BuildRenderTree(RenderTreeBuilder)
   href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
@@ -3301,18 +3301,18 @@ references:
   commentId: Overload:Material.Blazor.MBCheckbox.BuildRenderTree
   fullName: Material.Blazor.MBCheckbox.BuildRenderTree
   nameWithType: MBCheckbox.BuildRenderTree
-- uid: Material.Blazor.MBCheckbox.HasBadge
-  name: HasBadge
-  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_HasBadge
-  commentId: P:Material.Blazor.MBCheckbox.HasBadge
-  fullName: Material.Blazor.MBCheckbox.HasBadge
-  nameWithType: MBCheckbox.HasBadge
-- uid: Material.Blazor.MBCheckbox.HasBadge*
-  name: HasBadge
-  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_HasBadge_
-  commentId: Overload:Material.Blazor.MBCheckbox.HasBadge
-  fullName: Material.Blazor.MBCheckbox.HasBadge
-  nameWithType: MBCheckbox.HasBadge
+- uid: Material.Blazor.MBCheckbox.HasBadgePLUS
+  name: HasBadgePLUS
+  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_HasBadgePLUS
+  commentId: P:Material.Blazor.MBCheckbox.HasBadgePLUS
+  fullName: Material.Blazor.MBCheckbox.HasBadgePLUS
+  nameWithType: MBCheckbox.HasBadgePLUS
+- uid: Material.Blazor.MBCheckbox.HasBadgePLUS*
+  name: HasBadgePLUS
+  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_HasBadgePLUS_
+  commentId: Overload:Material.Blazor.MBCheckbox.HasBadgePLUS
+  fullName: Material.Blazor.MBCheckbox.HasBadgePLUS
+  nameWithType: MBCheckbox.HasBadgePLUS
 - uid: Material.Blazor.MBCheckbox.IsDisabled
   name: IsDisabled
   href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_IsDisabled
@@ -3349,6 +3349,18 @@ references:
   commentId: Overload:Material.Blazor.MBCheckbox.LeadingLabelPLUS
   fullName: Material.Blazor.MBCheckbox.LeadingLabelPLUS
   nameWithType: MBCheckbox.LeadingLabelPLUS
+- uid: Material.Blazor.MBCheckbox.OnParametersSetAsync
+  name: OnParametersSetAsync()
+  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_OnParametersSetAsync
+  commentId: M:Material.Blazor.MBCheckbox.OnParametersSetAsync
+  fullName: Material.Blazor.MBCheckbox.OnParametersSetAsync()
+  nameWithType: MBCheckbox.OnParametersSetAsync()
+- uid: Material.Blazor.MBCheckbox.OnParametersSetAsync*
+  name: OnParametersSetAsync
+  href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_OnParametersSetAsync_
+  commentId: Overload:Material.Blazor.MBCheckbox.OnParametersSetAsync
+  fullName: Material.Blazor.MBCheckbox.OnParametersSetAsync
+  nameWithType: MBCheckbox.OnParametersSetAsync
 - uid: Material.Blazor.MBCheckbox.TrailingLabelPLUS
   name: TrailingLabelPLUS
   href: api/Material.Blazor.MBCheckbox.html#Material_Blazor_MBCheckbox_TrailingLabelPLUS
