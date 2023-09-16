@@ -1810,42 +1810,42 @@ references:
   fullName.vb: Material.Blazor.Internal.InternalTextFieldBase.New
   nameWithType: InternalTextFieldBase.InternalTextFieldBase
   nameWithType.vb: InternalTextFieldBase.New
-- uid: Material.Blazor.Internal.InternalTextFieldBase.BadgeExited
-  name: BadgeExited
-  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_BadgeExited
-  commentId: P:Material.Blazor.Internal.InternalTextFieldBase.BadgeExited
-  fullName: Material.Blazor.Internal.InternalTextFieldBase.BadgeExited
-  nameWithType: InternalTextFieldBase.BadgeExited
-- uid: Material.Blazor.Internal.InternalTextFieldBase.BadgeExited*
-  name: BadgeExited
-  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_BadgeExited_
-  commentId: Overload:Material.Blazor.Internal.InternalTextFieldBase.BadgeExited
-  fullName: Material.Blazor.Internal.InternalTextFieldBase.BadgeExited
-  nameWithType: InternalTextFieldBase.BadgeExited
-- uid: Material.Blazor.Internal.InternalTextFieldBase.BadgeStyle
-  name: BadgeStyle
-  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_BadgeStyle
-  commentId: P:Material.Blazor.Internal.InternalTextFieldBase.BadgeStyle
-  fullName: Material.Blazor.Internal.InternalTextFieldBase.BadgeStyle
-  nameWithType: InternalTextFieldBase.BadgeStyle
-- uid: Material.Blazor.Internal.InternalTextFieldBase.BadgeStyle*
-  name: BadgeStyle
-  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_BadgeStyle_
-  commentId: Overload:Material.Blazor.Internal.InternalTextFieldBase.BadgeStyle
-  fullName: Material.Blazor.Internal.InternalTextFieldBase.BadgeStyle
-  nameWithType: InternalTextFieldBase.BadgeStyle
-- uid: Material.Blazor.Internal.InternalTextFieldBase.BadgeValue
-  name: BadgeValue
-  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_BadgeValue
-  commentId: P:Material.Blazor.Internal.InternalTextFieldBase.BadgeValue
-  fullName: Material.Blazor.Internal.InternalTextFieldBase.BadgeValue
-  nameWithType: InternalTextFieldBase.BadgeValue
-- uid: Material.Blazor.Internal.InternalTextFieldBase.BadgeValue*
-  name: BadgeValue
-  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_BadgeValue_
-  commentId: Overload:Material.Blazor.Internal.InternalTextFieldBase.BadgeValue
-  fullName: Material.Blazor.Internal.InternalTextFieldBase.BadgeValue
-  nameWithType: InternalTextFieldBase.BadgeValue
+- uid: Material.Blazor.Internal.InternalTextFieldBase.BadgeExitedPLUS
+  name: BadgeExitedPLUS
+  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_BadgeExitedPLUS
+  commentId: P:Material.Blazor.Internal.InternalTextFieldBase.BadgeExitedPLUS
+  fullName: Material.Blazor.Internal.InternalTextFieldBase.BadgeExitedPLUS
+  nameWithType: InternalTextFieldBase.BadgeExitedPLUS
+- uid: Material.Blazor.Internal.InternalTextFieldBase.BadgeExitedPLUS*
+  name: BadgeExitedPLUS
+  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_BadgeExitedPLUS_
+  commentId: Overload:Material.Blazor.Internal.InternalTextFieldBase.BadgeExitedPLUS
+  fullName: Material.Blazor.Internal.InternalTextFieldBase.BadgeExitedPLUS
+  nameWithType: InternalTextFieldBase.BadgeExitedPLUS
+- uid: Material.Blazor.Internal.InternalTextFieldBase.BadgeStylePLUS
+  name: BadgeStylePLUS
+  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_BadgeStylePLUS
+  commentId: P:Material.Blazor.Internal.InternalTextFieldBase.BadgeStylePLUS
+  fullName: Material.Blazor.Internal.InternalTextFieldBase.BadgeStylePLUS
+  nameWithType: InternalTextFieldBase.BadgeStylePLUS
+- uid: Material.Blazor.Internal.InternalTextFieldBase.BadgeStylePLUS*
+  name: BadgeStylePLUS
+  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_BadgeStylePLUS_
+  commentId: Overload:Material.Blazor.Internal.InternalTextFieldBase.BadgeStylePLUS
+  fullName: Material.Blazor.Internal.InternalTextFieldBase.BadgeStylePLUS
+  nameWithType: InternalTextFieldBase.BadgeStylePLUS
+- uid: Material.Blazor.Internal.InternalTextFieldBase.BadgeValuePLUS
+  name: BadgeValuePLUS
+  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_BadgeValuePLUS
+  commentId: P:Material.Blazor.Internal.InternalTextFieldBase.BadgeValuePLUS
+  fullName: Material.Blazor.Internal.InternalTextFieldBase.BadgeValuePLUS
+  nameWithType: InternalTextFieldBase.BadgeValuePLUS
+- uid: Material.Blazor.Internal.InternalTextFieldBase.BadgeValuePLUS*
+  name: BadgeValuePLUS
+  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_BadgeValuePLUS_
+  commentId: Overload:Material.Blazor.Internal.InternalTextFieldBase.BadgeValuePLUS
+  fullName: Material.Blazor.Internal.InternalTextFieldBase.BadgeValuePLUS
+  nameWithType: InternalTextFieldBase.BadgeValuePLUS
 - uid: Material.Blazor.Internal.InternalTextFieldBase.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
   name: BuildRenderTree(RenderTreeBuilder)
   href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
@@ -1885,18 +1885,18 @@ references:
   commentId: Overload:Material.Blazor.Internal.InternalTextFieldBase.Dispose
   fullName: Material.Blazor.Internal.InternalTextFieldBase.Dispose
   nameWithType: InternalTextFieldBase.Dispose
-- uid: Material.Blazor.Internal.InternalTextFieldBase.HasBadge
-  name: HasBadge
-  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_HasBadge
-  commentId: P:Material.Blazor.Internal.InternalTextFieldBase.HasBadge
-  fullName: Material.Blazor.Internal.InternalTextFieldBase.HasBadge
-  nameWithType: InternalTextFieldBase.HasBadge
-- uid: Material.Blazor.Internal.InternalTextFieldBase.HasBadge*
-  name: HasBadge
-  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_HasBadge_
-  commentId: Overload:Material.Blazor.Internal.InternalTextFieldBase.HasBadge
-  fullName: Material.Blazor.Internal.InternalTextFieldBase.HasBadge
-  nameWithType: InternalTextFieldBase.HasBadge
+- uid: Material.Blazor.Internal.InternalTextFieldBase.HasBadgePLUS
+  name: HasBadgePLUS
+  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_HasBadgePLUS
+  commentId: P:Material.Blazor.Internal.InternalTextFieldBase.HasBadgePLUS
+  fullName: Material.Blazor.Internal.InternalTextFieldBase.HasBadgePLUS
+  nameWithType: InternalTextFieldBase.HasBadgePLUS
+- uid: Material.Blazor.Internal.InternalTextFieldBase.HasBadgePLUS*
+  name: HasBadgePLUS
+  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_HasBadgePLUS_
+  commentId: Overload:Material.Blazor.Internal.InternalTextFieldBase.HasBadgePLUS
+  fullName: Material.Blazor.Internal.InternalTextFieldBase.HasBadgePLUS
+  nameWithType: InternalTextFieldBase.HasBadgePLUS
 - uid: Material.Blazor.Internal.InternalTextFieldBase.Label
   name: Label
   href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_Label
@@ -4831,42 +4831,42 @@ references:
   fullName.vb: Material.Blazor.MBSwitch.New
   nameWithType: MBSwitch.MBSwitch
   nameWithType.vb: MBSwitch.New
-- uid: Material.Blazor.MBSwitch.BadgeExited
-  name: BadgeExited
-  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_BadgeExited
-  commentId: P:Material.Blazor.MBSwitch.BadgeExited
-  fullName: Material.Blazor.MBSwitch.BadgeExited
-  nameWithType: MBSwitch.BadgeExited
-- uid: Material.Blazor.MBSwitch.BadgeExited*
-  name: BadgeExited
-  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_BadgeExited_
-  commentId: Overload:Material.Blazor.MBSwitch.BadgeExited
-  fullName: Material.Blazor.MBSwitch.BadgeExited
-  nameWithType: MBSwitch.BadgeExited
-- uid: Material.Blazor.MBSwitch.BadgeStyle
-  name: BadgeStyle
-  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_BadgeStyle
-  commentId: P:Material.Blazor.MBSwitch.BadgeStyle
-  fullName: Material.Blazor.MBSwitch.BadgeStyle
-  nameWithType: MBSwitch.BadgeStyle
-- uid: Material.Blazor.MBSwitch.BadgeStyle*
-  name: BadgeStyle
-  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_BadgeStyle_
-  commentId: Overload:Material.Blazor.MBSwitch.BadgeStyle
-  fullName: Material.Blazor.MBSwitch.BadgeStyle
-  nameWithType: MBSwitch.BadgeStyle
-- uid: Material.Blazor.MBSwitch.BadgeValue
-  name: BadgeValue
-  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_BadgeValue
-  commentId: P:Material.Blazor.MBSwitch.BadgeValue
-  fullName: Material.Blazor.MBSwitch.BadgeValue
-  nameWithType: MBSwitch.BadgeValue
-- uid: Material.Blazor.MBSwitch.BadgeValue*
-  name: BadgeValue
-  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_BadgeValue_
-  commentId: Overload:Material.Blazor.MBSwitch.BadgeValue
-  fullName: Material.Blazor.MBSwitch.BadgeValue
-  nameWithType: MBSwitch.BadgeValue
+- uid: Material.Blazor.MBSwitch.BadgeExitedPLUS
+  name: BadgeExitedPLUS
+  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_BadgeExitedPLUS
+  commentId: P:Material.Blazor.MBSwitch.BadgeExitedPLUS
+  fullName: Material.Blazor.MBSwitch.BadgeExitedPLUS
+  nameWithType: MBSwitch.BadgeExitedPLUS
+- uid: Material.Blazor.MBSwitch.BadgeExitedPLUS*
+  name: BadgeExitedPLUS
+  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_BadgeExitedPLUS_
+  commentId: Overload:Material.Blazor.MBSwitch.BadgeExitedPLUS
+  fullName: Material.Blazor.MBSwitch.BadgeExitedPLUS
+  nameWithType: MBSwitch.BadgeExitedPLUS
+- uid: Material.Blazor.MBSwitch.BadgeStylePLUS
+  name: BadgeStylePLUS
+  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_BadgeStylePLUS
+  commentId: P:Material.Blazor.MBSwitch.BadgeStylePLUS
+  fullName: Material.Blazor.MBSwitch.BadgeStylePLUS
+  nameWithType: MBSwitch.BadgeStylePLUS
+- uid: Material.Blazor.MBSwitch.BadgeStylePLUS*
+  name: BadgeStylePLUS
+  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_BadgeStylePLUS_
+  commentId: Overload:Material.Blazor.MBSwitch.BadgeStylePLUS
+  fullName: Material.Blazor.MBSwitch.BadgeStylePLUS
+  nameWithType: MBSwitch.BadgeStylePLUS
+- uid: Material.Blazor.MBSwitch.BadgeValuePLUS
+  name: BadgeValuePLUS
+  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_BadgeValuePLUS
+  commentId: P:Material.Blazor.MBSwitch.BadgeValuePLUS
+  fullName: Material.Blazor.MBSwitch.BadgeValuePLUS
+  nameWithType: MBSwitch.BadgeValuePLUS
+- uid: Material.Blazor.MBSwitch.BadgeValuePLUS*
+  name: BadgeValuePLUS
+  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_BadgeValuePLUS_
+  commentId: Overload:Material.Blazor.MBSwitch.BadgeValuePLUS
+  fullName: Material.Blazor.MBSwitch.BadgeValuePLUS
+  nameWithType: MBSwitch.BadgeValuePLUS
 - uid: Material.Blazor.MBSwitch.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
   name: BuildRenderTree(RenderTreeBuilder)
   href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
@@ -4879,18 +4879,18 @@ references:
   commentId: Overload:Material.Blazor.MBSwitch.BuildRenderTree
   fullName: Material.Blazor.MBSwitch.BuildRenderTree
   nameWithType: MBSwitch.BuildRenderTree
-- uid: Material.Blazor.MBSwitch.HasBadge
-  name: HasBadge
-  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_HasBadge
-  commentId: P:Material.Blazor.MBSwitch.HasBadge
-  fullName: Material.Blazor.MBSwitch.HasBadge
-  nameWithType: MBSwitch.HasBadge
-- uid: Material.Blazor.MBSwitch.HasBadge*
-  name: HasBadge
-  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_HasBadge_
-  commentId: Overload:Material.Blazor.MBSwitch.HasBadge
-  fullName: Material.Blazor.MBSwitch.HasBadge
-  nameWithType: MBSwitch.HasBadge
+- uid: Material.Blazor.MBSwitch.HasBadgePLUS
+  name: HasBadgePLUS
+  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_HasBadgePLUS
+  commentId: P:Material.Blazor.MBSwitch.HasBadgePLUS
+  fullName: Material.Blazor.MBSwitch.HasBadgePLUS
+  nameWithType: MBSwitch.HasBadgePLUS
+- uid: Material.Blazor.MBSwitch.HasBadgePLUS*
+  name: HasBadgePLUS
+  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_HasBadgePLUS_
+  commentId: Overload:Material.Blazor.MBSwitch.HasBadgePLUS
+  fullName: Material.Blazor.MBSwitch.HasBadgePLUS
+  nameWithType: MBSwitch.HasBadgePLUS
 - uid: Material.Blazor.MBSwitch.Icons
   name: Icons
   href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_Icons
@@ -4915,6 +4915,18 @@ references:
   commentId: Overload:Material.Blazor.MBSwitch.LeadingLabelPLUS
   fullName: Material.Blazor.MBSwitch.LeadingLabelPLUS
   nameWithType: MBSwitch.LeadingLabelPLUS
+- uid: Material.Blazor.MBSwitch.OnParametersSetAsync
+  name: OnParametersSetAsync()
+  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_OnParametersSetAsync
+  commentId: M:Material.Blazor.MBSwitch.OnParametersSetAsync
+  fullName: Material.Blazor.MBSwitch.OnParametersSetAsync()
+  nameWithType: MBSwitch.OnParametersSetAsync()
+- uid: Material.Blazor.MBSwitch.OnParametersSetAsync*
+  name: OnParametersSetAsync
+  href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_OnParametersSetAsync_
+  commentId: Overload:Material.Blazor.MBSwitch.OnParametersSetAsync
+  fullName: Material.Blazor.MBSwitch.OnParametersSetAsync
+  nameWithType: MBSwitch.OnParametersSetAsync
 - uid: Material.Blazor.MBSwitch.ShowOnlySelectedIcon
   name: ShowOnlySelectedIcon
   href: api/Material.Blazor.MBSwitch.html#Material_Blazor_MBSwitch_ShowOnlySelectedIcon
