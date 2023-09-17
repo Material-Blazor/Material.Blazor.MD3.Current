@@ -3595,6 +3595,42 @@ references:
   fullName.vb: Material.Blazor.MBIcon.New
   nameWithType: MBIcon.MBIcon
   nameWithType.vb: MBIcon.New
+- uid: Material.Blazor.MBIcon.BadgeExitedPLUS
+  name: BadgeExitedPLUS
+  href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_BadgeExitedPLUS
+  commentId: P:Material.Blazor.MBIcon.BadgeExitedPLUS
+  fullName: Material.Blazor.MBIcon.BadgeExitedPLUS
+  nameWithType: MBIcon.BadgeExitedPLUS
+- uid: Material.Blazor.MBIcon.BadgeExitedPLUS*
+  name: BadgeExitedPLUS
+  href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_BadgeExitedPLUS_
+  commentId: Overload:Material.Blazor.MBIcon.BadgeExitedPLUS
+  fullName: Material.Blazor.MBIcon.BadgeExitedPLUS
+  nameWithType: MBIcon.BadgeExitedPLUS
+- uid: Material.Blazor.MBIcon.BadgeStylePLUS
+  name: BadgeStylePLUS
+  href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_BadgeStylePLUS
+  commentId: P:Material.Blazor.MBIcon.BadgeStylePLUS
+  fullName: Material.Blazor.MBIcon.BadgeStylePLUS
+  nameWithType: MBIcon.BadgeStylePLUS
+- uid: Material.Blazor.MBIcon.BadgeStylePLUS*
+  name: BadgeStylePLUS
+  href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_BadgeStylePLUS_
+  commentId: Overload:Material.Blazor.MBIcon.BadgeStylePLUS
+  fullName: Material.Blazor.MBIcon.BadgeStylePLUS
+  nameWithType: MBIcon.BadgeStylePLUS
+- uid: Material.Blazor.MBIcon.BadgeValuePLUS
+  name: BadgeValuePLUS
+  href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_BadgeValuePLUS
+  commentId: P:Material.Blazor.MBIcon.BadgeValuePLUS
+  fullName: Material.Blazor.MBIcon.BadgeValuePLUS
+  nameWithType: MBIcon.BadgeValuePLUS
+- uid: Material.Blazor.MBIcon.BadgeValuePLUS*
+  name: BadgeValuePLUS
+  href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_BadgeValuePLUS_
+  commentId: Overload:Material.Blazor.MBIcon.BadgeValuePLUS
+  fullName: Material.Blazor.MBIcon.BadgeValuePLUS
+  nameWithType: MBIcon.BadgeValuePLUS
 - uid: Material.Blazor.MBIcon.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
   name: BuildRenderTree(RenderTreeBuilder)
   href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
@@ -3607,6 +3643,18 @@ references:
   commentId: Overload:Material.Blazor.MBIcon.BuildRenderTree
   fullName: Material.Blazor.MBIcon.BuildRenderTree
   nameWithType: MBIcon.BuildRenderTree
+- uid: Material.Blazor.MBIcon.HasBadgePLUS
+  name: HasBadgePLUS
+  href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_HasBadgePLUS
+  commentId: P:Material.Blazor.MBIcon.HasBadgePLUS
+  fullName: Material.Blazor.MBIcon.HasBadgePLUS
+  nameWithType: MBIcon.HasBadgePLUS
+- uid: Material.Blazor.MBIcon.HasBadgePLUS*
+  name: HasBadgePLUS
+  href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_HasBadgePLUS_
+  commentId: Overload:Material.Blazor.MBIcon.HasBadgePLUS
+  fullName: Material.Blazor.MBIcon.HasBadgePLUS
+  nameWithType: MBIcon.HasBadgePLUS
 - uid: Material.Blazor.MBIcon.IconName
   name: IconName
   href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_IconName
@@ -3619,6 +3667,18 @@ references:
   commentId: Overload:Material.Blazor.MBIcon.IconName
   fullName: Material.Blazor.MBIcon.IconName
   nameWithType: MBIcon.IconName
+- uid: Material.Blazor.MBIcon.OnParametersSetAsync
+  name: OnParametersSetAsync()
+  href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_OnParametersSetAsync
+  commentId: M:Material.Blazor.MBIcon.OnParametersSetAsync
+  fullName: Material.Blazor.MBIcon.OnParametersSetAsync()
+  nameWithType: MBIcon.OnParametersSetAsync()
+- uid: Material.Blazor.MBIcon.OnParametersSetAsync*
+  name: OnParametersSetAsync
+  href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_OnParametersSetAsync_
+  commentId: Overload:Material.Blazor.MBIcon.OnParametersSetAsync
+  fullName: Material.Blazor.MBIcon.OnParametersSetAsync
+  nameWithType: MBIcon.OnParametersSetAsync
 - uid: Material.Blazor.MBIconFARelativeSize
   name: MBIconFARelativeSize
   href: api/Material.Blazor.MBIconFARelativeSize.html
