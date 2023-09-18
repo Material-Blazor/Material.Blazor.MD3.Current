@@ -4401,54 +4401,54 @@ references:
   fullName.vb: Material.Blazor.MBRadioButton(Of TItem).New
   nameWithType: MBRadioButton<TItem>.MBRadioButton
   nameWithType.vb: MBRadioButton(Of TItem).New
-- uid: Material.Blazor.MBRadioButton`1.BadgeExited
-  name: BadgeExited
-  href: api/Material.Blazor.MBRadioButton-1.html#Material_Blazor_MBRadioButton_1_BadgeExited
-  commentId: P:Material.Blazor.MBRadioButton`1.BadgeExited
-  fullName: Material.Blazor.MBRadioButton<TItem>.BadgeExited
-  fullName.vb: Material.Blazor.MBRadioButton(Of TItem).BadgeExited
-  nameWithType: MBRadioButton<TItem>.BadgeExited
-  nameWithType.vb: MBRadioButton(Of TItem).BadgeExited
-- uid: Material.Blazor.MBRadioButton`1.BadgeExited*
-  name: BadgeExited
-  href: api/Material.Blazor.MBRadioButton-1.html#Material_Blazor_MBRadioButton_1_BadgeExited_
-  commentId: Overload:Material.Blazor.MBRadioButton`1.BadgeExited
-  fullName: Material.Blazor.MBRadioButton<TItem>.BadgeExited
-  fullName.vb: Material.Blazor.MBRadioButton(Of TItem).BadgeExited
-  nameWithType: MBRadioButton<TItem>.BadgeExited
-  nameWithType.vb: MBRadioButton(Of TItem).BadgeExited
-- uid: Material.Blazor.MBRadioButton`1.BadgeStyle
-  name: BadgeStyle
-  href: api/Material.Blazor.MBRadioButton-1.html#Material_Blazor_MBRadioButton_1_BadgeStyle
-  commentId: P:Material.Blazor.MBRadioButton`1.BadgeStyle
-  fullName: Material.Blazor.MBRadioButton<TItem>.BadgeStyle
-  fullName.vb: Material.Blazor.MBRadioButton(Of TItem).BadgeStyle
-  nameWithType: MBRadioButton<TItem>.BadgeStyle
-  nameWithType.vb: MBRadioButton(Of TItem).BadgeStyle
-- uid: Material.Blazor.MBRadioButton`1.BadgeStyle*
-  name: BadgeStyle
-  href: api/Material.Blazor.MBRadioButton-1.html#Material_Blazor_MBRadioButton_1_BadgeStyle_
-  commentId: Overload:Material.Blazor.MBRadioButton`1.BadgeStyle
-  fullName: Material.Blazor.MBRadioButton<TItem>.BadgeStyle
-  fullName.vb: Material.Blazor.MBRadioButton(Of TItem).BadgeStyle
-  nameWithType: MBRadioButton<TItem>.BadgeStyle
-  nameWithType.vb: MBRadioButton(Of TItem).BadgeStyle
-- uid: Material.Blazor.MBRadioButton`1.BadgeValue
-  name: BadgeValue
-  href: api/Material.Blazor.MBRadioButton-1.html#Material_Blazor_MBRadioButton_1_BadgeValue
-  commentId: P:Material.Blazor.MBRadioButton`1.BadgeValue
-  fullName: Material.Blazor.MBRadioButton<TItem>.BadgeValue
-  fullName.vb: Material.Blazor.MBRadioButton(Of TItem).BadgeValue
-  nameWithType: MBRadioButton<TItem>.BadgeValue
-  nameWithType.vb: MBRadioButton(Of TItem).BadgeValue
-- uid: Material.Blazor.MBRadioButton`1.BadgeValue*
-  name: BadgeValue
-  href: api/Material.Blazor.MBRadioButton-1.html#Material_Blazor_MBRadioButton_1_BadgeValue_
-  commentId: Overload:Material.Blazor.MBRadioButton`1.BadgeValue
-  fullName: Material.Blazor.MBRadioButton<TItem>.BadgeValue
-  fullName.vb: Material.Blazor.MBRadioButton(Of TItem).BadgeValue
-  nameWithType: MBRadioButton<TItem>.BadgeValue
-  nameWithType.vb: MBRadioButton(Of TItem).BadgeValue
+- uid: Material.Blazor.MBRadioButton`1.BadgeExitedPLUS
+  name: BadgeExitedPLUS
+  href: api/Material.Blazor.MBRadioButton-1.html#Material_Blazor_MBRadioButton_1_BadgeExitedPLUS
+  commentId: P:Material.Blazor.MBRadioButton`1.BadgeExitedPLUS
+  fullName: Material.Blazor.MBRadioButton<TItem>.BadgeExitedPLUS
+  fullName.vb: Material.Blazor.MBRadioButton(Of TItem).BadgeExitedPLUS
+  nameWithType: MBRadioButton<TItem>.BadgeExitedPLUS
+  nameWithType.vb: MBRadioButton(Of TItem).BadgeExitedPLUS
+- uid: Material.Blazor.MBRadioButton`1.BadgeExitedPLUS*
+  name: BadgeExitedPLUS
+  href: api/Material.Blazor.MBRadioButton-1.html#Material_Blazor_MBRadioButton_1_BadgeExitedPLUS_
+  commentId: Overload:Material.Blazor.MBRadioButton`1.BadgeExitedPLUS
+  fullName: Material.Blazor.MBRadioButton<TItem>.BadgeExitedPLUS
+  fullName.vb: Material.Blazor.MBRadioButton(Of TItem).BadgeExitedPLUS
+  nameWithType: MBRadioButton<TItem>.BadgeExitedPLUS
+  nameWithType.vb: MBRadioButton(Of TItem).BadgeExitedPLUS
+- uid: Material.Blazor.MBRadioButton`1.BadgeStylePLUS
+  name: BadgeStylePLUS
+  href: api/Material.Blazor.MBRadioButton-1.html#Material_Blazor_MBRadioButton_1_BadgeStylePLUS
+  commentId: P:Material.Blazor.MBRadioButton`1.BadgeStylePLUS
+  fullName: Material.Blazor.MBRadioButton<TItem>.BadgeStylePLUS
+  fullName.vb: Material.Blazor.MBRadioButton(Of TItem).BadgeStylePLUS
+  nameWithType: MBRadioButton<TItem>.BadgeStylePLUS
+  nameWithType.vb: MBRadioButton(Of TItem).BadgeStylePLUS
+- uid: Material.Blazor.MBRadioButton`1.BadgeStylePLUS*
+  name: BadgeStylePLUS
+  href: api/Material.Blazor.MBRadioButton-1.html#Material_Blazor_MBRadioButton_1_BadgeStylePLUS_
+  commentId: Overload:Material.Blazor.MBRadioButton`1.BadgeStylePLUS
+  fullName: Material.Blazor.MBRadioButton<TItem>.BadgeStylePLUS
+  fullName.vb: Material.Blazor.MBRadioButton(Of TItem).BadgeStylePLUS
+  nameWithType: MBRadioButton<TItem>.BadgeStylePLUS
+  nameWithType.vb: MBRadioButton(Of TItem).BadgeStylePLUS
+- uid: Material.Blazor.MBRadioButton`1.BadgeValuePLUS
+  name: BadgeValuePLUS
+  href: api/Material.Blazor.MBRadioButton-1.html#Material_Blazor_MBRadioButton_1_BadgeValuePLUS
+  commentId: P:Material.Blazor.MBRadioButton`1.BadgeValuePLUS
+  fullName: Material.Blazor.MBRadioButton<TItem>.BadgeValuePLUS
+  fullName.vb: Material.Blazor.MBRadioButton(Of TItem).BadgeValuePLUS
+  nameWithType: MBRadioButton<TItem>.BadgeValuePLUS
+  nameWithType.vb: MBRadioButton(Of TItem).BadgeValuePLUS
+- uid: Material.Blazor.MBRadioButton`1.BadgeValuePLUS*
+  name: BadgeValuePLUS
+  href: api/Material.Blazor.MBRadioButton-1.html#Material_Blazor_MBRadioButton_1_BadgeValuePLUS_
+  commentId: Overload:Material.Blazor.MBRadioButton`1.BadgeValuePLUS
+  fullName: Material.Blazor.MBRadioButton<TItem>.BadgeValuePLUS
+  fullName.vb: Material.Blazor.MBRadioButton(Of TItem).BadgeValuePLUS
+  nameWithType: MBRadioButton<TItem>.BadgeValuePLUS
+  nameWithType.vb: MBRadioButton(Of TItem).BadgeValuePLUS
 - uid: Material.Blazor.MBRadioButton`1.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
   name: BuildRenderTree(RenderTreeBuilder)
   href: api/Material.Blazor.MBRadioButton-1.html#Material_Blazor_MBRadioButton_1_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
@@ -4481,22 +4481,22 @@ references:
   fullName.vb: Material.Blazor.MBRadioButton(Of TItem).Density
   nameWithType: MBRadioButton<TItem>.Density
   nameWithType.vb: MBRadioButton(Of TItem).Density
-- uid: Material.Blazor.MBRadioButton`1.HasBadge
-  name: HasBadge
-  href: api/Material.Blazor.MBRadioButton-1.html#Material_Blazor_MBRadioButton_1_HasBadge
-  commentId: P:Material.Blazor.MBRadioButton`1.HasBadge
-  fullName: Material.Blazor.MBRadioButton<TItem>.HasBadge
-  fullName.vb: Material.Blazor.MBRadioButton(Of TItem).HasBadge
-  nameWithType: MBRadioButton<TItem>.HasBadge
-  nameWithType.vb: MBRadioButton(Of TItem).HasBadge
-- uid: Material.Blazor.MBRadioButton`1.HasBadge*
-  name: HasBadge
-  href: api/Material.Blazor.MBRadioButton-1.html#Material_Blazor_MBRadioButton_1_HasBadge_
-  commentId: Overload:Material.Blazor.MBRadioButton`1.HasBadge
-  fullName: Material.Blazor.MBRadioButton<TItem>.HasBadge
-  fullName.vb: Material.Blazor.MBRadioButton(Of TItem).HasBadge
-  nameWithType: MBRadioButton<TItem>.HasBadge
-  nameWithType.vb: MBRadioButton(Of TItem).HasBadge
+- uid: Material.Blazor.MBRadioButton`1.HasBadgePLUS
+  name: HasBadgePLUS
+  href: api/Material.Blazor.MBRadioButton-1.html#Material_Blazor_MBRadioButton_1_HasBadgePLUS
+  commentId: P:Material.Blazor.MBRadioButton`1.HasBadgePLUS
+  fullName: Material.Blazor.MBRadioButton<TItem>.HasBadgePLUS
+  fullName.vb: Material.Blazor.MBRadioButton(Of TItem).HasBadgePLUS
+  nameWithType: MBRadioButton<TItem>.HasBadgePLUS
+  nameWithType.vb: MBRadioButton(Of TItem).HasBadgePLUS
+- uid: Material.Blazor.MBRadioButton`1.HasBadgePLUS*
+  name: HasBadgePLUS
+  href: api/Material.Blazor.MBRadioButton-1.html#Material_Blazor_MBRadioButton_1_HasBadgePLUS_
+  commentId: Overload:Material.Blazor.MBRadioButton`1.HasBadgePLUS
+  fullName: Material.Blazor.MBRadioButton<TItem>.HasBadgePLUS
+  fullName.vb: Material.Blazor.MBRadioButton(Of TItem).HasBadgePLUS
+  nameWithType: MBRadioButton<TItem>.HasBadgePLUS
+  nameWithType.vb: MBRadioButton(Of TItem).HasBadgePLUS
 - uid: Material.Blazor.MBRadioButton`1.IsDisabled
   name: IsDisabled
   href: api/Material.Blazor.MBRadioButton-1.html#Material_Blazor_MBRadioButton_1_IsDisabled
@@ -4529,6 +4529,22 @@ references:
   fullName.vb: Material.Blazor.MBRadioButton(Of TItem).LeadingLabelPLUS
   nameWithType: MBRadioButton<TItem>.LeadingLabelPLUS
   nameWithType.vb: MBRadioButton(Of TItem).LeadingLabelPLUS
+- uid: Material.Blazor.MBRadioButton`1.OnParametersSetAsync
+  name: OnParametersSetAsync()
+  href: api/Material.Blazor.MBRadioButton-1.html#Material_Blazor_MBRadioButton_1_OnParametersSetAsync
+  commentId: M:Material.Blazor.MBRadioButton`1.OnParametersSetAsync
+  fullName: Material.Blazor.MBRadioButton<TItem>.OnParametersSetAsync()
+  fullName.vb: Material.Blazor.MBRadioButton(Of TItem).OnParametersSetAsync()
+  nameWithType: MBRadioButton<TItem>.OnParametersSetAsync()
+  nameWithType.vb: MBRadioButton(Of TItem).OnParametersSetAsync()
+- uid: Material.Blazor.MBRadioButton`1.OnParametersSetAsync*
+  name: OnParametersSetAsync
+  href: api/Material.Blazor.MBRadioButton-1.html#Material_Blazor_MBRadioButton_1_OnParametersSetAsync_
+  commentId: Overload:Material.Blazor.MBRadioButton`1.OnParametersSetAsync
+  fullName: Material.Blazor.MBRadioButton<TItem>.OnParametersSetAsync
+  fullName.vb: Material.Blazor.MBRadioButton(Of TItem).OnParametersSetAsync
+  nameWithType: MBRadioButton<TItem>.OnParametersSetAsync
+  nameWithType.vb: MBRadioButton(Of TItem).OnParametersSetAsync
 - uid: Material.Blazor.MBRadioButton`1.RadioGroupName
   name: RadioGroupName
   href: api/Material.Blazor.MBRadioButton-1.html#Material_Blazor_MBRadioButton_1_RadioGroupName
