@@ -105,18 +105,9 @@ if you have built a theme - you can see how we have done this in the <a href="ht
 <p>Material.Blazor works with the following package versions:</p>
 <ul>
 <li><a href="https://github.com/material-components/material-components-web/blob/master/CHANGELOG.md#1200-2021-07-27">Material Components v14.0.0</a></li>
-<li><a href="https://fontawesome.com/changelog/latest">Font Awesome Icons version 6.1.1</a> are optional and can be included in your HTML <code>&lt;head&gt;</code> with the CDN link:
-<pre><code class="lang-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css&quot; /&gt;
-</code></pre>
-</li>
-<li><a href="https://useiconic.com/open">Open Iconic Icons version 1.1</a> are also optional and can be included in your HTML <code>&lt;head&gt;</code> with the CDN link:
-<pre><code class="lang-html">&lt;link href=&quot;https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic.min.css&quot; crossorigin=&quot;anonymous&quot; rel=&quot;stylesheet&quot; /&gt;
-</code></pre>
-</li>
 </ul>
 <h2 id="services-and-anchor">Services and Anchor</h2>
-<p>Material.Blazor has three services for logging, snackbars, and toasts. We strongly advise you to use these in your project
-because regular component tooltips will fail if you don't, although they are optional. To register the services:</p>
+<p>Material.Blazor has three services for logging, snackbars, and toasts. We strongly advise you to use these in your project.</p>
 <pre><code class="lang-csharp">services.AddMBServices();
 </code></pre>
 <p>The three configurations are either the default (as above) or custom -

@@ -379,18 +379,6 @@ references:
   commentId: Overload:Material.Blazor.Internal.ComponentFoundation.OnAfterRenderAsync
   fullName: Material.Blazor.Internal.ComponentFoundation.OnAfterRenderAsync
   nameWithType: ComponentFoundation.OnAfterRenderAsync
-- uid: Material.Blazor.Internal.ComponentFoundation.OnInitialized
-  name: OnInitialized()
-  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_OnInitialized
-  commentId: M:Material.Blazor.Internal.ComponentFoundation.OnInitialized
-  fullName: Material.Blazor.Internal.ComponentFoundation.OnInitialized()
-  nameWithType: ComponentFoundation.OnInitialized()
-- uid: Material.Blazor.Internal.ComponentFoundation.OnInitialized*
-  name: OnInitialized
-  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_OnInitialized_
-  commentId: Overload:Material.Blazor.Internal.ComponentFoundation.OnInitialized
-  fullName: Material.Blazor.Internal.ComponentFoundation.OnInitialized
-  nameWithType: ComponentFoundation.OnInitialized
 - uid: Material.Blazor.Internal.ComponentFoundation.OnParametersSet
   name: OnParametersSet()
   href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_OnParametersSet
@@ -415,18 +403,6 @@ references:
   commentId: Overload:Material.Blazor.Internal.ComponentFoundation.OnParametersSetAsync
   fullName: Material.Blazor.Internal.ComponentFoundation.OnParametersSetAsync
   nameWithType: ComponentFoundation.OnParametersSetAsync
-- uid: Material.Blazor.Internal.ComponentFoundation.Tooltip
-  name: Tooltip
-  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_Tooltip
-  commentId: P:Material.Blazor.Internal.ComponentFoundation.Tooltip
-  fullName: Material.Blazor.Internal.ComponentFoundation.Tooltip
-  nameWithType: ComponentFoundation.Tooltip
-- uid: Material.Blazor.Internal.ComponentFoundation.Tooltip*
-  name: Tooltip
-  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_Tooltip_
-  commentId: Overload:Material.Blazor.Internal.ComponentFoundation.Tooltip
-  fullName: Material.Blazor.Internal.ComponentFoundation.Tooltip
-  nameWithType: ComponentFoundation.Tooltip
 - uid: Material.Blazor.Internal.ComponentFoundation.UnmatchedAttributes
   name: UnmatchedAttributes
   href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_UnmatchedAttributes
@@ -2194,18 +2170,6 @@ references:
   commentId: Overload:Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnParametersSetAsync
   fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnParametersSetAsync
   nameWithType: ComponentFoundationMD2.OnParametersSetAsync
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.Tooltip
-  name: Tooltip
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_Tooltip
-  commentId: P:Material.Blazor.Internal.MD2.ComponentFoundationMD2.Tooltip
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.Tooltip
-  nameWithType: ComponentFoundationMD2.Tooltip
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.Tooltip*
-  name: Tooltip
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_Tooltip_
-  commentId: Overload:Material.Blazor.Internal.MD2.ComponentFoundationMD2.Tooltip
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.Tooltip
-  nameWithType: ComponentFoundationMD2.Tooltip
 - uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.UnmatchedAttributes
   name: UnmatchedAttributes
   href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_UnmatchedAttributes
@@ -2490,69 +2454,6 @@ references:
   fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T).ValueExpression
   nameWithType: InputComponentMD2<T>.ValueExpression
   nameWithType.vb: InputComponentMD2(Of T).ValueExpression
-- uid: Material.Blazor.Internal.MD2.InternalTooltipAnchor
-  name: InternalTooltipAnchor
-  href: api/Material.Blazor.Internal.MD2.InternalTooltipAnchor.html
-  commentId: T:Material.Blazor.Internal.MD2.InternalTooltipAnchor
-  fullName: Material.Blazor.Internal.MD2.InternalTooltipAnchor
-  nameWithType: InternalTooltipAnchor
-- uid: Material.Blazor.Internal.MD2.InternalTooltipAnchor.#ctor
-  name: InternalTooltipAnchor()
-  href: api/Material.Blazor.Internal.MD2.InternalTooltipAnchor.html#Material_Blazor_Internal_MD2_InternalTooltipAnchor__ctor
-  commentId: M:Material.Blazor.Internal.MD2.InternalTooltipAnchor.#ctor
-  name.vb: New()
-  fullName: Material.Blazor.Internal.MD2.InternalTooltipAnchor.InternalTooltipAnchor()
-  fullName.vb: Material.Blazor.Internal.MD2.InternalTooltipAnchor.New()
-  nameWithType: InternalTooltipAnchor.InternalTooltipAnchor()
-  nameWithType.vb: InternalTooltipAnchor.New()
-- uid: Material.Blazor.Internal.MD2.InternalTooltipAnchor.#ctor*
-  name: InternalTooltipAnchor
-  href: api/Material.Blazor.Internal.MD2.InternalTooltipAnchor.html#Material_Blazor_Internal_MD2_InternalTooltipAnchor__ctor_
-  commentId: Overload:Material.Blazor.Internal.MD2.InternalTooltipAnchor.#ctor
-  name.vb: New
-  fullName: Material.Blazor.Internal.MD2.InternalTooltipAnchor.InternalTooltipAnchor
-  fullName.vb: Material.Blazor.Internal.MD2.InternalTooltipAnchor.New
-  nameWithType: InternalTooltipAnchor.InternalTooltipAnchor
-  nameWithType.vb: InternalTooltipAnchor.New
-- uid: Material.Blazor.Internal.MD2.InternalTooltipAnchor.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
-  name: BuildRenderTree(RenderTreeBuilder)
-  href: api/Material.Blazor.Internal.MD2.InternalTooltipAnchor.html#Material_Blazor_Internal_MD2_InternalTooltipAnchor_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
-  commentId: M:Material.Blazor.Internal.MD2.InternalTooltipAnchor.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
-  fullName: Material.Blazor.Internal.MD2.InternalTooltipAnchor.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
-  nameWithType: InternalTooltipAnchor.BuildRenderTree(RenderTreeBuilder)
-- uid: Material.Blazor.Internal.MD2.InternalTooltipAnchor.BuildRenderTree*
-  name: BuildRenderTree
-  href: api/Material.Blazor.Internal.MD2.InternalTooltipAnchor.html#Material_Blazor_Internal_MD2_InternalTooltipAnchor_BuildRenderTree_
-  commentId: Overload:Material.Blazor.Internal.MD2.InternalTooltipAnchor.BuildRenderTree
-  fullName: Material.Blazor.Internal.MD2.InternalTooltipAnchor.BuildRenderTree
-  nameWithType: InternalTooltipAnchor.BuildRenderTree
-- uid: Material.Blazor.Internal.MD2.InternalTooltipAnchor.OnAfterRenderAsync(System.Boolean)
-  name: OnAfterRenderAsync(bool)
-  href: api/Material.Blazor.Internal.MD2.InternalTooltipAnchor.html#Material_Blazor_Internal_MD2_InternalTooltipAnchor_OnAfterRenderAsync_System_Boolean_
-  commentId: M:Material.Blazor.Internal.MD2.InternalTooltipAnchor.OnAfterRenderAsync(System.Boolean)
-  name.vb: OnAfterRenderAsync(Boolean)
-  fullName: Material.Blazor.Internal.MD2.InternalTooltipAnchor.OnAfterRenderAsync(bool)
-  fullName.vb: Material.Blazor.Internal.MD2.InternalTooltipAnchor.OnAfterRenderAsync(Boolean)
-  nameWithType: InternalTooltipAnchor.OnAfterRenderAsync(bool)
-  nameWithType.vb: InternalTooltipAnchor.OnAfterRenderAsync(Boolean)
-- uid: Material.Blazor.Internal.MD2.InternalTooltipAnchor.OnAfterRenderAsync*
-  name: OnAfterRenderAsync
-  href: api/Material.Blazor.Internal.MD2.InternalTooltipAnchor.html#Material_Blazor_Internal_MD2_InternalTooltipAnchor_OnAfterRenderAsync_
-  commentId: Overload:Material.Blazor.Internal.MD2.InternalTooltipAnchor.OnAfterRenderAsync
-  fullName: Material.Blazor.Internal.MD2.InternalTooltipAnchor.OnAfterRenderAsync
-  nameWithType: InternalTooltipAnchor.OnAfterRenderAsync
-- uid: Material.Blazor.Internal.MD2.InternalTooltipAnchor.OnInitializedAsync
-  name: OnInitializedAsync()
-  href: api/Material.Blazor.Internal.MD2.InternalTooltipAnchor.html#Material_Blazor_Internal_MD2_InternalTooltipAnchor_OnInitializedAsync
-  commentId: M:Material.Blazor.Internal.MD2.InternalTooltipAnchor.OnInitializedAsync
-  fullName: Material.Blazor.Internal.MD2.InternalTooltipAnchor.OnInitializedAsync()
-  nameWithType: InternalTooltipAnchor.OnInitializedAsync()
-- uid: Material.Blazor.Internal.MD2.InternalTooltipAnchor.OnInitializedAsync*
-  name: OnInitializedAsync
-  href: api/Material.Blazor.Internal.MD2.InternalTooltipAnchor.html#Material_Blazor_Internal_MD2_InternalTooltipAnchor_OnInitializedAsync_
-  commentId: Overload:Material.Blazor.Internal.MD2.InternalTooltipAnchor.OnInitializedAsync
-  fullName: Material.Blazor.Internal.MD2.InternalTooltipAnchor.OnInitializedAsync
-  nameWithType: InternalTooltipAnchor.OnInitializedAsync
 - uid: Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2
   name: MultiSelectComponentMD2<T, TListElement>
   href: api/Material.Blazor.Internal.MD2.MultiSelectComponentMD2-2.html
@@ -2596,22 +2497,6 @@ references:
   fullName.vb: Material.Blazor.Internal.MD2.MultiSelectComponentMD2(Of T, TListElement).GetKeysFunc
   nameWithType: MultiSelectComponentMD2<T, TListElement>.GetKeysFunc
   nameWithType.vb: MultiSelectComponentMD2(Of T, TListElement).GetKeysFunc
-- uid: Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.IconFoundry
-  name: IconFoundry
-  href: api/Material.Blazor.Internal.MD2.MultiSelectComponentMD2-2.html#Material_Blazor_Internal_MD2_MultiSelectComponentMD2_2_IconFoundry
-  commentId: P:Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.IconFoundry
-  fullName: Material.Blazor.Internal.MD2.MultiSelectComponentMD2<T, TListElement>.IconFoundry
-  fullName.vb: Material.Blazor.Internal.MD2.MultiSelectComponentMD2(Of T, TListElement).IconFoundry
-  nameWithType: MultiSelectComponentMD2<T, TListElement>.IconFoundry
-  nameWithType.vb: MultiSelectComponentMD2(Of T, TListElement).IconFoundry
-- uid: Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.IconFoundry*
-  name: IconFoundry
-  href: api/Material.Blazor.Internal.MD2.MultiSelectComponentMD2-2.html#Material_Blazor_Internal_MD2_MultiSelectComponentMD2_2_IconFoundry_
-  commentId: Overload:Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.IconFoundry
-  fullName: Material.Blazor.Internal.MD2.MultiSelectComponentMD2<T, TListElement>.IconFoundry
-  fullName.vb: Material.Blazor.Internal.MD2.MultiSelectComponentMD2(Of T, TListElement).IconFoundry
-  nameWithType: MultiSelectComponentMD2<T, TListElement>.IconFoundry
-  nameWithType.vb: MultiSelectComponentMD2(Of T, TListElement).IconFoundry
 - uid: Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.Items
   name: Items
   href: api/Material.Blazor.Internal.MD2.MultiSelectComponentMD2-2.html#Material_Blazor_Internal_MD2_MultiSelectComponentMD2_2_Items
@@ -3169,6 +3054,42 @@ references:
   commentId: Overload:Material.Blazor.MBCascadingDefaults.Disabled
   fullName: Material.Blazor.MBCascadingDefaults.Disabled
   nameWithType: MBCascadingDefaults.Disabled
+- uid: Material.Blazor.MBCascadingDefaults.IconName
+  name: IconName
+  href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_IconName
+  commentId: P:Material.Blazor.MBCascadingDefaults.IconName
+  fullName: Material.Blazor.MBCascadingDefaults.IconName
+  nameWithType: MBCascadingDefaults.IconName
+- uid: Material.Blazor.MBCascadingDefaults.IconName*
+  name: IconName
+  href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_IconName_
+  commentId: Overload:Material.Blazor.MBCascadingDefaults.IconName
+  fullName: Material.Blazor.MBCascadingDefaults.IconName
+  nameWithType: MBCascadingDefaults.IconName
+- uid: Material.Blazor.MBCascadingDefaults.IconStyle
+  name: IconStyle
+  href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_IconStyle
+  commentId: P:Material.Blazor.MBCascadingDefaults.IconStyle
+  fullName: Material.Blazor.MBCascadingDefaults.IconStyle
+  nameWithType: MBCascadingDefaults.IconStyle
+- uid: Material.Blazor.MBCascadingDefaults.IconStyle*
+  name: IconStyle
+  href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_IconStyle_
+  commentId: Overload:Material.Blazor.MBCascadingDefaults.IconStyle
+  fullName: Material.Blazor.MBCascadingDefaults.IconStyle
+  nameWithType: MBCascadingDefaults.IconStyle
+- uid: Material.Blazor.MBCascadingDefaults.ShallowCopy
+  name: ShallowCopy()
+  href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_ShallowCopy
+  commentId: M:Material.Blazor.MBCascadingDefaults.ShallowCopy
+  fullName: Material.Blazor.MBCascadingDefaults.ShallowCopy()
+  nameWithType: MBCascadingDefaults.ShallowCopy()
+- uid: Material.Blazor.MBCascadingDefaults.ShallowCopy*
+  name: ShallowCopy
+  href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_ShallowCopy_
+  commentId: Overload:Material.Blazor.MBCascadingDefaults.ShallowCopy
+  fullName: Material.Blazor.MBCascadingDefaults.ShallowCopy
+  nameWithType: MBCascadingDefaults.ShallowCopy
 - uid: Material.Blazor.MBCascadingDefaults.SwitchIcons
   name: SwitchIcons
   href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_SwitchIcons
@@ -3667,6 +3588,18 @@ references:
   commentId: Overload:Material.Blazor.MBIcon.IconName
   fullName: Material.Blazor.MBIcon.IconName
   nameWithType: MBIcon.IconName
+- uid: Material.Blazor.MBIcon.IconStyle
+  name: IconStyle
+  href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_IconStyle
+  commentId: P:Material.Blazor.MBIcon.IconStyle
+  fullName: Material.Blazor.MBIcon.IconStyle
+  nameWithType: MBIcon.IconStyle
+- uid: Material.Blazor.MBIcon.IconStyle*
+  name: IconStyle
+  href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_IconStyle_
+  commentId: Overload:Material.Blazor.MBIcon.IconStyle
+  fullName: Material.Blazor.MBIcon.IconStyle
+  nameWithType: MBIcon.IconStyle
 - uid: Material.Blazor.MBIcon.OnParametersSetAsync
   name: OnParametersSetAsync()
   href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_OnParametersSetAsync
@@ -3679,162 +3612,30 @@ references:
   commentId: Overload:Material.Blazor.MBIcon.OnParametersSetAsync
   fullName: Material.Blazor.MBIcon.OnParametersSetAsync
   nameWithType: MBIcon.OnParametersSetAsync
-- uid: Material.Blazor.MBIconFARelativeSize
-  name: MBIconFARelativeSize
-  href: api/Material.Blazor.MBIconFARelativeSize.html
-  commentId: T:Material.Blazor.MBIconFARelativeSize
-  fullName: Material.Blazor.MBIconFARelativeSize
-  nameWithType: MBIconFARelativeSize
-- uid: Material.Blazor.MBIconFARelativeSize.ExtraSmall
-  name: ExtraSmall
-  href: api/Material.Blazor.MBIconFARelativeSize.html#Material_Blazor_MBIconFARelativeSize_ExtraSmall
-  commentId: F:Material.Blazor.MBIconFARelativeSize.ExtraSmall
-  fullName: Material.Blazor.MBIconFARelativeSize.ExtraSmall
-  nameWithType: MBIconFARelativeSize.ExtraSmall
-- uid: Material.Blazor.MBIconFARelativeSize.FiveTimes
-  name: FiveTimes
-  href: api/Material.Blazor.MBIconFARelativeSize.html#Material_Blazor_MBIconFARelativeSize_FiveTimes
-  commentId: F:Material.Blazor.MBIconFARelativeSize.FiveTimes
-  fullName: Material.Blazor.MBIconFARelativeSize.FiveTimes
-  nameWithType: MBIconFARelativeSize.FiveTimes
-- uid: Material.Blazor.MBIconFARelativeSize.Large
-  name: Large
-  href: api/Material.Blazor.MBIconFARelativeSize.html#Material_Blazor_MBIconFARelativeSize_Large
-  commentId: F:Material.Blazor.MBIconFARelativeSize.Large
-  fullName: Material.Blazor.MBIconFARelativeSize.Large
-  nameWithType: MBIconFARelativeSize.Large
-- uid: Material.Blazor.MBIconFARelativeSize.Regular
-  name: Regular
-  href: api/Material.Blazor.MBIconFARelativeSize.html#Material_Blazor_MBIconFARelativeSize_Regular
-  commentId: F:Material.Blazor.MBIconFARelativeSize.Regular
-  fullName: Material.Blazor.MBIconFARelativeSize.Regular
-  nameWithType: MBIconFARelativeSize.Regular
-- uid: Material.Blazor.MBIconFARelativeSize.SevenTimes
-  name: SevenTimes
-  href: api/Material.Blazor.MBIconFARelativeSize.html#Material_Blazor_MBIconFARelativeSize_SevenTimes
-  commentId: F:Material.Blazor.MBIconFARelativeSize.SevenTimes
-  fullName: Material.Blazor.MBIconFARelativeSize.SevenTimes
-  nameWithType: MBIconFARelativeSize.SevenTimes
-- uid: Material.Blazor.MBIconFARelativeSize.Small
-  name: Small
-  href: api/Material.Blazor.MBIconFARelativeSize.html#Material_Blazor_MBIconFARelativeSize_Small
-  commentId: F:Material.Blazor.MBIconFARelativeSize.Small
-  fullName: Material.Blazor.MBIconFARelativeSize.Small
-  nameWithType: MBIconFARelativeSize.Small
-- uid: Material.Blazor.MBIconFARelativeSize.TenTimes
-  name: TenTimes
-  href: api/Material.Blazor.MBIconFARelativeSize.html#Material_Blazor_MBIconFARelativeSize_TenTimes
-  commentId: F:Material.Blazor.MBIconFARelativeSize.TenTimes
-  fullName: Material.Blazor.MBIconFARelativeSize.TenTimes
-  nameWithType: MBIconFARelativeSize.TenTimes
-- uid: Material.Blazor.MBIconFARelativeSize.ThreeTimes
-  name: ThreeTimes
-  href: api/Material.Blazor.MBIconFARelativeSize.html#Material_Blazor_MBIconFARelativeSize_ThreeTimes
-  commentId: F:Material.Blazor.MBIconFARelativeSize.ThreeTimes
-  fullName: Material.Blazor.MBIconFARelativeSize.ThreeTimes
-  nameWithType: MBIconFARelativeSize.ThreeTimes
-- uid: Material.Blazor.MBIconFARelativeSize.TwoTimes
-  name: TwoTimes
-  href: api/Material.Blazor.MBIconFARelativeSize.html#Material_Blazor_MBIconFARelativeSize_TwoTimes
-  commentId: F:Material.Blazor.MBIconFARelativeSize.TwoTimes
-  fullName: Material.Blazor.MBIconFARelativeSize.TwoTimes
-  nameWithType: MBIconFARelativeSize.TwoTimes
-- uid: Material.Blazor.MBIconFAStyle
-  name: MBIconFAStyle
-  href: api/Material.Blazor.MBIconFAStyle.html
-  commentId: T:Material.Blazor.MBIconFAStyle
-  fullName: Material.Blazor.MBIconFAStyle
-  nameWithType: MBIconFAStyle
-- uid: Material.Blazor.MBIconFAStyle.Brands
-  name: Brands
-  href: api/Material.Blazor.MBIconFAStyle.html#Material_Blazor_MBIconFAStyle_Brands
-  commentId: F:Material.Blazor.MBIconFAStyle.Brands
-  fullName: Material.Blazor.MBIconFAStyle.Brands
-  nameWithType: MBIconFAStyle.Brands
-- uid: Material.Blazor.MBIconFAStyle.Duotone
-  name: Duotone
-  href: api/Material.Blazor.MBIconFAStyle.html#Material_Blazor_MBIconFAStyle_Duotone
-  commentId: F:Material.Blazor.MBIconFAStyle.Duotone
-  fullName: Material.Blazor.MBIconFAStyle.Duotone
-  nameWithType: MBIconFAStyle.Duotone
-- uid: Material.Blazor.MBIconFAStyle.Light
-  name: Light
-  href: api/Material.Blazor.MBIconFAStyle.html#Material_Blazor_MBIconFAStyle_Light
-  commentId: F:Material.Blazor.MBIconFAStyle.Light
-  fullName: Material.Blazor.MBIconFAStyle.Light
-  nameWithType: MBIconFAStyle.Light
-- uid: Material.Blazor.MBIconFAStyle.Regular
-  name: Regular
-  href: api/Material.Blazor.MBIconFAStyle.html#Material_Blazor_MBIconFAStyle_Regular
-  commentId: F:Material.Blazor.MBIconFAStyle.Regular
-  fullName: Material.Blazor.MBIconFAStyle.Regular
-  nameWithType: MBIconFAStyle.Regular
-- uid: Material.Blazor.MBIconFAStyle.Solid
-  name: Solid
-  href: api/Material.Blazor.MBIconFAStyle.html#Material_Blazor_MBIconFAStyle_Solid
-  commentId: F:Material.Blazor.MBIconFAStyle.Solid
-  fullName: Material.Blazor.MBIconFAStyle.Solid
-  nameWithType: MBIconFAStyle.Solid
-- uid: Material.Blazor.MBIconFoundryName
-  name: MBIconFoundryName
-  href: api/Material.Blazor.MBIconFoundryName.html
-  commentId: T:Material.Blazor.MBIconFoundryName
-  fullName: Material.Blazor.MBIconFoundryName
-  nameWithType: MBIconFoundryName
-- uid: Material.Blazor.MBIconFoundryName.FontAwesome
-  name: FontAwesome
-  href: api/Material.Blazor.MBIconFoundryName.html#Material_Blazor_MBIconFoundryName_FontAwesome
-  commentId: F:Material.Blazor.MBIconFoundryName.FontAwesome
-  fullName: Material.Blazor.MBIconFoundryName.FontAwesome
-  nameWithType: MBIconFoundryName.FontAwesome
-- uid: Material.Blazor.MBIconFoundryName.MaterialIcons
-  name: MaterialIcons
-  href: api/Material.Blazor.MBIconFoundryName.html#Material_Blazor_MBIconFoundryName_MaterialIcons
-  commentId: F:Material.Blazor.MBIconFoundryName.MaterialIcons
-  fullName: Material.Blazor.MBIconFoundryName.MaterialIcons
-  nameWithType: MBIconFoundryName.MaterialIcons
-- uid: Material.Blazor.MBIconFoundryName.OpenIconic
-  name: OpenIconic
-  href: api/Material.Blazor.MBIconFoundryName.html#Material_Blazor_MBIconFoundryName_OpenIconic
-  commentId: F:Material.Blazor.MBIconFoundryName.OpenIconic
-  fullName: Material.Blazor.MBIconFoundryName.OpenIconic
-  nameWithType: MBIconFoundryName.OpenIconic
-- uid: Material.Blazor.MBIconMITheme
-  name: MBIconMITheme
-  href: api/Material.Blazor.MBIconMITheme.html
-  commentId: T:Material.Blazor.MBIconMITheme
-  fullName: Material.Blazor.MBIconMITheme
-  nameWithType: MBIconMITheme
-- uid: Material.Blazor.MBIconMITheme.Filled
-  name: Filled
-  href: api/Material.Blazor.MBIconMITheme.html#Material_Blazor_MBIconMITheme_Filled
-  commentId: F:Material.Blazor.MBIconMITheme.Filled
-  fullName: Material.Blazor.MBIconMITheme.Filled
-  nameWithType: MBIconMITheme.Filled
-- uid: Material.Blazor.MBIconMITheme.Outlined
+- uid: Material.Blazor.MBIconStyle
+  name: MBIconStyle
+  href: api/Material.Blazor.MBIconStyle.html
+  commentId: T:Material.Blazor.MBIconStyle
+  fullName: Material.Blazor.MBIconStyle
+  nameWithType: MBIconStyle
+- uid: Material.Blazor.MBIconStyle.Outlined
   name: Outlined
-  href: api/Material.Blazor.MBIconMITheme.html#Material_Blazor_MBIconMITheme_Outlined
-  commentId: F:Material.Blazor.MBIconMITheme.Outlined
-  fullName: Material.Blazor.MBIconMITheme.Outlined
-  nameWithType: MBIconMITheme.Outlined
-- uid: Material.Blazor.MBIconMITheme.Round
-  name: Round
-  href: api/Material.Blazor.MBIconMITheme.html#Material_Blazor_MBIconMITheme_Round
-  commentId: F:Material.Blazor.MBIconMITheme.Round
-  fullName: Material.Blazor.MBIconMITheme.Round
-  nameWithType: MBIconMITheme.Round
-- uid: Material.Blazor.MBIconMITheme.Sharp
+  href: api/Material.Blazor.MBIconStyle.html#Material_Blazor_MBIconStyle_Outlined
+  commentId: F:Material.Blazor.MBIconStyle.Outlined
+  fullName: Material.Blazor.MBIconStyle.Outlined
+  nameWithType: MBIconStyle.Outlined
+- uid: Material.Blazor.MBIconStyle.Rounded
+  name: Rounded
+  href: api/Material.Blazor.MBIconStyle.html#Material_Blazor_MBIconStyle_Rounded
+  commentId: F:Material.Blazor.MBIconStyle.Rounded
+  fullName: Material.Blazor.MBIconStyle.Rounded
+  nameWithType: MBIconStyle.Rounded
+- uid: Material.Blazor.MBIconStyle.Sharp
   name: Sharp
-  href: api/Material.Blazor.MBIconMITheme.html#Material_Blazor_MBIconMITheme_Sharp
-  commentId: F:Material.Blazor.MBIconMITheme.Sharp
-  fullName: Material.Blazor.MBIconMITheme.Sharp
-  nameWithType: MBIconMITheme.Sharp
-- uid: Material.Blazor.MBIconMITheme.TwoTone
-  name: TwoTone
-  href: api/Material.Blazor.MBIconMITheme.html#Material_Blazor_MBIconMITheme_TwoTone
-  commentId: F:Material.Blazor.MBIconMITheme.TwoTone
-  fullName: Material.Blazor.MBIconMITheme.TwoTone
-  nameWithType: MBIconMITheme.TwoTone
+  href: api/Material.Blazor.MBIconStyle.html#Material_Blazor_MBIconStyle_Sharp
+  commentId: F:Material.Blazor.MBIconStyle.Sharp
+  fullName: Material.Blazor.MBIconStyle.Sharp
+  nameWithType: MBIconStyle.Sharp
 - uid: Material.Blazor.MBItemValidation
   name: MBItemValidation
   href: api/Material.Blazor.MBItemValidation.html
@@ -5579,183 +5380,6 @@ references:
   commentId: N:Material.Blazor.MD2
   fullName: Material.Blazor.MD2
   nameWithType: Material.Blazor.MD2
-- uid: Material.Blazor.MD2.IMBIcon
-  name: IMBIcon
-  href: api/Material.Blazor.MD2.IMBIcon.html
-  commentId: T:Material.Blazor.MD2.IMBIcon
-  fullName: Material.Blazor.MD2.IMBIcon
-  nameWithType: IMBIcon
-- uid: Material.Blazor.MD2.IMBIcon.IconFragment
-  name: IMBIcon.IconFragment
-  href: api/Material.Blazor.MD2.IMBIcon.IconFragment.html
-  commentId: T:Material.Blazor.MD2.IMBIcon.IconFragment
-  fullName: Material.Blazor.MD2.IMBIcon.IconFragment
-  nameWithType: IMBIcon.IconFragment
-- uid: Material.Blazor.MD2.IMBIcon.IconFragment.#ctor(System.Object,System.IntPtr)
-  name: IconFragment(object, nint)
-  href: api/Material.Blazor.MD2.IMBIcon.IconFragment.html#Material_Blazor_MD2_IMBIcon_IconFragment__ctor_System_Object_System_IntPtr_
-  commentId: M:Material.Blazor.MD2.IMBIcon.IconFragment.#ctor(System.Object,System.IntPtr)
-  name.vb: New(Object, IntPtr)
-  fullName: Material.Blazor.MD2.IMBIcon.IconFragment.IconFragment(object, nint)
-  fullName.vb: Material.Blazor.MD2.IMBIcon.IconFragment.New(Object, System.IntPtr)
-  nameWithType: IMBIcon.IconFragment.IconFragment(object, nint)
-  nameWithType.vb: IMBIcon.IconFragment.New(Object, IntPtr)
-- uid: Material.Blazor.MD2.IMBIcon.IconFragment.#ctor*
-  name: IconFragment
-  href: api/Material.Blazor.MD2.IMBIcon.IconFragment.html#Material_Blazor_MD2_IMBIcon_IconFragment__ctor_
-  commentId: Overload:Material.Blazor.MD2.IMBIcon.IconFragment.#ctor
-  name.vb: New
-  fullName: Material.Blazor.MD2.IMBIcon.IconFragment.IconFragment
-  fullName.vb: Material.Blazor.MD2.IMBIcon.IconFragment.New
-  nameWithType: IMBIcon.IconFragment.IconFragment
-  nameWithType.vb: IMBIcon.IconFragment.New
-- uid: Material.Blazor.MD2.IMBIcon.IconFragment.BeginInvoke(System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.Object}},System.AsyncCallback,System.Object)
-  name: BeginInvoke(string, string, IEnumerable<KeyValuePair<string, object>>, AsyncCallback, object)
-  href: api/Material.Blazor.MD2.IMBIcon.IconFragment.html#Material_Blazor_MD2_IMBIcon_IconFragment_BeginInvoke_System_String_System_String_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_Object___System_AsyncCallback_System_Object_
-  commentId: M:Material.Blazor.MD2.IMBIcon.IconFragment.BeginInvoke(System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.Object}},System.AsyncCallback,System.Object)
-  name.vb: BeginInvoke(String, String, IEnumerable(Of KeyValuePair(Of String, Object)), AsyncCallback, Object)
-  fullName: Material.Blazor.MD2.IMBIcon.IconFragment.BeginInvoke(string, string, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, object>>, System.AsyncCallback, object)
-  fullName.vb: Material.Blazor.MD2.IMBIcon.IconFragment.BeginInvoke(String, String, System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of String, Object)), System.AsyncCallback, Object)
-  nameWithType: IMBIcon.IconFragment.BeginInvoke(string, string, IEnumerable<KeyValuePair<string, object>>, AsyncCallback, object)
-  nameWithType.vb: IMBIcon.IconFragment.BeginInvoke(String, String, IEnumerable(Of KeyValuePair(Of String, Object)), AsyncCallback, Object)
-- uid: Material.Blazor.MD2.IMBIcon.IconFragment.BeginInvoke*
-  name: BeginInvoke
-  href: api/Material.Blazor.MD2.IMBIcon.IconFragment.html#Material_Blazor_MD2_IMBIcon_IconFragment_BeginInvoke_
-  commentId: Overload:Material.Blazor.MD2.IMBIcon.IconFragment.BeginInvoke
-  fullName: Material.Blazor.MD2.IMBIcon.IconFragment.BeginInvoke
-  nameWithType: IMBIcon.IconFragment.BeginInvoke
-- uid: Material.Blazor.MD2.IMBIcon.IconFragment.EndInvoke(System.IAsyncResult)
-  name: EndInvoke(IAsyncResult)
-  href: api/Material.Blazor.MD2.IMBIcon.IconFragment.html#Material_Blazor_MD2_IMBIcon_IconFragment_EndInvoke_System_IAsyncResult_
-  commentId: M:Material.Blazor.MD2.IMBIcon.IconFragment.EndInvoke(System.IAsyncResult)
-  fullName: Material.Blazor.MD2.IMBIcon.IconFragment.EndInvoke(System.IAsyncResult)
-  nameWithType: IMBIcon.IconFragment.EndInvoke(IAsyncResult)
-- uid: Material.Blazor.MD2.IMBIcon.IconFragment.EndInvoke*
-  name: EndInvoke
-  href: api/Material.Blazor.MD2.IMBIcon.IconFragment.html#Material_Blazor_MD2_IMBIcon_IconFragment_EndInvoke_
-  commentId: Overload:Material.Blazor.MD2.IMBIcon.IconFragment.EndInvoke
-  fullName: Material.Blazor.MD2.IMBIcon.IconFragment.EndInvoke
-  nameWithType: IMBIcon.IconFragment.EndInvoke
-- uid: Material.Blazor.MD2.IMBIcon.IconFragment.Invoke(System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.Object}})
-  name: Invoke(string, string, IEnumerable<KeyValuePair<string, object>>)
-  href: api/Material.Blazor.MD2.IMBIcon.IconFragment.html#Material_Blazor_MD2_IMBIcon_IconFragment_Invoke_System_String_System_String_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_Object___
-  commentId: M:Material.Blazor.MD2.IMBIcon.IconFragment.Invoke(System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.Object}})
-  name.vb: Invoke(String, String, IEnumerable(Of KeyValuePair(Of String, Object)))
-  fullName: Material.Blazor.MD2.IMBIcon.IconFragment.Invoke(string, string, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, object>>)
-  fullName.vb: Material.Blazor.MD2.IMBIcon.IconFragment.Invoke(String, String, System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of String, Object)))
-  nameWithType: IMBIcon.IconFragment.Invoke(string, string, IEnumerable<KeyValuePair<string, object>>)
-  nameWithType.vb: IMBIcon.IconFragment.Invoke(String, String, IEnumerable(Of KeyValuePair(Of String, Object)))
-- uid: Material.Blazor.MD2.IMBIcon.IconFragment.Invoke*
-  name: Invoke
-  href: api/Material.Blazor.MD2.IMBIcon.IconFragment.html#Material_Blazor_MD2_IMBIcon_IconFragment_Invoke_
-  commentId: Overload:Material.Blazor.MD2.IMBIcon.IconFragment.Invoke
-  fullName: Material.Blazor.MD2.IMBIcon.IconFragment.Invoke
-  nameWithType: IMBIcon.IconFragment.Invoke
-- uid: Material.Blazor.MD2.IMBIcon.Render
-  name: Render
-  href: api/Material.Blazor.MD2.IMBIcon.html#Material_Blazor_MD2_IMBIcon_Render
-  commentId: P:Material.Blazor.MD2.IMBIcon.Render
-  fullName: Material.Blazor.MD2.IMBIcon.Render
-  nameWithType: IMBIcon.Render
-- uid: Material.Blazor.MD2.IMBIcon.Render*
-  name: Render
-  href: api/Material.Blazor.MD2.IMBIcon.html#Material_Blazor_MD2_IMBIcon_Render_
-  commentId: Overload:Material.Blazor.MD2.IMBIcon.Render
-  fullName: Material.Blazor.MD2.IMBIcon.Render
-  nameWithType: IMBIcon.Render
-- uid: Material.Blazor.MD2.IMBIcon.RequiresColorFilter
-  name: RequiresColorFilter
-  href: api/Material.Blazor.MD2.IMBIcon.html#Material_Blazor_MD2_IMBIcon_RequiresColorFilter
-  commentId: P:Material.Blazor.MD2.IMBIcon.RequiresColorFilter
-  fullName: Material.Blazor.MD2.IMBIcon.RequiresColorFilter
-  nameWithType: IMBIcon.RequiresColorFilter
-- uid: Material.Blazor.MD2.IMBIcon.RequiresColorFilter*
-  name: RequiresColorFilter
-  href: api/Material.Blazor.MD2.IMBIcon.html#Material_Blazor_MD2_IMBIcon_RequiresColorFilter_
-  commentId: Overload:Material.Blazor.MD2.IMBIcon.RequiresColorFilter
-  fullName: Material.Blazor.MD2.IMBIcon.RequiresColorFilter
-  nameWithType: IMBIcon.RequiresColorFilter
-- uid: Material.Blazor.MD2.IMBIconFoundry
-  name: IMBIconFoundry
-  href: api/Material.Blazor.MD2.IMBIconFoundry.html
-  commentId: T:Material.Blazor.MD2.IMBIconFoundry
-  fullName: Material.Blazor.MD2.IMBIconFoundry
-  nameWithType: IMBIconFoundry
-- uid: Material.Blazor.MD2.IMBIconFoundry.FoundryName
-  name: FoundryName
-  href: api/Material.Blazor.MD2.IMBIconFoundry.html#Material_Blazor_MD2_IMBIconFoundry_FoundryName
-  commentId: P:Material.Blazor.MD2.IMBIconFoundry.FoundryName
-  fullName: Material.Blazor.MD2.IMBIconFoundry.FoundryName
-  nameWithType: IMBIconFoundry.FoundryName
-- uid: Material.Blazor.MD2.IMBIconFoundry.FoundryName*
-  name: FoundryName
-  href: api/Material.Blazor.MD2.IMBIconFoundry.html#Material_Blazor_MD2_IMBIconFoundry_FoundryName_
-  commentId: Overload:Material.Blazor.MD2.IMBIconFoundry.FoundryName
-  fullName: Material.Blazor.MD2.IMBIconFoundry.FoundryName
-  nameWithType: IMBIconFoundry.FoundryName
-- uid: Material.Blazor.MD2.IMBTooltipService
-  name: IMBTooltipService
-  href: api/Material.Blazor.MD2.IMBTooltipService.html
-  commentId: T:Material.Blazor.MD2.IMBTooltipService
-  fullName: Material.Blazor.MD2.IMBTooltipService
-  nameWithType: IMBTooltipService
-- uid: Material.Blazor.MD2.IMBTooltipService.AddTooltip(System.Int64,Microsoft.AspNetCore.Components.MarkupString)
-  name: AddTooltip(long, MarkupString)
-  href: api/Material.Blazor.MD2.IMBTooltipService.html#Material_Blazor_MD2_IMBTooltipService_AddTooltip_System_Int64_Microsoft_AspNetCore_Components_MarkupString_
-  commentId: M:Material.Blazor.MD2.IMBTooltipService.AddTooltip(System.Int64,Microsoft.AspNetCore.Components.MarkupString)
-  name.vb: AddTooltip(Long, MarkupString)
-  fullName: Material.Blazor.MD2.IMBTooltipService.AddTooltip(long, Microsoft.AspNetCore.Components.MarkupString)
-  fullName.vb: Material.Blazor.MD2.IMBTooltipService.AddTooltip(Long, Microsoft.AspNetCore.Components.MarkupString)
-  nameWithType: IMBTooltipService.AddTooltip(long, MarkupString)
-  nameWithType.vb: IMBTooltipService.AddTooltip(Long, MarkupString)
-- uid: Material.Blazor.MD2.IMBTooltipService.AddTooltip(System.Int64,Microsoft.AspNetCore.Components.RenderFragment)
-  name: AddTooltip(long, RenderFragment)
-  href: api/Material.Blazor.MD2.IMBTooltipService.html#Material_Blazor_MD2_IMBTooltipService_AddTooltip_System_Int64_Microsoft_AspNetCore_Components_RenderFragment_
-  commentId: M:Material.Blazor.MD2.IMBTooltipService.AddTooltip(System.Int64,Microsoft.AspNetCore.Components.RenderFragment)
-  name.vb: AddTooltip(Long, RenderFragment)
-  fullName: Material.Blazor.MD2.IMBTooltipService.AddTooltip(long, Microsoft.AspNetCore.Components.RenderFragment)
-  fullName.vb: Material.Blazor.MD2.IMBTooltipService.AddTooltip(Long, Microsoft.AspNetCore.Components.RenderFragment)
-  nameWithType: IMBTooltipService.AddTooltip(long, RenderFragment)
-  nameWithType.vb: IMBTooltipService.AddTooltip(Long, RenderFragment)
-- uid: Material.Blazor.MD2.IMBTooltipService.AddTooltip*
-  name: AddTooltip
-  href: api/Material.Blazor.MD2.IMBTooltipService.html#Material_Blazor_MD2_IMBTooltipService_AddTooltip_
-  commentId: Overload:Material.Blazor.MD2.IMBTooltipService.AddTooltip
-  fullName: Material.Blazor.MD2.IMBTooltipService.AddTooltip
-  nameWithType: IMBTooltipService.AddTooltip
-- uid: Material.Blazor.MD2.IMBTooltipService.OnAddMarkupString
-  name: OnAddMarkupString
-  href: api/Material.Blazor.MD2.IMBTooltipService.html#Material_Blazor_MD2_IMBTooltipService_OnAddMarkupString
-  commentId: E:Material.Blazor.MD2.IMBTooltipService.OnAddMarkupString
-  fullName: Material.Blazor.MD2.IMBTooltipService.OnAddMarkupString
-  nameWithType: IMBTooltipService.OnAddMarkupString
-- uid: Material.Blazor.MD2.IMBTooltipService.OnAddRenderFragment
-  name: OnAddRenderFragment
-  href: api/Material.Blazor.MD2.IMBTooltipService.html#Material_Blazor_MD2_IMBTooltipService_OnAddRenderFragment
-  commentId: E:Material.Blazor.MD2.IMBTooltipService.OnAddRenderFragment
-  fullName: Material.Blazor.MD2.IMBTooltipService.OnAddRenderFragment
-  nameWithType: IMBTooltipService.OnAddRenderFragment
-- uid: Material.Blazor.MD2.IMBTooltipService.OnRemove
-  name: OnRemove
-  href: api/Material.Blazor.MD2.IMBTooltipService.html#Material_Blazor_MD2_IMBTooltipService_OnRemove
-  commentId: E:Material.Blazor.MD2.IMBTooltipService.OnRemove
-  fullName: Material.Blazor.MD2.IMBTooltipService.OnRemove
-  nameWithType: IMBTooltipService.OnRemove
-- uid: Material.Blazor.MD2.IMBTooltipService.RemoveTooltip(System.Int64)
-  name: RemoveTooltip(long)
-  href: api/Material.Blazor.MD2.IMBTooltipService.html#Material_Blazor_MD2_IMBTooltipService_RemoveTooltip_System_Int64_
-  commentId: M:Material.Blazor.MD2.IMBTooltipService.RemoveTooltip(System.Int64)
-  name.vb: RemoveTooltip(Long)
-  fullName: Material.Blazor.MD2.IMBTooltipService.RemoveTooltip(long)
-  fullName.vb: Material.Blazor.MD2.IMBTooltipService.RemoveTooltip(Long)
-  nameWithType: IMBTooltipService.RemoveTooltip(long)
-  nameWithType.vb: IMBTooltipService.RemoveTooltip(Long)
-- uid: Material.Blazor.MD2.IMBTooltipService.RemoveTooltip*
-  name: RemoveTooltip
-  href: api/Material.Blazor.MD2.IMBTooltipService.html#Material_Blazor_MD2_IMBTooltipService_RemoveTooltip_
-  commentId: Overload:Material.Blazor.MD2.IMBTooltipService.RemoveTooltip
-  fullName: Material.Blazor.MD2.IMBTooltipService.RemoveTooltip
-  nameWithType: IMBTooltipService.RemoveTooltip
 - uid: Material.Blazor.MD2.MBAnchor
   name: MBAnchor
   href: api/Material.Blazor.MD2.MBAnchor.html
@@ -5900,18 +5524,6 @@ references:
   commentId: Overload:Material.Blazor.MD2.MBButton.HasBadge
   fullName: Material.Blazor.MD2.MBButton.HasBadge
   nameWithType: MBButton.HasBadge
-- uid: Material.Blazor.MD2.MBButton.IconFoundry
-  name: IconFoundry
-  href: api/Material.Blazor.MD2.MBButton.html#Material_Blazor_MD2_MBButton_IconFoundry
-  commentId: P:Material.Blazor.MD2.MBButton.IconFoundry
-  fullName: Material.Blazor.MD2.MBButton.IconFoundry
-  nameWithType: MBButton.IconFoundry
-- uid: Material.Blazor.MD2.MBButton.IconFoundry*
-  name: IconFoundry
-  href: api/Material.Blazor.MD2.MBButton.html#Material_Blazor_MD2_MBButton_IconFoundry_
-  commentId: Overload:Material.Blazor.MD2.MBButton.IconFoundry
-  fullName: Material.Blazor.MD2.MBButton.IconFoundry
-  nameWithType: MBButton.IconFoundry
 - uid: Material.Blazor.MD2.MBButton.Label
   name: Label
   href: api/Material.Blazor.MD2.MBButton.html#Material_Blazor_MD2_MBButton_Label
@@ -6392,54 +6004,6 @@ references:
   commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.IconButtonDensity
   fullName: Material.Blazor.MD2.MBCascadingDefaults.IconButtonDensity
   nameWithType: MBCascadingDefaults.IconButtonDensity
-- uid: Material.Blazor.MD2.MBCascadingDefaults.IconFARelativeSize
-  name: IconFARelativeSize
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_IconFARelativeSize
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.IconFARelativeSize
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.IconFARelativeSize
-  nameWithType: MBCascadingDefaults.IconFARelativeSize
-- uid: Material.Blazor.MD2.MBCascadingDefaults.IconFARelativeSize*
-  name: IconFARelativeSize
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_IconFARelativeSize_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.IconFARelativeSize
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.IconFARelativeSize
-  nameWithType: MBCascadingDefaults.IconFARelativeSize
-- uid: Material.Blazor.MD2.MBCascadingDefaults.IconFAStyle
-  name: IconFAStyle
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_IconFAStyle
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.IconFAStyle
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.IconFAStyle
-  nameWithType: MBCascadingDefaults.IconFAStyle
-- uid: Material.Blazor.MD2.MBCascadingDefaults.IconFAStyle*
-  name: IconFAStyle
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_IconFAStyle_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.IconFAStyle
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.IconFAStyle
-  nameWithType: MBCascadingDefaults.IconFAStyle
-- uid: Material.Blazor.MD2.MBCascadingDefaults.IconFoundryName
-  name: IconFoundryName
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_IconFoundryName
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.IconFoundryName
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.IconFoundryName
-  nameWithType: MBCascadingDefaults.IconFoundryName
-- uid: Material.Blazor.MD2.MBCascadingDefaults.IconFoundryName*
-  name: IconFoundryName
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_IconFoundryName_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.IconFoundryName
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.IconFoundryName
-  nameWithType: MBCascadingDefaults.IconFoundryName
-- uid: Material.Blazor.MD2.MBCascadingDefaults.IconMITheme
-  name: IconMITheme
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_IconMITheme
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.IconMITheme
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.IconMITheme
-  nameWithType: MBCascadingDefaults.IconMITheme
-- uid: Material.Blazor.MD2.MBCascadingDefaults.IconMITheme*
-  name: IconMITheme
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_IconMITheme_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.IconMITheme
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.IconMITheme
-  nameWithType: MBCascadingDefaults.IconMITheme
 - uid: Material.Blazor.MD2.MBCascadingDefaults.ItemValidation
   name: ItemValidation
   href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_ItemValidation
@@ -7869,18 +7433,6 @@ references:
   commentId: Overload:Material.Blazor.MD2.MBIconButton.Icon
   fullName: Material.Blazor.MD2.MBIconButton.Icon
   nameWithType: MBIconButton.Icon
-- uid: Material.Blazor.MD2.MBIconButton.IconFoundry
-  name: IconFoundry
-  href: api/Material.Blazor.MD2.MBIconButton.html#Material_Blazor_MD2_MBIconButton_IconFoundry
-  commentId: P:Material.Blazor.MD2.MBIconButton.IconFoundry
-  fullName: Material.Blazor.MD2.MBIconButton.IconFoundry
-  nameWithType: MBIconButton.IconFoundry
-- uid: Material.Blazor.MD2.MBIconButton.IconFoundry*
-  name: IconFoundry
-  href: api/Material.Blazor.MD2.MBIconButton.html#Material_Blazor_MD2_MBIconButton_IconFoundry_
-  commentId: Overload:Material.Blazor.MD2.MBIconButton.IconFoundry
-  fullName: Material.Blazor.MD2.MBIconButton.IconFoundry
-  nameWithType: MBIconButton.IconFoundry
 - uid: Material.Blazor.MD2.MBIconButton.OnInitializedAsync
   name: OnInitializedAsync()
   href: api/Material.Blazor.MD2.MBIconButton.html#Material_Blazor_MD2_MBIconButton_OnInitializedAsync
@@ -7905,228 +7457,6 @@ references:
   commentId: Overload:Material.Blazor.MD2.MBIconButton.TouchTarget
   fullName: Material.Blazor.MD2.MBIconButton.TouchTarget
   nameWithType: MBIconButton.TouchTarget
-- uid: Material.Blazor.MD2.MBIconFARelativeSize
-  name: MBIconFARelativeSize
-  href: api/Material.Blazor.MD2.MBIconFARelativeSize.html
-  commentId: T:Material.Blazor.MD2.MBIconFARelativeSize
-  fullName: Material.Blazor.MD2.MBIconFARelativeSize
-  nameWithType: MBIconFARelativeSize
-- uid: Material.Blazor.MD2.MBIconFARelativeSize.ExtraSmall
-  name: ExtraSmall
-  href: api/Material.Blazor.MD2.MBIconFARelativeSize.html#Material_Blazor_MD2_MBIconFARelativeSize_ExtraSmall
-  commentId: F:Material.Blazor.MD2.MBIconFARelativeSize.ExtraSmall
-  fullName: Material.Blazor.MD2.MBIconFARelativeSize.ExtraSmall
-  nameWithType: MBIconFARelativeSize.ExtraSmall
-- uid: Material.Blazor.MD2.MBIconFARelativeSize.FiveTimes
-  name: FiveTimes
-  href: api/Material.Blazor.MD2.MBIconFARelativeSize.html#Material_Blazor_MD2_MBIconFARelativeSize_FiveTimes
-  commentId: F:Material.Blazor.MD2.MBIconFARelativeSize.FiveTimes
-  fullName: Material.Blazor.MD2.MBIconFARelativeSize.FiveTimes
-  nameWithType: MBIconFARelativeSize.FiveTimes
-- uid: Material.Blazor.MD2.MBIconFARelativeSize.Large
-  name: Large
-  href: api/Material.Blazor.MD2.MBIconFARelativeSize.html#Material_Blazor_MD2_MBIconFARelativeSize_Large
-  commentId: F:Material.Blazor.MD2.MBIconFARelativeSize.Large
-  fullName: Material.Blazor.MD2.MBIconFARelativeSize.Large
-  nameWithType: MBIconFARelativeSize.Large
-- uid: Material.Blazor.MD2.MBIconFARelativeSize.Regular
-  name: Regular
-  href: api/Material.Blazor.MD2.MBIconFARelativeSize.html#Material_Blazor_MD2_MBIconFARelativeSize_Regular
-  commentId: F:Material.Blazor.MD2.MBIconFARelativeSize.Regular
-  fullName: Material.Blazor.MD2.MBIconFARelativeSize.Regular
-  nameWithType: MBIconFARelativeSize.Regular
-- uid: Material.Blazor.MD2.MBIconFARelativeSize.SevenTimes
-  name: SevenTimes
-  href: api/Material.Blazor.MD2.MBIconFARelativeSize.html#Material_Blazor_MD2_MBIconFARelativeSize_SevenTimes
-  commentId: F:Material.Blazor.MD2.MBIconFARelativeSize.SevenTimes
-  fullName: Material.Blazor.MD2.MBIconFARelativeSize.SevenTimes
-  nameWithType: MBIconFARelativeSize.SevenTimes
-- uid: Material.Blazor.MD2.MBIconFARelativeSize.Small
-  name: Small
-  href: api/Material.Blazor.MD2.MBIconFARelativeSize.html#Material_Blazor_MD2_MBIconFARelativeSize_Small
-  commentId: F:Material.Blazor.MD2.MBIconFARelativeSize.Small
-  fullName: Material.Blazor.MD2.MBIconFARelativeSize.Small
-  nameWithType: MBIconFARelativeSize.Small
-- uid: Material.Blazor.MD2.MBIconFARelativeSize.TenTimes
-  name: TenTimes
-  href: api/Material.Blazor.MD2.MBIconFARelativeSize.html#Material_Blazor_MD2_MBIconFARelativeSize_TenTimes
-  commentId: F:Material.Blazor.MD2.MBIconFARelativeSize.TenTimes
-  fullName: Material.Blazor.MD2.MBIconFARelativeSize.TenTimes
-  nameWithType: MBIconFARelativeSize.TenTimes
-- uid: Material.Blazor.MD2.MBIconFARelativeSize.ThreeTimes
-  name: ThreeTimes
-  href: api/Material.Blazor.MD2.MBIconFARelativeSize.html#Material_Blazor_MD2_MBIconFARelativeSize_ThreeTimes
-  commentId: F:Material.Blazor.MD2.MBIconFARelativeSize.ThreeTimes
-  fullName: Material.Blazor.MD2.MBIconFARelativeSize.ThreeTimes
-  nameWithType: MBIconFARelativeSize.ThreeTimes
-- uid: Material.Blazor.MD2.MBIconFARelativeSize.TwoTimes
-  name: TwoTimes
-  href: api/Material.Blazor.MD2.MBIconFARelativeSize.html#Material_Blazor_MD2_MBIconFARelativeSize_TwoTimes
-  commentId: F:Material.Blazor.MD2.MBIconFARelativeSize.TwoTimes
-  fullName: Material.Blazor.MD2.MBIconFARelativeSize.TwoTimes
-  nameWithType: MBIconFARelativeSize.TwoTimes
-- uid: Material.Blazor.MD2.MBIconFAStyle
-  name: MBIconFAStyle
-  href: api/Material.Blazor.MD2.MBIconFAStyle.html
-  commentId: T:Material.Blazor.MD2.MBIconFAStyle
-  fullName: Material.Blazor.MD2.MBIconFAStyle
-  nameWithType: MBIconFAStyle
-- uid: Material.Blazor.MD2.MBIconFAStyle.Brands
-  name: Brands
-  href: api/Material.Blazor.MD2.MBIconFAStyle.html#Material_Blazor_MD2_MBIconFAStyle_Brands
-  commentId: F:Material.Blazor.MD2.MBIconFAStyle.Brands
-  fullName: Material.Blazor.MD2.MBIconFAStyle.Brands
-  nameWithType: MBIconFAStyle.Brands
-- uid: Material.Blazor.MD2.MBIconFAStyle.Duotone
-  name: Duotone
-  href: api/Material.Blazor.MD2.MBIconFAStyle.html#Material_Blazor_MD2_MBIconFAStyle_Duotone
-  commentId: F:Material.Blazor.MD2.MBIconFAStyle.Duotone
-  fullName: Material.Blazor.MD2.MBIconFAStyle.Duotone
-  nameWithType: MBIconFAStyle.Duotone
-- uid: Material.Blazor.MD2.MBIconFAStyle.Light
-  name: Light
-  href: api/Material.Blazor.MD2.MBIconFAStyle.html#Material_Blazor_MD2_MBIconFAStyle_Light
-  commentId: F:Material.Blazor.MD2.MBIconFAStyle.Light
-  fullName: Material.Blazor.MD2.MBIconFAStyle.Light
-  nameWithType: MBIconFAStyle.Light
-- uid: Material.Blazor.MD2.MBIconFAStyle.Regular
-  name: Regular
-  href: api/Material.Blazor.MD2.MBIconFAStyle.html#Material_Blazor_MD2_MBIconFAStyle_Regular
-  commentId: F:Material.Blazor.MD2.MBIconFAStyle.Regular
-  fullName: Material.Blazor.MD2.MBIconFAStyle.Regular
-  nameWithType: MBIconFAStyle.Regular
-- uid: Material.Blazor.MD2.MBIconFAStyle.Solid
-  name: Solid
-  href: api/Material.Blazor.MD2.MBIconFAStyle.html#Material_Blazor_MD2_MBIconFAStyle_Solid
-  commentId: F:Material.Blazor.MD2.MBIconFAStyle.Solid
-  fullName: Material.Blazor.MD2.MBIconFAStyle.Solid
-  nameWithType: MBIconFAStyle.Solid
-- uid: Material.Blazor.MD2.MBIconFoundryName
-  name: MBIconFoundryName
-  href: api/Material.Blazor.MD2.MBIconFoundryName.html
-  commentId: T:Material.Blazor.MD2.MBIconFoundryName
-  fullName: Material.Blazor.MD2.MBIconFoundryName
-  nameWithType: MBIconFoundryName
-- uid: Material.Blazor.MD2.MBIconFoundryName.FontAwesome
-  name: FontAwesome
-  href: api/Material.Blazor.MD2.MBIconFoundryName.html#Material_Blazor_MD2_MBIconFoundryName_FontAwesome
-  commentId: F:Material.Blazor.MD2.MBIconFoundryName.FontAwesome
-  fullName: Material.Blazor.MD2.MBIconFoundryName.FontAwesome
-  nameWithType: MBIconFoundryName.FontAwesome
-- uid: Material.Blazor.MD2.MBIconFoundryName.MaterialIcons
-  name: MaterialIcons
-  href: api/Material.Blazor.MD2.MBIconFoundryName.html#Material_Blazor_MD2_MBIconFoundryName_MaterialIcons
-  commentId: F:Material.Blazor.MD2.MBIconFoundryName.MaterialIcons
-  fullName: Material.Blazor.MD2.MBIconFoundryName.MaterialIcons
-  nameWithType: MBIconFoundryName.MaterialIcons
-- uid: Material.Blazor.MD2.MBIconFoundryName.OpenIconic
-  name: OpenIconic
-  href: api/Material.Blazor.MD2.MBIconFoundryName.html#Material_Blazor_MD2_MBIconFoundryName_OpenIconic
-  commentId: F:Material.Blazor.MD2.MBIconFoundryName.OpenIconic
-  fullName: Material.Blazor.MD2.MBIconFoundryName.OpenIconic
-  nameWithType: MBIconFoundryName.OpenIconic
-- uid: Material.Blazor.MD2.MBIconHelper
-  name: MBIconHelper
-  href: api/Material.Blazor.MD2.MBIconHelper.html
-  commentId: T:Material.Blazor.MD2.MBIconHelper
-  fullName: Material.Blazor.MD2.MBIconHelper
-  nameWithType: MBIconHelper
-- uid: Material.Blazor.MD2.MBIconHelper.FAFoundry(System.Nullable{Material.Blazor.MD2.MBIconFAStyle},System.Nullable{Material.Blazor.MD2.MBIconFARelativeSize})
-  name: FAFoundry(MBIconFAStyle?, MBIconFARelativeSize?)
-  href: api/Material.Blazor.MD2.MBIconHelper.html#Material_Blazor_MD2_MBIconHelper_FAFoundry_System_Nullable_Material_Blazor_MD2_MBIconFAStyle__System_Nullable_Material_Blazor_MD2_MBIconFARelativeSize__
-  commentId: M:Material.Blazor.MD2.MBIconHelper.FAFoundry(System.Nullable{Material.Blazor.MD2.MBIconFAStyle},System.Nullable{Material.Blazor.MD2.MBIconFARelativeSize})
-  fullName: Material.Blazor.MD2.MBIconHelper.FAFoundry(Material.Blazor.MD2.MBIconFAStyle?, Material.Blazor.MD2.MBIconFARelativeSize?)
-  nameWithType: MBIconHelper.FAFoundry(MBIconFAStyle?, MBIconFARelativeSize?)
-- uid: Material.Blazor.MD2.MBIconHelper.FAFoundry*
-  name: FAFoundry
-  href: api/Material.Blazor.MD2.MBIconHelper.html#Material_Blazor_MD2_MBIconHelper_FAFoundry_
-  commentId: Overload:Material.Blazor.MD2.MBIconHelper.FAFoundry
-  fullName: Material.Blazor.MD2.MBIconHelper.FAFoundry
-  nameWithType: MBIconHelper.FAFoundry
-- uid: Material.Blazor.MD2.MBIconHelper.MIFoundry(System.Nullable{Material.Blazor.MD2.MBIconMITheme})
-  name: MIFoundry(MBIconMITheme?)
-  href: api/Material.Blazor.MD2.MBIconHelper.html#Material_Blazor_MD2_MBIconHelper_MIFoundry_System_Nullable_Material_Blazor_MD2_MBIconMITheme__
-  commentId: M:Material.Blazor.MD2.MBIconHelper.MIFoundry(System.Nullable{Material.Blazor.MD2.MBIconMITheme})
-  fullName: Material.Blazor.MD2.MBIconHelper.MIFoundry(Material.Blazor.MD2.MBIconMITheme?)
-  nameWithType: MBIconHelper.MIFoundry(MBIconMITheme?)
-- uid: Material.Blazor.MD2.MBIconHelper.MIFoundry*
-  name: MIFoundry
-  href: api/Material.Blazor.MD2.MBIconHelper.html#Material_Blazor_MD2_MBIconHelper_MIFoundry_
-  commentId: Overload:Material.Blazor.MD2.MBIconHelper.MIFoundry
-  fullName: Material.Blazor.MD2.MBIconHelper.MIFoundry
-  nameWithType: MBIconHelper.MIFoundry
-- uid: Material.Blazor.MD2.MBIconHelper.OIFoundry
-  name: OIFoundry()
-  href: api/Material.Blazor.MD2.MBIconHelper.html#Material_Blazor_MD2_MBIconHelper_OIFoundry
-  commentId: M:Material.Blazor.MD2.MBIconHelper.OIFoundry
-  fullName: Material.Blazor.MD2.MBIconHelper.OIFoundry()
-  nameWithType: MBIconHelper.OIFoundry()
-- uid: Material.Blazor.MD2.MBIconHelper.OIFoundry*
-  name: OIFoundry
-  href: api/Material.Blazor.MD2.MBIconHelper.html#Material_Blazor_MD2_MBIconHelper_OIFoundry_
-  commentId: Overload:Material.Blazor.MD2.MBIconHelper.OIFoundry
-  fullName: Material.Blazor.MD2.MBIconHelper.OIFoundry
-  nameWithType: MBIconHelper.OIFoundry
-- uid: Material.Blazor.MD2.MBIconHelper.Render
-  name: Render
-  href: api/Material.Blazor.MD2.MBIconHelper.html#Material_Blazor_MD2_MBIconHelper_Render
-  commentId: P:Material.Blazor.MD2.MBIconHelper.Render
-  fullName: Material.Blazor.MD2.MBIconHelper.Render
-  nameWithType: MBIconHelper.Render
-- uid: Material.Blazor.MD2.MBIconHelper.Render*
-  name: Render
-  href: api/Material.Blazor.MD2.MBIconHelper.html#Material_Blazor_MD2_MBIconHelper_Render_
-  commentId: Overload:Material.Blazor.MD2.MBIconHelper.Render
-  fullName: Material.Blazor.MD2.MBIconHelper.Render
-  nameWithType: MBIconHelper.Render
-- uid: Material.Blazor.MD2.MBIconHelper.RequiresColorFilter
-  name: RequiresColorFilter
-  href: api/Material.Blazor.MD2.MBIconHelper.html#Material_Blazor_MD2_MBIconHelper_RequiresColorFilter
-  commentId: P:Material.Blazor.MD2.MBIconHelper.RequiresColorFilter
-  fullName: Material.Blazor.MD2.MBIconHelper.RequiresColorFilter
-  nameWithType: MBIconHelper.RequiresColorFilter
-- uid: Material.Blazor.MD2.MBIconHelper.RequiresColorFilter*
-  name: RequiresColorFilter
-  href: api/Material.Blazor.MD2.MBIconHelper.html#Material_Blazor_MD2_MBIconHelper_RequiresColorFilter_
-  commentId: Overload:Material.Blazor.MD2.MBIconHelper.RequiresColorFilter
-  fullName: Material.Blazor.MD2.MBIconHelper.RequiresColorFilter
-  nameWithType: MBIconHelper.RequiresColorFilter
-- uid: Material.Blazor.MD2.MBIconMITheme
-  name: MBIconMITheme
-  href: api/Material.Blazor.MD2.MBIconMITheme.html
-  commentId: T:Material.Blazor.MD2.MBIconMITheme
-  fullName: Material.Blazor.MD2.MBIconMITheme
-  nameWithType: MBIconMITheme
-- uid: Material.Blazor.MD2.MBIconMITheme.Filled
-  name: Filled
-  href: api/Material.Blazor.MD2.MBIconMITheme.html#Material_Blazor_MD2_MBIconMITheme_Filled
-  commentId: F:Material.Blazor.MD2.MBIconMITheme.Filled
-  fullName: Material.Blazor.MD2.MBIconMITheme.Filled
-  nameWithType: MBIconMITheme.Filled
-- uid: Material.Blazor.MD2.MBIconMITheme.Outlined
-  name: Outlined
-  href: api/Material.Blazor.MD2.MBIconMITheme.html#Material_Blazor_MD2_MBIconMITheme_Outlined
-  commentId: F:Material.Blazor.MD2.MBIconMITheme.Outlined
-  fullName: Material.Blazor.MD2.MBIconMITheme.Outlined
-  nameWithType: MBIconMITheme.Outlined
-- uid: Material.Blazor.MD2.MBIconMITheme.Round
-  name: Round
-  href: api/Material.Blazor.MD2.MBIconMITheme.html#Material_Blazor_MD2_MBIconMITheme_Round
-  commentId: F:Material.Blazor.MD2.MBIconMITheme.Round
-  fullName: Material.Blazor.MD2.MBIconMITheme.Round
-  nameWithType: MBIconMITheme.Round
-- uid: Material.Blazor.MD2.MBIconMITheme.Sharp
-  name: Sharp
-  href: api/Material.Blazor.MD2.MBIconMITheme.html#Material_Blazor_MD2_MBIconMITheme_Sharp
-  commentId: F:Material.Blazor.MD2.MBIconMITheme.Sharp
-  fullName: Material.Blazor.MD2.MBIconMITheme.Sharp
-  nameWithType: MBIconMITheme.Sharp
-- uid: Material.Blazor.MD2.MBIconMITheme.TwoTone
-  name: TwoTone
-  href: api/Material.Blazor.MD2.MBIconMITheme.html#Material_Blazor_MD2_MBIconMITheme_TwoTone
-  commentId: F:Material.Blazor.MD2.MBIconMITheme.TwoTone
-  fullName: Material.Blazor.MD2.MBIconMITheme.TwoTone
-  nameWithType: MBIconMITheme.TwoTone
 - uid: Material.Blazor.MD2.MBInputEventType
   name: MBInputEventType
   href: api/Material.Blazor.MD2.MBInputEventType.html
@@ -8235,18 +7565,6 @@ references:
   commentId: Overload:Material.Blazor.MD2.MBListItem.BuildRenderTree
   fullName: Material.Blazor.MD2.MBListItem.BuildRenderTree
   nameWithType: MBListItem.BuildRenderTree
-- uid: Material.Blazor.MD2.MBListItem.IconFoundry
-  name: IconFoundry
-  href: api/Material.Blazor.MD2.MBListItem.html#Material_Blazor_MD2_MBListItem_IconFoundry
-  commentId: P:Material.Blazor.MD2.MBListItem.IconFoundry
-  fullName: Material.Blazor.MD2.MBListItem.IconFoundry
-  nameWithType: MBListItem.IconFoundry
-- uid: Material.Blazor.MD2.MBListItem.IconFoundry*
-  name: IconFoundry
-  href: api/Material.Blazor.MD2.MBListItem.html#Material_Blazor_MD2_MBListItem_IconFoundry_
-  commentId: Overload:Material.Blazor.MD2.MBListItem.IconFoundry
-  fullName: Material.Blazor.MD2.MBListItem.IconFoundry
-  nameWithType: MBListItem.IconFoundry
 - uid: Material.Blazor.MD2.MBListItem.IsSelectedMenuItem
   name: IsSelectedMenuItem
   href: api/Material.Blazor.MD2.MBListItem.html#Material_Blazor_MD2_MBListItem_IsSelectedMenuItem
@@ -8994,22 +8312,6 @@ references:
   fullName.vb: Material.Blazor.MD2.MBSelect(Of TItem).HasBadge
   nameWithType: MBSelect<TItem>.HasBadge
   nameWithType.vb: MBSelect(Of TItem).HasBadge
-- uid: Material.Blazor.MD2.MBSelect`1.IconFoundry
-  name: IconFoundry
-  href: api/Material.Blazor.MD2.MBSelect-1.html#Material_Blazor_MD2_MBSelect_1_IconFoundry
-  commentId: P:Material.Blazor.MD2.MBSelect`1.IconFoundry
-  fullName: Material.Blazor.MD2.MBSelect<TItem>.IconFoundry
-  fullName.vb: Material.Blazor.MD2.MBSelect(Of TItem).IconFoundry
-  nameWithType: MBSelect<TItem>.IconFoundry
-  nameWithType.vb: MBSelect(Of TItem).IconFoundry
-- uid: Material.Blazor.MD2.MBSelect`1.IconFoundry*
-  name: IconFoundry
-  href: api/Material.Blazor.MD2.MBSelect-1.html#Material_Blazor_MD2_MBSelect_1_IconFoundry_
-  commentId: Overload:Material.Blazor.MD2.MBSelect`1.IconFoundry
-  fullName: Material.Blazor.MD2.MBSelect<TItem>.IconFoundry
-  fullName.vb: Material.Blazor.MD2.MBSelect(Of TItem).IconFoundry
-  nameWithType: MBSelect<TItem>.IconFoundry
-  nameWithType.vb: MBSelect(Of TItem).IconFoundry
 - uid: Material.Blazor.MD2.MBSelect`1.Label
   name: Label
   href: api/Material.Blazor.MD2.MBSelect-1.html#Material_Blazor_MD2_MBSelect_1_Label
@@ -9307,99 +8609,6 @@ references:
   commentId: F:Material.Blazor.MD2.MBToastPosition.TopRight
   fullName: Material.Blazor.MD2.MBToastPosition.TopRight
   nameWithType: MBToastPosition.TopRight
-- uid: Material.Blazor.MD2.MBTooltip
-  name: MBTooltip
-  href: api/Material.Blazor.MD2.MBTooltip.html
-  commentId: T:Material.Blazor.MD2.MBTooltip
-  fullName: Material.Blazor.MD2.MBTooltip
-  nameWithType: MBTooltip
-- uid: Material.Blazor.MD2.MBTooltip.#ctor
-  name: MBTooltip()
-  href: api/Material.Blazor.MD2.MBTooltip.html#Material_Blazor_MD2_MBTooltip__ctor
-  commentId: M:Material.Blazor.MD2.MBTooltip.#ctor
-  name.vb: New()
-  fullName: Material.Blazor.MD2.MBTooltip.MBTooltip()
-  fullName.vb: Material.Blazor.MD2.MBTooltip.New()
-  nameWithType: MBTooltip.MBTooltip()
-  nameWithType.vb: MBTooltip.New()
-- uid: Material.Blazor.MD2.MBTooltip.#ctor*
-  name: MBTooltip
-  href: api/Material.Blazor.MD2.MBTooltip.html#Material_Blazor_MD2_MBTooltip__ctor_
-  commentId: Overload:Material.Blazor.MD2.MBTooltip.#ctor
-  name.vb: New
-  fullName: Material.Blazor.MD2.MBTooltip.MBTooltip
-  fullName.vb: Material.Blazor.MD2.MBTooltip.New
-  nameWithType: MBTooltip.MBTooltip
-  nameWithType.vb: MBTooltip.New
-- uid: Material.Blazor.MD2.MBTooltip.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
-  name: BuildRenderTree(RenderTreeBuilder)
-  href: api/Material.Blazor.MD2.MBTooltip.html#Material_Blazor_MD2_MBTooltip_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
-  commentId: M:Material.Blazor.MD2.MBTooltip.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
-  fullName: Material.Blazor.MD2.MBTooltip.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
-  nameWithType: MBTooltip.BuildRenderTree(RenderTreeBuilder)
-- uid: Material.Blazor.MD2.MBTooltip.BuildRenderTree*
-  name: BuildRenderTree
-  href: api/Material.Blazor.MD2.MBTooltip.html#Material_Blazor_MD2_MBTooltip_BuildRenderTree_
-  commentId: Overload:Material.Blazor.MD2.MBTooltip.BuildRenderTree
-  fullName: Material.Blazor.MD2.MBTooltip.BuildRenderTree
-  nameWithType: MBTooltip.BuildRenderTree
-- uid: Material.Blazor.MD2.MBTooltip.Content
-  name: Content
-  href: api/Material.Blazor.MD2.MBTooltip.html#Material_Blazor_MD2_MBTooltip_Content
-  commentId: P:Material.Blazor.MD2.MBTooltip.Content
-  fullName: Material.Blazor.MD2.MBTooltip.Content
-  nameWithType: MBTooltip.Content
-- uid: Material.Blazor.MD2.MBTooltip.Content*
-  name: Content
-  href: api/Material.Blazor.MD2.MBTooltip.html#Material_Blazor_MD2_MBTooltip_Content_
-  commentId: Overload:Material.Blazor.MD2.MBTooltip.Content
-  fullName: Material.Blazor.MD2.MBTooltip.Content
-  nameWithType: MBTooltip.Content
-- uid: Material.Blazor.MD2.MBTooltip.Dispose
-  name: Dispose()
-  href: api/Material.Blazor.MD2.MBTooltip.html#Material_Blazor_MD2_MBTooltip_Dispose
-  commentId: M:Material.Blazor.MD2.MBTooltip.Dispose
-  fullName: Material.Blazor.MD2.MBTooltip.Dispose()
-  nameWithType: MBTooltip.Dispose()
-- uid: Material.Blazor.MD2.MBTooltip.Dispose(System.Boolean)
-  name: Dispose(bool)
-  href: api/Material.Blazor.MD2.MBTooltip.html#Material_Blazor_MD2_MBTooltip_Dispose_System_Boolean_
-  commentId: M:Material.Blazor.MD2.MBTooltip.Dispose(System.Boolean)
-  name.vb: Dispose(Boolean)
-  fullName: Material.Blazor.MD2.MBTooltip.Dispose(bool)
-  fullName.vb: Material.Blazor.MD2.MBTooltip.Dispose(Boolean)
-  nameWithType: MBTooltip.Dispose(bool)
-  nameWithType.vb: MBTooltip.Dispose(Boolean)
-- uid: Material.Blazor.MD2.MBTooltip.Dispose*
-  name: Dispose
-  href: api/Material.Blazor.MD2.MBTooltip.html#Material_Blazor_MD2_MBTooltip_Dispose_
-  commentId: Overload:Material.Blazor.MD2.MBTooltip.Dispose
-  fullName: Material.Blazor.MD2.MBTooltip.Dispose
-  nameWithType: MBTooltip.Dispose
-- uid: Material.Blazor.MD2.MBTooltip.OnInitializedAsync
-  name: OnInitializedAsync()
-  href: api/Material.Blazor.MD2.MBTooltip.html#Material_Blazor_MD2_MBTooltip_OnInitializedAsync
-  commentId: M:Material.Blazor.MD2.MBTooltip.OnInitializedAsync
-  fullName: Material.Blazor.MD2.MBTooltip.OnInitializedAsync()
-  nameWithType: MBTooltip.OnInitializedAsync()
-- uid: Material.Blazor.MD2.MBTooltip.OnInitializedAsync*
-  name: OnInitializedAsync
-  href: api/Material.Blazor.MD2.MBTooltip.html#Material_Blazor_MD2_MBTooltip_OnInitializedAsync_
-  commentId: Overload:Material.Blazor.MD2.MBTooltip.OnInitializedAsync
-  fullName: Material.Blazor.MD2.MBTooltip.OnInitializedAsync
-  nameWithType: MBTooltip.OnInitializedAsync
-- uid: Material.Blazor.MD2.MBTooltip.Target
-  name: Target
-  href: api/Material.Blazor.MD2.MBTooltip.html#Material_Blazor_MD2_MBTooltip_Target
-  commentId: P:Material.Blazor.MD2.MBTooltip.Target
-  fullName: Material.Blazor.MD2.MBTooltip.Target
-  nameWithType: MBTooltip.Target
-- uid: Material.Blazor.MD2.MBTooltip.Target*
-  name: Target
-  href: api/Material.Blazor.MD2.MBTooltip.html#Material_Blazor_MD2_MBTooltip_Target_
-  commentId: Overload:Material.Blazor.MD2.MBTooltip.Target
-  fullName: Material.Blazor.MD2.MBTooltip.Target
-  nameWithType: MBTooltip.Target
 - uid: Material.Blazor.MD2.MBTopAppBar
   name: MBTopAppBar
   href: api/Material.Blazor.MD2.MBTopAppBar.html
@@ -9448,18 +8657,6 @@ references:
   commentId: Overload:Material.Blazor.MD2.MBTopAppBar.ChildContent
   fullName: Material.Blazor.MD2.MBTopAppBar.ChildContent
   nameWithType: MBTopAppBar.ChildContent
-- uid: Material.Blazor.MD2.MBTopAppBar.IconFoundry
-  name: IconFoundry
-  href: api/Material.Blazor.MD2.MBTopAppBar.html#Material_Blazor_MD2_MBTopAppBar_IconFoundry
-  commentId: P:Material.Blazor.MD2.MBTopAppBar.IconFoundry
-  fullName: Material.Blazor.MD2.MBTopAppBar.IconFoundry
-  nameWithType: MBTopAppBar.IconFoundry
-- uid: Material.Blazor.MD2.MBTopAppBar.IconFoundry*
-  name: IconFoundry
-  href: api/Material.Blazor.MD2.MBTopAppBar.html#Material_Blazor_MD2_MBTopAppBar_IconFoundry_
-  commentId: Overload:Material.Blazor.MD2.MBTopAppBar.IconFoundry
-  fullName: Material.Blazor.MD2.MBTopAppBar.IconFoundry
-  nameWithType: MBTopAppBar.IconFoundry
 - uid: Material.Blazor.MD2.MBTopAppBar.NavIcon
   name: NavIcon
   href: api/Material.Blazor.MD2.MBTopAppBar.html#Material_Blazor_MD2_MBTopAppBar_NavIcon
@@ -9739,6 +8936,3 @@ references:
 - uid: U.MBCascadingDefaults
   name: MBCascadingDefaults
   href: Material.Blazor.MD3/Model/MBCascadingDefaults.html
-- uid: U.MBIconHelper
-  name: MBIconHelper
-  href: Material.Blazor.MD3/Model.MD2/Icon/MBIconHelper.html

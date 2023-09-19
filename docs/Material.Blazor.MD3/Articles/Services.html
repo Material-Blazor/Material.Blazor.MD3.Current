@@ -85,7 +85,7 @@
         <article data-uid="A.Services">
 <h1 id="services">Services</h1>
 
-<p>Material.Blazor has services for snackbar, toast notifications, and tooltips. These services and their functionality are optional.</p>
+<p>Material.Blazor has services for snackbar and toast notifications. These services and their functionality are optional.</p>
 <h2 id="services-list">Services List</h2>
 <table>
 <thead>
@@ -95,6 +95,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align: left;"><a href="xref:S.IMBSnackbarService">IMBSnackbarService</a></td>
+<td style="text-align: left;">Manages snackbar notification. Requires an <a class="xref" href="../Components/Anchor/MBAnchor.html">MBAnchor</a> component and will throw an exception when you attempt to show a snackbar if this isn't found.</td>
+</tr>
 <tr>
 <td style="text-align: left;"><a class="xref" href="../Model/Toast/IMBToastService.html">IMBToastService</a></td>
 <td style="text-align: left;">Manages toast notification. Requires an <a class="xref" href="../Components/Anchor/MBAnchor.html">MBAnchor</a> component and will throw an exception when you attempt to show a toast notification if this isn't found.</td>
