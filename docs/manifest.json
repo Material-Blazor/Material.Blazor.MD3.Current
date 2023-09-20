@@ -1168,10 +1168,50 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBIconFill.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBIconFill.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBIconGradient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBIconGradient.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBIconSize.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBIconSize.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.MBIconStyle.yml",
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBIconStyle.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBIconWeight.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBIconWeight.html"
         }
       },
       "version": ""
@@ -1212,16 +1252,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBLoggingServiceConfiguration.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MBMenuSurfacePositioning.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MBMenuSurfacePositioning.html"
         }
       },
       "version": ""

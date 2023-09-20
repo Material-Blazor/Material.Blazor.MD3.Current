@@ -3054,6 +3054,42 @@ references:
   commentId: Overload:Material.Blazor.MBCascadingDefaults.Disabled
   fullName: Material.Blazor.MBCascadingDefaults.Disabled
   nameWithType: MBCascadingDefaults.Disabled
+- uid: Material.Blazor.MBCascadingDefaults.IconColor
+  name: IconColor
+  href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_IconColor
+  commentId: P:Material.Blazor.MBCascadingDefaults.IconColor
+  fullName: Material.Blazor.MBCascadingDefaults.IconColor
+  nameWithType: MBCascadingDefaults.IconColor
+- uid: Material.Blazor.MBCascadingDefaults.IconColor*
+  name: IconColor
+  href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_IconColor_
+  commentId: Overload:Material.Blazor.MBCascadingDefaults.IconColor
+  fullName: Material.Blazor.MBCascadingDefaults.IconColor
+  nameWithType: MBCascadingDefaults.IconColor
+- uid: Material.Blazor.MBCascadingDefaults.IconFill
+  name: IconFill
+  href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_IconFill
+  commentId: P:Material.Blazor.MBCascadingDefaults.IconFill
+  fullName: Material.Blazor.MBCascadingDefaults.IconFill
+  nameWithType: MBCascadingDefaults.IconFill
+- uid: Material.Blazor.MBCascadingDefaults.IconFill*
+  name: IconFill
+  href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_IconFill_
+  commentId: Overload:Material.Blazor.MBCascadingDefaults.IconFill
+  fullName: Material.Blazor.MBCascadingDefaults.IconFill
+  nameWithType: MBCascadingDefaults.IconFill
+- uid: Material.Blazor.MBCascadingDefaults.IconGradient
+  name: IconGradient
+  href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_IconGradient
+  commentId: P:Material.Blazor.MBCascadingDefaults.IconGradient
+  fullName: Material.Blazor.MBCascadingDefaults.IconGradient
+  nameWithType: MBCascadingDefaults.IconGradient
+- uid: Material.Blazor.MBCascadingDefaults.IconGradient*
+  name: IconGradient
+  href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_IconGradient_
+  commentId: Overload:Material.Blazor.MBCascadingDefaults.IconGradient
+  fullName: Material.Blazor.MBCascadingDefaults.IconGradient
+  nameWithType: MBCascadingDefaults.IconGradient
 - uid: Material.Blazor.MBCascadingDefaults.IconName
   name: IconName
   href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_IconName
@@ -3066,6 +3102,18 @@ references:
   commentId: Overload:Material.Blazor.MBCascadingDefaults.IconName
   fullName: Material.Blazor.MBCascadingDefaults.IconName
   nameWithType: MBCascadingDefaults.IconName
+- uid: Material.Blazor.MBCascadingDefaults.IconSize
+  name: IconSize
+  href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_IconSize
+  commentId: P:Material.Blazor.MBCascadingDefaults.IconSize
+  fullName: Material.Blazor.MBCascadingDefaults.IconSize
+  nameWithType: MBCascadingDefaults.IconSize
+- uid: Material.Blazor.MBCascadingDefaults.IconSize*
+  name: IconSize
+  href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_IconSize_
+  commentId: Overload:Material.Blazor.MBCascadingDefaults.IconSize
+  fullName: Material.Blazor.MBCascadingDefaults.IconSize
+  nameWithType: MBCascadingDefaults.IconSize
 - uid: Material.Blazor.MBCascadingDefaults.IconStyle
   name: IconStyle
   href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_IconStyle
@@ -3078,6 +3126,18 @@ references:
   commentId: Overload:Material.Blazor.MBCascadingDefaults.IconStyle
   fullName: Material.Blazor.MBCascadingDefaults.IconStyle
   nameWithType: MBCascadingDefaults.IconStyle
+- uid: Material.Blazor.MBCascadingDefaults.IconWeight
+  name: IconWeight
+  href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_IconWeight
+  commentId: P:Material.Blazor.MBCascadingDefaults.IconWeight
+  fullName: Material.Blazor.MBCascadingDefaults.IconWeight
+  nameWithType: MBCascadingDefaults.IconWeight
+- uid: Material.Blazor.MBCascadingDefaults.IconWeight*
+  name: IconWeight
+  href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_IconWeight_
+  commentId: Overload:Material.Blazor.MBCascadingDefaults.IconWeight
+  fullName: Material.Blazor.MBCascadingDefaults.IconWeight
+  nameWithType: MBCascadingDefaults.IconWeight
 - uid: Material.Blazor.MBCascadingDefaults.ShallowCopy
   name: ShallowCopy()
   href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_ShallowCopy
@@ -3576,6 +3636,42 @@ references:
   commentId: Overload:Material.Blazor.MBIcon.HasBadgePLUS
   fullName: Material.Blazor.MBIcon.HasBadgePLUS
   nameWithType: MBIcon.HasBadgePLUS
+- uid: Material.Blazor.MBIcon.IconColor
+  name: IconColor
+  href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_IconColor
+  commentId: P:Material.Blazor.MBIcon.IconColor
+  fullName: Material.Blazor.MBIcon.IconColor
+  nameWithType: MBIcon.IconColor
+- uid: Material.Blazor.MBIcon.IconColor*
+  name: IconColor
+  href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_IconColor_
+  commentId: Overload:Material.Blazor.MBIcon.IconColor
+  fullName: Material.Blazor.MBIcon.IconColor
+  nameWithType: MBIcon.IconColor
+- uid: Material.Blazor.MBIcon.IconFill
+  name: IconFill
+  href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_IconFill
+  commentId: P:Material.Blazor.MBIcon.IconFill
+  fullName: Material.Blazor.MBIcon.IconFill
+  nameWithType: MBIcon.IconFill
+- uid: Material.Blazor.MBIcon.IconFill*
+  name: IconFill
+  href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_IconFill_
+  commentId: Overload:Material.Blazor.MBIcon.IconFill
+  fullName: Material.Blazor.MBIcon.IconFill
+  nameWithType: MBIcon.IconFill
+- uid: Material.Blazor.MBIcon.IconGradient
+  name: IconGradient
+  href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_IconGradient
+  commentId: P:Material.Blazor.MBIcon.IconGradient
+  fullName: Material.Blazor.MBIcon.IconGradient
+  nameWithType: MBIcon.IconGradient
+- uid: Material.Blazor.MBIcon.IconGradient*
+  name: IconGradient
+  href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_IconGradient_
+  commentId: Overload:Material.Blazor.MBIcon.IconGradient
+  fullName: Material.Blazor.MBIcon.IconGradient
+  nameWithType: MBIcon.IconGradient
 - uid: Material.Blazor.MBIcon.IconName
   name: IconName
   href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_IconName
@@ -3588,6 +3684,18 @@ references:
   commentId: Overload:Material.Blazor.MBIcon.IconName
   fullName: Material.Blazor.MBIcon.IconName
   nameWithType: MBIcon.IconName
+- uid: Material.Blazor.MBIcon.IconSize
+  name: IconSize
+  href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_IconSize
+  commentId: P:Material.Blazor.MBIcon.IconSize
+  fullName: Material.Blazor.MBIcon.IconSize
+  nameWithType: MBIcon.IconSize
+- uid: Material.Blazor.MBIcon.IconSize*
+  name: IconSize
+  href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_IconSize_
+  commentId: Overload:Material.Blazor.MBIcon.IconSize
+  fullName: Material.Blazor.MBIcon.IconSize
+  nameWithType: MBIcon.IconSize
 - uid: Material.Blazor.MBIcon.IconStyle
   name: IconStyle
   href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_IconStyle
@@ -3600,6 +3708,18 @@ references:
   commentId: Overload:Material.Blazor.MBIcon.IconStyle
   fullName: Material.Blazor.MBIcon.IconStyle
   nameWithType: MBIcon.IconStyle
+- uid: Material.Blazor.MBIcon.IconWeight
+  name: IconWeight
+  href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_IconWeight
+  commentId: P:Material.Blazor.MBIcon.IconWeight
+  fullName: Material.Blazor.MBIcon.IconWeight
+  nameWithType: MBIcon.IconWeight
+- uid: Material.Blazor.MBIcon.IconWeight*
+  name: IconWeight
+  href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_IconWeight_
+  commentId: Overload:Material.Blazor.MBIcon.IconWeight
+  fullName: Material.Blazor.MBIcon.IconWeight
+  nameWithType: MBIcon.IconWeight
 - uid: Material.Blazor.MBIcon.OnParametersSetAsync
   name: OnParametersSetAsync()
   href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_OnParametersSetAsync
@@ -3612,6 +3732,78 @@ references:
   commentId: Overload:Material.Blazor.MBIcon.OnParametersSetAsync
   fullName: Material.Blazor.MBIcon.OnParametersSetAsync
   nameWithType: MBIcon.OnParametersSetAsync
+- uid: Material.Blazor.MBIconFill
+  name: MBIconFill
+  href: api/Material.Blazor.MBIconFill.html
+  commentId: T:Material.Blazor.MBIconFill
+  fullName: Material.Blazor.MBIconFill
+  nameWithType: MBIconFill
+- uid: Material.Blazor.MBIconFill.Filled
+  name: Filled
+  href: api/Material.Blazor.MBIconFill.html#Material_Blazor_MBIconFill_Filled
+  commentId: F:Material.Blazor.MBIconFill.Filled
+  fullName: Material.Blazor.MBIconFill.Filled
+  nameWithType: MBIconFill.Filled
+- uid: Material.Blazor.MBIconFill.NotFilled
+  name: NotFilled
+  href: api/Material.Blazor.MBIconFill.html#Material_Blazor_MBIconFill_NotFilled
+  commentId: F:Material.Blazor.MBIconFill.NotFilled
+  fullName: Material.Blazor.MBIconFill.NotFilled
+  nameWithType: MBIconFill.NotFilled
+- uid: Material.Blazor.MBIconGradient
+  name: MBIconGradient
+  href: api/Material.Blazor.MBIconGradient.html
+  commentId: T:Material.Blazor.MBIconGradient
+  fullName: Material.Blazor.MBIconGradient
+  nameWithType: MBIconGradient
+- uid: Material.Blazor.MBIconGradient.HighEmphasis
+  name: HighEmphasis
+  href: api/Material.Blazor.MBIconGradient.html#Material_Blazor_MBIconGradient_HighEmphasis
+  commentId: F:Material.Blazor.MBIconGradient.HighEmphasis
+  fullName: Material.Blazor.MBIconGradient.HighEmphasis
+  nameWithType: MBIconGradient.HighEmphasis
+- uid: Material.Blazor.MBIconGradient.LowEmphasis
+  name: LowEmphasis
+  href: api/Material.Blazor.MBIconGradient.html#Material_Blazor_MBIconGradient_LowEmphasis
+  commentId: F:Material.Blazor.MBIconGradient.LowEmphasis
+  fullName: Material.Blazor.MBIconGradient.LowEmphasis
+  nameWithType: MBIconGradient.LowEmphasis
+- uid: Material.Blazor.MBIconGradient.NormalEmphasis
+  name: NormalEmphasis
+  href: api/Material.Blazor.MBIconGradient.html#Material_Blazor_MBIconGradient_NormalEmphasis
+  commentId: F:Material.Blazor.MBIconGradient.NormalEmphasis
+  fullName: Material.Blazor.MBIconGradient.NormalEmphasis
+  nameWithType: MBIconGradient.NormalEmphasis
+- uid: Material.Blazor.MBIconSize
+  name: MBIconSize
+  href: api/Material.Blazor.MBIconSize.html
+  commentId: T:Material.Blazor.MBIconSize
+  fullName: Material.Blazor.MBIconSize
+  nameWithType: MBIconSize
+- uid: Material.Blazor.MBIconSize.Size20
+  name: Size20
+  href: api/Material.Blazor.MBIconSize.html#Material_Blazor_MBIconSize_Size20
+  commentId: F:Material.Blazor.MBIconSize.Size20
+  fullName: Material.Blazor.MBIconSize.Size20
+  nameWithType: MBIconSize.Size20
+- uid: Material.Blazor.MBIconSize.Size24
+  name: Size24
+  href: api/Material.Blazor.MBIconSize.html#Material_Blazor_MBIconSize_Size24
+  commentId: F:Material.Blazor.MBIconSize.Size24
+  fullName: Material.Blazor.MBIconSize.Size24
+  nameWithType: MBIconSize.Size24
+- uid: Material.Blazor.MBIconSize.Size40
+  name: Size40
+  href: api/Material.Blazor.MBIconSize.html#Material_Blazor_MBIconSize_Size40
+  commentId: F:Material.Blazor.MBIconSize.Size40
+  fullName: Material.Blazor.MBIconSize.Size40
+  nameWithType: MBIconSize.Size40
+- uid: Material.Blazor.MBIconSize.Size48
+  name: Size48
+  href: api/Material.Blazor.MBIconSize.html#Material_Blazor_MBIconSize_Size48
+  commentId: F:Material.Blazor.MBIconSize.Size48
+  fullName: Material.Blazor.MBIconSize.Size48
+  nameWithType: MBIconSize.Size48
 - uid: Material.Blazor.MBIconStyle
   name: MBIconStyle
   href: api/Material.Blazor.MBIconStyle.html
@@ -3636,6 +3828,54 @@ references:
   commentId: F:Material.Blazor.MBIconStyle.Sharp
   fullName: Material.Blazor.MBIconStyle.Sharp
   nameWithType: MBIconStyle.Sharp
+- uid: Material.Blazor.MBIconWeight
+  name: MBIconWeight
+  href: api/Material.Blazor.MBIconWeight.html
+  commentId: T:Material.Blazor.MBIconWeight
+  fullName: Material.Blazor.MBIconWeight
+  nameWithType: MBIconWeight
+- uid: Material.Blazor.MBIconWeight.W100
+  name: W100
+  href: api/Material.Blazor.MBIconWeight.html#Material_Blazor_MBIconWeight_W100
+  commentId: F:Material.Blazor.MBIconWeight.W100
+  fullName: Material.Blazor.MBIconWeight.W100
+  nameWithType: MBIconWeight.W100
+- uid: Material.Blazor.MBIconWeight.W200
+  name: W200
+  href: api/Material.Blazor.MBIconWeight.html#Material_Blazor_MBIconWeight_W200
+  commentId: F:Material.Blazor.MBIconWeight.W200
+  fullName: Material.Blazor.MBIconWeight.W200
+  nameWithType: MBIconWeight.W200
+- uid: Material.Blazor.MBIconWeight.W300
+  name: W300
+  href: api/Material.Blazor.MBIconWeight.html#Material_Blazor_MBIconWeight_W300
+  commentId: F:Material.Blazor.MBIconWeight.W300
+  fullName: Material.Blazor.MBIconWeight.W300
+  nameWithType: MBIconWeight.W300
+- uid: Material.Blazor.MBIconWeight.W400
+  name: W400
+  href: api/Material.Blazor.MBIconWeight.html#Material_Blazor_MBIconWeight_W400
+  commentId: F:Material.Blazor.MBIconWeight.W400
+  fullName: Material.Blazor.MBIconWeight.W400
+  nameWithType: MBIconWeight.W400
+- uid: Material.Blazor.MBIconWeight.W500
+  name: W500
+  href: api/Material.Blazor.MBIconWeight.html#Material_Blazor_MBIconWeight_W500
+  commentId: F:Material.Blazor.MBIconWeight.W500
+  fullName: Material.Blazor.MBIconWeight.W500
+  nameWithType: MBIconWeight.W500
+- uid: Material.Blazor.MBIconWeight.W600
+  name: W600
+  href: api/Material.Blazor.MBIconWeight.html#Material_Blazor_MBIconWeight_W600
+  commentId: F:Material.Blazor.MBIconWeight.W600
+  fullName: Material.Blazor.MBIconWeight.W600
+  nameWithType: MBIconWeight.W600
+- uid: Material.Blazor.MBIconWeight.W700
+  name: W700
+  href: api/Material.Blazor.MBIconWeight.html#Material_Blazor_MBIconWeight_W700
+  commentId: F:Material.Blazor.MBIconWeight.W700
+  fullName: Material.Blazor.MBIconWeight.W700
+  nameWithType: MBIconWeight.W700
 - uid: Material.Blazor.MBItemValidation
   name: MBItemValidation
   href: api/Material.Blazor.MBItemValidation.html
@@ -3774,30 +4014,6 @@ references:
   commentId: Overload:Material.Blazor.MBLoggingServiceConfiguration.LoggingLevel
   fullName: Material.Blazor.MBLoggingServiceConfiguration.LoggingLevel
   nameWithType: MBLoggingServiceConfiguration.LoggingLevel
-- uid: Material.Blazor.MBMenuSurfacePositioning
-  name: MBMenuSurfacePositioning
-  href: api/Material.Blazor.MBMenuSurfacePositioning.html
-  commentId: T:Material.Blazor.MBMenuSurfacePositioning
-  fullName: Material.Blazor.MBMenuSurfacePositioning
-  nameWithType: MBMenuSurfacePositioning
-- uid: Material.Blazor.MBMenuSurfacePositioning.Fixed
-  name: Fixed
-  href: api/Material.Blazor.MBMenuSurfacePositioning.html#Material_Blazor_MBMenuSurfacePositioning_Fixed
-  commentId: F:Material.Blazor.MBMenuSurfacePositioning.Fixed
-  fullName: Material.Blazor.MBMenuSurfacePositioning.Fixed
-  nameWithType: MBMenuSurfacePositioning.Fixed
-- uid: Material.Blazor.MBMenuSurfacePositioning.FullWidth
-  name: FullWidth
-  href: api/Material.Blazor.MBMenuSurfacePositioning.html#Material_Blazor_MBMenuSurfacePositioning_FullWidth
-  commentId: F:Material.Blazor.MBMenuSurfacePositioning.FullWidth
-  fullName: Material.Blazor.MBMenuSurfacePositioning.FullWidth
-  nameWithType: MBMenuSurfacePositioning.FullWidth
-- uid: Material.Blazor.MBMenuSurfacePositioning.Regular
-  name: Regular
-  href: api/Material.Blazor.MBMenuSurfacePositioning.html#Material_Blazor_MBMenuSurfacePositioning_Regular
-  commentId: F:Material.Blazor.MBMenuSurfacePositioning.Regular
-  fullName: Material.Blazor.MBMenuSurfacePositioning.Regular
-  nameWithType: MBMenuSurfacePositioning.Regular
 - uid: Material.Blazor.MBNotifierCloseMethod
   name: MBNotifierCloseMethod
   href: api/Material.Blazor.MBNotifierCloseMethod.html
