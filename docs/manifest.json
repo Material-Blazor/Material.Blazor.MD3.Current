@@ -1168,16 +1168,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MBIconFill.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MBIconFill.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.MBIconGradient.yml",
       "output": {
         ".html": {
@@ -1802,6 +1792,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MD2.MBShieldType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MD2.MBSlider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MD2.MBSlider.html"
         }
       },
       "version": ""
