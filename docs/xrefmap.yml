@@ -7619,18 +7619,30 @@ references:
   commentId: Overload:Material.Blazor.MD2.MBIconButton.HasBadge
   fullName: Material.Blazor.MD2.MBIconButton.HasBadge
   nameWithType: MBIconButton.HasBadge
-- uid: Material.Blazor.MD2.MBIconButton.Icon
-  name: Icon
-  href: api/Material.Blazor.MD2.MBIconButton.html#Material_Blazor_MD2_MBIconButton_Icon
-  commentId: P:Material.Blazor.MD2.MBIconButton.Icon
-  fullName: Material.Blazor.MD2.MBIconButton.Icon
-  nameWithType: MBIconButton.Icon
-- uid: Material.Blazor.MD2.MBIconButton.Icon*
-  name: Icon
-  href: api/Material.Blazor.MD2.MBIconButton.html#Material_Blazor_MD2_MBIconButton_Icon_
-  commentId: Overload:Material.Blazor.MD2.MBIconButton.Icon
-  fullName: Material.Blazor.MD2.MBIconButton.Icon
-  nameWithType: MBIconButton.Icon
+- uid: Material.Blazor.MD2.MBIconButton.IconColor
+  name: IconColor
+  href: api/Material.Blazor.MD2.MBIconButton.html#Material_Blazor_MD2_MBIconButton_IconColor
+  commentId: P:Material.Blazor.MD2.MBIconButton.IconColor
+  fullName: Material.Blazor.MD2.MBIconButton.IconColor
+  nameWithType: MBIconButton.IconColor
+- uid: Material.Blazor.MD2.MBIconButton.IconColor*
+  name: IconColor
+  href: api/Material.Blazor.MD2.MBIconButton.html#Material_Blazor_MD2_MBIconButton_IconColor_
+  commentId: Overload:Material.Blazor.MD2.MBIconButton.IconColor
+  fullName: Material.Blazor.MD2.MBIconButton.IconColor
+  nameWithType: MBIconButton.IconColor
+- uid: Material.Blazor.MD2.MBIconButton.IconName
+  name: IconName
+  href: api/Material.Blazor.MD2.MBIconButton.html#Material_Blazor_MD2_MBIconButton_IconName
+  commentId: P:Material.Blazor.MD2.MBIconButton.IconName
+  fullName: Material.Blazor.MD2.MBIconButton.IconName
+  nameWithType: MBIconButton.IconName
+- uid: Material.Blazor.MD2.MBIconButton.IconName*
+  name: IconName
+  href: api/Material.Blazor.MD2.MBIconButton.html#Material_Blazor_MD2_MBIconButton_IconName_
+  commentId: Overload:Material.Blazor.MD2.MBIconButton.IconName
+  fullName: Material.Blazor.MD2.MBIconButton.IconName
+  nameWithType: MBIconButton.IconName
 - uid: Material.Blazor.MD2.MBIconButton.OnInitializedAsync
   name: OnInitializedAsync()
   href: api/Material.Blazor.MD2.MBIconButton.html#Material_Blazor_MD2_MBIconButton_OnInitializedAsync
@@ -7799,6 +7811,18 @@ references:
   commentId: Overload:Material.Blazor.MD2.MBListItem.LeadingIcon
   fullName: Material.Blazor.MD2.MBListItem.LeadingIcon
   nameWithType: MBListItem.LeadingIcon
+- uid: Material.Blazor.MD2.MBListItem.ListItemColor
+  name: ListItemColor
+  href: api/Material.Blazor.MD2.MBListItem.html#Material_Blazor_MD2_MBListItem_ListItemColor
+  commentId: P:Material.Blazor.MD2.MBListItem.ListItemColor
+  fullName: Material.Blazor.MD2.MBListItem.ListItemColor
+  nameWithType: MBListItem.ListItemColor
+- uid: Material.Blazor.MD2.MBListItem.ListItemColor*
+  name: ListItemColor
+  href: api/Material.Blazor.MD2.MBListItem.html#Material_Blazor_MD2_MBListItem_ListItemColor_
+  commentId: Overload:Material.Blazor.MD2.MBListItem.ListItemColor
+  fullName: Material.Blazor.MD2.MBListItem.ListItemColor
+  nameWithType: MBListItem.ListItemColor
 - uid: Material.Blazor.MD2.MBListItem.OnInitializedAsync
   name: OnInitializedAsync()
   href: api/Material.Blazor.MD2.MBListItem.html#Material_Blazor_MD2_MBListItem_OnInitializedAsync
