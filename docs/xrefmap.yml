@@ -379,6 +379,18 @@ references:
   commentId: Overload:Material.Blazor.Internal.ComponentFoundation.OnAfterRenderAsync
   fullName: Material.Blazor.Internal.ComponentFoundation.OnAfterRenderAsync
   nameWithType: ComponentFoundation.OnAfterRenderAsync
+- uid: Material.Blazor.Internal.ComponentFoundation.OnInitialized
+  name: OnInitialized()
+  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_OnInitialized
+  commentId: M:Material.Blazor.Internal.ComponentFoundation.OnInitialized
+  fullName: Material.Blazor.Internal.ComponentFoundation.OnInitialized()
+  nameWithType: ComponentFoundation.OnInitialized()
+- uid: Material.Blazor.Internal.ComponentFoundation.OnInitialized*
+  name: OnInitialized
+  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_OnInitialized_
+  commentId: Overload:Material.Blazor.Internal.ComponentFoundation.OnInitialized
+  fullName: Material.Blazor.Internal.ComponentFoundation.OnInitialized
+  nameWithType: ComponentFoundation.OnInitialized
 - uid: Material.Blazor.Internal.ComponentFoundation.OnParametersSet
   name: OnParametersSet()
   href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_OnParametersSet
@@ -403,6 +415,18 @@ references:
   commentId: Overload:Material.Blazor.Internal.ComponentFoundation.OnParametersSetAsync
   fullName: Material.Blazor.Internal.ComponentFoundation.OnParametersSetAsync
   nameWithType: ComponentFoundation.OnParametersSetAsync
+- uid: Material.Blazor.Internal.ComponentFoundation.Tooltip
+  name: Tooltip
+  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_Tooltip
+  commentId: P:Material.Blazor.Internal.ComponentFoundation.Tooltip
+  fullName: Material.Blazor.Internal.ComponentFoundation.Tooltip
+  nameWithType: ComponentFoundation.Tooltip
+- uid: Material.Blazor.Internal.ComponentFoundation.Tooltip*
+  name: Tooltip
+  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_Tooltip_
+  commentId: Overload:Material.Blazor.Internal.ComponentFoundation.Tooltip
+  fullName: Material.Blazor.Internal.ComponentFoundation.Tooltip
+  nameWithType: ComponentFoundation.Tooltip
 - uid: Material.Blazor.Internal.ComponentFoundation.UnmatchedAttributes
   name: UnmatchedAttributes
   href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_UnmatchedAttributes
@@ -2017,626 +2041,6 @@ references:
   commentId: Overload:Material.Blazor.Internal.InternalTextFieldBase.ValidationMessageFor
   fullName: Material.Blazor.Internal.InternalTextFieldBase.ValidationMessageFor
   nameWithType: InternalTextFieldBase.ValidationMessageFor
-- uid: Material.Blazor.Internal.MD2
-  name: Material.Blazor.Internal.MD2
-  href: api/Material.Blazor.Internal.MD2.html
-  commentId: N:Material.Blazor.Internal.MD2
-  fullName: Material.Blazor.Internal.MD2
-  nameWithType: Material.Blazor.Internal.MD2
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2
-  name: ComponentFoundationMD2
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html
-  commentId: T:Material.Blazor.Internal.MD2.ComponentFoundationMD2
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2
-  nameWithType: ComponentFoundationMD2
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.#ctor
-  name: ComponentFoundationMD2()
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2__ctor
-  commentId: M:Material.Blazor.Internal.MD2.ComponentFoundationMD2.#ctor
-  name.vb: New()
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.ComponentFoundationMD2()
-  fullName.vb: Material.Blazor.Internal.MD2.ComponentFoundationMD2.New()
-  nameWithType: ComponentFoundationMD2.ComponentFoundationMD2()
-  nameWithType.vb: ComponentFoundationMD2.New()
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.#ctor*
-  name: ComponentFoundationMD2
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2__ctor_
-  commentId: Overload:Material.Blazor.Internal.MD2.ComponentFoundationMD2.#ctor
-  name.vb: New
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.ComponentFoundationMD2
-  fullName.vb: Material.Blazor.Internal.MD2.ComponentFoundationMD2.New
-  nameWithType: ComponentFoundationMD2.ComponentFoundationMD2
-  nameWithType.vb: ComponentFoundationMD2.New
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.ActiveConditionalClasses
-  name: ActiveConditionalClasses
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_ActiveConditionalClasses
-  commentId: P:Material.Blazor.Internal.MD2.ComponentFoundationMD2.ActiveConditionalClasses
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.ActiveConditionalClasses
-  nameWithType: ComponentFoundationMD2.ActiveConditionalClasses
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.ActiveConditionalClasses*
-  name: ActiveConditionalClasses
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_ActiveConditionalClasses_
-  commentId: Overload:Material.Blazor.Internal.MD2.ComponentFoundationMD2.ActiveConditionalClasses
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.ActiveConditionalClasses
-  nameWithType: ComponentFoundationMD2.ActiveConditionalClasses
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.CascadingDefaults
-  name: CascadingDefaults
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_CascadingDefaults
-  commentId: P:Material.Blazor.Internal.MD2.ComponentFoundationMD2.CascadingDefaults
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.CascadingDefaults
-  nameWithType: ComponentFoundationMD2.CascadingDefaults
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.CascadingDefaults*
-  name: CascadingDefaults
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_CascadingDefaults_
-  commentId: Overload:Material.Blazor.Internal.MD2.ComponentFoundationMD2.CascadingDefaults
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.CascadingDefaults
-  nameWithType: ComponentFoundationMD2.CascadingDefaults
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.Disabled
-  name: Disabled
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_Disabled
-  commentId: P:Material.Blazor.Internal.MD2.ComponentFoundationMD2.Disabled
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.Disabled
-  nameWithType: ComponentFoundationMD2.Disabled
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.Disabled*
-  name: Disabled
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_Disabled_
-  commentId: Overload:Material.Blazor.Internal.MD2.ComponentFoundationMD2.Disabled
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.Disabled
-  nameWithType: ComponentFoundationMD2.Disabled
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.Dispose
-  name: Dispose()
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_Dispose
-  commentId: M:Material.Blazor.Internal.MD2.ComponentFoundationMD2.Dispose
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.Dispose()
-  nameWithType: ComponentFoundationMD2.Dispose()
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.Dispose(System.Boolean)
-  name: Dispose(bool)
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_Dispose_System_Boolean_
-  commentId: M:Material.Blazor.Internal.MD2.ComponentFoundationMD2.Dispose(System.Boolean)
-  name.vb: Dispose(Boolean)
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.Dispose(bool)
-  fullName.vb: Material.Blazor.Internal.MD2.ComponentFoundationMD2.Dispose(Boolean)
-  nameWithType: ComponentFoundationMD2.Dispose(bool)
-  nameWithType.vb: ComponentFoundationMD2.Dispose(Boolean)
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.Dispose*
-  name: Dispose
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_Dispose_
-  commentId: Overload:Material.Blazor.Internal.MD2.ComponentFoundationMD2.Dispose
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.Dispose
-  nameWithType: ComponentFoundationMD2.Dispose
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnAfterRender(System.Boolean)
-  name: OnAfterRender(bool)
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_OnAfterRender_System_Boolean_
-  commentId: M:Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnAfterRender(System.Boolean)
-  name.vb: OnAfterRender(Boolean)
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnAfterRender(bool)
-  fullName.vb: Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnAfterRender(Boolean)
-  nameWithType: ComponentFoundationMD2.OnAfterRender(bool)
-  nameWithType.vb: ComponentFoundationMD2.OnAfterRender(Boolean)
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnAfterRender*
-  name: OnAfterRender
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_OnAfterRender_
-  commentId: Overload:Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnAfterRender
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnAfterRender
-  nameWithType: ComponentFoundationMD2.OnAfterRender
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnAfterRenderAsync(System.Boolean)
-  name: OnAfterRenderAsync(bool)
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_OnAfterRenderAsync_System_Boolean_
-  commentId: M:Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnAfterRenderAsync(System.Boolean)
-  name.vb: OnAfterRenderAsync(Boolean)
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnAfterRenderAsync(bool)
-  fullName.vb: Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnAfterRenderAsync(Boolean)
-  nameWithType: ComponentFoundationMD2.OnAfterRenderAsync(bool)
-  nameWithType.vb: ComponentFoundationMD2.OnAfterRenderAsync(Boolean)
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnAfterRenderAsync*
-  name: OnAfterRenderAsync
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_OnAfterRenderAsync_
-  commentId: Overload:Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnAfterRenderAsync
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnAfterRenderAsync
-  nameWithType: ComponentFoundationMD2.OnAfterRenderAsync
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnInitialized
-  name: OnInitialized()
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_OnInitialized
-  commentId: M:Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnInitialized
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnInitialized()
-  nameWithType: ComponentFoundationMD2.OnInitialized()
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnInitialized*
-  name: OnInitialized
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_OnInitialized_
-  commentId: Overload:Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnInitialized
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnInitialized
-  nameWithType: ComponentFoundationMD2.OnInitialized
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnParametersSet
-  name: OnParametersSet()
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_OnParametersSet
-  commentId: M:Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnParametersSet
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnParametersSet()
-  nameWithType: ComponentFoundationMD2.OnParametersSet()
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnParametersSet*
-  name: OnParametersSet
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_OnParametersSet_
-  commentId: Overload:Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnParametersSet
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnParametersSet
-  nameWithType: ComponentFoundationMD2.OnParametersSet
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnParametersSetAsync
-  name: OnParametersSetAsync()
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_OnParametersSetAsync
-  commentId: M:Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnParametersSetAsync
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnParametersSetAsync()
-  nameWithType: ComponentFoundationMD2.OnParametersSetAsync()
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnParametersSetAsync*
-  name: OnParametersSetAsync
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_OnParametersSetAsync_
-  commentId: Overload:Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnParametersSetAsync
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.OnParametersSetAsync
-  nameWithType: ComponentFoundationMD2.OnParametersSetAsync
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.UnmatchedAttributes
-  name: UnmatchedAttributes
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_UnmatchedAttributes
-  commentId: P:Material.Blazor.Internal.MD2.ComponentFoundationMD2.UnmatchedAttributes
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.UnmatchedAttributes
-  nameWithType: ComponentFoundationMD2.UnmatchedAttributes
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.UnmatchedAttributes*
-  name: UnmatchedAttributes
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_UnmatchedAttributes_
-  commentId: Overload:Material.Blazor.Internal.MD2.ComponentFoundationMD2.UnmatchedAttributes
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.UnmatchedAttributes
-  nameWithType: ComponentFoundationMD2.UnmatchedAttributes
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.class
-  name: class
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_class
-  commentId: P:Material.Blazor.Internal.MD2.ComponentFoundationMD2.class
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.class
-  nameWithType: ComponentFoundationMD2.class
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.class*
-  name: class
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_class_
-  commentId: Overload:Material.Blazor.Internal.MD2.ComponentFoundationMD2.class
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.class
-  nameWithType: ComponentFoundationMD2.class
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.id
-  name: id
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_id
-  commentId: P:Material.Blazor.Internal.MD2.ComponentFoundationMD2.id
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.id
-  nameWithType: ComponentFoundationMD2.id
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.id*
-  name: id
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_id_
-  commentId: Overload:Material.Blazor.Internal.MD2.ComponentFoundationMD2.id
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.id
-  nameWithType: ComponentFoundationMD2.id
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.style
-  name: style
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_style
-  commentId: P:Material.Blazor.Internal.MD2.ComponentFoundationMD2.style
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.style
-  nameWithType: ComponentFoundationMD2.style
-- uid: Material.Blazor.Internal.MD2.ComponentFoundationMD2.style*
-  name: style
-  href: api/Material.Blazor.Internal.MD2.ComponentFoundationMD2.html#Material_Blazor_Internal_MD2_ComponentFoundationMD2_style_
-  commentId: Overload:Material.Blazor.Internal.MD2.ComponentFoundationMD2.style
-  fullName: Material.Blazor.Internal.MD2.ComponentFoundationMD2.style
-  nameWithType: ComponentFoundationMD2.style
-- uid: Material.Blazor.Internal.MD2.InputComponentMD2`1
-  name: InputComponentMD2<T>
-  href: api/Material.Blazor.Internal.MD2.InputComponentMD2-1.html
-  commentId: T:Material.Blazor.Internal.MD2.InputComponentMD2`1
-  name.vb: InputComponentMD2(Of T)
-  fullName: Material.Blazor.Internal.MD2.InputComponentMD2<T>
-  fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T)
-  nameWithType: InputComponentMD2<T>
-  nameWithType.vb: InputComponentMD2(Of T)
-- uid: Material.Blazor.Internal.MD2.InputComponentMD2`1.#ctor
-  name: InputComponentMD2()
-  href: api/Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1__ctor
-  commentId: M:Material.Blazor.Internal.MD2.InputComponentMD2`1.#ctor
-  name.vb: New()
-  fullName: Material.Blazor.Internal.MD2.InputComponentMD2<T>.InputComponentMD2()
-  fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T).New()
-  nameWithType: InputComponentMD2<T>.InputComponentMD2()
-  nameWithType.vb: InputComponentMD2(Of T).New()
-- uid: Material.Blazor.Internal.MD2.InputComponentMD2`1.#ctor*
-  name: InputComponentMD2
-  href: api/Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1__ctor_
-  commentId: Overload:Material.Blazor.Internal.MD2.InputComponentMD2`1.#ctor
-  name.vb: New
-  fullName: Material.Blazor.Internal.MD2.InputComponentMD2<T>.InputComponentMD2
-  fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T).New
-  nameWithType: InputComponentMD2<T>.InputComponentMD2
-  nameWithType.vb: InputComponentMD2(Of T).New
-- uid: Material.Blazor.Internal.MD2.InputComponentMD2`1.ComponentValueAsString
-  name: ComponentValueAsString
-  href: api/Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_ComponentValueAsString
-  commentId: P:Material.Blazor.Internal.MD2.InputComponentMD2`1.ComponentValueAsString
-  fullName: Material.Blazor.Internal.MD2.InputComponentMD2<T>.ComponentValueAsString
-  fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T).ComponentValueAsString
-  nameWithType: InputComponentMD2<T>.ComponentValueAsString
-  nameWithType.vb: InputComponentMD2(Of T).ComponentValueAsString
-- uid: Material.Blazor.Internal.MD2.InputComponentMD2`1.ComponentValueAsString*
-  name: ComponentValueAsString
-  href: api/Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_ComponentValueAsString_
-  commentId: Overload:Material.Blazor.Internal.MD2.InputComponentMD2`1.ComponentValueAsString
-  fullName: Material.Blazor.Internal.MD2.InputComponentMD2<T>.ComponentValueAsString
-  fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T).ComponentValueAsString
-  nameWithType: InputComponentMD2<T>.ComponentValueAsString
-  nameWithType.vb: InputComponentMD2(Of T).ComponentValueAsString
-- uid: Material.Blazor.Internal.MD2.InputComponentMD2`1.EditContext
-  name: EditContext
-  href: api/Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_EditContext
-  commentId: P:Material.Blazor.Internal.MD2.InputComponentMD2`1.EditContext
-  fullName: Material.Blazor.Internal.MD2.InputComponentMD2<T>.EditContext
-  fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T).EditContext
-  nameWithType: InputComponentMD2<T>.EditContext
-  nameWithType.vb: InputComponentMD2(Of T).EditContext
-- uid: Material.Blazor.Internal.MD2.InputComponentMD2`1.EditContext*
-  name: EditContext
-  href: api/Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_EditContext_
-  commentId: Overload:Material.Blazor.Internal.MD2.InputComponentMD2`1.EditContext
-  fullName: Material.Blazor.Internal.MD2.InputComponentMD2<T>.EditContext
-  fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T).EditContext
-  nameWithType: InputComponentMD2<T>.EditContext
-  nameWithType.vb: InputComponentMD2(Of T).EditContext
-- uid: Material.Blazor.Internal.MD2.InputComponentMD2`1.FieldClass
-  name: FieldClass
-  href: api/Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_FieldClass
-  commentId: P:Material.Blazor.Internal.MD2.InputComponentMD2`1.FieldClass
-  fullName: Material.Blazor.Internal.MD2.InputComponentMD2<T>.FieldClass
-  fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T).FieldClass
-  nameWithType: InputComponentMD2<T>.FieldClass
-  nameWithType.vb: InputComponentMD2(Of T).FieldClass
-- uid: Material.Blazor.Internal.MD2.InputComponentMD2`1.FieldClass*
-  name: FieldClass
-  href: api/Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_FieldClass_
-  commentId: Overload:Material.Blazor.Internal.MD2.InputComponentMD2`1.FieldClass
-  fullName: Material.Blazor.Internal.MD2.InputComponentMD2<T>.FieldClass
-  fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T).FieldClass
-  nameWithType: InputComponentMD2<T>.FieldClass
-  nameWithType.vb: InputComponentMD2(Of T).FieldClass
-- uid: Material.Blazor.Internal.MD2.InputComponentMD2`1.FieldIdentifier
-  name: FieldIdentifier
-  href: api/Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_FieldIdentifier
-  commentId: P:Material.Blazor.Internal.MD2.InputComponentMD2`1.FieldIdentifier
-  fullName: Material.Blazor.Internal.MD2.InputComponentMD2<T>.FieldIdentifier
-  fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T).FieldIdentifier
-  nameWithType: InputComponentMD2<T>.FieldIdentifier
-  nameWithType.vb: InputComponentMD2(Of T).FieldIdentifier
-- uid: Material.Blazor.Internal.MD2.InputComponentMD2`1.FieldIdentifier*
-  name: FieldIdentifier
-  href: api/Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_FieldIdentifier_
-  commentId: Overload:Material.Blazor.Internal.MD2.InputComponentMD2`1.FieldIdentifier
-  fullName: Material.Blazor.Internal.MD2.InputComponentMD2<T>.FieldIdentifier
-  fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T).FieldIdentifier
-  nameWithType: InputComponentMD2<T>.FieldIdentifier
-  nameWithType.vb: InputComponentMD2(Of T).FieldIdentifier
-- uid: Material.Blazor.Internal.MD2.InputComponentMD2`1.FormatValueToString(`0)
-  name: FormatValueToString(T)
-  href: api/Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_FormatValueToString__0_
-  commentId: M:Material.Blazor.Internal.MD2.InputComponentMD2`1.FormatValueToString(`0)
-  fullName: Material.Blazor.Internal.MD2.InputComponentMD2<T>.FormatValueToString(T)
-  fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T).FormatValueToString(T)
-  nameWithType: InputComponentMD2<T>.FormatValueToString(T)
-  nameWithType.vb: InputComponentMD2(Of T).FormatValueToString(T)
-- uid: Material.Blazor.Internal.MD2.InputComponentMD2`1.FormatValueToString*
-  name: FormatValueToString
-  href: api/Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_FormatValueToString_
-  commentId: Overload:Material.Blazor.Internal.MD2.InputComponentMD2`1.FormatValueToString
-  fullName: Material.Blazor.Internal.MD2.InputComponentMD2<T>.FormatValueToString
-  fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T).FormatValueToString
-  nameWithType: InputComponentMD2<T>.FormatValueToString
-  nameWithType.vb: InputComponentMD2(Of T).FormatValueToString
-- uid: Material.Blazor.Internal.MD2.InputComponentMD2`1.OnInitializedAsync
-  name: OnInitializedAsync()
-  href: api/Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_OnInitializedAsync
-  commentId: M:Material.Blazor.Internal.MD2.InputComponentMD2`1.OnInitializedAsync
-  fullName: Material.Blazor.Internal.MD2.InputComponentMD2<T>.OnInitializedAsync()
-  fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T).OnInitializedAsync()
-  nameWithType: InputComponentMD2<T>.OnInitializedAsync()
-  nameWithType.vb: InputComponentMD2(Of T).OnInitializedAsync()
-- uid: Material.Blazor.Internal.MD2.InputComponentMD2`1.OnInitializedAsync*
-  name: OnInitializedAsync
-  href: api/Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_OnInitializedAsync_
-  commentId: Overload:Material.Blazor.Internal.MD2.InputComponentMD2`1.OnInitializedAsync
-  fullName: Material.Blazor.Internal.MD2.InputComponentMD2<T>.OnInitializedAsync
-  fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T).OnInitializedAsync
-  nameWithType: InputComponentMD2<T>.OnInitializedAsync
-  nameWithType.vb: InputComponentMD2(Of T).OnInitializedAsync
-- uid: Material.Blazor.Internal.MD2.InputComponentMD2`1.OnParametersSetAsync
-  name: OnParametersSetAsync()
-  href: api/Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_OnParametersSetAsync
-  commentId: M:Material.Blazor.Internal.MD2.InputComponentMD2`1.OnParametersSetAsync
-  fullName: Material.Blazor.Internal.MD2.InputComponentMD2<T>.OnParametersSetAsync()
-  fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T).OnParametersSetAsync()
-  nameWithType: InputComponentMD2<T>.OnParametersSetAsync()
-  nameWithType.vb: InputComponentMD2(Of T).OnParametersSetAsync()
-- uid: Material.Blazor.Internal.MD2.InputComponentMD2`1.OnParametersSetAsync*
-  name: OnParametersSetAsync
-  href: api/Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_OnParametersSetAsync_
-  commentId: Overload:Material.Blazor.Internal.MD2.InputComponentMD2`1.OnParametersSetAsync
-  fullName: Material.Blazor.Internal.MD2.InputComponentMD2<T>.OnParametersSetAsync
-  fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T).OnParametersSetAsync
-  nameWithType: InputComponentMD2<T>.OnParametersSetAsync
-  nameWithType.vb: InputComponentMD2(Of T).OnParametersSetAsync
-- uid: Material.Blazor.Internal.MD2.InputComponentMD2`1.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)
-  name: SetParametersAsync(ParameterView)
-  href: api/Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_SetParametersAsync_Microsoft_AspNetCore_Components_ParameterView_
-  commentId: M:Material.Blazor.Internal.MD2.InputComponentMD2`1.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)
-  fullName: Material.Blazor.Internal.MD2.InputComponentMD2<T>.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)
-  fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T).SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)
-  nameWithType: InputComponentMD2<T>.SetParametersAsync(ParameterView)
-  nameWithType.vb: InputComponentMD2(Of T).SetParametersAsync(ParameterView)
-- uid: Material.Blazor.Internal.MD2.InputComponentMD2`1.SetParametersAsync*
-  name: SetParametersAsync
-  href: api/Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_SetParametersAsync_
-  commentId: Overload:Material.Blazor.Internal.MD2.InputComponentMD2`1.SetParametersAsync
-  fullName: Material.Blazor.Internal.MD2.InputComponentMD2<T>.SetParametersAsync
-  fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T).SetParametersAsync
-  nameWithType: InputComponentMD2<T>.SetParametersAsync
-  nameWithType.vb: InputComponentMD2(Of T).SetParametersAsync
-- uid: Material.Blazor.Internal.MD2.InputComponentMD2`1.ShouldRender
-  name: ShouldRender()
-  href: api/Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_ShouldRender
-  commentId: M:Material.Blazor.Internal.MD2.InputComponentMD2`1.ShouldRender
-  fullName: Material.Blazor.Internal.MD2.InputComponentMD2<T>.ShouldRender()
-  fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T).ShouldRender()
-  nameWithType: InputComponentMD2<T>.ShouldRender()
-  nameWithType.vb: InputComponentMD2(Of T).ShouldRender()
-- uid: Material.Blazor.Internal.MD2.InputComponentMD2`1.ShouldRender*
-  name: ShouldRender
-  href: api/Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_ShouldRender_
-  commentId: Overload:Material.Blazor.Internal.MD2.InputComponentMD2`1.ShouldRender
-  fullName: Material.Blazor.Internal.MD2.InputComponentMD2<T>.ShouldRender
-  fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T).ShouldRender
-  nameWithType: InputComponentMD2<T>.ShouldRender
-  nameWithType.vb: InputComponentMD2(Of T).ShouldRender
-- uid: Material.Blazor.Internal.MD2.InputComponentMD2`1.TryParseValueFromString(System.String,`0@,System.String@)
-  name: TryParseValueFromString(string, out T, out string)
-  href: api/Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_TryParseValueFromString_System_String__0__System_String__
-  commentId: M:Material.Blazor.Internal.MD2.InputComponentMD2`1.TryParseValueFromString(System.String,`0@,System.String@)
-  name.vb: TryParseValueFromString(String, T, String)
-  fullName: Material.Blazor.Internal.MD2.InputComponentMD2<T>.TryParseValueFromString(string, out T, out string)
-  fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T).TryParseValueFromString(String, T, String)
-  nameWithType: InputComponentMD2<T>.TryParseValueFromString(string, out T, out string)
-  nameWithType.vb: InputComponentMD2(Of T).TryParseValueFromString(String, T, String)
-- uid: Material.Blazor.Internal.MD2.InputComponentMD2`1.TryParseValueFromString*
-  name: TryParseValueFromString
-  href: api/Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_TryParseValueFromString_
-  commentId: Overload:Material.Blazor.Internal.MD2.InputComponentMD2`1.TryParseValueFromString
-  fullName: Material.Blazor.Internal.MD2.InputComponentMD2<T>.TryParseValueFromString
-  fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T).TryParseValueFromString
-  nameWithType: InputComponentMD2<T>.TryParseValueFromString
-  nameWithType.vb: InputComponentMD2(Of T).TryParseValueFromString
-- uid: Material.Blazor.Internal.MD2.InputComponentMD2`1.Value
-  name: Value
-  href: api/Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_Value
-  commentId: P:Material.Blazor.Internal.MD2.InputComponentMD2`1.Value
-  fullName: Material.Blazor.Internal.MD2.InputComponentMD2<T>.Value
-  fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T).Value
-  nameWithType: InputComponentMD2<T>.Value
-  nameWithType.vb: InputComponentMD2(Of T).Value
-- uid: Material.Blazor.Internal.MD2.InputComponentMD2`1.Value*
-  name: Value
-  href: api/Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_Value_
-  commentId: Overload:Material.Blazor.Internal.MD2.InputComponentMD2`1.Value
-  fullName: Material.Blazor.Internal.MD2.InputComponentMD2<T>.Value
-  fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T).Value
-  nameWithType: InputComponentMD2<T>.Value
-  nameWithType.vb: InputComponentMD2(Of T).Value
-- uid: Material.Blazor.Internal.MD2.InputComponentMD2`1.ValueChanged
-  name: ValueChanged
-  href: api/Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_ValueChanged
-  commentId: P:Material.Blazor.Internal.MD2.InputComponentMD2`1.ValueChanged
-  fullName: Material.Blazor.Internal.MD2.InputComponentMD2<T>.ValueChanged
-  fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T).ValueChanged
-  nameWithType: InputComponentMD2<T>.ValueChanged
-  nameWithType.vb: InputComponentMD2(Of T).ValueChanged
-- uid: Material.Blazor.Internal.MD2.InputComponentMD2`1.ValueChanged*
-  name: ValueChanged
-  href: api/Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_ValueChanged_
-  commentId: Overload:Material.Blazor.Internal.MD2.InputComponentMD2`1.ValueChanged
-  fullName: Material.Blazor.Internal.MD2.InputComponentMD2<T>.ValueChanged
-  fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T).ValueChanged
-  nameWithType: InputComponentMD2<T>.ValueChanged
-  nameWithType.vb: InputComponentMD2(Of T).ValueChanged
-- uid: Material.Blazor.Internal.MD2.InputComponentMD2`1.ValueExpression
-  name: ValueExpression
-  href: api/Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_ValueExpression
-  commentId: P:Material.Blazor.Internal.MD2.InputComponentMD2`1.ValueExpression
-  fullName: Material.Blazor.Internal.MD2.InputComponentMD2<T>.ValueExpression
-  fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T).ValueExpression
-  nameWithType: InputComponentMD2<T>.ValueExpression
-  nameWithType.vb: InputComponentMD2(Of T).ValueExpression
-- uid: Material.Blazor.Internal.MD2.InputComponentMD2`1.ValueExpression*
-  name: ValueExpression
-  href: api/Material.Blazor.Internal.MD2.InputComponentMD2-1.html#Material_Blazor_Internal_MD2_InputComponentMD2_1_ValueExpression_
-  commentId: Overload:Material.Blazor.Internal.MD2.InputComponentMD2`1.ValueExpression
-  fullName: Material.Blazor.Internal.MD2.InputComponentMD2<T>.ValueExpression
-  fullName.vb: Material.Blazor.Internal.MD2.InputComponentMD2(Of T).ValueExpression
-  nameWithType: InputComponentMD2<T>.ValueExpression
-  nameWithType.vb: InputComponentMD2(Of T).ValueExpression
-- uid: Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2
-  name: MultiSelectComponentMD2<T, TListElement>
-  href: api/Material.Blazor.Internal.MD2.MultiSelectComponentMD2-2.html
-  commentId: T:Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2
-  name.vb: MultiSelectComponentMD2(Of T, TListElement)
-  fullName: Material.Blazor.Internal.MD2.MultiSelectComponentMD2<T, TListElement>
-  fullName.vb: Material.Blazor.Internal.MD2.MultiSelectComponentMD2(Of T, TListElement)
-  nameWithType: MultiSelectComponentMD2<T, TListElement>
-  nameWithType.vb: MultiSelectComponentMD2(Of T, TListElement)
-- uid: Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.#ctor
-  name: MultiSelectComponentMD2()
-  href: api/Material.Blazor.Internal.MD2.MultiSelectComponentMD2-2.html#Material_Blazor_Internal_MD2_MultiSelectComponentMD2_2__ctor
-  commentId: M:Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.#ctor
-  name.vb: New()
-  fullName: Material.Blazor.Internal.MD2.MultiSelectComponentMD2<T, TListElement>.MultiSelectComponentMD2()
-  fullName.vb: Material.Blazor.Internal.MD2.MultiSelectComponentMD2(Of T, TListElement).New()
-  nameWithType: MultiSelectComponentMD2<T, TListElement>.MultiSelectComponentMD2()
-  nameWithType.vb: MultiSelectComponentMD2(Of T, TListElement).New()
-- uid: Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.#ctor*
-  name: MultiSelectComponentMD2
-  href: api/Material.Blazor.Internal.MD2.MultiSelectComponentMD2-2.html#Material_Blazor_Internal_MD2_MultiSelectComponentMD2_2__ctor_
-  commentId: Overload:Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.#ctor
-  name.vb: New
-  fullName: Material.Blazor.Internal.MD2.MultiSelectComponentMD2<T, TListElement>.MultiSelectComponentMD2
-  fullName.vb: Material.Blazor.Internal.MD2.MultiSelectComponentMD2(Of T, TListElement).New
-  nameWithType: MultiSelectComponentMD2<T, TListElement>.MultiSelectComponentMD2
-  nameWithType.vb: MultiSelectComponentMD2(Of T, TListElement).New
-- uid: Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.GetKeysFunc
-  name: GetKeysFunc
-  href: api/Material.Blazor.Internal.MD2.MultiSelectComponentMD2-2.html#Material_Blazor_Internal_MD2_MultiSelectComponentMD2_2_GetKeysFunc
-  commentId: P:Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.GetKeysFunc
-  fullName: Material.Blazor.Internal.MD2.MultiSelectComponentMD2<T, TListElement>.GetKeysFunc
-  fullName.vb: Material.Blazor.Internal.MD2.MultiSelectComponentMD2(Of T, TListElement).GetKeysFunc
-  nameWithType: MultiSelectComponentMD2<T, TListElement>.GetKeysFunc
-  nameWithType.vb: MultiSelectComponentMD2(Of T, TListElement).GetKeysFunc
-- uid: Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.GetKeysFunc*
-  name: GetKeysFunc
-  href: api/Material.Blazor.Internal.MD2.MultiSelectComponentMD2-2.html#Material_Blazor_Internal_MD2_MultiSelectComponentMD2_2_GetKeysFunc_
-  commentId: Overload:Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.GetKeysFunc
-  fullName: Material.Blazor.Internal.MD2.MultiSelectComponentMD2<T, TListElement>.GetKeysFunc
-  fullName.vb: Material.Blazor.Internal.MD2.MultiSelectComponentMD2(Of T, TListElement).GetKeysFunc
-  nameWithType: MultiSelectComponentMD2<T, TListElement>.GetKeysFunc
-  nameWithType.vb: MultiSelectComponentMD2(Of T, TListElement).GetKeysFunc
-- uid: Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.Items
-  name: Items
-  href: api/Material.Blazor.Internal.MD2.MultiSelectComponentMD2-2.html#Material_Blazor_Internal_MD2_MultiSelectComponentMD2_2_Items
-  commentId: P:Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.Items
-  fullName: Material.Blazor.Internal.MD2.MultiSelectComponentMD2<T, TListElement>.Items
-  fullName.vb: Material.Blazor.Internal.MD2.MultiSelectComponentMD2(Of T, TListElement).Items
-  nameWithType: MultiSelectComponentMD2<T, TListElement>.Items
-  nameWithType.vb: MultiSelectComponentMD2(Of T, TListElement).Items
-- uid: Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.Items*
-  name: Items
-  href: api/Material.Blazor.Internal.MD2.MultiSelectComponentMD2-2.html#Material_Blazor_Internal_MD2_MultiSelectComponentMD2_2_Items_
-  commentId: Overload:Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.Items
-  fullName: Material.Blazor.Internal.MD2.MultiSelectComponentMD2<T, TListElement>.Items
-  fullName.vb: Material.Blazor.Internal.MD2.MultiSelectComponentMD2(Of T, TListElement).Items
-  nameWithType: MultiSelectComponentMD2<T, TListElement>.Items
-  nameWithType.vb: MultiSelectComponentMD2(Of T, TListElement).Items
-- uid: Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.OnParametersSetAsync
-  name: OnParametersSetAsync()
-  href: api/Material.Blazor.Internal.MD2.MultiSelectComponentMD2-2.html#Material_Blazor_Internal_MD2_MultiSelectComponentMD2_2_OnParametersSetAsync
-  commentId: M:Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.OnParametersSetAsync
-  fullName: Material.Blazor.Internal.MD2.MultiSelectComponentMD2<T, TListElement>.OnParametersSetAsync()
-  fullName.vb: Material.Blazor.Internal.MD2.MultiSelectComponentMD2(Of T, TListElement).OnParametersSetAsync()
-  nameWithType: MultiSelectComponentMD2<T, TListElement>.OnParametersSetAsync()
-  nameWithType.vb: MultiSelectComponentMD2(Of T, TListElement).OnParametersSetAsync()
-- uid: Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.OnParametersSetAsync*
-  name: OnParametersSetAsync
-  href: api/Material.Blazor.Internal.MD2.MultiSelectComponentMD2-2.html#Material_Blazor_Internal_MD2_MultiSelectComponentMD2_2_OnParametersSetAsync_
-  commentId: Overload:Material.Blazor.Internal.MD2.MultiSelectComponentMD2`2.OnParametersSetAsync
-  fullName: Material.Blazor.Internal.MD2.MultiSelectComponentMD2<T, TListElement>.OnParametersSetAsync
-  fullName.vb: Material.Blazor.Internal.MD2.MultiSelectComponentMD2(Of T, TListElement).OnParametersSetAsync
-  nameWithType: MultiSelectComponentMD2<T, TListElement>.OnParametersSetAsync
-  nameWithType.vb: MultiSelectComponentMD2(Of T, TListElement).OnParametersSetAsync
-- uid: Material.Blazor.Internal.MD2.SingleSelectComponentMD2`2
-  name: SingleSelectComponentMD2<T, TListElement>
-  href: api/Material.Blazor.Internal.MD2.SingleSelectComponentMD2-2.html
-  commentId: T:Material.Blazor.Internal.MD2.SingleSelectComponentMD2`2
-  name.vb: SingleSelectComponentMD2(Of T, TListElement)
-  fullName: Material.Blazor.Internal.MD2.SingleSelectComponentMD2<T, TListElement>
-  fullName.vb: Material.Blazor.Internal.MD2.SingleSelectComponentMD2(Of T, TListElement)
-  nameWithType: SingleSelectComponentMD2<T, TListElement>
-  nameWithType.vb: SingleSelectComponentMD2(Of T, TListElement)
-- uid: Material.Blazor.Internal.MD2.SingleSelectComponentMD2`2.#ctor
-  name: SingleSelectComponentMD2()
-  href: api/Material.Blazor.Internal.MD2.SingleSelectComponentMD2-2.html#Material_Blazor_Internal_MD2_SingleSelectComponentMD2_2__ctor
-  commentId: M:Material.Blazor.Internal.MD2.SingleSelectComponentMD2`2.#ctor
-  name.vb: New()
-  fullName: Material.Blazor.Internal.MD2.SingleSelectComponentMD2<T, TListElement>.SingleSelectComponentMD2()
-  fullName.vb: Material.Blazor.Internal.MD2.SingleSelectComponentMD2(Of T, TListElement).New()
-  nameWithType: SingleSelectComponentMD2<T, TListElement>.SingleSelectComponentMD2()
-  nameWithType.vb: SingleSelectComponentMD2(Of T, TListElement).New()
-- uid: Material.Blazor.Internal.MD2.SingleSelectComponentMD2`2.#ctor*
-  name: SingleSelectComponentMD2
-  href: api/Material.Blazor.Internal.MD2.SingleSelectComponentMD2-2.html#Material_Blazor_Internal_MD2_SingleSelectComponentMD2_2__ctor_
-  commentId: Overload:Material.Blazor.Internal.MD2.SingleSelectComponentMD2`2.#ctor
-  name.vb: New
-  fullName: Material.Blazor.Internal.MD2.SingleSelectComponentMD2<T, TListElement>.SingleSelectComponentMD2
-  fullName.vb: Material.Blazor.Internal.MD2.SingleSelectComponentMD2(Of T, TListElement).New
-  nameWithType: SingleSelectComponentMD2<T, TListElement>.SingleSelectComponentMD2
-  nameWithType.vb: SingleSelectComponentMD2(Of T, TListElement).New
-- uid: Material.Blazor.Internal.MD2.SingleSelectComponentMD2`2.GetKeysFunc
-  name: GetKeysFunc
-  href: api/Material.Blazor.Internal.MD2.SingleSelectComponentMD2-2.html#Material_Blazor_Internal_MD2_SingleSelectComponentMD2_2_GetKeysFunc
-  commentId: P:Material.Blazor.Internal.MD2.SingleSelectComponentMD2`2.GetKeysFunc
-  fullName: Material.Blazor.Internal.MD2.SingleSelectComponentMD2<T, TListElement>.GetKeysFunc
-  fullName.vb: Material.Blazor.Internal.MD2.SingleSelectComponentMD2(Of T, TListElement).GetKeysFunc
-  nameWithType: SingleSelectComponentMD2<T, TListElement>.GetKeysFunc
-  nameWithType.vb: SingleSelectComponentMD2(Of T, TListElement).GetKeysFunc
-- uid: Material.Blazor.Internal.MD2.SingleSelectComponentMD2`2.GetKeysFunc*
-  name: GetKeysFunc
-  href: api/Material.Blazor.Internal.MD2.SingleSelectComponentMD2-2.html#Material_Blazor_Internal_MD2_SingleSelectComponentMD2_2_GetKeysFunc_
-  commentId: Overload:Material.Blazor.Internal.MD2.SingleSelectComponentMD2`2.GetKeysFunc
-  fullName: Material.Blazor.Internal.MD2.SingleSelectComponentMD2<T, TListElement>.GetKeysFunc
-  fullName.vb: Material.Blazor.Internal.MD2.SingleSelectComponentMD2(Of T, TListElement).GetKeysFunc
-  nameWithType: SingleSelectComponentMD2<T, TListElement>.GetKeysFunc
-  nameWithType.vb: SingleSelectComponentMD2(Of T, TListElement).GetKeysFunc
-- uid: Material.Blazor.Internal.MD2.SingleSelectComponentMD2`2.ItemValidation
-  name: ItemValidation
-  href: api/Material.Blazor.Internal.MD2.SingleSelectComponentMD2-2.html#Material_Blazor_Internal_MD2_SingleSelectComponentMD2_2_ItemValidation
-  commentId: P:Material.Blazor.Internal.MD2.SingleSelectComponentMD2`2.ItemValidation
-  fullName: Material.Blazor.Internal.MD2.SingleSelectComponentMD2<T, TListElement>.ItemValidation
-  fullName.vb: Material.Blazor.Internal.MD2.SingleSelectComponentMD2(Of T, TListElement).ItemValidation
-  nameWithType: SingleSelectComponentMD2<T, TListElement>.ItemValidation
-  nameWithType.vb: SingleSelectComponentMD2(Of T, TListElement).ItemValidation
-- uid: Material.Blazor.Internal.MD2.SingleSelectComponentMD2`2.ItemValidation*
-  name: ItemValidation
-  href: api/Material.Blazor.Internal.MD2.SingleSelectComponentMD2-2.html#Material_Blazor_Internal_MD2_SingleSelectComponentMD2_2_ItemValidation_
-  commentId: Overload:Material.Blazor.Internal.MD2.SingleSelectComponentMD2`2.ItemValidation
-  fullName: Material.Blazor.Internal.MD2.SingleSelectComponentMD2<T, TListElement>.ItemValidation
-  fullName.vb: Material.Blazor.Internal.MD2.SingleSelectComponentMD2(Of T, TListElement).ItemValidation
-  nameWithType: SingleSelectComponentMD2<T, TListElement>.ItemValidation
-  nameWithType.vb: SingleSelectComponentMD2(Of T, TListElement).ItemValidation
-- uid: Material.Blazor.Internal.MD2.SingleSelectComponentMD2`2.Items
-  name: Items
-  href: api/Material.Blazor.Internal.MD2.SingleSelectComponentMD2-2.html#Material_Blazor_Internal_MD2_SingleSelectComponentMD2_2_Items
-  commentId: P:Material.Blazor.Internal.MD2.SingleSelectComponentMD2`2.Items
-  fullName: Material.Blazor.Internal.MD2.SingleSelectComponentMD2<T, TListElement>.Items
-  fullName.vb: Material.Blazor.Internal.MD2.SingleSelectComponentMD2(Of T, TListElement).Items
-  nameWithType: SingleSelectComponentMD2<T, TListElement>.Items
-  nameWithType.vb: SingleSelectComponentMD2(Of T, TListElement).Items
-- uid: Material.Blazor.Internal.MD2.SingleSelectComponentMD2`2.Items*
-  name: Items
-  href: api/Material.Blazor.Internal.MD2.SingleSelectComponentMD2-2.html#Material_Blazor_Internal_MD2_SingleSelectComponentMD2_2_Items_
-  commentId: Overload:Material.Blazor.Internal.MD2.SingleSelectComponentMD2`2.Items
-  fullName: Material.Blazor.Internal.MD2.SingleSelectComponentMD2<T, TListElement>.Items
-  fullName.vb: Material.Blazor.Internal.MD2.SingleSelectComponentMD2(Of T, TListElement).Items
-  nameWithType: SingleSelectComponentMD2<T, TListElement>.Items
-  nameWithType.vb: SingleSelectComponentMD2(Of T, TListElement).Items
-- uid: Material.Blazor.Internal.MD2.SingleSelectComponentMD2`2.OnParametersSetAsync
-  name: OnParametersSetAsync()
-  href: api/Material.Blazor.Internal.MD2.SingleSelectComponentMD2-2.html#Material_Blazor_Internal_MD2_SingleSelectComponentMD2_2_OnParametersSetAsync
-  commentId: M:Material.Blazor.Internal.MD2.SingleSelectComponentMD2`2.OnParametersSetAsync
-  fullName: Material.Blazor.Internal.MD2.SingleSelectComponentMD2<T, TListElement>.OnParametersSetAsync()
-  fullName.vb: Material.Blazor.Internal.MD2.SingleSelectComponentMD2(Of T, TListElement).OnParametersSetAsync()
-  nameWithType: SingleSelectComponentMD2<T, TListElement>.OnParametersSetAsync()
-  nameWithType.vb: SingleSelectComponentMD2(Of T, TListElement).OnParametersSetAsync()
-- uid: Material.Blazor.Internal.MD2.SingleSelectComponentMD2`2.OnParametersSetAsync*
-  name: OnParametersSetAsync
-  href: api/Material.Blazor.Internal.MD2.SingleSelectComponentMD2-2.html#Material_Blazor_Internal_MD2_SingleSelectComponentMD2_2_OnParametersSetAsync_
-  commentId: Overload:Material.Blazor.Internal.MD2.SingleSelectComponentMD2`2.OnParametersSetAsync
-  fullName: Material.Blazor.Internal.MD2.SingleSelectComponentMD2<T, TListElement>.OnParametersSetAsync
-  fullName.vb: Material.Blazor.Internal.MD2.SingleSelectComponentMD2(Of T, TListElement).OnParametersSetAsync
-  nameWithType: SingleSelectComponentMD2<T, TListElement>.OnParametersSetAsync
-  nameWithType.vb: SingleSelectComponentMD2(Of T, TListElement).OnParametersSetAsync
-- uid: Material.Blazor.Internal.MD2.SingleSelectComponentMD2`2.ValidateItemList(System.Collections.Generic.IEnumerable{Material.Blazor.MD2.MBSelectElementMD2{`0}},Material.Blazor.MD2.MBItemValidation)
-  name: ValidateItemList(IEnumerable<MBSelectElementMD2<T>>, MBItemValidation)
-  href: api/Material.Blazor.Internal.MD2.SingleSelectComponentMD2-2.html#Material_Blazor_Internal_MD2_SingleSelectComponentMD2_2_ValidateItemList_System_Collections_Generic_IEnumerable_Material_Blazor_MD2_MBSelectElementMD2__0___Material_Blazor_MD2_MBItemValidation_
-  commentId: M:Material.Blazor.Internal.MD2.SingleSelectComponentMD2`2.ValidateItemList(System.Collections.Generic.IEnumerable{Material.Blazor.MD2.MBSelectElementMD2{`0}},Material.Blazor.MD2.MBItemValidation)
-  name.vb: ValidateItemList(IEnumerable(Of MBSelectElementMD2(Of T)), MBItemValidation)
-  fullName: Material.Blazor.Internal.MD2.SingleSelectComponentMD2<T, TListElement>.ValidateItemList(System.Collections.Generic.IEnumerable<Material.Blazor.MD2.MBSelectElementMD2<T>>, Material.Blazor.MD2.MBItemValidation)
-  fullName.vb: Material.Blazor.Internal.MD2.SingleSelectComponentMD2(Of T, TListElement).ValidateItemList(System.Collections.Generic.IEnumerable(Of Material.Blazor.MD2.MBSelectElementMD2(Of T)), Material.Blazor.MD2.MBItemValidation)
-  nameWithType: SingleSelectComponentMD2<T, TListElement>.ValidateItemList(IEnumerable<MBSelectElementMD2<T>>, MBItemValidation)
-  nameWithType.vb: SingleSelectComponentMD2(Of T, TListElement).ValidateItemList(IEnumerable(Of MBSelectElementMD2(Of T)), MBItemValidation)
-- uid: Material.Blazor.Internal.MD2.SingleSelectComponentMD2`2.ValidateItemList*
-  name: ValidateItemList
-  href: api/Material.Blazor.Internal.MD2.SingleSelectComponentMD2-2.html#Material_Blazor_Internal_MD2_SingleSelectComponentMD2_2_ValidateItemList_
-  commentId: Overload:Material.Blazor.Internal.MD2.SingleSelectComponentMD2`2.ValidateItemList
-  fullName: Material.Blazor.Internal.MD2.SingleSelectComponentMD2<T, TListElement>.ValidateItemList
-  fullName.vb: Material.Blazor.Internal.MD2.SingleSelectComponentMD2(Of T, TListElement).ValidateItemList
-  nameWithType: SingleSelectComponentMD2<T, TListElement>.ValidateItemList
-  nameWithType.vb: SingleSelectComponentMD2(Of T, TListElement).ValidateItemList
 - uid: Material.Blazor.Internal.SingleSelectComponent`2
   name: SingleSelectComponent<T, TListElement>
   href: api/Material.Blazor.Internal.SingleSelectComponent-2.html
@@ -2964,36 +2368,54 @@ references:
   commentId: F:Material.Blazor.MBBadgeStyle.ValueBearing
   fullName: Material.Blazor.MBBadgeStyle.ValueBearing
   nameWithType: MBBadgeStyle.ValueBearing
-- uid: Material.Blazor.MBButtonStyle
-  name: MBButtonStyle
-  href: api/Material.Blazor.MBButtonStyle.html
-  commentId: T:Material.Blazor.MBButtonStyle
-  fullName: Material.Blazor.MBButtonStyle
-  nameWithType: MBButtonStyle
-- uid: Material.Blazor.MBButtonStyle.ContainedRaised
+- uid: Material.Blazor.MBButtonStyleMD2
+  name: MBButtonStyleMD2
+  href: api/Material.Blazor.MBButtonStyleMD2.html
+  commentId: T:Material.Blazor.MBButtonStyleMD2
+  fullName: Material.Blazor.MBButtonStyleMD2
+  nameWithType: MBButtonStyleMD2
+- uid: Material.Blazor.MBButtonStyleMD2.ContainedRaised
   name: ContainedRaised
-  href: api/Material.Blazor.MBButtonStyle.html#Material_Blazor_MBButtonStyle_ContainedRaised
-  commentId: F:Material.Blazor.MBButtonStyle.ContainedRaised
-  fullName: Material.Blazor.MBButtonStyle.ContainedRaised
-  nameWithType: MBButtonStyle.ContainedRaised
-- uid: Material.Blazor.MBButtonStyle.ContainedUnelevated
+  href: api/Material.Blazor.MBButtonStyleMD2.html#Material_Blazor_MBButtonStyleMD2_ContainedRaised
+  commentId: F:Material.Blazor.MBButtonStyleMD2.ContainedRaised
+  fullName: Material.Blazor.MBButtonStyleMD2.ContainedRaised
+  nameWithType: MBButtonStyleMD2.ContainedRaised
+- uid: Material.Blazor.MBButtonStyleMD2.ContainedUnelevated
   name: ContainedUnelevated
-  href: api/Material.Blazor.MBButtonStyle.html#Material_Blazor_MBButtonStyle_ContainedUnelevated
-  commentId: F:Material.Blazor.MBButtonStyle.ContainedUnelevated
-  fullName: Material.Blazor.MBButtonStyle.ContainedUnelevated
-  nameWithType: MBButtonStyle.ContainedUnelevated
-- uid: Material.Blazor.MBButtonStyle.Outlined
+  href: api/Material.Blazor.MBButtonStyleMD2.html#Material_Blazor_MBButtonStyleMD2_ContainedUnelevated
+  commentId: F:Material.Blazor.MBButtonStyleMD2.ContainedUnelevated
+  fullName: Material.Blazor.MBButtonStyleMD2.ContainedUnelevated
+  nameWithType: MBButtonStyleMD2.ContainedUnelevated
+- uid: Material.Blazor.MBButtonStyleMD2.Outlined
   name: Outlined
-  href: api/Material.Blazor.MBButtonStyle.html#Material_Blazor_MBButtonStyle_Outlined
-  commentId: F:Material.Blazor.MBButtonStyle.Outlined
-  fullName: Material.Blazor.MBButtonStyle.Outlined
-  nameWithType: MBButtonStyle.Outlined
-- uid: Material.Blazor.MBButtonStyle.Text
+  href: api/Material.Blazor.MBButtonStyleMD2.html#Material_Blazor_MBButtonStyleMD2_Outlined
+  commentId: F:Material.Blazor.MBButtonStyleMD2.Outlined
+  fullName: Material.Blazor.MBButtonStyleMD2.Outlined
+  nameWithType: MBButtonStyleMD2.Outlined
+- uid: Material.Blazor.MBButtonStyleMD2.Text
   name: Text
-  href: api/Material.Blazor.MBButtonStyle.html#Material_Blazor_MBButtonStyle_Text
-  commentId: F:Material.Blazor.MBButtonStyle.Text
-  fullName: Material.Blazor.MBButtonStyle.Text
-  nameWithType: MBButtonStyle.Text
+  href: api/Material.Blazor.MBButtonStyleMD2.html#Material_Blazor_MBButtonStyleMD2_Text
+  commentId: F:Material.Blazor.MBButtonStyleMD2.Text
+  fullName: Material.Blazor.MBButtonStyleMD2.Text
+  nameWithType: MBButtonStyleMD2.Text
+- uid: Material.Blazor.MBCardStyleMD2
+  name: MBCardStyleMD2
+  href: api/Material.Blazor.MBCardStyleMD2.html
+  commentId: T:Material.Blazor.MBCardStyleMD2
+  fullName: Material.Blazor.MBCardStyleMD2
+  nameWithType: MBCardStyleMD2
+- uid: Material.Blazor.MBCardStyleMD2.Default
+  name: Default
+  href: api/Material.Blazor.MBCardStyleMD2.html#Material_Blazor_MBCardStyleMD2_Default
+  commentId: F:Material.Blazor.MBCardStyleMD2.Default
+  fullName: Material.Blazor.MBCardStyleMD2.Default
+  nameWithType: MBCardStyleMD2.Default
+- uid: Material.Blazor.MBCardStyleMD2.Outlined
+  name: Outlined
+  href: api/Material.Blazor.MBCardStyleMD2.html#Material_Blazor_MBCardStyleMD2_Outlined
+  commentId: F:Material.Blazor.MBCardStyleMD2.Outlined
+  fullName: Material.Blazor.MBCardStyleMD2.Outlined
+  nameWithType: MBCardStyleMD2.Outlined
 - uid: Material.Blazor.MBCascadingDefaults
   name: MBCascadingDefaults
   href: api/Material.Blazor.MBCascadingDefaults.html
@@ -3858,6 +3280,30 @@ references:
   commentId: F:Material.Blazor.MBIconWeight.W700
   fullName: Material.Blazor.MBIconWeight.W700
   nameWithType: MBIconWeight.W700
+- uid: Material.Blazor.MBInputEventTypeMD2
+  name: MBInputEventTypeMD2
+  href: api/Material.Blazor.MBInputEventTypeMD2.html
+  commentId: T:Material.Blazor.MBInputEventTypeMD2
+  fullName: Material.Blazor.MBInputEventTypeMD2
+  nameWithType: MBInputEventTypeMD2
+- uid: Material.Blazor.MBInputEventTypeMD2.OnChange
+  name: OnChange
+  href: api/Material.Blazor.MBInputEventTypeMD2.html#Material_Blazor_MBInputEventTypeMD2_OnChange
+  commentId: F:Material.Blazor.MBInputEventTypeMD2.OnChange
+  fullName: Material.Blazor.MBInputEventTypeMD2.OnChange
+  nameWithType: MBInputEventTypeMD2.OnChange
+- uid: Material.Blazor.MBInputEventTypeMD2.OnInputDebounced
+  name: OnInputDebounced
+  href: api/Material.Blazor.MBInputEventTypeMD2.html#Material_Blazor_MBInputEventTypeMD2_OnInputDebounced
+  commentId: F:Material.Blazor.MBInputEventTypeMD2.OnInputDebounced
+  fullName: Material.Blazor.MBInputEventTypeMD2.OnInputDebounced
+  nameWithType: MBInputEventTypeMD2.OnInputDebounced
+- uid: Material.Blazor.MBInputEventTypeMD2.OnInputThrottled
+  name: OnInputThrottled
+  href: api/Material.Blazor.MBInputEventTypeMD2.html#Material_Blazor_MBInputEventTypeMD2_OnInputThrottled
+  commentId: F:Material.Blazor.MBInputEventTypeMD2.OnInputThrottled
+  fullName: Material.Blazor.MBInputEventTypeMD2.OnInputThrottled
+  nameWithType: MBInputEventTypeMD2.OnInputThrottled
 - uid: Material.Blazor.MBItemValidation
   name: MBItemValidation
   href: api/Material.Blazor.MBItemValidation.html
@@ -3996,6 +3442,30 @@ references:
   commentId: Overload:Material.Blazor.MBLoggingServiceConfiguration.LoggingLevel
   fullName: Material.Blazor.MBLoggingServiceConfiguration.LoggingLevel
   nameWithType: MBLoggingServiceConfiguration.LoggingLevel
+- uid: Material.Blazor.MBMenuSurfacePositioningMD2
+  name: MBMenuSurfacePositioningMD2
+  href: api/Material.Blazor.MBMenuSurfacePositioningMD2.html
+  commentId: T:Material.Blazor.MBMenuSurfacePositioningMD2
+  fullName: Material.Blazor.MBMenuSurfacePositioningMD2
+  nameWithType: MBMenuSurfacePositioningMD2
+- uid: Material.Blazor.MBMenuSurfacePositioningMD2.Fixed
+  name: Fixed
+  href: api/Material.Blazor.MBMenuSurfacePositioningMD2.html#Material_Blazor_MBMenuSurfacePositioningMD2_Fixed
+  commentId: F:Material.Blazor.MBMenuSurfacePositioningMD2.Fixed
+  fullName: Material.Blazor.MBMenuSurfacePositioningMD2.Fixed
+  nameWithType: MBMenuSurfacePositioningMD2.Fixed
+- uid: Material.Blazor.MBMenuSurfacePositioningMD2.FullWidth
+  name: FullWidth
+  href: api/Material.Blazor.MBMenuSurfacePositioningMD2.html#Material_Blazor_MBMenuSurfacePositioningMD2_FullWidth
+  commentId: F:Material.Blazor.MBMenuSurfacePositioningMD2.FullWidth
+  fullName: Material.Blazor.MBMenuSurfacePositioningMD2.FullWidth
+  nameWithType: MBMenuSurfacePositioningMD2.FullWidth
+- uid: Material.Blazor.MBMenuSurfacePositioningMD2.Regular
+  name: Regular
+  href: api/Material.Blazor.MBMenuSurfacePositioningMD2.html#Material_Blazor_MBMenuSurfacePositioningMD2_Regular
+  commentId: F:Material.Blazor.MBMenuSurfacePositioningMD2.Regular
+  fullName: Material.Blazor.MBMenuSurfacePositioningMD2.Regular
+  nameWithType: MBMenuSurfacePositioningMD2.Regular
 - uid: Material.Blazor.MBNotifierCloseMethod
   name: MBNotifierCloseMethod
   href: api/Material.Blazor.MBNotifierCloseMethod.html
@@ -4834,6 +4304,24 @@ references:
   fullName.vb: Material.Blazor.MBSelectElement(Of T).<Clone>$
   nameWithType: MBSelectElement<T>.<Clone>$
   nameWithType.vb: MBSelectElement(Of T).<Clone>$
+- uid: Material.Blazor.MBSelectInputStyleMD2
+  name: MBSelectInputStyleMD2
+  href: api/Material.Blazor.MBSelectInputStyleMD2.html
+  commentId: T:Material.Blazor.MBSelectInputStyleMD2
+  fullName: Material.Blazor.MBSelectInputStyleMD2
+  nameWithType: MBSelectInputStyleMD2
+- uid: Material.Blazor.MBSelectInputStyleMD2.Filled
+  name: Filled
+  href: api/Material.Blazor.MBSelectInputStyleMD2.html#Material_Blazor_MBSelectInputStyleMD2_Filled
+  commentId: F:Material.Blazor.MBSelectInputStyleMD2.Filled
+  fullName: Material.Blazor.MBSelectInputStyleMD2.Filled
+  nameWithType: MBSelectInputStyleMD2.Filled
+- uid: Material.Blazor.MBSelectInputStyleMD2.Outlined
+  name: Outlined
+  href: api/Material.Blazor.MBSelectInputStyleMD2.html#Material_Blazor_MBSelectInputStyleMD2_Outlined
+  commentId: F:Material.Blazor.MBSelectInputStyleMD2.Outlined
+  fullName: Material.Blazor.MBSelectInputStyleMD2.Outlined
+  nameWithType: MBSelectInputStyleMD2.Outlined
 - uid: Material.Blazor.MBServicesOptions
   name: MBServicesOptions
   href: api/Material.Blazor.MBServicesOptions.html
@@ -4882,6 +4370,30 @@ references:
   commentId: Overload:Material.Blazor.MBServicesOptions.ToastServiceConfiguration
   fullName: Material.Blazor.MBServicesOptions.ToastServiceConfiguration
   nameWithType: MBServicesOptions.ToastServiceConfiguration
+- uid: Material.Blazor.MBSliderTypeMD2
+  name: MBSliderTypeMD2
+  href: api/Material.Blazor.MBSliderTypeMD2.html
+  commentId: T:Material.Blazor.MBSliderTypeMD2
+  fullName: Material.Blazor.MBSliderTypeMD2
+  nameWithType: MBSliderTypeMD2
+- uid: Material.Blazor.MBSliderTypeMD2.Continuous
+  name: Continuous
+  href: api/Material.Blazor.MBSliderTypeMD2.html#Material_Blazor_MBSliderTypeMD2_Continuous
+  commentId: F:Material.Blazor.MBSliderTypeMD2.Continuous
+  fullName: Material.Blazor.MBSliderTypeMD2.Continuous
+  nameWithType: MBSliderTypeMD2.Continuous
+- uid: Material.Blazor.MBSliderTypeMD2.Discrete
+  name: Discrete
+  href: api/Material.Blazor.MBSliderTypeMD2.html#Material_Blazor_MBSliderTypeMD2_Discrete
+  commentId: F:Material.Blazor.MBSliderTypeMD2.Discrete
+  fullName: Material.Blazor.MBSliderTypeMD2.Discrete
+  nameWithType: MBSliderTypeMD2.Discrete
+- uid: Material.Blazor.MBSliderTypeMD2.DiscreteWithTickmarks
+  name: DiscreteWithTickmarks
+  href: api/Material.Blazor.MBSliderTypeMD2.html#Material_Blazor_MBSliderTypeMD2_DiscreteWithTickmarks
+  commentId: F:Material.Blazor.MBSliderTypeMD2.DiscreteWithTickmarks
+  fullName: Material.Blazor.MBSliderTypeMD2.DiscreteWithTickmarks
+  nameWithType: MBSliderTypeMD2.DiscreteWithTickmarks
 - uid: Material.Blazor.MBSwitch
   name: MBSwitch
   href: api/Material.Blazor.MBSwitch.html
@@ -5554,6 +5066,48 @@ references:
   commentId: Overload:Material.Blazor.MBToastSettings.Timeout
   fullName: Material.Blazor.MBToastSettings.Timeout
   nameWithType: MBToastSettings.Timeout
+- uid: Material.Blazor.MBTopAppBarTypeMD2
+  name: MBTopAppBarTypeMD2
+  href: api/Material.Blazor.MBTopAppBarTypeMD2.html
+  commentId: T:Material.Blazor.MBTopAppBarTypeMD2
+  fullName: Material.Blazor.MBTopAppBarTypeMD2
+  nameWithType: MBTopAppBarTypeMD2
+- uid: Material.Blazor.MBTopAppBarTypeMD2.Dense
+  name: Dense
+  href: api/Material.Blazor.MBTopAppBarTypeMD2.html#Material_Blazor_MBTopAppBarTypeMD2_Dense
+  commentId: F:Material.Blazor.MBTopAppBarTypeMD2.Dense
+  fullName: Material.Blazor.MBTopAppBarTypeMD2.Dense
+  nameWithType: MBTopAppBarTypeMD2.Dense
+- uid: Material.Blazor.MBTopAppBarTypeMD2.Fixed
+  name: Fixed
+  href: api/Material.Blazor.MBTopAppBarTypeMD2.html#Material_Blazor_MBTopAppBarTypeMD2_Fixed
+  commentId: F:Material.Blazor.MBTopAppBarTypeMD2.Fixed
+  fullName: Material.Blazor.MBTopAppBarTypeMD2.Fixed
+  nameWithType: MBTopAppBarTypeMD2.Fixed
+- uid: Material.Blazor.MBTopAppBarTypeMD2.Prominent
+  name: Prominent
+  href: api/Material.Blazor.MBTopAppBarTypeMD2.html#Material_Blazor_MBTopAppBarTypeMD2_Prominent
+  commentId: F:Material.Blazor.MBTopAppBarTypeMD2.Prominent
+  fullName: Material.Blazor.MBTopAppBarTypeMD2.Prominent
+  nameWithType: MBTopAppBarTypeMD2.Prominent
+- uid: Material.Blazor.MBTopAppBarTypeMD2.Short
+  name: Short
+  href: api/Material.Blazor.MBTopAppBarTypeMD2.html#Material_Blazor_MBTopAppBarTypeMD2_Short
+  commentId: F:Material.Blazor.MBTopAppBarTypeMD2.Short
+  fullName: Material.Blazor.MBTopAppBarTypeMD2.Short
+  nameWithType: MBTopAppBarTypeMD2.Short
+- uid: Material.Blazor.MBTopAppBarTypeMD2.ShortCollapsed
+  name: ShortCollapsed
+  href: api/Material.Blazor.MBTopAppBarTypeMD2.html#Material_Blazor_MBTopAppBarTypeMD2_ShortCollapsed
+  commentId: F:Material.Blazor.MBTopAppBarTypeMD2.ShortCollapsed
+  fullName: Material.Blazor.MBTopAppBarTypeMD2.ShortCollapsed
+  nameWithType: MBTopAppBarTypeMD2.ShortCollapsed
+- uid: Material.Blazor.MBTopAppBarTypeMD2.Standard
+  name: Standard
+  href: api/Material.Blazor.MBTopAppBarTypeMD2.html#Material_Blazor_MBTopAppBarTypeMD2_Standard
+  commentId: F:Material.Blazor.MBTopAppBarTypeMD2.Standard
+  fullName: Material.Blazor.MBTopAppBarTypeMD2.Standard
+  nameWithType: MBTopAppBarTypeMD2.Standard
 - uid: Material.Blazor.MBVersion
   name: MBVersion
   href: api/Material.Blazor.MBVersion.html
@@ -5782,36 +5336,6 @@ references:
   commentId: Overload:Material.Blazor.MD2.MBButton.TrailingIcon
   fullName: Material.Blazor.MD2.MBButton.TrailingIcon
   nameWithType: MBButton.TrailingIcon
-- uid: Material.Blazor.MD2.MBButtonStyle
-  name: MBButtonStyle
-  href: api/Material.Blazor.MD2.MBButtonStyle.html
-  commentId: T:Material.Blazor.MD2.MBButtonStyle
-  fullName: Material.Blazor.MD2.MBButtonStyle
-  nameWithType: MBButtonStyle
-- uid: Material.Blazor.MD2.MBButtonStyle.ContainedRaised
-  name: ContainedRaised
-  href: api/Material.Blazor.MD2.MBButtonStyle.html#Material_Blazor_MD2_MBButtonStyle_ContainedRaised
-  commentId: F:Material.Blazor.MD2.MBButtonStyle.ContainedRaised
-  fullName: Material.Blazor.MD2.MBButtonStyle.ContainedRaised
-  nameWithType: MBButtonStyle.ContainedRaised
-- uid: Material.Blazor.MD2.MBButtonStyle.ContainedUnelevated
-  name: ContainedUnelevated
-  href: api/Material.Blazor.MD2.MBButtonStyle.html#Material_Blazor_MD2_MBButtonStyle_ContainedUnelevated
-  commentId: F:Material.Blazor.MD2.MBButtonStyle.ContainedUnelevated
-  fullName: Material.Blazor.MD2.MBButtonStyle.ContainedUnelevated
-  nameWithType: MBButtonStyle.ContainedUnelevated
-- uid: Material.Blazor.MD2.MBButtonStyle.Outlined
-  name: Outlined
-  href: api/Material.Blazor.MD2.MBButtonStyle.html#Material_Blazor_MD2_MBButtonStyle_Outlined
-  commentId: F:Material.Blazor.MD2.MBButtonStyle.Outlined
-  fullName: Material.Blazor.MD2.MBButtonStyle.Outlined
-  nameWithType: MBButtonStyle.Outlined
-- uid: Material.Blazor.MD2.MBButtonStyle.Text
-  name: Text
-  href: api/Material.Blazor.MD2.MBButtonStyle.html#Material_Blazor_MD2_MBButtonStyle_Text
-  commentId: F:Material.Blazor.MD2.MBButtonStyle.Text
-  fullName: Material.Blazor.MD2.MBButtonStyle.Text
-  nameWithType: MBButtonStyle.Text
 - uid: Material.Blazor.MD2.MBCard
   name: MBCard
   href: api/Material.Blazor.MD2.MBCard.html
@@ -5992,456 +5516,6 @@ references:
   commentId: Overload:Material.Blazor.MD2.MBCard.PrimaryActionTabIndex
   fullName: Material.Blazor.MD2.MBCard.PrimaryActionTabIndex
   nameWithType: MBCard.PrimaryActionTabIndex
-- uid: Material.Blazor.MD2.MBCardStyle
-  name: MBCardStyle
-  href: api/Material.Blazor.MD2.MBCardStyle.html
-  commentId: T:Material.Blazor.MD2.MBCardStyle
-  fullName: Material.Blazor.MD2.MBCardStyle
-  nameWithType: MBCardStyle
-- uid: Material.Blazor.MD2.MBCardStyle.Default
-  name: Default
-  href: api/Material.Blazor.MD2.MBCardStyle.html#Material_Blazor_MD2_MBCardStyle_Default
-  commentId: F:Material.Blazor.MD2.MBCardStyle.Default
-  fullName: Material.Blazor.MD2.MBCardStyle.Default
-  nameWithType: MBCardStyle.Default
-- uid: Material.Blazor.MD2.MBCardStyle.Outlined
-  name: Outlined
-  href: api/Material.Blazor.MD2.MBCardStyle.html#Material_Blazor_MD2_MBCardStyle_Outlined
-  commentId: F:Material.Blazor.MD2.MBCardStyle.Outlined
-  fullName: Material.Blazor.MD2.MBCardStyle.Outlined
-  nameWithType: MBCardStyle.Outlined
-- uid: Material.Blazor.MD2.MBCascadingDefaults
-  name: MBCascadingDefaults
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html
-  commentId: T:Material.Blazor.MD2.MBCascadingDefaults
-  fullName: Material.Blazor.MD2.MBCascadingDefaults
-  nameWithType: MBCascadingDefaults
-- uid: Material.Blazor.MD2.MBCascadingDefaults.#ctor
-  name: MBCascadingDefaults()
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults__ctor
-  commentId: M:Material.Blazor.MD2.MBCascadingDefaults.#ctor
-  name.vb: New()
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.MBCascadingDefaults()
-  fullName.vb: Material.Blazor.MD2.MBCascadingDefaults.New()
-  nameWithType: MBCascadingDefaults.MBCascadingDefaults()
-  nameWithType.vb: MBCascadingDefaults.New()
-- uid: Material.Blazor.MD2.MBCascadingDefaults.#ctor*
-  name: MBCascadingDefaults
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults__ctor_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.#ctor
-  name.vb: New
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.MBCascadingDefaults
-  fullName.vb: Material.Blazor.MD2.MBCascadingDefaults.New
-  nameWithType: MBCascadingDefaults.MBCascadingDefaults
-  nameWithType.vb: MBCascadingDefaults.New
-- uid: Material.Blazor.MD2.MBCascadingDefaults.AllowedSplattableAttributes
-  name: AllowedSplattableAttributes
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_AllowedSplattableAttributes
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.AllowedSplattableAttributes
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.AllowedSplattableAttributes
-  nameWithType: MBCascadingDefaults.AllowedSplattableAttributes
-- uid: Material.Blazor.MD2.MBCascadingDefaults.AllowedSplattableAttributes*
-  name: AllowedSplattableAttributes
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_AllowedSplattableAttributes_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.AllowedSplattableAttributes
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.AllowedSplattableAttributes
-  nameWithType: MBCascadingDefaults.AllowedSplattableAttributes
-- uid: Material.Blazor.MD2.MBCascadingDefaults.ButtonDensity
-  name: ButtonDensity
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_ButtonDensity
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.ButtonDensity
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.ButtonDensity
-  nameWithType: MBCascadingDefaults.ButtonDensity
-- uid: Material.Blazor.MD2.MBCascadingDefaults.ButtonDensity*
-  name: ButtonDensity
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_ButtonDensity_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.ButtonDensity
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.ButtonDensity
-  nameWithType: MBCascadingDefaults.ButtonDensity
-- uid: Material.Blazor.MD2.MBCascadingDefaults.ButtonStyle
-  name: ButtonStyle
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_ButtonStyle
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.ButtonStyle
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.ButtonStyle
-  nameWithType: MBCascadingDefaults.ButtonStyle
-- uid: Material.Blazor.MD2.MBCascadingDefaults.ButtonStyle*
-  name: ButtonStyle
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_ButtonStyle_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.ButtonStyle
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.ButtonStyle
-  nameWithType: MBCascadingDefaults.ButtonStyle
-- uid: Material.Blazor.MD2.MBCascadingDefaults.CardActionButtonStyle
-  name: CardActionButtonStyle
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_CardActionButtonStyle
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.CardActionButtonStyle
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.CardActionButtonStyle
-  nameWithType: MBCascadingDefaults.CardActionButtonStyle
-- uid: Material.Blazor.MD2.MBCascadingDefaults.CardActionButtonStyle*
-  name: CardActionButtonStyle
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_CardActionButtonStyle_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.CardActionButtonStyle
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.CardActionButtonStyle
-  nameWithType: MBCascadingDefaults.CardActionButtonStyle
-- uid: Material.Blazor.MD2.MBCascadingDefaults.CardStyle
-  name: CardStyle
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_CardStyle
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.CardStyle
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.CardStyle
-  nameWithType: MBCascadingDefaults.CardStyle
-- uid: Material.Blazor.MD2.MBCascadingDefaults.CardStyle*
-  name: CardStyle
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_CardStyle_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.CardStyle
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.CardStyle
-  nameWithType: MBCascadingDefaults.CardStyle
-- uid: Material.Blazor.MD2.MBCascadingDefaults.CheckboxDensity
-  name: CheckboxDensity
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_CheckboxDensity
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.CheckboxDensity
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.CheckboxDensity
-  nameWithType: MBCascadingDefaults.CheckboxDensity
-- uid: Material.Blazor.MD2.MBCascadingDefaults.CheckboxDensity*
-  name: CheckboxDensity
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_CheckboxDensity_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.CheckboxDensity
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.CheckboxDensity
-  nameWithType: MBCascadingDefaults.CheckboxDensity
-- uid: Material.Blazor.MD2.MBCascadingDefaults.ConstrainSplattableAttributes
-  name: ConstrainSplattableAttributes
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_ConstrainSplattableAttributes
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.ConstrainSplattableAttributes
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.ConstrainSplattableAttributes
-  nameWithType: MBCascadingDefaults.ConstrainSplattableAttributes
-- uid: Material.Blazor.MD2.MBCascadingDefaults.ConstrainSplattableAttributes*
-  name: ConstrainSplattableAttributes
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_ConstrainSplattableAttributes_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.ConstrainSplattableAttributes
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.ConstrainSplattableAttributes
-  nameWithType: MBCascadingDefaults.ConstrainSplattableAttributes
-- uid: Material.Blazor.MD2.MBCascadingDefaults.DataTableDensity
-  name: DataTableDensity
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_DataTableDensity
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.DataTableDensity
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.DataTableDensity
-  nameWithType: MBCascadingDefaults.DataTableDensity
-- uid: Material.Blazor.MD2.MBCascadingDefaults.DataTableDensity*
-  name: DataTableDensity
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_DataTableDensity_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.DataTableDensity
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.DataTableDensity
-  nameWithType: MBCascadingDefaults.DataTableDensity
-- uid: Material.Blazor.MD2.MBCascadingDefaults.DateFormat
-  name: DateFormat
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_DateFormat
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.DateFormat
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.DateFormat
-  nameWithType: MBCascadingDefaults.DateFormat
-- uid: Material.Blazor.MD2.MBCascadingDefaults.DateFormat*
-  name: DateFormat
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_DateFormat_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.DateFormat
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.DateFormat
-  nameWithType: MBCascadingDefaults.DateFormat
-- uid: Material.Blazor.MD2.MBCascadingDefaults.DateSelectionCriteria
-  name: DateSelectionCriteria
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_DateSelectionCriteria
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.DateSelectionCriteria
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.DateSelectionCriteria
-  nameWithType: MBCascadingDefaults.DateSelectionCriteria
-- uid: Material.Blazor.MD2.MBCascadingDefaults.DateSelectionCriteria*
-  name: DateSelectionCriteria
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_DateSelectionCriteria_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.DateSelectionCriteria
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.DateSelectionCriteria
-  nameWithType: MBCascadingDefaults.DateSelectionCriteria
-- uid: Material.Blazor.MD2.MBCascadingDefaults.DebounceInterval
-  name: DebounceInterval
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_DebounceInterval
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.DebounceInterval
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.DebounceInterval
-  nameWithType: MBCascadingDefaults.DebounceInterval
-- uid: Material.Blazor.MD2.MBCascadingDefaults.DebounceInterval*
-  name: DebounceInterval
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_DebounceInterval_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.DebounceInterval
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.DebounceInterval
-  nameWithType: MBCascadingDefaults.DebounceInterval
-- uid: Material.Blazor.MD2.MBCascadingDefaults.DialogActionButtonStyle
-  name: DialogActionButtonStyle
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_DialogActionButtonStyle
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.DialogActionButtonStyle
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.DialogActionButtonStyle
-  nameWithType: MBCascadingDefaults.DialogActionButtonStyle
-- uid: Material.Blazor.MD2.MBCascadingDefaults.DialogActionButtonStyle*
-  name: DialogActionButtonStyle
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_DialogActionButtonStyle_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.DialogActionButtonStyle
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.DialogActionButtonStyle
-  nameWithType: MBCascadingDefaults.DialogActionButtonStyle
-- uid: Material.Blazor.MD2.MBCascadingDefaults.Disabled
-  name: Disabled
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_Disabled
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.Disabled
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.Disabled
-  nameWithType: MBCascadingDefaults.Disabled
-- uid: Material.Blazor.MD2.MBCascadingDefaults.Disabled*
-  name: Disabled
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_Disabled_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.Disabled
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.Disabled
-  nameWithType: MBCascadingDefaults.Disabled
-- uid: Material.Blazor.MD2.MBCascadingDefaults.IconButtonDensity
-  name: IconButtonDensity
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_IconButtonDensity
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.IconButtonDensity
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.IconButtonDensity
-  nameWithType: MBCascadingDefaults.IconButtonDensity
-- uid: Material.Blazor.MD2.MBCascadingDefaults.IconButtonDensity*
-  name: IconButtonDensity
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_IconButtonDensity_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.IconButtonDensity
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.IconButtonDensity
-  nameWithType: MBCascadingDefaults.IconButtonDensity
-- uid: Material.Blazor.MD2.MBCascadingDefaults.ItemValidation
-  name: ItemValidation
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_ItemValidation
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.ItemValidation
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.ItemValidation
-  nameWithType: MBCascadingDefaults.ItemValidation
-- uid: Material.Blazor.MD2.MBCascadingDefaults.ItemValidation*
-  name: ItemValidation
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_ItemValidation_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.ItemValidation
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.ItemValidation
-  nameWithType: MBCascadingDefaults.ItemValidation
-- uid: Material.Blazor.MD2.MBCascadingDefaults.ListSingleLineDensity
-  name: ListSingleLineDensity
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_ListSingleLineDensity
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.ListSingleLineDensity
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.ListSingleLineDensity
-  nameWithType: MBCascadingDefaults.ListSingleLineDensity
-- uid: Material.Blazor.MD2.MBCascadingDefaults.ListSingleLineDensity*
-  name: ListSingleLineDensity
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_ListSingleLineDensity_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.ListSingleLineDensity
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.ListSingleLineDensity
-  nameWithType: MBCascadingDefaults.ListSingleLineDensity
-- uid: Material.Blazor.MD2.MBCascadingDefaults.ListStyle
-  name: ListStyle
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_ListStyle
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.ListStyle
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.ListStyle
-  nameWithType: MBCascadingDefaults.ListStyle
-- uid: Material.Blazor.MD2.MBCascadingDefaults.ListStyle*
-  name: ListStyle
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_ListStyle_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.ListStyle
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.ListStyle
-  nameWithType: MBCascadingDefaults.ListStyle
-- uid: Material.Blazor.MD2.MBCascadingDefaults.ListType
-  name: ListType
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_ListType
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.ListType
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.ListType
-  nameWithType: MBCascadingDefaults.ListType
-- uid: Material.Blazor.MD2.MBCascadingDefaults.ListType*
-  name: ListType
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_ListType_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.ListType
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.ListType
-  nameWithType: MBCascadingDefaults.ListType
-- uid: Material.Blazor.MD2.MBCascadingDefaults.RadioButtonDensity
-  name: RadioButtonDensity
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_RadioButtonDensity
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.RadioButtonDensity
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.RadioButtonDensity
-  nameWithType: MBCascadingDefaults.RadioButtonDensity
-- uid: Material.Blazor.MD2.MBCascadingDefaults.RadioButtonDensity*
-  name: RadioButtonDensity
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_RadioButtonDensity_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.RadioButtonDensity
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.RadioButtonDensity
-  nameWithType: MBCascadingDefaults.RadioButtonDensity
-- uid: Material.Blazor.MD2.MBCascadingDefaults.SelectDensity
-  name: SelectDensity
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_SelectDensity
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.SelectDensity
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.SelectDensity
-  nameWithType: MBCascadingDefaults.SelectDensity
-- uid: Material.Blazor.MD2.MBCascadingDefaults.SelectDensity*
-  name: SelectDensity
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_SelectDensity_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.SelectDensity
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.SelectDensity
-  nameWithType: MBCascadingDefaults.SelectDensity
-- uid: Material.Blazor.MD2.MBCascadingDefaults.SelectInputStyle
-  name: SelectInputStyle
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_SelectInputStyle
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.SelectInputStyle
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.SelectInputStyle
-  nameWithType: MBCascadingDefaults.SelectInputStyle
-- uid: Material.Blazor.MD2.MBCascadingDefaults.SelectInputStyle*
-  name: SelectInputStyle
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_SelectInputStyle_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.SelectInputStyle
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.SelectInputStyle
-  nameWithType: MBCascadingDefaults.SelectInputStyle
-- uid: Material.Blazor.MD2.MBCascadingDefaults.ShallowCopy
-  name: ShallowCopy()
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_ShallowCopy
-  commentId: M:Material.Blazor.MD2.MBCascadingDefaults.ShallowCopy
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.ShallowCopy()
-  nameWithType: MBCascadingDefaults.ShallowCopy()
-- uid: Material.Blazor.MD2.MBCascadingDefaults.ShallowCopy*
-  name: ShallowCopy
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_ShallowCopy_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.ShallowCopy
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.ShallowCopy
-  nameWithType: MBCascadingDefaults.ShallowCopy
-- uid: Material.Blazor.MD2.MBCascadingDefaults.SwitchDensity
-  name: SwitchDensity
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_SwitchDensity
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.SwitchDensity
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.SwitchDensity
-  nameWithType: MBCascadingDefaults.SwitchDensity
-- uid: Material.Blazor.MD2.MBCascadingDefaults.SwitchDensity*
-  name: SwitchDensity
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_SwitchDensity_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.SwitchDensity
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.SwitchDensity
-  nameWithType: MBCascadingDefaults.SwitchDensity
-- uid: Material.Blazor.MD2.MBCascadingDefaults.TabBarDensity
-  name: TabBarDensity
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_TabBarDensity
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.TabBarDensity
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.TabBarDensity
-  nameWithType: MBCascadingDefaults.TabBarDensity
-- uid: Material.Blazor.MD2.MBCascadingDefaults.TabBarDensity*
-  name: TabBarDensity
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_TabBarDensity_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.TabBarDensity
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.TabBarDensity
-  nameWithType: MBCascadingDefaults.TabBarDensity
-- uid: Material.Blazor.MD2.MBCascadingDefaults.TextAlignStyle
-  name: TextAlignStyle
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_TextAlignStyle
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.TextAlignStyle
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.TextAlignStyle
-  nameWithType: MBCascadingDefaults.TextAlignStyle
-- uid: Material.Blazor.MD2.MBCascadingDefaults.TextAlignStyle*
-  name: TextAlignStyle
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_TextAlignStyle_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.TextAlignStyle
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.TextAlignStyle
-  nameWithType: MBCascadingDefaults.TextAlignStyle
-- uid: Material.Blazor.MD2.MBCascadingDefaults.TextFieldDensity
-  name: TextFieldDensity
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_TextFieldDensity
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.TextFieldDensity
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.TextFieldDensity
-  nameWithType: MBCascadingDefaults.TextFieldDensity
-- uid: Material.Blazor.MD2.MBCascadingDefaults.TextFieldDensity*
-  name: TextFieldDensity
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_TextFieldDensity_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.TextFieldDensity
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.TextFieldDensity
-  nameWithType: MBCascadingDefaults.TextFieldDensity
-- uid: Material.Blazor.MD2.MBCascadingDefaults.TextInputStyle
-  name: TextInputStyle
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_TextInputStyle
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.TextInputStyle
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.TextInputStyle
-  nameWithType: MBCascadingDefaults.TextInputStyle
-- uid: Material.Blazor.MD2.MBCascadingDefaults.TextInputStyle*
-  name: TextInputStyle
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_TextInputStyle_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.TextInputStyle
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.TextInputStyle
-  nameWithType: MBCascadingDefaults.TextInputStyle
-- uid: Material.Blazor.MD2.MBCascadingDefaults.ThemeDensity
-  name: ThemeDensity
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_ThemeDensity
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.ThemeDensity
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.ThemeDensity
-  nameWithType: MBCascadingDefaults.ThemeDensity
-- uid: Material.Blazor.MD2.MBCascadingDefaults.ThemeDensity*
-  name: ThemeDensity
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_ThemeDensity_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.ThemeDensity
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.ThemeDensity
-  nameWithType: MBCascadingDefaults.ThemeDensity
-- uid: Material.Blazor.MD2.MBCascadingDefaults.TouchTarget
-  name: TouchTarget
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_TouchTarget
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.TouchTarget
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.TouchTarget
-  nameWithType: MBCascadingDefaults.TouchTarget
-- uid: Material.Blazor.MD2.MBCascadingDefaults.TouchTarget*
-  name: TouchTarget
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_TouchTarget_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.TouchTarget
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.TouchTarget
-  nameWithType: MBCascadingDefaults.TouchTarget
-- uid: Material.Blazor.MD2.MBCascadingDefaults.Version
-  name: Version
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_Version
-  commentId: P:Material.Blazor.MD2.MBCascadingDefaults.Version
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.Version
-  nameWithType: MBCascadingDefaults.Version
-- uid: Material.Blazor.MD2.MBCascadingDefaults.Version*
-  name: Version
-  href: api/Material.Blazor.MD2.MBCascadingDefaults.html#Material_Blazor_MD2_MBCascadingDefaults_Version_
-  commentId: Overload:Material.Blazor.MD2.MBCascadingDefaults.Version
-  fullName: Material.Blazor.MD2.MBCascadingDefaults.Version
-  nameWithType: MBCascadingDefaults.Version
-- uid: Material.Blazor.MD2.MBCircularProgressSize
-  name: MBCircularProgressSize
-  href: api/Material.Blazor.MD2.MBCircularProgressSize.html
-  commentId: T:Material.Blazor.MD2.MBCircularProgressSize
-  fullName: Material.Blazor.MD2.MBCircularProgressSize
-  nameWithType: MBCircularProgressSize
-- uid: Material.Blazor.MD2.MBCircularProgressSize.Large
-  name: Large
-  href: api/Material.Blazor.MD2.MBCircularProgressSize.html#Material_Blazor_MD2_MBCircularProgressSize_Large
-  commentId: F:Material.Blazor.MD2.MBCircularProgressSize.Large
-  fullName: Material.Blazor.MD2.MBCircularProgressSize.Large
-  nameWithType: MBCircularProgressSize.Large
-- uid: Material.Blazor.MD2.MBCircularProgressSize.Medium
-  name: Medium
-  href: api/Material.Blazor.MD2.MBCircularProgressSize.html#Material_Blazor_MD2_MBCircularProgressSize_Medium
-  commentId: F:Material.Blazor.MD2.MBCircularProgressSize.Medium
-  fullName: Material.Blazor.MD2.MBCircularProgressSize.Medium
-  nameWithType: MBCircularProgressSize.Medium
-- uid: Material.Blazor.MD2.MBCircularProgressSize.Small
-  name: Small
-  href: api/Material.Blazor.MD2.MBCircularProgressSize.html#Material_Blazor_MD2_MBCircularProgressSize_Small
-  commentId: F:Material.Blazor.MD2.MBCircularProgressSize.Small
-  fullName: Material.Blazor.MD2.MBCircularProgressSize.Small
-  nameWithType: MBCircularProgressSize.Small
-- uid: Material.Blazor.MD2.MBCircularProgressType
-  name: MBCircularProgressType
-  href: api/Material.Blazor.MD2.MBCircularProgressType.html
-  commentId: T:Material.Blazor.MD2.MBCircularProgressType
-  fullName: Material.Blazor.MD2.MBCircularProgressType
-  nameWithType: MBCircularProgressType
-- uid: Material.Blazor.MD2.MBCircularProgressType.Closed
-  name: Closed
-  href: api/Material.Blazor.MD2.MBCircularProgressType.html#Material_Blazor_MD2_MBCircularProgressType_Closed
-  commentId: F:Material.Blazor.MD2.MBCircularProgressType.Closed
-  fullName: Material.Blazor.MD2.MBCircularProgressType.Closed
-  nameWithType: MBCircularProgressType.Closed
-- uid: Material.Blazor.MD2.MBCircularProgressType.Determinate
-  name: Determinate
-  href: api/Material.Blazor.MD2.MBCircularProgressType.html#Material_Blazor_MD2_MBCircularProgressType_Determinate
-  commentId: F:Material.Blazor.MD2.MBCircularProgressType.Determinate
-  fullName: Material.Blazor.MD2.MBCircularProgressType.Determinate
-  nameWithType: MBCircularProgressType.Determinate
-- uid: Material.Blazor.MD2.MBCircularProgressType.Indeterminate
-  name: Indeterminate
-  href: api/Material.Blazor.MD2.MBCircularProgressType.html#Material_Blazor_MD2_MBCircularProgressType_Indeterminate
-  commentId: F:Material.Blazor.MD2.MBCircularProgressType.Indeterminate
-  fullName: Material.Blazor.MD2.MBCircularProgressType.Indeterminate
-  nameWithType: MBCircularProgressType.Indeterminate
 - uid: Material.Blazor.MD2.MBDataTable`1
   name: MBDataTable<TItem>
   href: api/Material.Blazor.MD2.MBDataTable-1.html
@@ -6661,84 +5735,6 @@ references:
   fullName.vb: Material.Blazor.MD2.MBDataTable(Of TItem).TableRow
   nameWithType: MBDataTable<TItem>.TableRow
   nameWithType.vb: MBDataTable(Of TItem).TableRow
-- uid: Material.Blazor.MD2.MBDateSelectionCriteria
-  name: MBDateSelectionCriteria
-  href: api/Material.Blazor.MD2.MBDateSelectionCriteria.html
-  commentId: T:Material.Blazor.MD2.MBDateSelectionCriteria
-  fullName: Material.Blazor.MD2.MBDateSelectionCriteria
-  nameWithType: MBDateSelectionCriteria
-- uid: Material.Blazor.MD2.MBDateSelectionCriteria.AllowAll
-  name: AllowAll
-  href: api/Material.Blazor.MD2.MBDateSelectionCriteria.html#Material_Blazor_MD2_MBDateSelectionCriteria_AllowAll
-  commentId: F:Material.Blazor.MD2.MBDateSelectionCriteria.AllowAll
-  fullName: Material.Blazor.MD2.MBDateSelectionCriteria.AllowAll
-  nameWithType: MBDateSelectionCriteria.AllowAll
-- uid: Material.Blazor.MD2.MBDateSelectionCriteria.WeekdaysOnly
-  name: WeekdaysOnly
-  href: api/Material.Blazor.MD2.MBDateSelectionCriteria.html#Material_Blazor_MD2_MBDateSelectionCriteria_WeekdaysOnly
-  commentId: F:Material.Blazor.MD2.MBDateSelectionCriteria.WeekdaysOnly
-  fullName: Material.Blazor.MD2.MBDateSelectionCriteria.WeekdaysOnly
-  nameWithType: MBDateSelectionCriteria.WeekdaysOnly
-- uid: Material.Blazor.MD2.MBDateSelectionCriteria.WeekendsOnly
-  name: WeekendsOnly
-  href: api/Material.Blazor.MD2.MBDateSelectionCriteria.html#Material_Blazor_MD2_MBDateSelectionCriteria_WeekendsOnly
-  commentId: F:Material.Blazor.MD2.MBDateSelectionCriteria.WeekendsOnly
-  fullName: Material.Blazor.MD2.MBDateSelectionCriteria.WeekendsOnly
-  nameWithType: MBDateSelectionCriteria.WeekendsOnly
-- uid: Material.Blazor.MD2.MBDensity
-  name: MBDensity
-  href: api/Material.Blazor.MD2.MBDensity.html
-  commentId: T:Material.Blazor.MD2.MBDensity
-  fullName: Material.Blazor.MD2.MBDensity
-  nameWithType: MBDensity
-- uid: Material.Blazor.MD2.MBDensity.Comfortable
-  name: Comfortable
-  href: api/Material.Blazor.MD2.MBDensity.html#Material_Blazor_MD2_MBDensity_Comfortable
-  commentId: F:Material.Blazor.MD2.MBDensity.Comfortable
-  fullName: Material.Blazor.MD2.MBDensity.Comfortable
-  nameWithType: MBDensity.Comfortable
-- uid: Material.Blazor.MD2.MBDensity.Compact
-  name: Compact
-  href: api/Material.Blazor.MD2.MBDensity.html#Material_Blazor_MD2_MBDensity_Compact
-  commentId: F:Material.Blazor.MD2.MBDensity.Compact
-  fullName: Material.Blazor.MD2.MBDensity.Compact
-  nameWithType: MBDensity.Compact
-- uid: Material.Blazor.MD2.MBDensity.Default
-  name: Default
-  href: api/Material.Blazor.MD2.MBDensity.html#Material_Blazor_MD2_MBDensity_Default
-  commentId: F:Material.Blazor.MD2.MBDensity.Default
-  fullName: Material.Blazor.MD2.MBDensity.Default
-  nameWithType: MBDensity.Default
-- uid: Material.Blazor.MD2.MBDensity.Minus1
-  name: Minus1
-  href: api/Material.Blazor.MD2.MBDensity.html#Material_Blazor_MD2_MBDensity_Minus1
-  commentId: F:Material.Blazor.MD2.MBDensity.Minus1
-  fullName: Material.Blazor.MD2.MBDensity.Minus1
-  nameWithType: MBDensity.Minus1
-- uid: Material.Blazor.MD2.MBDensity.Minus2
-  name: Minus2
-  href: api/Material.Blazor.MD2.MBDensity.html#Material_Blazor_MD2_MBDensity_Minus2
-  commentId: F:Material.Blazor.MD2.MBDensity.Minus2
-  fullName: Material.Blazor.MD2.MBDensity.Minus2
-  nameWithType: MBDensity.Minus2
-- uid: Material.Blazor.MD2.MBDensity.Minus3
-  name: Minus3
-  href: api/Material.Blazor.MD2.MBDensity.html#Material_Blazor_MD2_MBDensity_Minus3
-  commentId: F:Material.Blazor.MD2.MBDensity.Minus3
-  fullName: Material.Blazor.MD2.MBDensity.Minus3
-  nameWithType: MBDensity.Minus3
-- uid: Material.Blazor.MD2.MBDensity.Minus4
-  name: Minus4
-  href: api/Material.Blazor.MD2.MBDensity.html#Material_Blazor_MD2_MBDensity_Minus4
-  commentId: F:Material.Blazor.MD2.MBDensity.Minus4
-  fullName: Material.Blazor.MD2.MBDensity.Minus4
-  nameWithType: MBDensity.Minus4
-- uid: Material.Blazor.MD2.MBDensity.Minus5
-  name: Minus5
-  href: api/Material.Blazor.MD2.MBDensity.html#Material_Blazor_MD2_MBDensity_Minus5
-  commentId: F:Material.Blazor.MD2.MBDensity.Minus5
-  fullName: Material.Blazor.MD2.MBDensity.Minus5
-  nameWithType: MBDensity.Minus5
 - uid: Material.Blazor.MD2.MBDialog
   name: MBDialog
   href: api/Material.Blazor.MD2.MBDialog.html
@@ -7081,245 +6077,6 @@ references:
   commentId: Overload:Material.Blazor.MD2.MBDrawer.Toggle
   fullName: Material.Blazor.MD2.MBDrawer.Toggle
   nameWithType: MBDrawer.Toggle
-- uid: Material.Blazor.MD2.MBFloatingActionButtonType
-  name: MBFloatingActionButtonType
-  href: api/Material.Blazor.MD2.MBFloatingActionButtonType.html
-  commentId: T:Material.Blazor.MD2.MBFloatingActionButtonType
-  fullName: Material.Blazor.MD2.MBFloatingActionButtonType
-  nameWithType: MBFloatingActionButtonType
-- uid: Material.Blazor.MD2.MBFloatingActionButtonType.ExtendedLeadingIcon
-  name: ExtendedLeadingIcon
-  href: api/Material.Blazor.MD2.MBFloatingActionButtonType.html#Material_Blazor_MD2_MBFloatingActionButtonType_ExtendedLeadingIcon
-  commentId: F:Material.Blazor.MD2.MBFloatingActionButtonType.ExtendedLeadingIcon
-  fullName: Material.Blazor.MD2.MBFloatingActionButtonType.ExtendedLeadingIcon
-  nameWithType: MBFloatingActionButtonType.ExtendedLeadingIcon
-- uid: Material.Blazor.MD2.MBFloatingActionButtonType.ExtendedNoIcon
-  name: ExtendedNoIcon
-  href: api/Material.Blazor.MD2.MBFloatingActionButtonType.html#Material_Blazor_MD2_MBFloatingActionButtonType_ExtendedNoIcon
-  commentId: F:Material.Blazor.MD2.MBFloatingActionButtonType.ExtendedNoIcon
-  fullName: Material.Blazor.MD2.MBFloatingActionButtonType.ExtendedNoIcon
-  nameWithType: MBFloatingActionButtonType.ExtendedNoIcon
-- uid: Material.Blazor.MD2.MBFloatingActionButtonType.ExtendedTrailingIcon
-  name: ExtendedTrailingIcon
-  href: api/Material.Blazor.MD2.MBFloatingActionButtonType.html#Material_Blazor_MD2_MBFloatingActionButtonType_ExtendedTrailingIcon
-  commentId: F:Material.Blazor.MD2.MBFloatingActionButtonType.ExtendedTrailingIcon
-  fullName: Material.Blazor.MD2.MBFloatingActionButtonType.ExtendedTrailingIcon
-  nameWithType: MBFloatingActionButtonType.ExtendedTrailingIcon
-- uid: Material.Blazor.MD2.MBFloatingActionButtonType.Mini
-  name: Mini
-  href: api/Material.Blazor.MD2.MBFloatingActionButtonType.html#Material_Blazor_MD2_MBFloatingActionButtonType_Mini
-  commentId: F:Material.Blazor.MD2.MBFloatingActionButtonType.Mini
-  fullName: Material.Blazor.MD2.MBFloatingActionButtonType.Mini
-  nameWithType: MBFloatingActionButtonType.Mini
-- uid: Material.Blazor.MD2.MBFloatingActionButtonType.Regular
-  name: Regular
-  href: api/Material.Blazor.MD2.MBFloatingActionButtonType.html#Material_Blazor_MD2_MBFloatingActionButtonType_Regular
-  commentId: F:Material.Blazor.MD2.MBFloatingActionButtonType.Regular
-  fullName: Material.Blazor.MD2.MBFloatingActionButtonType.Regular
-  nameWithType: MBFloatingActionButtonType.Regular
-- uid: Material.Blazor.MD2.MBIconBearingSelectElementMD2`1
-  name: MBIconBearingSelectElementMD2<T>
-  href: api/Material.Blazor.MD2.MBIconBearingSelectElementMD2-1.html
-  commentId: T:Material.Blazor.MD2.MBIconBearingSelectElementMD2`1
-  name.vb: MBIconBearingSelectElementMD2(Of T)
-  fullName: Material.Blazor.MD2.MBIconBearingSelectElementMD2<T>
-  fullName.vb: Material.Blazor.MD2.MBIconBearingSelectElementMD2(Of T)
-  nameWithType: MBIconBearingSelectElementMD2<T>
-  nameWithType.vb: MBIconBearingSelectElementMD2(Of T)
-- uid: Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.#ctor
-  name: MBIconBearingSelectElementMD2()
-  href: api/Material.Blazor.MD2.MBIconBearingSelectElementMD2-1.html#Material_Blazor_MD2_MBIconBearingSelectElementMD2_1__ctor
-  commentId: M:Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.#ctor
-  name.vb: New()
-  fullName: Material.Blazor.MD2.MBIconBearingSelectElementMD2<T>.MBIconBearingSelectElementMD2()
-  fullName.vb: Material.Blazor.MD2.MBIconBearingSelectElementMD2(Of T).New()
-  nameWithType: MBIconBearingSelectElementMD2<T>.MBIconBearingSelectElementMD2()
-  nameWithType.vb: MBIconBearingSelectElementMD2(Of T).New()
-- uid: Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.#ctor(Material.Blazor.MD2.MBIconBearingSelectElementMD2{`0})
-  name: MBIconBearingSelectElementMD2(MBIconBearingSelectElementMD2<T>)
-  href: api/Material.Blazor.MD2.MBIconBearingSelectElementMD2-1.html#Material_Blazor_MD2_MBIconBearingSelectElementMD2_1__ctor_Material_Blazor_MD2_MBIconBearingSelectElementMD2__0__
-  commentId: M:Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.#ctor(Material.Blazor.MD2.MBIconBearingSelectElementMD2{`0})
-  name.vb: New(MBIconBearingSelectElementMD2(Of T))
-  fullName: Material.Blazor.MD2.MBIconBearingSelectElementMD2<T>.MBIconBearingSelectElementMD2(Material.Blazor.MD2.MBIconBearingSelectElementMD2<T>)
-  fullName.vb: Material.Blazor.MD2.MBIconBearingSelectElementMD2(Of T).New(Material.Blazor.MD2.MBIconBearingSelectElementMD2(Of T))
-  nameWithType: MBIconBearingSelectElementMD2<T>.MBIconBearingSelectElementMD2(MBIconBearingSelectElementMD2<T>)
-  nameWithType.vb: MBIconBearingSelectElementMD2(Of T).New(MBIconBearingSelectElementMD2(Of T))
-- uid: Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.#ctor*
-  name: MBIconBearingSelectElementMD2
-  href: api/Material.Blazor.MD2.MBIconBearingSelectElementMD2-1.html#Material_Blazor_MD2_MBIconBearingSelectElementMD2_1__ctor_
-  commentId: Overload:Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.#ctor
-  name.vb: New
-  fullName: Material.Blazor.MD2.MBIconBearingSelectElementMD2<T>.MBIconBearingSelectElementMD2
-  fullName.vb: Material.Blazor.MD2.MBIconBearingSelectElementMD2(Of T).New
-  nameWithType: MBIconBearingSelectElementMD2<T>.MBIconBearingSelectElementMD2
-  nameWithType.vb: MBIconBearingSelectElementMD2(Of T).New
-- uid: Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.EqualityContract
-  name: EqualityContract
-  href: api/Material.Blazor.MD2.MBIconBearingSelectElementMD2-1.html#Material_Blazor_MD2_MBIconBearingSelectElementMD2_1_EqualityContract
-  commentId: P:Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.EqualityContract
-  fullName: Material.Blazor.MD2.MBIconBearingSelectElementMD2<T>.EqualityContract
-  fullName.vb: Material.Blazor.MD2.MBIconBearingSelectElementMD2(Of T).EqualityContract
-  nameWithType: MBIconBearingSelectElementMD2<T>.EqualityContract
-  nameWithType.vb: MBIconBearingSelectElementMD2(Of T).EqualityContract
-- uid: Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.EqualityContract*
-  name: EqualityContract
-  href: api/Material.Blazor.MD2.MBIconBearingSelectElementMD2-1.html#Material_Blazor_MD2_MBIconBearingSelectElementMD2_1_EqualityContract_
-  commentId: Overload:Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.EqualityContract
-  fullName: Material.Blazor.MD2.MBIconBearingSelectElementMD2<T>.EqualityContract
-  fullName.vb: Material.Blazor.MD2.MBIconBearingSelectElementMD2(Of T).EqualityContract
-  nameWithType: MBIconBearingSelectElementMD2<T>.EqualityContract
-  nameWithType.vb: MBIconBearingSelectElementMD2(Of T).EqualityContract
-- uid: Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.Equals(Material.Blazor.MD2.MBIconBearingSelectElementMD2{`0})
-  name: Equals(MBIconBearingSelectElementMD2<T>?)
-  href: api/Material.Blazor.MD2.MBIconBearingSelectElementMD2-1.html#Material_Blazor_MD2_MBIconBearingSelectElementMD2_1_Equals_Material_Blazor_MD2_MBIconBearingSelectElementMD2__0__
-  commentId: M:Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.Equals(Material.Blazor.MD2.MBIconBearingSelectElementMD2{`0})
-  name.vb: Equals(MBIconBearingSelectElementMD2(Of T))
-  fullName: Material.Blazor.MD2.MBIconBearingSelectElementMD2<T>.Equals(Material.Blazor.MD2.MBIconBearingSelectElementMD2<T>?)
-  fullName.vb: Material.Blazor.MD2.MBIconBearingSelectElementMD2(Of T).Equals(Material.Blazor.MD2.MBIconBearingSelectElementMD2(Of T))
-  nameWithType: MBIconBearingSelectElementMD2<T>.Equals(MBIconBearingSelectElementMD2<T>?)
-  nameWithType.vb: MBIconBearingSelectElementMD2(Of T).Equals(MBIconBearingSelectElementMD2(Of T))
-- uid: Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.Equals(Material.Blazor.MD2.MBSelectElementMD2{`0})
-  name: Equals(MBSelectElementMD2<T>?)
-  href: api/Material.Blazor.MD2.MBIconBearingSelectElementMD2-1.html#Material_Blazor_MD2_MBIconBearingSelectElementMD2_1_Equals_Material_Blazor_MD2_MBSelectElementMD2__0__
-  commentId: M:Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.Equals(Material.Blazor.MD2.MBSelectElementMD2{`0})
-  name.vb: Equals(MBSelectElementMD2(Of T))
-  fullName: Material.Blazor.MD2.MBIconBearingSelectElementMD2<T>.Equals(Material.Blazor.MD2.MBSelectElementMD2<T>?)
-  fullName.vb: Material.Blazor.MD2.MBIconBearingSelectElementMD2(Of T).Equals(Material.Blazor.MD2.MBSelectElementMD2(Of T))
-  nameWithType: MBIconBearingSelectElementMD2<T>.Equals(MBSelectElementMD2<T>?)
-  nameWithType.vb: MBIconBearingSelectElementMD2(Of T).Equals(MBSelectElementMD2(Of T))
-- uid: Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.Equals(System.Object)
-  name: Equals(object?)
-  href: api/Material.Blazor.MD2.MBIconBearingSelectElementMD2-1.html#Material_Blazor_MD2_MBIconBearingSelectElementMD2_1_Equals_System_Object_
-  commentId: M:Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.Equals(System.Object)
-  name.vb: Equals(Object)
-  fullName: Material.Blazor.MD2.MBIconBearingSelectElementMD2<T>.Equals(object?)
-  fullName.vb: Material.Blazor.MD2.MBIconBearingSelectElementMD2(Of T).Equals(Object)
-  nameWithType: MBIconBearingSelectElementMD2<T>.Equals(object?)
-  nameWithType.vb: MBIconBearingSelectElementMD2(Of T).Equals(Object)
-- uid: Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.Equals*
-  name: Equals
-  href: api/Material.Blazor.MD2.MBIconBearingSelectElementMD2-1.html#Material_Blazor_MD2_MBIconBearingSelectElementMD2_1_Equals_
-  commentId: Overload:Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.Equals
-  fullName: Material.Blazor.MD2.MBIconBearingSelectElementMD2<T>.Equals
-  fullName.vb: Material.Blazor.MD2.MBIconBearingSelectElementMD2(Of T).Equals
-  nameWithType: MBIconBearingSelectElementMD2<T>.Equals
-  nameWithType.vb: MBIconBearingSelectElementMD2(Of T).Equals
-- uid: Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.GetHashCode
-  name: GetHashCode()
-  href: api/Material.Blazor.MD2.MBIconBearingSelectElementMD2-1.html#Material_Blazor_MD2_MBIconBearingSelectElementMD2_1_GetHashCode
-  commentId: M:Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.GetHashCode
-  fullName: Material.Blazor.MD2.MBIconBearingSelectElementMD2<T>.GetHashCode()
-  fullName.vb: Material.Blazor.MD2.MBIconBearingSelectElementMD2(Of T).GetHashCode()
-  nameWithType: MBIconBearingSelectElementMD2<T>.GetHashCode()
-  nameWithType.vb: MBIconBearingSelectElementMD2(Of T).GetHashCode()
-- uid: Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.GetHashCode*
-  name: GetHashCode
-  href: api/Material.Blazor.MD2.MBIconBearingSelectElementMD2-1.html#Material_Blazor_MD2_MBIconBearingSelectElementMD2_1_GetHashCode_
-  commentId: Overload:Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.GetHashCode
-  fullName: Material.Blazor.MD2.MBIconBearingSelectElementMD2<T>.GetHashCode
-  fullName.vb: Material.Blazor.MD2.MBIconBearingSelectElementMD2(Of T).GetHashCode
-  nameWithType: MBIconBearingSelectElementMD2<T>.GetHashCode
-  nameWithType.vb: MBIconBearingSelectElementMD2(Of T).GetHashCode
-- uid: Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.Icon
-  name: Icon
-  href: api/Material.Blazor.MD2.MBIconBearingSelectElementMD2-1.html#Material_Blazor_MD2_MBIconBearingSelectElementMD2_1_Icon
-  commentId: P:Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.Icon
-  fullName: Material.Blazor.MD2.MBIconBearingSelectElementMD2<T>.Icon
-  fullName.vb: Material.Blazor.MD2.MBIconBearingSelectElementMD2(Of T).Icon
-  nameWithType: MBIconBearingSelectElementMD2<T>.Icon
-  nameWithType.vb: MBIconBearingSelectElementMD2(Of T).Icon
-- uid: Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.Icon*
-  name: Icon
-  href: api/Material.Blazor.MD2.MBIconBearingSelectElementMD2-1.html#Material_Blazor_MD2_MBIconBearingSelectElementMD2_1_Icon_
-  commentId: Overload:Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.Icon
-  fullName: Material.Blazor.MD2.MBIconBearingSelectElementMD2<T>.Icon
-  fullName.vb: Material.Blazor.MD2.MBIconBearingSelectElementMD2(Of T).Icon
-  nameWithType: MBIconBearingSelectElementMD2<T>.Icon
-  nameWithType.vb: MBIconBearingSelectElementMD2(Of T).Icon
-- uid: Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.PrintMembers(System.Text.StringBuilder)
-  name: PrintMembers(StringBuilder)
-  href: api/Material.Blazor.MD2.MBIconBearingSelectElementMD2-1.html#Material_Blazor_MD2_MBIconBearingSelectElementMD2_1_PrintMembers_System_Text_StringBuilder_
-  commentId: M:Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.PrintMembers(System.Text.StringBuilder)
-  fullName: Material.Blazor.MD2.MBIconBearingSelectElementMD2<T>.PrintMembers(System.Text.StringBuilder)
-  fullName.vb: Material.Blazor.MD2.MBIconBearingSelectElementMD2(Of T).PrintMembers(System.Text.StringBuilder)
-  nameWithType: MBIconBearingSelectElementMD2<T>.PrintMembers(StringBuilder)
-  nameWithType.vb: MBIconBearingSelectElementMD2(Of T).PrintMembers(StringBuilder)
-- uid: Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.PrintMembers*
-  name: PrintMembers
-  href: api/Material.Blazor.MD2.MBIconBearingSelectElementMD2-1.html#Material_Blazor_MD2_MBIconBearingSelectElementMD2_1_PrintMembers_
-  commentId: Overload:Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.PrintMembers
-  fullName: Material.Blazor.MD2.MBIconBearingSelectElementMD2<T>.PrintMembers
-  fullName.vb: Material.Blazor.MD2.MBIconBearingSelectElementMD2(Of T).PrintMembers
-  nameWithType: MBIconBearingSelectElementMD2<T>.PrintMembers
-  nameWithType.vb: MBIconBearingSelectElementMD2(Of T).PrintMembers
-- uid: Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.ToString
-  name: ToString()
-  href: api/Material.Blazor.MD2.MBIconBearingSelectElementMD2-1.html#Material_Blazor_MD2_MBIconBearingSelectElementMD2_1_ToString
-  commentId: M:Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.ToString
-  fullName: Material.Blazor.MD2.MBIconBearingSelectElementMD2<T>.ToString()
-  fullName.vb: Material.Blazor.MD2.MBIconBearingSelectElementMD2(Of T).ToString()
-  nameWithType: MBIconBearingSelectElementMD2<T>.ToString()
-  nameWithType.vb: MBIconBearingSelectElementMD2(Of T).ToString()
-- uid: Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.ToString*
-  name: ToString
-  href: api/Material.Blazor.MD2.MBIconBearingSelectElementMD2-1.html#Material_Blazor_MD2_MBIconBearingSelectElementMD2_1_ToString_
-  commentId: Overload:Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.ToString
-  fullName: Material.Blazor.MD2.MBIconBearingSelectElementMD2<T>.ToString
-  fullName.vb: Material.Blazor.MD2.MBIconBearingSelectElementMD2(Of T).ToString
-  nameWithType: MBIconBearingSelectElementMD2<T>.ToString
-  nameWithType.vb: MBIconBearingSelectElementMD2(Of T).ToString
-- uid: Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.op_Equality(Material.Blazor.MD2.MBIconBearingSelectElementMD2{`0},Material.Blazor.MD2.MBIconBearingSelectElementMD2{`0})
-  name: operator ==(MBIconBearingSelectElementMD2<T>?, MBIconBearingSelectElementMD2<T>?)
-  href: api/Material.Blazor.MD2.MBIconBearingSelectElementMD2-1.html#Material_Blazor_MD2_MBIconBearingSelectElementMD2_1_op_Equality_Material_Blazor_MD2_MBIconBearingSelectElementMD2__0__Material_Blazor_MD2_MBIconBearingSelectElementMD2__0__
-  commentId: M:Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.op_Equality(Material.Blazor.MD2.MBIconBearingSelectElementMD2{`0},Material.Blazor.MD2.MBIconBearingSelectElementMD2{`0})
-  name.vb: =(MBIconBearingSelectElementMD2(Of T), MBIconBearingSelectElementMD2(Of T))
-  fullName: Material.Blazor.MD2.MBIconBearingSelectElementMD2<T>.operator ==(Material.Blazor.MD2.MBIconBearingSelectElementMD2<T>?, Material.Blazor.MD2.MBIconBearingSelectElementMD2<T>?)
-  fullName.vb: Material.Blazor.MD2.MBIconBearingSelectElementMD2(Of T).=(Material.Blazor.MD2.MBIconBearingSelectElementMD2(Of T), Material.Blazor.MD2.MBIconBearingSelectElementMD2(Of T))
-  nameWithType: MBIconBearingSelectElementMD2<T>.operator ==(MBIconBearingSelectElementMD2<T>?, MBIconBearingSelectElementMD2<T>?)
-  nameWithType.vb: MBIconBearingSelectElementMD2(Of T).=(MBIconBearingSelectElementMD2(Of T), MBIconBearingSelectElementMD2(Of T))
-- uid: Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.op_Equality*
-  name: operator ==
-  href: api/Material.Blazor.MD2.MBIconBearingSelectElementMD2-1.html#Material_Blazor_MD2_MBIconBearingSelectElementMD2_1_op_Equality_
-  commentId: Overload:Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.op_Equality
-  name.vb: =
-  fullName: Material.Blazor.MD2.MBIconBearingSelectElementMD2<T>.operator ==
-  fullName.vb: Material.Blazor.MD2.MBIconBearingSelectElementMD2(Of T).=
-  nameWithType: MBIconBearingSelectElementMD2<T>.operator ==
-  nameWithType.vb: MBIconBearingSelectElementMD2(Of T).=
-- uid: Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.op_Inequality(Material.Blazor.MD2.MBIconBearingSelectElementMD2{`0},Material.Blazor.MD2.MBIconBearingSelectElementMD2{`0})
-  name: operator !=(MBIconBearingSelectElementMD2<T>?, MBIconBearingSelectElementMD2<T>?)
-  href: api/Material.Blazor.MD2.MBIconBearingSelectElementMD2-1.html#Material_Blazor_MD2_MBIconBearingSelectElementMD2_1_op_Inequality_Material_Blazor_MD2_MBIconBearingSelectElementMD2__0__Material_Blazor_MD2_MBIconBearingSelectElementMD2__0__
-  commentId: M:Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.op_Inequality(Material.Blazor.MD2.MBIconBearingSelectElementMD2{`0},Material.Blazor.MD2.MBIconBearingSelectElementMD2{`0})
-  name.vb: <>(MBIconBearingSelectElementMD2(Of T), MBIconBearingSelectElementMD2(Of T))
-  fullName: Material.Blazor.MD2.MBIconBearingSelectElementMD2<T>.operator !=(Material.Blazor.MD2.MBIconBearingSelectElementMD2<T>?, Material.Blazor.MD2.MBIconBearingSelectElementMD2<T>?)
-  fullName.vb: Material.Blazor.MD2.MBIconBearingSelectElementMD2(Of T).<>(Material.Blazor.MD2.MBIconBearingSelectElementMD2(Of T), Material.Blazor.MD2.MBIconBearingSelectElementMD2(Of T))
-  nameWithType: MBIconBearingSelectElementMD2<T>.operator !=(MBIconBearingSelectElementMD2<T>?, MBIconBearingSelectElementMD2<T>?)
-  nameWithType.vb: MBIconBearingSelectElementMD2(Of T).<>(MBIconBearingSelectElementMD2(Of T), MBIconBearingSelectElementMD2(Of T))
-- uid: Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.op_Inequality*
-  name: operator !=
-  href: api/Material.Blazor.MD2.MBIconBearingSelectElementMD2-1.html#Material_Blazor_MD2_MBIconBearingSelectElementMD2_1_op_Inequality_
-  commentId: Overload:Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.op_Inequality
-  name.vb: <>
-  fullName: Material.Blazor.MD2.MBIconBearingSelectElementMD2<T>.operator !=
-  fullName.vb: Material.Blazor.MD2.MBIconBearingSelectElementMD2(Of T).<>
-  nameWithType: MBIconBearingSelectElementMD2<T>.operator !=
-  nameWithType.vb: MBIconBearingSelectElementMD2(Of T).<>
-- uid: Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.{Clone}$
-  name: <Clone>$()
-  href: api/Material.Blazor.MD2.MBIconBearingSelectElementMD2-1.html#Material_Blazor_MD2_MBIconBearingSelectElementMD2_1__Clone__
-  commentId: M:Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.{Clone}$
-  fullName: Material.Blazor.MD2.MBIconBearingSelectElementMD2<T>.<Clone>$()
-  fullName.vb: Material.Blazor.MD2.MBIconBearingSelectElementMD2(Of T).<Clone>$()
-  nameWithType: MBIconBearingSelectElementMD2<T>.<Clone>$()
-  nameWithType.vb: MBIconBearingSelectElementMD2(Of T).<Clone>$()
-- uid: Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.{Clone}$*
-  name: <Clone>$
-  href: api/Material.Blazor.MD2.MBIconBearingSelectElementMD2-1.html#Material_Blazor_MD2_MBIconBearingSelectElementMD2_1__Clone___
-  commentId: Overload:Material.Blazor.MD2.MBIconBearingSelectElementMD2`1.{Clone}$
-  fullName: Material.Blazor.MD2.MBIconBearingSelectElementMD2<T>.<Clone>$
-  fullName.vb: Material.Blazor.MD2.MBIconBearingSelectElementMD2(Of T).<Clone>$
-  nameWithType: MBIconBearingSelectElementMD2<T>.<Clone>$
-  nameWithType.vb: MBIconBearingSelectElementMD2(Of T).<Clone>$
 - uid: Material.Blazor.MD2.MBIconBearingSelectElement`1
   name: MBIconBearingSelectElement<T>
   href: api/Material.Blazor.MD2.MBIconBearingSelectElement-1.html
@@ -7372,6 +6129,15 @@ references:
   fullName.vb: Material.Blazor.MD2.MBIconBearingSelectElement(Of T).EqualityContract
   nameWithType: MBIconBearingSelectElement<T>.EqualityContract
   nameWithType.vb: MBIconBearingSelectElement(Of T).EqualityContract
+- uid: Material.Blazor.MD2.MBIconBearingSelectElement`1.Equals(Material.Blazor.MBSelectElement{`0})
+  name: Equals(MBSelectElement<T>?)
+  href: api/Material.Blazor.MD2.MBIconBearingSelectElement-1.html#Material_Blazor_MD2_MBIconBearingSelectElement_1_Equals_Material_Blazor_MBSelectElement__0__
+  commentId: M:Material.Blazor.MD2.MBIconBearingSelectElement`1.Equals(Material.Blazor.MBSelectElement{`0})
+  name.vb: Equals(MBSelectElement(Of T))
+  fullName: Material.Blazor.MD2.MBIconBearingSelectElement<T>.Equals(Material.Blazor.MBSelectElement<T>?)
+  fullName.vb: Material.Blazor.MD2.MBIconBearingSelectElement(Of T).Equals(Material.Blazor.MBSelectElement(Of T))
+  nameWithType: MBIconBearingSelectElement<T>.Equals(MBSelectElement<T>?)
+  nameWithType.vb: MBIconBearingSelectElement(Of T).Equals(MBSelectElement(Of T))
 - uid: Material.Blazor.MD2.MBIconBearingSelectElement`1.Equals(Material.Blazor.MD2.MBIconBearingSelectElement{`0})
   name: Equals(MBIconBearingSelectElement<T>?)
   href: api/Material.Blazor.MD2.MBIconBearingSelectElement-1.html#Material_Blazor_MD2_MBIconBearingSelectElement_1_Equals_Material_Blazor_MD2_MBIconBearingSelectElement__0__
@@ -7381,15 +6147,6 @@ references:
   fullName.vb: Material.Blazor.MD2.MBIconBearingSelectElement(Of T).Equals(Material.Blazor.MD2.MBIconBearingSelectElement(Of T))
   nameWithType: MBIconBearingSelectElement<T>.Equals(MBIconBearingSelectElement<T>?)
   nameWithType.vb: MBIconBearingSelectElement(Of T).Equals(MBIconBearingSelectElement(Of T))
-- uid: Material.Blazor.MD2.MBIconBearingSelectElement`1.Equals(Material.Blazor.MD2.MBSelectElementMD2{`0})
-  name: Equals(MBSelectElementMD2<T>?)
-  href: api/Material.Blazor.MD2.MBIconBearingSelectElement-1.html#Material_Blazor_MD2_MBIconBearingSelectElement_1_Equals_Material_Blazor_MD2_MBSelectElementMD2__0__
-  commentId: M:Material.Blazor.MD2.MBIconBearingSelectElement`1.Equals(Material.Blazor.MD2.MBSelectElementMD2{`0})
-  name.vb: Equals(MBSelectElementMD2(Of T))
-  fullName: Material.Blazor.MD2.MBIconBearingSelectElement<T>.Equals(Material.Blazor.MD2.MBSelectElementMD2<T>?)
-  fullName.vb: Material.Blazor.MD2.MBIconBearingSelectElement(Of T).Equals(Material.Blazor.MD2.MBSelectElementMD2(Of T))
-  nameWithType: MBIconBearingSelectElement<T>.Equals(MBSelectElementMD2<T>?)
-  nameWithType.vb: MBIconBearingSelectElement(Of T).Equals(MBSelectElementMD2(Of T))
 - uid: Material.Blazor.MD2.MBIconBearingSelectElement`1.Equals(System.Object)
   name: Equals(object?)
   href: api/Material.Blazor.MD2.MBIconBearingSelectElement-1.html#Material_Blazor_MD2_MBIconBearingSelectElement_1_Equals_System_Object_
@@ -7667,78 +6424,42 @@ references:
   commentId: Overload:Material.Blazor.MD2.MBIconButton.TouchTarget
   fullName: Material.Blazor.MD2.MBIconButton.TouchTarget
   nameWithType: MBIconButton.TouchTarget
-- uid: Material.Blazor.MD2.MBInputEventType
-  name: MBInputEventType
-  href: api/Material.Blazor.MD2.MBInputEventType.html
-  commentId: T:Material.Blazor.MD2.MBInputEventType
-  fullName: Material.Blazor.MD2.MBInputEventType
-  nameWithType: MBInputEventType
-- uid: Material.Blazor.MD2.MBInputEventType.OnChange
-  name: OnChange
-  href: api/Material.Blazor.MD2.MBInputEventType.html#Material_Blazor_MD2_MBInputEventType_OnChange
-  commentId: F:Material.Blazor.MD2.MBInputEventType.OnChange
-  fullName: Material.Blazor.MD2.MBInputEventType.OnChange
-  nameWithType: MBInputEventType.OnChange
-- uid: Material.Blazor.MD2.MBInputEventType.OnInputDebounced
-  name: OnInputDebounced
-  href: api/Material.Blazor.MD2.MBInputEventType.html#Material_Blazor_MD2_MBInputEventType_OnInputDebounced
-  commentId: F:Material.Blazor.MD2.MBInputEventType.OnInputDebounced
-  fullName: Material.Blazor.MD2.MBInputEventType.OnInputDebounced
-  nameWithType: MBInputEventType.OnInputDebounced
-- uid: Material.Blazor.MD2.MBInputEventType.OnInputThrottled
-  name: OnInputThrottled
-  href: api/Material.Blazor.MD2.MBInputEventType.html#Material_Blazor_MD2_MBInputEventType_OnInputThrottled
-  commentId: F:Material.Blazor.MD2.MBInputEventType.OnInputThrottled
-  fullName: Material.Blazor.MD2.MBInputEventType.OnInputThrottled
-  nameWithType: MBInputEventType.OnInputThrottled
-- uid: Material.Blazor.MD2.MBItemValidation
-  name: MBItemValidation
-  href: api/Material.Blazor.MD2.MBItemValidation.html
-  commentId: T:Material.Blazor.MD2.MBItemValidation
-  fullName: Material.Blazor.MD2.MBItemValidation
-  nameWithType: MBItemValidation
-- uid: Material.Blazor.MD2.MBItemValidation.DefaultToFirst
-  name: DefaultToFirst
-  href: api/Material.Blazor.MD2.MBItemValidation.html#Material_Blazor_MD2_MBItemValidation_DefaultToFirst
-  commentId: F:Material.Blazor.MD2.MBItemValidation.DefaultToFirst
-  fullName: Material.Blazor.MD2.MBItemValidation.DefaultToFirst
-  nameWithType: MBItemValidation.DefaultToFirst
-- uid: Material.Blazor.MD2.MBItemValidation.Exception
-  name: Exception
-  href: api/Material.Blazor.MD2.MBItemValidation.html#Material_Blazor_MD2_MBItemValidation_Exception
-  commentId: F:Material.Blazor.MD2.MBItemValidation.Exception
-  fullName: Material.Blazor.MD2.MBItemValidation.Exception
-  nameWithType: MBItemValidation.Exception
-- uid: Material.Blazor.MD2.MBItemValidation.NoSelection
-  name: NoSelection
-  href: api/Material.Blazor.MD2.MBItemValidation.html#Material_Blazor_MD2_MBItemValidation_NoSelection
-  commentId: F:Material.Blazor.MD2.MBItemValidation.NoSelection
-  fullName: Material.Blazor.MD2.MBItemValidation.NoSelection
-  nameWithType: MBItemValidation.NoSelection
-- uid: Material.Blazor.MD2.MBLinearProgressType
-  name: MBLinearProgressType
-  href: api/Material.Blazor.MD2.MBLinearProgressType.html
-  commentId: T:Material.Blazor.MD2.MBLinearProgressType
-  fullName: Material.Blazor.MD2.MBLinearProgressType
-  nameWithType: MBLinearProgressType
-- uid: Material.Blazor.MD2.MBLinearProgressType.Closed
-  name: Closed
-  href: api/Material.Blazor.MD2.MBLinearProgressType.html#Material_Blazor_MD2_MBLinearProgressType_Closed
-  commentId: F:Material.Blazor.MD2.MBLinearProgressType.Closed
-  fullName: Material.Blazor.MD2.MBLinearProgressType.Closed
-  nameWithType: MBLinearProgressType.Closed
-- uid: Material.Blazor.MD2.MBLinearProgressType.Determinate
-  name: Determinate
-  href: api/Material.Blazor.MD2.MBLinearProgressType.html#Material_Blazor_MD2_MBLinearProgressType_Determinate
-  commentId: F:Material.Blazor.MD2.MBLinearProgressType.Determinate
-  fullName: Material.Blazor.MD2.MBLinearProgressType.Determinate
-  nameWithType: MBLinearProgressType.Determinate
-- uid: Material.Blazor.MD2.MBLinearProgressType.Indeterminate
-  name: Indeterminate
-  href: api/Material.Blazor.MD2.MBLinearProgressType.html#Material_Blazor_MD2_MBLinearProgressType_Indeterminate
-  commentId: F:Material.Blazor.MD2.MBLinearProgressType.Indeterminate
-  fullName: Material.Blazor.MD2.MBLinearProgressType.Indeterminate
-  nameWithType: MBLinearProgressType.Indeterminate
+- uid: Material.Blazor.MD2.MBListDivider
+  name: MBListDivider
+  href: api/Material.Blazor.MD2.MBListDivider.html
+  commentId: T:Material.Blazor.MD2.MBListDivider
+  fullName: Material.Blazor.MD2.MBListDivider
+  nameWithType: MBListDivider
+- uid: Material.Blazor.MD2.MBListDivider.#ctor
+  name: MBListDivider()
+  href: api/Material.Blazor.MD2.MBListDivider.html#Material_Blazor_MD2_MBListDivider__ctor
+  commentId: M:Material.Blazor.MD2.MBListDivider.#ctor
+  name.vb: New()
+  fullName: Material.Blazor.MD2.MBListDivider.MBListDivider()
+  fullName.vb: Material.Blazor.MD2.MBListDivider.New()
+  nameWithType: MBListDivider.MBListDivider()
+  nameWithType.vb: MBListDivider.New()
+- uid: Material.Blazor.MD2.MBListDivider.#ctor*
+  name: MBListDivider
+  href: api/Material.Blazor.MD2.MBListDivider.html#Material_Blazor_MD2_MBListDivider__ctor_
+  commentId: Overload:Material.Blazor.MD2.MBListDivider.#ctor
+  name.vb: New
+  fullName: Material.Blazor.MD2.MBListDivider.MBListDivider
+  fullName.vb: Material.Blazor.MD2.MBListDivider.New
+  nameWithType: MBListDivider.MBListDivider
+  nameWithType.vb: MBListDivider.New
+- uid: Material.Blazor.MD2.MBListDivider.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  name: BuildRenderTree(RenderTreeBuilder)
+  href: api/Material.Blazor.MD2.MBListDivider.html#Material_Blazor_MD2_MBListDivider_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
+  commentId: M:Material.Blazor.MD2.MBListDivider.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  fullName: Material.Blazor.MD2.MBListDivider.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  nameWithType: MBListDivider.BuildRenderTree(RenderTreeBuilder)
+- uid: Material.Blazor.MD2.MBListDivider.BuildRenderTree*
+  name: BuildRenderTree
+  href: api/Material.Blazor.MD2.MBListDivider.html#Material_Blazor_MD2_MBListDivider_BuildRenderTree_
+  commentId: Overload:Material.Blazor.MD2.MBListDivider.BuildRenderTree
+  fullName: Material.Blazor.MD2.MBListDivider.BuildRenderTree
+  nameWithType: MBListDivider.BuildRenderTree
 - uid: Material.Blazor.MD2.MBListItem
   name: MBListItem
   href: api/Material.Blazor.MD2.MBListItem.html
@@ -7835,96 +6556,6 @@ references:
   commentId: Overload:Material.Blazor.MD2.MBListItem.OnInitializedAsync
   fullName: Material.Blazor.MD2.MBListItem.OnInitializedAsync
   nameWithType: MBListItem.OnInitializedAsync
-- uid: Material.Blazor.MD2.MBListStyle
-  name: MBListStyle
-  href: api/Material.Blazor.MD2.MBListStyle.html
-  commentId: T:Material.Blazor.MD2.MBListStyle
-  fullName: Material.Blazor.MD2.MBListStyle
-  nameWithType: MBListStyle
-- uid: Material.Blazor.MD2.MBListStyle.None
-  name: None
-  href: api/Material.Blazor.MD2.MBListStyle.html#Material_Blazor_MD2_MBListStyle_None
-  commentId: F:Material.Blazor.MD2.MBListStyle.None
-  fullName: Material.Blazor.MD2.MBListStyle.None
-  nameWithType: MBListStyle.None
-- uid: Material.Blazor.MD2.MBListStyle.Outlined
-  name: Outlined
-  href: api/Material.Blazor.MD2.MBListStyle.html#Material_Blazor_MD2_MBListStyle_Outlined
-  commentId: F:Material.Blazor.MD2.MBListStyle.Outlined
-  fullName: Material.Blazor.MD2.MBListStyle.Outlined
-  nameWithType: MBListStyle.Outlined
-- uid: Material.Blazor.MD2.MBListType
-  name: MBListType
-  href: api/Material.Blazor.MD2.MBListType.html
-  commentId: T:Material.Blazor.MD2.MBListType
-  fullName: Material.Blazor.MD2.MBListType
-  nameWithType: MBListType
-- uid: Material.Blazor.MD2.MBListType.Avatar
-  name: Avatar
-  href: api/Material.Blazor.MD2.MBListType.html#Material_Blazor_MD2_MBListType_Avatar
-  commentId: F:Material.Blazor.MD2.MBListType.Avatar
-  fullName: Material.Blazor.MD2.MBListType.Avatar
-  nameWithType: MBListType.Avatar
-- uid: Material.Blazor.MD2.MBListType.Dense
-  name: Dense
-  href: api/Material.Blazor.MD2.MBListType.html#Material_Blazor_MD2_MBListType_Dense
-  commentId: F:Material.Blazor.MD2.MBListType.Dense
-  fullName: Material.Blazor.MD2.MBListType.Dense
-  nameWithType: MBListType.Dense
-- uid: Material.Blazor.MD2.MBListType.Regular
-  name: Regular
-  href: api/Material.Blazor.MD2.MBListType.html#Material_Blazor_MD2_MBListType_Regular
-  commentId: F:Material.Blazor.MD2.MBListType.Regular
-  fullName: Material.Blazor.MD2.MBListType.Regular
-  nameWithType: MBListType.Regular
-- uid: Material.Blazor.MD2.MBLoggingLevel
-  name: MBLoggingLevel
-  href: api/Material.Blazor.MD2.MBLoggingLevel.html
-  commentId: T:Material.Blazor.MD2.MBLoggingLevel
-  fullName: Material.Blazor.MD2.MBLoggingLevel
-  nameWithType: MBLoggingLevel
-- uid: Material.Blazor.MD2.MBLoggingLevel.Critical
-  name: Critical
-  href: api/Material.Blazor.MD2.MBLoggingLevel.html#Material_Blazor_MD2_MBLoggingLevel_Critical
-  commentId: F:Material.Blazor.MD2.MBLoggingLevel.Critical
-  fullName: Material.Blazor.MD2.MBLoggingLevel.Critical
-  nameWithType: MBLoggingLevel.Critical
-- uid: Material.Blazor.MD2.MBLoggingLevel.Debug
-  name: Debug
-  href: api/Material.Blazor.MD2.MBLoggingLevel.html#Material_Blazor_MD2_MBLoggingLevel_Debug
-  commentId: F:Material.Blazor.MD2.MBLoggingLevel.Debug
-  fullName: Material.Blazor.MD2.MBLoggingLevel.Debug
-  nameWithType: MBLoggingLevel.Debug
-- uid: Material.Blazor.MD2.MBLoggingLevel.Error
-  name: Error
-  href: api/Material.Blazor.MD2.MBLoggingLevel.html#Material_Blazor_MD2_MBLoggingLevel_Error
-  commentId: F:Material.Blazor.MD2.MBLoggingLevel.Error
-  fullName: Material.Blazor.MD2.MBLoggingLevel.Error
-  nameWithType: MBLoggingLevel.Error
-- uid: Material.Blazor.MD2.MBLoggingLevel.Information
-  name: Information
-  href: api/Material.Blazor.MD2.MBLoggingLevel.html#Material_Blazor_MD2_MBLoggingLevel_Information
-  commentId: F:Material.Blazor.MD2.MBLoggingLevel.Information
-  fullName: Material.Blazor.MD2.MBLoggingLevel.Information
-  nameWithType: MBLoggingLevel.Information
-- uid: Material.Blazor.MD2.MBLoggingLevel.None
-  name: None
-  href: api/Material.Blazor.MD2.MBLoggingLevel.html#Material_Blazor_MD2_MBLoggingLevel_None
-  commentId: F:Material.Blazor.MD2.MBLoggingLevel.None
-  fullName: Material.Blazor.MD2.MBLoggingLevel.None
-  nameWithType: MBLoggingLevel.None
-- uid: Material.Blazor.MD2.MBLoggingLevel.Trace
-  name: Trace
-  href: api/Material.Blazor.MD2.MBLoggingLevel.html#Material_Blazor_MD2_MBLoggingLevel_Trace
-  commentId: F:Material.Blazor.MD2.MBLoggingLevel.Trace
-  fullName: Material.Blazor.MD2.MBLoggingLevel.Trace
-  nameWithType: MBLoggingLevel.Trace
-- uid: Material.Blazor.MD2.MBLoggingLevel.Warning
-  name: Warning
-  href: api/Material.Blazor.MD2.MBLoggingLevel.html#Material_Blazor_MD2_MBLoggingLevel_Warning
-  commentId: F:Material.Blazor.MD2.MBLoggingLevel.Warning
-  fullName: Material.Blazor.MD2.MBLoggingLevel.Warning
-  nameWithType: MBLoggingLevel.Warning
 - uid: Material.Blazor.MD2.MBMenu
   name: MBMenu
   href: api/Material.Blazor.MD2.MBMenu.html
@@ -8048,352 +6679,54 @@ references:
   commentId: Overload:Material.Blazor.MD2.MBMenu.ToggleAsync
   fullName: Material.Blazor.MD2.MBMenu.ToggleAsync
   nameWithType: MBMenu.ToggleAsync
-- uid: Material.Blazor.MD2.MBMenuSurfacePositioning
-  name: MBMenuSurfacePositioning
-  href: api/Material.Blazor.MD2.MBMenuSurfacePositioning.html
-  commentId: T:Material.Blazor.MD2.MBMenuSurfacePositioning
-  fullName: Material.Blazor.MD2.MBMenuSurfacePositioning
-  nameWithType: MBMenuSurfacePositioning
-- uid: Material.Blazor.MD2.MBMenuSurfacePositioning.Fixed
-  name: Fixed
-  href: api/Material.Blazor.MD2.MBMenuSurfacePositioning.html#Material_Blazor_MD2_MBMenuSurfacePositioning_Fixed
-  commentId: F:Material.Blazor.MD2.MBMenuSurfacePositioning.Fixed
-  fullName: Material.Blazor.MD2.MBMenuSurfacePositioning.Fixed
-  nameWithType: MBMenuSurfacePositioning.Fixed
-- uid: Material.Blazor.MD2.MBMenuSurfacePositioning.FullWidth
-  name: FullWidth
-  href: api/Material.Blazor.MD2.MBMenuSurfacePositioning.html#Material_Blazor_MD2_MBMenuSurfacePositioning_FullWidth
-  commentId: F:Material.Blazor.MD2.MBMenuSurfacePositioning.FullWidth
-  fullName: Material.Blazor.MD2.MBMenuSurfacePositioning.FullWidth
-  nameWithType: MBMenuSurfacePositioning.FullWidth
-- uid: Material.Blazor.MD2.MBMenuSurfacePositioning.Regular
-  name: Regular
-  href: api/Material.Blazor.MD2.MBMenuSurfacePositioning.html#Material_Blazor_MD2_MBMenuSurfacePositioning_Regular
-  commentId: F:Material.Blazor.MD2.MBMenuSurfacePositioning.Regular
-  fullName: Material.Blazor.MD2.MBMenuSurfacePositioning.Regular
-  nameWithType: MBMenuSurfacePositioning.Regular
-- uid: Material.Blazor.MD2.MBNotifierCloseMethod
-  name: MBNotifierCloseMethod
-  href: api/Material.Blazor.MD2.MBNotifierCloseMethod.html
-  commentId: T:Material.Blazor.MD2.MBNotifierCloseMethod
-  fullName: Material.Blazor.MD2.MBNotifierCloseMethod
-  nameWithType: MBNotifierCloseMethod
-- uid: Material.Blazor.MD2.MBNotifierCloseMethod.DismissButton
-  name: DismissButton
-  href: api/Material.Blazor.MD2.MBNotifierCloseMethod.html#Material_Blazor_MD2_MBNotifierCloseMethod_DismissButton
-  commentId: F:Material.Blazor.MD2.MBNotifierCloseMethod.DismissButton
-  fullName: Material.Blazor.MD2.MBNotifierCloseMethod.DismissButton
-  nameWithType: MBNotifierCloseMethod.DismissButton
-- uid: Material.Blazor.MD2.MBNotifierCloseMethod.Timeout
-  name: Timeout
-  href: api/Material.Blazor.MD2.MBNotifierCloseMethod.html#Material_Blazor_MD2_MBNotifierCloseMethod_Timeout
-  commentId: F:Material.Blazor.MD2.MBNotifierCloseMethod.Timeout
-  fullName: Material.Blazor.MD2.MBNotifierCloseMethod.Timeout
-  nameWithType: MBNotifierCloseMethod.Timeout
-- uid: Material.Blazor.MD2.MBNotifierCloseMethod.TimeoutAndDismissButton
-  name: TimeoutAndDismissButton
-  href: api/Material.Blazor.MD2.MBNotifierCloseMethod.html#Material_Blazor_MD2_MBNotifierCloseMethod_TimeoutAndDismissButton
-  commentId: F:Material.Blazor.MD2.MBNotifierCloseMethod.TimeoutAndDismissButton
-  fullName: Material.Blazor.MD2.MBNotifierCloseMethod.TimeoutAndDismissButton
-  nameWithType: MBNotifierCloseMethod.TimeoutAndDismissButton
-- uid: Material.Blazor.MD2.MBNumericInputMagnitude
-  name: MBNumericInputMagnitude
-  href: api/Material.Blazor.MD2.MBNumericInputMagnitude.html
-  commentId: T:Material.Blazor.MD2.MBNumericInputMagnitude
-  fullName: Material.Blazor.MD2.MBNumericInputMagnitude
-  nameWithType: MBNumericInputMagnitude
-- uid: Material.Blazor.MD2.MBNumericInputMagnitude.BasisPoints
-  name: BasisPoints
-  href: api/Material.Blazor.MD2.MBNumericInputMagnitude.html#Material_Blazor_MD2_MBNumericInputMagnitude_BasisPoints
-  commentId: F:Material.Blazor.MD2.MBNumericInputMagnitude.BasisPoints
-  fullName: Material.Blazor.MD2.MBNumericInputMagnitude.BasisPoints
-  nameWithType: MBNumericInputMagnitude.BasisPoints
-- uid: Material.Blazor.MD2.MBNumericInputMagnitude.Normal
-  name: Normal
-  href: api/Material.Blazor.MD2.MBNumericInputMagnitude.html#Material_Blazor_MD2_MBNumericInputMagnitude_Normal
-  commentId: F:Material.Blazor.MD2.MBNumericInputMagnitude.Normal
-  fullName: Material.Blazor.MD2.MBNumericInputMagnitude.Normal
-  nameWithType: MBNumericInputMagnitude.Normal
-- uid: Material.Blazor.MD2.MBNumericInputMagnitude.Percent
-  name: Percent
-  href: api/Material.Blazor.MD2.MBNumericInputMagnitude.html#Material_Blazor_MD2_MBNumericInputMagnitude_Percent
-  commentId: F:Material.Blazor.MD2.MBNumericInputMagnitude.Percent
-  fullName: Material.Blazor.MD2.MBNumericInputMagnitude.Percent
-  nameWithType: MBNumericInputMagnitude.Percent
-- uid: Material.Blazor.MD2.MBSearchResultTypes
-  name: MBSearchResultTypes
-  href: api/Material.Blazor.MD2.MBSearchResultTypes.html
-  commentId: T:Material.Blazor.MD2.MBSearchResultTypes
-  fullName: Material.Blazor.MD2.MBSearchResultTypes
-  nameWithType: MBSearchResultTypes
-- uid: Material.Blazor.MD2.MBSearchResultTypes.FullMatchFound
-  name: FullMatchFound
-  href: api/Material.Blazor.MD2.MBSearchResultTypes.html#Material_Blazor_MD2_MBSearchResultTypes_FullMatchFound
-  commentId: F:Material.Blazor.MD2.MBSearchResultTypes.FullMatchFound
-  fullName: Material.Blazor.MD2.MBSearchResultTypes.FullMatchFound
-  nameWithType: MBSearchResultTypes.FullMatchFound
-- uid: Material.Blazor.MD2.MBSearchResultTypes.NoMatchesFound
-  name: NoMatchesFound
-  href: api/Material.Blazor.MD2.MBSearchResultTypes.html#Material_Blazor_MD2_MBSearchResultTypes_NoMatchesFound
-  commentId: F:Material.Blazor.MD2.MBSearchResultTypes.NoMatchesFound
-  fullName: Material.Blazor.MD2.MBSearchResultTypes.NoMatchesFound
-  nameWithType: MBSearchResultTypes.NoMatchesFound
-- uid: Material.Blazor.MD2.MBSearchResultTypes.PartialMatchesFound
-  name: PartialMatchesFound
-  href: api/Material.Blazor.MD2.MBSearchResultTypes.html#Material_Blazor_MD2_MBSearchResultTypes_PartialMatchesFound
-  commentId: F:Material.Blazor.MD2.MBSearchResultTypes.PartialMatchesFound
-  fullName: Material.Blazor.MD2.MBSearchResultTypes.PartialMatchesFound
-  nameWithType: MBSearchResultTypes.PartialMatchesFound
-- uid: Material.Blazor.MD2.MBSearchResultTypes.TooManyItemsFound
-  name: TooManyItemsFound
-  href: api/Material.Blazor.MD2.MBSearchResultTypes.html#Material_Blazor_MD2_MBSearchResultTypes_TooManyItemsFound
-  commentId: F:Material.Blazor.MD2.MBSearchResultTypes.TooManyItemsFound
-  fullName: Material.Blazor.MD2.MBSearchResultTypes.TooManyItemsFound
-  nameWithType: MBSearchResultTypes.TooManyItemsFound
-- uid: Material.Blazor.MD2.MBSelectElementMD2`1
-  name: MBSelectElementMD2<T>
-  href: api/Material.Blazor.MD2.MBSelectElementMD2-1.html
-  commentId: T:Material.Blazor.MD2.MBSelectElementMD2`1
-  name.vb: MBSelectElementMD2(Of T)
-  fullName: Material.Blazor.MD2.MBSelectElementMD2<T>
-  fullName.vb: Material.Blazor.MD2.MBSelectElementMD2(Of T)
-  nameWithType: MBSelectElementMD2<T>
-  nameWithType.vb: MBSelectElementMD2(Of T)
-- uid: Material.Blazor.MD2.MBSelectElementMD2`1.#ctor
-  name: MBSelectElementMD2()
-  href: api/Material.Blazor.MD2.MBSelectElementMD2-1.html#Material_Blazor_MD2_MBSelectElementMD2_1__ctor
-  commentId: M:Material.Blazor.MD2.MBSelectElementMD2`1.#ctor
+- uid: Material.Blazor.MD2.MBMenuSelectionGroup
+  name: MBMenuSelectionGroup
+  href: api/Material.Blazor.MD2.MBMenuSelectionGroup.html
+  commentId: T:Material.Blazor.MD2.MBMenuSelectionGroup
+  fullName: Material.Blazor.MD2.MBMenuSelectionGroup
+  nameWithType: MBMenuSelectionGroup
+- uid: Material.Blazor.MD2.MBMenuSelectionGroup.#ctor
+  name: MBMenuSelectionGroup()
+  href: api/Material.Blazor.MD2.MBMenuSelectionGroup.html#Material_Blazor_MD2_MBMenuSelectionGroup__ctor
+  commentId: M:Material.Blazor.MD2.MBMenuSelectionGroup.#ctor
   name.vb: New()
-  fullName: Material.Blazor.MD2.MBSelectElementMD2<T>.MBSelectElementMD2()
-  fullName.vb: Material.Blazor.MD2.MBSelectElementMD2(Of T).New()
-  nameWithType: MBSelectElementMD2<T>.MBSelectElementMD2()
-  nameWithType.vb: MBSelectElementMD2(Of T).New()
-- uid: Material.Blazor.MD2.MBSelectElementMD2`1.#ctor(Material.Blazor.MD2.MBSelectElementMD2{`0})
-  name: MBSelectElementMD2(MBSelectElementMD2<T>)
-  href: api/Material.Blazor.MD2.MBSelectElementMD2-1.html#Material_Blazor_MD2_MBSelectElementMD2_1__ctor_Material_Blazor_MD2_MBSelectElementMD2__0__
-  commentId: M:Material.Blazor.MD2.MBSelectElementMD2`1.#ctor(Material.Blazor.MD2.MBSelectElementMD2{`0})
-  name.vb: New(MBSelectElementMD2(Of T))
-  fullName: Material.Blazor.MD2.MBSelectElementMD2<T>.MBSelectElementMD2(Material.Blazor.MD2.MBSelectElementMD2<T>)
-  fullName.vb: Material.Blazor.MD2.MBSelectElementMD2(Of T).New(Material.Blazor.MD2.MBSelectElementMD2(Of T))
-  nameWithType: MBSelectElementMD2<T>.MBSelectElementMD2(MBSelectElementMD2<T>)
-  nameWithType.vb: MBSelectElementMD2(Of T).New(MBSelectElementMD2(Of T))
-- uid: Material.Blazor.MD2.MBSelectElementMD2`1.#ctor*
-  name: MBSelectElementMD2
-  href: api/Material.Blazor.MD2.MBSelectElementMD2-1.html#Material_Blazor_MD2_MBSelectElementMD2_1__ctor_
-  commentId: Overload:Material.Blazor.MD2.MBSelectElementMD2`1.#ctor
+  fullName: Material.Blazor.MD2.MBMenuSelectionGroup.MBMenuSelectionGroup()
+  fullName.vb: Material.Blazor.MD2.MBMenuSelectionGroup.New()
+  nameWithType: MBMenuSelectionGroup.MBMenuSelectionGroup()
+  nameWithType.vb: MBMenuSelectionGroup.New()
+- uid: Material.Blazor.MD2.MBMenuSelectionGroup.#ctor*
+  name: MBMenuSelectionGroup
+  href: api/Material.Blazor.MD2.MBMenuSelectionGroup.html#Material_Blazor_MD2_MBMenuSelectionGroup__ctor_
+  commentId: Overload:Material.Blazor.MD2.MBMenuSelectionGroup.#ctor
   name.vb: New
-  fullName: Material.Blazor.MD2.MBSelectElementMD2<T>.MBSelectElementMD2
-  fullName.vb: Material.Blazor.MD2.MBSelectElementMD2(Of T).New
-  nameWithType: MBSelectElementMD2<T>.MBSelectElementMD2
-  nameWithType.vb: MBSelectElementMD2(Of T).New
-- uid: Material.Blazor.MD2.MBSelectElementMD2`1.Disabled
-  name: Disabled
-  href: api/Material.Blazor.MD2.MBSelectElementMD2-1.html#Material_Blazor_MD2_MBSelectElementMD2_1_Disabled
-  commentId: P:Material.Blazor.MD2.MBSelectElementMD2`1.Disabled
-  fullName: Material.Blazor.MD2.MBSelectElementMD2<T>.Disabled
-  fullName.vb: Material.Blazor.MD2.MBSelectElementMD2(Of T).Disabled
-  nameWithType: MBSelectElementMD2<T>.Disabled
-  nameWithType.vb: MBSelectElementMD2(Of T).Disabled
-- uid: Material.Blazor.MD2.MBSelectElementMD2`1.Disabled*
-  name: Disabled
-  href: api/Material.Blazor.MD2.MBSelectElementMD2-1.html#Material_Blazor_MD2_MBSelectElementMD2_1_Disabled_
-  commentId: Overload:Material.Blazor.MD2.MBSelectElementMD2`1.Disabled
-  fullName: Material.Blazor.MD2.MBSelectElementMD2<T>.Disabled
-  fullName.vb: Material.Blazor.MD2.MBSelectElementMD2(Of T).Disabled
-  nameWithType: MBSelectElementMD2<T>.Disabled
-  nameWithType.vb: MBSelectElementMD2(Of T).Disabled
-- uid: Material.Blazor.MD2.MBSelectElementMD2`1.EqualityContract
-  name: EqualityContract
-  href: api/Material.Blazor.MD2.MBSelectElementMD2-1.html#Material_Blazor_MD2_MBSelectElementMD2_1_EqualityContract
-  commentId: P:Material.Blazor.MD2.MBSelectElementMD2`1.EqualityContract
-  fullName: Material.Blazor.MD2.MBSelectElementMD2<T>.EqualityContract
-  fullName.vb: Material.Blazor.MD2.MBSelectElementMD2(Of T).EqualityContract
-  nameWithType: MBSelectElementMD2<T>.EqualityContract
-  nameWithType.vb: MBSelectElementMD2(Of T).EqualityContract
-- uid: Material.Blazor.MD2.MBSelectElementMD2`1.EqualityContract*
-  name: EqualityContract
-  href: api/Material.Blazor.MD2.MBSelectElementMD2-1.html#Material_Blazor_MD2_MBSelectElementMD2_1_EqualityContract_
-  commentId: Overload:Material.Blazor.MD2.MBSelectElementMD2`1.EqualityContract
-  fullName: Material.Blazor.MD2.MBSelectElementMD2<T>.EqualityContract
-  fullName.vb: Material.Blazor.MD2.MBSelectElementMD2(Of T).EqualityContract
-  nameWithType: MBSelectElementMD2<T>.EqualityContract
-  nameWithType.vb: MBSelectElementMD2(Of T).EqualityContract
-- uid: Material.Blazor.MD2.MBSelectElementMD2`1.Equals(Material.Blazor.MD2.MBSelectElementMD2{`0})
-  name: Equals(MBSelectElementMD2<T>?)
-  href: api/Material.Blazor.MD2.MBSelectElementMD2-1.html#Material_Blazor_MD2_MBSelectElementMD2_1_Equals_Material_Blazor_MD2_MBSelectElementMD2__0__
-  commentId: M:Material.Blazor.MD2.MBSelectElementMD2`1.Equals(Material.Blazor.MD2.MBSelectElementMD2{`0})
-  name.vb: Equals(MBSelectElementMD2(Of T))
-  fullName: Material.Blazor.MD2.MBSelectElementMD2<T>.Equals(Material.Blazor.MD2.MBSelectElementMD2<T>?)
-  fullName.vb: Material.Blazor.MD2.MBSelectElementMD2(Of T).Equals(Material.Blazor.MD2.MBSelectElementMD2(Of T))
-  nameWithType: MBSelectElementMD2<T>.Equals(MBSelectElementMD2<T>?)
-  nameWithType.vb: MBSelectElementMD2(Of T).Equals(MBSelectElementMD2(Of T))
-- uid: Material.Blazor.MD2.MBSelectElementMD2`1.Equals(System.Object)
-  name: Equals(object?)
-  href: api/Material.Blazor.MD2.MBSelectElementMD2-1.html#Material_Blazor_MD2_MBSelectElementMD2_1_Equals_System_Object_
-  commentId: M:Material.Blazor.MD2.MBSelectElementMD2`1.Equals(System.Object)
-  name.vb: Equals(Object)
-  fullName: Material.Blazor.MD2.MBSelectElementMD2<T>.Equals(object?)
-  fullName.vb: Material.Blazor.MD2.MBSelectElementMD2(Of T).Equals(Object)
-  nameWithType: MBSelectElementMD2<T>.Equals(object?)
-  nameWithType.vb: MBSelectElementMD2(Of T).Equals(Object)
-- uid: Material.Blazor.MD2.MBSelectElementMD2`1.Equals*
-  name: Equals
-  href: api/Material.Blazor.MD2.MBSelectElementMD2-1.html#Material_Blazor_MD2_MBSelectElementMD2_1_Equals_
-  commentId: Overload:Material.Blazor.MD2.MBSelectElementMD2`1.Equals
-  fullName: Material.Blazor.MD2.MBSelectElementMD2<T>.Equals
-  fullName.vb: Material.Blazor.MD2.MBSelectElementMD2(Of T).Equals
-  nameWithType: MBSelectElementMD2<T>.Equals
-  nameWithType.vb: MBSelectElementMD2(Of T).Equals
-- uid: Material.Blazor.MD2.MBSelectElementMD2`1.GetHashCode
-  name: GetHashCode()
-  href: api/Material.Blazor.MD2.MBSelectElementMD2-1.html#Material_Blazor_MD2_MBSelectElementMD2_1_GetHashCode
-  commentId: M:Material.Blazor.MD2.MBSelectElementMD2`1.GetHashCode
-  fullName: Material.Blazor.MD2.MBSelectElementMD2<T>.GetHashCode()
-  fullName.vb: Material.Blazor.MD2.MBSelectElementMD2(Of T).GetHashCode()
-  nameWithType: MBSelectElementMD2<T>.GetHashCode()
-  nameWithType.vb: MBSelectElementMD2(Of T).GetHashCode()
-- uid: Material.Blazor.MD2.MBSelectElementMD2`1.GetHashCode*
-  name: GetHashCode
-  href: api/Material.Blazor.MD2.MBSelectElementMD2-1.html#Material_Blazor_MD2_MBSelectElementMD2_1_GetHashCode_
-  commentId: Overload:Material.Blazor.MD2.MBSelectElementMD2`1.GetHashCode
-  fullName: Material.Blazor.MD2.MBSelectElementMD2<T>.GetHashCode
-  fullName.vb: Material.Blazor.MD2.MBSelectElementMD2(Of T).GetHashCode
-  nameWithType: MBSelectElementMD2<T>.GetHashCode
-  nameWithType.vb: MBSelectElementMD2(Of T).GetHashCode
-- uid: Material.Blazor.MD2.MBSelectElementMD2`1.Label
-  name: Label
-  href: api/Material.Blazor.MD2.MBSelectElementMD2-1.html#Material_Blazor_MD2_MBSelectElementMD2_1_Label
-  commentId: P:Material.Blazor.MD2.MBSelectElementMD2`1.Label
-  fullName: Material.Blazor.MD2.MBSelectElementMD2<T>.Label
-  fullName.vb: Material.Blazor.MD2.MBSelectElementMD2(Of T).Label
-  nameWithType: MBSelectElementMD2<T>.Label
-  nameWithType.vb: MBSelectElementMD2(Of T).Label
-- uid: Material.Blazor.MD2.MBSelectElementMD2`1.Label*
-  name: Label
-  href: api/Material.Blazor.MD2.MBSelectElementMD2-1.html#Material_Blazor_MD2_MBSelectElementMD2_1_Label_
-  commentId: Overload:Material.Blazor.MD2.MBSelectElementMD2`1.Label
-  fullName: Material.Blazor.MD2.MBSelectElementMD2<T>.Label
-  fullName.vb: Material.Blazor.MD2.MBSelectElementMD2(Of T).Label
-  nameWithType: MBSelectElementMD2<T>.Label
-  nameWithType.vb: MBSelectElementMD2(Of T).Label
-- uid: Material.Blazor.MD2.MBSelectElementMD2`1.PrintMembers(System.Text.StringBuilder)
-  name: PrintMembers(StringBuilder)
-  href: api/Material.Blazor.MD2.MBSelectElementMD2-1.html#Material_Blazor_MD2_MBSelectElementMD2_1_PrintMembers_System_Text_StringBuilder_
-  commentId: M:Material.Blazor.MD2.MBSelectElementMD2`1.PrintMembers(System.Text.StringBuilder)
-  fullName: Material.Blazor.MD2.MBSelectElementMD2<T>.PrintMembers(System.Text.StringBuilder)
-  fullName.vb: Material.Blazor.MD2.MBSelectElementMD2(Of T).PrintMembers(System.Text.StringBuilder)
-  nameWithType: MBSelectElementMD2<T>.PrintMembers(StringBuilder)
-  nameWithType.vb: MBSelectElementMD2(Of T).PrintMembers(StringBuilder)
-- uid: Material.Blazor.MD2.MBSelectElementMD2`1.PrintMembers*
-  name: PrintMembers
-  href: api/Material.Blazor.MD2.MBSelectElementMD2-1.html#Material_Blazor_MD2_MBSelectElementMD2_1_PrintMembers_
-  commentId: Overload:Material.Blazor.MD2.MBSelectElementMD2`1.PrintMembers
-  fullName: Material.Blazor.MD2.MBSelectElementMD2<T>.PrintMembers
-  fullName.vb: Material.Blazor.MD2.MBSelectElementMD2(Of T).PrintMembers
-  nameWithType: MBSelectElementMD2<T>.PrintMembers
-  nameWithType.vb: MBSelectElementMD2(Of T).PrintMembers
-- uid: Material.Blazor.MD2.MBSelectElementMD2`1.SelectedValue
-  name: SelectedValue
-  href: api/Material.Blazor.MD2.MBSelectElementMD2-1.html#Material_Blazor_MD2_MBSelectElementMD2_1_SelectedValue
-  commentId: P:Material.Blazor.MD2.MBSelectElementMD2`1.SelectedValue
-  fullName: Material.Blazor.MD2.MBSelectElementMD2<T>.SelectedValue
-  fullName.vb: Material.Blazor.MD2.MBSelectElementMD2(Of T).SelectedValue
-  nameWithType: MBSelectElementMD2<T>.SelectedValue
-  nameWithType.vb: MBSelectElementMD2(Of T).SelectedValue
-- uid: Material.Blazor.MD2.MBSelectElementMD2`1.SelectedValue*
-  name: SelectedValue
-  href: api/Material.Blazor.MD2.MBSelectElementMD2-1.html#Material_Blazor_MD2_MBSelectElementMD2_1_SelectedValue_
-  commentId: Overload:Material.Blazor.MD2.MBSelectElementMD2`1.SelectedValue
-  fullName: Material.Blazor.MD2.MBSelectElementMD2<T>.SelectedValue
-  fullName.vb: Material.Blazor.MD2.MBSelectElementMD2(Of T).SelectedValue
-  nameWithType: MBSelectElementMD2<T>.SelectedValue
-  nameWithType.vb: MBSelectElementMD2(Of T).SelectedValue
-- uid: Material.Blazor.MD2.MBSelectElementMD2`1.ToString
-  name: ToString()
-  href: api/Material.Blazor.MD2.MBSelectElementMD2-1.html#Material_Blazor_MD2_MBSelectElementMD2_1_ToString
-  commentId: M:Material.Blazor.MD2.MBSelectElementMD2`1.ToString
-  fullName: Material.Blazor.MD2.MBSelectElementMD2<T>.ToString()
-  fullName.vb: Material.Blazor.MD2.MBSelectElementMD2(Of T).ToString()
-  nameWithType: MBSelectElementMD2<T>.ToString()
-  nameWithType.vb: MBSelectElementMD2(Of T).ToString()
-- uid: Material.Blazor.MD2.MBSelectElementMD2`1.ToString*
-  name: ToString
-  href: api/Material.Blazor.MD2.MBSelectElementMD2-1.html#Material_Blazor_MD2_MBSelectElementMD2_1_ToString_
-  commentId: Overload:Material.Blazor.MD2.MBSelectElementMD2`1.ToString
-  fullName: Material.Blazor.MD2.MBSelectElementMD2<T>.ToString
-  fullName.vb: Material.Blazor.MD2.MBSelectElementMD2(Of T).ToString
-  nameWithType: MBSelectElementMD2<T>.ToString
-  nameWithType.vb: MBSelectElementMD2(Of T).ToString
-- uid: Material.Blazor.MD2.MBSelectElementMD2`1.op_Equality(Material.Blazor.MD2.MBSelectElementMD2{`0},Material.Blazor.MD2.MBSelectElementMD2{`0})
-  name: operator ==(MBSelectElementMD2<T>?, MBSelectElementMD2<T>?)
-  href: api/Material.Blazor.MD2.MBSelectElementMD2-1.html#Material_Blazor_MD2_MBSelectElementMD2_1_op_Equality_Material_Blazor_MD2_MBSelectElementMD2__0__Material_Blazor_MD2_MBSelectElementMD2__0__
-  commentId: M:Material.Blazor.MD2.MBSelectElementMD2`1.op_Equality(Material.Blazor.MD2.MBSelectElementMD2{`0},Material.Blazor.MD2.MBSelectElementMD2{`0})
-  name.vb: =(MBSelectElementMD2(Of T), MBSelectElementMD2(Of T))
-  fullName: Material.Blazor.MD2.MBSelectElementMD2<T>.operator ==(Material.Blazor.MD2.MBSelectElementMD2<T>?, Material.Blazor.MD2.MBSelectElementMD2<T>?)
-  fullName.vb: Material.Blazor.MD2.MBSelectElementMD2(Of T).=(Material.Blazor.MD2.MBSelectElementMD2(Of T), Material.Blazor.MD2.MBSelectElementMD2(Of T))
-  nameWithType: MBSelectElementMD2<T>.operator ==(MBSelectElementMD2<T>?, MBSelectElementMD2<T>?)
-  nameWithType.vb: MBSelectElementMD2(Of T).=(MBSelectElementMD2(Of T), MBSelectElementMD2(Of T))
-- uid: Material.Blazor.MD2.MBSelectElementMD2`1.op_Equality*
-  name: operator ==
-  href: api/Material.Blazor.MD2.MBSelectElementMD2-1.html#Material_Blazor_MD2_MBSelectElementMD2_1_op_Equality_
-  commentId: Overload:Material.Blazor.MD2.MBSelectElementMD2`1.op_Equality
-  name.vb: =
-  fullName: Material.Blazor.MD2.MBSelectElementMD2<T>.operator ==
-  fullName.vb: Material.Blazor.MD2.MBSelectElementMD2(Of T).=
-  nameWithType: MBSelectElementMD2<T>.operator ==
-  nameWithType.vb: MBSelectElementMD2(Of T).=
-- uid: Material.Blazor.MD2.MBSelectElementMD2`1.op_Inequality(Material.Blazor.MD2.MBSelectElementMD2{`0},Material.Blazor.MD2.MBSelectElementMD2{`0})
-  name: operator !=(MBSelectElementMD2<T>?, MBSelectElementMD2<T>?)
-  href: api/Material.Blazor.MD2.MBSelectElementMD2-1.html#Material_Blazor_MD2_MBSelectElementMD2_1_op_Inequality_Material_Blazor_MD2_MBSelectElementMD2__0__Material_Blazor_MD2_MBSelectElementMD2__0__
-  commentId: M:Material.Blazor.MD2.MBSelectElementMD2`1.op_Inequality(Material.Blazor.MD2.MBSelectElementMD2{`0},Material.Blazor.MD2.MBSelectElementMD2{`0})
-  name.vb: <>(MBSelectElementMD2(Of T), MBSelectElementMD2(Of T))
-  fullName: Material.Blazor.MD2.MBSelectElementMD2<T>.operator !=(Material.Blazor.MD2.MBSelectElementMD2<T>?, Material.Blazor.MD2.MBSelectElementMD2<T>?)
-  fullName.vb: Material.Blazor.MD2.MBSelectElementMD2(Of T).<>(Material.Blazor.MD2.MBSelectElementMD2(Of T), Material.Blazor.MD2.MBSelectElementMD2(Of T))
-  nameWithType: MBSelectElementMD2<T>.operator !=(MBSelectElementMD2<T>?, MBSelectElementMD2<T>?)
-  nameWithType.vb: MBSelectElementMD2(Of T).<>(MBSelectElementMD2(Of T), MBSelectElementMD2(Of T))
-- uid: Material.Blazor.MD2.MBSelectElementMD2`1.op_Inequality*
-  name: operator !=
-  href: api/Material.Blazor.MD2.MBSelectElementMD2-1.html#Material_Blazor_MD2_MBSelectElementMD2_1_op_Inequality_
-  commentId: Overload:Material.Blazor.MD2.MBSelectElementMD2`1.op_Inequality
-  name.vb: <>
-  fullName: Material.Blazor.MD2.MBSelectElementMD2<T>.operator !=
-  fullName.vb: Material.Blazor.MD2.MBSelectElementMD2(Of T).<>
-  nameWithType: MBSelectElementMD2<T>.operator !=
-  nameWithType.vb: MBSelectElementMD2(Of T).<>
-- uid: Material.Blazor.MD2.MBSelectElementMD2`1.{Clone}$
-  name: <Clone>$()
-  href: api/Material.Blazor.MD2.MBSelectElementMD2-1.html#Material_Blazor_MD2_MBSelectElementMD2_1__Clone__
-  commentId: M:Material.Blazor.MD2.MBSelectElementMD2`1.{Clone}$
-  fullName: Material.Blazor.MD2.MBSelectElementMD2<T>.<Clone>$()
-  fullName.vb: Material.Blazor.MD2.MBSelectElementMD2(Of T).<Clone>$()
-  nameWithType: MBSelectElementMD2<T>.<Clone>$()
-  nameWithType.vb: MBSelectElementMD2(Of T).<Clone>$()
-- uid: Material.Blazor.MD2.MBSelectElementMD2`1.{Clone}$*
-  name: <Clone>$
-  href: api/Material.Blazor.MD2.MBSelectElementMD2-1.html#Material_Blazor_MD2_MBSelectElementMD2_1__Clone___
-  commentId: Overload:Material.Blazor.MD2.MBSelectElementMD2`1.{Clone}$
-  fullName: Material.Blazor.MD2.MBSelectElementMD2<T>.<Clone>$
-  fullName.vb: Material.Blazor.MD2.MBSelectElementMD2(Of T).<Clone>$
-  nameWithType: MBSelectElementMD2<T>.<Clone>$
-  nameWithType.vb: MBSelectElementMD2(Of T).<Clone>$
-- uid: Material.Blazor.MD2.MBSelectInputStyle
-  name: MBSelectInputStyle
-  href: api/Material.Blazor.MD2.MBSelectInputStyle.html
-  commentId: T:Material.Blazor.MD2.MBSelectInputStyle
-  fullName: Material.Blazor.MD2.MBSelectInputStyle
-  nameWithType: MBSelectInputStyle
-- uid: Material.Blazor.MD2.MBSelectInputStyle.Filled
-  name: Filled
-  href: api/Material.Blazor.MD2.MBSelectInputStyle.html#Material_Blazor_MD2_MBSelectInputStyle_Filled
-  commentId: F:Material.Blazor.MD2.MBSelectInputStyle.Filled
-  fullName: Material.Blazor.MD2.MBSelectInputStyle.Filled
-  nameWithType: MBSelectInputStyle.Filled
-- uid: Material.Blazor.MD2.MBSelectInputStyle.Outlined
-  name: Outlined
-  href: api/Material.Blazor.MD2.MBSelectInputStyle.html#Material_Blazor_MD2_MBSelectInputStyle_Outlined
-  commentId: F:Material.Blazor.MD2.MBSelectInputStyle.Outlined
-  fullName: Material.Blazor.MD2.MBSelectInputStyle.Outlined
-  nameWithType: MBSelectInputStyle.Outlined
+  fullName: Material.Blazor.MD2.MBMenuSelectionGroup.MBMenuSelectionGroup
+  fullName.vb: Material.Blazor.MD2.MBMenuSelectionGroup.New
+  nameWithType: MBMenuSelectionGroup.MBMenuSelectionGroup
+  nameWithType.vb: MBMenuSelectionGroup.New
+- uid: Material.Blazor.MD2.MBMenuSelectionGroup.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  name: BuildRenderTree(RenderTreeBuilder)
+  href: api/Material.Blazor.MD2.MBMenuSelectionGroup.html#Material_Blazor_MD2_MBMenuSelectionGroup_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
+  commentId: M:Material.Blazor.MD2.MBMenuSelectionGroup.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  fullName: Material.Blazor.MD2.MBMenuSelectionGroup.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  nameWithType: MBMenuSelectionGroup.BuildRenderTree(RenderTreeBuilder)
+- uid: Material.Blazor.MD2.MBMenuSelectionGroup.BuildRenderTree*
+  name: BuildRenderTree
+  href: api/Material.Blazor.MD2.MBMenuSelectionGroup.html#Material_Blazor_MD2_MBMenuSelectionGroup_BuildRenderTree_
+  commentId: Overload:Material.Blazor.MD2.MBMenuSelectionGroup.BuildRenderTree
+  fullName: Material.Blazor.MD2.MBMenuSelectionGroup.BuildRenderTree
+  nameWithType: MBMenuSelectionGroup.BuildRenderTree
+- uid: Material.Blazor.MD2.MBMenuSelectionGroup.ChildContent
+  name: ChildContent
+  href: api/Material.Blazor.MD2.MBMenuSelectionGroup.html#Material_Blazor_MD2_MBMenuSelectionGroup_ChildContent
+  commentId: P:Material.Blazor.MD2.MBMenuSelectionGroup.ChildContent
+  fullName: Material.Blazor.MD2.MBMenuSelectionGroup.ChildContent
+  nameWithType: MBMenuSelectionGroup.ChildContent
+- uid: Material.Blazor.MD2.MBMenuSelectionGroup.ChildContent*
+  name: ChildContent
+  href: api/Material.Blazor.MD2.MBMenuSelectionGroup.html#Material_Blazor_MD2_MBMenuSelectionGroup_ChildContent_
+  commentId: Overload:Material.Blazor.MD2.MBMenuSelectionGroup.ChildContent
+  fullName: Material.Blazor.MD2.MBMenuSelectionGroup.ChildContent
+  nameWithType: MBMenuSelectionGroup.ChildContent
 - uid: Material.Blazor.MD2.MBSelect`1
   name: MBSelect<TItem>
   href: api/Material.Blazor.MD2.MBSelect-1.html
@@ -8663,30 +6996,6 @@ references:
   fullName.vb: Material.Blazor.MD2.MBSelect(Of TItem).TextAlignStyle
   nameWithType: MBSelect<TItem>.TextAlignStyle
   nameWithType.vb: MBSelect(Of TItem).TextAlignStyle
-- uid: Material.Blazor.MD2.MBShieldType
-  name: MBShieldType
-  href: api/Material.Blazor.MD2.MBShieldType.html
-  commentId: T:Material.Blazor.MD2.MBShieldType
-  fullName: Material.Blazor.MD2.MBShieldType
-  nameWithType: MBShieldType
-- uid: Material.Blazor.MD2.MBShieldType.LabelAndValue
-  name: LabelAndValue
-  href: api/Material.Blazor.MD2.MBShieldType.html#Material_Blazor_MD2_MBShieldType_LabelAndValue
-  commentId: F:Material.Blazor.MD2.MBShieldType.LabelAndValue
-  fullName: Material.Blazor.MD2.MBShieldType.LabelAndValue
-  nameWithType: MBShieldType.LabelAndValue
-- uid: Material.Blazor.MD2.MBShieldType.LabelOnly
-  name: LabelOnly
-  href: api/Material.Blazor.MD2.MBShieldType.html#Material_Blazor_MD2_MBShieldType_LabelOnly
-  commentId: F:Material.Blazor.MD2.MBShieldType.LabelOnly
-  fullName: Material.Blazor.MD2.MBShieldType.LabelOnly
-  nameWithType: MBShieldType.LabelOnly
-- uid: Material.Blazor.MD2.MBShieldType.ValueOnly
-  name: ValueOnly
-  href: api/Material.Blazor.MD2.MBShieldType.html#Material_Blazor_MD2_MBShieldType_ValueOnly
-  commentId: F:Material.Blazor.MD2.MBShieldType.ValueOnly
-  fullName: Material.Blazor.MD2.MBShieldType.ValueOnly
-  nameWithType: MBShieldType.ValueOnly
 - uid: Material.Blazor.MD2.MBSlider
   name: MBSlider
   href: api/Material.Blazor.MD2.MBSlider.html
@@ -8861,150 +7170,6 @@ references:
   commentId: Overload:Material.Blazor.MD2.MBSlider.ValueMin
   fullName: Material.Blazor.MD2.MBSlider.ValueMin
   nameWithType: MBSlider.ValueMin
-- uid: Material.Blazor.MD2.MBSliderType
-  name: MBSliderType
-  href: api/Material.Blazor.MD2.MBSliderType.html
-  commentId: T:Material.Blazor.MD2.MBSliderType
-  fullName: Material.Blazor.MD2.MBSliderType
-  nameWithType: MBSliderType
-- uid: Material.Blazor.MD2.MBSliderType.Continuous
-  name: Continuous
-  href: api/Material.Blazor.MD2.MBSliderType.html#Material_Blazor_MD2_MBSliderType_Continuous
-  commentId: F:Material.Blazor.MD2.MBSliderType.Continuous
-  fullName: Material.Blazor.MD2.MBSliderType.Continuous
-  nameWithType: MBSliderType.Continuous
-- uid: Material.Blazor.MD2.MBSliderType.Discrete
-  name: Discrete
-  href: api/Material.Blazor.MD2.MBSliderType.html#Material_Blazor_MD2_MBSliderType_Discrete
-  commentId: F:Material.Blazor.MD2.MBSliderType.Discrete
-  fullName: Material.Blazor.MD2.MBSliderType.Discrete
-  nameWithType: MBSliderType.Discrete
-- uid: Material.Blazor.MD2.MBSliderType.DiscreteWithTickmarks
-  name: DiscreteWithTickmarks
-  href: api/Material.Blazor.MD2.MBSliderType.html#Material_Blazor_MD2_MBSliderType_DiscreteWithTickmarks
-  commentId: F:Material.Blazor.MD2.MBSliderType.DiscreteWithTickmarks
-  fullName: Material.Blazor.MD2.MBSliderType.DiscreteWithTickmarks
-  nameWithType: MBSliderType.DiscreteWithTickmarks
-- uid: Material.Blazor.MD2.MBTextAlignStyle
-  name: MBTextAlignStyle
-  href: api/Material.Blazor.MD2.MBTextAlignStyle.html
-  commentId: T:Material.Blazor.MD2.MBTextAlignStyle
-  fullName: Material.Blazor.MD2.MBTextAlignStyle
-  nameWithType: MBTextAlignStyle
-- uid: Material.Blazor.MD2.MBTextAlignStyle.Center
-  name: Center
-  href: api/Material.Blazor.MD2.MBTextAlignStyle.html#Material_Blazor_MD2_MBTextAlignStyle_Center
-  commentId: F:Material.Blazor.MD2.MBTextAlignStyle.Center
-  fullName: Material.Blazor.MD2.MBTextAlignStyle.Center
-  nameWithType: MBTextAlignStyle.Center
-- uid: Material.Blazor.MD2.MBTextAlignStyle.Default
-  name: Default
-  href: api/Material.Blazor.MD2.MBTextAlignStyle.html#Material_Blazor_MD2_MBTextAlignStyle_Default
-  commentId: F:Material.Blazor.MD2.MBTextAlignStyle.Default
-  fullName: Material.Blazor.MD2.MBTextAlignStyle.Default
-  nameWithType: MBTextAlignStyle.Default
-- uid: Material.Blazor.MD2.MBTextAlignStyle.Left
-  name: Left
-  href: api/Material.Blazor.MD2.MBTextAlignStyle.html#Material_Blazor_MD2_MBTextAlignStyle_Left
-  commentId: F:Material.Blazor.MD2.MBTextAlignStyle.Left
-  fullName: Material.Blazor.MD2.MBTextAlignStyle.Left
-  nameWithType: MBTextAlignStyle.Left
-- uid: Material.Blazor.MD2.MBTextAlignStyle.Right
-  name: Right
-  href: api/Material.Blazor.MD2.MBTextAlignStyle.html#Material_Blazor_MD2_MBTextAlignStyle_Right
-  commentId: F:Material.Blazor.MD2.MBTextAlignStyle.Right
-  fullName: Material.Blazor.MD2.MBTextAlignStyle.Right
-  nameWithType: MBTextAlignStyle.Right
-- uid: Material.Blazor.MD2.MBToastLevel
-  name: MBToastLevel
-  href: api/Material.Blazor.MD2.MBToastLevel.html
-  commentId: T:Material.Blazor.MD2.MBToastLevel
-  fullName: Material.Blazor.MD2.MBToastLevel
-  nameWithType: MBToastLevel
-- uid: Material.Blazor.MD2.MBToastLevel.Error
-  name: Error
-  href: api/Material.Blazor.MD2.MBToastLevel.html#Material_Blazor_MD2_MBToastLevel_Error
-  commentId: F:Material.Blazor.MD2.MBToastLevel.Error
-  fullName: Material.Blazor.MD2.MBToastLevel.Error
-  nameWithType: MBToastLevel.Error
-- uid: Material.Blazor.MD2.MBToastLevel.Info
-  name: Info
-  href: api/Material.Blazor.MD2.MBToastLevel.html#Material_Blazor_MD2_MBToastLevel_Info
-  commentId: F:Material.Blazor.MD2.MBToastLevel.Info
-  fullName: Material.Blazor.MD2.MBToastLevel.Info
-  nameWithType: MBToastLevel.Info
-- uid: Material.Blazor.MD2.MBToastLevel.Success
-  name: Success
-  href: api/Material.Blazor.MD2.MBToastLevel.html#Material_Blazor_MD2_MBToastLevel_Success
-  commentId: F:Material.Blazor.MD2.MBToastLevel.Success
-  fullName: Material.Blazor.MD2.MBToastLevel.Success
-  nameWithType: MBToastLevel.Success
-- uid: Material.Blazor.MD2.MBToastLevel.Warning
-  name: Warning
-  href: api/Material.Blazor.MD2.MBToastLevel.html#Material_Blazor_MD2_MBToastLevel_Warning
-  commentId: F:Material.Blazor.MD2.MBToastLevel.Warning
-  fullName: Material.Blazor.MD2.MBToastLevel.Warning
-  nameWithType: MBToastLevel.Warning
-- uid: Material.Blazor.MD2.MBToastPosition
-  name: MBToastPosition
-  href: api/Material.Blazor.MD2.MBToastPosition.html
-  commentId: T:Material.Blazor.MD2.MBToastPosition
-  fullName: Material.Blazor.MD2.MBToastPosition
-  nameWithType: MBToastPosition
-- uid: Material.Blazor.MD2.MBToastPosition.BottomCenter
-  name: BottomCenter
-  href: api/Material.Blazor.MD2.MBToastPosition.html#Material_Blazor_MD2_MBToastPosition_BottomCenter
-  commentId: F:Material.Blazor.MD2.MBToastPosition.BottomCenter
-  fullName: Material.Blazor.MD2.MBToastPosition.BottomCenter
-  nameWithType: MBToastPosition.BottomCenter
-- uid: Material.Blazor.MD2.MBToastPosition.BottomLeft
-  name: BottomLeft
-  href: api/Material.Blazor.MD2.MBToastPosition.html#Material_Blazor_MD2_MBToastPosition_BottomLeft
-  commentId: F:Material.Blazor.MD2.MBToastPosition.BottomLeft
-  fullName: Material.Blazor.MD2.MBToastPosition.BottomLeft
-  nameWithType: MBToastPosition.BottomLeft
-- uid: Material.Blazor.MD2.MBToastPosition.BottomRight
-  name: BottomRight
-  href: api/Material.Blazor.MD2.MBToastPosition.html#Material_Blazor_MD2_MBToastPosition_BottomRight
-  commentId: F:Material.Blazor.MD2.MBToastPosition.BottomRight
-  fullName: Material.Blazor.MD2.MBToastPosition.BottomRight
-  nameWithType: MBToastPosition.BottomRight
-- uid: Material.Blazor.MD2.MBToastPosition.CenterCenter
-  name: CenterCenter
-  href: api/Material.Blazor.MD2.MBToastPosition.html#Material_Blazor_MD2_MBToastPosition_CenterCenter
-  commentId: F:Material.Blazor.MD2.MBToastPosition.CenterCenter
-  fullName: Material.Blazor.MD2.MBToastPosition.CenterCenter
-  nameWithType: MBToastPosition.CenterCenter
-- uid: Material.Blazor.MD2.MBToastPosition.CenterLeft
-  name: CenterLeft
-  href: api/Material.Blazor.MD2.MBToastPosition.html#Material_Blazor_MD2_MBToastPosition_CenterLeft
-  commentId: F:Material.Blazor.MD2.MBToastPosition.CenterLeft
-  fullName: Material.Blazor.MD2.MBToastPosition.CenterLeft
-  nameWithType: MBToastPosition.CenterLeft
-- uid: Material.Blazor.MD2.MBToastPosition.CenterRight
-  name: CenterRight
-  href: api/Material.Blazor.MD2.MBToastPosition.html#Material_Blazor_MD2_MBToastPosition_CenterRight
-  commentId: F:Material.Blazor.MD2.MBToastPosition.CenterRight
-  fullName: Material.Blazor.MD2.MBToastPosition.CenterRight
-  nameWithType: MBToastPosition.CenterRight
-- uid: Material.Blazor.MD2.MBToastPosition.TopCenter
-  name: TopCenter
-  href: api/Material.Blazor.MD2.MBToastPosition.html#Material_Blazor_MD2_MBToastPosition_TopCenter
-  commentId: F:Material.Blazor.MD2.MBToastPosition.TopCenter
-  fullName: Material.Blazor.MD2.MBToastPosition.TopCenter
-  nameWithType: MBToastPosition.TopCenter
-- uid: Material.Blazor.MD2.MBToastPosition.TopLeft
-  name: TopLeft
-  href: api/Material.Blazor.MD2.MBToastPosition.html#Material_Blazor_MD2_MBToastPosition_TopLeft
-  commentId: F:Material.Blazor.MD2.MBToastPosition.TopLeft
-  fullName: Material.Blazor.MD2.MBToastPosition.TopLeft
-  nameWithType: MBToastPosition.TopLeft
-- uid: Material.Blazor.MD2.MBToastPosition.TopRight
-  name: TopRight
-  href: api/Material.Blazor.MD2.MBToastPosition.html#Material_Blazor_MD2_MBToastPosition_TopRight
-  commentId: F:Material.Blazor.MD2.MBToastPosition.TopRight
-  fullName: Material.Blazor.MD2.MBToastPosition.TopRight
-  nameWithType: MBToastPosition.TopRight
 - uid: Material.Blazor.MD2.MBTopAppBar
   name: MBTopAppBar
   href: api/Material.Blazor.MD2.MBTopAppBar.html
@@ -9113,48 +7278,6 @@ references:
   commentId: Overload:Material.Blazor.MD2.MBTopAppBar.TopAppBarType
   fullName: Material.Blazor.MD2.MBTopAppBar.TopAppBarType
   nameWithType: MBTopAppBar.TopAppBarType
-- uid: Material.Blazor.MD2.MBTopAppBarType
-  name: MBTopAppBarType
-  href: api/Material.Blazor.MD2.MBTopAppBarType.html
-  commentId: T:Material.Blazor.MD2.MBTopAppBarType
-  fullName: Material.Blazor.MD2.MBTopAppBarType
-  nameWithType: MBTopAppBarType
-- uid: Material.Blazor.MD2.MBTopAppBarType.Dense
-  name: Dense
-  href: api/Material.Blazor.MD2.MBTopAppBarType.html#Material_Blazor_MD2_MBTopAppBarType_Dense
-  commentId: F:Material.Blazor.MD2.MBTopAppBarType.Dense
-  fullName: Material.Blazor.MD2.MBTopAppBarType.Dense
-  nameWithType: MBTopAppBarType.Dense
-- uid: Material.Blazor.MD2.MBTopAppBarType.Fixed
-  name: Fixed
-  href: api/Material.Blazor.MD2.MBTopAppBarType.html#Material_Blazor_MD2_MBTopAppBarType_Fixed
-  commentId: F:Material.Blazor.MD2.MBTopAppBarType.Fixed
-  fullName: Material.Blazor.MD2.MBTopAppBarType.Fixed
-  nameWithType: MBTopAppBarType.Fixed
-- uid: Material.Blazor.MD2.MBTopAppBarType.Prominent
-  name: Prominent
-  href: api/Material.Blazor.MD2.MBTopAppBarType.html#Material_Blazor_MD2_MBTopAppBarType_Prominent
-  commentId: F:Material.Blazor.MD2.MBTopAppBarType.Prominent
-  fullName: Material.Blazor.MD2.MBTopAppBarType.Prominent
-  nameWithType: MBTopAppBarType.Prominent
-- uid: Material.Blazor.MD2.MBTopAppBarType.Short
-  name: Short
-  href: api/Material.Blazor.MD2.MBTopAppBarType.html#Material_Blazor_MD2_MBTopAppBarType_Short
-  commentId: F:Material.Blazor.MD2.MBTopAppBarType.Short
-  fullName: Material.Blazor.MD2.MBTopAppBarType.Short
-  nameWithType: MBTopAppBarType.Short
-- uid: Material.Blazor.MD2.MBTopAppBarType.ShortCollapsed
-  name: ShortCollapsed
-  href: api/Material.Blazor.MD2.MBTopAppBarType.html#Material_Blazor_MD2_MBTopAppBarType_ShortCollapsed
-  commentId: F:Material.Blazor.MD2.MBTopAppBarType.ShortCollapsed
-  fullName: Material.Blazor.MD2.MBTopAppBarType.ShortCollapsed
-  nameWithType: MBTopAppBarType.ShortCollapsed
-- uid: Material.Blazor.MD2.MBTopAppBarType.Standard
-  name: Standard
-  href: api/Material.Blazor.MD2.MBTopAppBarType.html#Material_Blazor_MD2_MBTopAppBarType_Standard
-  commentId: F:Material.Blazor.MD2.MBTopAppBarType.Standard
-  fullName: Material.Blazor.MD2.MBTopAppBarType.Standard
-  nameWithType: MBTopAppBarType.Standard
 - uid: Material.Blazor.MD2.MBTouchTargetWrapper
   name: MBTouchTargetWrapper
   href: api/Material.Blazor.MD2.MBTouchTargetWrapper.html

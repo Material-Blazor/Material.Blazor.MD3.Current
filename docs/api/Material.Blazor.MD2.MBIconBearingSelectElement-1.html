@@ -102,7 +102,7 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public record MBIconBearingSelectElement&lt;T&gt; : MBSelectElementMD2&lt;T&gt;, IEquatable&lt;MBSelectElementMD2&lt;T&gt;&gt;, IEquatable&lt;MBIconBearingSelectElement&lt;T&gt;&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public record MBIconBearingSelectElement&lt;T&gt; : MBSelectElement&lt;T&gt;, IEquatable&lt;MBSelectElement&lt;T&gt;&gt;, IEquatable&lt;MBIconBearingSelectElement&lt;T&gt;&gt;</code></pre>
   </div>
 
 
@@ -117,7 +117,7 @@
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><a class="xref" href="Material.Blazor.MD2.MBSelectElementMD2-1.html">MBSelectElementMD2</a>&lt;T&gt;</div>
+      <div><a class="xref" href="Material.Blazor.MBSelectElement-1.html">MBSelectElement</a>&lt;T&gt;</div>
       <div><span class="xref">MBIconBearingSelectElement&lt;T&gt;</span></div>
     </dd>
   </dl>
@@ -125,7 +125,7 @@
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Material.Blazor.MD2.MBSelectElementMD2-1.html">MBSelectElementMD2</a>&lt;T&gt;&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Material.Blazor.MBSelectElement-1.html">MBSelectElement</a>&lt;T&gt;&gt;</div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Material.Blazor.MD2.MBIconBearingSelectElement-1.html">MBIconBearingSelectElement</a>&lt;T&gt;&gt;</div>
     </dd>
   </dl>
@@ -135,13 +135,16 @@
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="Material.Blazor.MD2.MBSelectElementMD2-1.html#Material_Blazor_MD2_MBSelectElementMD2_1_SelectedValue">MBSelectElementMD2&lt;T&gt;.SelectedValue</a>
+      <a class="xref" href="Material.Blazor.MBSelectElement-1.html#Material_Blazor_MBSelectElement_1_SelectedValue">MBSelectElement&lt;T&gt;.SelectedValue</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.MD2.MBSelectElementMD2-1.html#Material_Blazor_MD2_MBSelectElementMD2_1_Label">MBSelectElementMD2&lt;T&gt;.Label</a>
+      <a class="xref" href="Material.Blazor.MBSelectElement-1.html#Material_Blazor_MBSelectElement_1_LeadingLabel">MBSelectElement&lt;T&gt;.LeadingLabel</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.MD2.MBSelectElementMD2-1.html#Material_Blazor_MD2_MBSelectElementMD2_1_Disabled">MBSelectElementMD2&lt;T&gt;.Disabled</a>
+      <a class="xref" href="Material.Blazor.MBSelectElement-1.html#Material_Blazor_MBSelectElement_1_TrailingLabel">MBSelectElement&lt;T&gt;.TrailingLabel</a>
+    </div>
+    <div>
+      <a class="xref" href="Material.Blazor.MBSelectElement-1.html#Material_Blazor_MBSelectElement_1_Disabled">MBSelectElement&lt;T&gt;.Disabled</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
@@ -295,8 +298,8 @@
 
   <a id="Material_Blazor_MD2_MBIconBearingSelectElement_1_Equals_" data-uid="Material.Blazor.MD2.MBIconBearingSelectElement`1.Equals*"></a>
 
-  <h3 id="Material_Blazor_MD2_MBIconBearingSelectElement_1_Equals_Material_Blazor_MD2_MBIconBearingSelectElement__0__" data-uid="Material.Blazor.MD2.MBIconBearingSelectElement`1.Equals(Material.Blazor.MD2.MBIconBearingSelectElement{`0})">
-  Equals(MBIconBearingSelectElement&lt;T&gt;?)
+  <h3 id="Material_Blazor_MD2_MBIconBearingSelectElement_1_Equals_Material_Blazor_MBSelectElement__0__" data-uid="Material.Blazor.MD2.MBIconBearingSelectElement`1.Equals(Material.Blazor.MBSelectElement{`0})">
+  Equals(MBSelectElement&lt;T&gt;?)
   <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Model/MBIconBearingSelectElement.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -304,12 +307,12 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool Equals(MBIconBearingSelectElement&lt;T&gt;? other)</code></pre>
+    <pre><code class="lang-csharp hljs">public override sealed bool Equals(MBSelectElement&lt;T&gt;? other)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>other</code> <a class="xref" href="Material.Blazor.MD2.MBIconBearingSelectElement-1.html">MBIconBearingSelectElement</a>&lt;T&gt;</dt>
+    <dt><code>other</code> <a class="xref" href="Material.Blazor.MBSelectElement-1.html">MBSelectElement</a>&lt;T&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -331,8 +334,8 @@
 
   <a id="Material_Blazor_MD2_MBIconBearingSelectElement_1_Equals_" data-uid="Material.Blazor.MD2.MBIconBearingSelectElement`1.Equals*"></a>
 
-  <h3 id="Material_Blazor_MD2_MBIconBearingSelectElement_1_Equals_Material_Blazor_MD2_MBSelectElementMD2__0__" data-uid="Material.Blazor.MD2.MBIconBearingSelectElement`1.Equals(Material.Blazor.MD2.MBSelectElementMD2{`0})">
-  Equals(MBSelectElementMD2&lt;T&gt;?)
+  <h3 id="Material_Blazor_MD2_MBIconBearingSelectElement_1_Equals_Material_Blazor_MD2_MBIconBearingSelectElement__0__" data-uid="Material.Blazor.MD2.MBIconBearingSelectElement`1.Equals(Material.Blazor.MD2.MBIconBearingSelectElement{`0})">
+  Equals(MBIconBearingSelectElement&lt;T&gt;?)
   <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Model/MBIconBearingSelectElement.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -340,12 +343,12 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override sealed bool Equals(MBSelectElementMD2&lt;T&gt;? other)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool Equals(MBIconBearingSelectElement&lt;T&gt;? other)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>other</code> <a class="xref" href="Material.Blazor.MD2.MBSelectElementMD2-1.html">MBSelectElementMD2</a>&lt;T&gt;</dt>
+    <dt><code>other</code> <a class="xref" href="Material.Blazor.MD2.MBIconBearingSelectElement-1.html">MBIconBearingSelectElement</a>&lt;T&gt;</dt>
     <dd></dd>
   </dl>
 
