@@ -1,5 +1,4 @@
 {
-  "homepages": [],
   "source_base_path": "D:/a/Material.Blazor/Material.Blazor",
   "xrefmap": "xrefmap.yml",
   "files": [
@@ -838,16 +837,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.IconDescriptor.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.IconDescriptor.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.Internal.ComponentFoundation.yml",
       "output": {
         ".html": {
@@ -1132,6 +1121,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBIcon.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBIconDescriptor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBIconDescriptor.html"
         }
       },
       "version": ""
@@ -1763,7 +1762,6 @@
       "version": ""
     }
   ],
-  "version_info": {},
   "groups": [
     {
       "xrefmap": "xrefmap.yml"
