@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class MBFilledDecimalField
+      <title>Class MBIntField
  </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class MBFilledDecimalField
+      <meta name="title" content="Class MBIntField
  ">
       
       <link rel="icon" href="../favicon.ico">
@@ -84,13 +84,13 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Material.Blazor.MBFilledDecimalField">
+        <article data-uid="Material.Blazor.MBIntField">
 
 
 
-  <h1 id="Material_Blazor_MBFilledDecimalField" data-uid="Material.Blazor.MBFilledDecimalField" class="text-break">
-    Class MBFilledDecimalField
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField/MBFilledDecimalField.cs"><i class="bi bi-code-slash"></i></a>
+  <h1 id="Material_Blazor_MBIntField" data-uid="Material.Blazor.MBIntField" class="text-break">
+    Class MBIntField
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField/MBIntField.cs"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class MBFilledDecimalField : InternalFloatingPointFieldBase&lt;decimal, MBFilledTextField&gt;, IComponent, IHandleEvent, IHandleAfterRender, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class MBIntField : InternalIntFieldBase&lt;MBTextField&gt;, IComponent, IHandleEvent, IHandleAfterRender, IDisposable</code></pre>
   </div>
 
 
@@ -114,10 +114,10 @@
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase">ComponentBase</a></div>
       <div><a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html">ComponentFoundation</a></div>
-      <div><a class="xref" href="Material.Blazor.Internal.InputComponent-1.html">InputComponent</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a>&gt;</div>
-      <div><a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html">InternalNumericFieldBase</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a>, <a class="xref" href="Material.Blazor.MBFilledTextField.html">MBFilledTextField</a>&gt;</div>
-      <div><a class="xref" href="Material.Blazor.Internal.InternalFloatingPointFieldBase-2.html">InternalFloatingPointFieldBase</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a>, <a class="xref" href="Material.Blazor.MBFilledTextField.html">MBFilledTextField</a>&gt;</div>
-      <div><span class="xref">MBFilledDecimalField</span></div>
+      <div><a class="xref" href="Material.Blazor.Internal.InputComponent-1.html">InputComponent</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</div>
+      <div><a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html">InternalNumericFieldBase</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="Material.Blazor.MBTextField.html">MBTextField</a>&gt;</div>
+      <div><a class="xref" href="Material.Blazor.Internal.InternalIntFieldBase-1.html">InternalIntFieldBase</a>&lt;<a class="xref" href="Material.Blazor.MBTextField.html">MBTextField</a>&gt;</div>
+      <div><span class="xref">MBIntField</span></div>
     </dd>
   </dl>
 
@@ -136,64 +136,55 @@
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalFloatingPointFieldBase-2.html#Material_Blazor_Internal_InternalFloatingPointFieldBase_2_FocusedMagnitude">InternalFloatingPointFieldBase&lt;decimal, MBFilledTextField&gt;.FocusedMagnitude</a>
+      <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_SupportingText">InternalNumericFieldBase&lt;int, MBTextField&gt;.SupportingText</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalFloatingPointFieldBase-2.html#Material_Blazor_Internal_InternalFloatingPointFieldBase_2_UnfocusedMagnitude">InternalFloatingPointFieldBase&lt;decimal, MBFilledTextField&gt;.UnfocusedMagnitude</a>
+      <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_SupportingTextPersistent">InternalNumericFieldBase&lt;int, MBTextField&gt;.SupportingTextPersistent</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalFloatingPointFieldBase-2.html#Material_Blazor_Internal_InternalFloatingPointFieldBase_2_DecimalPlaces">InternalFloatingPointFieldBase&lt;decimal, MBFilledTextField&gt;.DecimalPlaces</a>
+      <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_ValidationMessageFor">InternalNumericFieldBase&lt;int, MBTextField&gt;.ValidationMessageFor</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_SupportingText">InternalNumericFieldBase&lt;decimal, MBFilledTextField&gt;.SupportingText</a>
+      <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_Label">InternalNumericFieldBase&lt;int, MBTextField&gt;.Label</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_SupportingTextPersistent">InternalNumericFieldBase&lt;decimal, MBFilledTextField&gt;.SupportingTextPersistent</a>
+      <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_Prefix">InternalNumericFieldBase&lt;int, MBTextField&gt;.Prefix</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_ValidationMessageFor">InternalNumericFieldBase&lt;decimal, MBFilledTextField&gt;.ValidationMessageFor</a>
+      <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_Suffix">InternalNumericFieldBase&lt;int, MBTextField&gt;.Suffix</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_Label">InternalNumericFieldBase&lt;decimal, MBFilledTextField&gt;.Label</a>
+      <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_LeadingIcon">InternalNumericFieldBase&lt;int, MBTextField&gt;.LeadingIcon</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_Prefix">InternalNumericFieldBase&lt;decimal, MBFilledTextField&gt;.Prefix</a>
+      <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_TrailingIcon">InternalNumericFieldBase&lt;int, MBTextField&gt;.TrailingIcon</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_Suffix">InternalNumericFieldBase&lt;decimal, MBFilledTextField&gt;.Suffix</a>
+      <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_Density">InternalNumericFieldBase&lt;int, MBTextField&gt;.Density</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_LeadingIcon">InternalNumericFieldBase&lt;decimal, MBFilledTextField&gt;.LeadingIcon</a>
+      <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_NumericFormat">InternalNumericFieldBase&lt;int, MBTextField&gt;.NumericFormat</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_TrailingIcon">InternalNumericFieldBase&lt;decimal, MBFilledTextField&gt;.TrailingIcon</a>
+      <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_NumericSingularFormat">InternalNumericFieldBase&lt;int, MBTextField&gt;.NumericSingularFormat</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_Density">InternalNumericFieldBase&lt;decimal, MBFilledTextField&gt;.Density</a>
+      <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_Min">InternalNumericFieldBase&lt;int, MBTextField&gt;.Min</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_NumericFormat">InternalNumericFieldBase&lt;decimal, MBFilledTextField&gt;.NumericFormat</a>
+      <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_Max">InternalNumericFieldBase&lt;int, MBTextField&gt;.Max</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_NumericSingularFormat">InternalNumericFieldBase&lt;decimal, MBFilledTextField&gt;.NumericSingularFormat</a>
+      <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_SetParametersAsync_Microsoft_AspNetCore_Components_ParameterView_">InputComponent&lt;int&gt;.SetParametersAsync(ParameterView)</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_Min">InternalNumericFieldBase&lt;decimal, MBFilledTextField&gt;.Min</a>
+      <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_Value">InputComponent&lt;int&gt;.Value</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalNumericFieldBase-2.html#Material_Blazor_Internal_InternalNumericFieldBase_2_Max">InternalNumericFieldBase&lt;decimal, MBFilledTextField&gt;.Max</a>
+      <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_ValueChanged">InputComponent&lt;int&gt;.ValueChanged</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_SetParametersAsync_Microsoft_AspNetCore_Components_ParameterView_">InputComponent&lt;decimal&gt;.SetParametersAsync(ParameterView)</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_Value">InputComponent&lt;decimal&gt;.Value</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_ValueChanged">InputComponent&lt;decimal&gt;.ValueChanged</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_ValueExpression">InputComponent&lt;decimal&gt;.ValueExpression</a>
+      <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_ValueExpression">InputComponent&lt;int&gt;.ValueExpression</a>
     </div>
     <div>
       <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_Dispose">ComponentFoundation.Dispose()</a>
@@ -245,18 +236,18 @@
 </h2>
 
 
-  <a id="Material_Blazor_MBFilledDecimalField__ctor_" data-uid="Material.Blazor.MBFilledDecimalField.#ctor*"></a>
+  <a id="Material_Blazor_MBIntField__ctor_" data-uid="Material.Blazor.MBIntField.#ctor*"></a>
 
-  <h3 id="Material_Blazor_MBFilledDecimalField__ctor" data-uid="Material.Blazor.MBFilledDecimalField.#ctor">
-  MBFilledDecimalField()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField/MBFilledDecimalField.cs"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Material_Blazor_MBIntField__ctor" data-uid="Material.Blazor.MBIntField.#ctor">
+  MBIntField()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField/MBIntField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MBFilledDecimalField()</code></pre>
+    <pre><code class="lang-csharp hljs">public MBIntField()</code></pre>
   </div>
 
 
@@ -275,7 +266,7 @@
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField/MBFilledDecimalField.cs" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField/MBIntField.cs" class="edit-link">Edit this page</a>
         </div>
 
         

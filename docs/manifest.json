@@ -360,14 +360,11 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Conceptual",
-      "source_relative_path": "Material.Blazor.MD3/Components/TextField2/MBTextField2.md",
+      "source_relative_path": "Material.Blazor.MD3/Components/TextField/MBTextField.md",
       "output": {
         ".html": {
-          "relative_path": "Material.Blazor.MD3/Components/TextField2/MBTextField2.html"
+          "relative_path": "Material.Blazor.MD3/Components/TextField/MBTextField.html"
         }
       },
       "version": ""
@@ -383,6 +380,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
       "type": "Toc",
       "source_relative_path": "Material.Blazor.MD3/Components/toc.yml",
       "output": {
@@ -867,16 +867,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.Internal.InternalFloatingPointField2Base-2.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.Internal.InternalFloatingPointField2Base-2.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.Internal.InternalFloatingPointFieldBase-2.yml",
       "output": {
         ".html": {
@@ -897,16 +887,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.Internal.InternalNumericField2Base-2.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.Internal.InternalNumericField2Base-2.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.Internal.InternalNumericFieldBase-2.yml",
       "output": {
         ".html": {
@@ -921,16 +901,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.Internal.InternalProgressBase.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.Internal.InternalTextField2Base.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.Internal.InternalTextField2Base.html"
         }
       },
       "version": ""
@@ -1057,10 +1027,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MBDecimalField2.yml",
+      "source_relative_path": "api/Material.Blazor.MBDecimalField.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Material.Blazor.MBDecimalField2.html"
+          "relative_path": "api/Material.Blazor.MBDecimalField.html"
         }
       },
       "version": ""
@@ -1077,40 +1047,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MBFilledDecimalField.yml",
+      "source_relative_path": "api/Material.Blazor.MBDoubleField.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Material.Blazor.MBFilledDecimalField.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MBFilledDoubleField.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MBFilledDoubleField.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MBFilledIntField.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MBFilledIntField.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MBFilledTextField.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MBFilledTextField.html"
+          "relative_path": "api/Material.Blazor.MBDoubleField.html"
         }
       },
       "version": ""
@@ -1197,6 +1137,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBIntField.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBIntField.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.MBItemValidation.yml",
       "output": {
         ".html": {
@@ -1261,46 +1211,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBNumericInputMagnitude.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MBOutlinedDecimalField.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MBOutlinedDecimalField.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MBOutlinedDoubleField.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MBOutlinedDoubleField.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MBOutlinedIntField.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MBOutlinedIntField.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MBOutlinedTextField.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MBOutlinedTextField.html"
         }
       },
       "version": ""
@@ -1417,10 +1327,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MBTextField2.yml",
+      "source_relative_path": "api/Material.Blazor.MBTextField.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Material.Blazor.MBTextField2.html"
+          "relative_path": "api/Material.Blazor.MBTextField.html"
         }
       },
       "version": ""
