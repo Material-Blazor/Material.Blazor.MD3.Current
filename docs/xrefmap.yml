@@ -1910,6 +1910,18 @@ references:
   commentId: Overload:Material.Blazor.MBCascadingDefaults.IconGradient
   fullName: Material.Blazor.MBCascadingDefaults.IconGradient
   nameWithType: MBCascadingDefaults.IconGradient
+- uid: Material.Blazor.MBCascadingDefaults.IconName
+  name: IconName
+  href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_IconName
+  commentId: P:Material.Blazor.MBCascadingDefaults.IconName
+  fullName: Material.Blazor.MBCascadingDefaults.IconName
+  nameWithType: MBCascadingDefaults.IconName
+- uid: Material.Blazor.MBCascadingDefaults.IconName*
+  name: IconName
+  href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_IconName_
+  commentId: Overload:Material.Blazor.MBCascadingDefaults.IconName
+  fullName: Material.Blazor.MBCascadingDefaults.IconName
+  nameWithType: MBCascadingDefaults.IconName
 - uid: Material.Blazor.MBCascadingDefaults.IconSize
   name: IconSize
   href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_IconSize
@@ -1994,6 +2006,18 @@ references:
   commentId: Overload:Material.Blazor.MBCascadingDefaults.TextAlignStyle
   fullName: Material.Blazor.MBCascadingDefaults.TextAlignStyle
   nameWithType: MBCascadingDefaults.TextAlignStyle
+- uid: Material.Blazor.MBCascadingDefaults.TextFieldDensity
+  name: TextFieldDensity
+  href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_TextFieldDensity
+  commentId: P:Material.Blazor.MBCascadingDefaults.TextFieldDensity
+  fullName: Material.Blazor.MBCascadingDefaults.TextFieldDensity
+  nameWithType: MBCascadingDefaults.TextFieldDensity
+- uid: Material.Blazor.MBCascadingDefaults.TextFieldDensity*
+  name: TextFieldDensity
+  href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_TextFieldDensity_
+  commentId: Overload:Material.Blazor.MBCascadingDefaults.TextFieldDensity
+  fullName: Material.Blazor.MBCascadingDefaults.TextFieldDensity
+  nameWithType: MBCascadingDefaults.TextFieldDensity
 - uid: Material.Blazor.MBCascadingDefaults.TextInputStyle
   name: TextInputStyle
   href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_TextInputStyle
@@ -2396,15 +2420,15 @@ references:
   commentId: Overload:Material.Blazor.MBIcon.HasBadgePLUS
   fullName: Material.Blazor.MBIcon.HasBadgePLUS
   nameWithType: MBIcon.HasBadgePLUS
-- uid: Material.Blazor.MBIcon.IconDescriptorConstructor(System.String,System.String,System.Nullable{System.Decimal},System.Nullable{Material.Blazor.MBIconGradient},System.Nullable{Material.Blazor.MBIconSize},System.Nullable{Material.Blazor.MBIconStyle},System.Nullable{Material.Blazor.MBIconWeight})
-  name: IconDescriptorConstructor(string, string, decimal?, MBIconGradient?, MBIconSize?, MBIconStyle?, MBIconWeight?)
-  href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_IconDescriptorConstructor_System_String_System_String_System_Nullable_System_Decimal__System_Nullable_Material_Blazor_MBIconGradient__System_Nullable_Material_Blazor_MBIconSize__System_Nullable_Material_Blazor_MBIconStyle__System_Nullable_Material_Blazor_MBIconWeight__
-  commentId: M:Material.Blazor.MBIcon.IconDescriptorConstructor(System.String,System.String,System.Nullable{System.Decimal},System.Nullable{Material.Blazor.MBIconGradient},System.Nullable{Material.Blazor.MBIconSize},System.Nullable{Material.Blazor.MBIconStyle},System.Nullable{Material.Blazor.MBIconWeight})
-  name.vb: IconDescriptorConstructor(String, String, Decimal?, MBIconGradient?, MBIconSize?, MBIconStyle?, MBIconWeight?)
-  fullName: Material.Blazor.MBIcon.IconDescriptorConstructor(string, string, decimal?, Material.Blazor.MBIconGradient?, Material.Blazor.MBIconSize?, Material.Blazor.MBIconStyle?, Material.Blazor.MBIconWeight?)
-  fullName.vb: Material.Blazor.MBIcon.IconDescriptorConstructor(String, String, Decimal?, Material.Blazor.MBIconGradient?, Material.Blazor.MBIconSize?, Material.Blazor.MBIconStyle?, Material.Blazor.MBIconWeight?)
-  nameWithType: MBIcon.IconDescriptorConstructor(string, string, decimal?, MBIconGradient?, MBIconSize?, MBIconStyle?, MBIconWeight?)
-  nameWithType.vb: MBIcon.IconDescriptorConstructor(String, String, Decimal?, MBIconGradient?, MBIconSize?, MBIconStyle?, MBIconWeight?)
+- uid: Material.Blazor.MBIcon.IconDescriptorConstructor(System.String,System.Nullable{System.Decimal},System.Nullable{Material.Blazor.MBIconGradient},System.String,System.Nullable{Material.Blazor.MBIconSize},System.Nullable{Material.Blazor.MBIconStyle},System.Nullable{Material.Blazor.MBIconWeight})
+  name: IconDescriptorConstructor(string, decimal?, MBIconGradient?, string, MBIconSize?, MBIconStyle?, MBIconWeight?)
+  href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_IconDescriptorConstructor_System_String_System_Nullable_System_Decimal__System_Nullable_Material_Blazor_MBIconGradient__System_String_System_Nullable_Material_Blazor_MBIconSize__System_Nullable_Material_Blazor_MBIconStyle__System_Nullable_Material_Blazor_MBIconWeight__
+  commentId: M:Material.Blazor.MBIcon.IconDescriptorConstructor(System.String,System.Nullable{System.Decimal},System.Nullable{Material.Blazor.MBIconGradient},System.String,System.Nullable{Material.Blazor.MBIconSize},System.Nullable{Material.Blazor.MBIconStyle},System.Nullable{Material.Blazor.MBIconWeight})
+  name.vb: IconDescriptorConstructor(String, Decimal?, MBIconGradient?, String, MBIconSize?, MBIconStyle?, MBIconWeight?)
+  fullName: Material.Blazor.MBIcon.IconDescriptorConstructor(string, decimal?, Material.Blazor.MBIconGradient?, string, Material.Blazor.MBIconSize?, Material.Blazor.MBIconStyle?, Material.Blazor.MBIconWeight?)
+  fullName.vb: Material.Blazor.MBIcon.IconDescriptorConstructor(String, Decimal?, Material.Blazor.MBIconGradient?, String, Material.Blazor.MBIconSize?, Material.Blazor.MBIconStyle?, Material.Blazor.MBIconWeight?)
+  nameWithType: MBIcon.IconDescriptorConstructor(string, decimal?, MBIconGradient?, string, MBIconSize?, MBIconStyle?, MBIconWeight?)
+  nameWithType.vb: MBIcon.IconDescriptorConstructor(String, Decimal?, MBIconGradient?, String, MBIconSize?, MBIconStyle?, MBIconWeight?)
 - uid: Material.Blazor.MBIcon.IconDescriptorConstructor*
   name: IconDescriptorConstructor
   href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_IconDescriptorConstructor_
@@ -2429,15 +2453,15 @@ references:
   commentId: T:Material.Blazor.MBIconDescriptor
   fullName: Material.Blazor.MBIconDescriptor
   nameWithType: MBIconDescriptor
-- uid: Material.Blazor.MBIconDescriptor.#ctor(System.String,System.String,System.Nullable{System.Decimal},System.Nullable{Material.Blazor.MBIconGradient},System.Nullable{Material.Blazor.MBIconSize},System.Nullable{Material.Blazor.MBIconStyle},System.Nullable{Material.Blazor.MBIconWeight})
-  name: MBIconDescriptor(string, string, decimal?, MBIconGradient?, MBIconSize?, MBIconStyle?, MBIconWeight?)
-  href: api/Material.Blazor.MBIconDescriptor.html#Material_Blazor_MBIconDescriptor__ctor_System_String_System_String_System_Nullable_System_Decimal__System_Nullable_Material_Blazor_MBIconGradient__System_Nullable_Material_Blazor_MBIconSize__System_Nullable_Material_Blazor_MBIconStyle__System_Nullable_Material_Blazor_MBIconWeight__
-  commentId: M:Material.Blazor.MBIconDescriptor.#ctor(System.String,System.String,System.Nullable{System.Decimal},System.Nullable{Material.Blazor.MBIconGradient},System.Nullable{Material.Blazor.MBIconSize},System.Nullable{Material.Blazor.MBIconStyle},System.Nullable{Material.Blazor.MBIconWeight})
-  name.vb: New(String, String, Decimal?, MBIconGradient?, MBIconSize?, MBIconStyle?, MBIconWeight?)
-  fullName: Material.Blazor.MBIconDescriptor.MBIconDescriptor(string, string, decimal?, Material.Blazor.MBIconGradient?, Material.Blazor.MBIconSize?, Material.Blazor.MBIconStyle?, Material.Blazor.MBIconWeight?)
-  fullName.vb: Material.Blazor.MBIconDescriptor.New(String, String, Decimal?, Material.Blazor.MBIconGradient?, Material.Blazor.MBIconSize?, Material.Blazor.MBIconStyle?, Material.Blazor.MBIconWeight?)
-  nameWithType: MBIconDescriptor.MBIconDescriptor(string, string, decimal?, MBIconGradient?, MBIconSize?, MBIconStyle?, MBIconWeight?)
-  nameWithType.vb: MBIconDescriptor.New(String, String, Decimal?, MBIconGradient?, MBIconSize?, MBIconStyle?, MBIconWeight?)
+- uid: Material.Blazor.MBIconDescriptor.#ctor(System.String,System.Nullable{System.Decimal},System.Nullable{Material.Blazor.MBIconGradient},System.String,System.Nullable{Material.Blazor.MBIconSize},System.Nullable{Material.Blazor.MBIconStyle},System.Nullable{Material.Blazor.MBIconWeight})
+  name: MBIconDescriptor(string, decimal?, MBIconGradient?, string, MBIconSize?, MBIconStyle?, MBIconWeight?)
+  href: api/Material.Blazor.MBIconDescriptor.html#Material_Blazor_MBIconDescriptor__ctor_System_String_System_Nullable_System_Decimal__System_Nullable_Material_Blazor_MBIconGradient__System_String_System_Nullable_Material_Blazor_MBIconSize__System_Nullable_Material_Blazor_MBIconStyle__System_Nullable_Material_Blazor_MBIconWeight__
+  commentId: M:Material.Blazor.MBIconDescriptor.#ctor(System.String,System.Nullable{System.Decimal},System.Nullable{Material.Blazor.MBIconGradient},System.String,System.Nullable{Material.Blazor.MBIconSize},System.Nullable{Material.Blazor.MBIconStyle},System.Nullable{Material.Blazor.MBIconWeight})
+  name.vb: New(String, Decimal?, MBIconGradient?, String, MBIconSize?, MBIconStyle?, MBIconWeight?)
+  fullName: Material.Blazor.MBIconDescriptor.MBIconDescriptor(string, decimal?, Material.Blazor.MBIconGradient?, string, Material.Blazor.MBIconSize?, Material.Blazor.MBIconStyle?, Material.Blazor.MBIconWeight?)
+  fullName.vb: Material.Blazor.MBIconDescriptor.New(String, Decimal?, Material.Blazor.MBIconGradient?, String, Material.Blazor.MBIconSize?, Material.Blazor.MBIconStyle?, Material.Blazor.MBIconWeight?)
+  nameWithType: MBIconDescriptor.MBIconDescriptor(string, decimal?, MBIconGradient?, string, MBIconSize?, MBIconStyle?, MBIconWeight?)
+  nameWithType.vb: MBIconDescriptor.New(String, Decimal?, MBIconGradient?, String, MBIconSize?, MBIconStyle?, MBIconWeight?)
 - uid: Material.Blazor.MBIconDescriptor.#ctor*
   name: MBIconDescriptor
   href: api/Material.Blazor.MBIconDescriptor.html#Material_Blazor_MBIconDescriptor__ctor_
