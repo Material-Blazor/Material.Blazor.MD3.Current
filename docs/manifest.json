@@ -262,16 +262,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "Material.Blazor.MD3/Components/Badge/MBBadge.md",
-      "output": {
-        ".html": {
-          "relative_path": "Material.Blazor.MD3/Components/Badge/MBBadge.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Components/Checkbox/MBCheckbox.md",
       "output": {
         ".html": {
@@ -380,9 +370,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Toc",
       "source_relative_path": "Material.Blazor.MD3/Components/toc.yml",
       "output": {
@@ -951,26 +938,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBAnchor.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MBBadge.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MBBadge.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MBBadgeStyle.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MBBadgeStyle.html"
         }
       },
       "version": ""
