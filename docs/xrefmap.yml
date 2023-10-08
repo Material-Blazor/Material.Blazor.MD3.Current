@@ -2396,6 +2396,21 @@ references:
   commentId: Overload:Material.Blazor.MBIcon.BuildRenderTree
   fullName: Material.Blazor.MBIcon.BuildRenderTree
   nameWithType: MBIcon.BuildRenderTree
+- uid: Material.Blazor.MBIcon.BuildRenderTreeWorker(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32@,Material.Blazor.MBCascadingDefaults,Material.Blazor.MBIconDescriptor,System.String)
+  name: BuildRenderTreeWorker(RenderTreeBuilder, ref int, MBCascadingDefaults, MBIconDescriptor, string)
+  href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_BuildRenderTreeWorker_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32__Material_Blazor_MBCascadingDefaults_Material_Blazor_MBIconDescriptor_System_String_
+  commentId: M:Material.Blazor.MBIcon.BuildRenderTreeWorker(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32@,Material.Blazor.MBCascadingDefaults,Material.Blazor.MBIconDescriptor,System.String)
+  name.vb: BuildRenderTreeWorker(RenderTreeBuilder, Integer, MBCascadingDefaults, MBIconDescriptor, String)
+  fullName: Material.Blazor.MBIcon.BuildRenderTreeWorker(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, ref int, Material.Blazor.MBCascadingDefaults, Material.Blazor.MBIconDescriptor, string)
+  fullName.vb: Material.Blazor.MBIcon.BuildRenderTreeWorker(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, Integer, Material.Blazor.MBCascadingDefaults, Material.Blazor.MBIconDescriptor, String)
+  nameWithType: MBIcon.BuildRenderTreeWorker(RenderTreeBuilder, ref int, MBCascadingDefaults, MBIconDescriptor, string)
+  nameWithType.vb: MBIcon.BuildRenderTreeWorker(RenderTreeBuilder, Integer, MBCascadingDefaults, MBIconDescriptor, String)
+- uid: Material.Blazor.MBIcon.BuildRenderTreeWorker*
+  name: BuildRenderTreeWorker
+  href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_BuildRenderTreeWorker_
+  commentId: Overload:Material.Blazor.MBIcon.BuildRenderTreeWorker
+  fullName: Material.Blazor.MBIcon.BuildRenderTreeWorker
+  nameWithType: MBIcon.BuildRenderTreeWorker
 - uid: Material.Blazor.MBIcon.Descriptor
   name: Descriptor
   href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_Descriptor
@@ -2435,18 +2450,6 @@ references:
   commentId: Overload:Material.Blazor.MBIcon.IconDescriptorConstructor
   fullName: Material.Blazor.MBIcon.IconDescriptorConstructor
   nameWithType: MBIcon.IconDescriptorConstructor
-- uid: Material.Blazor.MBIcon.OnParametersSetAsync
-  name: OnParametersSetAsync()
-  href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_OnParametersSetAsync
-  commentId: M:Material.Blazor.MBIcon.OnParametersSetAsync
-  fullName: Material.Blazor.MBIcon.OnParametersSetAsync()
-  nameWithType: MBIcon.OnParametersSetAsync()
-- uid: Material.Blazor.MBIcon.OnParametersSetAsync*
-  name: OnParametersSetAsync
-  href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_OnParametersSetAsync_
-  commentId: Overload:Material.Blazor.MBIcon.OnParametersSetAsync
-  fullName: Material.Blazor.MBIcon.OnParametersSetAsync
-  nameWithType: MBIcon.OnParametersSetAsync
 - uid: Material.Blazor.MBIconDescriptor
   name: MBIconDescriptor
   href: api/Material.Blazor.MBIconDescriptor.html
@@ -2531,18 +2534,6 @@ references:
   commentId: Overload:Material.Blazor.MBIconDescriptor.Size
   fullName: Material.Blazor.MBIconDescriptor.Size
   nameWithType: MBIconDescriptor.Size
-- uid: Material.Blazor.MBIconDescriptor.Slot
-  name: Slot
-  href: api/Material.Blazor.MBIconDescriptor.html#Material_Blazor_MBIconDescriptor_Slot
-  commentId: P:Material.Blazor.MBIconDescriptor.Slot
-  fullName: Material.Blazor.MBIconDescriptor.Slot
-  nameWithType: MBIconDescriptor.Slot
-- uid: Material.Blazor.MBIconDescriptor.Slot*
-  name: Slot
-  href: api/Material.Blazor.MBIconDescriptor.html#Material_Blazor_MBIconDescriptor_Slot_
-  commentId: Overload:Material.Blazor.MBIconDescriptor.Slot
-  fullName: Material.Blazor.MBIconDescriptor.Slot
-  nameWithType: MBIconDescriptor.Slot
 - uid: Material.Blazor.MBIconDescriptor.Style
   name: Style
   href: api/Material.Blazor.MBIconDescriptor.html#Material_Blazor_MBIconDescriptor_Style

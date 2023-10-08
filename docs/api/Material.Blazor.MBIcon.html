@@ -151,6 +151,9 @@
       <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_OnParametersSet">ComponentFoundation.OnParametersSet()</a>
     </div>
     <div>
+      <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_OnParametersSetAsync">ComponentFoundation.OnParametersSetAsync()</a>
+    </div>
+    <div>
       <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_CascadingDefaults">ComponentFoundation.CascadingDefaults</a>
     </div>
     <div>
@@ -454,6 +457,45 @@ public bool HasBadgePLUS { get; set; }</code></pre>
 
 
 
+  <a id="Material_Blazor_MBIcon_BuildRenderTreeWorker_" data-uid="Material.Blazor.MBIcon.BuildRenderTreeWorker*"></a>
+
+  <h3 id="Material_Blazor_MBIcon_BuildRenderTreeWorker_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32__Material_Blazor_MBCascadingDefaults_Material_Blazor_MBIconDescriptor_System_String_" data-uid="Material.Blazor.MBIcon.BuildRenderTreeWorker(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32@,Material.Blazor.MBCascadingDefaults,Material.Blazor.MBIconDescriptor,System.String)">
+  BuildRenderTreeWorker(RenderTreeBuilder, ref int, MBCascadingDefaults, MBIconDescriptor, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/Icon/MBIcon.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void BuildRenderTreeWorker(RenderTreeBuilder builder, ref int rendSeq, MBCascadingDefaults cascadingDefaults, MBIconDescriptor descriptor, string slot)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder">RenderTreeBuilder</a></dt>
+    <dd></dd>
+    <dt><code>rendSeq</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>cascadingDefaults</code> <a class="xref" href="Material.Blazor.MBCascadingDefaults.html">MBCascadingDefaults</a></dt>
+    <dd></dd>
+    <dt><code>descriptor</code> <a class="xref" href="Material.Blazor.MBIconDescriptor.html">MBIconDescriptor</a></dt>
+    <dd></dd>
+    <dt><code>slot</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Material_Blazor_MBIcon_IconDescriptorConstructor_" data-uid="Material.Blazor.MBIcon.IconDescriptorConstructor*"></a>
 
   <h3 id="Material_Blazor_MBIcon_IconDescriptorConstructor_System_String_System_Nullable_System_Decimal__System_Nullable_Material_Blazor_MBIconGradient__System_String_System_Nullable_Material_Blazor_MBIconSize__System_Nullable_Material_Blazor_MBIconStyle__System_Nullable_Material_Blazor_MBIconWeight__" data-uid="Material.Blazor.MBIcon.IconDescriptorConstructor(System.String,System.Nullable{System.Decimal},System.Nullable{Material.Blazor.MBIconGradient},System.String,System.Nullable{Material.Blazor.MBIconSize},System.Nullable{Material.Blazor.MBIconStyle},System.Nullable{Material.Blazor.MBIconWeight})">
@@ -490,40 +532,6 @@ public bool HasBadgePLUS { get; set; }</code></pre>
   <dl class="parameters">
     <dt><a class="xref" href="Material.Blazor.MBIconDescriptor.html">MBIconDescriptor</a></dt>
     <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Material_Blazor_MBIcon_OnParametersSetAsync_" data-uid="Material.Blazor.MBIcon.OnParametersSetAsync*"></a>
-
-  <h3 id="Material_Blazor_MBIcon_OnParametersSetAsync" data-uid="Material.Blazor.MBIcon.OnParametersSetAsync">
-  OnParametersSetAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/Icon/MBIcon.cs"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Method invoked when the component has received parameters from its parent in
-the render tree, and the incoming values have been assigned to properties.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override Task OnParametersSetAsync()</code></pre>
-  </div>
-
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> representing any asynchronous operation.</p>
-</dd>
   </dl>
 
 
