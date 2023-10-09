@@ -46,6 +46,9 @@ references:
 - uid: C.MBAnchor
   name: MBAnchor
   href: Material.Blazor.MD3/Components/Anchor/MBAnchor.html
+- uid: C.MBButton
+  name: MBButton
+  href: Material.Blazor.MD3/Components/Button/MBButton.html
 - uid: C.MBCheckbox
   name: MBCheckbox
   href: Material.Blazor.MD3/Components/Checkbox/MBCheckbox.html
@@ -1244,18 +1247,18 @@ references:
   commentId: Overload:Material.Blazor.Internal.InternalTextFieldBase.Label
   fullName: Material.Blazor.Internal.InternalTextFieldBase.Label
   nameWithType: InternalTextFieldBase.Label
-- uid: Material.Blazor.Internal.InternalTextFieldBase.LeadingIcon
-  name: LeadingIcon
-  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_LeadingIcon
-  commentId: P:Material.Blazor.Internal.InternalTextFieldBase.LeadingIcon
-  fullName: Material.Blazor.Internal.InternalTextFieldBase.LeadingIcon
-  nameWithType: InternalTextFieldBase.LeadingIcon
-- uid: Material.Blazor.Internal.InternalTextFieldBase.LeadingIcon*
-  name: LeadingIcon
-  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_LeadingIcon_
-  commentId: Overload:Material.Blazor.Internal.InternalTextFieldBase.LeadingIcon
-  fullName: Material.Blazor.Internal.InternalTextFieldBase.LeadingIcon
-  nameWithType: InternalTextFieldBase.LeadingIcon
+- uid: Material.Blazor.Internal.InternalTextFieldBase.LeadingIconPLUS
+  name: LeadingIconPLUS
+  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_LeadingIconPLUS
+  commentId: P:Material.Blazor.Internal.InternalTextFieldBase.LeadingIconPLUS
+  fullName: Material.Blazor.Internal.InternalTextFieldBase.LeadingIconPLUS
+  nameWithType: InternalTextFieldBase.LeadingIconPLUS
+- uid: Material.Blazor.Internal.InternalTextFieldBase.LeadingIconPLUS*
+  name: LeadingIconPLUS
+  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_LeadingIconPLUS_
+  commentId: Overload:Material.Blazor.Internal.InternalTextFieldBase.LeadingIconPLUS
+  fullName: Material.Blazor.Internal.InternalTextFieldBase.LeadingIconPLUS
+  nameWithType: InternalTextFieldBase.LeadingIconPLUS
 - uid: Material.Blazor.Internal.InternalTextFieldBase.OnInitializedAsync
   name: OnInitializedAsync()
   href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_OnInitializedAsync
@@ -1352,18 +1355,18 @@ references:
   commentId: Overload:Material.Blazor.Internal.InternalTextFieldBase.TextInputStyle
   fullName: Material.Blazor.Internal.InternalTextFieldBase.TextInputStyle
   nameWithType: InternalTextFieldBase.TextInputStyle
-- uid: Material.Blazor.Internal.InternalTextFieldBase.TrailingIcon
-  name: TrailingIcon
-  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_TrailingIcon
-  commentId: P:Material.Blazor.Internal.InternalTextFieldBase.TrailingIcon
-  fullName: Material.Blazor.Internal.InternalTextFieldBase.TrailingIcon
-  nameWithType: InternalTextFieldBase.TrailingIcon
-- uid: Material.Blazor.Internal.InternalTextFieldBase.TrailingIcon*
-  name: TrailingIcon
-  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_TrailingIcon_
-  commentId: Overload:Material.Blazor.Internal.InternalTextFieldBase.TrailingIcon
-  fullName: Material.Blazor.Internal.InternalTextFieldBase.TrailingIcon
-  nameWithType: InternalTextFieldBase.TrailingIcon
+- uid: Material.Blazor.Internal.InternalTextFieldBase.TrailingIconPLUS
+  name: TrailingIconPLUS
+  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_TrailingIconPLUS
+  commentId: P:Material.Blazor.Internal.InternalTextFieldBase.TrailingIconPLUS
+  fullName: Material.Blazor.Internal.InternalTextFieldBase.TrailingIconPLUS
+  nameWithType: InternalTextFieldBase.TrailingIconPLUS
+- uid: Material.Blazor.Internal.InternalTextFieldBase.TrailingIconPLUS*
+  name: TrailingIconPLUS
+  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_TrailingIconPLUS_
+  commentId: Overload:Material.Blazor.Internal.InternalTextFieldBase.TrailingIconPLUS
+  fullName: Material.Blazor.Internal.InternalTextFieldBase.TrailingIconPLUS
+  nameWithType: InternalTextFieldBase.TrailingIconPLUS
 - uid: Material.Blazor.Internal.InternalTextFieldBase.ValidationMessageFor
   name: ValidationMessageFor
   href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_ValidationMessageFor
@@ -1595,6 +1598,102 @@ references:
   commentId: Overload:Material.Blazor.MBAnchor.BuildRenderTree
   fullName: Material.Blazor.MBAnchor.BuildRenderTree
   nameWithType: MBAnchor.BuildRenderTree
+- uid: Material.Blazor.MBButton
+  name: MBButton
+  href: api/Material.Blazor.MBButton.html
+  commentId: T:Material.Blazor.MBButton
+  fullName: Material.Blazor.MBButton
+  nameWithType: MBButton
+- uid: Material.Blazor.MBButton.#ctor
+  name: MBButton()
+  href: api/Material.Blazor.MBButton.html#Material_Blazor_MBButton__ctor
+  commentId: M:Material.Blazor.MBButton.#ctor
+  name.vb: New()
+  fullName: Material.Blazor.MBButton.MBButton()
+  fullName.vb: Material.Blazor.MBButton.New()
+  nameWithType: MBButton.MBButton()
+  nameWithType.vb: MBButton.New()
+- uid: Material.Blazor.MBButton.#ctor*
+  name: MBButton
+  href: api/Material.Blazor.MBButton.html#Material_Blazor_MBButton__ctor_
+  commentId: Overload:Material.Blazor.MBButton.#ctor
+  name.vb: New
+  fullName: Material.Blazor.MBButton.MBButton
+  fullName.vb: Material.Blazor.MBButton.New
+  nameWithType: MBButton.MBButton
+  nameWithType.vb: MBButton.New
+- uid: Material.Blazor.MBButton.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  name: BuildRenderTree(RenderTreeBuilder)
+  href: api/Material.Blazor.MBButton.html#Material_Blazor_MBButton_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
+  commentId: M:Material.Blazor.MBButton.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  fullName: Material.Blazor.MBButton.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  nameWithType: MBButton.BuildRenderTree(RenderTreeBuilder)
+- uid: Material.Blazor.MBButton.BuildRenderTree*
+  name: BuildRenderTree
+  href: api/Material.Blazor.MBButton.html#Material_Blazor_MBButton_BuildRenderTree_
+  commentId: Overload:Material.Blazor.MBButton.BuildRenderTree
+  fullName: Material.Blazor.MBButton.BuildRenderTree
+  nameWithType: MBButton.BuildRenderTree
+- uid: Material.Blazor.MBButton.ButtonStyle
+  name: ButtonStyle
+  href: api/Material.Blazor.MBButton.html#Material_Blazor_MBButton_ButtonStyle
+  commentId: P:Material.Blazor.MBButton.ButtonStyle
+  fullName: Material.Blazor.MBButton.ButtonStyle
+  nameWithType: MBButton.ButtonStyle
+- uid: Material.Blazor.MBButton.ButtonStyle*
+  name: ButtonStyle
+  href: api/Material.Blazor.MBButton.html#Material_Blazor_MBButton_ButtonStyle_
+  commentId: Overload:Material.Blazor.MBButton.ButtonStyle
+  fullName: Material.Blazor.MBButton.ButtonStyle
+  nameWithType: MBButton.ButtonStyle
+- uid: Material.Blazor.MBButton.Label
+  name: Label
+  href: api/Material.Blazor.MBButton.html#Material_Blazor_MBButton_Label
+  commentId: P:Material.Blazor.MBButton.Label
+  fullName: Material.Blazor.MBButton.Label
+  nameWithType: MBButton.Label
+- uid: Material.Blazor.MBButton.Label*
+  name: Label
+  href: api/Material.Blazor.MBButton.html#Material_Blazor_MBButton_Label_
+  commentId: Overload:Material.Blazor.MBButton.Label
+  fullName: Material.Blazor.MBButton.Label
+  nameWithType: MBButton.Label
+- uid: Material.Blazor.MBButtonStyle
+  name: MBButtonStyle
+  href: api/Material.Blazor.MBButtonStyle.html
+  commentId: T:Material.Blazor.MBButtonStyle
+  fullName: Material.Blazor.MBButtonStyle
+  nameWithType: MBButtonStyle
+- uid: Material.Blazor.MBButtonStyle.Elevated
+  name: Elevated
+  href: api/Material.Blazor.MBButtonStyle.html#Material_Blazor_MBButtonStyle_Elevated
+  commentId: F:Material.Blazor.MBButtonStyle.Elevated
+  fullName: Material.Blazor.MBButtonStyle.Elevated
+  nameWithType: MBButtonStyle.Elevated
+- uid: Material.Blazor.MBButtonStyle.Filled
+  name: Filled
+  href: api/Material.Blazor.MBButtonStyle.html#Material_Blazor_MBButtonStyle_Filled
+  commentId: F:Material.Blazor.MBButtonStyle.Filled
+  fullName: Material.Blazor.MBButtonStyle.Filled
+  nameWithType: MBButtonStyle.Filled
+- uid: Material.Blazor.MBButtonStyle.FilledTonal
+  name: FilledTonal
+  href: api/Material.Blazor.MBButtonStyle.html#Material_Blazor_MBButtonStyle_FilledTonal
+  commentId: F:Material.Blazor.MBButtonStyle.FilledTonal
+  fullName: Material.Blazor.MBButtonStyle.FilledTonal
+  nameWithType: MBButtonStyle.FilledTonal
+- uid: Material.Blazor.MBButtonStyle.Outlined
+  name: Outlined
+  href: api/Material.Blazor.MBButtonStyle.html#Material_Blazor_MBButtonStyle_Outlined
+  commentId: F:Material.Blazor.MBButtonStyle.Outlined
+  fullName: Material.Blazor.MBButtonStyle.Outlined
+  nameWithType: MBButtonStyle.Outlined
+- uid: Material.Blazor.MBButtonStyle.Text
+  name: Text
+  href: api/Material.Blazor.MBButtonStyle.html#Material_Blazor_MBButtonStyle_Text
+  commentId: F:Material.Blazor.MBButtonStyle.Text
+  fullName: Material.Blazor.MBButtonStyle.Text
+  nameWithType: MBButtonStyle.Text
 - uid: Material.Blazor.MBButtonStyleMD2
   name: MBButtonStyleMD2
   href: api/Material.Blazor.MBButtonStyleMD2.html
@@ -1679,6 +1778,18 @@ references:
   commentId: Overload:Material.Blazor.MBCascadingDefaults.AllowedSplattableAttributes
   fullName: Material.Blazor.MBCascadingDefaults.AllowedSplattableAttributes
   nameWithType: MBCascadingDefaults.AllowedSplattableAttributes
+- uid: Material.Blazor.MBCascadingDefaults.ButtonStyle
+  name: ButtonStyle
+  href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_ButtonStyle
+  commentId: P:Material.Blazor.MBCascadingDefaults.ButtonStyle
+  fullName: Material.Blazor.MBCascadingDefaults.ButtonStyle
+  nameWithType: MBCascadingDefaults.ButtonStyle
+- uid: Material.Blazor.MBCascadingDefaults.ButtonStyle*
+  name: ButtonStyle
+  href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_ButtonStyle_
+  commentId: Overload:Material.Blazor.MBCascadingDefaults.ButtonStyle
+  fullName: Material.Blazor.MBCascadingDefaults.ButtonStyle
+  nameWithType: MBCascadingDefaults.ButtonStyle
 - uid: Material.Blazor.MBCascadingDefaults.ConstrainSplattableAttributes
   name: ConstrainSplattableAttributes
   href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_ConstrainSplattableAttributes

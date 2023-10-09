@@ -262,6 +262,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "Material.Blazor.MD3/Components/Button/MBButton.md",
+      "output": {
+        ".html": {
+          "relative_path": "Material.Blazor.MD3/Components/Button/MBButton.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Components/Checkbox/MBCheckbox.md",
       "output": {
         ".html": {
@@ -938,6 +948,26 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBAnchor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBButton.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBButton.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBButtonStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBButtonStyle.html"
         }
       },
       "version": ""
