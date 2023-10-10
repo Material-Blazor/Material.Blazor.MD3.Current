@@ -1115,34 +1115,6 @@
   color: var(--mb-toast-color-error);
 }
 
-.mdc-button.dense--5, .mdc-button.dense--4, .mdc-button.dense--3, .mdc-button.dense-compact {
-  height: 24px;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.mdc-button.dense--5 .mdc-button__touch, .mdc-button.dense--4 .mdc-button__touch, .mdc-button.dense--3 .mdc-button__touch, .mdc-button.dense-compact .mdc-button__touch {
-  height: 100%;
-}
-.mdc-button.dense--2, .mdc-button.dense-comfortable {
-  height: 28px;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.mdc-button.dense--2 .mdc-button__touch, .mdc-button.dense-comfortable .mdc-button__touch {
-  height: 100%;
-}
-.mdc-button.dense--1 {
-  height: 32px;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.mdc-button.dense--1 .mdc-button__touch {
-  height: 100%;
-}
-.mdc-button.dense--0, .mdc-button.dense-default {
-  height: 36px;
-}
-
 .mb-card {
   width: 350px;
   margin: 48px 0;
