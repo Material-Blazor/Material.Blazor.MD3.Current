@@ -1646,6 +1646,42 @@ references:
   commentId: Overload:Material.Blazor.MBButton.ButtonStyle
   fullName: Material.Blazor.MBButton.ButtonStyle
   nameWithType: MBButton.ButtonStyle
+- uid: Material.Blazor.MBButton.Density
+  name: Density
+  href: api/Material.Blazor.MBButton.html#Material_Blazor_MBButton_Density
+  commentId: P:Material.Blazor.MBButton.Density
+  fullName: Material.Blazor.MBButton.Density
+  nameWithType: MBButton.Density
+- uid: Material.Blazor.MBButton.Density*
+  name: Density
+  href: api/Material.Blazor.MBButton.html#Material_Blazor_MBButton_Density_
+  commentId: Overload:Material.Blazor.MBButton.Density
+  fullName: Material.Blazor.MBButton.Density
+  nameWithType: MBButton.Density
+- uid: Material.Blazor.MBButton.IconDescriptor
+  name: IconDescriptor
+  href: api/Material.Blazor.MBButton.html#Material_Blazor_MBButton_IconDescriptor
+  commentId: P:Material.Blazor.MBButton.IconDescriptor
+  fullName: Material.Blazor.MBButton.IconDescriptor
+  nameWithType: MBButton.IconDescriptor
+- uid: Material.Blazor.MBButton.IconDescriptor*
+  name: IconDescriptor
+  href: api/Material.Blazor.MBButton.html#Material_Blazor_MBButton_IconDescriptor_
+  commentId: Overload:Material.Blazor.MBButton.IconDescriptor
+  fullName: Material.Blazor.MBButton.IconDescriptor
+  nameWithType: MBButton.IconDescriptor
+- uid: Material.Blazor.MBButton.IconIsTrailing
+  name: IconIsTrailing
+  href: api/Material.Blazor.MBButton.html#Material_Blazor_MBButton_IconIsTrailing
+  commentId: P:Material.Blazor.MBButton.IconIsTrailing
+  fullName: Material.Blazor.MBButton.IconIsTrailing
+  nameWithType: MBButton.IconIsTrailing
+- uid: Material.Blazor.MBButton.IconIsTrailing*
+  name: IconIsTrailing
+  href: api/Material.Blazor.MBButton.html#Material_Blazor_MBButton_IconIsTrailing_
+  commentId: Overload:Material.Blazor.MBButton.IconIsTrailing
+  fullName: Material.Blazor.MBButton.IconIsTrailing
+  nameWithType: MBButton.IconIsTrailing
 - uid: Material.Blazor.MBButton.Label
   name: Label
   href: api/Material.Blazor.MBButton.html#Material_Blazor_MBButton_Label
