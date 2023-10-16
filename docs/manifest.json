@@ -308,32 +308,6 @@
         "UidNotFound"
       ],
       "type": "Conceptual",
-      "source_relative_path": "Material.Blazor.MD3/Components/ProgressIndicator/MBCircularProgress.md",
-      "output": {
-        ".html": {
-          "relative_path": "Material.Blazor.MD3/Components/ProgressIndicator/MBCircularProgress.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "UidNotFound"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Material.Blazor.MD3/Components/ProgressIndicator/MBLinearProgress.md",
-      "output": {
-        ".html": {
-          "relative_path": "Material.Blazor.MD3/Components/ProgressIndicator/MBLinearProgress.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "UidNotFound"
-      ],
-      "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Components/ProgressIndicator/MBProgress.md",
       "output": {
         ".html": {
@@ -393,6 +367,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
       "type": "Toc",
       "source_relative_path": "Material.Blazor.MD3/Components/toc.yml",
       "output": {
@@ -907,16 +884,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.Internal.InternalProgressBase.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.Internal.InternalProgressBase.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.Internal.InternalTextFieldBase.yml",
       "output": {
         ".html": {
@@ -1021,16 +988,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBCheckbox.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MBCircularProgress.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MBCircularProgress.html"
         }
       },
       "version": ""
@@ -1181,16 +1138,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBItemValidation.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MBLinearProgress.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MBLinearProgress.html"
         }
       },
       "version": ""
