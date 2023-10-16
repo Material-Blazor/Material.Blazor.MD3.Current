@@ -292,6 +292,19 @@
     },
     {
       "log_codes": [
+        "DuplicateUids"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "Material.Blazor.MD3/Components/IconButton/MBIconButton.md",
+      "output": {
+        ".html": {
+          "relative_path": "Material.Blazor.MD3/Components/IconButton/MBIconButton.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
         "UidNotFound"
       ],
       "type": "Conceptual",
@@ -1064,6 +1077,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBIconButton.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBIconButton.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBIconButtonStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBIconButtonStyle.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.MBIconDescriptor.yml",
       "output": {
         ".html": {
@@ -1464,16 +1497,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MD2.MBIconButton.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MD2.MBIconButton.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.MD2.MBListDivider.yml",
       "output": {
         ".html": {
@@ -1538,16 +1561,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MD2.MBTopAppBar.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MD2.MBTouchTargetWrapper.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MD2.MBTouchTargetWrapper.html"
         }
       },
       "version": ""
