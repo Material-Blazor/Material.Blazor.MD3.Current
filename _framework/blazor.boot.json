@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Material.Blazor.Website.WebAssembly.MD3",
   "resources": {
-    "hash": "sha256-tN7SZC1Qt4kXb8vCEwuVzD2AT1O6a1saFOTtcJ8UMRk=",
+    "hash": "sha256-YInYfIefW87GtQWuL36DvHQGltvvSxBH6tLfSZzT54g=",
     "jsModuleNative": {
       "dotnet.native.8.0.0-rc.2.23479.6.wms5fo4s76.js": "sha256-9prN/5lb3WIsk2ApeMfArAoTBSsUab3y9MBUmgxjV38="
     },
@@ -19,9 +19,9 @@
     "assembly": {
       "GoogleAnalytics.Blazor.wasm": "sha256-9maxHDA0ezDRT79XvPIZi411ySyG96k1lUuuu9NbGEE=",
       "Humanizer.wasm": "sha256-4NbSboZzzP9nikRtXapUZNzOyITt7ht9TNqCIQHr5OE=",
-      "Material.Blazor.MD3.wasm": "sha256-IsFh3PKYVdJuAoUnzJNbBBj79Oj5tZyHLGjKg9Q0glM=",
-      "Material.Blazor.Website.MD3.wasm": "sha256-k8xGTtg3I2FZX2kR6kk56cWUNut/+01Xr41mKwD1ddc=",
-      "Material.Blazor.Website.WebAssembly.MD3.wasm": "sha256-/rPlLlTA1Q72dXbpTCz9FGZUeBLdncG8LTKytS8qCzI=",
+      "Material.Blazor.MD3.wasm": "sha256-AtkUInTF5wb1aYFjnByl2ZdbD86Q66MSoxHWAxuRYWY=",
+      "Material.Blazor.Website.MD3.wasm": "sha256-0ljoG6/ZXqLT+7o6nE6+V07VjVSKM8646ZbKc7HeIEA=",
+      "Material.Blazor.Website.WebAssembly.MD3.wasm": "sha256-iFesWHU1uc0jDuCA5ydn3tYN/o4fX6mxwV/jYjK1j7A=",
       "Microsoft.AspNetCore.Components.Forms.wasm": "sha256-nTDnVF6o8EdGpG/fQ1cil7MwSaIB0962d5LZwW4SZYQ=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-CK3fZ8wyHJmiJV+dR+PhTZv3n7PZhn+1RtM2z6Vkpx8=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-l/Rz6f5ev64+dsiICREWYZ6po1hh/VpUB6FB7K7HgTM=",
@@ -72,7 +72,7 @@
       "System.IO.FileSystem.Watcher.wasm": "sha256-6aLHRBfNvF7TuQWEXjvLRzShuKcvK1SkbZnurCwa5bY=",
       "System.IO.MemoryMappedFiles.wasm": "sha256-HPm5qnoFm1pFOQWd/EyvTzAlvFeD2I9BrQq6utLRNMg=",
       "System.Linq.Expressions.wasm": "sha256-xD0lq8f6KNLPrLhVLTPcDONhnFkH5inc41CZVKErAtw=",
-      "System.Linq.wasm": "sha256-IV56Fk5Q/Ylfel272Pr5HcruhLB3wvSWXok1MYnKdsk=",
+      "System.Linq.wasm": "sha256-F/i+TjVUlVQK9HDeR34FzWRaV++Nd690SkPNkttQcc0=",
       "System.Memory.wasm": "sha256-GspiJwGW0wXEx1OmNXwuZhBnEgP620O9Pr0e134BDHg=",
       "System.Net.Http.wasm": "sha256-jK+HsKgrpnnPOZtKVfqlXDc5h7PUBelJIcAqEHR/E8s=",
       "System.Net.Primitives.wasm": "sha256-zjf8Ex+LpCUeqQGSot6bpq6UG562E01grxLl41r/ClU=",

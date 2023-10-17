@@ -337,6 +337,22 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "Material.Blazor.MD3/Components/Select/MBSelect.md",
+      "output": {
+        ".html": {
+          "relative_path": "Material.Blazor.MD3/Components/Select/MBSelect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Components/Switch/MBSwitch.md",
       "output": {
@@ -1244,20 +1260,20 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MBSelectElement-1.yml",
+      "source_relative_path": "api/Material.Blazor.MBSelect-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Material.Blazor.MBSelectElement-1.html"
+          "relative_path": "api/Material.Blazor.MBSelect-1.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MBSelectInputStyleMD2.yml",
+      "source_relative_path": "api/Material.Blazor.MBSelectInputStyle.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Material.Blazor.MBSelectInputStyleMD2.html"
+          "relative_path": "api/Material.Blazor.MBSelectInputStyle.html"
         }
       },
       "version": ""
@@ -1268,6 +1284,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBServicesOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBSingleSelectElement-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBSingleSelectElement-1.html"
         }
       },
       "version": ""
@@ -1478,26 +1504,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MD2.MBMenuSelectionGroup.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MD2.MBSelect-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MD2.MBSelect-1.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MD2.MBSlider.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MD2.MBSlider.html"
         }
       },
       "version": ""
