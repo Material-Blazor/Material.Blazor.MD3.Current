@@ -29,11 +29,7 @@
       <meta name="loc:copy" content="Copy">
   </head>
 
-  <script type="module">
-    import options from './../../public/main.js'
-    import { init } from './../../public/docfx.min.js'
-    init(options)
-  </script>
+  <script type="module" src="./../../public/docfx.min.js"></script>
 
   <script>
     const theme = localStorage.getItem('theme') || 'auto'
@@ -95,6 +91,7 @@ from the Material Symbols font.They support variations of style, size, weight, f
 </ul>
 <h2 id="other-components">Other Components</h2>
 <p>Many components such as MBIconButton, MBSelect, and MBTextField take icons. In every instance these components use IconName and have the other Icon parameters as options. ?Do they use MBIcon?</p>
+
 </article>
 
         <div class="contribution d-print-none">
@@ -102,7 +99,7 @@ from the Material Symbols font.They support variations of style, size, weight, f
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
-        
+
       </div>
 
       <div class="affix">

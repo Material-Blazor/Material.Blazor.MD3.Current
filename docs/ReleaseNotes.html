@@ -29,11 +29,7 @@
       <meta name="loc:copy" content="Copy">
   </head>
 
-  <script type="module">
-    import options from './public/main.js'
-    import { init } from './public/docfx.min.js'
-    init(options)
-  </script>
+  <script type="module" src="./public/docfx.min.js"></script>
 
   <script>
     const theme = localStorage.getItem('theme') || 'auto'
@@ -92,7 +88,7 @@
 <ul>
 <li>MD2/MD3: Dependabot and NuGet updates</li>
 <li>MD2/MD3: Migrate all projects to .Net 8 release</li>
-<li>MD3: Migrate @material/web to 1.0.0</li>
+<li>MD3: Migrate @material/web to 1.0.0 [[PLACEHOLDER ]]</li>
 </ul>
 <p><strong>New components</strong></p>
 <ul>
@@ -116,7 +112,6 @@
 <li>MD2/MD3: Automated retrieval of Google font SCSS source files</li>
 <li>MD2: Added new IconFoundry (Material Symbols) and corresponding support and demonstration files</li>
 <li>MD2: Removed English business day demo from the DatePicker example due to license issues with the Nager.Date package. For reference the code is available in commented form in DatePicker.razor file in Material.Blazor.Website.</li>
-<li>MD3: Migrate @material/web to 1.0.0 [[PLACEHOLDER ]]</li>
 </ul>
 <p><strong>New components</strong></p>
 <ul>
@@ -1131,6 +1126,7 @@ This is an experimental component and we do not recommend its use.</p>
 <ul>
 <li>First 1.0.0 release candidate having migrated from prior Blazor MDC previews.</li>
 </ul>
+
 </article>
 
         <div class="contribution d-print-none">
@@ -1138,7 +1134,7 @@ This is an experimental component and we do not recommend its use.</p>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
-        
+
       </div>
 
       <div class="affix">

@@ -29,11 +29,7 @@
       <meta name="loc:copy" content="Copy">
   </head>
 
-  <script type="module">
-    import options from './../../public/main.js'
-    import { init } from './../../public/docfx.min.js'
-    init(options)
-  </script>
+  <script type="module" src="./../../public/docfx.min.js"></script>
 
   <script>
     const theme = localStorage.getItem('theme') || 'auto'
@@ -88,6 +84,7 @@
 <p>This section has articles for each of the Material.Blazor <a class="xref" href="../Articles/CoreComponents.html">Core Components</a>, <a class="xref" href="../Articles/PlusComponents.html">Plus Components</a>, <a class="xref" href="../Articles/Utilities.html">Utilities</a> and <a class="xref" href="../Articles/Services.html">Services</a>.
 There is also links to the comprehensive API reference automatically generated from the Material.Blazor codebase's triple slash comments For each of the <code>Material.Blazor</code> and <code>Material.Blazor.Internal</code> namespaces.
 As a user of the library, you should only reference the <code>Material.Blazor</code> namespace. <code>Material.Blazor.Internal</code> as its name suggests has components intended only for the library's internal use.</p>
+
 </article>
 
         <div class="contribution d-print-none">
@@ -95,7 +92,7 @@ As a user of the library, you should only reference the <code>Material.Blazor</c
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
-        
+
       </div>
 
       <div class="affix">

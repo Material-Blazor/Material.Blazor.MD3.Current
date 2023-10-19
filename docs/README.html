@@ -29,11 +29,7 @@
       <meta name="loc:copy" content="Copy">
   </head>
 
-  <script type="module">
-    import options from './public/main.js'
-    import { init } from './public/docfx.min.js'
-    init(options)
-  </script>
+  <script type="module" src="./public/docfx.min.js"></script>
 
   <script>
     const theme = localStorage.getItem('theme') || 'auto'
@@ -113,18 +109,22 @@
 <p>Material.Blazor has two release trains available via NuGet. The trains are MD2 and MD3 based.
 The MD2 NuGet packages are available in V3, V4, and V5. The MD3 NuGet packages are available in V5.</p>
 <ul>
-<li>V3.x is a DotNet 6 LTS stable version using Material Design 2 and is the version used in most production settings</li>
-<li>V4.x is a DotNet 7 STS stable version using Material Design 2 and is the version used in some production settings</li>
-<li>V5.x is a DotNet 8 LTS RC version.</li>
+<li>V3.x is a DotNet 6 LTS stable version using Material Design 2 and is the version used in most production settings. This version will be deprecated on November 12, 2024 (Corresponding to the DN6 EOL). No updates to Material.Blazor in this version are expected.</li>
+<li>V4.x is a DotNet 7 STS stable version using Material Design 2 and is the version used in some production settings. This version will be deprecated on May 14, 2024 (Corresponding to the DN7 EOL). No updates to Material.Blazor in this version are expected.</li>
+<li>V5.x is a DotNet 8 LTS stable version.
+<ul>
 <li>V5.x also has introductory work using Material Design 3.</li>
 <li>To see the MD3 work in progress you need to browse to <a href="https://material-blazor.github.io/Material.Blazor.MD3.Current/">https://material-blazor.github.io/Material.Blazor.MD3.Current/</a>)</li>
-<li>As of .Net 8 RC1 two NuGet packages are released that correspond to the release trains:
+<li>V5.x releases have two NuGet packages that correspond to the release trains:
 <ul>
-<li>Material.Blazor (.Net 8 RC1 &amp; Material Design 2)</li>
-<li>Material.Blazor.MD3 (.Net 8 RC1 &amp; Material Design 3)</li>
+<li>Material.Blazor (Material Design 2)</li>
+<li>Material.Blazor.MD3 (Material Design 3)</li>
 </ul>
 </li>
 </ul>
+</li>
+</ul>
+
 </article>
 
         <div class="contribution d-print-none">
@@ -132,7 +132,7 @@ The MD2 NuGet packages are available in V3, V4, and V5. The MD3 NuGet packages a
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
-        
+
       </div>
 
       <div class="affix">
