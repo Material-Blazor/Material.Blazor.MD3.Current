@@ -43,6 +43,12 @@ const base_e=(e,t,c)=>(c.configurable=!0,c.enumerable=!0,Reflect.decorate&&"obje
 function query_e(e,r){return(n,s,i)=>{const o=t=>t.renderRoot?.querySelector(e)??null;if(r){const{get:e,set:u}="object"==typeof s?n:i??(()=>{const t=Symbol();return{get(){return this[t]},set(e){this[t]=e}}})();return base_e(n,s,{get(){if(r){let t=e.call(this);return void 0===t&&(t=o(this),u.call(this,t)),t}return o(this)}})}return base_e(n,s,{get(){return o(this)}})}}
 /**
  * @license
+ * Copyright 2017 Google LLC
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+let query_all_e;function query_all_r(r){return(n,o)=>base_e(n,o,{get(){return(this.renderRoot??(query_all_e??=document.createDocumentFragment())).querySelectorAll(r)}})}
+/**
+ * @license
  * Copyright 2021 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
@@ -708,7 +714,7 @@ const NavigableKeys={ArrowDown:"ArrowDown",ArrowLeft:"ArrowLeft",ArrowUp:"ArrowU
  * Copyright 2023 Google LLC
  * SPDX-License-Identifier: Apache-2.0
  */
-function createCloseMenuEvent(initiator,reason){return new CustomEvent("close-menu",{bubbles:true,composed:true,detail:{initiator:initiator,reason:reason,itemPath:[initiator]}})}function createStayOpenOnFocusoutEvent(){return new Event("stay-open-on-focusout",{bubbles:true,composed:true})}function createCloseOnFocusoutEvent(){return new Event("close-on-focusout",{bubbles:true,composed:true})}const createDefaultCloseMenuEvent=null&&createCloseMenuEvent;function createDeactivateTypeaheadEvent(){return new Event("deactivate-typeahead",{bubbles:true,composed:true})}function createActivateTypeaheadEvent(){return new Event("activate-typeahead",{bubbles:true,composed:true})}const NavigableKey={UP:"ArrowUp",DOWN:"ArrowDown",RIGHT:"ArrowRight",LEFT:"ArrowLeft"};const SelectionKey={SPACE:"Space",ENTER:"Enter"};const CloseReason={CLICK_SELECTION:"click-selection",KEYDOWN:"keydown"};const KeydownCloseKey={ESCAPE:"Escape",SPACE:SelectionKey.SPACE,ENTER:SelectionKey.ENTER};function isClosableKey(code){return Object.values(KeydownCloseKey).some((value=>value===code))}function isSelectableKey(code){return Object.values(SelectionKey).some((value=>value===code))}function isElementInSubtree(target,container){const focusEv=new Event("md-contains",{bubbles:true,composed:true});let composedPath=[];const listener=ev=>{composedPath=ev.composedPath()};container.addEventListener("md-contains",listener);target.dispatchEvent(focusEv);container.removeEventListener("md-contains",listener);const isContained=composedPath.length>0;return isContained}const FocusState={NONE:"none",LIST_ROOT:"list-root",FIRST_ITEM:"first-item",LAST_ITEM:"last-item"};
+function createCloseMenuEvent(initiator,reason){return new CustomEvent("close-menu",{bubbles:true,composed:true,detail:{initiator:initiator,reason:reason,itemPath:[initiator]}})}function createStayOpenOnFocusoutEvent(){return new Event("stay-open-on-focusout",{bubbles:true,composed:true})}function createCloseOnFocusoutEvent(){return new Event("close-on-focusout",{bubbles:true,composed:true})}const createDefaultCloseMenuEvent=createCloseMenuEvent;function createDeactivateTypeaheadEvent(){return new Event("deactivate-typeahead",{bubbles:true,composed:true})}function createActivateTypeaheadEvent(){return new Event("activate-typeahead",{bubbles:true,composed:true})}const NavigableKey={UP:"ArrowUp",DOWN:"ArrowDown",RIGHT:"ArrowRight",LEFT:"ArrowLeft"};const SelectionKey={SPACE:"Space",ENTER:"Enter"};const CloseReason={CLICK_SELECTION:"click-selection",KEYDOWN:"keydown"};const KeydownCloseKey={ESCAPE:"Escape",SPACE:SelectionKey.SPACE,ENTER:SelectionKey.ENTER};function isClosableKey(code){return Object.values(KeydownCloseKey).some((value=>value===code))}function isSelectableKey(code){return Object.values(SelectionKey).some((value=>value===code))}function isElementInSubtree(target,container){const focusEv=new Event("md-contains",{bubbles:true,composed:true});let composedPath=[];const listener=ev=>{composedPath=ev.composedPath()};container.addEventListener("md-contains",listener);target.dispatchEvent(focusEv);container.removeEventListener("md-contains",listener);const isContained=composedPath.length>0;return isContained}const FocusState={NONE:"none",LIST_ROOT:"list-root",FIRST_ITEM:"first-item",LAST_ITEM:"last-item"};
 /**
  * @license
  * Copyright 2023 Google LLC
@@ -923,6 +929,117 @@ const outlined_select_styles_css_styles=i`:host{--_text-field-container-shape: v
  * SPDX-License-Identifier: Apache-2.0
  */
 let MdOutlinedSelect=class MdOutlinedSelect extends OutlinedSelect{};MdOutlinedSelect.styles=[select_internal_shared_styles_css_styles,outlined_select_styles_css_styles,outlined_forced_colors_styles_css_styles];MdOutlinedSelect=__decorate([t("md-outlined-select")],MdOutlinedSelect);
+/**
+  * @license
+  * Copyright 2022 Google LLC
+  * SPDX-License-Identifier: Apache-2.0
+  */
+const menuitem_forced_colors_styles_css_styles=i`@media(forced-colors: active){:host([disabled]),:host([disabled]) slot{color:GrayText;opacity:1}.list-item{position:relative}.list-item.selected::before{content:"";position:absolute;inset:0;box-sizing:border-box;border-radius:inherit;pointer-events:none;border:3px double CanvasText}}/*# sourceMappingURL=forced-colors-styles.css.map */
+`;
+/**
+  * @license
+  * Copyright 2022 Google LLC
+  * SPDX-License-Identifier: Apache-2.0
+  */
+const menu_item_styles_css_styles=i`:host{display:flex;--md-ripple-hover-color: var(--md-menu-item-hover-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--md-ripple-hover-opacity: var(--md-menu-item-hover-state-layer-opacity, 0.08);--md-ripple-pressed-color: var(--md-menu-item-pressed-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--md-ripple-pressed-opacity: var(--md-menu-item-pressed-state-layer-opacity, 0.12)}:host([disabled]){opacity:var(--md-menu-item-disabled-opacity, 0.3);pointer-events:none}md-focus-ring{z-index:1;--md-focus-ring-shape: 8px}a,button,li{background:none;border:none;padding:0;margin:0;text-align:unset;text-decoration:none}.list-item{border-radius:inherit;display:flex;flex:1;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}.list-item:not(.disabled){cursor:pointer}[slot=container]{pointer-events:none}md-ripple{border-radius:inherit}md-item{border-radius:inherit;flex:1;color:var(--md-menu-item-label-text-color, var(--md-sys-color-on-surface, #1d1b20));font-family:var(--md-menu-item-label-text-font, var(--md-sys-typescale-body-large-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-menu-item-label-text-size, var(--md-sys-typescale-body-large-size, 1rem));line-height:var(--md-menu-item-label-text-line-height, var(--md-sys-typescale-body-large-line-height, 1.5rem));font-weight:var(--md-menu-item-label-text-weight, var(--md-sys-typescale-body-large-weight, var(--md-ref-typeface-weight-regular, 400)));min-height:var(--md-menu-item-one-line-container-height, 56px);padding-top:var(--md-menu-item-top-space, 12px);padding-bottom:var(--md-menu-item-bottom-space, 12px);padding-inline-start:var(--md-menu-item-leading-space, 16px);padding-inline-end:var(--md-menu-item-trailing-space, 16px)}md-item[multiline]{min-height:var(--md-menu-item-two-line-container-height, 72px)}[slot=supporting-text]{color:var(--md-menu-item-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));font-family:var(--md-menu-item-supporting-text-font, var(--md-sys-typescale-body-medium-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-menu-item-supporting-text-size, var(--md-sys-typescale-body-medium-size, 0.875rem));line-height:var(--md-menu-item-supporting-text-line-height, var(--md-sys-typescale-body-medium-line-height, 1.25rem));font-weight:var(--md-menu-item-supporting-text-weight, var(--md-sys-typescale-body-medium-weight, var(--md-ref-typeface-weight-regular, 400)))}[slot=trailing-supporting-text]{color:var(--md-menu-item-trailing-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));font-family:var(--md-menu-item-trailing-supporting-text-font, var(--md-sys-typescale-label-small-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-menu-item-trailing-supporting-text-size, var(--md-sys-typescale-label-small-size, 0.6875rem));line-height:var(--md-menu-item-trailing-supporting-text-line-height, var(--md-sys-typescale-label-small-line-height, 1rem));font-weight:var(--md-menu-item-trailing-supporting-text-weight, var(--md-sys-typescale-label-small-weight, var(--md-ref-typeface-weight-medium, 500)))}:is([slot=start],[slot=end])::slotted(*){fill:currentColor}[slot=start]{color:var(--md-menu-item-leading-icon-color, var(--md-sys-color-on-surface-variant, #49454f))}[slot=end]{color:var(--md-menu-item-trailing-icon-color, var(--md-sys-color-on-surface-variant, #49454f))}.list-item.selected{background-color:var(--md-menu-item-selected-container-color, var(--md-sys-color-secondary-container, #e8def8))}.selected:not(.disabled) ::slotted(*){color:var(--md-menu-item-selected-label-text-color, var(--md-sys-color-on-secondary-container, #1d192b))}/*# sourceMappingURL=menu-item-styles.css.map */
+`;
+/**
+ * @license
+ * Copyright 2023 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+class Item extends lit_element_s{constructor(){super(...arguments);this.multiline=false}render(){return x`
+      <slot name="container"></slot>
+      <slot class="non-text" name="start"></slot>
+      <div class="text">
+        <slot name="overline"
+            @slotchange=${this.handleTextSlotChange}></slot>
+        <slot class="default-slot"
+            @slotchange=${this.handleTextSlotChange}></slot>
+        <slot name="headline"
+            @slotchange=${this.handleTextSlotChange}></slot>
+        <slot name="supporting-text"
+            @slotchange=${this.handleTextSlotChange}></slot>
+      </div>
+      <slot class="non-text" name="trailing-supporting-text"></slot>
+      <slot class="non-text" name="end"></slot>
+    `}handleTextSlotChange(){let isMultiline=false;let slotsWithContent=0;for(const slot of this.textSlots){if(slotHasContent(slot)){slotsWithContent+=1}if(slotsWithContent>1){isMultiline=true;break}}this.multiline=isMultiline}}__decorate([property_n({type:Boolean,reflect:true})],Item.prototype,"multiline",void 0);__decorate([query_all_r(".text slot")],Item.prototype,"textSlots",void 0);function slotHasContent(slot){for(const node of slot.assignedNodes({flatten:true})){const isElement=node.nodeType===Node.ELEMENT_NODE;const isTextWithContent=node.nodeType===Node.TEXT_NODE&&node.textContent?.match(/\S/);if(isElement||isTextWithContent){return true}}return false}
+/**
+  * @license
+  * Copyright 2022 Google LLC
+  * SPDX-License-Identifier: Apache-2.0
+  */
+const item_styles_css_styles=i`:host{color:var(--md-sys-color-on-surface, #1d1b20);font-family:var(--md-sys-typescale-body-large-font, var(--md-ref-typeface-plain, Roboto));font-size:var(--md-sys-typescale-body-large-size, 1rem);font-weight:var(--md-sys-typescale-body-large-weight, var(--md-ref-typeface-weight-regular, 400));line-height:var(--md-sys-typescale-body-large-line-height, 1.5rem);align-items:center;box-sizing:border-box;display:flex;gap:16px;min-height:56px;overflow:hidden;padding:12px 16px;position:relative;text-overflow:ellipsis}:host([multiline]){min-height:72px}[name=overline]{color:var(--md-sys-color-on-surface-variant, #49454f);font-family:var(--md-sys-typescale-label-small-font, var(--md-ref-typeface-plain, Roboto));font-size:var(--md-sys-typescale-label-small-size, 0.6875rem);font-weight:var(--md-sys-typescale-label-small-weight, var(--md-ref-typeface-weight-medium, 500));line-height:var(--md-sys-typescale-label-small-line-height, 1rem)}[name=supporting-text]{color:var(--md-sys-color-on-surface-variant, #49454f);font-family:var(--md-sys-typescale-body-medium-font, var(--md-ref-typeface-plain, Roboto));font-size:var(--md-sys-typescale-body-medium-size, 0.875rem);font-weight:var(--md-sys-typescale-body-medium-weight, var(--md-ref-typeface-weight-regular, 400));line-height:var(--md-sys-typescale-body-medium-line-height, 1.25rem)}[name=trailing-supporting-text]{color:var(--md-sys-color-on-surface-variant, #49454f);font-family:var(--md-sys-typescale-label-small-font, var(--md-ref-typeface-plain, Roboto));font-size:var(--md-sys-typescale-label-small-size, 0.6875rem);font-weight:var(--md-sys-typescale-label-small-weight, var(--md-ref-typeface-weight-medium, 500));line-height:var(--md-sys-typescale-label-small-line-height, 1rem)}[name=container]::slotted(*){inset:0;position:absolute}.default-slot{display:inline}.default-slot,::slotted(*){overflow:hidden;text-overflow:ellipsis}.text{display:flex;flex:1;flex-direction:column;overflow:hidden}/*# sourceMappingURL=item-styles.css.map */
+`;
+/**
+ * @license
+ * Copyright 2023 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+let MdItem=class MdItem extends Item{};MdItem.styles=[item_styles_css_styles];MdItem=__decorate([t("md-item")],MdItem);
+/**
+ * @license
+ * Copyright 2023 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+class MenuItemController{constructor(host,config){this.host=host;this.internalTypeaheadText=null;this.onClick=()=>{if(this.host.keepOpen)return;this.host.dispatchEvent(createDefaultCloseMenuEvent(this.host,{kind:CloseReason.CLICK_SELECTION}))};this.onKeydown=event=>{if(this.host.keepOpen||event.defaultPrevented)return;const keyCode=event.code;if(!event.defaultPrevented&&isClosableKey(keyCode)){event.preventDefault();this.host.dispatchEvent(createDefaultCloseMenuEvent(this.host,{kind:CloseReason.KEYDOWN,key:keyCode}))}};const{getHeadlineElements:getHeadlineElements}=config;this.getHeadlineElements=getHeadlineElements;this.host.addController(this)}get typeaheadText(){if(this.internalTypeaheadText!==null){return this.internalTypeaheadText}const headlineElements=this.getHeadlineElements();const textParts=[];headlineElements.forEach((headlineElement=>{if(headlineElement.textContent&&headlineElement.textContent.trim()){textParts.push(headlineElement.textContent.trim())}}));return textParts.join(" ")}get tagName(){const type=this.host.type;switch(type){case"link":return"a";case"button":return"button";default:case"menuitem":case"option":return"li"}}get role(){return this.host.type==="option"?"option":"menuitem"}hostConnected(){this.host.toggleAttribute("md-menu-item",true)}hostUpdate(){if(this.host.href){this.host.type="link"}}setTypeaheadText(text){this.internalTypeaheadText=text}}
+/**
+ * @license
+ * Copyright 2023 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+function createRequestSelectionEvent(){return new Event("request-selection",{bubbles:true,composed:true})}function createRequestDeselectionEvent(){return new Event("request-deselection",{bubbles:true,composed:true})}class SelectOptionController{get role(){return this.menuItemController.role}get typeaheadText(){return this.menuItemController.typeaheadText}setTypeaheadText(text){this.menuItemController.setTypeaheadText(text)}get displayText(){if(this.internalDisplayText!==null){return this.internalDisplayText}const headlineElements=this.getHeadlineElements();const textParts=[];headlineElements.forEach((headlineElement=>{if(headlineElement.textContent&&headlineElement.textContent.trim()){textParts.push(headlineElement.textContent.trim())}}));return textParts.join(" ")}setDisplayText(text){this.internalDisplayText=text}constructor(host,config){this.host=host;this.internalDisplayText=null;this.lastSelected=this.host.selected;this.firstUpdate=true;this.onClick=()=>{this.menuItemController.onClick()};this.onKeydown=e=>{this.menuItemController.onKeydown(e)};this.menuItemController=new MenuItemController(host,config);this.getHeadlineElements=config.getHeadlineElements;host.addController(this)}hostUpdate(){if(this.lastSelected!==this.host.selected){this.host.ariaSelected=this.host.selected?"true":"false"}}hostUpdated(){if(this.lastSelected!==this.host.selected&&!this.firstUpdate){if(this.host.selected){this.host.dispatchEvent(createRequestSelectionEvent())}else{this.host.dispatchEvent(createRequestDeselectionEvent())}}this.lastSelected=this.host.selected;this.firstUpdate=false}}
+/**
+ * @license
+ * Copyright 2023 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+class SelectOptionEl extends lit_element_s{constructor(){super(...arguments);this.disabled=false;this.isMenuItem=true;this.selected=false;this.value="";this.type="option";this.selectOptionController=new SelectOptionController(this,{getHeadlineElements:()=>this.headlineElements})}get typeaheadText(){return this.selectOptionController.typeaheadText}set typeaheadText(text){this.selectOptionController.setTypeaheadText(text)}get displayText(){return this.selectOptionController.displayText}set displayText(text){this.selectOptionController.setDisplayText(text)}render(){return this.renderListItem(x`
+      <md-item>
+        <div slot="container">
+          ${this.renderRipple()}
+          ${this.renderFocusRing()}
+        </div>
+        <slot name="start" slot="start"></slot>
+        <slot name="end" slot="end"></slot>
+        ${this.renderBody()}
+      </md-item>
+    `)}renderListItem(content){return x`
+      <li
+        id="item"
+        tabindex=${this.disabled?-1:0}
+        role=${this.selectOptionController.role}
+        aria-label=${this.ariaLabel||T}
+        aria-selected=${this.ariaSelected||T}
+        aria-checked=${this.ariaChecked||T}
+        aria-expanded=${this.ariaExpanded||T}
+        aria-haspopup=${this.ariaHasPopup||T}
+        class="list-item ${class_map_e(this.getRenderClasses())}"
+        @click=${this.selectOptionController.onClick}
+        @keydown=${this.selectOptionController.onKeydown}
+      >${content}</li>
+    `}renderRipple(){return x`
+      <md-ripple
+          part="ripple"
+          for="item"
+          ?disabled=${this.disabled}></md-ripple>`}renderFocusRing(){return x`
+      <md-focus-ring
+          part="focus-ring"
+          for="item"
+          inward></md-focus-ring>`}getRenderClasses(){return{disabled:this.disabled,selected:this.selected}}renderBody(){return x`
+      <slot></slot>
+      <slot name="overline" slot="overline"></slot>
+      <slot name="headline" slot="headline"></slot>
+      <slot name="supporting-text" slot="supporting-text"></slot>
+      <slot name="trailing-supporting-text"
+          slot="trailing-supporting-text"></slot>
+    `}focus(){this.listItemRoot?.focus()}}(()=>{requestUpdateOnAriaChange(SelectOptionEl)})();SelectOptionEl.shadowRootOptions={...lit_element_s.shadowRootOptions,delegatesFocus:true};__decorate([property_n({type:Boolean,reflect:true})],SelectOptionEl.prototype,"disabled",void 0);__decorate([property_n({type:Boolean,attribute:"md-menu-item",reflect:true})],SelectOptionEl.prototype,"isMenuItem",void 0);__decorate([property_n({type:Boolean})],SelectOptionEl.prototype,"selected",void 0);__decorate([property_n()],SelectOptionEl.prototype,"value",void 0);__decorate([query_e(".list-item")],SelectOptionEl.prototype,"listItemRoot",void 0);__decorate([query_assigned_elements_o({slot:"headline"})],SelectOptionEl.prototype,"headlineElements",void 0);__decorate([property_n({attribute:"typeahead-text"})],SelectOptionEl.prototype,"typeaheadText",null);__decorate([property_n({attribute:"display-text"})],SelectOptionEl.prototype,"displayText",null);
+/**
+ * @license
+ * Copyright 2023 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+let MdSelectOption=class MdSelectOption extends SelectOptionEl{};MdSelectOption.styles=[menu_item_styles_css_styles,menuitem_forced_colors_styles_css_styles];MdSelectOption=__decorate([t("md-select-option")],MdSelectOption);
 /**
   * @license
   * Copyright 2022 Google LLC

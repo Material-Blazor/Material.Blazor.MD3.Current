@@ -3435,6 +3435,23 @@ references:
   fullName.vb: Material.Blazor.MBSelect(Of TItem).BuildRenderTree
   nameWithType: MBSelect<TItem>.BuildRenderTree
   nameWithType.vb: MBSelect(Of TItem).BuildRenderTree
+- uid: Material.Blazor.MBSelect`1.ConsoleLog(System.String)
+  name: ConsoleLog(string)
+  href: api/Material.Blazor.MBSelect-1.html#Material_Blazor_MBSelect_1_ConsoleLog_System_String_
+  commentId: M:Material.Blazor.MBSelect`1.ConsoleLog(System.String)
+  name.vb: ConsoleLog(String)
+  fullName: Material.Blazor.MBSelect<TItem>.ConsoleLog(string)
+  fullName.vb: Material.Blazor.MBSelect(Of TItem).ConsoleLog(String)
+  nameWithType: MBSelect<TItem>.ConsoleLog(string)
+  nameWithType.vb: MBSelect(Of TItem).ConsoleLog(String)
+- uid: Material.Blazor.MBSelect`1.ConsoleLog*
+  name: ConsoleLog
+  href: api/Material.Blazor.MBSelect-1.html#Material_Blazor_MBSelect_1_ConsoleLog_
+  commentId: Overload:Material.Blazor.MBSelect`1.ConsoleLog
+  fullName: Material.Blazor.MBSelect<TItem>.ConsoleLog
+  fullName.vb: Material.Blazor.MBSelect(Of TItem).ConsoleLog
+  nameWithType: MBSelect<TItem>.ConsoleLog
+  nameWithType.vb: MBSelect(Of TItem).ConsoleLog
 - uid: Material.Blazor.MBSelect`1.Density
   name: Density
   href: api/Material.Blazor.MBSelect-1.html#Material_Blazor_MBSelect_1_Density
@@ -3451,6 +3468,22 @@ references:
   fullName.vb: Material.Blazor.MBSelect(Of TItem).Density
   nameWithType: MBSelect<TItem>.Density
   nameWithType.vb: MBSelect(Of TItem).Density
+- uid: Material.Blazor.MBSelect`1.JSRuntime
+  name: JSRuntime
+  href: api/Material.Blazor.MBSelect-1.html#Material_Blazor_MBSelect_1_JSRuntime
+  commentId: P:Material.Blazor.MBSelect`1.JSRuntime
+  fullName: Material.Blazor.MBSelect<TItem>.JSRuntime
+  fullName.vb: Material.Blazor.MBSelect(Of TItem).JSRuntime
+  nameWithType: MBSelect<TItem>.JSRuntime
+  nameWithType.vb: MBSelect(Of TItem).JSRuntime
+- uid: Material.Blazor.MBSelect`1.JSRuntime*
+  name: JSRuntime
+  href: api/Material.Blazor.MBSelect-1.html#Material_Blazor_MBSelect_1_JSRuntime_
+  commentId: Overload:Material.Blazor.MBSelect`1.JSRuntime
+  fullName: Material.Blazor.MBSelect<TItem>.JSRuntime
+  fullName.vb: Material.Blazor.MBSelect(Of TItem).JSRuntime
+  nameWithType: MBSelect<TItem>.JSRuntime
+  nameWithType.vb: MBSelect(Of TItem).JSRuntime
 - uid: Material.Blazor.MBSelect`1.Label
   name: Label
   href: api/Material.Blazor.MBSelect-1.html#Material_Blazor_MBSelect_1_Label
@@ -3467,6 +3500,22 @@ references:
   fullName.vb: Material.Blazor.MBSelect(Of TItem).Label
   nameWithType: MBSelect<TItem>.Label
   nameWithType.vb: MBSelect(Of TItem).Label
+- uid: Material.Blazor.MBSelect`1.OnParametersSetAsync
+  name: OnParametersSetAsync()
+  href: api/Material.Blazor.MBSelect-1.html#Material_Blazor_MBSelect_1_OnParametersSetAsync
+  commentId: M:Material.Blazor.MBSelect`1.OnParametersSetAsync
+  fullName: Material.Blazor.MBSelect<TItem>.OnParametersSetAsync()
+  fullName.vb: Material.Blazor.MBSelect(Of TItem).OnParametersSetAsync()
+  nameWithType: MBSelect<TItem>.OnParametersSetAsync()
+  nameWithType.vb: MBSelect(Of TItem).OnParametersSetAsync()
+- uid: Material.Blazor.MBSelect`1.OnParametersSetAsync*
+  name: OnParametersSetAsync
+  href: api/Material.Blazor.MBSelect-1.html#Material_Blazor_MBSelect_1_OnParametersSetAsync_
+  commentId: Overload:Material.Blazor.MBSelect`1.OnParametersSetAsync
+  fullName: Material.Blazor.MBSelect<TItem>.OnParametersSetAsync
+  fullName.vb: Material.Blazor.MBSelect(Of TItem).OnParametersSetAsync
+  nameWithType: MBSelect<TItem>.OnParametersSetAsync
+  nameWithType.vb: MBSelect(Of TItem).OnParametersSetAsync
 - uid: Material.Blazor.MBSelect`1.Required
   name: Required
   href: api/Material.Blazor.MBSelect-1.html#Material_Blazor_MBSelect_1_Required
