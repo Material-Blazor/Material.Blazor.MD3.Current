@@ -1169,18 +1169,42 @@ references:
   commentId: Overload:Material.Blazor.Internal.InternalTextFieldBase.Label
   fullName: Material.Blazor.Internal.InternalTextFieldBase.Label
   nameWithType: InternalTextFieldBase.Label
-- uid: Material.Blazor.Internal.InternalTextFieldBase.LeadingIconPLUS
-  name: LeadingIconPLUS
-  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_LeadingIconPLUS
-  commentId: P:Material.Blazor.Internal.InternalTextFieldBase.LeadingIconPLUS
-  fullName: Material.Blazor.Internal.InternalTextFieldBase.LeadingIconPLUS
-  nameWithType: InternalTextFieldBase.LeadingIconPLUS
-- uid: Material.Blazor.Internal.InternalTextFieldBase.LeadingIconPLUS*
-  name: LeadingIconPLUS
-  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_LeadingIconPLUS_
-  commentId: Overload:Material.Blazor.Internal.InternalTextFieldBase.LeadingIconPLUS
-  fullName: Material.Blazor.Internal.InternalTextFieldBase.LeadingIconPLUS
-  nameWithType: InternalTextFieldBase.LeadingIconPLUS
+- uid: Material.Blazor.Internal.InternalTextFieldBase.LeadingIcon
+  name: LeadingIcon
+  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_LeadingIcon
+  commentId: P:Material.Blazor.Internal.InternalTextFieldBase.LeadingIcon
+  fullName: Material.Blazor.Internal.InternalTextFieldBase.LeadingIcon
+  nameWithType: InternalTextFieldBase.LeadingIcon
+- uid: Material.Blazor.Internal.InternalTextFieldBase.LeadingIcon*
+  name: LeadingIcon
+  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_LeadingIcon_
+  commentId: Overload:Material.Blazor.Internal.InternalTextFieldBase.LeadingIcon
+  fullName: Material.Blazor.Internal.InternalTextFieldBase.LeadingIcon
+  nameWithType: InternalTextFieldBase.LeadingIcon
+- uid: Material.Blazor.Internal.InternalTextFieldBase.LeadingToggleIcon
+  name: LeadingToggleIcon
+  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_LeadingToggleIcon
+  commentId: P:Material.Blazor.Internal.InternalTextFieldBase.LeadingToggleIcon
+  fullName: Material.Blazor.Internal.InternalTextFieldBase.LeadingToggleIcon
+  nameWithType: InternalTextFieldBase.LeadingToggleIcon
+- uid: Material.Blazor.Internal.InternalTextFieldBase.LeadingToggleIcon*
+  name: LeadingToggleIcon
+  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_LeadingToggleIcon_
+  commentId: Overload:Material.Blazor.Internal.InternalTextFieldBase.LeadingToggleIcon
+  fullName: Material.Blazor.Internal.InternalTextFieldBase.LeadingToggleIcon
+  nameWithType: InternalTextFieldBase.LeadingToggleIcon
+- uid: Material.Blazor.Internal.InternalTextFieldBase.LeadingToggleIconSelected
+  name: LeadingToggleIconSelected
+  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_LeadingToggleIconSelected
+  commentId: P:Material.Blazor.Internal.InternalTextFieldBase.LeadingToggleIconSelected
+  fullName: Material.Blazor.Internal.InternalTextFieldBase.LeadingToggleIconSelected
+  nameWithType: InternalTextFieldBase.LeadingToggleIconSelected
+- uid: Material.Blazor.Internal.InternalTextFieldBase.LeadingToggleIconSelected*
+  name: LeadingToggleIconSelected
+  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_LeadingToggleIconSelected_
+  commentId: Overload:Material.Blazor.Internal.InternalTextFieldBase.LeadingToggleIconSelected
+  fullName: Material.Blazor.Internal.InternalTextFieldBase.LeadingToggleIconSelected
+  nameWithType: InternalTextFieldBase.LeadingToggleIconSelected
 - uid: Material.Blazor.Internal.InternalTextFieldBase.OnInitializedAsync
   name: OnInitializedAsync()
   href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_OnInitializedAsync
@@ -1277,18 +1301,42 @@ references:
   commentId: Overload:Material.Blazor.Internal.InternalTextFieldBase.TextInputStyle
   fullName: Material.Blazor.Internal.InternalTextFieldBase.TextInputStyle
   nameWithType: InternalTextFieldBase.TextInputStyle
-- uid: Material.Blazor.Internal.InternalTextFieldBase.TrailingIconPLUS
-  name: TrailingIconPLUS
-  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_TrailingIconPLUS
-  commentId: P:Material.Blazor.Internal.InternalTextFieldBase.TrailingIconPLUS
-  fullName: Material.Blazor.Internal.InternalTextFieldBase.TrailingIconPLUS
-  nameWithType: InternalTextFieldBase.TrailingIconPLUS
-- uid: Material.Blazor.Internal.InternalTextFieldBase.TrailingIconPLUS*
-  name: TrailingIconPLUS
-  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_TrailingIconPLUS_
-  commentId: Overload:Material.Blazor.Internal.InternalTextFieldBase.TrailingIconPLUS
-  fullName: Material.Blazor.Internal.InternalTextFieldBase.TrailingIconPLUS
-  nameWithType: InternalTextFieldBase.TrailingIconPLUS
+- uid: Material.Blazor.Internal.InternalTextFieldBase.TrailingIcon
+  name: TrailingIcon
+  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_TrailingIcon
+  commentId: P:Material.Blazor.Internal.InternalTextFieldBase.TrailingIcon
+  fullName: Material.Blazor.Internal.InternalTextFieldBase.TrailingIcon
+  nameWithType: InternalTextFieldBase.TrailingIcon
+- uid: Material.Blazor.Internal.InternalTextFieldBase.TrailingIcon*
+  name: TrailingIcon
+  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_TrailingIcon_
+  commentId: Overload:Material.Blazor.Internal.InternalTextFieldBase.TrailingIcon
+  fullName: Material.Blazor.Internal.InternalTextFieldBase.TrailingIcon
+  nameWithType: InternalTextFieldBase.TrailingIcon
+- uid: Material.Blazor.Internal.InternalTextFieldBase.TrailingToggleIcon
+  name: TrailingToggleIcon
+  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_TrailingToggleIcon
+  commentId: P:Material.Blazor.Internal.InternalTextFieldBase.TrailingToggleIcon
+  fullName: Material.Blazor.Internal.InternalTextFieldBase.TrailingToggleIcon
+  nameWithType: InternalTextFieldBase.TrailingToggleIcon
+- uid: Material.Blazor.Internal.InternalTextFieldBase.TrailingToggleIcon*
+  name: TrailingToggleIcon
+  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_TrailingToggleIcon_
+  commentId: Overload:Material.Blazor.Internal.InternalTextFieldBase.TrailingToggleIcon
+  fullName: Material.Blazor.Internal.InternalTextFieldBase.TrailingToggleIcon
+  nameWithType: InternalTextFieldBase.TrailingToggleIcon
+- uid: Material.Blazor.Internal.InternalTextFieldBase.TrailingToggleIconSelected
+  name: TrailingToggleIconSelected
+  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_TrailingToggleIconSelected
+  commentId: P:Material.Blazor.Internal.InternalTextFieldBase.TrailingToggleIconSelected
+  fullName: Material.Blazor.Internal.InternalTextFieldBase.TrailingToggleIconSelected
+  nameWithType: InternalTextFieldBase.TrailingToggleIconSelected
+- uid: Material.Blazor.Internal.InternalTextFieldBase.TrailingToggleIconSelected*
+  name: TrailingToggleIconSelected
+  href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_TrailingToggleIconSelected_
+  commentId: Overload:Material.Blazor.Internal.InternalTextFieldBase.TrailingToggleIconSelected
+  fullName: Material.Blazor.Internal.InternalTextFieldBase.TrailingToggleIconSelected
+  nameWithType: InternalTextFieldBase.TrailingToggleIconSelected
 - uid: Material.Blazor.Internal.InternalTextFieldBase.ValidationMessageFor
   name: ValidationMessageFor
   href: api/Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_ValidationMessageFor
@@ -2198,15 +2246,15 @@ references:
   commentId: Overload:Material.Blazor.MBIcon.BuildRenderTree
   fullName: Material.Blazor.MBIcon.BuildRenderTree
   nameWithType: MBIcon.BuildRenderTree
-- uid: Material.Blazor.MBIcon.BuildRenderTreeWorker(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32@,Material.Blazor.MBCascadingDefaults,Material.Blazor.MBIconDescriptor,System.String)
-  name: BuildRenderTreeWorker(RenderTreeBuilder, ref int, MBCascadingDefaults, MBIconDescriptor, string)
-  href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_BuildRenderTreeWorker_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32__Material_Blazor_MBCascadingDefaults_Material_Blazor_MBIconDescriptor_System_String_
-  commentId: M:Material.Blazor.MBIcon.BuildRenderTreeWorker(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32@,Material.Blazor.MBCascadingDefaults,Material.Blazor.MBIconDescriptor,System.String)
-  name.vb: BuildRenderTreeWorker(RenderTreeBuilder, Integer, MBCascadingDefaults, MBIconDescriptor, String)
-  fullName: Material.Blazor.MBIcon.BuildRenderTreeWorker(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, ref int, Material.Blazor.MBCascadingDefaults, Material.Blazor.MBIconDescriptor, string)
-  fullName.vb: Material.Blazor.MBIcon.BuildRenderTreeWorker(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, Integer, Material.Blazor.MBCascadingDefaults, Material.Blazor.MBIconDescriptor, String)
-  nameWithType: MBIcon.BuildRenderTreeWorker(RenderTreeBuilder, ref int, MBCascadingDefaults, MBIconDescriptor, string)
-  nameWithType.vb: MBIcon.BuildRenderTreeWorker(RenderTreeBuilder, Integer, MBCascadingDefaults, MBIconDescriptor, String)
+- uid: Material.Blazor.MBIcon.BuildRenderTreeWorker(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32@,Material.Blazor.MBCascadingDefaults,System.Collections.Generic.KeyValuePair{System.String,System.Object}[],System.String,System.String,System.String,Material.Blazor.MBIconDescriptor,System.String)
+  name: BuildRenderTreeWorker(RenderTreeBuilder, ref int, MBCascadingDefaults, KeyValuePair<string, object>[], string, string, string, MBIconDescriptor, string)
+  href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_BuildRenderTreeWorker_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32__Material_Blazor_MBCascadingDefaults_System_Collections_Generic_KeyValuePair_System_String_System_Object____System_String_System_String_System_String_Material_Blazor_MBIconDescriptor_System_String_
+  commentId: M:Material.Blazor.MBIcon.BuildRenderTreeWorker(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32@,Material.Blazor.MBCascadingDefaults,System.Collections.Generic.KeyValuePair{System.String,System.Object}[],System.String,System.String,System.String,Material.Blazor.MBIconDescriptor,System.String)
+  name.vb: BuildRenderTreeWorker(RenderTreeBuilder, Integer, MBCascadingDefaults, KeyValuePair(Of String, Object)(), String, String, String, MBIconDescriptor, String)
+  fullName: Material.Blazor.MBIcon.BuildRenderTreeWorker(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, ref int, Material.Blazor.MBCascadingDefaults, System.Collections.Generic.KeyValuePair<string, object>[], string, string, string, Material.Blazor.MBIconDescriptor, string)
+  fullName.vb: Material.Blazor.MBIcon.BuildRenderTreeWorker(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, Integer, Material.Blazor.MBCascadingDefaults, System.Collections.Generic.KeyValuePair(Of String, Object)(), String, String, String, Material.Blazor.MBIconDescriptor, String)
+  nameWithType: MBIcon.BuildRenderTreeWorker(RenderTreeBuilder, ref int, MBCascadingDefaults, KeyValuePair<string, object>[], string, string, string, MBIconDescriptor, string)
+  nameWithType.vb: MBIcon.BuildRenderTreeWorker(RenderTreeBuilder, Integer, MBCascadingDefaults, KeyValuePair(Of String, Object)(), String, String, String, MBIconDescriptor, String)
 - uid: Material.Blazor.MBIcon.BuildRenderTreeWorker*
   name: BuildRenderTreeWorker
   href: api/Material.Blazor.MBIcon.html#Material_Blazor_MBIcon_BuildRenderTreeWorker_
@@ -2276,6 +2324,21 @@ references:
   commentId: Overload:Material.Blazor.MBIconButton.BuildRenderTree
   fullName: Material.Blazor.MBIconButton.BuildRenderTree
   nameWithType: MBIconButton.BuildRenderTree
+- uid: Material.Blazor.MBIconButton.BuildRenderTreeWorker(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32@,Material.Blazor.MBCascadingDefaults,System.Collections.Generic.KeyValuePair{System.String,System.Object}[],System.String,System.String,System.String,System.Boolean,System.Nullable{Material.Blazor.MBIconButtonStyle},Material.Blazor.MBIconDescriptor,Material.Blazor.MBIconDescriptor,System.String,System.String,System.Boolean,System.String)
+  name: BuildRenderTreeWorker(RenderTreeBuilder, ref int, MBCascadingDefaults, KeyValuePair<string, object>[], string, string, string, bool, MBIconButtonStyle?, MBIconDescriptor, MBIconDescriptor, string, string, bool, string)
+  href: api/Material.Blazor.MBIconButton.html#Material_Blazor_MBIconButton_BuildRenderTreeWorker_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32__Material_Blazor_MBCascadingDefaults_System_Collections_Generic_KeyValuePair_System_String_System_Object____System_String_System_String_System_String_System_Boolean_System_Nullable_Material_Blazor_MBIconButtonStyle__Material_Blazor_MBIconDescriptor_Material_Blazor_MBIconDescriptor_System_String_System_String_System_Boolean_System_String_
+  commentId: M:Material.Blazor.MBIconButton.BuildRenderTreeWorker(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32@,Material.Blazor.MBCascadingDefaults,System.Collections.Generic.KeyValuePair{System.String,System.Object}[],System.String,System.String,System.String,System.Boolean,System.Nullable{Material.Blazor.MBIconButtonStyle},Material.Blazor.MBIconDescriptor,Material.Blazor.MBIconDescriptor,System.String,System.String,System.Boolean,System.String)
+  name.vb: BuildRenderTreeWorker(RenderTreeBuilder, Integer, MBCascadingDefaults, KeyValuePair(Of String, Object)(), String, String, String, Boolean, MBIconButtonStyle?, MBIconDescriptor, MBIconDescriptor, String, String, Boolean, String)
+  fullName: Material.Blazor.MBIconButton.BuildRenderTreeWorker(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, ref int, Material.Blazor.MBCascadingDefaults, System.Collections.Generic.KeyValuePair<string, object>[], string, string, string, bool, Material.Blazor.MBIconButtonStyle?, Material.Blazor.MBIconDescriptor, Material.Blazor.MBIconDescriptor, string, string, bool, string)
+  fullName.vb: Material.Blazor.MBIconButton.BuildRenderTreeWorker(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, Integer, Material.Blazor.MBCascadingDefaults, System.Collections.Generic.KeyValuePair(Of String, Object)(), String, String, String, Boolean, Material.Blazor.MBIconButtonStyle?, Material.Blazor.MBIconDescriptor, Material.Blazor.MBIconDescriptor, String, String, Boolean, String)
+  nameWithType: MBIconButton.BuildRenderTreeWorker(RenderTreeBuilder, ref int, MBCascadingDefaults, KeyValuePair<string, object>[], string, string, string, bool, MBIconButtonStyle?, MBIconDescriptor, MBIconDescriptor, string, string, bool, string)
+  nameWithType.vb: MBIconButton.BuildRenderTreeWorker(RenderTreeBuilder, Integer, MBCascadingDefaults, KeyValuePair(Of String, Object)(), String, String, String, Boolean, MBIconButtonStyle?, MBIconDescriptor, MBIconDescriptor, String, String, Boolean, String)
+- uid: Material.Blazor.MBIconButton.BuildRenderTreeWorker*
+  name: BuildRenderTreeWorker
+  href: api/Material.Blazor.MBIconButton.html#Material_Blazor_MBIconButton_BuildRenderTreeWorker_
+  commentId: Overload:Material.Blazor.MBIconButton.BuildRenderTreeWorker
+  fullName: Material.Blazor.MBIconButton.BuildRenderTreeWorker
+  nameWithType: MBIconButton.BuildRenderTreeWorker
 - uid: Material.Blazor.MBIconButton.Density
   name: Density
   href: api/Material.Blazor.MBIconButton.html#Material_Blazor_MBIconButton_Density
