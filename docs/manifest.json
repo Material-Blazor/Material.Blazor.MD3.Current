@@ -1570,6 +1570,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.Select2Table.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.Select2Table.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.ServiceCollectionExtensions.yml",
       "output": {
         ".html": {
