@@ -351,6 +351,19 @@
     },
     {
       "log_codes": [
+        "UidNotFound"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "Material.Blazor.MD3/Components/Slider/MBSlider.md",
+      "output": {
+        ".html": {
+          "relative_path": "Material.Blazor.MD3/Components/Slider/MBSlider.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
         "DuplicateUids"
       ],
       "type": "Conceptual",
@@ -1300,10 +1313,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MBSliderTypeMD2.yml",
+      "source_relative_path": "api/Material.Blazor.MBSlider-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Material.Blazor.MBSliderTypeMD2.html"
+          "relative_path": "api/Material.Blazor.MBSlider-1.html"
         }
       },
       "version": ""

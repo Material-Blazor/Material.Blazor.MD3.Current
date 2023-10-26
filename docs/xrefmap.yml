@@ -64,6 +64,9 @@ references:
 - uid: C.MBRadioButtonGroup
   name: MBRadioButtonGroup
   href: Material.Blazor.MD3/Components/RadioButtonGroup/MBRadioButtonGroup.html
+- uid: C.MBSlider
+  name: MBSlider
+  href: Material.Blazor.MD3/Components/Slider/MBSlider.html
 - uid: C.MBSwitch
   name: MBSwitch
   href: Material.Blazor.MD3/Components/Select/MBSelect.html
@@ -3901,30 +3904,194 @@ references:
   fullName.vb: Material.Blazor.MBSingleSelectElement(Of T).<Clone>$
   nameWithType: MBSingleSelectElement<T>.<Clone>$
   nameWithType.vb: MBSingleSelectElement(Of T).<Clone>$
-- uid: Material.Blazor.MBSliderTypeMD2
-  name: MBSliderTypeMD2
-  href: api/Material.Blazor.MBSliderTypeMD2.html
-  commentId: T:Material.Blazor.MBSliderTypeMD2
-  fullName: Material.Blazor.MBSliderTypeMD2
-  nameWithType: MBSliderTypeMD2
-- uid: Material.Blazor.MBSliderTypeMD2.Continuous
-  name: Continuous
-  href: api/Material.Blazor.MBSliderTypeMD2.html#Material_Blazor_MBSliderTypeMD2_Continuous
-  commentId: F:Material.Blazor.MBSliderTypeMD2.Continuous
-  fullName: Material.Blazor.MBSliderTypeMD2.Continuous
-  nameWithType: MBSliderTypeMD2.Continuous
-- uid: Material.Blazor.MBSliderTypeMD2.Discrete
-  name: Discrete
-  href: api/Material.Blazor.MBSliderTypeMD2.html#Material_Blazor_MBSliderTypeMD2_Discrete
-  commentId: F:Material.Blazor.MBSliderTypeMD2.Discrete
-  fullName: Material.Blazor.MBSliderTypeMD2.Discrete
-  nameWithType: MBSliderTypeMD2.Discrete
-- uid: Material.Blazor.MBSliderTypeMD2.DiscreteWithTickmarks
-  name: DiscreteWithTickmarks
-  href: api/Material.Blazor.MBSliderTypeMD2.html#Material_Blazor_MBSliderTypeMD2_DiscreteWithTickmarks
-  commentId: F:Material.Blazor.MBSliderTypeMD2.DiscreteWithTickmarks
-  fullName: Material.Blazor.MBSliderTypeMD2.DiscreteWithTickmarks
-  nameWithType: MBSliderTypeMD2.DiscreteWithTickmarks
+- uid: Material.Blazor.MBSlider`1
+  name: MBSlider<TItem>
+  href: api/Material.Blazor.MBSlider-1.html
+  commentId: T:Material.Blazor.MBSlider`1
+  name.vb: MBSlider(Of TItem)
+  fullName: Material.Blazor.MBSlider<TItem>
+  fullName.vb: Material.Blazor.MBSlider(Of TItem)
+  nameWithType: MBSlider<TItem>
+  nameWithType.vb: MBSlider(Of TItem)
+- uid: Material.Blazor.MBSlider`1.#ctor
+  name: MBSlider()
+  href: api/Material.Blazor.MBSlider-1.html#Material_Blazor_MBSlider_1__ctor
+  commentId: M:Material.Blazor.MBSlider`1.#ctor
+  name.vb: New()
+  fullName: Material.Blazor.MBSlider<TItem>.MBSlider()
+  fullName.vb: Material.Blazor.MBSlider(Of TItem).New()
+  nameWithType: MBSlider<TItem>.MBSlider()
+  nameWithType.vb: MBSlider(Of TItem).New()
+- uid: Material.Blazor.MBSlider`1.#ctor*
+  name: MBSlider
+  href: api/Material.Blazor.MBSlider-1.html#Material_Blazor_MBSlider_1__ctor_
+  commentId: Overload:Material.Blazor.MBSlider`1.#ctor
+  name.vb: New
+  fullName: Material.Blazor.MBSlider<TItem>.MBSlider
+  fullName.vb: Material.Blazor.MBSlider(Of TItem).New
+  nameWithType: MBSlider<TItem>.MBSlider
+  nameWithType.vb: MBSlider(Of TItem).New
+- uid: Material.Blazor.MBSlider`1.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  name: BuildRenderTree(RenderTreeBuilder)
+  href: api/Material.Blazor.MBSlider-1.html#Material_Blazor_MBSlider_1_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
+  commentId: M:Material.Blazor.MBSlider`1.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  fullName: Material.Blazor.MBSlider<TItem>.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  fullName.vb: Material.Blazor.MBSlider(Of TItem).BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  nameWithType: MBSlider<TItem>.BuildRenderTree(RenderTreeBuilder)
+  nameWithType.vb: MBSlider(Of TItem).BuildRenderTree(RenderTreeBuilder)
+- uid: Material.Blazor.MBSlider`1.BuildRenderTree*
+  name: BuildRenderTree
+  href: api/Material.Blazor.MBSlider-1.html#Material_Blazor_MBSlider_1_BuildRenderTree_
+  commentId: Overload:Material.Blazor.MBSlider`1.BuildRenderTree
+  fullName: Material.Blazor.MBSlider<TItem>.BuildRenderTree
+  fullName.vb: Material.Blazor.MBSlider(Of TItem).BuildRenderTree
+  nameWithType: MBSlider<TItem>.BuildRenderTree
+  nameWithType.vb: MBSlider(Of TItem).BuildRenderTree
+- uid: Material.Blazor.MBSlider`1.ConsoleLog(System.String)
+  name: ConsoleLog(string)
+  href: api/Material.Blazor.MBSlider-1.html#Material_Blazor_MBSlider_1_ConsoleLog_System_String_
+  commentId: M:Material.Blazor.MBSlider`1.ConsoleLog(System.String)
+  name.vb: ConsoleLog(String)
+  fullName: Material.Blazor.MBSlider<TItem>.ConsoleLog(string)
+  fullName.vb: Material.Blazor.MBSlider(Of TItem).ConsoleLog(String)
+  nameWithType: MBSlider<TItem>.ConsoleLog(string)
+  nameWithType.vb: MBSlider(Of TItem).ConsoleLog(String)
+- uid: Material.Blazor.MBSlider`1.ConsoleLog*
+  name: ConsoleLog
+  href: api/Material.Blazor.MBSlider-1.html#Material_Blazor_MBSlider_1_ConsoleLog_
+  commentId: Overload:Material.Blazor.MBSlider`1.ConsoleLog
+  fullName: Material.Blazor.MBSlider<TItem>.ConsoleLog
+  fullName.vb: Material.Blazor.MBSlider(Of TItem).ConsoleLog
+  nameWithType: MBSlider<TItem>.ConsoleLog
+  nameWithType.vb: MBSlider(Of TItem).ConsoleLog
+- uid: Material.Blazor.MBSlider`1.Density
+  name: Density
+  href: api/Material.Blazor.MBSlider-1.html#Material_Blazor_MBSlider_1_Density
+  commentId: P:Material.Blazor.MBSlider`1.Density
+  fullName: Material.Blazor.MBSlider<TItem>.Density
+  fullName.vb: Material.Blazor.MBSlider(Of TItem).Density
+  nameWithType: MBSlider<TItem>.Density
+  nameWithType.vb: MBSlider(Of TItem).Density
+- uid: Material.Blazor.MBSlider`1.Density*
+  name: Density
+  href: api/Material.Blazor.MBSlider-1.html#Material_Blazor_MBSlider_1_Density_
+  commentId: Overload:Material.Blazor.MBSlider`1.Density
+  fullName: Material.Blazor.MBSlider<TItem>.Density
+  fullName.vb: Material.Blazor.MBSlider(Of TItem).Density
+  nameWithType: MBSlider<TItem>.Density
+  nameWithType.vb: MBSlider(Of TItem).Density
+- uid: Material.Blazor.MBSlider`1.JSRuntime
+  name: JSRuntime
+  href: api/Material.Blazor.MBSlider-1.html#Material_Blazor_MBSlider_1_JSRuntime
+  commentId: P:Material.Blazor.MBSlider`1.JSRuntime
+  fullName: Material.Blazor.MBSlider<TItem>.JSRuntime
+  fullName.vb: Material.Blazor.MBSlider(Of TItem).JSRuntime
+  nameWithType: MBSlider<TItem>.JSRuntime
+  nameWithType.vb: MBSlider(Of TItem).JSRuntime
+- uid: Material.Blazor.MBSlider`1.JSRuntime*
+  name: JSRuntime
+  href: api/Material.Blazor.MBSlider-1.html#Material_Blazor_MBSlider_1_JSRuntime_
+  commentId: Overload:Material.Blazor.MBSlider`1.JSRuntime
+  fullName: Material.Blazor.MBSlider<TItem>.JSRuntime
+  fullName.vb: Material.Blazor.MBSlider(Of TItem).JSRuntime
+  nameWithType: MBSlider<TItem>.JSRuntime
+  nameWithType.vb: MBSlider(Of TItem).JSRuntime
+- uid: Material.Blazor.MBSlider`1.Label
+  name: Label
+  href: api/Material.Blazor.MBSlider-1.html#Material_Blazor_MBSlider_1_Label
+  commentId: P:Material.Blazor.MBSlider`1.Label
+  fullName: Material.Blazor.MBSlider<TItem>.Label
+  fullName.vb: Material.Blazor.MBSlider(Of TItem).Label
+  nameWithType: MBSlider<TItem>.Label
+  nameWithType.vb: MBSlider(Of TItem).Label
+- uid: Material.Blazor.MBSlider`1.Label*
+  name: Label
+  href: api/Material.Blazor.MBSlider-1.html#Material_Blazor_MBSlider_1_Label_
+  commentId: Overload:Material.Blazor.MBSlider`1.Label
+  fullName: Material.Blazor.MBSlider<TItem>.Label
+  fullName.vb: Material.Blazor.MBSlider(Of TItem).Label
+  nameWithType: MBSlider<TItem>.Label
+  nameWithType.vb: MBSlider(Of TItem).Label
+- uid: Material.Blazor.MBSlider`1.SliderIsLabeled
+  name: SliderIsLabeled
+  href: api/Material.Blazor.MBSlider-1.html#Material_Blazor_MBSlider_1_SliderIsLabeled
+  commentId: P:Material.Blazor.MBSlider`1.SliderIsLabeled
+  fullName: Material.Blazor.MBSlider<TItem>.SliderIsLabeled
+  fullName.vb: Material.Blazor.MBSlider(Of TItem).SliderIsLabeled
+  nameWithType: MBSlider<TItem>.SliderIsLabeled
+  nameWithType.vb: MBSlider(Of TItem).SliderIsLabeled
+- uid: Material.Blazor.MBSlider`1.SliderIsLabeled*
+  name: SliderIsLabeled
+  href: api/Material.Blazor.MBSlider-1.html#Material_Blazor_MBSlider_1_SliderIsLabeled_
+  commentId: Overload:Material.Blazor.MBSlider`1.SliderIsLabeled
+  fullName: Material.Blazor.MBSlider<TItem>.SliderIsLabeled
+  fullName.vb: Material.Blazor.MBSlider(Of TItem).SliderIsLabeled
+  nameWithType: MBSlider<TItem>.SliderIsLabeled
+  nameWithType.vb: MBSlider(Of TItem).SliderIsLabeled
+- uid: Material.Blazor.MBSlider`1.SliderMax
+  name: SliderMax
+  href: api/Material.Blazor.MBSlider-1.html#Material_Blazor_MBSlider_1_SliderMax
+  commentId: P:Material.Blazor.MBSlider`1.SliderMax
+  fullName: Material.Blazor.MBSlider<TItem>.SliderMax
+  fullName.vb: Material.Blazor.MBSlider(Of TItem).SliderMax
+  nameWithType: MBSlider<TItem>.SliderMax
+  nameWithType.vb: MBSlider(Of TItem).SliderMax
+- uid: Material.Blazor.MBSlider`1.SliderMax*
+  name: SliderMax
+  href: api/Material.Blazor.MBSlider-1.html#Material_Blazor_MBSlider_1_SliderMax_
+  commentId: Overload:Material.Blazor.MBSlider`1.SliderMax
+  fullName: Material.Blazor.MBSlider<TItem>.SliderMax
+  fullName.vb: Material.Blazor.MBSlider(Of TItem).SliderMax
+  nameWithType: MBSlider<TItem>.SliderMax
+  nameWithType.vb: MBSlider(Of TItem).SliderMax
+- uid: Material.Blazor.MBSlider`1.SliderMin
+  name: SliderMin
+  href: api/Material.Blazor.MBSlider-1.html#Material_Blazor_MBSlider_1_SliderMin
+  commentId: P:Material.Blazor.MBSlider`1.SliderMin
+  fullName: Material.Blazor.MBSlider<TItem>.SliderMin
+  fullName.vb: Material.Blazor.MBSlider(Of TItem).SliderMin
+  nameWithType: MBSlider<TItem>.SliderMin
+  nameWithType.vb: MBSlider(Of TItem).SliderMin
+- uid: Material.Blazor.MBSlider`1.SliderMin*
+  name: SliderMin
+  href: api/Material.Blazor.MBSlider-1.html#Material_Blazor_MBSlider_1_SliderMin_
+  commentId: Overload:Material.Blazor.MBSlider`1.SliderMin
+  fullName: Material.Blazor.MBSlider<TItem>.SliderMin
+  fullName.vb: Material.Blazor.MBSlider(Of TItem).SliderMin
+  nameWithType: MBSlider<TItem>.SliderMin
+  nameWithType.vb: MBSlider(Of TItem).SliderMin
+- uid: Material.Blazor.MBSlider`1.SliderStep
+  name: SliderStep
+  href: api/Material.Blazor.MBSlider-1.html#Material_Blazor_MBSlider_1_SliderStep
+  commentId: P:Material.Blazor.MBSlider`1.SliderStep
+  fullName: Material.Blazor.MBSlider<TItem>.SliderStep
+  fullName.vb: Material.Blazor.MBSlider(Of TItem).SliderStep
+  nameWithType: MBSlider<TItem>.SliderStep
+  nameWithType.vb: MBSlider(Of TItem).SliderStep
+- uid: Material.Blazor.MBSlider`1.SliderStep*
+  name: SliderStep
+  href: api/Material.Blazor.MBSlider-1.html#Material_Blazor_MBSlider_1_SliderStep_
+  commentId: Overload:Material.Blazor.MBSlider`1.SliderStep
+  fullName: Material.Blazor.MBSlider<TItem>.SliderStep
+  fullName.vb: Material.Blazor.MBSlider(Of TItem).SliderStep
+  nameWithType: MBSlider<TItem>.SliderStep
+  nameWithType.vb: MBSlider(Of TItem).SliderStep
+- uid: Material.Blazor.MBSlider`1.SliderTicks
+  name: SliderTicks
+  href: api/Material.Blazor.MBSlider-1.html#Material_Blazor_MBSlider_1_SliderTicks
+  commentId: P:Material.Blazor.MBSlider`1.SliderTicks
+  fullName: Material.Blazor.MBSlider<TItem>.SliderTicks
+  fullName.vb: Material.Blazor.MBSlider(Of TItem).SliderTicks
+  nameWithType: MBSlider<TItem>.SliderTicks
+  nameWithType.vb: MBSlider(Of TItem).SliderTicks
+- uid: Material.Blazor.MBSlider`1.SliderTicks*
+  name: SliderTicks
+  href: api/Material.Blazor.MBSlider-1.html#Material_Blazor_MBSlider_1_SliderTicks_
+  commentId: Overload:Material.Blazor.MBSlider`1.SliderTicks
+  fullName: Material.Blazor.MBSlider<TItem>.SliderTicks
+  fullName.vb: Material.Blazor.MBSlider(Of TItem).SliderTicks
+  nameWithType: MBSlider<TItem>.SliderTicks
+  nameWithType.vb: MBSlider(Of TItem).SliderTicks
 - uid: Material.Blazor.MBSwitch
   name: MBSwitch
   href: api/Material.Blazor.MBSwitch.html
