@@ -646,6 +646,22 @@ references:
   fullName.vb: Material.Blazor.Internal.InputComponent(Of T).SetParametersAsync
   nameWithType: InputComponent<T>.SetParametersAsync
   nameWithType.vb: InputComponent(Of T).SetParametersAsync
+- uid: Material.Blazor.Internal.InputComponent`1.ShouldRender
+  name: ShouldRender()
+  href: api/Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_ShouldRender
+  commentId: M:Material.Blazor.Internal.InputComponent`1.ShouldRender
+  fullName: Material.Blazor.Internal.InputComponent<T>.ShouldRender()
+  fullName.vb: Material.Blazor.Internal.InputComponent(Of T).ShouldRender()
+  nameWithType: InputComponent<T>.ShouldRender()
+  nameWithType.vb: InputComponent(Of T).ShouldRender()
+- uid: Material.Blazor.Internal.InputComponent`1.ShouldRender*
+  name: ShouldRender
+  href: api/Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_ShouldRender_
+  commentId: Overload:Material.Blazor.Internal.InputComponent`1.ShouldRender
+  fullName: Material.Blazor.Internal.InputComponent<T>.ShouldRender
+  fullName.vb: Material.Blazor.Internal.InputComponent(Of T).ShouldRender
+  nameWithType: InputComponent<T>.ShouldRender
+  nameWithType.vb: InputComponent(Of T).ShouldRender
 - uid: Material.Blazor.Internal.InputComponent`1.TryParseValueFromString(System.String,`0@,System.String@)
   name: TryParseValueFromString(string, out T, out string)
   href: api/Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_TryParseValueFromString_System_String__0__System_String__
