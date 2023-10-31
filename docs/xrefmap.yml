@@ -1935,6 +1935,18 @@ references:
   commentId: Overload:Material.Blazor.MBCascadingDefaults.IconWeight
   fullName: Material.Blazor.MBCascadingDefaults.IconWeight
   nameWithType: MBCascadingDefaults.IconWeight
+- uid: Material.Blazor.MBCascadingDefaults.ItemValidation
+  name: ItemValidation
+  href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_ItemValidation
+  commentId: P:Material.Blazor.MBCascadingDefaults.ItemValidation
+  fullName: Material.Blazor.MBCascadingDefaults.ItemValidation
+  nameWithType: MBCascadingDefaults.ItemValidation
+- uid: Material.Blazor.MBCascadingDefaults.ItemValidation*
+  name: ItemValidation
+  href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_ItemValidation_
+  commentId: Overload:Material.Blazor.MBCascadingDefaults.ItemValidation
+  fullName: Material.Blazor.MBCascadingDefaults.ItemValidation
+  nameWithType: MBCascadingDefaults.ItemValidation
 - uid: Material.Blazor.MBCascadingDefaults.SelectInputStyle
   name: SelectInputStyle
   href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_SelectInputStyle
@@ -3408,6 +3420,22 @@ references:
   fullName.vb: Material.Blazor.MBRadioButton(Of TItem).LeadingLabelPLUS
   nameWithType: MBRadioButton<TItem>.LeadingLabelPLUS
   nameWithType.vb: MBRadioButton(Of TItem).LeadingLabelPLUS
+- uid: Material.Blazor.MBRadioButton`1.OnInitializedAsync
+  name: OnInitializedAsync()
+  href: api/Material.Blazor.MBRadioButton-1.html#Material_Blazor_MBRadioButton_1_OnInitializedAsync
+  commentId: M:Material.Blazor.MBRadioButton`1.OnInitializedAsync
+  fullName: Material.Blazor.MBRadioButton<TItem>.OnInitializedAsync()
+  fullName.vb: Material.Blazor.MBRadioButton(Of TItem).OnInitializedAsync()
+  nameWithType: MBRadioButton<TItem>.OnInitializedAsync()
+  nameWithType.vb: MBRadioButton(Of TItem).OnInitializedAsync()
+- uid: Material.Blazor.MBRadioButton`1.OnInitializedAsync*
+  name: OnInitializedAsync
+  href: api/Material.Blazor.MBRadioButton-1.html#Material_Blazor_MBRadioButton_1_OnInitializedAsync_
+  commentId: Overload:Material.Blazor.MBRadioButton`1.OnInitializedAsync
+  fullName: Material.Blazor.MBRadioButton<TItem>.OnInitializedAsync
+  fullName.vb: Material.Blazor.MBRadioButton(Of TItem).OnInitializedAsync
+  nameWithType: MBRadioButton<TItem>.OnInitializedAsync
+  nameWithType.vb: MBRadioButton(Of TItem).OnInitializedAsync
 - uid: Material.Blazor.MBRadioButton`1.RadioGroupName
   name: RadioGroupName
   href: api/Material.Blazor.MBRadioButton-1.html#Material_Blazor_MBRadioButton_1_RadioGroupName
@@ -3582,6 +3610,22 @@ references:
   fullName.vb: Material.Blazor.MBSelect(Of TItem).Label
   nameWithType: MBSelect<TItem>.Label
   nameWithType.vb: MBSelect(Of TItem).Label
+- uid: Material.Blazor.MBSelect`1.OnInitializedAsync
+  name: OnInitializedAsync()
+  href: api/Material.Blazor.MBSelect-1.html#Material_Blazor_MBSelect_1_OnInitializedAsync
+  commentId: M:Material.Blazor.MBSelect`1.OnInitializedAsync
+  fullName: Material.Blazor.MBSelect<TItem>.OnInitializedAsync()
+  fullName.vb: Material.Blazor.MBSelect(Of TItem).OnInitializedAsync()
+  nameWithType: MBSelect<TItem>.OnInitializedAsync()
+  nameWithType.vb: MBSelect(Of TItem).OnInitializedAsync()
+- uid: Material.Blazor.MBSelect`1.OnInitializedAsync*
+  name: OnInitializedAsync
+  href: api/Material.Blazor.MBSelect-1.html#Material_Blazor_MBSelect_1_OnInitializedAsync_
+  commentId: Overload:Material.Blazor.MBSelect`1.OnInitializedAsync
+  fullName: Material.Blazor.MBSelect<TItem>.OnInitializedAsync
+  fullName.vb: Material.Blazor.MBSelect(Of TItem).OnInitializedAsync
+  nameWithType: MBSelect<TItem>.OnInitializedAsync
+  nameWithType.vb: MBSelect(Of TItem).OnInitializedAsync
 - uid: Material.Blazor.MBSelect`1.OnParametersSetAsync
   name: OnParametersSetAsync()
   href: api/Material.Blazor.MBSelect-1.html#Material_Blazor_MBSelect_1_OnParametersSetAsync
