@@ -983,16 +983,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MBButtonStyleMD2.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MBButtonStyleMD2.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.MBCardStyleMD2.yml",
       "output": {
         ".html": {
@@ -1187,6 +1177,36 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBLoggingServiceConfiguration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBMenu.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBMenu.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBMenuItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBMenuItem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBMenuItemType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBMenuItemType.html"
         }
       },
       "version": ""
