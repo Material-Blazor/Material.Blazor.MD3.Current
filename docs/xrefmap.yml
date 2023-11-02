@@ -52,6 +52,9 @@ references:
 - uid: C.MBCheckbox
   name: MBCheckbox
   href: Material.Blazor.MD3/Components/Checkbox/MBCheckbox.html
+- uid: C.MBChips
+  name: MBChips
+  href: Material.Blazor.MD3/Components/Chips/MBChips.html
 - uid: C.MBIcon
   name: MBIcon
   href: Material.Blazor.MD3/Components/Icon/MBIcon.html
@@ -2109,6 +2112,291 @@ references:
   commentId: Overload:Material.Blazor.MBCheckbox.TrailingLabelPLUS
   fullName: Material.Blazor.MBCheckbox.TrailingLabelPLUS
   nameWithType: MBCheckbox.TrailingLabelPLUS
+- uid: Material.Blazor.MBChips
+  name: MBChips
+  href: api/Material.Blazor.MBChips.html
+  commentId: T:Material.Blazor.MBChips
+  fullName: Material.Blazor.MBChips
+  nameWithType: MBChips
+- uid: Material.Blazor.MBChips.#ctor
+  name: MBChips()
+  href: api/Material.Blazor.MBChips.html#Material_Blazor_MBChips__ctor
+  commentId: M:Material.Blazor.MBChips.#ctor
+  name.vb: New()
+  fullName: Material.Blazor.MBChips.MBChips()
+  fullName.vb: Material.Blazor.MBChips.New()
+  nameWithType: MBChips.MBChips()
+  nameWithType.vb: MBChips.New()
+- uid: Material.Blazor.MBChips.#ctor*
+  name: MBChips
+  href: api/Material.Blazor.MBChips.html#Material_Blazor_MBChips__ctor_
+  commentId: Overload:Material.Blazor.MBChips.#ctor
+  name.vb: New
+  fullName: Material.Blazor.MBChips.MBChips
+  fullName.vb: Material.Blazor.MBChips.New
+  nameWithType: MBChips.MBChips
+  nameWithType.vb: MBChips.New
+- uid: Material.Blazor.MBChips.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  name: BuildRenderTree(RenderTreeBuilder)
+  href: api/Material.Blazor.MBChips.html#Material_Blazor_MBChips_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
+  commentId: M:Material.Blazor.MBChips.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  fullName: Material.Blazor.MBChips.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  nameWithType: MBChips.BuildRenderTree(RenderTreeBuilder)
+- uid: Material.Blazor.MBChips.BuildRenderTree*
+  name: BuildRenderTree
+  href: api/Material.Blazor.MBChips.html#Material_Blazor_MBChips_BuildRenderTree_
+  commentId: Overload:Material.Blazor.MBChips.BuildRenderTree
+  fullName: Material.Blazor.MBChips.BuildRenderTree
+  nameWithType: MBChips.BuildRenderTree
+- uid: Material.Blazor.MBChips.ChipsetItems
+  name: ChipsetItems
+  href: api/Material.Blazor.MBChips.html#Material_Blazor_MBChips_ChipsetItems
+  commentId: P:Material.Blazor.MBChips.ChipsetItems
+  fullName: Material.Blazor.MBChips.ChipsetItems
+  nameWithType: MBChips.ChipsetItems
+- uid: Material.Blazor.MBChips.ChipsetItems*
+  name: ChipsetItems
+  href: api/Material.Blazor.MBChips.html#Material_Blazor_MBChips_ChipsetItems_
+  commentId: Overload:Material.Blazor.MBChips.ChipsetItems
+  fullName: Material.Blazor.MBChips.ChipsetItems
+  nameWithType: MBChips.ChipsetItems
+- uid: Material.Blazor.MBChipsetItem
+  name: MBChipsetItem
+  href: api/Material.Blazor.MBChipsetItem.html
+  commentId: T:Material.Blazor.MBChipsetItem
+  fullName: Material.Blazor.MBChipsetItem
+  nameWithType: MBChipsetItem
+- uid: Material.Blazor.MBChipsetItem.#ctor
+  name: MBChipsetItem()
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem__ctor
+  commentId: M:Material.Blazor.MBChipsetItem.#ctor
+  name.vb: New()
+  fullName: Material.Blazor.MBChipsetItem.MBChipsetItem()
+  fullName.vb: Material.Blazor.MBChipsetItem.New()
+  nameWithType: MBChipsetItem.MBChipsetItem()
+  nameWithType.vb: MBChipsetItem.New()
+- uid: Material.Blazor.MBChipsetItem.#ctor(Material.Blazor.MBChipsetItem)
+  name: MBChipsetItem(MBChipsetItem)
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem__ctor_Material_Blazor_MBChipsetItem_
+  commentId: M:Material.Blazor.MBChipsetItem.#ctor(Material.Blazor.MBChipsetItem)
+  name.vb: New(MBChipsetItem)
+  fullName: Material.Blazor.MBChipsetItem.MBChipsetItem(Material.Blazor.MBChipsetItem)
+  fullName.vb: Material.Blazor.MBChipsetItem.New(Material.Blazor.MBChipsetItem)
+  nameWithType: MBChipsetItem.MBChipsetItem(MBChipsetItem)
+  nameWithType.vb: MBChipsetItem.New(MBChipsetItem)
+- uid: Material.Blazor.MBChipsetItem.#ctor*
+  name: MBChipsetItem
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem__ctor_
+  commentId: Overload:Material.Blazor.MBChipsetItem.#ctor
+  name.vb: New
+  fullName: Material.Blazor.MBChipsetItem.MBChipsetItem
+  fullName.vb: Material.Blazor.MBChipsetItem.New
+  nameWithType: MBChipsetItem.MBChipsetItem
+  nameWithType.vb: MBChipsetItem.New
+- uid: Material.Blazor.MBChipsetItem.EqualityContract
+  name: EqualityContract
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_EqualityContract
+  commentId: P:Material.Blazor.MBChipsetItem.EqualityContract
+  fullName: Material.Blazor.MBChipsetItem.EqualityContract
+  nameWithType: MBChipsetItem.EqualityContract
+- uid: Material.Blazor.MBChipsetItem.EqualityContract*
+  name: EqualityContract
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_EqualityContract_
+  commentId: Overload:Material.Blazor.MBChipsetItem.EqualityContract
+  fullName: Material.Blazor.MBChipsetItem.EqualityContract
+  nameWithType: MBChipsetItem.EqualityContract
+- uid: Material.Blazor.MBChipsetItem.Equals(Material.Blazor.MBChipsetItem)
+  name: Equals(MBChipsetItem?)
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_Equals_Material_Blazor_MBChipsetItem_
+  commentId: M:Material.Blazor.MBChipsetItem.Equals(Material.Blazor.MBChipsetItem)
+  name.vb: Equals(MBChipsetItem)
+  fullName: Material.Blazor.MBChipsetItem.Equals(Material.Blazor.MBChipsetItem?)
+  fullName.vb: Material.Blazor.MBChipsetItem.Equals(Material.Blazor.MBChipsetItem)
+  nameWithType: MBChipsetItem.Equals(MBChipsetItem?)
+  nameWithType.vb: MBChipsetItem.Equals(MBChipsetItem)
+- uid: Material.Blazor.MBChipsetItem.Equals(System.Object)
+  name: Equals(object?)
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_Equals_System_Object_
+  commentId: M:Material.Blazor.MBChipsetItem.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Material.Blazor.MBChipsetItem.Equals(object?)
+  fullName.vb: Material.Blazor.MBChipsetItem.Equals(Object)
+  nameWithType: MBChipsetItem.Equals(object?)
+  nameWithType.vb: MBChipsetItem.Equals(Object)
+- uid: Material.Blazor.MBChipsetItem.Equals*
+  name: Equals
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_Equals_
+  commentId: Overload:Material.Blazor.MBChipsetItem.Equals
+  fullName: Material.Blazor.MBChipsetItem.Equals
+  nameWithType: MBChipsetItem.Equals
+- uid: Material.Blazor.MBChipsetItem.GetHashCode
+  name: GetHashCode()
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_GetHashCode
+  commentId: M:Material.Blazor.MBChipsetItem.GetHashCode
+  fullName: Material.Blazor.MBChipsetItem.GetHashCode()
+  nameWithType: MBChipsetItem.GetHashCode()
+- uid: Material.Blazor.MBChipsetItem.GetHashCode*
+  name: GetHashCode
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_GetHashCode_
+  commentId: Overload:Material.Blazor.MBChipsetItem.GetHashCode
+  fullName: Material.Blazor.MBChipsetItem.GetHashCode
+  nameWithType: MBChipsetItem.GetHashCode
+- uid: Material.Blazor.MBChipsetItem.Headline
+  name: Headline
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_Headline
+  commentId: P:Material.Blazor.MBChipsetItem.Headline
+  fullName: Material.Blazor.MBChipsetItem.Headline
+  nameWithType: MBChipsetItem.Headline
+- uid: Material.Blazor.MBChipsetItem.Headline*
+  name: Headline
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_Headline_
+  commentId: Overload:Material.Blazor.MBChipsetItem.Headline
+  fullName: Material.Blazor.MBChipsetItem.Headline
+  nameWithType: MBChipsetItem.Headline
+- uid: Material.Blazor.MBChipsetItem.HeadlineColor
+  name: HeadlineColor
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_HeadlineColor
+  commentId: P:Material.Blazor.MBChipsetItem.HeadlineColor
+  fullName: Material.Blazor.MBChipsetItem.HeadlineColor
+  nameWithType: MBChipsetItem.HeadlineColor
+- uid: Material.Blazor.MBChipsetItem.HeadlineColor*
+  name: HeadlineColor
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_HeadlineColor_
+  commentId: Overload:Material.Blazor.MBChipsetItem.HeadlineColor
+  fullName: Material.Blazor.MBChipsetItem.HeadlineColor
+  nameWithType: MBChipsetItem.HeadlineColor
+- uid: Material.Blazor.MBChipsetItem.Identifier
+  name: Identifier
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_Identifier
+  commentId: P:Material.Blazor.MBChipsetItem.Identifier
+  fullName: Material.Blazor.MBChipsetItem.Identifier
+  nameWithType: MBChipsetItem.Identifier
+- uid: Material.Blazor.MBChipsetItem.Identifier*
+  name: Identifier
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_Identifier_
+  commentId: Overload:Material.Blazor.MBChipsetItem.Identifier
+  fullName: Material.Blazor.MBChipsetItem.Identifier
+  nameWithType: MBChipsetItem.Identifier
+- uid: Material.Blazor.MBChipsetItem.IsDisabled
+  name: IsDisabled
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_IsDisabled
+  commentId: P:Material.Blazor.MBChipsetItem.IsDisabled
+  fullName: Material.Blazor.MBChipsetItem.IsDisabled
+  nameWithType: MBChipsetItem.IsDisabled
+- uid: Material.Blazor.MBChipsetItem.IsDisabled*
+  name: IsDisabled
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_IsDisabled_
+  commentId: Overload:Material.Blazor.MBChipsetItem.IsDisabled
+  fullName: Material.Blazor.MBChipsetItem.IsDisabled
+  nameWithType: MBChipsetItem.IsDisabled
+- uid: Material.Blazor.MBChipsetItem.ItemType
+  name: ItemType
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_ItemType
+  commentId: P:Material.Blazor.MBChipsetItem.ItemType
+  fullName: Material.Blazor.MBChipsetItem.ItemType
+  nameWithType: MBChipsetItem.ItemType
+- uid: Material.Blazor.MBChipsetItem.ItemType*
+  name: ItemType
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_ItemType_
+  commentId: Overload:Material.Blazor.MBChipsetItem.ItemType
+  fullName: Material.Blazor.MBChipsetItem.ItemType
+  nameWithType: MBChipsetItem.ItemType
+- uid: Material.Blazor.MBChipsetItem.LeadingIcon
+  name: LeadingIcon
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_LeadingIcon
+  commentId: P:Material.Blazor.MBChipsetItem.LeadingIcon
+  fullName: Material.Blazor.MBChipsetItem.LeadingIcon
+  nameWithType: MBChipsetItem.LeadingIcon
+- uid: Material.Blazor.MBChipsetItem.LeadingIcon*
+  name: LeadingIcon
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_LeadingIcon_
+  commentId: Overload:Material.Blazor.MBChipsetItem.LeadingIcon
+  fullName: Material.Blazor.MBChipsetItem.LeadingIcon
+  nameWithType: MBChipsetItem.LeadingIcon
+- uid: Material.Blazor.MBChipsetItem.PrintMembers(System.Text.StringBuilder)
+  name: PrintMembers(StringBuilder)
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_PrintMembers_System_Text_StringBuilder_
+  commentId: M:Material.Blazor.MBChipsetItem.PrintMembers(System.Text.StringBuilder)
+  fullName: Material.Blazor.MBChipsetItem.PrintMembers(System.Text.StringBuilder)
+  nameWithType: MBChipsetItem.PrintMembers(StringBuilder)
+- uid: Material.Blazor.MBChipsetItem.PrintMembers*
+  name: PrintMembers
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_PrintMembers_
+  commentId: Overload:Material.Blazor.MBChipsetItem.PrintMembers
+  fullName: Material.Blazor.MBChipsetItem.PrintMembers
+  nameWithType: MBChipsetItem.PrintMembers
+- uid: Material.Blazor.MBChipsetItem.ToString
+  name: ToString()
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_ToString
+  commentId: M:Material.Blazor.MBChipsetItem.ToString
+  fullName: Material.Blazor.MBChipsetItem.ToString()
+  nameWithType: MBChipsetItem.ToString()
+- uid: Material.Blazor.MBChipsetItem.ToString*
+  name: ToString
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_ToString_
+  commentId: Overload:Material.Blazor.MBChipsetItem.ToString
+  fullName: Material.Blazor.MBChipsetItem.ToString
+  nameWithType: MBChipsetItem.ToString
+- uid: Material.Blazor.MBChipsetItem.TrailingIcon
+  name: TrailingIcon
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_TrailingIcon
+  commentId: P:Material.Blazor.MBChipsetItem.TrailingIcon
+  fullName: Material.Blazor.MBChipsetItem.TrailingIcon
+  nameWithType: MBChipsetItem.TrailingIcon
+- uid: Material.Blazor.MBChipsetItem.TrailingIcon*
+  name: TrailingIcon
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_TrailingIcon_
+  commentId: Overload:Material.Blazor.MBChipsetItem.TrailingIcon
+  fullName: Material.Blazor.MBChipsetItem.TrailingIcon
+  nameWithType: MBChipsetItem.TrailingIcon
+- uid: Material.Blazor.MBChipsetItem.op_Equality(Material.Blazor.MBChipsetItem,Material.Blazor.MBChipsetItem)
+  name: operator ==(MBChipsetItem?, MBChipsetItem?)
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_op_Equality_Material_Blazor_MBChipsetItem_Material_Blazor_MBChipsetItem_
+  commentId: M:Material.Blazor.MBChipsetItem.op_Equality(Material.Blazor.MBChipsetItem,Material.Blazor.MBChipsetItem)
+  name.vb: =(MBChipsetItem, MBChipsetItem)
+  fullName: Material.Blazor.MBChipsetItem.operator ==(Material.Blazor.MBChipsetItem?, Material.Blazor.MBChipsetItem?)
+  fullName.vb: Material.Blazor.MBChipsetItem.=(Material.Blazor.MBChipsetItem, Material.Blazor.MBChipsetItem)
+  nameWithType: MBChipsetItem.operator ==(MBChipsetItem?, MBChipsetItem?)
+  nameWithType.vb: MBChipsetItem.=(MBChipsetItem, MBChipsetItem)
+- uid: Material.Blazor.MBChipsetItem.op_Equality*
+  name: operator ==
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_op_Equality_
+  commentId: Overload:Material.Blazor.MBChipsetItem.op_Equality
+  name.vb: =
+  fullName: Material.Blazor.MBChipsetItem.operator ==
+  fullName.vb: Material.Blazor.MBChipsetItem.=
+  nameWithType: MBChipsetItem.operator ==
+  nameWithType.vb: MBChipsetItem.=
+- uid: Material.Blazor.MBChipsetItem.op_Inequality(Material.Blazor.MBChipsetItem,Material.Blazor.MBChipsetItem)
+  name: operator !=(MBChipsetItem?, MBChipsetItem?)
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_op_Inequality_Material_Blazor_MBChipsetItem_Material_Blazor_MBChipsetItem_
+  commentId: M:Material.Blazor.MBChipsetItem.op_Inequality(Material.Blazor.MBChipsetItem,Material.Blazor.MBChipsetItem)
+  name.vb: <>(MBChipsetItem, MBChipsetItem)
+  fullName: Material.Blazor.MBChipsetItem.operator !=(Material.Blazor.MBChipsetItem?, Material.Blazor.MBChipsetItem?)
+  fullName.vb: Material.Blazor.MBChipsetItem.<>(Material.Blazor.MBChipsetItem, Material.Blazor.MBChipsetItem)
+  nameWithType: MBChipsetItem.operator !=(MBChipsetItem?, MBChipsetItem?)
+  nameWithType.vb: MBChipsetItem.<>(MBChipsetItem, MBChipsetItem)
+- uid: Material.Blazor.MBChipsetItem.op_Inequality*
+  name: operator !=
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_op_Inequality_
+  commentId: Overload:Material.Blazor.MBChipsetItem.op_Inequality
+  name.vb: <>
+  fullName: Material.Blazor.MBChipsetItem.operator !=
+  fullName.vb: Material.Blazor.MBChipsetItem.<>
+  nameWithType: MBChipsetItem.operator !=
+  nameWithType.vb: MBChipsetItem.<>
+- uid: Material.Blazor.MBChipsetItem.{Clone}$
+  name: <Clone>$()
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem__Clone__
+  commentId: M:Material.Blazor.MBChipsetItem.{Clone}$
+  fullName: Material.Blazor.MBChipsetItem.<Clone>$()
+  nameWithType: MBChipsetItem.<Clone>$()
+- uid: Material.Blazor.MBChipsetItem.{Clone}$*
+  name: <Clone>$
+  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem__Clone___
+  commentId: Overload:Material.Blazor.MBChipsetItem.{Clone}$
+  fullName: Material.Blazor.MBChipsetItem.<Clone>$
+  nameWithType: MBChipsetItem.<Clone>$
 - uid: Material.Blazor.MBDecimalField
   name: MBDecimalField
   href: api/Material.Blazor.MBDecimalField.html
@@ -2820,30 +3108,6 @@ references:
   commentId: Overload:Material.Blazor.MBIconWithParameters.OnParametersSetAsync
   fullName: Material.Blazor.MBIconWithParameters.OnParametersSetAsync
   nameWithType: MBIconWithParameters.OnParametersSetAsync
-- uid: Material.Blazor.MBInputEventTypeMD2
-  name: MBInputEventTypeMD2
-  href: api/Material.Blazor.MBInputEventTypeMD2.html
-  commentId: T:Material.Blazor.MBInputEventTypeMD2
-  fullName: Material.Blazor.MBInputEventTypeMD2
-  nameWithType: MBInputEventTypeMD2
-- uid: Material.Blazor.MBInputEventTypeMD2.OnChange
-  name: OnChange
-  href: api/Material.Blazor.MBInputEventTypeMD2.html#Material_Blazor_MBInputEventTypeMD2_OnChange
-  commentId: F:Material.Blazor.MBInputEventTypeMD2.OnChange
-  fullName: Material.Blazor.MBInputEventTypeMD2.OnChange
-  nameWithType: MBInputEventTypeMD2.OnChange
-- uid: Material.Blazor.MBInputEventTypeMD2.OnInputDebounced
-  name: OnInputDebounced
-  href: api/Material.Blazor.MBInputEventTypeMD2.html#Material_Blazor_MBInputEventTypeMD2_OnInputDebounced
-  commentId: F:Material.Blazor.MBInputEventTypeMD2.OnInputDebounced
-  fullName: Material.Blazor.MBInputEventTypeMD2.OnInputDebounced
-  nameWithType: MBInputEventTypeMD2.OnInputDebounced
-- uid: Material.Blazor.MBInputEventTypeMD2.OnInputThrottled
-  name: OnInputThrottled
-  href: api/Material.Blazor.MBInputEventTypeMD2.html#Material_Blazor_MBInputEventTypeMD2_OnInputThrottled
-  commentId: F:Material.Blazor.MBInputEventTypeMD2.OnInputThrottled
-  fullName: Material.Blazor.MBInputEventTypeMD2.OnInputThrottled
-  nameWithType: MBInputEventTypeMD2.OnInputThrottled
 - uid: Material.Blazor.MBIntField
   name: MBIntField
   href: api/Material.Blazor.MBIntField.html
