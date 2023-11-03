@@ -52,12 +52,18 @@ references:
 - uid: C.MBCheckbox
   name: MBCheckbox
   href: Material.Blazor.MD3/Components/Checkbox/MBCheckbox.html
-- uid: C.MBChips
-  name: MBChips
-  href: Material.Blazor.MD3/Components/Chips/MBChips.html
+- uid: C.MBChipSet
+  name: MBChipSet
+  href: Material.Blazor.MD3/Components/ChipSet/MBChipSet.html
 - uid: C.MBIcon
   name: MBIcon
   href: Material.Blazor.MD3/Components/Icon/MBIcon.html
+- uid: C.MBMenu
+  name: MBMenu
+  href: Material.Blazor.MD3/Components/Menu/MBMenu.html
+- uid: C.MBNumericField
+  name: MBNumericField
+  href: Material.Blazor.MD3/Components/NumericField/MBNumericField.html
 - uid: C.MBProgress
   name: MBProgress
   href: Material.Blazor.MD3/Components/ProgressIndicator/MBProgress.html
@@ -1788,6 +1794,18 @@ references:
   commentId: Overload:Material.Blazor.MBCascadingDefaults.ButtonStyle
   fullName: Material.Blazor.MBCascadingDefaults.ButtonStyle
   nameWithType: MBCascadingDefaults.ButtonStyle
+- uid: Material.Blazor.MBCascadingDefaults.ChipType
+  name: ChipType
+  href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_ChipType
+  commentId: P:Material.Blazor.MBCascadingDefaults.ChipType
+  fullName: Material.Blazor.MBCascadingDefaults.ChipType
+  nameWithType: MBCascadingDefaults.ChipType
+- uid: Material.Blazor.MBCascadingDefaults.ChipType*
+  name: ChipType
+  href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_ChipType_
+  commentId: Overload:Material.Blazor.MBCascadingDefaults.ChipType
+  fullName: Material.Blazor.MBCascadingDefaults.ChipType
+  nameWithType: MBCascadingDefaults.ChipType
 - uid: Material.Blazor.MBCascadingDefaults.ConstrainSplattableAttributes
   name: ConstrainSplattableAttributes
   href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_ConstrainSplattableAttributes
@@ -2112,291 +2130,333 @@ references:
   commentId: Overload:Material.Blazor.MBCheckbox.TrailingLabelPLUS
   fullName: Material.Blazor.MBCheckbox.TrailingLabelPLUS
   nameWithType: MBCheckbox.TrailingLabelPLUS
-- uid: Material.Blazor.MBChips
-  name: MBChips
-  href: api/Material.Blazor.MBChips.html
-  commentId: T:Material.Blazor.MBChips
-  fullName: Material.Blazor.MBChips
-  nameWithType: MBChips
-- uid: Material.Blazor.MBChips.#ctor
-  name: MBChips()
-  href: api/Material.Blazor.MBChips.html#Material_Blazor_MBChips__ctor
-  commentId: M:Material.Blazor.MBChips.#ctor
+- uid: Material.Blazor.MBChip
+  name: MBChip
+  href: api/Material.Blazor.MBChip.html
+  commentId: T:Material.Blazor.MBChip
+  fullName: Material.Blazor.MBChip
+  nameWithType: MBChip
+- uid: Material.Blazor.MBChip.#ctor
+  name: MBChip()
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip__ctor
+  commentId: M:Material.Blazor.MBChip.#ctor
   name.vb: New()
-  fullName: Material.Blazor.MBChips.MBChips()
-  fullName.vb: Material.Blazor.MBChips.New()
-  nameWithType: MBChips.MBChips()
-  nameWithType.vb: MBChips.New()
-- uid: Material.Blazor.MBChips.#ctor*
-  name: MBChips
-  href: api/Material.Blazor.MBChips.html#Material_Blazor_MBChips__ctor_
-  commentId: Overload:Material.Blazor.MBChips.#ctor
+  fullName: Material.Blazor.MBChip.MBChip()
+  fullName.vb: Material.Blazor.MBChip.New()
+  nameWithType: MBChip.MBChip()
+  nameWithType.vb: MBChip.New()
+- uid: Material.Blazor.MBChip.#ctor(Material.Blazor.MBChip)
+  name: MBChip(MBChip)
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip__ctor_Material_Blazor_MBChip_
+  commentId: M:Material.Blazor.MBChip.#ctor(Material.Blazor.MBChip)
+  name.vb: New(MBChip)
+  fullName: Material.Blazor.MBChip.MBChip(Material.Blazor.MBChip)
+  fullName.vb: Material.Blazor.MBChip.New(Material.Blazor.MBChip)
+  nameWithType: MBChip.MBChip(MBChip)
+  nameWithType.vb: MBChip.New(MBChip)
+- uid: Material.Blazor.MBChip.#ctor*
+  name: MBChip
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip__ctor_
+  commentId: Overload:Material.Blazor.MBChip.#ctor
   name.vb: New
-  fullName: Material.Blazor.MBChips.MBChips
-  fullName.vb: Material.Blazor.MBChips.New
-  nameWithType: MBChips.MBChips
-  nameWithType.vb: MBChips.New
-- uid: Material.Blazor.MBChips.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
-  name: BuildRenderTree(RenderTreeBuilder)
-  href: api/Material.Blazor.MBChips.html#Material_Blazor_MBChips_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
-  commentId: M:Material.Blazor.MBChips.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
-  fullName: Material.Blazor.MBChips.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
-  nameWithType: MBChips.BuildRenderTree(RenderTreeBuilder)
-- uid: Material.Blazor.MBChips.BuildRenderTree*
-  name: BuildRenderTree
-  href: api/Material.Blazor.MBChips.html#Material_Blazor_MBChips_BuildRenderTree_
-  commentId: Overload:Material.Blazor.MBChips.BuildRenderTree
-  fullName: Material.Blazor.MBChips.BuildRenderTree
-  nameWithType: MBChips.BuildRenderTree
-- uid: Material.Blazor.MBChips.ChipsetItems
-  name: ChipsetItems
-  href: api/Material.Blazor.MBChips.html#Material_Blazor_MBChips_ChipsetItems
-  commentId: P:Material.Blazor.MBChips.ChipsetItems
-  fullName: Material.Blazor.MBChips.ChipsetItems
-  nameWithType: MBChips.ChipsetItems
-- uid: Material.Blazor.MBChips.ChipsetItems*
-  name: ChipsetItems
-  href: api/Material.Blazor.MBChips.html#Material_Blazor_MBChips_ChipsetItems_
-  commentId: Overload:Material.Blazor.MBChips.ChipsetItems
-  fullName: Material.Blazor.MBChips.ChipsetItems
-  nameWithType: MBChips.ChipsetItems
-- uid: Material.Blazor.MBChipsetItem
-  name: MBChipsetItem
-  href: api/Material.Blazor.MBChipsetItem.html
-  commentId: T:Material.Blazor.MBChipsetItem
-  fullName: Material.Blazor.MBChipsetItem
-  nameWithType: MBChipsetItem
-- uid: Material.Blazor.MBChipsetItem.#ctor
-  name: MBChipsetItem()
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem__ctor
-  commentId: M:Material.Blazor.MBChipsetItem.#ctor
-  name.vb: New()
-  fullName: Material.Blazor.MBChipsetItem.MBChipsetItem()
-  fullName.vb: Material.Blazor.MBChipsetItem.New()
-  nameWithType: MBChipsetItem.MBChipsetItem()
-  nameWithType.vb: MBChipsetItem.New()
-- uid: Material.Blazor.MBChipsetItem.#ctor(Material.Blazor.MBChipsetItem)
-  name: MBChipsetItem(MBChipsetItem)
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem__ctor_Material_Blazor_MBChipsetItem_
-  commentId: M:Material.Blazor.MBChipsetItem.#ctor(Material.Blazor.MBChipsetItem)
-  name.vb: New(MBChipsetItem)
-  fullName: Material.Blazor.MBChipsetItem.MBChipsetItem(Material.Blazor.MBChipsetItem)
-  fullName.vb: Material.Blazor.MBChipsetItem.New(Material.Blazor.MBChipsetItem)
-  nameWithType: MBChipsetItem.MBChipsetItem(MBChipsetItem)
-  nameWithType.vb: MBChipsetItem.New(MBChipsetItem)
-- uid: Material.Blazor.MBChipsetItem.#ctor*
-  name: MBChipsetItem
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem__ctor_
-  commentId: Overload:Material.Blazor.MBChipsetItem.#ctor
-  name.vb: New
-  fullName: Material.Blazor.MBChipsetItem.MBChipsetItem
-  fullName.vb: Material.Blazor.MBChipsetItem.New
-  nameWithType: MBChipsetItem.MBChipsetItem
-  nameWithType.vb: MBChipsetItem.New
-- uid: Material.Blazor.MBChipsetItem.EqualityContract
+  fullName: Material.Blazor.MBChip.MBChip
+  fullName.vb: Material.Blazor.MBChip.New
+  nameWithType: MBChip.MBChip
+  nameWithType.vb: MBChip.New
+- uid: Material.Blazor.MBChip.ChipType
+  name: ChipType
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_ChipType
+  commentId: P:Material.Blazor.MBChip.ChipType
+  fullName: Material.Blazor.MBChip.ChipType
+  nameWithType: MBChip.ChipType
+- uid: Material.Blazor.MBChip.ChipType*
+  name: ChipType
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_ChipType_
+  commentId: Overload:Material.Blazor.MBChip.ChipType
+  fullName: Material.Blazor.MBChip.ChipType
+  nameWithType: MBChip.ChipType
+- uid: Material.Blazor.MBChip.EqualityContract
   name: EqualityContract
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_EqualityContract
-  commentId: P:Material.Blazor.MBChipsetItem.EqualityContract
-  fullName: Material.Blazor.MBChipsetItem.EqualityContract
-  nameWithType: MBChipsetItem.EqualityContract
-- uid: Material.Blazor.MBChipsetItem.EqualityContract*
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_EqualityContract
+  commentId: P:Material.Blazor.MBChip.EqualityContract
+  fullName: Material.Blazor.MBChip.EqualityContract
+  nameWithType: MBChip.EqualityContract
+- uid: Material.Blazor.MBChip.EqualityContract*
   name: EqualityContract
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_EqualityContract_
-  commentId: Overload:Material.Blazor.MBChipsetItem.EqualityContract
-  fullName: Material.Blazor.MBChipsetItem.EqualityContract
-  nameWithType: MBChipsetItem.EqualityContract
-- uid: Material.Blazor.MBChipsetItem.Equals(Material.Blazor.MBChipsetItem)
-  name: Equals(MBChipsetItem?)
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_Equals_Material_Blazor_MBChipsetItem_
-  commentId: M:Material.Blazor.MBChipsetItem.Equals(Material.Blazor.MBChipsetItem)
-  name.vb: Equals(MBChipsetItem)
-  fullName: Material.Blazor.MBChipsetItem.Equals(Material.Blazor.MBChipsetItem?)
-  fullName.vb: Material.Blazor.MBChipsetItem.Equals(Material.Blazor.MBChipsetItem)
-  nameWithType: MBChipsetItem.Equals(MBChipsetItem?)
-  nameWithType.vb: MBChipsetItem.Equals(MBChipsetItem)
-- uid: Material.Blazor.MBChipsetItem.Equals(System.Object)
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_EqualityContract_
+  commentId: Overload:Material.Blazor.MBChip.EqualityContract
+  fullName: Material.Blazor.MBChip.EqualityContract
+  nameWithType: MBChip.EqualityContract
+- uid: Material.Blazor.MBChip.Equals(Material.Blazor.MBChip)
+  name: Equals(MBChip?)
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_Equals_Material_Blazor_MBChip_
+  commentId: M:Material.Blazor.MBChip.Equals(Material.Blazor.MBChip)
+  name.vb: Equals(MBChip)
+  fullName: Material.Blazor.MBChip.Equals(Material.Blazor.MBChip?)
+  fullName.vb: Material.Blazor.MBChip.Equals(Material.Blazor.MBChip)
+  nameWithType: MBChip.Equals(MBChip?)
+  nameWithType.vb: MBChip.Equals(MBChip)
+- uid: Material.Blazor.MBChip.Equals(System.Object)
   name: Equals(object?)
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_Equals_System_Object_
-  commentId: M:Material.Blazor.MBChipsetItem.Equals(System.Object)
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_Equals_System_Object_
+  commentId: M:Material.Blazor.MBChip.Equals(System.Object)
   name.vb: Equals(Object)
-  fullName: Material.Blazor.MBChipsetItem.Equals(object?)
-  fullName.vb: Material.Blazor.MBChipsetItem.Equals(Object)
-  nameWithType: MBChipsetItem.Equals(object?)
-  nameWithType.vb: MBChipsetItem.Equals(Object)
-- uid: Material.Blazor.MBChipsetItem.Equals*
+  fullName: Material.Blazor.MBChip.Equals(object?)
+  fullName.vb: Material.Blazor.MBChip.Equals(Object)
+  nameWithType: MBChip.Equals(object?)
+  nameWithType.vb: MBChip.Equals(Object)
+- uid: Material.Blazor.MBChip.Equals*
   name: Equals
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_Equals_
-  commentId: Overload:Material.Blazor.MBChipsetItem.Equals
-  fullName: Material.Blazor.MBChipsetItem.Equals
-  nameWithType: MBChipsetItem.Equals
-- uid: Material.Blazor.MBChipsetItem.GetHashCode
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_Equals_
+  commentId: Overload:Material.Blazor.MBChip.Equals
+  fullName: Material.Blazor.MBChip.Equals
+  nameWithType: MBChip.Equals
+- uid: Material.Blazor.MBChip.GetHashCode
   name: GetHashCode()
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_GetHashCode
-  commentId: M:Material.Blazor.MBChipsetItem.GetHashCode
-  fullName: Material.Blazor.MBChipsetItem.GetHashCode()
-  nameWithType: MBChipsetItem.GetHashCode()
-- uid: Material.Blazor.MBChipsetItem.GetHashCode*
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_GetHashCode
+  commentId: M:Material.Blazor.MBChip.GetHashCode
+  fullName: Material.Blazor.MBChip.GetHashCode()
+  nameWithType: MBChip.GetHashCode()
+- uid: Material.Blazor.MBChip.GetHashCode*
   name: GetHashCode
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_GetHashCode_
-  commentId: Overload:Material.Blazor.MBChipsetItem.GetHashCode
-  fullName: Material.Blazor.MBChipsetItem.GetHashCode
-  nameWithType: MBChipsetItem.GetHashCode
-- uid: Material.Blazor.MBChipsetItem.Headline
-  name: Headline
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_Headline
-  commentId: P:Material.Blazor.MBChipsetItem.Headline
-  fullName: Material.Blazor.MBChipsetItem.Headline
-  nameWithType: MBChipsetItem.Headline
-- uid: Material.Blazor.MBChipsetItem.Headline*
-  name: Headline
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_Headline_
-  commentId: Overload:Material.Blazor.MBChipsetItem.Headline
-  fullName: Material.Blazor.MBChipsetItem.Headline
-  nameWithType: MBChipsetItem.Headline
-- uid: Material.Blazor.MBChipsetItem.HeadlineColor
-  name: HeadlineColor
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_HeadlineColor
-  commentId: P:Material.Blazor.MBChipsetItem.HeadlineColor
-  fullName: Material.Blazor.MBChipsetItem.HeadlineColor
-  nameWithType: MBChipsetItem.HeadlineColor
-- uid: Material.Blazor.MBChipsetItem.HeadlineColor*
-  name: HeadlineColor
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_HeadlineColor_
-  commentId: Overload:Material.Blazor.MBChipsetItem.HeadlineColor
-  fullName: Material.Blazor.MBChipsetItem.HeadlineColor
-  nameWithType: MBChipsetItem.HeadlineColor
-- uid: Material.Blazor.MBChipsetItem.Identifier
-  name: Identifier
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_Identifier
-  commentId: P:Material.Blazor.MBChipsetItem.Identifier
-  fullName: Material.Blazor.MBChipsetItem.Identifier
-  nameWithType: MBChipsetItem.Identifier
-- uid: Material.Blazor.MBChipsetItem.Identifier*
-  name: Identifier
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_Identifier_
-  commentId: Overload:Material.Blazor.MBChipsetItem.Identifier
-  fullName: Material.Blazor.MBChipsetItem.Identifier
-  nameWithType: MBChipsetItem.Identifier
-- uid: Material.Blazor.MBChipsetItem.IsDisabled
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_GetHashCode_
+  commentId: Overload:Material.Blazor.MBChip.GetHashCode
+  fullName: Material.Blazor.MBChip.GetHashCode
+  nameWithType: MBChip.GetHashCode
+- uid: Material.Blazor.MBChip.Icon
+  name: Icon
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_Icon
+  commentId: P:Material.Blazor.MBChip.Icon
+  fullName: Material.Blazor.MBChip.Icon
+  nameWithType: MBChip.Icon
+- uid: Material.Blazor.MBChip.Icon*
+  name: Icon
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_Icon_
+  commentId: Overload:Material.Blazor.MBChip.Icon
+  fullName: Material.Blazor.MBChip.Icon
+  nameWithType: MBChip.Icon
+- uid: Material.Blazor.MBChip.IsDisabled
   name: IsDisabled
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_IsDisabled
-  commentId: P:Material.Blazor.MBChipsetItem.IsDisabled
-  fullName: Material.Blazor.MBChipsetItem.IsDisabled
-  nameWithType: MBChipsetItem.IsDisabled
-- uid: Material.Blazor.MBChipsetItem.IsDisabled*
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_IsDisabled
+  commentId: P:Material.Blazor.MBChip.IsDisabled
+  fullName: Material.Blazor.MBChip.IsDisabled
+  nameWithType: MBChip.IsDisabled
+- uid: Material.Blazor.MBChip.IsDisabled*
   name: IsDisabled
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_IsDisabled_
-  commentId: Overload:Material.Blazor.MBChipsetItem.IsDisabled
-  fullName: Material.Blazor.MBChipsetItem.IsDisabled
-  nameWithType: MBChipsetItem.IsDisabled
-- uid: Material.Blazor.MBChipsetItem.ItemType
-  name: ItemType
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_ItemType
-  commentId: P:Material.Blazor.MBChipsetItem.ItemType
-  fullName: Material.Blazor.MBChipsetItem.ItemType
-  nameWithType: MBChipsetItem.ItemType
-- uid: Material.Blazor.MBChipsetItem.ItemType*
-  name: ItemType
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_ItemType_
-  commentId: Overload:Material.Blazor.MBChipsetItem.ItemType
-  fullName: Material.Blazor.MBChipsetItem.ItemType
-  nameWithType: MBChipsetItem.ItemType
-- uid: Material.Blazor.MBChipsetItem.LeadingIcon
-  name: LeadingIcon
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_LeadingIcon
-  commentId: P:Material.Blazor.MBChipsetItem.LeadingIcon
-  fullName: Material.Blazor.MBChipsetItem.LeadingIcon
-  nameWithType: MBChipsetItem.LeadingIcon
-- uid: Material.Blazor.MBChipsetItem.LeadingIcon*
-  name: LeadingIcon
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_LeadingIcon_
-  commentId: Overload:Material.Blazor.MBChipsetItem.LeadingIcon
-  fullName: Material.Blazor.MBChipsetItem.LeadingIcon
-  nameWithType: MBChipsetItem.LeadingIcon
-- uid: Material.Blazor.MBChipsetItem.PrintMembers(System.Text.StringBuilder)
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_IsDisabled_
+  commentId: Overload:Material.Blazor.MBChip.IsDisabled
+  fullName: Material.Blazor.MBChip.IsDisabled
+  nameWithType: MBChip.IsDisabled
+- uid: Material.Blazor.MBChip.IsElevated
+  name: IsElevated
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_IsElevated
+  commentId: P:Material.Blazor.MBChip.IsElevated
+  fullName: Material.Blazor.MBChip.IsElevated
+  nameWithType: MBChip.IsElevated
+- uid: Material.Blazor.MBChip.IsElevated*
+  name: IsElevated
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_IsElevated_
+  commentId: Overload:Material.Blazor.MBChip.IsElevated
+  fullName: Material.Blazor.MBChip.IsElevated
+  nameWithType: MBChip.IsElevated
+- uid: Material.Blazor.MBChip.IsRemovable
+  name: IsRemovable
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_IsRemovable
+  commentId: P:Material.Blazor.MBChip.IsRemovable
+  fullName: Material.Blazor.MBChip.IsRemovable
+  nameWithType: MBChip.IsRemovable
+- uid: Material.Blazor.MBChip.IsRemovable*
+  name: IsRemovable
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_IsRemovable_
+  commentId: Overload:Material.Blazor.MBChip.IsRemovable
+  fullName: Material.Blazor.MBChip.IsRemovable
+  nameWithType: MBChip.IsRemovable
+- uid: Material.Blazor.MBChip.Label
+  name: Label
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_Label
+  commentId: P:Material.Blazor.MBChip.Label
+  fullName: Material.Blazor.MBChip.Label
+  nameWithType: MBChip.Label
+- uid: Material.Blazor.MBChip.Label*
+  name: Label
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_Label_
+  commentId: Overload:Material.Blazor.MBChip.Label
+  fullName: Material.Blazor.MBChip.Label
+  nameWithType: MBChip.Label
+- uid: Material.Blazor.MBChip.Link
+  name: Link
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_Link
+  commentId: P:Material.Blazor.MBChip.Link
+  fullName: Material.Blazor.MBChip.Link
+  nameWithType: MBChip.Link
+- uid: Material.Blazor.MBChip.Link*
+  name: Link
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_Link_
+  commentId: Overload:Material.Blazor.MBChip.Link
+  fullName: Material.Blazor.MBChip.Link
+  nameWithType: MBChip.Link
+- uid: Material.Blazor.MBChip.LinkTarget
+  name: LinkTarget
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_LinkTarget
+  commentId: P:Material.Blazor.MBChip.LinkTarget
+  fullName: Material.Blazor.MBChip.LinkTarget
+  nameWithType: MBChip.LinkTarget
+- uid: Material.Blazor.MBChip.LinkTarget*
+  name: LinkTarget
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_LinkTarget_
+  commentId: Overload:Material.Blazor.MBChip.LinkTarget
+  fullName: Material.Blazor.MBChip.LinkTarget
+  nameWithType: MBChip.LinkTarget
+- uid: Material.Blazor.MBChip.PrintMembers(System.Text.StringBuilder)
   name: PrintMembers(StringBuilder)
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_PrintMembers_System_Text_StringBuilder_
-  commentId: M:Material.Blazor.MBChipsetItem.PrintMembers(System.Text.StringBuilder)
-  fullName: Material.Blazor.MBChipsetItem.PrintMembers(System.Text.StringBuilder)
-  nameWithType: MBChipsetItem.PrintMembers(StringBuilder)
-- uid: Material.Blazor.MBChipsetItem.PrintMembers*
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_PrintMembers_System_Text_StringBuilder_
+  commentId: M:Material.Blazor.MBChip.PrintMembers(System.Text.StringBuilder)
+  fullName: Material.Blazor.MBChip.PrintMembers(System.Text.StringBuilder)
+  nameWithType: MBChip.PrintMembers(StringBuilder)
+- uid: Material.Blazor.MBChip.PrintMembers*
   name: PrintMembers
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_PrintMembers_
-  commentId: Overload:Material.Blazor.MBChipsetItem.PrintMembers
-  fullName: Material.Blazor.MBChipsetItem.PrintMembers
-  nameWithType: MBChipsetItem.PrintMembers
-- uid: Material.Blazor.MBChipsetItem.ToString
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_PrintMembers_
+  commentId: Overload:Material.Blazor.MBChip.PrintMembers
+  fullName: Material.Blazor.MBChip.PrintMembers
+  nameWithType: MBChip.PrintMembers
+- uid: Material.Blazor.MBChip.ToString
   name: ToString()
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_ToString
-  commentId: M:Material.Blazor.MBChipsetItem.ToString
-  fullName: Material.Blazor.MBChipsetItem.ToString()
-  nameWithType: MBChipsetItem.ToString()
-- uid: Material.Blazor.MBChipsetItem.ToString*
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_ToString
+  commentId: M:Material.Blazor.MBChip.ToString
+  fullName: Material.Blazor.MBChip.ToString()
+  nameWithType: MBChip.ToString()
+- uid: Material.Blazor.MBChip.ToString*
   name: ToString
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_ToString_
-  commentId: Overload:Material.Blazor.MBChipsetItem.ToString
-  fullName: Material.Blazor.MBChipsetItem.ToString
-  nameWithType: MBChipsetItem.ToString
-- uid: Material.Blazor.MBChipsetItem.TrailingIcon
-  name: TrailingIcon
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_TrailingIcon
-  commentId: P:Material.Blazor.MBChipsetItem.TrailingIcon
-  fullName: Material.Blazor.MBChipsetItem.TrailingIcon
-  nameWithType: MBChipsetItem.TrailingIcon
-- uid: Material.Blazor.MBChipsetItem.TrailingIcon*
-  name: TrailingIcon
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_TrailingIcon_
-  commentId: Overload:Material.Blazor.MBChipsetItem.TrailingIcon
-  fullName: Material.Blazor.MBChipsetItem.TrailingIcon
-  nameWithType: MBChipsetItem.TrailingIcon
-- uid: Material.Blazor.MBChipsetItem.op_Equality(Material.Blazor.MBChipsetItem,Material.Blazor.MBChipsetItem)
-  name: operator ==(MBChipsetItem?, MBChipsetItem?)
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_op_Equality_Material_Blazor_MBChipsetItem_Material_Blazor_MBChipsetItem_
-  commentId: M:Material.Blazor.MBChipsetItem.op_Equality(Material.Blazor.MBChipsetItem,Material.Blazor.MBChipsetItem)
-  name.vb: =(MBChipsetItem, MBChipsetItem)
-  fullName: Material.Blazor.MBChipsetItem.operator ==(Material.Blazor.MBChipsetItem?, Material.Blazor.MBChipsetItem?)
-  fullName.vb: Material.Blazor.MBChipsetItem.=(Material.Blazor.MBChipsetItem, Material.Blazor.MBChipsetItem)
-  nameWithType: MBChipsetItem.operator ==(MBChipsetItem?, MBChipsetItem?)
-  nameWithType.vb: MBChipsetItem.=(MBChipsetItem, MBChipsetItem)
-- uid: Material.Blazor.MBChipsetItem.op_Equality*
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_ToString_
+  commentId: Overload:Material.Blazor.MBChip.ToString
+  fullName: Material.Blazor.MBChip.ToString
+  nameWithType: MBChip.ToString
+- uid: Material.Blazor.MBChip.op_Equality(Material.Blazor.MBChip,Material.Blazor.MBChip)
+  name: operator ==(MBChip?, MBChip?)
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_op_Equality_Material_Blazor_MBChip_Material_Blazor_MBChip_
+  commentId: M:Material.Blazor.MBChip.op_Equality(Material.Blazor.MBChip,Material.Blazor.MBChip)
+  name.vb: =(MBChip, MBChip)
+  fullName: Material.Blazor.MBChip.operator ==(Material.Blazor.MBChip?, Material.Blazor.MBChip?)
+  fullName.vb: Material.Blazor.MBChip.=(Material.Blazor.MBChip, Material.Blazor.MBChip)
+  nameWithType: MBChip.operator ==(MBChip?, MBChip?)
+  nameWithType.vb: MBChip.=(MBChip, MBChip)
+- uid: Material.Blazor.MBChip.op_Equality*
   name: operator ==
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_op_Equality_
-  commentId: Overload:Material.Blazor.MBChipsetItem.op_Equality
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_op_Equality_
+  commentId: Overload:Material.Blazor.MBChip.op_Equality
   name.vb: =
-  fullName: Material.Blazor.MBChipsetItem.operator ==
-  fullName.vb: Material.Blazor.MBChipsetItem.=
-  nameWithType: MBChipsetItem.operator ==
-  nameWithType.vb: MBChipsetItem.=
-- uid: Material.Blazor.MBChipsetItem.op_Inequality(Material.Blazor.MBChipsetItem,Material.Blazor.MBChipsetItem)
-  name: operator !=(MBChipsetItem?, MBChipsetItem?)
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_op_Inequality_Material_Blazor_MBChipsetItem_Material_Blazor_MBChipsetItem_
-  commentId: M:Material.Blazor.MBChipsetItem.op_Inequality(Material.Blazor.MBChipsetItem,Material.Blazor.MBChipsetItem)
-  name.vb: <>(MBChipsetItem, MBChipsetItem)
-  fullName: Material.Blazor.MBChipsetItem.operator !=(Material.Blazor.MBChipsetItem?, Material.Blazor.MBChipsetItem?)
-  fullName.vb: Material.Blazor.MBChipsetItem.<>(Material.Blazor.MBChipsetItem, Material.Blazor.MBChipsetItem)
-  nameWithType: MBChipsetItem.operator !=(MBChipsetItem?, MBChipsetItem?)
-  nameWithType.vb: MBChipsetItem.<>(MBChipsetItem, MBChipsetItem)
-- uid: Material.Blazor.MBChipsetItem.op_Inequality*
+  fullName: Material.Blazor.MBChip.operator ==
+  fullName.vb: Material.Blazor.MBChip.=
+  nameWithType: MBChip.operator ==
+  nameWithType.vb: MBChip.=
+- uid: Material.Blazor.MBChip.op_Inequality(Material.Blazor.MBChip,Material.Blazor.MBChip)
+  name: operator !=(MBChip?, MBChip?)
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_op_Inequality_Material_Blazor_MBChip_Material_Blazor_MBChip_
+  commentId: M:Material.Blazor.MBChip.op_Inequality(Material.Blazor.MBChip,Material.Blazor.MBChip)
+  name.vb: <>(MBChip, MBChip)
+  fullName: Material.Blazor.MBChip.operator !=(Material.Blazor.MBChip?, Material.Blazor.MBChip?)
+  fullName.vb: Material.Blazor.MBChip.<>(Material.Blazor.MBChip, Material.Blazor.MBChip)
+  nameWithType: MBChip.operator !=(MBChip?, MBChip?)
+  nameWithType.vb: MBChip.<>(MBChip, MBChip)
+- uid: Material.Blazor.MBChip.op_Inequality*
   name: operator !=
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem_op_Inequality_
-  commentId: Overload:Material.Blazor.MBChipsetItem.op_Inequality
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip_op_Inequality_
+  commentId: Overload:Material.Blazor.MBChip.op_Inequality
   name.vb: <>
-  fullName: Material.Blazor.MBChipsetItem.operator !=
-  fullName.vb: Material.Blazor.MBChipsetItem.<>
-  nameWithType: MBChipsetItem.operator !=
-  nameWithType.vb: MBChipsetItem.<>
-- uid: Material.Blazor.MBChipsetItem.{Clone}$
+  fullName: Material.Blazor.MBChip.operator !=
+  fullName.vb: Material.Blazor.MBChip.<>
+  nameWithType: MBChip.operator !=
+  nameWithType.vb: MBChip.<>
+- uid: Material.Blazor.MBChip.{Clone}$
   name: <Clone>$()
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem__Clone__
-  commentId: M:Material.Blazor.MBChipsetItem.{Clone}$
-  fullName: Material.Blazor.MBChipsetItem.<Clone>$()
-  nameWithType: MBChipsetItem.<Clone>$()
-- uid: Material.Blazor.MBChipsetItem.{Clone}$*
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip__Clone__
+  commentId: M:Material.Blazor.MBChip.{Clone}$
+  fullName: Material.Blazor.MBChip.<Clone>$()
+  nameWithType: MBChip.<Clone>$()
+- uid: Material.Blazor.MBChip.{Clone}$*
   name: <Clone>$
-  href: api/Material.Blazor.MBChipsetItem.html#Material_Blazor_MBChipsetItem__Clone___
-  commentId: Overload:Material.Blazor.MBChipsetItem.{Clone}$
-  fullName: Material.Blazor.MBChipsetItem.<Clone>$
-  nameWithType: MBChipsetItem.<Clone>$
+  href: api/Material.Blazor.MBChip.html#Material_Blazor_MBChip__Clone___
+  commentId: Overload:Material.Blazor.MBChip.{Clone}$
+  fullName: Material.Blazor.MBChip.<Clone>$
+  nameWithType: MBChip.<Clone>$
+- uid: Material.Blazor.MBChipSet
+  name: MBChipSet
+  href: api/Material.Blazor.MBChipSet.html
+  commentId: T:Material.Blazor.MBChipSet
+  fullName: Material.Blazor.MBChipSet
+  nameWithType: MBChipSet
+- uid: Material.Blazor.MBChipSet.#ctor
+  name: MBChipSet()
+  href: api/Material.Blazor.MBChipSet.html#Material_Blazor_MBChipSet__ctor
+  commentId: M:Material.Blazor.MBChipSet.#ctor
+  name.vb: New()
+  fullName: Material.Blazor.MBChipSet.MBChipSet()
+  fullName.vb: Material.Blazor.MBChipSet.New()
+  nameWithType: MBChipSet.MBChipSet()
+  nameWithType.vb: MBChipSet.New()
+- uid: Material.Blazor.MBChipSet.#ctor*
+  name: MBChipSet
+  href: api/Material.Blazor.MBChipSet.html#Material_Blazor_MBChipSet__ctor_
+  commentId: Overload:Material.Blazor.MBChipSet.#ctor
+  name.vb: New
+  fullName: Material.Blazor.MBChipSet.MBChipSet
+  fullName.vb: Material.Blazor.MBChipSet.New
+  nameWithType: MBChipSet.MBChipSet
+  nameWithType.vb: MBChipSet.New
+- uid: Material.Blazor.MBChipSet.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  name: BuildRenderTree(RenderTreeBuilder)
+  href: api/Material.Blazor.MBChipSet.html#Material_Blazor_MBChipSet_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
+  commentId: M:Material.Blazor.MBChipSet.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  fullName: Material.Blazor.MBChipSet.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  nameWithType: MBChipSet.BuildRenderTree(RenderTreeBuilder)
+- uid: Material.Blazor.MBChipSet.BuildRenderTree*
+  name: BuildRenderTree
+  href: api/Material.Blazor.MBChipSet.html#Material_Blazor_MBChipSet_BuildRenderTree_
+  commentId: Overload:Material.Blazor.MBChipSet.BuildRenderTree
+  fullName: Material.Blazor.MBChipSet.BuildRenderTree
+  nameWithType: MBChipSet.BuildRenderTree
+- uid: Material.Blazor.MBChipSet.ChipsetItems
+  name: ChipsetItems
+  href: api/Material.Blazor.MBChipSet.html#Material_Blazor_MBChipSet_ChipsetItems
+  commentId: P:Material.Blazor.MBChipSet.ChipsetItems
+  fullName: Material.Blazor.MBChipSet.ChipsetItems
+  nameWithType: MBChipSet.ChipsetItems
+- uid: Material.Blazor.MBChipSet.ChipsetItems*
+  name: ChipsetItems
+  href: api/Material.Blazor.MBChipSet.html#Material_Blazor_MBChipSet_ChipsetItems_
+  commentId: Overload:Material.Blazor.MBChipSet.ChipsetItems
+  fullName: Material.Blazor.MBChipSet.ChipsetItems
+  nameWithType: MBChipSet.ChipsetItems
+- uid: Material.Blazor.MBChipType
+  name: MBChipType
+  href: api/Material.Blazor.MBChipType.html
+  commentId: T:Material.Blazor.MBChipType
+  fullName: Material.Blazor.MBChipType
+  nameWithType: MBChipType
+- uid: Material.Blazor.MBChipType.Assist
+  name: Assist
+  href: api/Material.Blazor.MBChipType.html#Material_Blazor_MBChipType_Assist
+  commentId: F:Material.Blazor.MBChipType.Assist
+  fullName: Material.Blazor.MBChipType.Assist
+  nameWithType: MBChipType.Assist
+- uid: Material.Blazor.MBChipType.Filter
+  name: Filter
+  href: api/Material.Blazor.MBChipType.html#Material_Blazor_MBChipType_Filter
+  commentId: F:Material.Blazor.MBChipType.Filter
+  fullName: Material.Blazor.MBChipType.Filter
+  nameWithType: MBChipType.Filter
+- uid: Material.Blazor.MBChipType.Input
+  name: Input
+  href: api/Material.Blazor.MBChipType.html#Material_Blazor_MBChipType_Input
+  commentId: F:Material.Blazor.MBChipType.Input
+  fullName: Material.Blazor.MBChipType.Input
+  nameWithType: MBChipType.Input
+- uid: Material.Blazor.MBChipType.Suggestion
+  name: Suggestion
+  href: api/Material.Blazor.MBChipType.html#Material_Blazor_MBChipType_Suggestion
+  commentId: F:Material.Blazor.MBChipType.Suggestion
+  fullName: Material.Blazor.MBChipType.Suggestion
+  nameWithType: MBChipType.Suggestion
 - uid: Material.Blazor.MBDecimalField
   name: MBDecimalField
   href: api/Material.Blazor.MBDecimalField.html

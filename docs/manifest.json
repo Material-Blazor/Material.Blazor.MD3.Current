@@ -281,14 +281,11 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Conceptual",
-      "source_relative_path": "Material.Blazor.MD3/Components/Chips/MBChips.md",
+      "source_relative_path": "Material.Blazor.MD3/Components/ChipSet/MBChipSet.md",
       "output": {
         ".html": {
-          "relative_path": "Material.Blazor.MD3/Components/Chips/MBChips.html"
+          "relative_path": "Material.Blazor.MD3/Components/ChipSet/MBChipSet.html"
         }
       },
       "version": ""
@@ -312,6 +309,29 @@
       "output": {
         ".html": {
           "relative_path": "Material.Blazor.MD3/Components/IconButton/MBIconButton.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Material.Blazor.MD3/Components/Menu/MBMenu.md",
+      "output": {
+        ".html": {
+          "relative_path": "Material.Blazor.MD3/Components/Menu/MBMenu.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "UidNotFound"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "Material.Blazor.MD3/Components/NumericField/MBNumericField.md",
+      "output": {
+        ".html": {
+          "relative_path": "Material.Blazor.MD3/Components/NumericField/MBNumericField.html"
         }
       },
       "version": ""
@@ -1026,20 +1046,30 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MBChips.yml",
+      "source_relative_path": "api/Material.Blazor.MBChip.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Material.Blazor.MBChips.html"
+          "relative_path": "api/Material.Blazor.MBChip.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MBChipsetItem.yml",
+      "source_relative_path": "api/Material.Blazor.MBChipSet.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Material.Blazor.MBChipsetItem.html"
+          "relative_path": "api/Material.Blazor.MBChipSet.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBChipType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBChipType.html"
         }
       },
       "version": ""
