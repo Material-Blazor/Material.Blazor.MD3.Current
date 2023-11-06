@@ -590,6 +590,25 @@ const chip_set_styles_css_styles=i`:host{display:flex;flex-wrap:wrap;gap:8px}/*#
 let MdChipSet=class MdChipSet extends ChipSet{};MdChipSet.styles=[chip_set_styles_css_styles];MdChipSet=__decorate([t("md-chip-set")],MdChipSet);
 /**
  * @license
+ * Copyright 2023 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+class Divider extends lit_element_s{constructor(){super(...arguments);this.inset=false;this.insetStart=false;this.insetEnd=false}}__decorate([property_n({type:Boolean,reflect:true})],Divider.prototype,"inset",void 0);__decorate([property_n({type:Boolean,reflect:true,attribute:"inset-start"})],Divider.prototype,"insetStart",void 0);__decorate([property_n({type:Boolean,reflect:true,attribute:"inset-end"})],Divider.prototype,"insetEnd",void 0);
+/**
+  * @license
+  * Copyright 2022 Google LLC
+  * SPDX-License-Identifier: Apache-2.0
+  */
+const divider_styles_css_styles=i`:host{--_color: var(--md-divider-color, var(--md-sys-color-outline-variant, #cac4d0));--_thickness: var(--md-divider-thickness, 1px);box-sizing:border-box;color:var(--_color);display:flex;height:var(--_thickness);width:100%}:host([inset]),:host([inset-start]){padding-inline-start:16px}:host([inset]),:host([inset-end]){padding-inline-end:16px}:host::before{background:currentColor;content:"";height:100%;width:100%}@media(forced-colors: active){:host::before{background:CanvasText}}/*# sourceMappingURL=divider-styles.css.map */
+`;
+/**
+ * @license
+ * Copyright 2023 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+let MdDivider=class MdDivider extends Divider{};MdDivider.styles=[divider_styles_css_styles];MdDivider=__decorate([t("md-divider")],MdDivider);
+/**
+ * @license
  * Copyright 2022 Google LLC
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -704,19 +723,6 @@ const internal_outlined_styles_css_styles=i`:host{--_container-height: var(--md-
  */
 let MdOutlinedIconButton=class MdOutlinedIconButton extends IconButton{getRenderClasses(){return{...super.getRenderClasses(),outlined:true}}};MdOutlinedIconButton.styles=[iconbutton_internal_shared_styles_css_styles,internal_outlined_styles_css_styles];MdOutlinedIconButton=__decorate([t("md-outlined-icon-button")],MdOutlinedIconButton);
 /**
-  * @license
-  * Copyright 2022 Google LLC
-  * SPDX-License-Identifier: Apache-2.0
-  */
-const forced_colors_styles_css_styles=i`@media(forced-colors: active){.menu{border-style:solid;border-color:CanvasText;border-width:1px}}/*# sourceMappingURL=forced-colors-styles.css.map */
-`;
-/**
- * @license
- * Copyright 2018 Google LLC
- * SPDX-License-Identifier: BSD-3-Clause
- */
-const style_map_n="important",style_map_i=" !"+style_map_n,style_map_o=directive_e(class extends directive_i{constructor(t){if(super(t),t.type!==directive_t.ATTRIBUTE||"style"!==t.name||t.strings?.length>2)throw Error("The `styleMap` directive must be used in the `style` attribute and must be the only part in the attribute.")}render(t){return Object.keys(t).reduce(((e,r)=>{const s=t[r];return null==s?e:e+`${r=r.includes("-")?r:r.replace(/(?:^(webkit|moz|ms|o)|)(?=[A-Z])/g,"-$&").toLowerCase()}:${s};`}),"")}update(e,[r]){const{style:s}=e.element;if(void 0===this.ut)return this.ut=new Set(Object.keys(r)),this.render(r);for(const t of this.ut)null==r[t]&&(this.ut.delete(t),t.includes("-")?s.removeProperty(t):s[t]=null);for(const t in r){const e=r[t];if(null!=e){this.ut.add(t);const r="string"==typeof e&&e.endsWith(style_map_i);t.includes("-")||r?s.setProperty(t,r?e.slice(0,-11):e,r?style_map_n:""):s[t]=e}}return w}});
-/**
  * @license
  * Copyright 2023 Google LLC
  * SPDX-License-Identifier: Apache-2.0
@@ -728,6 +734,145 @@ function activateFirstItem(items,isActivatable=isItemNotDisabled){const firstIte
  * SPDX-License-Identifier: Apache-2.0
  */
 const NavigableKeys={ArrowDown:"ArrowDown",ArrowLeft:"ArrowLeft",ArrowUp:"ArrowUp",ArrowRight:"ArrowRight",Home:"Home",End:"End"};class ListController{constructor(config){this.handleKeydown=event=>{const key=event.key;if(event.defaultPrevented||!this.isNavigableKey(key)){return}const items=this.items;if(!items.length){return}const activeItemRecord=getActiveItem(items,this.isActivatable);if(activeItemRecord){activeItemRecord.item.tabIndex=-1}event.preventDefault();const isRtl=this.isRtl();const inlinePrevious=isRtl?NavigableKeys.ArrowRight:NavigableKeys.ArrowLeft;const inlineNext=isRtl?NavigableKeys.ArrowLeft:NavigableKeys.ArrowRight;switch(key){case NavigableKeys.ArrowDown:case inlineNext:activateNextItem(items,activeItemRecord,this.isActivatable);break;case NavigableKeys.ArrowUp:case inlinePrevious:activatePreviousItem(items,activeItemRecord,this.isActivatable);break;case NavigableKeys.Home:activateFirstItem(items,this.isActivatable);break;case NavigableKeys.End:activateLastItem(items,this.isActivatable);break;default:break}};this.onDeactivateItems=()=>{const items=this.items;for(const item of items){this.deactivateItem(item)}};this.onRequestActivation=event=>{this.onDeactivateItems();const target=event.target;this.activateItem(target);target.focus()};this.onSlotchange=()=>{const items=this.items;let encounteredActivated=false;for(const item of items){const isActivated=!item.disabled&&item.tabIndex>-1;if(isActivated&&!encounteredActivated){encounteredActivated=true;item.tabIndex=0;continue}item.tabIndex=-1}if(encounteredActivated){return}const firstActivatableItem=getFirstActivatableItem(items,this.isActivatable);if(!firstActivatableItem){return}firstActivatableItem.tabIndex=0};const{isItem:isItem,getPossibleItems:getPossibleItems,isRtl:isRtl,deactivateItem:deactivateItem,activateItem:activateItem,isNavigableKey:isNavigableKey,isActivatable:isActivatable}=config;this.isItem=isItem;this.getPossibleItems=getPossibleItems;this.isRtl=isRtl;this.deactivateItem=deactivateItem;this.activateItem=activateItem;this.isNavigableKey=isNavigableKey;this.isActivatable=isActivatable}get items(){const maybeItems=this.getPossibleItems();const items=[];for(const itemOrParent of maybeItems){const isItem=this.isItem(itemOrParent);if(isItem){items.push(itemOrParent);continue}const subItem=itemOrParent.item;if(subItem&&this.isItem(subItem)){items.push(subItem)}}return items}activateNextItem(){const items=this.items;const activeItemRecord=getActiveItem(items,this.isActivatable);if(activeItemRecord){activeItemRecord.item.tabIndex=-1}return activateNextItem(items,activeItemRecord,this.isActivatable)}activatePreviousItem(){const items=this.items;const activeItemRecord=getActiveItem(items,this.isActivatable);if(activeItemRecord){activeItemRecord.item.tabIndex=-1}return activatePreviousItem(items,activeItemRecord,this.isActivatable)}}
+/**
+ * @license
+ * Copyright 2021 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+const NAVIGABLE_KEY_SET=new Set(Object.values(NavigableKeys));class List extends lit_element_s{get items(){return this.listController.items}constructor(){super();this.listController=new ListController({isItem:item=>item.hasAttribute("md-list-item"),getPossibleItems:()=>this.slotItems,isRtl:()=>getComputedStyle(this).direction==="rtl",deactivateItem:item=>{item.tabIndex=-1},activateItem:item=>{item.tabIndex=0},isNavigableKey:key=>NAVIGABLE_KEY_SET.has(key),isActivatable:item=>!item.disabled&&item.type!=="text"});this.internals=polyfillElementInternalsAria(this,this.attachInternals());if(!is_server_o){this.internals.role="list";this.addEventListener("keydown",this.listController.handleKeydown)}}render(){return x`
+      <slot
+          @deactivate-items=${this.listController.onDeactivateItems}
+          @request-activation=${this.listController.onRequestActivation}
+          @slotchange=${this.listController.onSlotchange}>
+      </slot>
+    `}activateNextItem(){return this.listController.activateNextItem()}activatePreviousItem(){return this.listController.activatePreviousItem()}}(()=>{setupHostAria(List,{focusable:false})})();__decorate([query_assigned_elements_o({flatten:true})],List.prototype,"slotItems",void 0);
+/**
+  * @license
+  * Copyright 2022 Google LLC
+  * SPDX-License-Identifier: Apache-2.0
+  */
+const list_styles_css_styles=i`:host{background:var(--md-list-container-color, var(--md-sys-color-surface, #fef7ff));color:unset;display:flex;flex-direction:column;outline:none;padding:8px 0;position:relative}/*# sourceMappingURL=list-styles.css.map */
+`;
+/**
+ * @license
+ * Copyright 2021 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+let MdList=class MdList extends List{};MdList.styles=[list_styles_css_styles];MdList=__decorate([t("md-list")],MdList);
+/**
+  * @license
+  * Copyright 2022 Google LLC
+  * SPDX-License-Identifier: Apache-2.0
+  */
+const forced_colors_styles_css_styles=i`@media(forced-colors: active){.disabled slot{color:GrayText}.list-item.disabled{color:GrayText;opacity:1}}/*# sourceMappingURL=forced-colors-styles.css.map */
+`;
+/**
+ * @license
+ * Copyright 2023 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+class Item extends lit_element_s{constructor(){super(...arguments);this.multiline=false}render(){return x`
+      <slot name="container"></slot>
+      <slot class="non-text" name="start"></slot>
+      <div class="text">
+        <slot name="overline"
+            @slotchange=${this.handleTextSlotChange}></slot>
+        <slot class="default-slot"
+            @slotchange=${this.handleTextSlotChange}></slot>
+        <slot name="headline"
+            @slotchange=${this.handleTextSlotChange}></slot>
+        <slot name="supporting-text"
+            @slotchange=${this.handleTextSlotChange}></slot>
+      </div>
+      <slot class="non-text" name="trailing-supporting-text"></slot>
+      <slot class="non-text" name="end"></slot>
+    `}handleTextSlotChange(){let isMultiline=false;let slotsWithContent=0;for(const slot of this.textSlots){if(slotHasContent(slot)){slotsWithContent+=1}if(slotsWithContent>1){isMultiline=true;break}}this.multiline=isMultiline}}__decorate([property_n({type:Boolean,reflect:true})],Item.prototype,"multiline",void 0);__decorate([query_all_r(".text slot")],Item.prototype,"textSlots",void 0);function slotHasContent(slot){for(const node of slot.assignedNodes({flatten:true})){const isElement=node.nodeType===Node.ELEMENT_NODE;const isTextWithContent=node.nodeType===Node.TEXT_NODE&&node.textContent?.match(/\S/);if(isElement||isTextWithContent){return true}}return false}
+/**
+  * @license
+  * Copyright 2022 Google LLC
+  * SPDX-License-Identifier: Apache-2.0
+  */
+const item_styles_css_styles=i`:host{color:var(--md-sys-color-on-surface, #1d1b20);font-family:var(--md-sys-typescale-body-large-font, var(--md-ref-typeface-plain, Roboto));font-size:var(--md-sys-typescale-body-large-size, 1rem);font-weight:var(--md-sys-typescale-body-large-weight, var(--md-ref-typeface-weight-regular, 400));line-height:var(--md-sys-typescale-body-large-line-height, 1.5rem);align-items:center;box-sizing:border-box;display:flex;gap:16px;min-height:56px;overflow:hidden;padding:12px 16px;position:relative;text-overflow:ellipsis}:host([multiline]){min-height:72px}[name=overline]{color:var(--md-sys-color-on-surface-variant, #49454f);font-family:var(--md-sys-typescale-label-small-font, var(--md-ref-typeface-plain, Roboto));font-size:var(--md-sys-typescale-label-small-size, 0.6875rem);font-weight:var(--md-sys-typescale-label-small-weight, var(--md-ref-typeface-weight-medium, 500));line-height:var(--md-sys-typescale-label-small-line-height, 1rem)}[name=supporting-text]{color:var(--md-sys-color-on-surface-variant, #49454f);font-family:var(--md-sys-typescale-body-medium-font, var(--md-ref-typeface-plain, Roboto));font-size:var(--md-sys-typescale-body-medium-size, 0.875rem);font-weight:var(--md-sys-typescale-body-medium-weight, var(--md-ref-typeface-weight-regular, 400));line-height:var(--md-sys-typescale-body-medium-line-height, 1.25rem)}[name=trailing-supporting-text]{color:var(--md-sys-color-on-surface-variant, #49454f);font-family:var(--md-sys-typescale-label-small-font, var(--md-ref-typeface-plain, Roboto));font-size:var(--md-sys-typescale-label-small-size, 0.6875rem);font-weight:var(--md-sys-typescale-label-small-weight, var(--md-ref-typeface-weight-medium, 500));line-height:var(--md-sys-typescale-label-small-line-height, 1rem)}[name=container]::slotted(*){inset:0;position:absolute}.default-slot{display:inline}.default-slot,::slotted(*){overflow:hidden;text-overflow:ellipsis}.text{display:flex;flex:1;flex-direction:column;overflow:hidden}/*# sourceMappingURL=item-styles.css.map */
+`;
+/**
+ * @license
+ * Copyright 2023 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+let MdItem=class MdItem extends Item{};MdItem.styles=[item_styles_css_styles];MdItem=__decorate([t("md-item")],MdItem);
+/**
+ * @license
+ * Copyright 2022 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+class ListItemEl extends lit_element_s{constructor(){super(...arguments);this.disabled=false;this.type="text";this.isListItem=true;this.href="";this.target=""}get isDisabled(){return this.disabled&&this.type!=="link"}willUpdate(changed){if(this.href){this.type="link"}super.willUpdate(changed)}render(){return this.renderListItem(x`
+      <md-item>
+        <div slot="container">
+          ${this.renderRipple()}
+          ${this.renderFocusRing()}
+        </div>
+        <slot name="start" slot="start"></slot>
+        <slot name="end" slot="end"></slot>
+        ${this.renderBody()}
+      </md-item>
+    `)}renderListItem(content){const isAnchor=this.type==="link";let tag;switch(this.type){case"link":tag=static_s`a`;break;case"button":tag=static_s`button`;break;default:case"text":tag=static_s`li`;break}const isInteractive=this.type!=="text";const target=isAnchor&&!!this.target?this.target:T;return static_n`
+      <${tag}
+        id="item"
+        tabindex="${this.isDisabled||!isInteractive?-1:0}"
+        ?disabled=${this.isDisabled}
+        role="listitem"
+        aria-selected=${this.ariaSelected||T}
+        aria-checked=${this.ariaChecked||T}
+        aria-expanded=${this.ariaExpanded||T}
+        aria-haspopup=${this.ariaHasPopup||T}
+        class="list-item ${class_map_e(this.getRenderClasses())}"
+        href=${this.href||T}
+        target=${target}
+        @focus=${this.onFocus}
+      >${content}</${tag}>
+    `}renderRipple(){if(this.type==="text"){return T}return x`
+      <md-ripple
+          part="ripple"
+          for="item"
+          ?disabled=${this.isDisabled}></md-ripple>`}renderFocusRing(){if(this.type==="text"){return T}return x`
+      <md-focus-ring
+          @visibility-changed=${this.onFocusRingVisibilityChanged}
+          part="focus-ring"
+          for="item"
+          inward></md-focus-ring>`}onFocusRingVisibilityChanged(e){}getRenderClasses(){return{disabled:this.isDisabled}}renderBody(){return x`
+      <slot></slot>
+      <slot name="overline" slot="overline"></slot>
+      <slot name="headline" slot="headline"></slot>
+      <slot name="supporting-text" slot="supporting-text"></slot>
+      <slot name="trailing-supporting-text"
+          slot="trailing-supporting-text"></slot>
+    `}onFocus(){if(this.tabIndex!==-1){return}this.dispatchEvent(createRequestActivationEvent())}focus(){this.listItemRoot?.focus()}}(()=>{requestUpdateOnAriaChange(ListItemEl)})();ListItemEl.shadowRootOptions={...lit_element_s.shadowRootOptions,delegatesFocus:true};__decorate([property_n({type:Boolean,reflect:true})],ListItemEl.prototype,"disabled",void 0);__decorate([property_n()],ListItemEl.prototype,"type",void 0);__decorate([property_n({type:Boolean,attribute:"md-list-item",reflect:true})],ListItemEl.prototype,"isListItem",void 0);__decorate([property_n()],ListItemEl.prototype,"href",void 0);__decorate([property_n()],ListItemEl.prototype,"target",void 0);__decorate([query_e(".list-item")],ListItemEl.prototype,"listItemRoot",void 0);
+/**
+  * @license
+  * Copyright 2022 Google LLC
+  * SPDX-License-Identifier: Apache-2.0
+  */
+const list_item_styles_css_styles=i`:host{display:flex;--md-ripple-hover-color: var(--md-list-item-hover-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--md-ripple-hover-opacity: var(--md-list-item-hover-state-layer-opacity, 0.08);--md-ripple-pressed-color: var(--md-list-item-pressed-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--md-ripple-pressed-opacity: var(--md-list-item-pressed-state-layer-opacity, 0.12)}md-focus-ring{z-index:1;--md-focus-ring-shape: 8px}a,button,li{background:none;border:none;padding:0;margin:0;text-align:unset;text-decoration:none}.list-item{border-radius:inherit;display:flex;flex:1;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}.list-item.interactive{cursor:pointer}.list-item.disabled{opacity:var(--md-list-item-disabled-opacity, 0.3);pointer-events:none}[slot=container]{pointer-events:none}md-ripple{border-radius:inherit}md-item{border-radius:inherit;flex:1;height:100%;color:var(--md-list-item-label-text-color, var(--md-sys-color-on-surface, #1d1b20));font-family:var(--md-list-item-label-text-font, var(--md-sys-typescale-body-large-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-list-item-label-text-size, var(--md-sys-typescale-body-large-size, 1rem));line-height:var(--md-list-item-label-text-line-height, var(--md-sys-typescale-body-large-line-height, 1.5rem));font-weight:var(--md-list-item-label-text-weight, var(--md-sys-typescale-body-large-weight, var(--md-ref-typeface-weight-regular, 400)));min-height:var(--md-list-item-one-line-container-height, 56px);padding-top:var(--md-list-item-top-space, 12px);padding-bottom:var(--md-list-item-bottom-space, 12px);padding-inline-start:var(--md-list-item-leading-space, 16px);padding-inline-end:var(--md-list-item-trailing-space, 16px)}md-item[multiline]{min-height:var(--md-list-item-two-line-container-height, 72px)}[slot=supporting-text]{color:var(--md-list-item-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));font-family:var(--md-list-item-supporting-text-font, var(--md-sys-typescale-body-medium-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-list-item-supporting-text-size, var(--md-sys-typescale-body-medium-size, 0.875rem));line-height:var(--md-list-item-supporting-text-line-height, var(--md-sys-typescale-body-medium-line-height, 1.25rem));font-weight:var(--md-list-item-supporting-text-weight, var(--md-sys-typescale-body-medium-weight, var(--md-ref-typeface-weight-regular, 400)))}[slot=trailing-supporting-text]{color:var(--md-list-item-trailing-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));font-family:var(--md-list-item-trailing-supporting-text-font, var(--md-sys-typescale-label-small-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-list-item-trailing-supporting-text-size, var(--md-sys-typescale-label-small-size, 0.6875rem));line-height:var(--md-list-item-trailing-supporting-text-line-height, var(--md-sys-typescale-label-small-line-height, 1rem));font-weight:var(--md-list-item-trailing-supporting-text-weight, var(--md-sys-typescale-label-small-weight, var(--md-ref-typeface-weight-medium, 500)))}:is([slot=start],[slot=end])::slotted(*){fill:currentColor}[slot=start]{color:var(--md-list-item-leading-icon-color, var(--md-sys-color-on-surface-variant, #49454f))}[slot=end]{color:var(--md-list-item-trailing-icon-color, var(--md-sys-color-on-surface-variant, #49454f))}/*# sourceMappingURL=list-item-styles.css.map */
+`;
+/**
+ * @license
+ * Copyright 2022 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+let MdListItem=class MdListItem extends ListItemEl{};MdListItem.styles=[list_item_styles_css_styles,forced_colors_styles_css_styles];MdListItem=__decorate([t("md-list-item")],MdListItem);
+/**
+  * @license
+  * Copyright 2022 Google LLC
+  * SPDX-License-Identifier: Apache-2.0
+  */
+const internal_forced_colors_styles_css_styles=i`@media(forced-colors: active){.menu{border-style:solid;border-color:CanvasText;border-width:1px}}/*# sourceMappingURL=forced-colors-styles.css.map */
+`;
+/**
+ * @license
+ * Copyright 2018 Google LLC
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+const style_map_n="important",style_map_i=" !"+style_map_n,style_map_o=directive_e(class extends directive_i{constructor(t){if(super(t),t.type!==directive_t.ATTRIBUTE||"style"!==t.name||t.strings?.length>2)throw Error("The `styleMap` directive must be used in the `style` attribute and must be the only part in the attribute.")}render(t){return Object.keys(t).reduce(((e,r)=>{const s=t[r];return null==s?e:e+`${r=r.includes("-")?r:r.replace(/(?:^(webkit|moz|ms|o)|)(?=[A-Z])/g,"-$&").toLowerCase()}:${s};`}),"")}update(e,[r]){const{style:s}=e.element;if(void 0===this.ut)return this.ut=new Set(Object.keys(r)),this.render(r);for(const t of this.ut)null==r[t]&&(this.ut.delete(t),t.includes("-")?s.removeProperty(t):s[t]=null);for(const t in r){const e=r[t];if(null!=e){this.ut.add(t);const r="string"==typeof e&&e.endsWith(style_map_i);t.includes("-")||r?s.setProperty(t,r?e.slice(0,-11):e,r?style_map_n:""):s[t]=e}}return w}});
 /**
  * @license
  * Copyright 2023 Google LLC
@@ -783,7 +928,7 @@ const menu_styles_css_styles=i`:host{--md-elevation-level: var(--md-menu-contain
  * Copyright 2022 Google LLC
  * SPDX-License-Identifier: Apache-2.0
  */
-let MdMenu=class MdMenu extends Menu{};MdMenu.styles=[menu_styles_css_styles,forced_colors_styles_css_styles];MdMenu=__decorate([t("md-menu")],MdMenu);
+let MdMenu=class MdMenu extends Menu{};MdMenu.styles=[menu_styles_css_styles,internal_forced_colors_styles_css_styles];MdMenu=__decorate([t("md-menu")],MdMenu);
 /**
   * @license
   * Copyright 2022 Google LLC
@@ -791,40 +936,6 @@ let MdMenu=class MdMenu extends Menu{};MdMenu.styles=[menu_styles_css_styles,for
   */
 const menuitem_forced_colors_styles_css_styles=i`@media(forced-colors: active){:host([disabled]),:host([disabled]) slot{color:GrayText;opacity:1}.list-item{position:relative}.list-item.selected::before{content:"";position:absolute;inset:0;box-sizing:border-box;border-radius:inherit;pointer-events:none;border:3px double CanvasText}}/*# sourceMappingURL=forced-colors-styles.css.map */
 `;
-/**
- * @license
- * Copyright 2023 Google LLC
- * SPDX-License-Identifier: Apache-2.0
- */
-class Item extends lit_element_s{constructor(){super(...arguments);this.multiline=false}render(){return x`
-      <slot name="container"></slot>
-      <slot class="non-text" name="start"></slot>
-      <div class="text">
-        <slot name="overline"
-            @slotchange=${this.handleTextSlotChange}></slot>
-        <slot class="default-slot"
-            @slotchange=${this.handleTextSlotChange}></slot>
-        <slot name="headline"
-            @slotchange=${this.handleTextSlotChange}></slot>
-        <slot name="supporting-text"
-            @slotchange=${this.handleTextSlotChange}></slot>
-      </div>
-      <slot class="non-text" name="trailing-supporting-text"></slot>
-      <slot class="non-text" name="end"></slot>
-    `}handleTextSlotChange(){let isMultiline=false;let slotsWithContent=0;for(const slot of this.textSlots){if(slotHasContent(slot)){slotsWithContent+=1}if(slotsWithContent>1){isMultiline=true;break}}this.multiline=isMultiline}}__decorate([property_n({type:Boolean,reflect:true})],Item.prototype,"multiline",void 0);__decorate([query_all_r(".text slot")],Item.prototype,"textSlots",void 0);function slotHasContent(slot){for(const node of slot.assignedNodes({flatten:true})){const isElement=node.nodeType===Node.ELEMENT_NODE;const isTextWithContent=node.nodeType===Node.TEXT_NODE&&node.textContent?.match(/\S/);if(isElement||isTextWithContent){return true}}return false}
-/**
-  * @license
-  * Copyright 2022 Google LLC
-  * SPDX-License-Identifier: Apache-2.0
-  */
-const item_styles_css_styles=i`:host{color:var(--md-sys-color-on-surface, #1d1b20);font-family:var(--md-sys-typescale-body-large-font, var(--md-ref-typeface-plain, Roboto));font-size:var(--md-sys-typescale-body-large-size, 1rem);font-weight:var(--md-sys-typescale-body-large-weight, var(--md-ref-typeface-weight-regular, 400));line-height:var(--md-sys-typescale-body-large-line-height, 1.5rem);align-items:center;box-sizing:border-box;display:flex;gap:16px;min-height:56px;overflow:hidden;padding:12px 16px;position:relative;text-overflow:ellipsis}:host([multiline]){min-height:72px}[name=overline]{color:var(--md-sys-color-on-surface-variant, #49454f);font-family:var(--md-sys-typescale-label-small-font, var(--md-ref-typeface-plain, Roboto));font-size:var(--md-sys-typescale-label-small-size, 0.6875rem);font-weight:var(--md-sys-typescale-label-small-weight, var(--md-ref-typeface-weight-medium, 500));line-height:var(--md-sys-typescale-label-small-line-height, 1rem)}[name=supporting-text]{color:var(--md-sys-color-on-surface-variant, #49454f);font-family:var(--md-sys-typescale-body-medium-font, var(--md-ref-typeface-plain, Roboto));font-size:var(--md-sys-typescale-body-medium-size, 0.875rem);font-weight:var(--md-sys-typescale-body-medium-weight, var(--md-ref-typeface-weight-regular, 400));line-height:var(--md-sys-typescale-body-medium-line-height, 1.25rem)}[name=trailing-supporting-text]{color:var(--md-sys-color-on-surface-variant, #49454f);font-family:var(--md-sys-typescale-label-small-font, var(--md-ref-typeface-plain, Roboto));font-size:var(--md-sys-typescale-label-small-size, 0.6875rem);font-weight:var(--md-sys-typescale-label-small-weight, var(--md-ref-typeface-weight-medium, 500));line-height:var(--md-sys-typescale-label-small-line-height, 1rem)}[name=container]::slotted(*){inset:0;position:absolute}.default-slot{display:inline}.default-slot,::slotted(*){overflow:hidden;text-overflow:ellipsis}.text{display:flex;flex:1;flex-direction:column;overflow:hidden}/*# sourceMappingURL=item-styles.css.map */
-`;
-/**
- * @license
- * Copyright 2023 Google LLC
- * SPDX-License-Identifier: Apache-2.0
- */
-let MdItem=class MdItem extends Item{};MdItem.styles=[item_styles_css_styles];MdItem=__decorate([t("md-item")],MdItem);
 /**
  * @license
  * Copyright 2023 Google LLC
@@ -1003,7 +1114,7 @@ let MdLinearProgress=class MdLinearProgress extends LinearProgress{};MdLinearPro
   * Copyright 2022 Google LLC
   * SPDX-License-Identifier: Apache-2.0
   */
-const internal_forced_colors_styles_css_styles=i`@media(forced-colors: active){:host{--md-radio-disabled-selected-icon-color: GrayText;--md-radio-disabled-selected-icon-opacity: 1;--md-radio-disabled-unselected-icon-color: GrayText;--md-radio-disabled-unselected-icon-opacity: 1;--md-radio-selected-icon-color: CanvasText;--md-radio-selected-hover-icon-color: CanvasText;--md-radio-selected-focus-icon-color: CanvasText;--md-radio-selected-pressed-icon-color: CanvasText;--md-radio-icon-color: CanvasText;--md-radio-hover-icon-color: CanvasText;--md-radio-focus-icon-color: CanvasText;--md-radio-pressed-icon-color: CanvasText}}/*# sourceMappingURL=forced-colors-styles.css.map */
+const radio_internal_forced_colors_styles_css_styles=i`@media(forced-colors: active){:host{--md-radio-disabled-selected-icon-color: GrayText;--md-radio-disabled-selected-icon-opacity: 1;--md-radio-disabled-unselected-icon-color: GrayText;--md-radio-disabled-unselected-icon-opacity: 1;--md-radio-selected-icon-color: CanvasText;--md-radio-selected-hover-icon-color: CanvasText;--md-radio-selected-focus-icon-color: CanvasText;--md-radio-selected-pressed-icon-color: CanvasText;--md-radio-icon-color: CanvasText;--md-radio-hover-icon-color: CanvasText;--md-radio-focus-icon-color: CanvasText;--md-radio-pressed-icon-color: CanvasText}}/*# sourceMappingURL=forced-colors-styles.css.map */
 `;
 /**
  * @license
@@ -1053,7 +1164,7 @@ const radio_styles_css_styles=i`:host{--_disabled-selected-icon-color: var(--md-
  * Copyright 2022 Google LLC
  * SPDX-License-Identifier: Apache-2.0
  */
-let MdRadio=class MdRadio extends Radio{};MdRadio.styles=[radio_styles_css_styles,internal_forced_colors_styles_css_styles];MdRadio=__decorate([t("md-radio")],MdRadio);
+let MdRadio=class MdRadio extends Radio{};MdRadio.styles=[radio_styles_css_styles,radio_internal_forced_colors_styles_css_styles];MdRadio=__decorate([t("md-radio")],MdRadio);
 /**
   * @license
   * Copyright 2022 Google LLC

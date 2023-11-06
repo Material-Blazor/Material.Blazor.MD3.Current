@@ -58,6 +58,9 @@ references:
 - uid: C.MBIcon
   name: MBIcon
   href: Material.Blazor.MD3/Components/Icon/MBIcon.html
+- uid: C.MBList
+  name: MBList
+  href: Material.Blazor.MD3/Components/List/MBList.html
 - uid: C.MBMenu
   name: MBMenu
   href: Material.Blazor.MD3/Components/Menu/MBMenu.html
@@ -3216,6 +3219,369 @@ references:
   commentId: F:Material.Blazor.MBItemValidation.NoSelection
   fullName: Material.Blazor.MBItemValidation.NoSelection
   nameWithType: MBItemValidation.NoSelection
+- uid: Material.Blazor.MBList
+  name: MBList
+  href: api/Material.Blazor.MBList.html
+  commentId: T:Material.Blazor.MBList
+  fullName: Material.Blazor.MBList
+  nameWithType: MBList
+- uid: Material.Blazor.MBList.#ctor
+  name: MBList()
+  href: api/Material.Blazor.MBList.html#Material_Blazor_MBList__ctor
+  commentId: M:Material.Blazor.MBList.#ctor
+  name.vb: New()
+  fullName: Material.Blazor.MBList.MBList()
+  fullName.vb: Material.Blazor.MBList.New()
+  nameWithType: MBList.MBList()
+  nameWithType.vb: MBList.New()
+- uid: Material.Blazor.MBList.#ctor*
+  name: MBList
+  href: api/Material.Blazor.MBList.html#Material_Blazor_MBList__ctor_
+  commentId: Overload:Material.Blazor.MBList.#ctor
+  name.vb: New
+  fullName: Material.Blazor.MBList.MBList
+  fullName.vb: Material.Blazor.MBList.New
+  nameWithType: MBList.MBList
+  nameWithType.vb: MBList.New
+- uid: Material.Blazor.MBList.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  name: BuildRenderTree(RenderTreeBuilder)
+  href: api/Material.Blazor.MBList.html#Material_Blazor_MBList_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
+  commentId: M:Material.Blazor.MBList.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  fullName: Material.Blazor.MBList.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  nameWithType: MBList.BuildRenderTree(RenderTreeBuilder)
+- uid: Material.Blazor.MBList.BuildRenderTree*
+  name: BuildRenderTree
+  href: api/Material.Blazor.MBList.html#Material_Blazor_MBList_BuildRenderTree_
+  commentId: Overload:Material.Blazor.MBList.BuildRenderTree
+  fullName: Material.Blazor.MBList.BuildRenderTree
+  nameWithType: MBList.BuildRenderTree
+- uid: Material.Blazor.MBList.ListItems
+  name: ListItems
+  href: api/Material.Blazor.MBList.html#Material_Blazor_MBList_ListItems
+  commentId: P:Material.Blazor.MBList.ListItems
+  fullName: Material.Blazor.MBList.ListItems
+  nameWithType: MBList.ListItems
+- uid: Material.Blazor.MBList.ListItems*
+  name: ListItems
+  href: api/Material.Blazor.MBList.html#Material_Blazor_MBList_ListItems_
+  commentId: Overload:Material.Blazor.MBList.ListItems
+  fullName: Material.Blazor.MBList.ListItems
+  nameWithType: MBList.ListItems
+- uid: Material.Blazor.MBListItem
+  name: MBListItem
+  href: api/Material.Blazor.MBListItem.html
+  commentId: T:Material.Blazor.MBListItem
+  fullName: Material.Blazor.MBListItem
+  nameWithType: MBListItem
+- uid: Material.Blazor.MBListItem.#ctor
+  name: MBListItem()
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem__ctor
+  commentId: M:Material.Blazor.MBListItem.#ctor
+  name.vb: New()
+  fullName: Material.Blazor.MBListItem.MBListItem()
+  fullName.vb: Material.Blazor.MBListItem.New()
+  nameWithType: MBListItem.MBListItem()
+  nameWithType.vb: MBListItem.New()
+- uid: Material.Blazor.MBListItem.#ctor(Material.Blazor.MBListItem)
+  name: MBListItem(MBListItem)
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem__ctor_Material_Blazor_MBListItem_
+  commentId: M:Material.Blazor.MBListItem.#ctor(Material.Blazor.MBListItem)
+  name.vb: New(MBListItem)
+  fullName: Material.Blazor.MBListItem.MBListItem(Material.Blazor.MBListItem)
+  fullName.vb: Material.Blazor.MBListItem.New(Material.Blazor.MBListItem)
+  nameWithType: MBListItem.MBListItem(MBListItem)
+  nameWithType.vb: MBListItem.New(MBListItem)
+- uid: Material.Blazor.MBListItem.#ctor*
+  name: MBListItem
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem__ctor_
+  commentId: Overload:Material.Blazor.MBListItem.#ctor
+  name.vb: New
+  fullName: Material.Blazor.MBListItem.MBListItem
+  fullName.vb: Material.Blazor.MBListItem.New
+  nameWithType: MBListItem.MBListItem
+  nameWithType.vb: MBListItem.New
+- uid: Material.Blazor.MBListItem.EqualityContract
+  name: EqualityContract
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_EqualityContract
+  commentId: P:Material.Blazor.MBListItem.EqualityContract
+  fullName: Material.Blazor.MBListItem.EqualityContract
+  nameWithType: MBListItem.EqualityContract
+- uid: Material.Blazor.MBListItem.EqualityContract*
+  name: EqualityContract
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_EqualityContract_
+  commentId: Overload:Material.Blazor.MBListItem.EqualityContract
+  fullName: Material.Blazor.MBListItem.EqualityContract
+  nameWithType: MBListItem.EqualityContract
+- uid: Material.Blazor.MBListItem.Equals(Material.Blazor.MBListItem)
+  name: Equals(MBListItem?)
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_Equals_Material_Blazor_MBListItem_
+  commentId: M:Material.Blazor.MBListItem.Equals(Material.Blazor.MBListItem)
+  name.vb: Equals(MBListItem)
+  fullName: Material.Blazor.MBListItem.Equals(Material.Blazor.MBListItem?)
+  fullName.vb: Material.Blazor.MBListItem.Equals(Material.Blazor.MBListItem)
+  nameWithType: MBListItem.Equals(MBListItem?)
+  nameWithType.vb: MBListItem.Equals(MBListItem)
+- uid: Material.Blazor.MBListItem.Equals(System.Object)
+  name: Equals(object?)
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_Equals_System_Object_
+  commentId: M:Material.Blazor.MBListItem.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Material.Blazor.MBListItem.Equals(object?)
+  fullName.vb: Material.Blazor.MBListItem.Equals(Object)
+  nameWithType: MBListItem.Equals(object?)
+  nameWithType.vb: MBListItem.Equals(Object)
+- uid: Material.Blazor.MBListItem.Equals*
+  name: Equals
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_Equals_
+  commentId: Overload:Material.Blazor.MBListItem.Equals
+  fullName: Material.Blazor.MBListItem.Equals
+  nameWithType: MBListItem.Equals
+- uid: Material.Blazor.MBListItem.GetHashCode
+  name: GetHashCode()
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_GetHashCode
+  commentId: M:Material.Blazor.MBListItem.GetHashCode
+  fullName: Material.Blazor.MBListItem.GetHashCode()
+  nameWithType: MBListItem.GetHashCode()
+- uid: Material.Blazor.MBListItem.GetHashCode*
+  name: GetHashCode
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_GetHashCode_
+  commentId: Overload:Material.Blazor.MBListItem.GetHashCode
+  fullName: Material.Blazor.MBListItem.GetHashCode
+  nameWithType: MBListItem.GetHashCode
+- uid: Material.Blazor.MBListItem.Headline
+  name: Headline
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_Headline
+  commentId: P:Material.Blazor.MBListItem.Headline
+  fullName: Material.Blazor.MBListItem.Headline
+  nameWithType: MBListItem.Headline
+- uid: Material.Blazor.MBListItem.Headline*
+  name: Headline
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_Headline_
+  commentId: Overload:Material.Blazor.MBListItem.Headline
+  fullName: Material.Blazor.MBListItem.Headline
+  nameWithType: MBListItem.Headline
+- uid: Material.Blazor.MBListItem.HeadlineColor
+  name: HeadlineColor
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_HeadlineColor
+  commentId: P:Material.Blazor.MBListItem.HeadlineColor
+  fullName: Material.Blazor.MBListItem.HeadlineColor
+  nameWithType: MBListItem.HeadlineColor
+- uid: Material.Blazor.MBListItem.HeadlineColor*
+  name: HeadlineColor
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_HeadlineColor_
+  commentId: Overload:Material.Blazor.MBListItem.HeadlineColor
+  fullName: Material.Blazor.MBListItem.HeadlineColor
+  nameWithType: MBListItem.HeadlineColor
+- uid: Material.Blazor.MBListItem.HeadlineSupport
+  name: HeadlineSupport
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_HeadlineSupport
+  commentId: P:Material.Blazor.MBListItem.HeadlineSupport
+  fullName: Material.Blazor.MBListItem.HeadlineSupport
+  nameWithType: MBListItem.HeadlineSupport
+- uid: Material.Blazor.MBListItem.HeadlineSupport*
+  name: HeadlineSupport
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_HeadlineSupport_
+  commentId: Overload:Material.Blazor.MBListItem.HeadlineSupport
+  fullName: Material.Blazor.MBListItem.HeadlineSupport
+  nameWithType: MBListItem.HeadlineSupport
+- uid: Material.Blazor.MBListItem.HeadlineSupportColor
+  name: HeadlineSupportColor
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_HeadlineSupportColor
+  commentId: P:Material.Blazor.MBListItem.HeadlineSupportColor
+  fullName: Material.Blazor.MBListItem.HeadlineSupportColor
+  nameWithType: MBListItem.HeadlineSupportColor
+- uid: Material.Blazor.MBListItem.HeadlineSupportColor*
+  name: HeadlineSupportColor
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_HeadlineSupportColor_
+  commentId: Overload:Material.Blazor.MBListItem.HeadlineSupportColor
+  fullName: Material.Blazor.MBListItem.HeadlineSupportColor
+  nameWithType: MBListItem.HeadlineSupportColor
+- uid: Material.Blazor.MBListItem.ImageSource
+  name: ImageSource
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_ImageSource
+  commentId: P:Material.Blazor.MBListItem.ImageSource
+  fullName: Material.Blazor.MBListItem.ImageSource
+  nameWithType: MBListItem.ImageSource
+- uid: Material.Blazor.MBListItem.ImageSource*
+  name: ImageSource
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_ImageSource_
+  commentId: Overload:Material.Blazor.MBListItem.ImageSource
+  fullName: Material.Blazor.MBListItem.ImageSource
+  nameWithType: MBListItem.ImageSource
+- uid: Material.Blazor.MBListItem.ImageStyle
+  name: ImageStyle
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_ImageStyle
+  commentId: P:Material.Blazor.MBListItem.ImageStyle
+  fullName: Material.Blazor.MBListItem.ImageStyle
+  nameWithType: MBListItem.ImageStyle
+- uid: Material.Blazor.MBListItem.ImageStyle*
+  name: ImageStyle
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_ImageStyle_
+  commentId: Overload:Material.Blazor.MBListItem.ImageStyle
+  fullName: Material.Blazor.MBListItem.ImageStyle
+  nameWithType: MBListItem.ImageStyle
+- uid: Material.Blazor.MBListItem.IsDisabled
+  name: IsDisabled
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_IsDisabled
+  commentId: P:Material.Blazor.MBListItem.IsDisabled
+  fullName: Material.Blazor.MBListItem.IsDisabled
+  nameWithType: MBListItem.IsDisabled
+- uid: Material.Blazor.MBListItem.IsDisabled*
+  name: IsDisabled
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_IsDisabled_
+  commentId: Overload:Material.Blazor.MBListItem.IsDisabled
+  fullName: Material.Blazor.MBListItem.IsDisabled
+  nameWithType: MBListItem.IsDisabled
+- uid: Material.Blazor.MBListItem.LeadingIcon
+  name: LeadingIcon
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_LeadingIcon
+  commentId: P:Material.Blazor.MBListItem.LeadingIcon
+  fullName: Material.Blazor.MBListItem.LeadingIcon
+  nameWithType: MBListItem.LeadingIcon
+- uid: Material.Blazor.MBListItem.LeadingIcon*
+  name: LeadingIcon
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_LeadingIcon_
+  commentId: Overload:Material.Blazor.MBListItem.LeadingIcon
+  fullName: Material.Blazor.MBListItem.LeadingIcon
+  nameWithType: MBListItem.LeadingIcon
+- uid: Material.Blazor.MBListItem.Link
+  name: Link
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_Link
+  commentId: P:Material.Blazor.MBListItem.Link
+  fullName: Material.Blazor.MBListItem.Link
+  nameWithType: MBListItem.Link
+- uid: Material.Blazor.MBListItem.Link*
+  name: Link
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_Link_
+  commentId: Overload:Material.Blazor.MBListItem.Link
+  fullName: Material.Blazor.MBListItem.Link
+  nameWithType: MBListItem.Link
+- uid: Material.Blazor.MBListItem.LinkTarget
+  name: LinkTarget
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_LinkTarget
+  commentId: P:Material.Blazor.MBListItem.LinkTarget
+  fullName: Material.Blazor.MBListItem.LinkTarget
+  nameWithType: MBListItem.LinkTarget
+- uid: Material.Blazor.MBListItem.LinkTarget*
+  name: LinkTarget
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_LinkTarget_
+  commentId: Overload:Material.Blazor.MBListItem.LinkTarget
+  fullName: Material.Blazor.MBListItem.LinkTarget
+  nameWithType: MBListItem.LinkTarget
+- uid: Material.Blazor.MBListItem.ListItemType
+  name: ListItemType
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_ListItemType
+  commentId: P:Material.Blazor.MBListItem.ListItemType
+  fullName: Material.Blazor.MBListItem.ListItemType
+  nameWithType: MBListItem.ListItemType
+- uid: Material.Blazor.MBListItem.ListItemType*
+  name: ListItemType
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_ListItemType_
+  commentId: Overload:Material.Blazor.MBListItem.ListItemType
+  fullName: Material.Blazor.MBListItem.ListItemType
+  nameWithType: MBListItem.ListItemType
+- uid: Material.Blazor.MBListItem.PrintMembers(System.Text.StringBuilder)
+  name: PrintMembers(StringBuilder)
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_PrintMembers_System_Text_StringBuilder_
+  commentId: M:Material.Blazor.MBListItem.PrintMembers(System.Text.StringBuilder)
+  fullName: Material.Blazor.MBListItem.PrintMembers(System.Text.StringBuilder)
+  nameWithType: MBListItem.PrintMembers(StringBuilder)
+- uid: Material.Blazor.MBListItem.PrintMembers*
+  name: PrintMembers
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_PrintMembers_
+  commentId: Overload:Material.Blazor.MBListItem.PrintMembers
+  fullName: Material.Blazor.MBListItem.PrintMembers
+  nameWithType: MBListItem.PrintMembers
+- uid: Material.Blazor.MBListItem.ToString
+  name: ToString()
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_ToString
+  commentId: M:Material.Blazor.MBListItem.ToString
+  fullName: Material.Blazor.MBListItem.ToString()
+  nameWithType: MBListItem.ToString()
+- uid: Material.Blazor.MBListItem.ToString*
+  name: ToString
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_ToString_
+  commentId: Overload:Material.Blazor.MBListItem.ToString
+  fullName: Material.Blazor.MBListItem.ToString
+  nameWithType: MBListItem.ToString
+- uid: Material.Blazor.MBListItem.TrailingIcon
+  name: TrailingIcon
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_TrailingIcon
+  commentId: P:Material.Blazor.MBListItem.TrailingIcon
+  fullName: Material.Blazor.MBListItem.TrailingIcon
+  nameWithType: MBListItem.TrailingIcon
+- uid: Material.Blazor.MBListItem.TrailingIcon*
+  name: TrailingIcon
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_TrailingIcon_
+  commentId: Overload:Material.Blazor.MBListItem.TrailingIcon
+  fullName: Material.Blazor.MBListItem.TrailingIcon
+  nameWithType: MBListItem.TrailingIcon
+- uid: Material.Blazor.MBListItem.op_Equality(Material.Blazor.MBListItem,Material.Blazor.MBListItem)
+  name: operator ==(MBListItem?, MBListItem?)
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_op_Equality_Material_Blazor_MBListItem_Material_Blazor_MBListItem_
+  commentId: M:Material.Blazor.MBListItem.op_Equality(Material.Blazor.MBListItem,Material.Blazor.MBListItem)
+  name.vb: =(MBListItem, MBListItem)
+  fullName: Material.Blazor.MBListItem.operator ==(Material.Blazor.MBListItem?, Material.Blazor.MBListItem?)
+  fullName.vb: Material.Blazor.MBListItem.=(Material.Blazor.MBListItem, Material.Blazor.MBListItem)
+  nameWithType: MBListItem.operator ==(MBListItem?, MBListItem?)
+  nameWithType.vb: MBListItem.=(MBListItem, MBListItem)
+- uid: Material.Blazor.MBListItem.op_Equality*
+  name: operator ==
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_op_Equality_
+  commentId: Overload:Material.Blazor.MBListItem.op_Equality
+  name.vb: =
+  fullName: Material.Blazor.MBListItem.operator ==
+  fullName.vb: Material.Blazor.MBListItem.=
+  nameWithType: MBListItem.operator ==
+  nameWithType.vb: MBListItem.=
+- uid: Material.Blazor.MBListItem.op_Inequality(Material.Blazor.MBListItem,Material.Blazor.MBListItem)
+  name: operator !=(MBListItem?, MBListItem?)
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_op_Inequality_Material_Blazor_MBListItem_Material_Blazor_MBListItem_
+  commentId: M:Material.Blazor.MBListItem.op_Inequality(Material.Blazor.MBListItem,Material.Blazor.MBListItem)
+  name.vb: <>(MBListItem, MBListItem)
+  fullName: Material.Blazor.MBListItem.operator !=(Material.Blazor.MBListItem?, Material.Blazor.MBListItem?)
+  fullName.vb: Material.Blazor.MBListItem.<>(Material.Blazor.MBListItem, Material.Blazor.MBListItem)
+  nameWithType: MBListItem.operator !=(MBListItem?, MBListItem?)
+  nameWithType.vb: MBListItem.<>(MBListItem, MBListItem)
+- uid: Material.Blazor.MBListItem.op_Inequality*
+  name: operator !=
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem_op_Inequality_
+  commentId: Overload:Material.Blazor.MBListItem.op_Inequality
+  name.vb: <>
+  fullName: Material.Blazor.MBListItem.operator !=
+  fullName.vb: Material.Blazor.MBListItem.<>
+  nameWithType: MBListItem.operator !=
+  nameWithType.vb: MBListItem.<>
+- uid: Material.Blazor.MBListItem.{Clone}$
+  name: <Clone>$()
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem__Clone__
+  commentId: M:Material.Blazor.MBListItem.{Clone}$
+  fullName: Material.Blazor.MBListItem.<Clone>$()
+  nameWithType: MBListItem.<Clone>$()
+- uid: Material.Blazor.MBListItem.{Clone}$*
+  name: <Clone>$
+  href: api/Material.Blazor.MBListItem.html#Material_Blazor_MBListItem__Clone___
+  commentId: Overload:Material.Blazor.MBListItem.{Clone}$
+  fullName: Material.Blazor.MBListItem.<Clone>$
+  nameWithType: MBListItem.<Clone>$
+- uid: Material.Blazor.MBListItemType
+  name: MBListItemType
+  href: api/Material.Blazor.MBListItemType.html
+  commentId: T:Material.Blazor.MBListItemType
+  fullName: Material.Blazor.MBListItemType
+  nameWithType: MBListItemType
+- uid: Material.Blazor.MBListItemType.Divider
+  name: Divider
+  href: api/Material.Blazor.MBListItemType.html#Material_Blazor_MBListItemType_Divider
+  commentId: F:Material.Blazor.MBListItemType.Divider
+  fullName: Material.Blazor.MBListItemType.Divider
+  nameWithType: MBListItemType.Divider
+- uid: Material.Blazor.MBListItemType.Regular
+  name: Regular
+  href: api/Material.Blazor.MBListItemType.html#Material_Blazor_MBListItemType_Regular
+  commentId: F:Material.Blazor.MBListItemType.Regular
+  fullName: Material.Blazor.MBListItemType.Regular
+  nameWithType: MBListItemType.Regular
 - uid: Material.Blazor.MBLoggingLevel
   name: MBLoggingLevel
   href: api/Material.Blazor.MBLoggingLevel.html
@@ -3558,18 +3924,6 @@ references:
   commentId: Overload:Material.Blazor.MBMenuItem.IsDisabled
   fullName: Material.Blazor.MBMenuItem.IsDisabled
   nameWithType: MBMenuItem.IsDisabled
-- uid: Material.Blazor.MBMenuItem.ItemType
-  name: ItemType
-  href: api/Material.Blazor.MBMenuItem.html#Material_Blazor_MBMenuItem_ItemType
-  commentId: P:Material.Blazor.MBMenuItem.ItemType
-  fullName: Material.Blazor.MBMenuItem.ItemType
-  nameWithType: MBMenuItem.ItemType
-- uid: Material.Blazor.MBMenuItem.ItemType*
-  name: ItemType
-  href: api/Material.Blazor.MBMenuItem.html#Material_Blazor_MBMenuItem_ItemType_
-  commentId: Overload:Material.Blazor.MBMenuItem.ItemType
-  fullName: Material.Blazor.MBMenuItem.ItemType
-  nameWithType: MBMenuItem.ItemType
 - uid: Material.Blazor.MBMenuItem.LeadingIcon
   name: LeadingIcon
   href: api/Material.Blazor.MBMenuItem.html#Material_Blazor_MBMenuItem_LeadingIcon
@@ -3582,6 +3936,18 @@ references:
   commentId: Overload:Material.Blazor.MBMenuItem.LeadingIcon
   fullName: Material.Blazor.MBMenuItem.LeadingIcon
   nameWithType: MBMenuItem.LeadingIcon
+- uid: Material.Blazor.MBMenuItem.MenuItemType
+  name: MenuItemType
+  href: api/Material.Blazor.MBMenuItem.html#Material_Blazor_MBMenuItem_MenuItemType
+  commentId: P:Material.Blazor.MBMenuItem.MenuItemType
+  fullName: Material.Blazor.MBMenuItem.MenuItemType
+  nameWithType: MBMenuItem.MenuItemType
+- uid: Material.Blazor.MBMenuItem.MenuItemType*
+  name: MenuItemType
+  href: api/Material.Blazor.MBMenuItem.html#Material_Blazor_MBMenuItem_MenuItemType_
+  commentId: Overload:Material.Blazor.MBMenuItem.MenuItemType
+  fullName: Material.Blazor.MBMenuItem.MenuItemType
+  nameWithType: MBMenuItem.MenuItemType
 - uid: Material.Blazor.MBMenuItem.PrintMembers(System.Text.StringBuilder)
   name: PrintMembers(StringBuilder)
   href: api/Material.Blazor.MBMenuItem.html#Material_Blazor_MBMenuItem_PrintMembers_System_Text_StringBuilder_
@@ -6737,54 +7103,6 @@ references:
   commentId: Overload:Material.Blazor.MD2.MBMenu.ToggleAsync
   fullName: Material.Blazor.MD2.MBMenu.ToggleAsync
   nameWithType: MBMenu.ToggleAsync
-- uid: Material.Blazor.MD2.MBMenuSelectionGroup
-  name: MBMenuSelectionGroup
-  href: api/Material.Blazor.MD2.MBMenuSelectionGroup.html
-  commentId: T:Material.Blazor.MD2.MBMenuSelectionGroup
-  fullName: Material.Blazor.MD2.MBMenuSelectionGroup
-  nameWithType: MBMenuSelectionGroup
-- uid: Material.Blazor.MD2.MBMenuSelectionGroup.#ctor
-  name: MBMenuSelectionGroup()
-  href: api/Material.Blazor.MD2.MBMenuSelectionGroup.html#Material_Blazor_MD2_MBMenuSelectionGroup__ctor
-  commentId: M:Material.Blazor.MD2.MBMenuSelectionGroup.#ctor
-  name.vb: New()
-  fullName: Material.Blazor.MD2.MBMenuSelectionGroup.MBMenuSelectionGroup()
-  fullName.vb: Material.Blazor.MD2.MBMenuSelectionGroup.New()
-  nameWithType: MBMenuSelectionGroup.MBMenuSelectionGroup()
-  nameWithType.vb: MBMenuSelectionGroup.New()
-- uid: Material.Blazor.MD2.MBMenuSelectionGroup.#ctor*
-  name: MBMenuSelectionGroup
-  href: api/Material.Blazor.MD2.MBMenuSelectionGroup.html#Material_Blazor_MD2_MBMenuSelectionGroup__ctor_
-  commentId: Overload:Material.Blazor.MD2.MBMenuSelectionGroup.#ctor
-  name.vb: New
-  fullName: Material.Blazor.MD2.MBMenuSelectionGroup.MBMenuSelectionGroup
-  fullName.vb: Material.Blazor.MD2.MBMenuSelectionGroup.New
-  nameWithType: MBMenuSelectionGroup.MBMenuSelectionGroup
-  nameWithType.vb: MBMenuSelectionGroup.New
-- uid: Material.Blazor.MD2.MBMenuSelectionGroup.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
-  name: BuildRenderTree(RenderTreeBuilder)
-  href: api/Material.Blazor.MD2.MBMenuSelectionGroup.html#Material_Blazor_MD2_MBMenuSelectionGroup_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
-  commentId: M:Material.Blazor.MD2.MBMenuSelectionGroup.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
-  fullName: Material.Blazor.MD2.MBMenuSelectionGroup.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
-  nameWithType: MBMenuSelectionGroup.BuildRenderTree(RenderTreeBuilder)
-- uid: Material.Blazor.MD2.MBMenuSelectionGroup.BuildRenderTree*
-  name: BuildRenderTree
-  href: api/Material.Blazor.MD2.MBMenuSelectionGroup.html#Material_Blazor_MD2_MBMenuSelectionGroup_BuildRenderTree_
-  commentId: Overload:Material.Blazor.MD2.MBMenuSelectionGroup.BuildRenderTree
-  fullName: Material.Blazor.MD2.MBMenuSelectionGroup.BuildRenderTree
-  nameWithType: MBMenuSelectionGroup.BuildRenderTree
-- uid: Material.Blazor.MD2.MBMenuSelectionGroup.ChildContent
-  name: ChildContent
-  href: api/Material.Blazor.MD2.MBMenuSelectionGroup.html#Material_Blazor_MD2_MBMenuSelectionGroup_ChildContent
-  commentId: P:Material.Blazor.MD2.MBMenuSelectionGroup.ChildContent
-  fullName: Material.Blazor.MD2.MBMenuSelectionGroup.ChildContent
-  nameWithType: MBMenuSelectionGroup.ChildContent
-- uid: Material.Blazor.MD2.MBMenuSelectionGroup.ChildContent*
-  name: ChildContent
-  href: api/Material.Blazor.MD2.MBMenuSelectionGroup.html#Material_Blazor_MD2_MBMenuSelectionGroup_ChildContent_
-  commentId: Overload:Material.Blazor.MD2.MBMenuSelectionGroup.ChildContent
-  fullName: Material.Blazor.MD2.MBMenuSelectionGroup.ChildContent
-  nameWithType: MBMenuSelectionGroup.ChildContent
 - uid: Material.Blazor.MD2.MBTopAppBar
   name: MBTopAppBar
   href: api/Material.Blazor.MD2.MBTopAppBar.html
