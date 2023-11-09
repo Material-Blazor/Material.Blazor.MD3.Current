@@ -834,6 +834,20 @@
   -webkit-font-smoothing: antialiased;
 }
 
+.mb-dialog-overflow-visible.mdc-dialog__surface, .mb-dialog-overflow-visible.mdc-dialog__surface .mdc-dialog__content {
+  overflow: visible !important;
+}
+
+.mb-dialog__header {
+  padding-bottom: 0px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 0px;
+}
+.mb-dialog__header .mdc-dialog__title {
+  padding-left: 0px;
+}
+
 .mb-radiobuttongroup__horizontal {
   display: flex;
   flex-direction: row;
@@ -1210,20 +1224,6 @@
 }
 .mdc-data-table.dense--0 .mdc-data-table__header-row, .mdc-data-table.dense-default .mdc-data-table__header-row {
   height: 56px;
-}
-
-.mb-dialog-overflow-visible.mdc-dialog__surface, .mb-dialog-overflow-visible.mdc-dialog__surface .mdc-dialog__content {
-  overflow: visible !important;
-}
-
-.mb-dialog__header {
-  padding-bottom: 0px;
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-top: 0px;
-}
-.mb-dialog__header .mdc-dialog__title {
-  padding-left: 0px;
 }
 
 .mb-top-app-bar__title-right {

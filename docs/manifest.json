@@ -27,6 +27,16 @@
         "UidNotFound"
       ],
       "type": "Conceptual",
+      "source_relative_path": "Material.Blazor.MD3/Articles/CascadingDefaults.md",
+      "output": {
+        ".html": {
+          "relative_path": "Material.Blazor.MD3/Articles/CascadingDefaults.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Articles/CoreComponents.md",
       "output": {
         ".html": {
@@ -292,6 +302,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "Material.Blazor.MD3/Components/Dialog/MBDialog.md",
+      "output": {
+        ".html": {
+          "relative_path": "Material.Blazor.MD3/Components/Dialog/MBDialog.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Components/FloatingActionButton/MBFloatingActionButton.md",
       "output": {
         ".html": {
@@ -354,14 +374,11 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Conceptual",
-      "source_relative_path": "Material.Blazor.MD3/Components/ProgressIndicator/MBProgress.md",
+      "source_relative_path": "Material.Blazor.MD3/Components/Progress/MBProgress.md",
       "output": {
         ".html": {
-          "relative_path": "Material.Blazor.MD3/Components/ProgressIndicator/MBProgress.html"
+          "relative_path": "Material.Blazor.MD3/Components/Progress/MBProgress.html"
         }
       },
       "version": ""
@@ -387,9 +404,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Components/Select/MBSelect.md",
       "output": {
@@ -400,9 +414,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Components/Slider/MBSlider.md",
       "output": {
@@ -413,9 +424,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Components/Switch/MBSwitch.md",
       "output": {
@@ -446,9 +454,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Toc",
       "source_relative_path": "Material.Blazor.MD3/Components/toc.yml",
       "output": {
@@ -1113,6 +1118,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBDialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBDialog.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBDialogButton.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBDialogButton.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.MBDoubleField.yml",
       "output": {
         ".html": {
@@ -1597,16 +1622,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MD2.MBDataTable-1.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MD2.MBDialog.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MD2.MBDialog.html"
         }
       },
       "version": ""
