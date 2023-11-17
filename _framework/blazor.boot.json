@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Material.Blazor.Website.WebAssembly.MD3",
   "resources": {
-    "hash": "sha256-BmTn4CG6gashuE6PoxFpCYzoCsvTzSk1Xmr8FsU3rFw=",
+    "hash": "sha256-jNh/fx8oCvdKjHG8Fg8fiTBXxRXwJlX6U/JrrmUk0eA=",
     "jsModuleNative": {
       "dotnet.native.8.0.0.049gfco370.js": "sha256-LjLDIz9+J7uuiwMlQ4HbNx2BnSpphOtO2MwkoI28vdI="
     },
@@ -19,11 +19,11 @@
     "assembly": {
       "GoogleAnalytics.Blazor.wasm": "sha256-9maxHDA0ezDRT79XvPIZi411ySyG96k1lUuuu9NbGEE=",
       "Humanizer.wasm": "sha256-4NbSboZzzP9nikRtXapUZNzOyITt7ht9TNqCIQHr5OE=",
-      "Material.Blazor.MD3.wasm": "sha256-IBNJhcropdYqkCPJNAXjA3KPjW10XseuzCY8ih67PJ0=",
-      "Material.Blazor.Website.MD3.wasm": "sha256-a28ZlsclSuh8yX0ZNsIsTvKf0R7GzOHxtWAsaWNVWMI=",
-      "Material.Blazor.Website.WebAssembly.MD3.wasm": "sha256-ZsrpTE9Vi04lnOCSnJ7/6LmNgD02e3EZpSDc/6SXiYE=",
+      "Material.Blazor.MD3.wasm": "sha256-E2D4EUJBXxTTkIqaktCeUkX2ZA466r4ZmPFsU/ZQrK8=",
+      "Material.Blazor.Website.MD3.wasm": "sha256-9V6gj4Hvp1Ael/olsS0TRvQ3ifelm+pFGAx6GSxenn0=",
+      "Material.Blazor.Website.WebAssembly.MD3.wasm": "sha256-W8KcaU8YR5QLbdbuOZDIaopF0JyXBuwK9/Yc5hvacdI=",
       "Microsoft.AspNetCore.Components.Forms.wasm": "sha256-Kpn1bindDnns+pAzF2gcQDOGTlO44G47mYobLXHBuGY=",
-      "Microsoft.AspNetCore.Components.wasm": "sha256-6ab/dQ1lehktjkHmiASCQoPYxjI3Nxj2+NPehRSfd9A=",
+      "Microsoft.AspNetCore.Components.wasm": "sha256-j1Zdb5i5ShoFd4JSonDtA7bw0T64ZxqKx7eXVFvilx8=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-+gOTILdpS46o8zCcSZEf4VfeJO9uKM+COgMdhnEv0/8=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-8ihv/57C7vCvtuwY+nGacRqEFm9KAkiqBgbI/MSpvv8=",
       "Microsoft.AspNetCore.Hosting.Abstractions.wasm": "sha256-bXPYKX1wopuKj7FVFlej/JsUicmEZsiYBG6ozGbvDt0=",
@@ -237,6 +237,12 @@
       "zh-Hant": {
         "Humanizer.resources.wasm": "sha256-gsspeIJXoA6eVisryHyO6hXGq0jNTgw6XpCzvT4rLFA="
       }
+    },
+    "libraryInitializers": {
+      "_content/Material.Blazor.MD3/material.blazor.md3.lib.module.js": "sha256-HyCpzW9SWniNoiY6TPh/jHOmUTq4c/mCETNMO4OthiI="
+    },
+    "modulesAfterConfigLoaded": {
+      "../_content/Material.Blazor.MD3/material.blazor.md3.lib.module.js": "sha256-HyCpzW9SWniNoiY6TPh/jHOmUTq4c/mCETNMO4OthiI="
     }
   },
   "cacheBootResources": true,

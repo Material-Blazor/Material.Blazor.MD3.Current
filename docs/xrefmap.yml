@@ -7638,6 +7638,66 @@ references:
   commentId: Overload:Material.Blazor.MD3._Imports.BuildRenderTree
   fullName: Material.Blazor.MD3._Imports.BuildRenderTree
   nameWithType: _Imports.BuildRenderTree
+- uid: Material.Blazor.MenuClose
+  name: Material.Blazor.MenuClose
+  href: api/Material.Blazor.MenuClose.html
+  commentId: N:Material.Blazor.MenuClose
+  fullName: Material.Blazor.MenuClose
+  nameWithType: Material.Blazor.MenuClose
+- uid: Material.Blazor.MenuClose.EventHandlers
+  name: EventHandlers
+  href: api/Material.Blazor.MenuClose.EventHandlers.html
+  commentId: T:Material.Blazor.MenuClose.EventHandlers
+  fullName: Material.Blazor.MenuClose.EventHandlers
+  nameWithType: EventHandlers
+- uid: Material.Blazor.MenuClose.MenuCloseEventArgs
+  name: MenuCloseEventArgs
+  href: api/Material.Blazor.MenuClose.MenuCloseEventArgs.html
+  commentId: T:Material.Blazor.MenuClose.MenuCloseEventArgs
+  fullName: Material.Blazor.MenuClose.MenuCloseEventArgs
+  nameWithType: MenuCloseEventArgs
+- uid: Material.Blazor.MenuClose.MenuCloseEventArgs.#ctor
+  name: MenuCloseEventArgs()
+  href: api/Material.Blazor.MenuClose.MenuCloseEventArgs.html#Material_Blazor_MenuClose_MenuCloseEventArgs__ctor
+  commentId: M:Material.Blazor.MenuClose.MenuCloseEventArgs.#ctor
+  name.vb: New()
+  fullName: Material.Blazor.MenuClose.MenuCloseEventArgs.MenuCloseEventArgs()
+  fullName.vb: Material.Blazor.MenuClose.MenuCloseEventArgs.New()
+  nameWithType: MenuCloseEventArgs.MenuCloseEventArgs()
+  nameWithType.vb: MenuCloseEventArgs.New()
+- uid: Material.Blazor.MenuClose.MenuCloseEventArgs.#ctor*
+  name: MenuCloseEventArgs
+  href: api/Material.Blazor.MenuClose.MenuCloseEventArgs.html#Material_Blazor_MenuClose_MenuCloseEventArgs__ctor_
+  commentId: Overload:Material.Blazor.MenuClose.MenuCloseEventArgs.#ctor
+  name.vb: New
+  fullName: Material.Blazor.MenuClose.MenuCloseEventArgs.MenuCloseEventArgs
+  fullName.vb: Material.Blazor.MenuClose.MenuCloseEventArgs.New
+  nameWithType: MenuCloseEventArgs.MenuCloseEventArgs
+  nameWithType.vb: MenuCloseEventArgs.New
+- uid: Material.Blazor.MenuClose.MenuCloseEventArgs.CustomProperty1
+  name: CustomProperty1
+  href: api/Material.Blazor.MenuClose.MenuCloseEventArgs.html#Material_Blazor_MenuClose_MenuCloseEventArgs_CustomProperty1
+  commentId: P:Material.Blazor.MenuClose.MenuCloseEventArgs.CustomProperty1
+  fullName: Material.Blazor.MenuClose.MenuCloseEventArgs.CustomProperty1
+  nameWithType: MenuCloseEventArgs.CustomProperty1
+- uid: Material.Blazor.MenuClose.MenuCloseEventArgs.CustomProperty1*
+  name: CustomProperty1
+  href: api/Material.Blazor.MenuClose.MenuCloseEventArgs.html#Material_Blazor_MenuClose_MenuCloseEventArgs_CustomProperty1_
+  commentId: Overload:Material.Blazor.MenuClose.MenuCloseEventArgs.CustomProperty1
+  fullName: Material.Blazor.MenuClose.MenuCloseEventArgs.CustomProperty1
+  nameWithType: MenuCloseEventArgs.CustomProperty1
+- uid: Material.Blazor.MenuClose.MenuCloseEventArgs.CustomProperty2
+  name: CustomProperty2
+  href: api/Material.Blazor.MenuClose.MenuCloseEventArgs.html#Material_Blazor_MenuClose_MenuCloseEventArgs_CustomProperty2
+  commentId: P:Material.Blazor.MenuClose.MenuCloseEventArgs.CustomProperty2
+  fullName: Material.Blazor.MenuClose.MenuCloseEventArgs.CustomProperty2
+  nameWithType: MenuCloseEventArgs.CustomProperty2
+- uid: Material.Blazor.MenuClose.MenuCloseEventArgs.CustomProperty2*
+  name: CustomProperty2
+  href: api/Material.Blazor.MenuClose.MenuCloseEventArgs.html#Material_Blazor_MenuClose_MenuCloseEventArgs_CustomProperty2_
+  commentId: Overload:Material.Blazor.MenuClose.MenuCloseEventArgs.CustomProperty2
+  fullName: Material.Blazor.MenuClose.MenuCloseEventArgs.CustomProperty2
+  nameWithType: MenuCloseEventArgs.CustomProperty2
 - uid: Material.Blazor.Select2Table
   name: Select2Table
   href: api/Material.Blazor.Select2Table.html

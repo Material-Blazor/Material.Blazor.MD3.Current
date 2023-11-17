@@ -1738,6 +1738,36 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MenuClose.EventHandlers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MenuClose.EventHandlers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MenuClose.MenuCloseEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MenuClose.MenuCloseEventArgs.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MenuClose.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MenuClose.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.Select2Table.yml",
       "output": {
         ".html": {

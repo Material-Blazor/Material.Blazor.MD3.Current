@@ -492,7 +492,7 @@ const css_tag_t=globalThis,e=css_tag_t.ShadowRoot&&(void 0===css_tag_t.ShadyCSS|
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const{is:reactive_element_i,defineProperty:reactive_element_e,getOwnPropertyDescriptor:reactive_element_r,getOwnPropertyNames:h,getOwnPropertySymbols:reactive_element_o,getPrototypeOf:reactive_element_n}=Object,a=globalThis,reactive_element_c=a.trustedTypes,l=reactive_element_c?reactive_element_c.emptyScript:"",p=a.reactiveElementPolyfillSupport,d=(t,s)=>t,u={toAttribute(t,s){switch(s){case Boolean:t=t?l:null;break;case Object:case Array:t=null==t?t:JSON.stringify(t)}return t},fromAttribute(t,s){let i=t;switch(s){case Boolean:i=null!==t;break;case Number:i=null===t?null:Number(t);break;case Object:case Array:try{i=JSON.parse(t)}catch(t){i=null}}return i}},f=(t,s)=>!reactive_element_i(t,s),y={attribute:!0,type:String,converter:u,reflect:!1,hasChanged:f};Symbol.metadata??=Symbol("metadata"),a.litPropertyMetadata??=new WeakMap;class b extends HTMLElement{static addInitializer(t){this._$Ei(),(this.l??=[]).push(t)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(t,s=y){if(s.state&&(s.attribute=!1),this._$Ei(),this.elementProperties.set(t,s),!s.noAccessor){const i=Symbol(),r=this.getPropertyDescriptor(t,i,s);void 0!==r&&reactive_element_e(this.prototype,t,r)}}static getPropertyDescriptor(t,s,i){const{get:e,set:h}=reactive_element_r(this.prototype,t)??{get(){return this[s]},set(t){this[s]=t}};return{get(){return e?.call(this)},set(s){const r=e?.call(this);h.call(this,s),this.requestUpdate(t,r,i)},configurable:!0,enumerable:!0}}static getPropertyOptions(t){return this.elementProperties.get(t)??y}static _$Ei(){if(this.hasOwnProperty(d("elementProperties")))return;const t=reactive_element_n(this);t.finalize(),void 0!==t.l&&(this.l=[...t.l]),this.elementProperties=new Map(t.elementProperties)}static finalize(){if(this.hasOwnProperty(d("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(d("properties"))){const t=this.properties,s=[...h(t),...reactive_element_o(t)];for(const i of s)this.createProperty(i,t[i])}const t=this[Symbol.metadata];if(null!==t){const s=litPropertyMetadata.get(t);if(void 0!==s)for(const[t,i]of s)this.elementProperties.set(t,i)}this._$Eh=new Map;for(const[t,s]of this.elementProperties){const i=this._$Eu(t,s);void 0!==i&&this._$Eh.set(i,t)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(s){const i=[];if(Array.isArray(s)){const e=new Set(s.flat(1/0).reverse());for(const s of e)i.unshift(c(s))}else void 0!==s&&i.push(c(s));return i}static _$Eu(t,s){const i=s.attribute;return!1===i?void 0:"string"==typeof i?i:"string"==typeof t?t.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){this._$Eg=new Promise((t=>this.enableUpdating=t)),this._$AL=new Map,this._$E_(),this.requestUpdate(),this.constructor.l?.forEach((t=>t(this)))}addController(t){(this._$ES??=[]).push(t),void 0!==this.renderRoot&&this.isConnected&&t.hostConnected?.()}removeController(t){this._$ES?.splice(this._$ES.indexOf(t)>>>0,1)}_$E_(){const t=new Map,s=this.constructor.elementProperties;for(const i of s.keys())this.hasOwnProperty(i)&&(t.set(i,this[i]),delete this[i]);t.size>0&&(this._$Ep=t)}createRenderRoot(){const t=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return S(t,this.constructor.elementStyles),t}connectedCallback(){this.renderRoot??=this.createRenderRoot(),this.enableUpdating(!0),this._$ES?.forEach((t=>t.hostConnected?.()))}enableUpdating(t){}disconnectedCallback(){this._$ES?.forEach((t=>t.hostDisconnected?.()))}attributeChangedCallback(t,s,i){this._$AK(t,i)}_$EO(t,s){const i=this.constructor.elementProperties.get(t),e=this.constructor._$Eu(t,i);if(void 0!==e&&!0===i.reflect){const r=(void 0!==i.converter?.toAttribute?i.converter:u).toAttribute(s,i.type);this._$Em=t,null==r?this.removeAttribute(e):this.setAttribute(e,r),this._$Em=null}}_$AK(t,s){const i=this.constructor,e=i._$Eh.get(t);if(void 0!==e&&this._$Em!==e){const t=i.getPropertyOptions(e),r="function"==typeof t.converter?{fromAttribute:t.converter}:void 0!==t.converter?.fromAttribute?t.converter:u;this._$Em=e,this[e]=r.fromAttribute(s,t.type),this._$Em=null}}requestUpdate(t,s,i,e=!1,r){if(void 0!==t){if(i??=this.constructor.getPropertyOptions(t),!(i.hasChanged??f)(e?r:this[t],s))return;this.C(t,s,i)}!1===this.isUpdatePending&&(this._$Eg=this._$EP())}C(t,s,i){this._$AL.has(t)||this._$AL.set(t,s),!0===i.reflect&&this._$Em!==t&&(this._$Ej??=new Set).add(t)}async _$EP(){this.isUpdatePending=!0;try{await this._$Eg}catch(t){Promise.reject(t)}const t=this.scheduleUpdate();return null!=t&&await t,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this._$Ep){for(const[t,s]of this._$Ep)this[t]=s;this._$Ep=void 0}const t=this.constructor.elementProperties;if(t.size>0)for(const[s,i]of t)!0!==i.wrapped||this._$AL.has(s)||void 0===this[s]||this.C(s,this[s],i)}let t=!1;const s=this._$AL;try{t=this.shouldUpdate(s),t?(this.willUpdate(s),this._$ES?.forEach((t=>t.hostUpdate?.())),this.update(s)):this._$ET()}catch(s){throw t=!1,this._$ET(),s}t&&this._$AE(s)}willUpdate(t){}_$AE(t){this._$ES?.forEach((t=>t.hostUpdated?.())),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(t)),this.updated(t)}_$ET(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$Eg}shouldUpdate(t){return!0}update(t){this._$Ej&&=this._$Ej.forEach((t=>this._$EO(t,this[t]))),this._$ET()}updated(t){}firstUpdated(t){}}b.elementStyles=[],b.shadowRootOptions={mode:"open"},b[d("elementProperties")]=new Map,b[d("finalized")]=new Map,p?.({ReactiveElement:b}),(a.reactiveElementVersions??=[]).push("2.0.1");
+ */const{is:reactive_element_i,defineProperty:reactive_element_e,getOwnPropertyDescriptor:reactive_element_r,getOwnPropertyNames:h,getOwnPropertySymbols:reactive_element_o,getPrototypeOf:reactive_element_n}=Object,a=globalThis,reactive_element_c=a.trustedTypes,l=reactive_element_c?reactive_element_c.emptyScript:"",p=a.reactiveElementPolyfillSupport,d=(t,s)=>t,u={toAttribute(t,s){switch(s){case Boolean:t=t?l:null;break;case Object:case Array:t=null==t?t:JSON.stringify(t)}return t},fromAttribute(t,s){let i=t;switch(s){case Boolean:i=null!==t;break;case Number:i=null===t?null:Number(t);break;case Object:case Array:try{i=JSON.parse(t)}catch(t){i=null}}return i}},f=(t,s)=>!reactive_element_i(t,s),y={attribute:!0,type:String,converter:u,reflect:!1,hasChanged:f};Symbol.metadata??=Symbol("metadata"),a.litPropertyMetadata??=new WeakMap;class b extends HTMLElement{static addInitializer(t){this._$Ei(),(this.l??=[]).push(t)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(t,s=y){if(s.state&&(s.attribute=!1),this._$Ei(),this.elementProperties.set(t,s),!s.noAccessor){const i=Symbol(),r=this.getPropertyDescriptor(t,i,s);void 0!==r&&reactive_element_e(this.prototype,t,r)}}static getPropertyDescriptor(t,s,i){const{get:e,set:h}=reactive_element_r(this.prototype,t)??{get(){return this[s]},set(t){this[s]=t}};return{get(){return e?.call(this)},set(s){const r=e?.call(this);h.call(this,s),this.requestUpdate(t,r,i)},configurable:!0,enumerable:!0}}static getPropertyOptions(t){return this.elementProperties.get(t)??y}static _$Ei(){if(this.hasOwnProperty(d("elementProperties")))return;const t=reactive_element_n(this);t.finalize(),void 0!==t.l&&(this.l=[...t.l]),this.elementProperties=new Map(t.elementProperties)}static finalize(){if(this.hasOwnProperty(d("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(d("properties"))){const t=this.properties,s=[...h(t),...reactive_element_o(t)];for(const i of s)this.createProperty(i,t[i])}const t=this[Symbol.metadata];if(null!==t){const s=litPropertyMetadata.get(t);if(void 0!==s)for(const[t,i]of s)this.elementProperties.set(t,i)}this._$Eh=new Map;for(const[t,s]of this.elementProperties){const i=this._$Eu(t,s);void 0!==i&&this._$Eh.set(i,t)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(s){const i=[];if(Array.isArray(s)){const e=new Set(s.flat(1/0).reverse());for(const s of e)i.unshift(c(s))}else void 0!==s&&i.push(c(s));return i}static _$Eu(t,s){const i=s.attribute;return!1===i?void 0:"string"==typeof i?i:"string"==typeof t?t.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){this._$Eg=new Promise((t=>this.enableUpdating=t)),this._$AL=new Map,this._$ES(),this.requestUpdate(),this.constructor.l?.forEach((t=>t(this)))}addController(t){(this._$E_??=new Set).add(t),void 0!==this.renderRoot&&this.isConnected&&t.hostConnected?.()}removeController(t){this._$E_?.delete(t)}_$ES(){const t=new Map,s=this.constructor.elementProperties;for(const i of s.keys())this.hasOwnProperty(i)&&(t.set(i,this[i]),delete this[i]);t.size>0&&(this._$Ep=t)}createRenderRoot(){const t=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return S(t,this.constructor.elementStyles),t}connectedCallback(){this.renderRoot??=this.createRenderRoot(),this.enableUpdating(!0),this._$E_?.forEach((t=>t.hostConnected?.()))}enableUpdating(t){}disconnectedCallback(){this._$E_?.forEach((t=>t.hostDisconnected?.()))}attributeChangedCallback(t,s,i){this._$AK(t,i)}_$EO(t,s){const i=this.constructor.elementProperties.get(t),e=this.constructor._$Eu(t,i);if(void 0!==e&&!0===i.reflect){const r=(void 0!==i.converter?.toAttribute?i.converter:u).toAttribute(s,i.type);this._$Em=t,null==r?this.removeAttribute(e):this.setAttribute(e,r),this._$Em=null}}_$AK(t,s){const i=this.constructor,e=i._$Eh.get(t);if(void 0!==e&&this._$Em!==e){const t=i.getPropertyOptions(e),r="function"==typeof t.converter?{fromAttribute:t.converter}:void 0!==t.converter?.fromAttribute?t.converter:u;this._$Em=e,this[e]=r.fromAttribute(s,t.type),this._$Em=null}}requestUpdate(t,s,i,e=!1,r){if(void 0!==t){if(i??=this.constructor.getPropertyOptions(t),!(i.hasChanged??f)(e?r:this[t],s))return;this.C(t,s,i)}!1===this.isUpdatePending&&(this._$Eg=this._$EP())}C(t,s,i){this._$AL.has(t)||this._$AL.set(t,s),!0===i.reflect&&this._$Em!==t&&(this._$Ej??=new Set).add(t)}async _$EP(){this.isUpdatePending=!0;try{await this._$Eg}catch(t){Promise.reject(t)}const t=this.scheduleUpdate();return null!=t&&await t,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??=this.createRenderRoot(),this._$Ep){for(const[t,s]of this._$Ep)this[t]=s;this._$Ep=void 0}const t=this.constructor.elementProperties;if(t.size>0)for(const[s,i]of t)!0!==i.wrapped||this._$AL.has(s)||void 0===this[s]||this.C(s,this[s],i)}let t=!1;const s=this._$AL;try{t=this.shouldUpdate(s),t?(this.willUpdate(s),this._$E_?.forEach((t=>t.hostUpdate?.())),this.update(s)):this._$ET()}catch(s){throw t=!1,this._$ET(),s}t&&this._$AE(s)}willUpdate(t){}_$AE(t){this._$E_?.forEach((t=>t.hostUpdated?.())),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(t)),this.updated(t)}_$ET(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$Eg}shouldUpdate(t){return!0}update(t){this._$Ej&&=this._$Ej.forEach((t=>this._$EO(t,this[t]))),this._$ET()}updated(t){}firstUpdated(t){}}b.elementStyles=[],b.shadowRootOptions={mode:"open"},b[d("elementProperties")]=new Map,b[d("finalized")]=new Map,p?.({ReactiveElement:b}),(a.reactiveElementVersions??=[]).push("2.0.2");
 //# sourceMappingURL=reactive-element.js.map
 
 ;// CONCATENATED MODULE: ./node_modules/@lit/reactive-element/decorators/property.js
@@ -528,7 +528,7 @@ const base_e=(e,t,c)=>(c.configurable=!0,c.enumerable=!0,Reflect.decorate&&"obje
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */function query_e(e,r){return(n,s,i)=>{const o=t=>t.renderRoot?.querySelector(e)??null;if(r){const{get:e,set:u}="object"==typeof s?n:i??(()=>{const t=Symbol();return{get(){return this[t]},set(e){this[t]=e}}})();return base_e(n,s,{get(){if(r){let t=e.call(this);return void 0===t&&(t=o(this),u.call(this,t)),t}return o(this)}})}return base_e(n,s,{get(){return o(this)}})}}
+ */function query_e(e,r){return(n,s,i)=>{const o=t=>t.renderRoot?.querySelector(e)??null;if(r){const{get:e,set:r}="object"==typeof s?n:i??(()=>{const t=Symbol();return{get(){return this[t]},set(e){this[t]=e}}})();return base_e(n,s,{get(){let t=e.call(this);return void 0===t&&(t=o(this),(null!==t||this.hasUpdated)&&r.call(this,t)),t}})}return base_e(n,s,{get(){return o(this)}})}}
 //# sourceMappingURL=query.js.map
 
 ;// CONCATENATED MODULE: ./node_modules/@lit/reactive-element/decorators/query-all.js
@@ -579,7 +579,7 @@ function query_async_r(r){return(n,e)=>base_e(n,e,{async get(){return await this
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const lit_html_t=globalThis,lit_html_i=lit_html_t.trustedTypes,lit_html_s=lit_html_i?lit_html_i.createPolicy("lit-html",{createHTML:t=>t}):void 0,lit_html_e="$lit$",lit_html_h=`lit$${(Math.random()+"").slice(9)}$`,lit_html_o="?"+lit_html_h,lit_html_n=`<${lit_html_o}>`,lit_html_r=document,lit_html_l=()=>lit_html_r.createComment(""),lit_html_c=t=>null===t||"object"!=typeof t&&"function"!=typeof t,lit_html_a=Array.isArray,lit_html_u=t=>lit_html_a(t)||"function"==typeof t?.[Symbol.iterator],lit_html_d="[ \t\n\f\r]",lit_html_f=/<(?:(!--|\/[^a-zA-Z])|(\/?[a-zA-Z][^>\s]*)|(\/?$))/g,v=/-->/g,_=/>/g,m=RegExp(`>|${lit_html_d}(?:([^\\s"'>=/]+)(${lit_html_d}*=${lit_html_d}*(?:[^ \t\n\f\r"'\`<>=]|("|')|))|$)`,"g"),lit_html_p=/'/g,g=/"/g,$=/^(?:script|style|textarea|title)$/i,lit_html_y=t=>(i,...s)=>({_$litType$:t,strings:i,values:s}),x=lit_html_y(1),lit_html_b=lit_html_y(2),w=Symbol.for("lit-noChange"),T=Symbol.for("lit-nothing"),A=new WeakMap,E=lit_html_r.createTreeWalker(lit_html_r,129);function C(t,i){if(!Array.isArray(t)||!t.hasOwnProperty("raw"))throw Error("invalid template strings array");return void 0!==lit_html_s?lit_html_s.createHTML(i):i}const P=(t,i)=>{const s=t.length-1,o=[];let r,l=2===i?"<svg>":"",c=lit_html_f;for(let i=0;i<s;i++){const s=t[i];let a,u,d=-1,y=0;for(;y<s.length&&(c.lastIndex=y,u=c.exec(s),null!==u);)y=c.lastIndex,c===lit_html_f?"!--"===u[1]?c=v:void 0!==u[1]?c=_:void 0!==u[2]?($.test(u[2])&&(r=RegExp("</"+u[2],"g")),c=m):void 0!==u[3]&&(c=m):c===m?">"===u[0]?(c=r??lit_html_f,d=-1):void 0===u[1]?d=-2:(d=c.lastIndex-u[2].length,a=u[1],c=void 0===u[3]?m:'"'===u[3]?g:lit_html_p):c===g||c===lit_html_p?c=m:c===v||c===_?c=lit_html_f:(c=m,r=void 0);const x=c===m&&t[i+1].startsWith("/>")?" ":"";l+=c===lit_html_f?s+lit_html_n:d>=0?(o.push(a),s.slice(0,d)+lit_html_e+s.slice(d)+lit_html_h+x):s+lit_html_h+(-2===d?i:x)}return[C(t,l+(t[s]||"<?>")+(2===i?"</svg>":"")),o]};class V{constructor({strings:t,_$litType$:s},n){let r;this.parts=[];let c=0,a=0;const u=t.length-1,d=this.parts,[f,v]=P(t,s);if(this.el=V.createElement(f,n),E.currentNode=this.el.content,2===s){const t=this.el.content.firstChild;t.replaceWith(...t.childNodes)}for(;null!==(r=E.nextNode())&&d.length<u;){if(1===r.nodeType){if(r.hasAttributes())for(const t of r.getAttributeNames())if(t.endsWith(lit_html_e)){const i=v[a++],s=r.getAttribute(t).split(lit_html_h),e=/([.?@])?(.*)/.exec(i);d.push({type:1,index:c,name:e[2],strings:s,ctor:"."===e[1]?k:"?"===e[1]?H:"@"===e[1]?I:R}),r.removeAttribute(t)}else t.startsWith(lit_html_h)&&(d.push({type:6,index:c}),r.removeAttribute(t));if($.test(r.tagName)){const t=r.textContent.split(lit_html_h),s=t.length-1;if(s>0){r.textContent=lit_html_i?lit_html_i.emptyScript:"";for(let i=0;i<s;i++)r.append(t[i],lit_html_l()),E.nextNode(),d.push({type:2,index:++c});r.append(t[s],lit_html_l())}}}else if(8===r.nodeType)if(r.data===lit_html_o)d.push({type:2,index:c});else{let t=-1;for(;-1!==(t=r.data.indexOf(lit_html_h,t+1));)d.push({type:7,index:c}),t+=lit_html_h.length-1}c++}}static createElement(t,i){const s=lit_html_r.createElement("template");return s.innerHTML=t,s}}function N(t,i,s=t,e){if(i===w)return i;let h=void 0!==e?s._$Co?.[e]:s._$Cl;const o=lit_html_c(i)?void 0:i._$litDirective$;return h?.constructor!==o&&(h?._$AO?.(!1),void 0===o?h=void 0:(h=new o(t),h._$AT(t,s,e)),void 0!==e?(s._$Co??=[])[e]=h:s._$Cl=h),void 0!==h&&(i=N(t,h._$AS(t,i.values),h,e)),i}class lit_html_S{constructor(t,i){this._$AV=[],this._$AN=void 0,this._$AD=t,this._$AM=i}get parentNode(){return this._$AM.parentNode}get _$AU(){return this._$AM._$AU}u(t){const{el:{content:i},parts:s}=this._$AD,e=(t?.creationScope??lit_html_r).importNode(i,!0);E.currentNode=e;let h=E.nextNode(),o=0,n=0,l=s[0];for(;void 0!==l;){if(o===l.index){let i;2===l.type?i=new M(h,h.nextSibling,this,t):1===l.type?i=new l.ctor(h,l.name,l.strings,this,t):6===l.type&&(i=new L(h,this,t)),this._$AV.push(i),l=s[++n]}o!==l?.index&&(h=E.nextNode(),o++)}return E.currentNode=lit_html_r,e}p(t){let i=0;for(const s of this._$AV)void 0!==s&&(void 0!==s.strings?(s._$AI(t,s,i),i+=s.strings.length-2):s._$AI(t[i])),i++}}class M{get _$AU(){return this._$AM?._$AU??this._$Cv}constructor(t,i,s,e){this.type=2,this._$AH=T,this._$AN=void 0,this._$AA=t,this._$AB=i,this._$AM=s,this.options=e,this._$Cv=e?.isConnected??!0}get parentNode(){let t=this._$AA.parentNode;const i=this._$AM;return void 0!==i&&11===t?.nodeType&&(t=i.parentNode),t}get startNode(){return this._$AA}get endNode(){return this._$AB}_$AI(t,i=this){t=N(this,t,i),lit_html_c(t)?t===T||null==t||""===t?(this._$AH!==T&&this._$AR(),this._$AH=T):t!==this._$AH&&t!==w&&this._(t):void 0!==t._$litType$?this.g(t):void 0!==t.nodeType?this.$(t):lit_html_u(t)?this.T(t):this._(t)}k(t){return this._$AA.parentNode.insertBefore(t,this._$AB)}$(t){this._$AH!==t&&(this._$AR(),this._$AH=this.k(t))}_(t){this._$AH!==T&&lit_html_c(this._$AH)?this._$AA.nextSibling.data=t:this.$(lit_html_r.createTextNode(t)),this._$AH=t}g(t){const{values:i,_$litType$:s}=t,e="number"==typeof s?this._$AC(t):(void 0===s.el&&(s.el=V.createElement(C(s.h,s.h[0]),this.options)),s);if(this._$AH?._$AD===e)this._$AH.p(i);else{const t=new lit_html_S(e,this),s=t.u(this.options);t.p(i),this.$(s),this._$AH=t}}_$AC(t){let i=A.get(t.strings);return void 0===i&&A.set(t.strings,i=new V(t)),i}T(t){lit_html_a(this._$AH)||(this._$AH=[],this._$AR());const i=this._$AH;let s,e=0;for(const h of t)e===i.length?i.push(s=new M(this.k(lit_html_l()),this.k(lit_html_l()),this,this.options)):s=i[e],s._$AI(h),e++;e<i.length&&(this._$AR(s&&s._$AB.nextSibling,e),i.length=e)}_$AR(t=this._$AA.nextSibling,i){for(this._$AP?.(!1,!0,i);t&&t!==this._$AB;){const i=t.nextSibling;t.remove(),t=i}}setConnected(t){void 0===this._$AM&&(this._$Cv=t,this._$AP?.(t))}}class R{get tagName(){return this.element.tagName}get _$AU(){return this._$AM._$AU}constructor(t,i,s,e,h){this.type=1,this._$AH=T,this._$AN=void 0,this.element=t,this.name=i,this._$AM=e,this.options=h,s.length>2||""!==s[0]||""!==s[1]?(this._$AH=Array(s.length-1).fill(new String),this.strings=s):this._$AH=T}_$AI(t,i=this,s,e){const h=this.strings;let o=!1;if(void 0===h)t=N(this,t,i,0),o=!lit_html_c(t)||t!==this._$AH&&t!==w,o&&(this._$AH=t);else{const e=t;let n,r;for(t=h[0],n=0;n<h.length-1;n++)r=N(this,e[s+n],i,n),r===w&&(r=this._$AH[n]),o||=!lit_html_c(r)||r!==this._$AH[n],r===T?t=T:t!==T&&(t+=(r??"")+h[n+1]),this._$AH[n]=r}o&&!e&&this.O(t)}O(t){t===T?this.element.removeAttribute(this.name):this.element.setAttribute(this.name,t??"")}}class k extends R{constructor(){super(...arguments),this.type=3}O(t){this.element[this.name]=t===T?void 0:t}}class H extends R{constructor(){super(...arguments),this.type=4}O(t){this.element.toggleAttribute(this.name,!!t&&t!==T)}}class I extends R{constructor(t,i,s,e,h){super(t,i,s,e,h),this.type=5}_$AI(t,i=this){if((t=N(this,t,i,0)??T)===w)return;const s=this._$AH,e=t===T&&s!==T||t.capture!==s.capture||t.once!==s.once||t.passive!==s.passive,h=t!==T&&(s===T||e);e&&this.element.removeEventListener(this.name,this,s),h&&this.element.addEventListener(this.name,this,t),this._$AH=t}handleEvent(t){"function"==typeof this._$AH?this._$AH.call(this.options?.host??this.element,t):this._$AH.handleEvent(t)}}class L{constructor(t,i,s){this.element=t,this.type=6,this._$AN=void 0,this._$AM=i,this.options=s}get _$AU(){return this._$AM._$AU}_$AI(t){N(this,t)}}const z={j:lit_html_e,P:lit_html_h,A:lit_html_o,C:1,M:P,L:lit_html_S,R:lit_html_u,V:N,D:M,I:R,H,N:I,U:k,B:L},Z=lit_html_t.litHtmlPolyfillSupport;Z?.(V,M),(lit_html_t.litHtmlVersions??=[]).push("3.0.2");const j=(t,i,s)=>{const e=s?.renderBefore??i;let h=e._$litPart$;if(void 0===h){const t=s?.renderBefore??null;e._$litPart$=h=new M(i.insertBefore(lit_html_l(),t),t,void 0,s??{})}return h._$AI(t),h};
+const lit_html_t=globalThis,lit_html_i=lit_html_t.trustedTypes,lit_html_s=lit_html_i?lit_html_i.createPolicy("lit-html",{createHTML:t=>t}):void 0,lit_html_e="$lit$",lit_html_h=`lit$${(Math.random()+"").slice(9)}$`,lit_html_o="?"+lit_html_h,lit_html_n=`<${lit_html_o}>`,lit_html_r=document,lit_html_l=()=>lit_html_r.createComment(""),lit_html_c=t=>null===t||"object"!=typeof t&&"function"!=typeof t,lit_html_a=Array.isArray,lit_html_u=t=>lit_html_a(t)||"function"==typeof t?.[Symbol.iterator],lit_html_d="[ \t\n\f\r]",lit_html_f=/<(?:(!--|\/[^a-zA-Z])|(\/?[a-zA-Z][^>\s]*)|(\/?$))/g,v=/-->/g,_=/>/g,m=RegExp(`>|${lit_html_d}(?:([^\\s"'>=/]+)(${lit_html_d}*=${lit_html_d}*(?:[^ \t\n\f\r"'\`<>=]|("|')|))|$)`,"g"),lit_html_p=/'/g,g=/"/g,$=/^(?:script|style|textarea|title)$/i,lit_html_y=t=>(i,...s)=>({_$litType$:t,strings:i,values:s}),x=lit_html_y(1),lit_html_b=lit_html_y(2),w=Symbol.for("lit-noChange"),T=Symbol.for("lit-nothing"),A=new WeakMap,E=lit_html_r.createTreeWalker(lit_html_r,129);function C(t,i){if(!Array.isArray(t)||!t.hasOwnProperty("raw"))throw Error("invalid template strings array");return void 0!==lit_html_s?lit_html_s.createHTML(i):i}const P=(t,i)=>{const s=t.length-1,o=[];let r,l=2===i?"<svg>":"",c=lit_html_f;for(let i=0;i<s;i++){const s=t[i];let a,u,d=-1,y=0;for(;y<s.length&&(c.lastIndex=y,u=c.exec(s),null!==u);)y=c.lastIndex,c===lit_html_f?"!--"===u[1]?c=v:void 0!==u[1]?c=_:void 0!==u[2]?($.test(u[2])&&(r=RegExp("</"+u[2],"g")),c=m):void 0!==u[3]&&(c=m):c===m?">"===u[0]?(c=r??lit_html_f,d=-1):void 0===u[1]?d=-2:(d=c.lastIndex-u[2].length,a=u[1],c=void 0===u[3]?m:'"'===u[3]?g:lit_html_p):c===g||c===lit_html_p?c=m:c===v||c===_?c=lit_html_f:(c=m,r=void 0);const x=c===m&&t[i+1].startsWith("/>")?" ":"";l+=c===lit_html_f?s+lit_html_n:d>=0?(o.push(a),s.slice(0,d)+lit_html_e+s.slice(d)+lit_html_h+x):s+lit_html_h+(-2===d?i:x)}return[C(t,l+(t[s]||"<?>")+(2===i?"</svg>":"")),o]};class V{constructor({strings:t,_$litType$:s},n){let r;this.parts=[];let c=0,a=0;const u=t.length-1,d=this.parts,[f,v]=P(t,s);if(this.el=V.createElement(f,n),E.currentNode=this.el.content,2===s){const t=this.el.content.firstChild;t.replaceWith(...t.childNodes)}for(;null!==(r=E.nextNode())&&d.length<u;){if(1===r.nodeType){if(r.hasAttributes())for(const t of r.getAttributeNames())if(t.endsWith(lit_html_e)){const i=v[a++],s=r.getAttribute(t).split(lit_html_h),e=/([.?@])?(.*)/.exec(i);d.push({type:1,index:c,name:e[2],strings:s,ctor:"."===e[1]?k:"?"===e[1]?H:"@"===e[1]?I:R}),r.removeAttribute(t)}else t.startsWith(lit_html_h)&&(d.push({type:6,index:c}),r.removeAttribute(t));if($.test(r.tagName)){const t=r.textContent.split(lit_html_h),s=t.length-1;if(s>0){r.textContent=lit_html_i?lit_html_i.emptyScript:"";for(let i=0;i<s;i++)r.append(t[i],lit_html_l()),E.nextNode(),d.push({type:2,index:++c});r.append(t[s],lit_html_l())}}}else if(8===r.nodeType)if(r.data===lit_html_o)d.push({type:2,index:c});else{let t=-1;for(;-1!==(t=r.data.indexOf(lit_html_h,t+1));)d.push({type:7,index:c}),t+=lit_html_h.length-1}c++}}static createElement(t,i){const s=lit_html_r.createElement("template");return s.innerHTML=t,s}}function N(t,i,s=t,e){if(i===w)return i;let h=void 0!==e?s._$Co?.[e]:s._$Cl;const o=lit_html_c(i)?void 0:i._$litDirective$;return h?.constructor!==o&&(h?._$AO?.(!1),void 0===o?h=void 0:(h=new o(t),h._$AT(t,s,e)),void 0!==e?(s._$Co??=[])[e]=h:s._$Cl=h),void 0!==h&&(i=N(t,h._$AS(t,i.values),h,e)),i}class lit_html_S{constructor(t,i){this._$AV=[],this._$AN=void 0,this._$AD=t,this._$AM=i}get parentNode(){return this._$AM.parentNode}get _$AU(){return this._$AM._$AU}u(t){const{el:{content:i},parts:s}=this._$AD,e=(t?.creationScope??lit_html_r).importNode(i,!0);E.currentNode=e;let h=E.nextNode(),o=0,n=0,l=s[0];for(;void 0!==l;){if(o===l.index){let i;2===l.type?i=new M(h,h.nextSibling,this,t):1===l.type?i=new l.ctor(h,l.name,l.strings,this,t):6===l.type&&(i=new L(h,this,t)),this._$AV.push(i),l=s[++n]}o!==l?.index&&(h=E.nextNode(),o++)}return E.currentNode=lit_html_r,e}p(t){let i=0;for(const s of this._$AV)void 0!==s&&(void 0!==s.strings?(s._$AI(t,s,i),i+=s.strings.length-2):s._$AI(t[i])),i++}}class M{get _$AU(){return this._$AM?._$AU??this._$Cv}constructor(t,i,s,e){this.type=2,this._$AH=T,this._$AN=void 0,this._$AA=t,this._$AB=i,this._$AM=s,this.options=e,this._$Cv=e?.isConnected??!0}get parentNode(){let t=this._$AA.parentNode;const i=this._$AM;return void 0!==i&&11===t?.nodeType&&(t=i.parentNode),t}get startNode(){return this._$AA}get endNode(){return this._$AB}_$AI(t,i=this){t=N(this,t,i),lit_html_c(t)?t===T||null==t||""===t?(this._$AH!==T&&this._$AR(),this._$AH=T):t!==this._$AH&&t!==w&&this._(t):void 0!==t._$litType$?this.g(t):void 0!==t.nodeType?this.$(t):lit_html_u(t)?this.T(t):this._(t)}k(t){return this._$AA.parentNode.insertBefore(t,this._$AB)}$(t){this._$AH!==t&&(this._$AR(),this._$AH=this.k(t))}_(t){this._$AH!==T&&lit_html_c(this._$AH)?this._$AA.nextSibling.data=t:this.$(lit_html_r.createTextNode(t)),this._$AH=t}g(t){const{values:i,_$litType$:s}=t,e="number"==typeof s?this._$AC(t):(void 0===s.el&&(s.el=V.createElement(C(s.h,s.h[0]),this.options)),s);if(this._$AH?._$AD===e)this._$AH.p(i);else{const t=new lit_html_S(e,this),s=t.u(this.options);t.p(i),this.$(s),this._$AH=t}}_$AC(t){let i=A.get(t.strings);return void 0===i&&A.set(t.strings,i=new V(t)),i}T(t){lit_html_a(this._$AH)||(this._$AH=[],this._$AR());const i=this._$AH;let s,e=0;for(const h of t)e===i.length?i.push(s=new M(this.k(lit_html_l()),this.k(lit_html_l()),this,this.options)):s=i[e],s._$AI(h),e++;e<i.length&&(this._$AR(s&&s._$AB.nextSibling,e),i.length=e)}_$AR(t=this._$AA.nextSibling,i){for(this._$AP?.(!1,!0,i);t&&t!==this._$AB;){const i=t.nextSibling;t.remove(),t=i}}setConnected(t){void 0===this._$AM&&(this._$Cv=t,this._$AP?.(t))}}class R{get tagName(){return this.element.tagName}get _$AU(){return this._$AM._$AU}constructor(t,i,s,e,h){this.type=1,this._$AH=T,this._$AN=void 0,this.element=t,this.name=i,this._$AM=e,this.options=h,s.length>2||""!==s[0]||""!==s[1]?(this._$AH=Array(s.length-1).fill(new String),this.strings=s):this._$AH=T}_$AI(t,i=this,s,e){const h=this.strings;let o=!1;if(void 0===h)t=N(this,t,i,0),o=!lit_html_c(t)||t!==this._$AH&&t!==w,o&&(this._$AH=t);else{const e=t;let n,r;for(t=h[0],n=0;n<h.length-1;n++)r=N(this,e[s+n],i,n),r===w&&(r=this._$AH[n]),o||=!lit_html_c(r)||r!==this._$AH[n],r===T?t=T:t!==T&&(t+=(r??"")+h[n+1]),this._$AH[n]=r}o&&!e&&this.O(t)}O(t){t===T?this.element.removeAttribute(this.name):this.element.setAttribute(this.name,t??"")}}class k extends R{constructor(){super(...arguments),this.type=3}O(t){this.element[this.name]=t===T?void 0:t}}class H extends R{constructor(){super(...arguments),this.type=4}O(t){this.element.toggleAttribute(this.name,!!t&&t!==T)}}class I extends R{constructor(t,i,s,e,h){super(t,i,s,e,h),this.type=5}_$AI(t,i=this){if((t=N(this,t,i,0)??T)===w)return;const s=this._$AH,e=t===T&&s!==T||t.capture!==s.capture||t.once!==s.once||t.passive!==s.passive,h=t!==T&&(s===T||e);e&&this.element.removeEventListener(this.name,this,s),h&&this.element.addEventListener(this.name,this,t),this._$AH=t}handleEvent(t){"function"==typeof this._$AH?this._$AH.call(this.options?.host??this.element,t):this._$AH.handleEvent(t)}}class L{constructor(t,i,s){this.element=t,this.type=6,this._$AN=void 0,this._$AM=i,this.options=s}get _$AU(){return this._$AM._$AU}_$AI(t){N(this,t)}}const z={j:lit_html_e,P:lit_html_h,A:lit_html_o,C:1,M:P,L:lit_html_S,R:lit_html_u,V:N,D:M,I:R,H,N:I,U:k,B:L},Z=lit_html_t.litHtmlPolyfillSupport;Z?.(V,M),(lit_html_t.litHtmlVersions??=[]).push("3.1.0");const j=(t,i,s)=>{const e=s?.renderBefore??i;let h=e._$litPart$;if(void 0===h){const t=s?.renderBefore??null;e._$litPart$=h=new M(i.insertBefore(lit_html_l(),t),t,void 0,s??{})}return h._$AI(t),h};
 //# sourceMappingURL=lit-html.js.map
 
 ;// CONCATENATED MODULE: ./node_modules/lit-element/lit-element.js
@@ -588,7 +588,7 @@ const lit_html_t=globalThis,lit_html_i=lit_html_t.trustedTypes,lit_html_s=lit_ht
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */class lit_element_s extends b{constructor(){super(...arguments),this.renderOptions={host:this},this._$Do=void 0}createRenderRoot(){const t=super.createRenderRoot();return this.renderOptions.renderBefore??=t.firstChild,t}update(t){const i=this.render();this.hasUpdated||(this.renderOptions.isConnected=this.isConnected),super.update(t),this._$Do=j(i,this.renderRoot,this.renderOptions)}connectedCallback(){super.connectedCallback(),this._$Do?.setConnected(!0)}disconnectedCallback(){super.disconnectedCallback(),this._$Do?.setConnected(!1)}render(){return w}}lit_element_s._$litElement$=!0,lit_element_s[("finalized","finalized")]=!0,globalThis.litElementHydrateSupport?.({LitElement:lit_element_s});const lit_element_r=globalThis.litElementPolyfillSupport;lit_element_r?.({LitElement:lit_element_s});const lit_element_o={_$AK:(t,e,i)=>{t._$AK(e,i)},_$AL:t=>t._$AL};(globalThis.litElementVersions??=[]).push("4.0.1");
+ */class lit_element_s extends b{constructor(){super(...arguments),this.renderOptions={host:this},this._$Do=void 0}createRenderRoot(){const t=super.createRenderRoot();return this.renderOptions.renderBefore??=t.firstChild,t}update(t){const i=this.render();this.hasUpdated||(this.renderOptions.isConnected=this.isConnected),super.update(t),this._$Do=j(i,this.renderRoot,this.renderOptions)}connectedCallback(){super.connectedCallback(),this._$Do?.setConnected(!0)}disconnectedCallback(){super.disconnectedCallback(),this._$Do?.setConnected(!1)}render(){return w}}lit_element_s._$litElement$=!0,lit_element_s[("finalized","finalized")]=!0,globalThis.litElementHydrateSupport?.({LitElement:lit_element_s});const lit_element_r=globalThis.litElementPolyfillSupport;lit_element_r?.({LitElement:lit_element_s});const lit_element_o={_$AK:(t,e,i)=>{t._$AK(e,i)},_$AL:t=>t._$AL};(globalThis.litElementVersions??=[]).push("4.0.2");
 //# sourceMappingURL=lit-element.js.map
 
 ;// CONCATENATED MODULE: ./node_modules/lit-html/is-server.js
@@ -677,12 +677,11 @@ if (!is_server_o) {
      * `Attachable` elements. If the `for` attribute changes, the controller will
      * re-attach to the new referenced element.
      */
-    FOR_ATTRIBUTE_OBSERVER = new MutationObserver(records => {
+    FOR_ATTRIBUTE_OBSERVER = new MutationObserver((records) => {
         for (const record of records) {
             // When a control's `for` attribute changes, inform its
             // `AttachableController` to update to a new control.
-            record.target[ATTACHABLE_CONTROLLER]
-                ?.hostConnected();
+            record.target[ATTACHABLE_CONTROLLER]?.hostConnected();
         }
     });
 }
@@ -724,8 +723,7 @@ class AttachableController {
             if (!this.htmlFor || !this.host.isConnected) {
                 return null;
             }
-            return this.host.getRootNode()
-                .querySelector(`#${this.htmlFor}`);
+            return this.host.getRootNode().querySelector(`#${this.htmlFor}`);
         }
         return this.currentControl || this.host.parentElement;
     }
@@ -794,12 +792,12 @@ class AttachableController {
 
 /**
  * Events that the focus ring listens to.
- *
- * @fires visibility-changed Fired whenever `visible` changes.
  */
 const EVENTS = ['focusin', 'focusout', 'pointerdown'];
 /**
  * A focus ring component.
+ *
+ * @fires visibility-changed {Event} Fired whenever `visible` changes.
  */
 class FocusRing extends lit_element_s {
     constructor() {
@@ -1109,8 +1107,13 @@ var State;
  * Events that the ripple listens to.
  */
 const ripple_EVENTS = [
-    'click', 'contextmenu', 'pointercancel', 'pointerdown', 'pointerenter',
-    'pointerleave', 'pointerup'
+    'click',
+    'contextmenu',
+    'pointercancel',
+    'pointerdown',
+    'pointerenter',
+    'pointerleave',
+    'pointerup',
 ];
 /**
  * Delay reacting to touch so that we do not show the ripple for a swipe or
@@ -1231,7 +1234,7 @@ class Ripple extends lit_element_s {
         this.checkBoundsAfterContextMenu = false;
         // Wait for a hold after touch delay
         this.state = State.TOUCH_DELAY;
-        await new Promise(resolve => {
+        await new Promise((resolve) => {
             setTimeout(resolve, TOUCH_DELAY_MS);
         });
         if (this.state !== State.TOUCH_DELAY) {
@@ -1307,8 +1310,8 @@ class Ripple extends lit_element_s {
         }
         // center around start point
         startPoint = {
-            x: startPoint.x - (this.initialSize / 2),
-            y: startPoint.y - (this.initialSize / 2),
+            x: startPoint.x - this.initialSize / 2,
+            y: startPoint.y - this.initialSize / 2,
         };
         return { startPoint, endPoint };
     }
@@ -1329,32 +1332,30 @@ class Ripple extends lit_element_s {
             width: [this.rippleSize, this.rippleSize],
             transform: [
                 `translate(${translateStart}) scale(1)`,
-                `translate(${translateEnd}) scale(${this.rippleScale})`
+                `translate(${translateEnd}) scale(${this.rippleScale})`,
             ],
         }, {
             pseudoElement: PRESS_PSEUDO,
             duration: PRESS_GROW_MS,
             easing: EASING.STANDARD,
-            fill: ANIMATION_FILL
+            fill: ANIMATION_FILL,
         });
     }
     async endPressAnimation() {
         this.state = State.INACTIVE;
         const animation = this.growAnimation;
-        const pressAnimationPlayState = animation?.currentTime ?? Infinity;
-        // TODO: go/ts51upgrade - Auto-added to unblock TS5.1 migration.
-        //   TS2365: Operator '>=' cannot be applied to types 'CSSNumberish' and
-        //   'number'.
-        // @ts-ignore
+        let pressAnimationPlayState = Infinity;
+        if (typeof animation?.currentTime === 'number') {
+            pressAnimationPlayState = animation.currentTime;
+        }
+        else if (animation?.currentTime) {
+            pressAnimationPlayState = animation.currentTime.to('ms').value;
+        }
         if (pressAnimationPlayState >= MINIMUM_PRESS_MS) {
             this.pressed = false;
             return;
         }
-        await new Promise(resolve => {
-            // TODO: go/ts51upgrade - Auto-added to unblock TS5.1 migration.
-            //   TS2363: The right-hand side of an arithmetic operation must be of
-            //   type 'any', 'number', 'bigint' or an enum type.
-            // @ts-ignore
+        await new Promise((resolve) => {
             setTimeout(resolve, MINIMUM_PRESS_MS - pressAnimationPlayState);
         });
         if (this.growAnimation !== animation) {
@@ -1489,19 +1490,6 @@ MdRipple = __decorate([
     t('md-ripple')
 ], MdRipple);
 //# sourceMappingURL=ripple.js.map
-;// CONCATENATED MODULE: ./node_modules/lit-html/static.js
-
-/**
- * @license
- * Copyright 2020 Google LLC
- * SPDX-License-Identifier: BSD-3-Clause
- */const static_e=Symbol.for(""),static_o=t=>{if(t?.r===static_e)return t?._$litStatic$},static_i=t=>({_$litStatic$:t,r:static_e}),static_s=(t,...r)=>({_$litStatic$:r.reduce(((r,e,o)=>r+(t=>{if(void 0!==t._$litStatic$)return t._$litStatic$;throw Error(`Value passed to 'literal' function must be a 'literal' result: ${t}. Use 'unsafeStatic' to pass non-literal values, but\n            take care to ensure page security.`)})(e)+t[o+1]),t[0]),r:static_e}),static_a=new Map,static_l=t=>(r,...e)=>{const i=e.length;let s,l;const n=[],u=[];let c,$=0,f=!1;for(;$<i;){for(c=r[$];$<i&&void 0!==(l=e[$],s=static_o(l));)c+=s+r[++$],f=!0;$!==i&&u.push(l),n.push(c),$++}if($===i&&n.push(r[i]),f){const t=n.join("$$lit$$");void 0===(r=static_a.get(t))&&(n.raw=n,static_a.set(t,r=n)),e=u}return t(r,...e)},static_n=static_l(x),static_u=static_l(lit_html_b);
-//# sourceMappingURL=static.js.map
-
-;// CONCATENATED MODULE: ./node_modules/lit/static-html.js
-
-//# sourceMappingURL=static-html.js.map
-
 ;// CONCATENATED MODULE: ./node_modules/@material/web/internal/aria/aria.js
 /**
  * @license
@@ -1584,32 +1572,11 @@ function ariaPropertyToAttribute(property) {
         .toLowerCase();
 }
 /**
- * Enables a host custom element to be the target for aria roles and attributes.
- * Components should set the `elementInternals.role` property.
- *
- * By default, aria components are tab focusable. Provide a `focusable: false`
- * option for components that should not be tab focusable, such as
- * `role="listbox"`.
- *
- * This function will also polyfill aria `ElementInternals` properties for
- * Firefox.
+ * This function will polyfill `ARIAMixin` properties for Firefox.
  *
  * @param ctor The `ReactiveElement` constructor to set up.
- * @param options Options to configure the element's host aria.
  */
-function setupHostAria(ctor, { focusable } = {}) {
-    if (focusable !== false) {
-        ctor.addInitializer(host => {
-            host.addController({
-                hostConnected() {
-                    if (host.hasAttribute('tabindex')) {
-                        return;
-                    }
-                    host.tabIndex = 0;
-                }
-            });
-        });
-    }
+function polyfillARIAMixin(ctor) {
     if (is_server_o || 'role' in Element.prototype) {
         return;
     }
@@ -1626,12 +1593,12 @@ function setupHostAria(ctor, { focusable } = {}) {
  * Polyfills an element and its `ElementInternals` to support `ARIAMixin`
  * properties on internals. This is needed for Firefox.
  *
- * `setupHostAria()` must be called for the element class.
+ * `polyfillARIAMixin()` must be called for the element class.
  *
  * @example
  * class XButton extends LitElement {
  *   static {
- *     setupHostAria(XButton);
+ *     polyfillARIAMixin(XButton);
  *   }
  *
  *   private internals =
@@ -1648,7 +1615,7 @@ function polyfillElementInternalsAria(host, internals) {
         return internals;
     }
     if (!('role' in host)) {
-        throw new Error('Missing setupHostAria()');
+        throw new Error('Missing polyfillARIAMixin()');
     }
     let firstConnectedCallbacks = [];
     let hasBeenConnected = false;
@@ -1665,7 +1632,10 @@ function polyfillElementInternalsAria(host, internals) {
                 const setValue = () => {
                     internalAriaValue = value;
                     if (!hasBeenConnected) {
-                        firstConnectedCallbacks.push({ property: ariaProperty, callback: setValue });
+                        firstConnectedCallbacks.push({
+                            property: ariaProperty,
+                            callback: setValue,
+                        });
                         return;
                     }
                     // Dynamic lookup rather than hardcoding all properties.
@@ -1732,7 +1702,7 @@ function polyfillElementInternalsAria(host, internals) {
             }
             // Remove strong callback references
             firstConnectedCallbacks = [];
-        }
+        },
     });
     return internals;
 }
@@ -1786,41 +1756,16 @@ function requestUpdateOnAriaChange(ctor) {
             reflect: true,
         });
     }
-    ctor.addInitializer(element => {
+    ctor.addInitializer((element) => {
         const controller = {
             hostConnected() {
                 element.setAttribute('role', 'presentation');
-            }
+            },
         };
         element.addController(controller);
     });
 }
 //# sourceMappingURL=delegate.js.map
-;// CONCATENATED MODULE: ./node_modules/@material/web/internal/controller/element-internals.js
-/**
- * @license
- * Copyright 2023 Google LLC
- * SPDX-License-Identifier: Apache-2.0
- */
-/**
- * A unique symbol used for protected access to an instance's
- * `ElementInternals`.
- *
- * @example
- * ```ts
- * class MyElement extends LitElement {
- *   static formAssociated = true;
- *
- *   [internals] = this.attachInternals();
- * }
- *
- * function getForm(element: MyElement) {
- *   return element[internals].form;
- * }
- * ```
- */
-const internals = Symbol('internals');
-//# sourceMappingURL=element-internals.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/internal/controller/events.js
 /**
  * @license
@@ -1952,6 +1897,57 @@ async function squelchEventsForMicrotask() {
     isSquelchingEvents = false;
 }
 //# sourceMappingURL=events.js.map
+;// CONCATENATED MODULE: ./node_modules/@material/web/labs/behaviors/element-internals.js
+/**
+ * @license
+ * Copyright 2023 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/**
+ * A unique symbol used for protected access to an instance's
+ * `ElementInternals`.
+ *
+ * @example
+ * ```ts
+ * class MyElement extends mixinElementInternals(LitElement) {
+ *   constructor() {
+ *     super();
+ *     this[internals].role = 'button';
+ *   }
+ * }
+ * ```
+ */
+const internals = Symbol('internals');
+// Private symbols
+const privateInternals = Symbol('privateInternals');
+/**
+ * Mixes in an attached `ElementInternals` instance.
+ *
+ * This mixin is only needed when other shared code needs access to a
+ * component's `ElementInternals`, such as form-associated mixins.
+ *
+ * @param base The class to mix functionality into.
+ * @return The provided class with `WithElementInternals` mixed in.
+ */
+function mixinElementInternals(base) {
+    class WithElementInternalsElement extends base {
+        get [internals]() {
+            // Create internals in getter so that it can be used in methods called on
+            // construction in `ReactiveElement`, such as `requestUpdate()`.
+            if (!this[privateInternals]) {
+                // Cast needed for closure
+                this[privateInternals] = polyfillElementInternalsAria(this, this.attachInternals());
+            }
+            return this[privateInternals];
+        }
+    }
+    (() => {
+        polyfillARIAMixin(WithElementInternalsElement);
+    })();
+    return WithElementInternalsElement;
+}
+//# sourceMappingURL=element-internals.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/internal/controller/form-submitter.js
 /**
  * @license
@@ -1969,7 +1965,7 @@ async function squelchEventsForMicrotask() {
  *
  * @example
  * ```ts
- * class MyElement extends LitElement {
+ * class MyElement extends mixinElementInternals(LitElement) {
  *   static {
  *     setupFormSubmitter(MyElement);
  *   }
@@ -1977,8 +1973,6 @@ async function squelchEventsForMicrotask() {
  *   static formAssociated = true;
  *
  *   type: FormSubmitterType = 'submit';
- *
- *   [internals] = this.attachInternals();
  * }
  * ```
  *
@@ -1988,7 +1982,7 @@ function setupFormSubmitter(ctor) {
     if (is_server_o) {
         return;
     }
-    ctor.addInitializer(instance => {
+    ctor.addInitializer((instance) => {
         const submitter = instance;
         submitter.addEventListener('click', async (event) => {
             const { type, [internals]: elementInternals } = submitter;
@@ -1997,7 +1991,7 @@ function setupFormSubmitter(ctor) {
                 return;
             }
             // Wait a microtask for event bubbling to complete.
-            await new Promise(resolve => {
+            await new Promise((resolve) => {
                 resolve();
             });
             if (event.defaultPrevented) {
@@ -2011,7 +2005,7 @@ function setupFormSubmitter(ctor) {
             // elements. This patches the dispatched submit event to add the correct
             // `submitter`.
             // See https://github.com/WICG/webcomponents/issues/814
-            form.addEventListener('submit', submitEvent => {
+            form.addEventListener('submit', (submitEvent) => {
                 Object.defineProperty(submitEvent, 'submitter', {
                     configurable: true,
                     enumerable: true,
@@ -2030,7 +2024,6 @@ function setupFormSubmitter(ctor) {
  * Copyright 2019 Google LLC
  * SPDX-License-Identifier: Apache-2.0
  */
-var _a;
 
 
 
@@ -2040,12 +2033,12 @@ var _a;
 
 
 
-
-
+// Separate variable needed for closure.
+const buttonBaseClass = mixinElementInternals(lit_element_s);
 /**
  * A button component.
  */
-class Button extends lit_element_s {
+class Button extends buttonBaseClass {
     get name() {
         return this.getAttribute('name') ?? '';
     }
@@ -2086,10 +2079,8 @@ class Button extends lit_element_s {
         this.hasIcon = false;
         this.type = 'submit';
         this.value = '';
-        /** @private */
-        this[_a] = this /* needed for closure */.attachInternals();
         this.handleActivationClick = (event) => {
-            if (!isActivationClick((event)) || !this.buttonElement) {
+            if (!isActivationClick(event) || !this.buttonElement) {
                 return;
             }
             this.focus();
@@ -2108,38 +2099,53 @@ class Button extends lit_element_s {
     render() {
         // Link buttons may not be disabled
         const isDisabled = this.disabled && !this.href;
-        const button = this.href ? static_s `a` : static_s `button`;
+        const buttonOrLink = this.href ? this.renderLink() : this.renderButton();
+        // TODO(b/310046938): due to a limitation in focus ring/ripple, we can't use
+        // the same ID for different elements, so we change the ID instead.
+        const buttonId = this.href ? 'link' : 'button';
+        return x `
+      ${this.renderElevationOrOutline?.()}
+      <div class="background"></div>
+      <md-focus-ring part="focus-ring" for=${buttonId}></md-focus-ring>
+      <md-ripple for=${buttonId} ?disabled="${isDisabled}"></md-ripple>
+      ${buttonOrLink}
+    `;
+    }
+    renderButton() {
         // Needed for closure conformance
         const { ariaLabel, ariaHasPopup, ariaExpanded } = this;
-        return static_n `
-      <${button}
-        class="button ${class_map_e(this.getRenderClasses())}"
-        ?disabled=${isDisabled}
-        aria-label="${ariaLabel || T}"
-        aria-haspopup="${ariaHasPopup || T}"
-        aria-expanded="${ariaExpanded || T}"
-        href=${this.href || T}
-        target=${this.target || T}
-      >${this.renderContent()}</${button}>`;
+        return x `<button
+      id="button"
+      class="button"
+      ?disabled=${this.disabled}
+      aria-label="${ariaLabel || T}"
+      aria-haspopup="${ariaHasPopup || T}"
+      aria-expanded="${ariaExpanded || T}">
+      ${this.renderContent()}
+    </button>`;
     }
-    getRenderClasses() {
-        return {
-            'button--icon-leading': !this.trailingIcon && this.hasIcon,
-            'button--icon-trailing': this.trailingIcon && this.hasIcon,
-        };
+    renderLink() {
+        // Needed for closure conformance
+        const { ariaLabel, ariaHasPopup, ariaExpanded } = this;
+        return x `<a
+      id="link"
+      class="button"
+      aria-label="${ariaLabel || T}"
+      aria-haspopup="${ariaHasPopup || T}"
+      aria-expanded="${ariaExpanded || T}"
+      href=${this.href}
+      target=${this.target || T}
+      >${this.renderContent()}
+    </a>`;
     }
     renderContent() {
-        // Link buttons may not be disabled
-        const isDisabled = this.disabled && !this.href;
-        const icon = x `<slot name="icon" @slotchange="${this.handleSlotChange}"></slot>`;
+        const icon = x `<slot
+      name="icon"
+      @slotchange="${this.handleSlotChange}"></slot>`;
         return x `
-      ${this.renderElevation?.()}
-      ${this.renderOutline?.()}
-      <md-focus-ring part="focus-ring"></md-focus-ring>
-      <md-ripple class="button__ripple" ?disabled="${isDisabled}"></md-ripple>
       <span class="touch"></span>
       ${this.trailingIcon ? T : icon}
-      <span class="button__label"><slot></slot></span>
+      <span class="label"><slot></slot></span>
       ${this.trailingIcon ? icon : T}
     `;
     }
@@ -2147,7 +2153,6 @@ class Button extends lit_element_s {
         this.hasIcon = this.assignedIcons.length > 0;
     }
 }
-_a = internals;
 (() => {
     requestUpdateOnAriaChange(Button);
     setupFormSubmitter(Button);
@@ -2155,7 +2160,10 @@ _a = internals;
 /** @nocollapse */
 Button.formAssociated = true;
 /** @nocollapse */
-Button.shadowRootOptions = { mode: 'open', delegatesFocus: true };
+Button.shadowRootOptions = {
+    mode: 'open',
+    delegatesFocus: true,
+};
 __decorate([
     property_n({ type: Boolean, reflect: true })
 ], Button.prototype, "disabled", void 0);
@@ -2166,10 +2174,10 @@ __decorate([
     property_n()
 ], Button.prototype, "target", void 0);
 __decorate([
-    property_n({ type: Boolean, attribute: 'trailing-icon' })
+    property_n({ type: Boolean, attribute: 'trailing-icon', reflect: true })
 ], Button.prototype, "trailingIcon", void 0);
 __decorate([
-    property_n({ type: Boolean, attribute: 'has-icon' })
+    property_n({ type: Boolean, attribute: 'has-icon', reflect: true })
 ], Button.prototype, "hasIcon", void 0);
 __decorate([
     property_n()
@@ -2197,7 +2205,7 @@ __decorate([
  * An elevated button component.
  */
 class ElevatedButton extends Button {
-    renderElevation() {
+    renderElevationOrOutline() {
         return x `<md-elevation></md-elevation>`;
     }
 }
@@ -2219,7 +2227,7 @@ const elevated_styles_css_styles = i `:host{--_container-color: var(--md-elevate
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const shared_elevation_styles_css_styles = i `md-elevation{transition-duration:280ms}.button:disabled md-elevation{transition:none}.button{--md-elevation-level: var(--_container-elevation);--md-elevation-shadow-color: var(--_container-shadow-color)}.button:focus{--md-elevation-level: var(--_focus-container-elevation)}.button:hover{--md-elevation-level: var(--_hover-container-elevation)}.button:active{--md-elevation-level: var(--_pressed-container-elevation)}.button:disabled{--md-elevation-level: var(--_disabled-container-elevation)}/*# sourceMappingURL=shared-elevation-styles.css.map */
+const shared_elevation_styles_css_styles = i `md-elevation{transition-duration:280ms}:host([disabled]) md-elevation{transition:none}md-elevation{--md-elevation-level: var(--_container-elevation);--md-elevation-shadow-color: var(--_container-shadow-color)}:host(:focus-within) md-elevation{--md-elevation-level: var(--_focus-container-elevation)}:host(:hover) md-elevation{--md-elevation-level: var(--_hover-container-elevation)}:host(:active) md-elevation{--md-elevation-level: var(--_pressed-container-elevation)}:host([disabled]) md-elevation{--md-elevation-level: var(--_disabled-container-elevation)}/*# sourceMappingURL=shared-elevation-styles.css.map */
 `;
 //# sourceMappingURL=shared-elevation-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/button/internal/shared-styles.css.js
@@ -2229,7 +2237,7 @@ const shared_elevation_styles_css_styles = i `md-elevation{transition-duration:2
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const shared_styles_css_styles = i `:host{display:inline-flex;height:var(--_container-height);outline:none;font-family:var(--_label-text-font);font-size:var(--_label-text-size);line-height:var(--_label-text-line-height);font-weight:var(--_label-text-weight);-webkit-tap-highlight-color:rgba(0,0,0,0);vertical-align:top;--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-pressed-color: var(--_pressed-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity)}:host([touch-target=wrapper]){margin:max(0px,(48px - var(--_container-height))/2) 0}md-focus-ring{--md-focus-ring-shape-start-start: var(--_container-shape-start-start);--md-focus-ring-shape-start-end: var(--_container-shape-start-end);--md-focus-ring-shape-end-end: var(--_container-shape-end-end);--md-focus-ring-shape-end-start: var(--_container-shape-end-start)}:host([disabled]){cursor:default;pointer-events:none}.button{display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;min-inline-size:64px;border:none;outline:none;user-select:none;-webkit-appearance:none;vertical-align:middle;background:rgba(0,0,0,0);text-decoration:none;inline-size:100%;position:relative;z-index:0;height:100%;font:inherit;color:var(--_label-text-color);padding-inline-start:var(--_leading-space);padding-inline-end:var(--_trailing-space);gap:8px}.button::before{background-color:var(--_container-color);border-radius:inherit;content:"";inset:0;position:absolute}.button::-moz-focus-inner{padding:0;border:0}.button:hover{color:var(--_hover-label-text-color);cursor:pointer}.button:focus{color:var(--_focus-label-text-color)}.button:active{color:var(--_pressed-label-text-color);outline:none}.button:disabled .button__label{color:var(--_disabled-label-text-color);opacity:var(--_disabled-label-text-opacity)}.button:disabled::before{background-color:var(--_disabled-container-color);opacity:var(--_disabled-container-opacity)}@media(forced-colors: active){.button::before{content:"";box-sizing:border-box;border:1px solid CanvasText;border-radius:inherit;inset:0;pointer-events:none;position:absolute}.button:disabled{--_disabled-icon-opacity: 1;--_disabled-container-opacity: 1;--_disabled-label-text-opacity: 1}}.button,.button__ripple{border-start-start-radius:var(--_container-shape-start-start);border-start-end-radius:var(--_container-shape-start-end);border-end-start-radius:var(--_container-shape-end-start);border-end-end-radius:var(--_container-shape-end-end)}.button::after,.button::before,md-elevation,.button__ripple{z-index:-1}.button--icon-leading{padding-inline-start:var(--_with-leading-icon-leading-space);padding-inline-end:var(--_with-leading-icon-trailing-space)}.button--icon-trailing{padding-inline-start:var(--_with-trailing-icon-leading-space);padding-inline-end:var(--_with-trailing-icon-trailing-space)}.link-button-wrapper{inline-size:100%}.button ::slotted([slot=icon]){display:inline-flex;position:relative;writing-mode:horizontal-tb;fill:currentColor;color:var(--_icon-color);font-size:var(--_icon-size);inline-size:var(--_icon-size);block-size:var(--_icon-size)}.button:hover ::slotted([slot=icon]){color:var(--_hover-icon-color)}.button:focus ::slotted([slot=icon]){color:var(--_focus-icon-color)}.button:active ::slotted([slot=icon]){color:var(--_pressed-icon-color)}.button:disabled ::slotted([slot=icon]){color:var(--_disabled-icon-color);opacity:var(--_disabled-icon-opacity)}.touch{position:absolute;top:50%;height:48px;left:0;right:0;transform:translateY(-50%)}:host([touch-target=none]) .touch{display:none}/*# sourceMappingURL=shared-styles.css.map */
+const shared_styles_css_styles = i `:host{border-start-start-radius:var(--_container-shape-start-start);border-start-end-radius:var(--_container-shape-start-end);border-end-start-radius:var(--_container-shape-end-start);border-end-end-radius:var(--_container-shape-end-end);box-sizing:border-box;cursor:pointer;display:inline-flex;gap:8px;min-height:var(--_container-height);outline:none;padding-block:calc((var(--_container-height) - max(var(--_label-text-line-height),var(--_icon-size)))/2);padding-inline-start:var(--_leading-space);padding-inline-end:var(--_trailing-space);place-content:center;place-items:center;position:relative;font-family:var(--_label-text-font);font-size:var(--_label-text-size);line-height:var(--_label-text-line-height);font-weight:var(--_label-text-weight);text-overflow:ellipsis;text-wrap:nowrap;user-select:none;-webkit-tap-highlight-color:rgba(0,0,0,0);vertical-align:top;--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-pressed-color: var(--_pressed-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity)}md-focus-ring{--md-focus-ring-shape-start-start: var(--_container-shape-start-start);--md-focus-ring-shape-start-end: var(--_container-shape-start-end);--md-focus-ring-shape-end-end: var(--_container-shape-end-end);--md-focus-ring-shape-end-start: var(--_container-shape-end-start)}:host([disabled]){cursor:default;pointer-events:none}.button{border-radius:inherit;cursor:inherit;display:inline-flex;align-items:center;justify-content:center;border:none;outline:none;-webkit-appearance:none;vertical-align:middle;background:rgba(0,0,0,0);text-decoration:none;min-width:calc(64px - var(--_leading-space) - var(--_trailing-space));width:100%;z-index:0;height:100%;font:inherit;color:var(--_label-text-color);padding:0;gap:inherit}.button::-moz-focus-inner{padding:0;border:0}:host(:hover) .button{color:var(--_hover-label-text-color)}:host(:focus-within) .button{color:var(--_focus-label-text-color)}:host(:active) .button{color:var(--_pressed-label-text-color)}.background{background-color:var(--_container-color);border-radius:inherit;inset:0;position:absolute}.label{overflow:hidden}:is(.button,.label,.label slot),.label ::slotted(*){text-overflow:inherit}:host([disabled]) .label{color:var(--_disabled-label-text-color);opacity:var(--_disabled-label-text-opacity)}:host([disabled]) .background{background-color:var(--_disabled-container-color);opacity:var(--_disabled-container-opacity)}@media(forced-colors: active){.background{border:1px solid CanvasText}:host([disabled]){--_disabled-icon-color: GrayText;--_disabled-icon-opacity: 1;--_disabled-container-opacity: 1;--_disabled-label-text-color: GrayText;--_disabled-label-text-opacity: 1}}:host([has-icon]:not([trailing-icon])){padding-inline-start:var(--_with-leading-icon-leading-space);padding-inline-end:var(--_with-leading-icon-trailing-space)}:host([has-icon][trailing-icon]){padding-inline-start:var(--_with-trailing-icon-leading-space);padding-inline-end:var(--_with-trailing-icon-trailing-space)}::slotted([slot=icon]){display:inline-flex;position:relative;writing-mode:horizontal-tb;fill:currentColor;flex-shrink:0;color:var(--_icon-color);font-size:var(--_icon-size);inline-size:var(--_icon-size);block-size:var(--_icon-size)}:host(:hover) ::slotted([slot=icon]){color:var(--_hover-icon-color)}:host(:focus-within) ::slotted([slot=icon]){color:var(--_focus-icon-color)}:host(:active) ::slotted([slot=icon]){color:var(--_pressed-icon-color)}:host([disabled]) ::slotted([slot=icon]){color:var(--_disabled-icon-color);opacity:var(--_disabled-icon-opacity)}.touch{position:absolute;top:50%;height:48px;left:0;right:0;transform:translateY(-50%)}:host([touch-target=wrapper]){margin:max(0px,(48px - var(--_container-height))/2) 0}:host([touch-target=none]) .touch{display:none}/*# sourceMappingURL=shared-styles.css.map */
 `;
 //# sourceMappingURL=shared-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/button/elevated-button.js
@@ -2268,7 +2276,11 @@ const shared_styles_css_styles = i `:host{display:inline-flex;height:var(--_cont
  */
 let MdElevatedButton = class MdElevatedButton extends ElevatedButton {
 };
-MdElevatedButton.styles = [shared_styles_css_styles, shared_elevation_styles_css_styles, elevated_styles_css_styles];
+MdElevatedButton.styles = [
+    shared_styles_css_styles,
+    shared_elevation_styles_css_styles,
+    elevated_styles_css_styles,
+];
 MdElevatedButton = __decorate([
     t('md-elevated-button')
 ], MdElevatedButton);
@@ -2286,7 +2298,7 @@ MdElevatedButton = __decorate([
  * A filled button component.
  */
 class FilledButton extends Button {
-    renderElevation() {
+    renderElevationOrOutline() {
         return x `<md-elevation></md-elevation>`;
     }
 }
@@ -2353,7 +2365,7 @@ MdFilledButton = __decorate([
  * A filled tonal button component.
  */
 class FilledTonalButton extends Button {
-    renderElevation() {
+    renderElevationOrOutline() {
         return x `<md-elevation></md-elevation>`;
     }
 }
@@ -2420,8 +2432,8 @@ MdFilledTonalButton = __decorate([
  * An outlined button component.
  */
 class OutlinedButton extends Button {
-    renderOutline() {
-        return x `<span class="button__outline"></span>`;
+    renderElevationOrOutline() {
+        return x `<div class="outline"></div>`;
     }
 }
 //# sourceMappingURL=outlined-button.js.map
@@ -2432,7 +2444,7 @@ class OutlinedButton extends Button {
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const outlined_styles_css_styles = i `:host{--_container-height: var(--md-outlined-button-container-height, 40px);--_container-shape: var(--md-outlined-button-container-shape, 9999px);--_disabled-label-text-color: var(--md-outlined-button-disabled-label-text-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-label-text-opacity: var(--md-outlined-button-disabled-label-text-opacity, 0.38);--_disabled-outline-color: var(--md-outlined-button-disabled-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-outline-opacity: var(--md-outlined-button-disabled-outline-opacity, 0.12);--_focus-label-text-color: var(--md-outlined-button-focus-label-text-color, var(--md-sys-color-primary, #6750a4));--_hover-label-text-color: var(--md-outlined-button-hover-label-text-color, var(--md-sys-color-primary, #6750a4));--_hover-state-layer-color: var(--md-outlined-button-hover-state-layer-color, var(--md-sys-color-primary, #6750a4));--_hover-state-layer-opacity: var(--md-outlined-button-hover-state-layer-opacity, 0.08);--_label-text-color: var(--md-outlined-button-label-text-color, var(--md-sys-color-primary, #6750a4));--_label-text-font: var(--md-outlined-button-label-text-font, var(--md-sys-typescale-label-large-font, var(--md-ref-typeface-plain, Roboto)));--_label-text-line-height: var(--md-outlined-button-label-text-line-height, var(--md-sys-typescale-label-large-line-height, 1.25rem));--_label-text-size: var(--md-outlined-button-label-text-size, var(--md-sys-typescale-label-large-size, 0.875rem));--_label-text-weight: var(--md-outlined-button-label-text-weight, var(--md-sys-typescale-label-large-weight, var(--md-ref-typeface-weight-medium, 500)));--_outline-color: var(--md-outlined-button-outline-color, var(--md-sys-color-outline, #79747e));--_outline-width: var(--md-outlined-button-outline-width, 1px);--_pressed-label-text-color: var(--md-outlined-button-pressed-label-text-color, var(--md-sys-color-primary, #6750a4));--_pressed-outline-color: var(--md-outlined-button-pressed-outline-color, var(--md-sys-color-outline, #79747e));--_pressed-state-layer-color: var(--md-outlined-button-pressed-state-layer-color, var(--md-sys-color-primary, #6750a4));--_pressed-state-layer-opacity: var(--md-outlined-button-pressed-state-layer-opacity, 0.12);--_disabled-icon-color: var(--md-outlined-button-disabled-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-icon-opacity: var(--md-outlined-button-disabled-icon-opacity, 0.38);--_focus-icon-color: var(--md-outlined-button-focus-icon-color, var(--md-sys-color-primary, #6750a4));--_hover-icon-color: var(--md-outlined-button-hover-icon-color, var(--md-sys-color-primary, #6750a4));--_icon-color: var(--md-outlined-button-icon-color, var(--md-sys-color-primary, #6750a4));--_icon-size: var(--md-outlined-button-icon-size, 18px);--_pressed-icon-color: var(--md-outlined-button-pressed-icon-color, var(--md-sys-color-primary, #6750a4));--_leading-space: var(--md-outlined-button-leading-space, 24px);--_trailing-space: var(--md-outlined-button-trailing-space, 24px);--_with-leading-icon-leading-space: var(--md-outlined-button-with-leading-icon-leading-space, 16px);--_with-leading-icon-trailing-space: var(--md-outlined-button-with-leading-icon-trailing-space, 24px);--_with-trailing-icon-leading-space: var(--md-outlined-button-with-trailing-icon-leading-space, 24px);--_with-trailing-icon-trailing-space: var(--md-outlined-button-with-trailing-icon-trailing-space, 16px);--_container-color: none;--_disabled-container-color: none;--_disabled-container-opacity: 0;--_container-shape-start-start: var( --md-outlined-button-container-shape-start-start, var(--_container-shape) );--_container-shape-start-end: var( --md-outlined-button-container-shape-start-end, var(--_container-shape) );--_container-shape-end-end: var( --md-outlined-button-container-shape-end-end, var(--_container-shape) );--_container-shape-end-start: var( --md-outlined-button-container-shape-end-start, var(--_container-shape) )}.button__outline{inset:0;border-style:solid;position:absolute;box-sizing:border-box;border-color:var(--_outline-color);border-start-start-radius:var(--_container-shape-start-start);border-start-end-radius:var(--_container-shape-start-end);border-end-start-radius:var(--_container-shape-end-start);border-end-end-radius:var(--_container-shape-end-end)}.button:active .button__outline{border-color:var(--_pressed-outline-color)}.button:disabled .button__outline{border-color:var(--_disabled-outline-color);opacity:var(--_disabled-outline-opacity)}@media(forced-colors: active){.button:disabled .button__outline{opacity:1}}.button__outline,.button__ripple{border-width:var(--_outline-width)}.button__ripple{inline-size:calc(100% - 2*var(--_outline-width));block-size:calc(100% - 2*var(--_outline-width));border-style:solid;border-color:rgba(0,0,0,0)}/*# sourceMappingURL=outlined-styles.css.map */
+const outlined_styles_css_styles = i `:host{--_container-height: var(--md-outlined-button-container-height, 40px);--_container-shape: var(--md-outlined-button-container-shape, 9999px);--_disabled-label-text-color: var(--md-outlined-button-disabled-label-text-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-label-text-opacity: var(--md-outlined-button-disabled-label-text-opacity, 0.38);--_disabled-outline-color: var(--md-outlined-button-disabled-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-outline-opacity: var(--md-outlined-button-disabled-outline-opacity, 0.12);--_focus-label-text-color: var(--md-outlined-button-focus-label-text-color, var(--md-sys-color-primary, #6750a4));--_hover-label-text-color: var(--md-outlined-button-hover-label-text-color, var(--md-sys-color-primary, #6750a4));--_hover-state-layer-color: var(--md-outlined-button-hover-state-layer-color, var(--md-sys-color-primary, #6750a4));--_hover-state-layer-opacity: var(--md-outlined-button-hover-state-layer-opacity, 0.08);--_label-text-color: var(--md-outlined-button-label-text-color, var(--md-sys-color-primary, #6750a4));--_label-text-font: var(--md-outlined-button-label-text-font, var(--md-sys-typescale-label-large-font, var(--md-ref-typeface-plain, Roboto)));--_label-text-line-height: var(--md-outlined-button-label-text-line-height, var(--md-sys-typescale-label-large-line-height, 1.25rem));--_label-text-size: var(--md-outlined-button-label-text-size, var(--md-sys-typescale-label-large-size, 0.875rem));--_label-text-weight: var(--md-outlined-button-label-text-weight, var(--md-sys-typescale-label-large-weight, var(--md-ref-typeface-weight-medium, 500)));--_outline-color: var(--md-outlined-button-outline-color, var(--md-sys-color-outline, #79747e));--_outline-width: var(--md-outlined-button-outline-width, 1px);--_pressed-label-text-color: var(--md-outlined-button-pressed-label-text-color, var(--md-sys-color-primary, #6750a4));--_pressed-outline-color: var(--md-outlined-button-pressed-outline-color, var(--md-sys-color-outline, #79747e));--_pressed-state-layer-color: var(--md-outlined-button-pressed-state-layer-color, var(--md-sys-color-primary, #6750a4));--_pressed-state-layer-opacity: var(--md-outlined-button-pressed-state-layer-opacity, 0.12);--_disabled-icon-color: var(--md-outlined-button-disabled-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-icon-opacity: var(--md-outlined-button-disabled-icon-opacity, 0.38);--_focus-icon-color: var(--md-outlined-button-focus-icon-color, var(--md-sys-color-primary, #6750a4));--_hover-icon-color: var(--md-outlined-button-hover-icon-color, var(--md-sys-color-primary, #6750a4));--_icon-color: var(--md-outlined-button-icon-color, var(--md-sys-color-primary, #6750a4));--_icon-size: var(--md-outlined-button-icon-size, 18px);--_pressed-icon-color: var(--md-outlined-button-pressed-icon-color, var(--md-sys-color-primary, #6750a4));--_leading-space: var(--md-outlined-button-leading-space, 24px);--_trailing-space: var(--md-outlined-button-trailing-space, 24px);--_with-leading-icon-leading-space: var(--md-outlined-button-with-leading-icon-leading-space, 16px);--_with-leading-icon-trailing-space: var(--md-outlined-button-with-leading-icon-trailing-space, 24px);--_with-trailing-icon-leading-space: var(--md-outlined-button-with-trailing-icon-leading-space, 24px);--_with-trailing-icon-trailing-space: var(--md-outlined-button-with-trailing-icon-trailing-space, 16px);--_container-color: none;--_disabled-container-color: none;--_disabled-container-opacity: 0;--_container-shape-start-start: var( --md-outlined-button-container-shape-start-start, var(--_container-shape) );--_container-shape-start-end: var( --md-outlined-button-container-shape-start-end, var(--_container-shape) );--_container-shape-end-end: var( --md-outlined-button-container-shape-end-end, var(--_container-shape) );--_container-shape-end-start: var( --md-outlined-button-container-shape-end-start, var(--_container-shape) )}.outline{inset:0;border-style:solid;position:absolute;box-sizing:border-box;border-color:var(--_outline-color);border-start-start-radius:var(--_container-shape-start-start);border-start-end-radius:var(--_container-shape-start-end);border-end-start-radius:var(--_container-shape-end-start);border-end-end-radius:var(--_container-shape-end-end)}:host(:active) .outline{border-color:var(--_pressed-outline-color)}:host([disabled]) .outline{border-color:var(--_disabled-outline-color);opacity:var(--_disabled-outline-opacity)}@media(forced-colors: active){:host([disabled]) .background{border-color:GrayText}:host([disabled]) .outline{opacity:1}}.outline,md-ripple{border-width:var(--_outline-width)}md-ripple{inline-size:calc(100% - 2*var(--_outline-width));block-size:calc(100% - 2*var(--_outline-width));border-style:solid;border-color:rgba(0,0,0,0)}/*# sourceMappingURL=outlined-styles.css.map */
 `;
 //# sourceMappingURL=outlined-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/button/outlined-button.js
@@ -2536,6 +2548,162 @@ MdTextButton = __decorate([
     t('md-text-button')
 ], MdTextButton);
 //# sourceMappingURL=text-button.js.map
+;// CONCATENATED MODULE: ./node_modules/@material/web/labs/behaviors/form-associated.js
+/**
+ * @license
+ * Copyright 2023 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+
+
+/**
+ * A symbol property to retrieve the form value for an element.
+ */
+const getFormValue = Symbol('getFormValue');
+/**
+ * A symbol property to retrieve the form state for an element.
+ */
+const getFormState = Symbol('getFormState');
+/**
+ * Mixes in form-associated behavior for a class. This allows an element to add
+ * values to `<form>` elements.
+ *
+ * Implementing classes should provide a `[formValue]` to return the current
+ * value of the element, as well as reset and restore callbacks.
+ *
+ * @example
+ * ```ts
+ * const base = mixinFormAssociated(mixinElementInternals(LitElement));
+ *
+ * class MyControl extends base {
+ *   \@property()
+ *   value = '';
+ *
+ *   override [getFormValue]() {
+ *     return this.value;
+ *   }
+ *
+ *   override formResetCallback() {
+ *     const defaultValue = this.getAttribute('value');
+ *     this.value = defaultValue;
+ *   }
+ *
+ *   override formStateRestoreCallback(state: string) {
+ *     this.value = state;
+ *   }
+ * }
+ * ```
+ *
+ * Elements may optionally provide a `[formState]` if their values do not
+ * represent the state of the component.
+ *
+ * @example
+ * ```ts
+ * const base = mixinFormAssociated(mixinElementInternals(LitElement));
+ *
+ * class MyCheckbox extends base {
+ *   \@property()
+ *   value = 'on';
+ *
+ *   \@property({type: Boolean})
+ *   checked = false;
+ *
+ *   override [getFormValue]() {
+ *     return this.checked ? this.value : null;
+ *   }
+ *
+ *   override [getFormState]() {
+ *     return String(this.checked);
+ *   }
+ *
+ *   override formResetCallback() {
+ *     const defaultValue = this.hasAttribute('checked');
+ *     this.checked = defaultValue;
+ *   }
+ *
+ *   override formStateRestoreCallback(state: string) {
+ *     this.checked = Boolean(state);
+ *   }
+ * }
+ * ```
+ *
+ * IMPORTANT: Requires declares for lit-analyzer
+ * @example
+ * ```ts
+ * const base = mixinFormAssociated(mixinElementInternals(LitElement));
+ * class MyControl extends base {
+ *   // Writable mixin properties for lit-html binding, needed for lit-analyzer
+ *   declare disabled: boolean;
+ *   declare name: string;
+ * }
+ * ```
+ *
+ * @param base The class to mix functionality into. The base class must use
+ *     `mixinElementInternals()`.
+ * @return The provided class with `FormAssociated` mixed in.
+ */
+function mixinFormAssociated(base) {
+    class FormAssociatedElement extends base {
+        get form() {
+            return this[internals].form;
+        }
+        get labels() {
+            return this[internals].labels;
+        }
+        // name attribute must be set synchronously
+        get name() {
+            return this.getAttribute('name') ?? '';
+        }
+        set name(name) {
+            const prev = this.name;
+            // Setting name to null or empty string does not remove the attribute.
+            this.setAttribute('name', name);
+            // Explicit requestUpdate needed for Lit 2.0
+            this.requestUpdate('name', prev);
+        }
+        // disabled attribute must be set synchronously
+        get disabled() {
+            return this.hasAttribute('disabled');
+        }
+        set disabled(disabled) {
+            const prev = this.disabled;
+            this.toggleAttribute('disabled', disabled);
+            // Explicit requestUpdate needed for Lit 2.0
+            this.requestUpdate('disabled', prev);
+        }
+        requestUpdate(name, oldValue, options) {
+            super.requestUpdate(name, oldValue, options);
+            // If any properties change, update the form value, which may have changed
+            // as well.
+            // Update the form value synchronously in `requestUpdate()` rather than
+            // `update()` or `updated()`, which are async. This is necessary to ensure
+            // that form data is updated in time for synchronous event listeners.
+            this[internals].setFormValue(this[getFormValue](), this[getFormState]());
+        }
+        [getFormValue]() {
+            // Closure does not allow abstract symbol members, so a default
+            // implementation is needed.
+            throw new Error('Implement [getFormValue]');
+        }
+        [getFormState]() {
+            return this[getFormValue]();
+        }
+        formDisabledCallback(disabled) {
+            this.disabled = disabled;
+        }
+    }
+    /** @nocollapse */
+    FormAssociatedElement.formAssociated = true;
+    __decorate([
+        property_n({ reflect: true })
+    ], FormAssociatedElement.prototype, "name", null);
+    __decorate([
+        property_n({ type: Boolean, reflect: true })
+    ], FormAssociatedElement.prototype, "disabled", null);
+    return FormAssociatedElement;
+}
+//# sourceMappingURL=form-associated.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/checkbox/internal/checkbox.js
 /**
  * @license
@@ -2550,31 +2718,22 @@ MdTextButton = __decorate([
 
 
 
+
+
+// Separate variable needed for closure.
+const checkboxBaseClass = mixinFormAssociated(mixinElementInternals(lit_element_s));
 /**
  * A checkbox component.
+ *
+ *
+ * @fires change {Event} The native `change` event on
+ * [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event)
+ * --bubbles
+ * @fires input {InputEvent} The native `input` event on
+ * [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event)
+ * --bubbles --composed
  */
-class Checkbox extends lit_element_s {
-    /**
-     * The HTML name to use in form submission.
-     */
-    get name() {
-        return this.getAttribute('name') ?? '';
-    }
-    set name(name) {
-        this.setAttribute('name', name);
-    }
-    /**
-     * The associated form element with which this element's value will submit.
-     */
-    get form() {
-        return this.internals.form;
-    }
-    /**
-     * The labels this element is associated with.
-     */
-    get labels() {
-        return this.internals.labels;
-    }
+class Checkbox extends checkboxBaseClass {
     /**
      * Returns a ValidityState object that represents the validity states of the
      * checkbox.
@@ -2586,7 +2745,7 @@ class Checkbox extends lit_element_s {
      */
     get validity() {
         this.syncValidity();
-        return this.internals.validity;
+        return this[internals].validity;
     }
     /**
      * Returns the native validation error message.
@@ -2595,7 +2754,7 @@ class Checkbox extends lit_element_s {
      */
     get validationMessage() {
         this.syncValidity();
-        return this.internals.validationMessage;
+        return this[internals].validationMessage;
     }
     /**
      * Returns whether an element will successfully validate based on forms
@@ -2605,7 +2764,7 @@ class Checkbox extends lit_element_s {
      */
     get willValidate() {
         this.syncValidity();
-        return this.internals.willValidate;
+        return this[internals].willValidate;
     }
     constructor() {
         super();
@@ -2613,10 +2772,6 @@ class Checkbox extends lit_element_s {
          * Whether or not the checkbox is selected.
          */
         this.checked = false;
-        /**
-         * Whether or not the checkbox is disabled.
-         */
-        this.disabled = false;
         /**
          * Whether or not the checkbox is indeterminate.
          *
@@ -2640,9 +2795,8 @@ class Checkbox extends lit_element_s {
         this.prevDisabled = false;
         this.prevIndeterminate = false;
         // Needed for Safari, see https://bugs.webkit.org/show_bug.cgi?id=261432
-        // Replace with this.internals.validity.customError when resolved.
+        // Replace with this[internals].validity.customError when resolved.
         this.hasCustomValidityError = false;
-        this.internals = this /* needed for closure */.attachInternals();
         if (!is_server_o) {
             this.addEventListener('click', (event) => {
                 if (!isActivationClick(event)) {
@@ -2665,7 +2819,7 @@ class Checkbox extends lit_element_s {
      */
     checkValidity() {
         this.syncValidity();
-        return this.internals.checkValidity();
+        return this[internals].checkValidity();
     }
     /**
      * Checks the checkbox's native validation and returns whether or not the
@@ -2682,7 +2836,7 @@ class Checkbox extends lit_element_s {
      */
     reportValidity() {
         this.syncValidity();
-        return this.internals.reportValidity();
+        return this[internals].reportValidity();
     }
     /**
      * Sets the checkbox's native validation error message. This is used to
@@ -2697,19 +2851,17 @@ class Checkbox extends lit_element_s {
      */
     setCustomValidity(error) {
         this.hasCustomValidityError = !!error;
-        this.internals.setValidity({ customError: !!error }, error, this.getInput());
+        this[internals].setValidity({ customError: !!error }, error, this.getInput());
     }
     update(changed) {
-        if (changed.has('checked') || changed.has('disabled') ||
+        if (changed.has('checked') ||
+            changed.has('disabled') ||
             changed.has('indeterminate')) {
             this.prevChecked = changed.get('checked') ?? this.checked;
             this.prevDisabled = changed.get('disabled') ?? this.disabled;
             this.prevIndeterminate =
                 changed.get('indeterminate') ?? this.indeterminate;
         }
-        const shouldAddFormValue = this.checked && !this.indeterminate;
-        const state = String(this.checked);
-        this.internals.setFormValue(shouldAddFormValue ? this.value : null, state);
         super.update(changed);
     }
     render() {
@@ -2735,7 +2887,8 @@ class Checkbox extends lit_element_s {
         // form.reportValidity() to work in Chrome.
         return x `
       <div class="container ${containerClasses}">
-        <input type="checkbox"
+        <input
+          type="checkbox"
           id="input"
           aria-checked=${isIndeterminate ? 'mixed' : T}
           aria-label=${ariaLabel || T}
@@ -2744,8 +2897,7 @@ class Checkbox extends lit_element_s {
           ?required=${this.required}
           .indeterminate=${this.indeterminate}
           .checked=${this.checked}
-          @change=${this.handleChange}
-        >
+          @change=${this.handleChange} />
 
         <div class="outline"></div>
         <div class="background"></div>
@@ -2774,12 +2926,12 @@ class Checkbox extends lit_element_s {
         // validity. We do this to re-use native `<input>` validation messages.
         const input = this.getInput();
         if (this.hasCustomValidityError) {
-            input.setCustomValidity(this.internals.validationMessage);
+            input.setCustomValidity(this[internals].validationMessage);
         }
         else {
             input.setCustomValidity('');
         }
-        this.internals.setValidity(input.validity, input.validationMessage, this.getInput());
+        this[internals].setValidity(input.validity, input.validationMessage, this.getInput());
     }
     getInput() {
         if (!this.input) {
@@ -2795,13 +2947,20 @@ class Checkbox extends lit_element_s {
         }
         return this.input;
     }
-    /** @private */
+    [getFormValue]() {
+        if (!this.checked || this.indeterminate) {
+            return null;
+        }
+        return this.value;
+    }
+    [getFormState]() {
+        return String(this.checked);
+    }
     formResetCallback() {
         // The checked property does not reflect, so the original attribute set by
         // the user is used to determine the default value.
         this.checked = this.hasAttribute('checked');
     }
-    /** @private */
     formStateRestoreCallback(state) {
         this.checked = state === 'true';
     }
@@ -2812,16 +2971,11 @@ class Checkbox extends lit_element_s {
 /** @nocollapse */
 Checkbox.shadowRootOptions = {
     ...lit_element_s.shadowRootOptions,
-    delegatesFocus: true
+    delegatesFocus: true,
 };
-/** @nocollapse */
-Checkbox.formAssociated = true;
 __decorate([
     property_n({ type: Boolean })
 ], Checkbox.prototype, "checked", void 0);
-__decorate([
-    property_n({ type: Boolean, reflect: true })
-], Checkbox.prototype, "disabled", void 0);
 __decorate([
     property_n({ type: Boolean })
 ], Checkbox.prototype, "indeterminate", void 0);
@@ -2851,7 +3005,7 @@ __decorate([
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const checkbox_styles_css_styles = i `:host{--_container-shape: var(--md-checkbox-container-shape, 2px);--_container-size: var(--md-checkbox-container-size, 18px);--_icon-size: var(--md-checkbox-icon-size, 18px);--_selected-container-color: var(--md-checkbox-selected-container-color, var(--md-sys-color-primary, #6750a4));--_selected-disabled-container-color: var(--md-checkbox-selected-disabled-container-color, var(--md-sys-color-on-surface, #1d1b20));--_selected-disabled-container-opacity: var(--md-checkbox-selected-disabled-container-opacity, 0.38);--_selected-disabled-icon-color: var(--md-checkbox-selected-disabled-icon-color, var(--md-sys-color-surface, #fef7ff));--_selected-focus-container-color: var(--md-checkbox-selected-focus-container-color, var(--md-sys-color-primary, #6750a4));--_selected-focus-icon-color: var(--md-checkbox-selected-focus-icon-color, var(--md-sys-color-on-primary, #fff));--_selected-hover-container-color: var(--md-checkbox-selected-hover-container-color, var(--md-sys-color-primary, #6750a4));--_selected-hover-icon-color: var(--md-checkbox-selected-hover-icon-color, var(--md-sys-color-on-primary, #fff));--_selected-hover-state-layer-color: var(--md-checkbox-selected-hover-state-layer-color, var(--md-sys-color-primary, #6750a4));--_selected-hover-state-layer-opacity: var(--md-checkbox-selected-hover-state-layer-opacity, 0.08);--_selected-icon-color: var(--md-checkbox-selected-icon-color, var(--md-sys-color-on-primary, #fff));--_selected-pressed-container-color: var(--md-checkbox-selected-pressed-container-color, var(--md-sys-color-primary, #6750a4));--_selected-pressed-icon-color: var(--md-checkbox-selected-pressed-icon-color, var(--md-sys-color-on-primary, #fff));--_selected-pressed-state-layer-color: var(--md-checkbox-selected-pressed-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--_selected-pressed-state-layer-opacity: var(--md-checkbox-selected-pressed-state-layer-opacity, 0.12);--_state-layer-shape: var(--md-checkbox-state-layer-shape, 9999px);--_state-layer-size: var(--md-checkbox-state-layer-size, 40px);--_disabled-container-opacity: var(--md-checkbox-disabled-container-opacity, 0.38);--_disabled-outline-color: var(--md-checkbox-disabled-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-outline-width: var(--md-checkbox-disabled-outline-width, 2px);--_focus-outline-color: var(--md-checkbox-focus-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_focus-outline-width: var(--md-checkbox-focus-outline-width, 2px);--_hover-outline-color: var(--md-checkbox-hover-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-outline-width: var(--md-checkbox-hover-outline-width, 2px);--_hover-state-layer-color: var(--md-checkbox-hover-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-state-layer-opacity: var(--md-checkbox-hover-state-layer-opacity, 0.08);--_outline-color: var(--md-checkbox-outline-color, var(--md-sys-color-on-surface-variant, #49454f));--_outline-width: var(--md-checkbox-outline-width, 2px);--_pressed-outline-color: var(--md-checkbox-pressed-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_pressed-outline-width: var(--md-checkbox-pressed-outline-width, 2px);--_pressed-state-layer-color: var(--md-checkbox-pressed-state-layer-color, var(--md-sys-color-primary, #6750a4));--_pressed-state-layer-opacity: var(--md-checkbox-pressed-state-layer-opacity, 0.12);--_container-shape-start-start: var( --md-checkbox-container-shape-start-start, var(--_container-shape) );--_container-shape-start-end: var( --md-checkbox-container-shape-start-end, var(--_container-shape) );--_container-shape-end-end: var( --md-checkbox-container-shape-end-end, var(--_container-shape) );--_container-shape-end-start: var( --md-checkbox-container-shape-end-start, var(--_container-shape) );border-start-start-radius:var(--_container-shape-start-start);border-start-end-radius:var(--_container-shape-start-end);border-end-end-radius:var(--_container-shape-end-end);border-end-start-radius:var(--_container-shape-end-start);display:inline-flex;height:var(--_container-size);position:relative;vertical-align:top;width:var(--_container-size);-webkit-tap-highlight-color:rgba(0,0,0,0)}:host([touch-target=wrapper]){margin:max(0px,(48px - var(--_container-size))/2)}md-focus-ring{height:44px;inset:unset;width:44px}input{appearance:none;height:48px;margin:0;opacity:0;outline:none;position:absolute;width:48px;z-index:1}:host([touch-target=none]) input{height:100%;width:100%}.container{border-radius:inherit;display:flex;height:100%;place-content:center;place-items:center;position:relative;width:100%}.outline,.background,.icon{inset:0;position:absolute}.outline,.background{border-radius:inherit}.outline{border-color:var(--_outline-color);border-style:solid;border-width:var(--_outline-width);box-sizing:border-box}.background{background-color:var(--_selected-container-color)}.background,.icon{opacity:0;transition-duration:150ms,50ms;transition-property:transform,opacity;transition-timing-function:cubic-bezier(0.3, 0, 0.8, 0.15),linear;transform:scale(0.6)}:where(.selected) :is(.background,.icon){opacity:1;transition-duration:350ms,50ms;transition-timing-function:cubic-bezier(0.05, 0.7, 0.1, 1),linear;transform:scale(1)}md-ripple{border-radius:var(--_state-layer-shape);height:var(--_state-layer-size);inset:unset;width:var(--_state-layer-size);--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-color: var(--_pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity)}.selected md-ripple{--md-ripple-hover-color: var(--_selected-hover-state-layer-color);--md-ripple-hover-opacity: var(--_selected-hover-state-layer-opacity);--md-ripple-pressed-color: var(--_selected-pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_selected-pressed-state-layer-opacity)}.icon{fill:var(--_selected-icon-color);height:var(--_icon-size);width:var(--_icon-size)}.mark.short{height:2px;transition-property:transform,height;width:2px}.mark.long{height:2px;transition-property:transform,width;width:10px}.mark{animation-duration:150ms;animation-timing-function:cubic-bezier(0.3, 0, 0.8, 0.15);transition-duration:150ms;transition-timing-function:cubic-bezier(0.3, 0, 0.8, 0.15)}.selected .mark{animation-duration:350ms;animation-timing-function:cubic-bezier(0.05, 0.7, 0.1, 1);transition-duration:350ms;transition-timing-function:cubic-bezier(0.05, 0.7, 0.1, 1)}.checked .mark,.prev-checked.unselected .mark{transform:scaleY(-1) translate(7px, -14px) rotate(45deg)}.checked .mark.short,.prev-checked.unselected .mark.short{height:5.6568542495px}.checked .mark.long,.prev-checked.unselected .mark.long{width:11.313708499px}.indeterminate .mark,.prev-indeterminate.unselected .mark{transform:scaleY(-1) translate(4px, -10px) rotate(0deg)}.prev-unselected .mark{transition-property:none}.prev-unselected.checked .mark.long{animation-name:prev-unselected-to-checked}@keyframes prev-unselected-to-checked{from{width:0}}:where(:hover) .outline{border-color:var(--_hover-outline-color);border-width:var(--_hover-outline-width)}:where(:hover) .background{background:var(--_selected-hover-container-color)}:where(:hover) .icon{fill:var(--_selected-hover-icon-color)}:where(:focus-within) .outline{border-color:var(--_focus-outline-color);border-width:var(--_focus-outline-width)}:where(:focus-within) .background{background:var(--_selected-focus-container-color)}:where(:focus-within) .icon{fill:var(--_selected-focus-icon-color)}:where(:active) .outline{border-color:var(--_pressed-outline-color);border-width:var(--_pressed-outline-width)}:where(:active) .background{background:var(--_selected-pressed-container-color)}:where(:active) .icon{fill:var(--_selected-pressed-icon-color)}:where(.disabled,.prev-disabled) :is(.background,.icon,.mark){animation-duration:0s;transition-duration:0s}:where(.disabled) .outline{border-color:var(--_disabled-outline-color);border-width:var(--_disabled-outline-width);opacity:var(--_disabled-container-opacity)}:where(.selected.disabled) .outline{visibility:hidden}:where(.selected.disabled) .background{background:var(--_selected-disabled-container-color);opacity:var(--_selected-disabled-container-opacity)}:where(.disabled) .icon{fill:var(--_selected-disabled-icon-color)}@media(forced-colors: active){.background{background-color:CanvasText}.selected.disabled .background{background-color:GrayText;opacity:1}.outline{border-color:CanvasText}.disabled .outline{border-color:GrayText;opacity:1}.icon{fill:Canvas}}/*# sourceMappingURL=checkbox-styles.css.map */
+const checkbox_styles_css_styles = i `:host{--_container-shape: var(--md-checkbox-container-shape, 2px);--_container-size: var(--md-checkbox-container-size, 18px);--_icon-size: var(--md-checkbox-icon-size, 18px);--_selected-container-color: var(--md-checkbox-selected-container-color, var(--md-sys-color-primary, #6750a4));--_selected-disabled-container-color: var(--md-checkbox-selected-disabled-container-color, var(--md-sys-color-on-surface, #1d1b20));--_selected-disabled-container-opacity: var(--md-checkbox-selected-disabled-container-opacity, 0.38);--_selected-disabled-icon-color: var(--md-checkbox-selected-disabled-icon-color, var(--md-sys-color-surface, #fef7ff));--_selected-focus-container-color: var(--md-checkbox-selected-focus-container-color, var(--md-sys-color-primary, #6750a4));--_selected-focus-icon-color: var(--md-checkbox-selected-focus-icon-color, var(--md-sys-color-on-primary, #fff));--_selected-hover-container-color: var(--md-checkbox-selected-hover-container-color, var(--md-sys-color-primary, #6750a4));--_selected-hover-icon-color: var(--md-checkbox-selected-hover-icon-color, var(--md-sys-color-on-primary, #fff));--_selected-hover-state-layer-color: var(--md-checkbox-selected-hover-state-layer-color, var(--md-sys-color-primary, #6750a4));--_selected-hover-state-layer-opacity: var(--md-checkbox-selected-hover-state-layer-opacity, 0.08);--_selected-icon-color: var(--md-checkbox-selected-icon-color, var(--md-sys-color-on-primary, #fff));--_selected-pressed-container-color: var(--md-checkbox-selected-pressed-container-color, var(--md-sys-color-primary, #6750a4));--_selected-pressed-icon-color: var(--md-checkbox-selected-pressed-icon-color, var(--md-sys-color-on-primary, #fff));--_selected-pressed-state-layer-color: var(--md-checkbox-selected-pressed-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--_selected-pressed-state-layer-opacity: var(--md-checkbox-selected-pressed-state-layer-opacity, 0.12);--_state-layer-shape: var(--md-checkbox-state-layer-shape, 9999px);--_state-layer-size: var(--md-checkbox-state-layer-size, 40px);--_disabled-container-opacity: var(--md-checkbox-disabled-container-opacity, 0.38);--_disabled-outline-color: var(--md-checkbox-disabled-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-outline-width: var(--md-checkbox-disabled-outline-width, 2px);--_focus-outline-color: var(--md-checkbox-focus-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_focus-outline-width: var(--md-checkbox-focus-outline-width, 2px);--_hover-outline-color: var(--md-checkbox-hover-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-outline-width: var(--md-checkbox-hover-outline-width, 2px);--_hover-state-layer-color: var(--md-checkbox-hover-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-state-layer-opacity: var(--md-checkbox-hover-state-layer-opacity, 0.08);--_outline-color: var(--md-checkbox-outline-color, var(--md-sys-color-on-surface-variant, #49454f));--_outline-width: var(--md-checkbox-outline-width, 2px);--_pressed-outline-color: var(--md-checkbox-pressed-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_pressed-outline-width: var(--md-checkbox-pressed-outline-width, 2px);--_pressed-state-layer-color: var(--md-checkbox-pressed-state-layer-color, var(--md-sys-color-primary, #6750a4));--_pressed-state-layer-opacity: var(--md-checkbox-pressed-state-layer-opacity, 0.12);--_container-shape-start-start: var( --md-checkbox-container-shape-start-start, var(--_container-shape) );--_container-shape-start-end: var( --md-checkbox-container-shape-start-end, var(--_container-shape) );--_container-shape-end-end: var( --md-checkbox-container-shape-end-end, var(--_container-shape) );--_container-shape-end-start: var( --md-checkbox-container-shape-end-start, var(--_container-shape) );border-start-start-radius:var(--_container-shape-start-start);border-start-end-radius:var(--_container-shape-start-end);border-end-end-radius:var(--_container-shape-end-end);border-end-start-radius:var(--_container-shape-end-start);display:inline-flex;height:var(--_container-size);position:relative;vertical-align:top;width:var(--_container-size);-webkit-tap-highlight-color:rgba(0,0,0,0);cursor:pointer}:host([disabled]){cursor:default}:host([touch-target=wrapper]){margin:max(0px,(48px - var(--_container-size))/2)}md-focus-ring{height:44px;inset:unset;width:44px}input{appearance:none;height:48px;margin:0;opacity:0;outline:none;position:absolute;width:48px;z-index:1;cursor:inherit}:host([touch-target=none]) input{height:100%;width:100%}.container{border-radius:inherit;display:flex;height:100%;place-content:center;place-items:center;position:relative;width:100%}.outline,.background,.icon{inset:0;position:absolute}.outline,.background{border-radius:inherit}.outline{border-color:var(--_outline-color);border-style:solid;border-width:var(--_outline-width);box-sizing:border-box}.background{background-color:var(--_selected-container-color)}.background,.icon{opacity:0;transition-duration:150ms,50ms;transition-property:transform,opacity;transition-timing-function:cubic-bezier(0.3, 0, 0.8, 0.15),linear;transform:scale(0.6)}:where(.selected) :is(.background,.icon){opacity:1;transition-duration:350ms,50ms;transition-timing-function:cubic-bezier(0.05, 0.7, 0.1, 1),linear;transform:scale(1)}md-ripple{border-radius:var(--_state-layer-shape);height:var(--_state-layer-size);inset:unset;width:var(--_state-layer-size);--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-color: var(--_pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity)}.selected md-ripple{--md-ripple-hover-color: var(--_selected-hover-state-layer-color);--md-ripple-hover-opacity: var(--_selected-hover-state-layer-opacity);--md-ripple-pressed-color: var(--_selected-pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_selected-pressed-state-layer-opacity)}.icon{fill:var(--_selected-icon-color);height:var(--_icon-size);width:var(--_icon-size)}.mark.short{height:2px;transition-property:transform,height;width:2px}.mark.long{height:2px;transition-property:transform,width;width:10px}.mark{animation-duration:150ms;animation-timing-function:cubic-bezier(0.3, 0, 0.8, 0.15);transition-duration:150ms;transition-timing-function:cubic-bezier(0.3, 0, 0.8, 0.15)}.selected .mark{animation-duration:350ms;animation-timing-function:cubic-bezier(0.05, 0.7, 0.1, 1);transition-duration:350ms;transition-timing-function:cubic-bezier(0.05, 0.7, 0.1, 1)}.checked .mark,.prev-checked.unselected .mark{transform:scaleY(-1) translate(7px, -14px) rotate(45deg)}.checked .mark.short,.prev-checked.unselected .mark.short{height:5.6568542495px}.checked .mark.long,.prev-checked.unselected .mark.long{width:11.313708499px}.indeterminate .mark,.prev-indeterminate.unselected .mark{transform:scaleY(-1) translate(4px, -10px) rotate(0deg)}.prev-unselected .mark{transition-property:none}.prev-unselected.checked .mark.long{animation-name:prev-unselected-to-checked}@keyframes prev-unselected-to-checked{from{width:0}}:where(:hover) .outline{border-color:var(--_hover-outline-color);border-width:var(--_hover-outline-width)}:where(:hover) .background{background:var(--_selected-hover-container-color)}:where(:hover) .icon{fill:var(--_selected-hover-icon-color)}:where(:focus-within) .outline{border-color:var(--_focus-outline-color);border-width:var(--_focus-outline-width)}:where(:focus-within) .background{background:var(--_selected-focus-container-color)}:where(:focus-within) .icon{fill:var(--_selected-focus-icon-color)}:where(:active) .outline{border-color:var(--_pressed-outline-color);border-width:var(--_pressed-outline-width)}:where(:active) .background{background:var(--_selected-pressed-container-color)}:where(:active) .icon{fill:var(--_selected-pressed-icon-color)}:where(.disabled,.prev-disabled) :is(.background,.icon,.mark){animation-duration:0s;transition-duration:0s}:where(.disabled) .outline{border-color:var(--_disabled-outline-color);border-width:var(--_disabled-outline-width);opacity:var(--_disabled-container-opacity)}:where(.selected.disabled) .outline{visibility:hidden}:where(.selected.disabled) .background{background:var(--_selected-disabled-container-color);opacity:var(--_selected-disabled-container-opacity)}:where(.disabled) .icon{fill:var(--_selected-disabled-icon-color)}@media(forced-colors: active){.background{background-color:CanvasText}.selected.disabled .background{background-color:GrayText;opacity:1}.outline{border-color:CanvasText}.disabled .outline{border-color:GrayText;opacity:1}.icon{fill:Canvas}}/*# sourceMappingURL=checkbox-styles.css.map */
 `;
 //# sourceMappingURL=checkbox-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/checkbox/checkbox.js
@@ -2899,6 +3053,8 @@ MdCheckbox = __decorate([
 
 /**
  * A chip component.
+ *
+ * @fires update-focus {Event} Dispatched when `disabled` is toggled. --bubbles
  */
 class Chip extends lit_element_s {
     constructor() {
@@ -2955,10 +3111,10 @@ class Chip extends lit_element_s {
     renderContainerContent() {
         return x `
       ${this.renderOutline()}
-      <md-focus-ring part="focus-ring"
-          for=${this.primaryId}></md-focus-ring>
-      <md-ripple for=${this.primaryId}
-          ?disabled=${this.rippleDisabled}></md-ripple>
+      <md-focus-ring part="focus-ring" for=${this.primaryId}></md-focus-ring>
+      <md-ripple
+        for=${this.primaryId}
+        ?disabled=${this.rippleDisabled}></md-ripple>
       ${this.renderPrimaryAction(this.renderPrimaryContent())}
     `;
     }
@@ -2984,7 +3140,7 @@ class Chip extends lit_element_s {
 /** @nocollapse */
 Chip.shadowRootOptions = {
     ...lit_element_s.shadowRootOptions,
-    delegatesFocus: true
+    delegatesFocus: true,
 };
 __decorate([
     property_n({ type: Boolean })
@@ -3037,21 +3193,25 @@ class AssistChip extends Chip {
         const { ariaLabel } = this;
         if (this.href) {
             return x `
-        <a class="primary action"
+        <a
+          class="primary action"
           id="link"
           aria-label=${ariaLabel || T}
           href=${this.href}
           target=${this.target || T}
-        >${content}</a>
+          >${content}</a
+        >
       `;
         }
         return x `
-      <button class="primary action"
+      <button
+        class="primary action"
         id="button"
         aria-label=${ariaLabel || T}
         ?disabled=${this.disabled && !this.alwaysFocusable}
         type="button"
-      >${content}</button>
+        >${content}</button
+      >
     `;
     }
     renderOutline() {
@@ -3126,6 +3286,172 @@ MdAssistChip = __decorate([
     t('md-assist-chip')
 ], MdAssistChip);
 //# sourceMappingURL=assist-chip.js.map
+;// CONCATENATED MODULE: ./node_modules/@material/web/chips/internal/chip-set.js
+/**
+ * @license
+ * Copyright 2023 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+
+
+
+
+/**
+ * A chip set component.
+ */
+class ChipSet extends lit_element_s {
+    get chips() {
+        return this.childElements.filter((child) => child instanceof Chip);
+    }
+    constructor() {
+        super();
+        this.internals = polyfillElementInternalsAria(this, 
+        // Cast needed for closure
+        this.attachInternals());
+        if (!is_server_o) {
+            this.addEventListener('focusin', this.updateTabIndices.bind(this));
+            this.addEventListener('update-focus', this.updateTabIndices.bind(this));
+            this.addEventListener('keydown', this.handleKeyDown.bind(this));
+            this.internals.role = 'toolbar';
+        }
+    }
+    render() {
+        return x `<slot @slotchange=${this.updateTabIndices}></slot>`;
+    }
+    handleKeyDown(event) {
+        const isLeft = event.key === 'ArrowLeft';
+        const isRight = event.key === 'ArrowRight';
+        const isHome = event.key === 'Home';
+        const isEnd = event.key === 'End';
+        // Ignore non-navigation keys
+        if (!isLeft && !isRight && !isHome && !isEnd) {
+            return;
+        }
+        const { chips } = this;
+        // Don't try to select another chip if there aren't any.
+        if (chips.length < 2) {
+            return;
+        }
+        // Prevent default interactions, such as scrolling.
+        event.preventDefault();
+        if (isHome || isEnd) {
+            const index = isHome ? 0 : chips.length - 1;
+            chips[index].focus({ trailing: isEnd });
+            this.updateTabIndices();
+            return;
+        }
+        // Check if moving forwards or backwards
+        const isRtl = getComputedStyle(this).direction === 'rtl';
+        const forwards = isRtl ? isLeft : isRight;
+        const focusedChip = chips.find((chip) => chip.matches(':focus-within'));
+        if (!focusedChip) {
+            // If there is not already a chip focused, select the first or last chip
+            // based on the direction we're traveling.
+            const nextChip = forwards ? chips[0] : chips[chips.length - 1];
+            nextChip.focus({ trailing: !forwards });
+            this.updateTabIndices();
+            return;
+        }
+        const currentIndex = chips.indexOf(focusedChip);
+        let nextIndex = forwards ? currentIndex + 1 : currentIndex - 1;
+        // Search for the next sibling that is not disabled to select.
+        // If we return to the host index, there is nothing to select.
+        while (nextIndex !== currentIndex) {
+            if (nextIndex >= chips.length) {
+                // Return to start if moving past the last item.
+                nextIndex = 0;
+            }
+            else if (nextIndex < 0) {
+                // Go to end if moving before the first item.
+                nextIndex = chips.length - 1;
+            }
+            // Check if the next sibling is disabled. If so,
+            // move the index and continue searching.
+            //
+            // Some toolbar items may be focusable when disabled for increased
+            // visibility.
+            const nextChip = chips[nextIndex];
+            if (nextChip.disabled && !nextChip.alwaysFocusable) {
+                if (forwards) {
+                    nextIndex++;
+                }
+                else {
+                    nextIndex--;
+                }
+                continue;
+            }
+            nextChip.focus({ trailing: !forwards });
+            this.updateTabIndices();
+            break;
+        }
+    }
+    updateTabIndices() {
+        // The chip that should be focusable is either the chip that currently has
+        // focus or the first chip that can be focused.
+        const { chips } = this;
+        let chipToFocus;
+        for (const chip of chips) {
+            const isChipFocusable = chip.alwaysFocusable || !chip.disabled;
+            const chipIsFocused = chip.matches(':focus-within');
+            if (chipIsFocused && isChipFocusable) {
+                // Found the first chip that is actively focused. This overrides the
+                // first focusable chip found.
+                chipToFocus = chip;
+                continue;
+            }
+            if (isChipFocusable && !chipToFocus) {
+                chipToFocus = chip;
+            }
+            // Disable non-focused chips. If we disable all of them, we'll grant focus
+            // to the first focusable child that was found.
+            chip.tabIndex = -1;
+        }
+        if (chipToFocus) {
+            chipToFocus.tabIndex = 0;
+        }
+    }
+}
+(() => {
+    polyfillARIAMixin(ChipSet);
+})();
+__decorate([
+    query_assigned_elements_o()
+], ChipSet.prototype, "childElements", void 0);
+//# sourceMappingURL=chip-set.js.map
+;// CONCATENATED MODULE: ./node_modules/@material/web/chips/internal/chip-set-styles.css.js
+/**
+  * @license
+  * Copyright 2022 Google LLC
+  * SPDX-License-Identifier: Apache-2.0
+  */
+
+const chip_set_styles_css_styles = i `:host{display:flex;flex-wrap:wrap;gap:8px}/*# sourceMappingURL=chip-set-styles.css.map */
+`;
+//# sourceMappingURL=chip-set-styles.css.js.map
+;// CONCATENATED MODULE: ./node_modules/@material/web/chips/chip-set.js
+/**
+ * @license
+ * Copyright 2023 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+
+
+
+/**
+ * TODO(b/243982145): add docs
+ *
+ * @final
+ * @suppress {visibility}
+ */
+let MdChipSet = class MdChipSet extends ChipSet {
+};
+MdChipSet.styles = [chip_set_styles_css_styles];
+MdChipSet = __decorate([
+    t('md-chip-set')
+], MdChipSet);
+//# sourceMappingURL=chip-set.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/chips/internal/multi-action-chip.js
 /**
  * @license
@@ -3232,18 +3558,19 @@ class MultiActionChip extends Chip {
 
 
 /** @protected */
-function renderRemoveButton({ ariaLabel, disabled, focusListener, tabbable = false }) {
+function renderRemoveButton({ ariaLabel, disabled, focusListener, tabbable = false, }) {
     return x `
-    <button class="trailing action"
+    <button
+      class="trailing action"
       aria-label=${ariaLabel}
       tabindex=${!tabbable ? -1 : T}
       @click=${handleRemoveClick}
-      @focus=${focusListener}
-    >
+      @focus=${focusListener}>
       <md-focus-ring part="trailing-focus-ring"></md-focus-ring>
       <md-ripple ?disabled=${disabled}></md-ripple>
       <svg class="trailing icon" viewBox="0 96 960 960" aria-hidden="true">
-        <path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+        <path
+          d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
       </svg>
       <span class="touch"></span>
     </button>
@@ -3276,6 +3603,8 @@ function handleRemoveClick(event) {
 
 /**
  * A filter chip component.
+ *
+ * @fires remove {Event} Dispatched when the remove button is clicked.
  */
 class FilterChip extends MultiActionChip {
     constructor() {
@@ -3298,13 +3627,15 @@ class FilterChip extends MultiActionChip {
     renderPrimaryAction(content) {
         const { ariaLabel } = this;
         return x `
-      <button class="primary action"
+      <button
+        class="primary action"
         id="button"
         aria-label=${ariaLabel || T}
         aria-pressed=${this.selected}
         ?disabled=${this.disabled && !this.alwaysFocusable}
         @click=${this.handleClick}
-      >${content}</button>
+        >${content}</button
+      >
     `;
     }
     renderLeadingIcon() {
@@ -3313,7 +3644,8 @@ class FilterChip extends MultiActionChip {
         }
         return x `
       <svg class="checkmark" viewBox="0 0 18 18" aria-hidden="true">
-        <path d="M6.75012 12.1274L3.62262 8.99988L2.55762 10.0574L6.75012 14.2499L15.7501 5.24988L14.6926 4.19238L6.75012 12.1274Z" />
+        <path
+          d="M6.75012 12.1274L3.62262 8.99988L2.55762 10.0574L6.75012 14.2499L15.7501 5.24988L14.6926 4.19238L6.75012 12.1274Z" />
       </svg>
     `;
     }
@@ -3322,7 +3654,7 @@ class FilterChip extends MultiActionChip {
             return renderRemoveButton({
                 focusListener,
                 ariaLabel: this.ariaLabelRemove,
-                disabled: this.disabled
+                disabled: this.disabled,
             });
         }
         return T;
@@ -3337,11 +3669,12 @@ class FilterChip extends MultiActionChip {
         if (this.disabled) {
             return;
         }
+        this.selected = !this.selected;
         const preventDefault = !redispatchEvent(this, event);
         if (preventDefault) {
+            this.selected = !this.selected;
             return;
         }
-        this.selected = !this.selected;
     }
 }
 __decorate([
@@ -3413,7 +3746,11 @@ const trailing_icon_styles_css_styles = i `.trailing.action{align-items:center;j
 let MdFilterChip = class MdFilterChip extends FilterChip {
 };
 MdFilterChip.styles = [
-    internal_shared_styles_css_styles, internal_elevated_styles_css_styles, trailing_icon_styles_css_styles, selectable_styles_css_styles, filter_styles_css_styles
+    internal_shared_styles_css_styles,
+    internal_elevated_styles_css_styles,
+    trailing_icon_styles_css_styles,
+    selectable_styles_css_styles,
+    filter_styles_css_styles,
 ];
 MdFilterChip = __decorate([
     t('md-filter-chip')
@@ -3432,6 +3769,8 @@ MdFilterChip = __decorate([
 
 /**
  * An input chip component.
+ *
+ * @fires remove {Event} Dispatched when the remove button is clicked.
  */
 class InputChip extends MultiActionChip {
     constructor() {
@@ -3478,12 +3817,14 @@ class InputChip extends MultiActionChip {
         const { ariaLabel } = this;
         if (this.href) {
             return x `
-        <a class="primary action"
+        <a
+          class="primary action"
           id="link"
           aria-label=${ariaLabel || T}
           href=${this.href}
           target=${this.target || T}
-        >${content}</a>
+          >${content}</a
+        >
       `;
         }
         if (this.removeOnly) {
@@ -3494,12 +3835,14 @@ class InputChip extends MultiActionChip {
       `;
         }
         return x `
-      <button class="primary action"
+      <button
+        class="primary action"
         id="button"
         aria-label=${ariaLabel || T}
         ?disabled=${this.disabled && !this.alwaysFocusable}
         type="button"
-      >${content}</button>
+        >${content}</button
+      >
     `;
     }
     renderTrailingAction(focusListener) {
@@ -3561,7 +3904,12 @@ const input_styles_css_styles = i `:host{--_container-height: var(--md-input-chi
  */
 let MdInputChip = class MdInputChip extends InputChip {
 };
-MdInputChip.styles = [internal_shared_styles_css_styles, trailing_icon_styles_css_styles, selectable_styles_css_styles, input_styles_css_styles];
+MdInputChip.styles = [
+    internal_shared_styles_css_styles,
+    trailing_icon_styles_css_styles,
+    selectable_styles_css_styles,
+    input_styles_css_styles,
+];
 MdInputChip = __decorate([
     t('md-input-chip')
 ], MdInputChip);
@@ -3616,170 +3964,6 @@ MdSuggestionChip = __decorate([
     t('md-suggestion-chip')
 ], MdSuggestionChip);
 //# sourceMappingURL=suggestion-chip.js.map
-;// CONCATENATED MODULE: ./node_modules/@material/web/chips/internal/chip-set.js
-/**
- * @license
- * Copyright 2023 Google LLC
- * SPDX-License-Identifier: Apache-2.0
- */
-
-
-
-
-
-/**
- * A chip set component.
- */
-class ChipSet extends lit_element_s {
-    get chips() {
-        return this.childElements.filter((child) => child instanceof Chip);
-    }
-    constructor() {
-        super();
-        this.internals = polyfillElementInternalsAria(this, this /* needed for closure */.attachInternals());
-        if (!is_server_o) {
-            this.addEventListener('focusin', this.updateTabIndices.bind(this));
-            this.addEventListener('update-focus', this.updateTabIndices.bind(this));
-            this.addEventListener('keydown', this.handleKeyDown.bind(this));
-            this.internals.role = 'toolbar';
-        }
-    }
-    render() {
-        return x `<slot @slotchange=${this.updateTabIndices}></slot>`;
-    }
-    handleKeyDown(event) {
-        const isLeft = event.key === 'ArrowLeft';
-        const isRight = event.key === 'ArrowRight';
-        const isHome = event.key === 'Home';
-        const isEnd = event.key === 'End';
-        // Ignore non-navigation keys
-        if (!isLeft && !isRight && !isHome && !isEnd) {
-            return;
-        }
-        const { chips } = this;
-        // Don't try to select another chip if there aren't any.
-        if (chips.length < 2) {
-            return;
-        }
-        // Prevent default interactions, such as scrolling.
-        event.preventDefault();
-        if (isHome || isEnd) {
-            const index = isHome ? 0 : chips.length - 1;
-            chips[index].focus({ trailing: isEnd });
-            this.updateTabIndices();
-            return;
-        }
-        // Check if moving forwards or backwards
-        const isRtl = getComputedStyle(this).direction === 'rtl';
-        const forwards = isRtl ? isLeft : isRight;
-        const focusedChip = chips.find(chip => chip.matches(':focus-within'));
-        if (!focusedChip) {
-            // If there is not already a chip focused, select the first or last chip
-            // based on the direction we're traveling.
-            const nextChip = forwards ? chips[0] : chips[chips.length - 1];
-            nextChip.focus({ trailing: !forwards });
-            this.updateTabIndices();
-            return;
-        }
-        const currentIndex = chips.indexOf(focusedChip);
-        let nextIndex = forwards ? currentIndex + 1 : currentIndex - 1;
-        // Search for the next sibling that is not disabled to select.
-        // If we return to the host index, there is nothing to select.
-        while (nextIndex !== currentIndex) {
-            if (nextIndex >= chips.length) {
-                // Return to start if moving past the last item.
-                nextIndex = 0;
-            }
-            else if (nextIndex < 0) {
-                // Go to end if moving before the first item.
-                nextIndex = chips.length - 1;
-            }
-            // Check if the next sibling is disabled. If so,
-            // move the index and continue searching.
-            //
-            // Some toolbar items may be focusable when disabled for increased
-            // visibility.
-            const nextChip = chips[nextIndex];
-            if (nextChip.disabled && !nextChip.alwaysFocusable) {
-                if (forwards) {
-                    nextIndex++;
-                }
-                else {
-                    nextIndex--;
-                }
-                continue;
-            }
-            nextChip.focus({ trailing: !forwards });
-            this.updateTabIndices();
-            break;
-        }
-    }
-    updateTabIndices() {
-        // The chip that should be focusable is either the chip that currently has
-        // focus or the first chip that can be focused.
-        const { chips } = this;
-        let chipToFocus;
-        for (const chip of chips) {
-            const isChipFocusable = chip.alwaysFocusable || !chip.disabled;
-            const chipIsFocused = chip.matches(':focus-within');
-            if (chipIsFocused && isChipFocusable) {
-                // Found the first chip that is actively focused. This overrides the
-                // first focusable chip found.
-                chipToFocus = chip;
-                continue;
-            }
-            if (isChipFocusable && !chipToFocus) {
-                chipToFocus = chip;
-            }
-            // Disable non-focused chips. If we disable all of them, we'll grant focus
-            // to the first focusable child that was found.
-            chip.tabIndex = -1;
-        }
-        if (chipToFocus) {
-            chipToFocus.tabIndex = 0;
-        }
-    }
-}
-(() => {
-    setupHostAria(ChipSet, { focusable: false });
-})();
-__decorate([
-    query_assigned_elements_o()
-], ChipSet.prototype, "childElements", void 0);
-//# sourceMappingURL=chip-set.js.map
-;// CONCATENATED MODULE: ./node_modules/@material/web/chips/internal/chip-set-styles.css.js
-/**
-  * @license
-  * Copyright 2022 Google LLC
-  * SPDX-License-Identifier: Apache-2.0
-  */
-
-const chip_set_styles_css_styles = i `:host{display:flex;flex-wrap:wrap;gap:8px}/*# sourceMappingURL=chip-set-styles.css.map */
-`;
-//# sourceMappingURL=chip-set-styles.css.js.map
-;// CONCATENATED MODULE: ./node_modules/@material/web/chips/chip-set.js
-/**
- * @license
- * Copyright 2023 Google LLC
- * SPDX-License-Identifier: Apache-2.0
- */
-
-
-
-
-/**
- * TODO(b/243982145): add docs
- *
- * @final
- * @suppress {visibility}
- */
-let MdChipSet = class MdChipSet extends ChipSet {
-};
-MdChipSet.styles = [chip_set_styles_css_styles];
-MdChipSet = __decorate([
-    t('md-chip-set')
-], MdChipSet);
-//# sourceMappingURL=chip-set.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/divider/internal/divider.js
 /**
  * @license
@@ -3871,20 +4055,21 @@ const DIALOG_DEFAULT_OPEN_ANIMATION = {
         [
             // Dialog slide down
             [{ 'transform': 'translateY(-50px)' }, { 'transform': 'translateY(0)' }],
-            { duration: 500, easing: EASING.EMPHASIZED }
+            { duration: 500, easing: EASING.EMPHASIZED },
         ],
     ],
     scrim: [
         [
             // Scrim fade in
-            [{ 'opacity': 0 }, { 'opacity': 0.32 }], { duration: 500, easing: 'linear' }
+            [{ 'opacity': 0 }, { 'opacity': 0.32 }],
+            { duration: 500, easing: 'linear' },
         ],
     ],
     container: [
         [
             // Container fade in
             [{ 'opacity': 0 }, { 'opacity': 1 }],
-            { duration: 50, easing: 'linear', pseudoElement: '::before' }
+            { duration: 50, easing: 'linear', pseudoElement: '::before' },
         ],
         [
             // Container grow
@@ -3900,21 +4085,21 @@ const DIALOG_DEFAULT_OPEN_ANIMATION = {
         [
             // Headline fade in
             [{ 'opacity': 0 }, { 'opacity': 0, offset: 0.2 }, { 'opacity': 1 }],
-            { duration: 250, easing: 'linear', fill: 'forwards' }
+            { duration: 250, easing: 'linear', fill: 'forwards' },
         ],
     ],
     content: [
         [
             // Content fade in
             [{ 'opacity': 0 }, { 'opacity': 0, offset: 0.2 }, { 'opacity': 1 }],
-            { duration: 250, easing: 'linear', fill: 'forwards' }
+            { duration: 250, easing: 'linear', fill: 'forwards' },
         ],
     ],
     actions: [
         [
             // Actions fade in
             [{ 'opacity': 0 }, { 'opacity': 0, offset: 0.5 }, { 'opacity': 1 }],
-            { duration: 300, easing: 'linear', fill: 'forwards' }
+            { duration: 300, easing: 'linear', fill: 'forwards' },
         ],
     ],
 };
@@ -3926,13 +4111,14 @@ const DIALOG_DEFAULT_CLOSE_ANIMATION = {
         [
             // Dialog slide up
             [{ 'transform': 'translateY(0)' }, { 'transform': 'translateY(-50px)' }],
-            { duration: 150, easing: EASING.EMPHASIZED_ACCELERATE }
+            { duration: 150, easing: EASING.EMPHASIZED_ACCELERATE },
         ],
     ],
     scrim: [
         [
             // Scrim fade out
-            [{ 'opacity': 0.32 }, { 'opacity': 0 }], { duration: 150, easing: 'linear' }
+            [{ 'opacity': 0.32 }, { 'opacity': 0 }],
+            { duration: 150, easing: 'linear' },
         ],
     ],
     container: [
@@ -3949,27 +4135,27 @@ const DIALOG_DEFAULT_CLOSE_ANIMATION = {
             // Container fade out
             [{ 'opacity': '1' }, { 'opacity': '0' }],
             { delay: 100, duration: 50, easing: 'linear', pseudoElement: '::before' },
-        ]
+        ],
     ],
     headline: [
         [
             // Headline fade out
             [{ 'opacity': 1 }, { 'opacity': 0 }],
-            { duration: 100, easing: 'linear', fill: 'forwards' }
+            { duration: 100, easing: 'linear', fill: 'forwards' },
         ],
     ],
     content: [
         [
             // Content fade out
             [{ 'opacity': 1 }, { 'opacity': 0 }],
-            { duration: 100, easing: 'linear', fill: 'forwards' }
+            { duration: 100, easing: 'linear', fill: 'forwards' },
         ],
     ],
     actions: [
         [
             // Actions fade out
             [{ 'opacity': 1 }, { 'opacity': 0 }],
-            { duration: 100, easing: 'linear', fill: 'forwards' }
+            { duration: 100, easing: 'linear', fill: 'forwards' },
         ],
     ],
 };
@@ -3991,12 +4177,12 @@ const DIALOG_DEFAULT_CLOSE_ANIMATION = {
 /**
  * A dialog component.
  *
- * @fires open Dispatched when the dialog is opening before any animations.
- * @fires opened Dispatched when the dialog has opened after any animations.
- * @fires close Dispatched when the dialog is closing before any animations.
- * @fires closed Dispatched when the dialog has closed after any animations.
- * @fires cancel Dispatched when the dialog has been canceled by clicking on the
- *     scrim or pressing Escape.
+ * @fires open {Event} Dispatched when the dialog is opening before any animations.
+ * @fires opened {Event} Dispatched when the dialog has opened after any animations.
+ * @fires close {Event} Dispatched when the dialog is closing before any animations.
+ * @fires closed {Event} Dispatched when the dialog has closed after any animations.
+ * @fires cancel {Event} Dispatched when the dialog has been canceled by clicking
+ * on the scrim or pressing Escape.
  */
 class Dialog extends lit_element_s {
     /**
@@ -4158,18 +4344,16 @@ class Dialog extends lit_element_s {
         role=${this.type === 'alert' ? 'alertdialog' : T}
         @cancel=${this.handleCancel}
         @click=${this.handleDialogClick}
-        .returnValue=${this.returnValue || T}
-      >
-        <div class="container"
-          @click=${this.handleContentClick}
-        >
+        .returnValue=${this.returnValue || T}>
+        <div class="container" @click=${this.handleContentClick}>
           <div class="headline">
             <div class="icon" aria-hidden="true">
               <slot name="icon" @slotchange=${this.handleIconChange}></slot>
             </div>
             <h2 id="headline" aria-hidden=${!this.hasHeadline || T}>
-              <slot name="headline"
-                  @slotchange=${this.handleHeadlineChange}></slot>
+              <slot
+                name="headline"
+                @slotchange=${this.handleHeadlineChange}></slot>
             </h2>
             <md-divider></md-divider>
           </div>
@@ -4182,15 +4366,14 @@ class Dialog extends lit_element_s {
           </div>
           <div class="actions">
             <md-divider></md-divider>
-            <slot name="actions"
-              @slotchange=${this.handleActionsChange}></slot>
+            <slot name="actions" @slotchange=${this.handleActionsChange}></slot>
           </div>
         </div>
       </dialog>
     `;
     }
     firstUpdated() {
-        this.intersectionObserver = new IntersectionObserver(entries => {
+        this.intersectionObserver = new IntersectionObserver((entries) => {
             for (const entry of entries) {
                 this.handleAnchorIntersection(entry);
             }
@@ -4245,11 +4428,14 @@ class Dialog extends lit_element_s {
         if (!dialog || !scrim || !container || !headline || !content || !actions) {
             return;
         }
-        const { container: containerAnimate, dialog: dialogAnimate, scrim: scrimAnimate, headline: headlineAnimate, content: contentAnimate, actions: actionsAnimate } = animation;
+        const { container: containerAnimate, dialog: dialogAnimate, scrim: scrimAnimate, headline: headlineAnimate, content: contentAnimate, actions: actionsAnimate, } = animation;
         const elementAndAnimation = [
-            [dialog, dialogAnimate ?? []], [scrim, scrimAnimate ?? []],
-            [container, containerAnimate ?? []], [headline, headlineAnimate ?? []],
-            [content, contentAnimate ?? []], [actions, actionsAnimate ?? []]
+            [dialog, dialogAnimate ?? []],
+            [scrim, scrimAnimate ?? []],
+            [container, containerAnimate ?? []],
+            [headline, headlineAnimate ?? []],
+            [content, contentAnimate ?? []],
+            [actions, actionsAnimate ?? []],
         ];
         const animations = [];
         for (const [element, animation] of elementAndAnimation) {
@@ -4257,7 +4443,7 @@ class Dialog extends lit_element_s {
                 animations.push(element.animate(...animateArgs));
             }
         }
-        await Promise.all(animations.map(animation => animation.finished));
+        await Promise.all(animations.map((animation) => animation.finished));
     }
     handleHeadlineChange(event) {
         const slot = event.target;
@@ -4281,7 +4467,7 @@ class Dialog extends lit_element_s {
         }
     }
     getIsConnectedPromise() {
-        return new Promise(resolve => {
+        return new Promise((resolve) => {
             this.isConnectedPromiseResolve = resolve;
         });
     }
@@ -4292,7 +4478,7 @@ class Dialog extends lit_element_s {
 /** @nocollapse */
 Dialog.shadowRootOptions = {
     ...lit_element_s.shadowRootOptions,
-    delegatesFocus: true
+    delegatesFocus: true,
 };
 __decorate([
     property_n({ type: Boolean })
@@ -4353,7 +4539,7 @@ __decorate([
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const dialog_styles_css_styles = i `:host{--_container-color: var(--md-dialog-container-color, var(--md-sys-color-surface-container-high, #ece6f0));--_container-shape: var(--md-dialog-container-shape, 28px);--_headline-color: var(--md-dialog-headline-color, var(--md-sys-color-on-surface, #1d1b20));--_headline-font: var(--md-dialog-headline-font, var(--md-sys-typescale-headline-small-font, var(--md-ref-typeface-brand, Roboto)));--_headline-line-height: var(--md-dialog-headline-line-height, var(--md-sys-typescale-headline-small-line-height, 2rem));--_headline-size: var(--md-dialog-headline-size, var(--md-sys-typescale-headline-small-size, 1.5rem));--_headline-weight: var(--md-dialog-headline-weight, var(--md-sys-typescale-headline-small-weight, var(--md-ref-typeface-weight-regular, 400)));--_supporting-text-color: var(--md-dialog-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_supporting-text-font: var(--md-dialog-supporting-text-font, var(--md-sys-typescale-body-medium-font, var(--md-ref-typeface-plain, Roboto)));--_supporting-text-line-height: var(--md-dialog-supporting-text-line-height, var(--md-sys-typescale-body-medium-line-height, 1.25rem));--_supporting-text-size: var(--md-dialog-supporting-text-size, var(--md-sys-typescale-body-medium-size, 0.875rem));--_supporting-text-weight: var(--md-dialog-supporting-text-weight, var(--md-sys-typescale-body-medium-weight, var(--md-ref-typeface-weight-regular, 400)));--_icon-color: var(--md-dialog-icon-color, var(--md-sys-color-secondary, #625b71));--_icon-size: var(--md-dialog-icon-size, 24px);--_container-shape-start-start: var( --md-dialog-container-shape-start-start, var(--_container-shape) );--_container-shape-start-end: var( --md-dialog-container-shape-start-end, var(--_container-shape) );--_container-shape-end-end: var( --md-dialog-container-shape-end-end, var(--_container-shape) );--_container-shape-end-start: var( --md-dialog-container-shape-end-start, var(--_container-shape) );border-start-start-radius:var(--_container-shape-start-start);border-start-end-radius:var(--_container-shape-start-end);border-end-end-radius:var(--_container-shape-end-end);border-end-start-radius:var(--_container-shape-end-start);display:contents;margin:auto;max-height:min(560px,100% - 48px);max-width:min(560px,100% - 48px);min-height:140px;min-width:280px;position:fixed;height:fit-content;width:fit-content}dialog{background:rgba(0,0,0,0);border:none;border-radius:inherit;flex-direction:column;height:inherit;margin:inherit;max-height:inherit;max-width:inherit;min-height:inherit;min-width:inherit;outline:none;overflow:visible;padding:0;width:inherit}dialog[open]{display:flex}::backdrop{background:none}.scrim{background:var(--md-sys-color-scrim, #000);display:none;inset:0;opacity:32%;pointer-events:none;position:fixed;z-index:1}:host([open]) .scrim{display:flex}h2{all:unset;align-self:stretch}.headline{align-items:center;color:var(--_headline-color);display:flex;flex-direction:column;font-family:var(--_headline-font);font-size:var(--_headline-size);line-height:var(--_headline-line-height);font-weight:var(--_headline-weight);position:relative}slot[name=headline]::slotted(*){align-items:center;align-self:stretch;box-sizing:border-box;display:flex;gap:8px;padding:24px 24px 0}.icon{display:flex}slot[name=icon]::slotted(*){color:var(--_icon-color);fill:currentColor;font-size:var(--_icon-size);padding-top:24px;height:var(--_icon-size);width:var(--_icon-size)}.has-icon slot[name=headline]::slotted(*){justify-content:center;padding-top:16px}.scrollable slot[name=headline]::slotted(*){padding-bottom:16px}.scrollable.has-headline slot[name=content]::slotted(*){padding-top:8px}.container{border-radius:inherit;display:flex;flex-direction:column;flex-grow:1;overflow:hidden;position:relative;transform-origin:top}.container::before{background:var(--_container-color);border-radius:inherit;content:"";inset:0;position:absolute}.scroller{display:flex;flex:1;flex-direction:column;overflow:hidden;z-index:1}.scrollable .scroller{overflow-y:scroll}.content{color:var(--_supporting-text-color);font-family:var(--_supporting-text-font);font-size:var(--_supporting-text-size);line-height:var(--_supporting-text-line-height);font-weight:var(--_supporting-text-weight);height:min-content;position:relative}slot[name=content]::slotted(*){box-sizing:border-box;padding:24px}.anchor{position:absolute}.top.anchor{top:0}.bottom.anchor{bottom:0}.actions{position:relative}slot[name=actions]::slotted(*){box-sizing:border-box;display:flex;gap:8px;justify-content:flex-end;padding:16px 24px 24px}.has-actions slot[name=content]::slotted(*){padding-bottom:8px}md-divider{display:none;position:absolute}.has-headline.show-top-divider .headline md-divider,.has-actions.show-bottom-divider .actions md-divider{display:flex}.headline md-divider{bottom:0}.actions md-divider{top:0}@media(forced-colors: active){dialog{outline:2px solid WindowText}}/*# sourceMappingURL=dialog-styles.css.map */
+const dialog_styles_css_styles = i `:host{--_container-color: var(--md-dialog-container-color, var(--md-sys-color-surface-container-high, #ece6f0));--_container-shape: var(--md-dialog-container-shape, 28px);--_headline-color: var(--md-dialog-headline-color, var(--md-sys-color-on-surface, #1d1b20));--_headline-font: var(--md-dialog-headline-font, var(--md-sys-typescale-headline-small-font, var(--md-ref-typeface-brand, Roboto)));--_headline-line-height: var(--md-dialog-headline-line-height, var(--md-sys-typescale-headline-small-line-height, 2rem));--_headline-size: var(--md-dialog-headline-size, var(--md-sys-typescale-headline-small-size, 1.5rem));--_headline-weight: var(--md-dialog-headline-weight, var(--md-sys-typescale-headline-small-weight, var(--md-ref-typeface-weight-regular, 400)));--_supporting-text-color: var(--md-dialog-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_supporting-text-font: var(--md-dialog-supporting-text-font, var(--md-sys-typescale-body-medium-font, var(--md-ref-typeface-plain, Roboto)));--_supporting-text-line-height: var(--md-dialog-supporting-text-line-height, var(--md-sys-typescale-body-medium-line-height, 1.25rem));--_supporting-text-size: var(--md-dialog-supporting-text-size, var(--md-sys-typescale-body-medium-size, 0.875rem));--_supporting-text-weight: var(--md-dialog-supporting-text-weight, var(--md-sys-typescale-body-medium-weight, var(--md-ref-typeface-weight-regular, 400)));--_icon-color: var(--md-dialog-icon-color, var(--md-sys-color-secondary, #625b71));--_icon-size: var(--md-dialog-icon-size, 24px);--_container-shape-start-start: var( --md-dialog-container-shape-start-start, var(--_container-shape) );--_container-shape-start-end: var( --md-dialog-container-shape-start-end, var(--_container-shape) );--_container-shape-end-end: var( --md-dialog-container-shape-end-end, var(--_container-shape) );--_container-shape-end-start: var( --md-dialog-container-shape-end-start, var(--_container-shape) );border-start-start-radius:var(--_container-shape-start-start);border-start-end-radius:var(--_container-shape-start-end);border-end-end-radius:var(--_container-shape-end-end);border-end-start-radius:var(--_container-shape-end-start);display:contents;margin:auto;max-height:min(560px,100% - 48px);max-width:min(560px,100% - 48px);min-height:140px;min-width:280px;position:fixed;height:fit-content;width:fit-content}dialog{background:rgba(0,0,0,0);border:none;border-radius:inherit;flex-direction:column;height:inherit;margin:inherit;max-height:inherit;max-width:inherit;min-height:inherit;min-width:inherit;outline:none;overflow:visible;padding:0;width:inherit}dialog[open]{display:flex}::backdrop{background:none}.scrim{background:var(--md-sys-color-scrim, #000);display:none;inset:0;opacity:32%;pointer-events:none;position:fixed;z-index:1}:host([open]) .scrim{display:flex}h2{all:unset;align-self:stretch}.headline{align-items:center;color:var(--_headline-color);display:flex;flex-direction:column;font-family:var(--_headline-font);font-size:var(--_headline-size);line-height:var(--_headline-line-height);font-weight:var(--_headline-weight);position:relative}slot[name=headline]::slotted(*){align-items:center;align-self:stretch;box-sizing:border-box;display:flex;gap:8px;padding:24px 24px 0}.icon{display:flex}slot[name=icon]::slotted(*){color:var(--_icon-color);fill:currentColor;font-size:var(--_icon-size);margin-top:24px;height:var(--_icon-size);width:var(--_icon-size)}.has-icon slot[name=headline]::slotted(*){justify-content:center;padding-top:16px}.scrollable slot[name=headline]::slotted(*){padding-bottom:16px}.scrollable.has-headline slot[name=content]::slotted(*){padding-top:8px}.container{border-radius:inherit;display:flex;flex-direction:column;flex-grow:1;overflow:hidden;position:relative;transform-origin:top}.container::before{background:var(--_container-color);border-radius:inherit;content:"";inset:0;position:absolute}.scroller{display:flex;flex:1;flex-direction:column;overflow:hidden;z-index:1}.scrollable .scroller{overflow-y:scroll}.content{color:var(--_supporting-text-color);font-family:var(--_supporting-text-font);font-size:var(--_supporting-text-size);line-height:var(--_supporting-text-line-height);font-weight:var(--_supporting-text-weight);height:min-content;position:relative}slot[name=content]::slotted(*){box-sizing:border-box;padding:24px}.anchor{position:absolute}.top.anchor{top:0}.bottom.anchor{bottom:0}.actions{position:relative}slot[name=actions]::slotted(*){box-sizing:border-box;display:flex;gap:8px;justify-content:flex-end;padding:16px 24px 24px}.has-actions slot[name=content]::slotted(*){padding-bottom:8px}md-divider{display:none;position:absolute}.has-headline.show-top-divider .headline md-divider,.has-actions.show-bottom-divider .actions md-divider{display:flex}.headline md-divider{bottom:0}.actions md-divider{top:0}@media(forced-colors: active){dialog{outline:2px solid WindowText}}/*# sourceMappingURL=dialog-styles.css.map */
 `;
 //# sourceMappingURL=dialog-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/dialog/dialog.js
@@ -4437,14 +4623,11 @@ class SharedFab extends lit_element_s {
         return x `
       <button
         class="fab ${class_map_e(this.getRenderClasses())}"
-        aria-label=${ariaLabel || T}
-      >
+        aria-label=${ariaLabel || T}>
         <md-elevation></md-elevation>
         <md-focus-ring part="focus-ring"></md-focus-ring>
         <md-ripple class="ripple"></md-ripple>
-        ${this.renderTouchTarget()}
-        ${this.renderIcon()}
-        ${this.renderLabel()}
+        ${this.renderTouchTarget()} ${this.renderIcon()} ${this.renderLabel()}
       </button>
     `;
     }
@@ -4466,12 +4649,14 @@ class SharedFab extends lit_element_s {
     renderIcon() {
         const { ariaLabel } = this;
         return x `<span class="icon">
-        <slot
-            name="icon"
-            aria-hidden=${ariaLabel || this.label ? 'true' : T}>
-          <span></span>
-        </slot>
-      </span>`;
+      <slot
+        name="icon"
+        aria-hidden=${ariaLabel || this.label
+            ? 'true'
+            : T}>
+        <span></span>
+      </slot>
+    </span>`;
     }
 }
 (() => {
@@ -4616,7 +4801,7 @@ MdBrandedFab = __decorate([
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const fab_styles_css_styles = i `:host{--_container-color: var(--md-fab-container-color, var(--md-sys-color-surface-container-high, #ece6f0));--_container-elevation: var(--md-fab-container-elevation, 3);--_container-height: var(--md-fab-container-height, 56px);--_container-shadow-color: var(--md-fab-container-shadow-color, var(--md-sys-color-shadow, #000));--_container-shape: var(--md-fab-container-shape, 16px);--_container-width: var(--md-fab-container-width, 56px);--_focus-container-elevation: var(--md-fab-focus-container-elevation, 3);--_focus-icon-color: var(--md-fab-focus-icon-color, var(--md-sys-color-primary, #6750a4));--_hover-container-elevation: var(--md-fab-hover-container-elevation, 4);--_hover-icon-color: var(--md-fab-hover-icon-color, var(--md-sys-color-primary, #6750a4));--_hover-state-layer-color: var(--md-fab-hover-state-layer-color, var(--md-sys-color-primary, #6750a4));--_hover-state-layer-opacity: var(--md-fab-hover-state-layer-opacity, 0.08);--_icon-color: var(--md-fab-icon-color, var(--md-sys-color-primary, #6750a4));--_icon-size: var(--md-fab-icon-size, 24px);--_lowered-container-color: var(--md-fab-lowered-container-color, var(--md-sys-color-surface-container-low, #f7f2fa));--_lowered-container-elevation: var(--md-fab-lowered-container-elevation, 1);--_lowered-focus-container-elevation: var(--md-fab-lowered-focus-container-elevation, 1);--_lowered-hover-container-elevation: var(--md-fab-lowered-hover-container-elevation, 2);--_lowered-pressed-container-elevation: var(--md-fab-lowered-pressed-container-elevation, 1);--_pressed-container-elevation: var(--md-fab-pressed-container-elevation, 3);--_pressed-icon-color: var(--md-fab-pressed-icon-color, var(--md-sys-color-primary, #6750a4));--_pressed-state-layer-color: var(--md-fab-pressed-state-layer-color, var(--md-sys-color-primary, #6750a4));--_pressed-state-layer-opacity: var(--md-fab-pressed-state-layer-opacity, 0.12);--_focus-label-text-color: var(--md-fab-focus-label-text-color, var(--md-sys-color-primary, #6750a4));--_hover-label-text-color: var(--md-fab-hover-label-text-color, var(--md-sys-color-primary, #6750a4));--_label-text-color: var(--md-fab-label-text-color, var(--md-sys-color-primary, #6750a4));--_label-text-font: var(--md-fab-label-text-font, var(--md-sys-typescale-label-large-font, var(--md-ref-typeface-plain, Roboto)));--_label-text-line-height: var(--md-fab-label-text-line-height, var(--md-sys-typescale-label-large-line-height, 1.25rem));--_label-text-size: var(--md-fab-label-text-size, var(--md-sys-typescale-label-large-size, 0.875rem));--_label-text-weight: var(--md-fab-label-text-weight, var(--md-sys-typescale-label-large-weight, var(--md-ref-typeface-weight-medium, 500)));--_large-container-height: var(--md-fab-large-container-height, 96px);--_large-container-shape: var(--md-fab-large-container-shape, 28px);--_large-container-width: var(--md-fab-large-container-width, 96px);--_large-icon-size: var(--md-fab-large-icon-size, 36px);--_pressed-label-text-color: var(--md-fab-pressed-label-text-color, var(--md-sys-color-primary, #6750a4));--_primary-container-color: var(--md-fab-primary-container-color, var(--md-sys-color-primary-container, #eaddff));--_primary-focus-icon-color: var(--md-fab-primary-focus-icon-color, var(--md-sys-color-on-primary-container, #21005d));--_primary-focus-label-text-color: var(--md-fab-primary-focus-label-text-color, var(--md-sys-color-on-primary-container, #21005d));--_primary-hover-icon-color: var(--md-fab-primary-hover-icon-color, var(--md-sys-color-on-primary-container, #21005d));--_primary-hover-label-text-color: var(--md-fab-primary-hover-label-text-color, var(--md-sys-color-on-primary-container, #21005d));--_primary-hover-state-layer-color: var(--md-fab-primary-hover-state-layer-color, var(--md-sys-color-on-primary-container, #21005d));--_primary-icon-color: var(--md-fab-primary-icon-color, var(--md-sys-color-on-primary-container, #21005d));--_primary-label-text-color: var(--md-fab-primary-label-text-color, var(--md-sys-color-on-primary-container, #21005d));--_primary-pressed-icon-color: var(--md-fab-primary-pressed-icon-color, var(--md-sys-color-on-primary-container, #21005d));--_primary-pressed-label-text-color: var(--md-fab-primary-pressed-label-text-color, var(--md-sys-color-on-primary-container, #21005d));--_primary-pressed-state-layer-color: var(--md-fab-primary-pressed-state-layer-color, var(--md-sys-color-on-primary-container, #21005d));--_secondary-container-color: var(--md-fab-secondary-container-color, var(--md-sys-color-secondary-container, #e8def8));--_secondary-focus-icon-color: var(--md-fab-secondary-focus-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_secondary-focus-label-text-color: var(--md-fab-secondary-focus-label-text-color, var(--md-sys-color-on-secondary-container, #1d192b));--_secondary-hover-icon-color: var(--md-fab-secondary-hover-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_secondary-hover-label-text-color: var(--md-fab-secondary-hover-label-text-color, var(--md-sys-color-on-secondary-container, #1d192b));--_secondary-hover-state-layer-color: var(--md-fab-secondary-hover-state-layer-color, var(--md-sys-color-on-secondary-container, #1d192b));--_secondary-icon-color: var(--md-fab-secondary-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_secondary-label-text-color: var(--md-fab-secondary-label-text-color, var(--md-sys-color-on-secondary-container, #1d192b));--_secondary-pressed-icon-color: var(--md-fab-secondary-pressed-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_secondary-pressed-label-text-color: var(--md-fab-secondary-pressed-label-text-color, var(--md-sys-color-on-secondary-container, #1d192b));--_secondary-pressed-state-layer-color: var(--md-fab-secondary-pressed-state-layer-color, var(--md-sys-color-on-secondary-container, #1d192b));--_small-container-height: var(--md-fab-small-container-height, 40px);--_small-container-shape: var(--md-fab-small-container-shape, 12px);--_small-container-width: var(--md-fab-small-container-width, 40px);--_small-icon-size: var(--md-fab-small-icon-size, 24px);--_tertiary-container-color: var(--md-fab-tertiary-container-color, var(--md-sys-color-tertiary-container, #ffd8e4));--_tertiary-focus-icon-color: var(--md-fab-tertiary-focus-icon-color, var(--md-sys-color-on-tertiary-container, #31111d));--_tertiary-focus-label-text-color: var(--md-fab-tertiary-focus-label-text-color, var(--md-sys-color-on-tertiary-container, #31111d));--_tertiary-hover-icon-color: var(--md-fab-tertiary-hover-icon-color, var(--md-sys-color-on-tertiary-container, #31111d));--_tertiary-hover-label-text-color: var(--md-fab-tertiary-hover-label-text-color, var(--md-sys-color-on-tertiary-container, #31111d));--_tertiary-hover-state-layer-color: var(--md-fab-tertiary-hover-state-layer-color, var(--md-sys-color-on-tertiary-container, #31111d));--_tertiary-icon-color: var(--md-fab-tertiary-icon-color, var(--md-sys-color-on-tertiary-container, #31111d));--_tertiary-label-text-color: var(--md-fab-tertiary-label-text-color, var(--md-sys-color-on-tertiary-container, #31111d));--_tertiary-pressed-icon-color: var(--md-fab-tertiary-pressed-icon-color, var(--md-sys-color-on-tertiary-container, #31111d));--_tertiary-pressed-label-text-color: var(--md-fab-tertiary-pressed-label-text-color, var(--md-sys-color-on-tertiary-container, #31111d));--_tertiary-pressed-state-layer-color: var(--md-fab-tertiary-pressed-state-layer-color, var(--md-sys-color-on-tertiary-container, #31111d));--_container-shape-start-start: var( --md-fab-container-shape-start-start, var(--_container-shape) );--_container-shape-start-end: var( --md-fab-container-shape-start-end, var(--_container-shape) );--_container-shape-end-end: var( --md-fab-container-shape-end-end, var(--_container-shape) );--_container-shape-end-start: var( --md-fab-container-shape-end-start, var(--_container-shape) );--_large-container-shape-start-start: var( --md-fab-large-container-shape-start-start, var(--_large-container-shape) );--_large-container-shape-start-end: var( --md-fab-large-container-shape-start-end, var(--_large-container-shape) );--_large-container-shape-end-end: var( --md-fab-large-container-shape-end-end, var(--_large-container-shape) );--_large-container-shape-end-start: var( --md-fab-large-container-shape-end-start, var(--_large-container-shape) );--_small-container-shape-start-start: var( --md-fab-small-container-shape-start-start, var(--_small-container-shape) );--_small-container-shape-start-end: var( --md-fab-small-container-shape-start-end, var(--_small-container-shape) );--_small-container-shape-end-end: var( --md-fab-small-container-shape-end-end, var(--_small-container-shape) );--_small-container-shape-end-start: var( --md-fab-small-container-shape-end-start, var(--_small-container-shape) )}:host([size=small][touch-target=wrapper]){margin:max(0px,48px - var(--_small-container-height))}.fab .icon ::slotted(*){color:var(--_icon-color)}.fab:focus{color:var(--_focus-icon-color)}.fab:hover{color:var(--_hover-icon-color)}.fab:active{color:var(--_pressed-icon-color)}.fab.primary{background-color:var(--_primary-container-color);--md-ripple-hover-color: var(--_primary-hover-state-layer-color);--md-ripple-pressed-color: var(--_primary-pressed-state-layer-color)}.fab.primary .icon ::slotted(*){color:var(--_primary-icon-color)}.fab.primary:focus{color:var(--_primary-focus-icon-color)}.fab.primary:hover{color:var(--_primary-hover-icon-color)}.fab.primary:active{color:var(--_primary-pressed-icon-color)}.fab.primary .label{color:var(--_primary-label-text-color)}.fab:hover .fab.primary .label{color:var(--_primary-hover-label-text-color)}.fab:focus .fab.primary .label{color:var(--_primary-focus-label-text-color)}.fab:active .fab.primary .label{color:var(--_primary-pressed-label-text-color)}.fab.secondary{background-color:var(--_secondary-container-color);--md-ripple-hover-color: var(--_secondary-hover-state-layer-color);--md-ripple-pressed-color: var(--_secondary-pressed-state-layer-color)}.fab.secondary .icon ::slotted(*){color:var(--_secondary-icon-color)}.fab.secondary:focus{color:var(--_secondary-focus-icon-color)}.fab.secondary:hover{color:var(--_secondary-hover-icon-color)}.fab.secondary:active{color:var(--_secondary-pressed-icon-color)}.fab.secondary .label{color:var(--_secondary-label-text-color)}.fab:hover .fab.secondary .label{color:var(--_secondary-hover-label-text-color)}.fab:focus .fab.secondary .label{color:var(--_secondary-focus-label-text-color)}.fab:active .fab.secondary .label{color:var(--_secondary-pressed-label-text-color)}.fab.tertiary{background-color:var(--_tertiary-container-color);--md-ripple-hover-color: var(--_tertiary-hover-state-layer-color);--md-ripple-pressed-color: var(--_tertiary-pressed-state-layer-color)}.fab.tertiary .icon ::slotted(*){color:var(--_tertiary-icon-color)}.fab.tertiary:focus{color:var(--_tertiary-focus-icon-color)}.fab.tertiary:hover{color:var(--_tertiary-hover-icon-color)}.fab.tertiary:active{color:var(--_tertiary-pressed-icon-color)}.fab.tertiary .label{color:var(--_tertiary-label-text-color)}.fab:hover .fab.tertiary .label{color:var(--_tertiary-hover-label-text-color)}.fab:focus .fab.tertiary .label{color:var(--_tertiary-focus-label-text-color)}.fab:active .fab.tertiary .label{color:var(--_tertiary-pressed-label-text-color)}.fab.extended slot span{padding-inline-start:4px}.fab.small{width:var(--_small-container-width);height:var(--_small-container-height)}.fab.small .icon ::slotted(*){width:var(--_small-icon-size);height:var(--_small-icon-size);font-size:var(--_small-icon-size)}.fab.small,.fab.small .ripple{border-start-start-radius:var(--_small-container-shape-start-start);border-start-end-radius:var(--_small-container-shape-start-end);border-end-start-radius:var(--_small-container-shape-end-start);border-end-end-radius:var(--_small-container-shape-end-end)}.fab.small md-focus-ring{--md-focus-ring-shape-start-start: var(--_small-container-shape-start-start);--md-focus-ring-shape-start-end: var(--_small-container-shape-start-end);--md-focus-ring-shape-end-end: var(--_small-container-shape-end-end);--md-focus-ring-shape-end-start: var(--_small-container-shape-end-start)}/*# sourceMappingURL=fab-styles.css.map */
+const fab_styles_css_styles = i `:host{--_container-color: var(--md-fab-container-color, var(--md-sys-color-surface-container-high, #ece6f0));--_container-elevation: var(--md-fab-container-elevation, 3);--_container-height: var(--md-fab-container-height, 56px);--_container-shadow-color: var(--md-fab-container-shadow-color, var(--md-sys-color-shadow, #000));--_container-shape: var(--md-fab-container-shape, 16px);--_container-width: var(--md-fab-container-width, 56px);--_focus-container-elevation: var(--md-fab-focus-container-elevation, 3);--_focus-icon-color: var(--md-fab-focus-icon-color, var(--md-sys-color-primary, #6750a4));--_hover-container-elevation: var(--md-fab-hover-container-elevation, 4);--_hover-icon-color: var(--md-fab-hover-icon-color, var(--md-sys-color-primary, #6750a4));--_hover-state-layer-color: var(--md-fab-hover-state-layer-color, var(--md-sys-color-primary, #6750a4));--_hover-state-layer-opacity: var(--md-fab-hover-state-layer-opacity, 0.08);--_icon-color: var(--md-fab-icon-color, var(--md-sys-color-primary, #6750a4));--_icon-size: var(--md-fab-icon-size, 24px);--_lowered-container-color: var(--md-fab-lowered-container-color, var(--md-sys-color-surface-container-low, #f7f2fa));--_lowered-container-elevation: var(--md-fab-lowered-container-elevation, 1);--_lowered-focus-container-elevation: var(--md-fab-lowered-focus-container-elevation, 1);--_lowered-hover-container-elevation: var(--md-fab-lowered-hover-container-elevation, 2);--_lowered-pressed-container-elevation: var(--md-fab-lowered-pressed-container-elevation, 1);--_pressed-container-elevation: var(--md-fab-pressed-container-elevation, 3);--_pressed-icon-color: var(--md-fab-pressed-icon-color, var(--md-sys-color-primary, #6750a4));--_pressed-state-layer-color: var(--md-fab-pressed-state-layer-color, var(--md-sys-color-primary, #6750a4));--_pressed-state-layer-opacity: var(--md-fab-pressed-state-layer-opacity, 0.12);--_focus-label-text-color: var(--md-fab-focus-label-text-color, var(--md-sys-color-primary, #6750a4));--_hover-label-text-color: var(--md-fab-hover-label-text-color, var(--md-sys-color-primary, #6750a4));--_label-text-color: var(--md-fab-label-text-color, var(--md-sys-color-primary, #6750a4));--_label-text-font: var(--md-fab-label-text-font, var(--md-sys-typescale-label-large-font, var(--md-ref-typeface-plain, Roboto)));--_label-text-line-height: var(--md-fab-label-text-line-height, var(--md-sys-typescale-label-large-line-height, 1.25rem));--_label-text-size: var(--md-fab-label-text-size, var(--md-sys-typescale-label-large-size, 0.875rem));--_label-text-weight: var(--md-fab-label-text-weight, var(--md-sys-typescale-label-large-weight, var(--md-ref-typeface-weight-medium, 500)));--_large-container-height: var(--md-fab-large-container-height, 96px);--_large-container-shape: var(--md-fab-large-container-shape, 28px);--_large-container-width: var(--md-fab-large-container-width, 96px);--_large-icon-size: var(--md-fab-large-icon-size, 36px);--_pressed-label-text-color: var(--md-fab-pressed-label-text-color, var(--md-sys-color-primary, #6750a4));--_primary-container-color: var(--md-fab-primary-container-color, var(--md-sys-color-primary-container, #eaddff));--_primary-focus-icon-color: var(--md-fab-primary-focus-icon-color, var(--md-sys-color-on-primary-container, #21005d));--_primary-focus-label-text-color: var(--md-fab-primary-focus-label-text-color, var(--md-sys-color-on-primary-container, #21005d));--_primary-hover-icon-color: var(--md-fab-primary-hover-icon-color, var(--md-sys-color-on-primary-container, #21005d));--_primary-hover-label-text-color: var(--md-fab-primary-hover-label-text-color, var(--md-sys-color-on-primary-container, #21005d));--_primary-hover-state-layer-color: var(--md-fab-primary-hover-state-layer-color, var(--md-sys-color-on-primary-container, #21005d));--_primary-icon-color: var(--md-fab-primary-icon-color, var(--md-sys-color-on-primary-container, #21005d));--_primary-label-text-color: var(--md-fab-primary-label-text-color, var(--md-sys-color-on-primary-container, #21005d));--_primary-pressed-icon-color: var(--md-fab-primary-pressed-icon-color, var(--md-sys-color-on-primary-container, #21005d));--_primary-pressed-label-text-color: var(--md-fab-primary-pressed-label-text-color, var(--md-sys-color-on-primary-container, #21005d));--_primary-pressed-state-layer-color: var(--md-fab-primary-pressed-state-layer-color, var(--md-sys-color-on-primary-container, #21005d));--_secondary-container-color: var(--md-fab-secondary-container-color, var(--md-sys-color-secondary-container, #e8def8));--_secondary-focus-icon-color: var(--md-fab-secondary-focus-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_secondary-focus-label-text-color: var(--md-fab-secondary-focus-label-text-color, var(--md-sys-color-on-secondary-container, #1d192b));--_secondary-hover-icon-color: var(--md-fab-secondary-hover-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_secondary-hover-label-text-color: var(--md-fab-secondary-hover-label-text-color, var(--md-sys-color-on-secondary-container, #1d192b));--_secondary-hover-state-layer-color: var(--md-fab-secondary-hover-state-layer-color, var(--md-sys-color-on-secondary-container, #1d192b));--_secondary-icon-color: var(--md-fab-secondary-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_secondary-label-text-color: var(--md-fab-secondary-label-text-color, var(--md-sys-color-on-secondary-container, #1d192b));--_secondary-pressed-icon-color: var(--md-fab-secondary-pressed-icon-color, var(--md-sys-color-on-secondary-container, #1d192b));--_secondary-pressed-label-text-color: var(--md-fab-secondary-pressed-label-text-color, var(--md-sys-color-on-secondary-container, #1d192b));--_secondary-pressed-state-layer-color: var(--md-fab-secondary-pressed-state-layer-color, var(--md-sys-color-on-secondary-container, #1d192b));--_small-container-height: var(--md-fab-small-container-height, 40px);--_small-container-shape: var(--md-fab-small-container-shape, 12px);--_small-container-width: var(--md-fab-small-container-width, 40px);--_small-icon-size: var(--md-fab-small-icon-size, 24px);--_tertiary-container-color: var(--md-fab-tertiary-container-color, var(--md-sys-color-tertiary-container, #ffd8e4));--_tertiary-focus-icon-color: var(--md-fab-tertiary-focus-icon-color, var(--md-sys-color-on-tertiary-container, #31111d));--_tertiary-focus-label-text-color: var(--md-fab-tertiary-focus-label-text-color, var(--md-sys-color-on-tertiary-container, #31111d));--_tertiary-hover-icon-color: var(--md-fab-tertiary-hover-icon-color, var(--md-sys-color-on-tertiary-container, #31111d));--_tertiary-hover-label-text-color: var(--md-fab-tertiary-hover-label-text-color, var(--md-sys-color-on-tertiary-container, #31111d));--_tertiary-hover-state-layer-color: var(--md-fab-tertiary-hover-state-layer-color, var(--md-sys-color-on-tertiary-container, #31111d));--_tertiary-icon-color: var(--md-fab-tertiary-icon-color, var(--md-sys-color-on-tertiary-container, #31111d));--_tertiary-label-text-color: var(--md-fab-tertiary-label-text-color, var(--md-sys-color-on-tertiary-container, #31111d));--_tertiary-pressed-icon-color: var(--md-fab-tertiary-pressed-icon-color, var(--md-sys-color-on-tertiary-container, #31111d));--_tertiary-pressed-label-text-color: var(--md-fab-tertiary-pressed-label-text-color, var(--md-sys-color-on-tertiary-container, #31111d));--_tertiary-pressed-state-layer-color: var(--md-fab-tertiary-pressed-state-layer-color, var(--md-sys-color-on-tertiary-container, #31111d));--_container-shape-start-start: var( --md-fab-container-shape-start-start, var(--_container-shape) );--_container-shape-start-end: var( --md-fab-container-shape-start-end, var(--_container-shape) );--_container-shape-end-end: var( --md-fab-container-shape-end-end, var(--_container-shape) );--_container-shape-end-start: var( --md-fab-container-shape-end-start, var(--_container-shape) );--_large-container-shape-start-start: var( --md-fab-large-container-shape-start-start, var(--_large-container-shape) );--_large-container-shape-start-end: var( --md-fab-large-container-shape-start-end, var(--_large-container-shape) );--_large-container-shape-end-end: var( --md-fab-large-container-shape-end-end, var(--_large-container-shape) );--_large-container-shape-end-start: var( --md-fab-large-container-shape-end-start, var(--_large-container-shape) );--_small-container-shape-start-start: var( --md-fab-small-container-shape-start-start, var(--_small-container-shape) );--_small-container-shape-start-end: var( --md-fab-small-container-shape-start-end, var(--_small-container-shape) );--_small-container-shape-end-end: var( --md-fab-small-container-shape-end-end, var(--_small-container-shape) );--_small-container-shape-end-start: var( --md-fab-small-container-shape-end-start, var(--_small-container-shape) );cursor:pointer}:host([size=small][touch-target=wrapper]){margin:max(0px,48px - var(--_small-container-height))}.fab{cursor:inherit}.fab .icon ::slotted(*){color:var(--_icon-color)}.fab:focus{color:var(--_focus-icon-color)}.fab:hover{color:var(--_hover-icon-color)}.fab:active{color:var(--_pressed-icon-color)}.fab.primary{background-color:var(--_primary-container-color);--md-ripple-hover-color: var(--_primary-hover-state-layer-color);--md-ripple-pressed-color: var(--_primary-pressed-state-layer-color)}.fab.primary .icon ::slotted(*){color:var(--_primary-icon-color)}.fab.primary:focus{color:var(--_primary-focus-icon-color)}.fab.primary:hover{color:var(--_primary-hover-icon-color)}.fab.primary:active{color:var(--_primary-pressed-icon-color)}.fab.primary .label{color:var(--_primary-label-text-color)}.fab:hover .fab.primary .label{color:var(--_primary-hover-label-text-color)}.fab:focus .fab.primary .label{color:var(--_primary-focus-label-text-color)}.fab:active .fab.primary .label{color:var(--_primary-pressed-label-text-color)}.fab.secondary{background-color:var(--_secondary-container-color);--md-ripple-hover-color: var(--_secondary-hover-state-layer-color);--md-ripple-pressed-color: var(--_secondary-pressed-state-layer-color)}.fab.secondary .icon ::slotted(*){color:var(--_secondary-icon-color)}.fab.secondary:focus{color:var(--_secondary-focus-icon-color)}.fab.secondary:hover{color:var(--_secondary-hover-icon-color)}.fab.secondary:active{color:var(--_secondary-pressed-icon-color)}.fab.secondary .label{color:var(--_secondary-label-text-color)}.fab:hover .fab.secondary .label{color:var(--_secondary-hover-label-text-color)}.fab:focus .fab.secondary .label{color:var(--_secondary-focus-label-text-color)}.fab:active .fab.secondary .label{color:var(--_secondary-pressed-label-text-color)}.fab.tertiary{background-color:var(--_tertiary-container-color);--md-ripple-hover-color: var(--_tertiary-hover-state-layer-color);--md-ripple-pressed-color: var(--_tertiary-pressed-state-layer-color)}.fab.tertiary .icon ::slotted(*){color:var(--_tertiary-icon-color)}.fab.tertiary:focus{color:var(--_tertiary-focus-icon-color)}.fab.tertiary:hover{color:var(--_tertiary-hover-icon-color)}.fab.tertiary:active{color:var(--_tertiary-pressed-icon-color)}.fab.tertiary .label{color:var(--_tertiary-label-text-color)}.fab:hover .fab.tertiary .label{color:var(--_tertiary-hover-label-text-color)}.fab:focus .fab.tertiary .label{color:var(--_tertiary-focus-label-text-color)}.fab:active .fab.tertiary .label{color:var(--_tertiary-pressed-label-text-color)}.fab.extended slot span{padding-inline-start:4px}.fab.small{width:var(--_small-container-width);height:var(--_small-container-height)}.fab.small .icon ::slotted(*){width:var(--_small-icon-size);height:var(--_small-icon-size);font-size:var(--_small-icon-size)}.fab.small,.fab.small .ripple{border-start-start-radius:var(--_small-container-shape-start-start);border-start-end-radius:var(--_small-container-shape-start-end);border-end-start-radius:var(--_small-container-shape-end-start);border-end-end-radius:var(--_small-container-shape-end-end)}.fab.small md-focus-ring{--md-focus-ring-shape-start-start: var(--_small-container-shape-start-start);--md-focus-ring-shape-start-end: var(--_small-container-shape-start-end);--md-focus-ring-shape-end-end: var(--_small-container-shape-end-end);--md-focus-ring-shape-end-start: var(--_small-container-shape-end-start)}/*# sourceMappingURL=fab-styles.css.map */
 `;
 //# sourceMappingURL=fab-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/fab/fab.js
@@ -4665,6 +4850,474 @@ MdFab = __decorate([
     t('md-fab')
 ], MdFab);
 //# sourceMappingURL=fab.js.map
+;// CONCATENATED MODULE: ./node_modules/@material/web/field/internal/field.js
+/**
+ * @license
+ * Copyright 2021 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+
+
+
+
+/**
+ * A field component.
+ */
+class Field extends lit_element_s {
+    constructor() {
+        super(...arguments);
+        this.disabled = false;
+        this.error = false;
+        this.focused = false;
+        this.label = '';
+        this.populated = false;
+        this.required = false;
+        this.resizable = false;
+        this.supportingText = '';
+        this.errorText = '';
+        this.count = -1;
+        this.max = -1;
+        /**
+         * Whether or not the field has leading content.
+         */
+        this.hasStart = false;
+        /**
+         * Whether or not the field has trailing content.
+         */
+        this.hasEnd = false;
+        this.isAnimating = false;
+        /**
+         * When set to true, the error text's `role="alert"` will be removed, then
+         * re-added after an animation frame. This will re-announce an error message
+         * to screen readers.
+         */
+        this.refreshErrorAlert = false;
+        this.disableTransitions = false;
+    }
+    get counterText() {
+        if (this.count < 0 || this.max < 0) {
+            return '';
+        }
+        return `${this.count} / ${this.max}`;
+    }
+    get supportingOrErrorText() {
+        return this.error && this.errorText ? this.errorText : this.supportingText;
+    }
+    /**
+     * Re-announces the field's error supporting text to screen readers.
+     *
+     * Error text announces to screen readers anytime it is visible and changes.
+     * Use the method to re-announce the message when the text has not changed,
+     * but announcement is still needed (such as for `reportValidity()`).
+     */
+    reannounceError() {
+        this.refreshErrorAlert = true;
+    }
+    update(props) {
+        // Client-side property updates
+        const isDisabledChanging = props.has('disabled') && props.get('disabled') !== undefined;
+        if (isDisabledChanging) {
+            this.disableTransitions = true;
+        }
+        // When disabling, remove focus styles if focused.
+        if (this.disabled && this.focused) {
+            props.set('focused', true);
+            this.focused = false;
+        }
+        // Animate if focused or populated change.
+        this.animateLabelIfNeeded({
+            wasFocused: props.get('focused'),
+            wasPopulated: props.get('populated'),
+        });
+        super.update(props);
+    }
+    render() {
+        const floatingLabel = this.renderLabel(/*isFloating*/ true);
+        const restingLabel = this.renderLabel(/*isFloating*/ false);
+        const outline = this.renderOutline?.(floatingLabel);
+        const classes = {
+            'disabled': this.disabled,
+            'disable-transitions': this.disableTransitions,
+            'error': this.error && !this.disabled,
+            'focused': this.focused,
+            'with-start': this.hasStart,
+            'with-end': this.hasEnd,
+            'populated': this.populated,
+            'resizable': this.resizable,
+            'required': this.required,
+            'no-label': !this.label,
+        };
+        return x `
+      <div class="field ${class_map_e(classes)}">
+        <div class="container-overflow">
+          ${this.renderBackground?.()} ${this.renderIndicator?.()} ${outline}
+          <div class="container">
+            <div class="start">
+              <slot name="start"></slot>
+            </div>
+            <div class="middle">
+              <div class="label-wrapper">
+                ${restingLabel} ${outline ? T : floatingLabel}
+              </div>
+              <div class="content">
+                <slot></slot>
+              </div>
+            </div>
+            <div class="end">
+              <slot name="end"></slot>
+            </div>
+          </div>
+        </div>
+        ${this.renderSupportingText()}
+      </div>
+    `;
+    }
+    updated(changed) {
+        if (changed.has('supportingText') ||
+            changed.has('errorText') ||
+            changed.has('count') ||
+            changed.has('max')) {
+            this.updateSlottedAriaDescribedBy();
+        }
+        if (this.refreshErrorAlert) {
+            // The past render cycle removed the role="alert" from the error message.
+            // Re-add it after an animation frame to re-announce the error.
+            requestAnimationFrame(() => {
+                this.refreshErrorAlert = false;
+            });
+        }
+        if (this.disableTransitions) {
+            requestAnimationFrame(() => {
+                this.disableTransitions = false;
+            });
+        }
+    }
+    renderSupportingText() {
+        const { supportingOrErrorText, counterText } = this;
+        if (!supportingOrErrorText && !counterText) {
+            return T;
+        }
+        // Always render the supporting text span so that our `space-around`
+        // container puts the counter at the end.
+        const start = x `<span>${supportingOrErrorText}</span>`;
+        // Conditionally render counter so we don't render the extra `gap`.
+        // TODO(b/244473435): add aria-label and announcements
+        const end = counterText
+            ? x `<span class="counter">${counterText}</span>`
+            : T;
+        // Announce if there is an error and error text visible.
+        // If refreshErrorAlert is true, do not announce. This will remove the
+        // role="alert" attribute. Another render cycle will happen after an
+        // animation frame to re-add the role.
+        const shouldErrorAnnounce = this.error && this.errorText && !this.refreshErrorAlert;
+        const role = shouldErrorAnnounce ? 'alert' : T;
+        return x `
+      <div class="supporting-text" role=${role}>${start}${end}</div>
+      <slot
+        name="aria-describedby"
+        @slotchange=${this.updateSlottedAriaDescribedBy}></slot>
+    `;
+    }
+    updateSlottedAriaDescribedBy() {
+        for (const element of this.slottedAriaDescribedBy) {
+            j(x `${this.supportingOrErrorText} ${this.counterText}`, element);
+            element.setAttribute('hidden', '');
+        }
+    }
+    renderLabel(isFloating) {
+        if (!this.label) {
+            return T;
+        }
+        let visible;
+        if (isFloating) {
+            // Floating label is visible when focused/populated or when animating.
+            visible = this.focused || this.populated || this.isAnimating;
+        }
+        else {
+            // Resting label is visible when unfocused. It is never visible while
+            // animating.
+            visible = !this.focused && !this.populated && !this.isAnimating;
+        }
+        const classes = {
+            'hidden': !visible,
+            'floating': isFloating,
+            'resting': !isFloating,
+        };
+        // Add '*' if a label is present and the field is required
+        const labelText = `${this.label}${this.required ? '*' : ''}`;
+        return x `
+      <span class="label ${class_map_e(classes)}" aria-hidden=${!visible}
+        >${labelText}</span
+      >
+    `;
+    }
+    animateLabelIfNeeded({ wasFocused, wasPopulated, }) {
+        if (!this.label) {
+            return;
+        }
+        wasFocused ?? (wasFocused = this.focused);
+        wasPopulated ?? (wasPopulated = this.populated);
+        const wasFloating = wasFocused || wasPopulated;
+        const shouldBeFloating = this.focused || this.populated;
+        if (wasFloating === shouldBeFloating) {
+            return;
+        }
+        this.isAnimating = true;
+        this.labelAnimation?.cancel();
+        // Only one label is visible at a time for clearer text rendering.
+        // The floating label is visible and used during animation. At the end of
+        // the animation, it will either remain visible (if floating) or hide and
+        // the resting label will be shown.
+        //
+        // We don't use forward filling because if the dimensions of the text field
+        // change (leading icon removed, density changes, etc), then the animation
+        // will be inaccurate.
+        //
+        // Re-calculating the animation each time will prevent any visual glitches
+        // from appearing.
+        // TODO(b/241113345): use animation tokens
+        this.labelAnimation = this.floatingLabelEl?.animate(this.getLabelKeyframes(), { duration: 150, easing: EASING.STANDARD });
+        this.labelAnimation?.addEventListener('finish', () => {
+            // At the end of the animation, update the visible label.
+            this.isAnimating = false;
+        });
+    }
+    getLabelKeyframes() {
+        const { floatingLabelEl, restingLabelEl } = this;
+        if (!floatingLabelEl || !restingLabelEl) {
+            return [];
+        }
+        const { x: floatingX, y: floatingY, height: floatingHeight, } = floatingLabelEl.getBoundingClientRect();
+        const { x: restingX, y: restingY, height: restingHeight, } = restingLabelEl.getBoundingClientRect();
+        const floatingScrollWidth = floatingLabelEl.scrollWidth;
+        const restingScrollWidth = restingLabelEl.scrollWidth;
+        // Scale by width ratio instead of font size since letter-spacing will scale
+        // incorrectly. Using the width we can better approximate the adjusted
+        // scale and compensate for tracking and overflow.
+        // (use scrollWidth instead of width to account for clipped labels)
+        const scale = restingScrollWidth / floatingScrollWidth;
+        const xDelta = restingX - floatingX;
+        // The line-height of the resting and floating label are different. When
+        // we move the floating label down to the resting label's position, it won't
+        // exactly match because of this. We need to adjust by half of what the
+        // final scaled floating label's height will be.
+        const yDelta = restingY -
+            floatingY +
+            Math.round((restingHeight - floatingHeight * scale) / 2);
+        // Create the two transforms: floating to resting (using the calculations
+        // above), and resting to floating (re-setting the transform to initial
+        // values).
+        const restTransform = `translateX(${xDelta}px) translateY(${yDelta}px) scale(${scale})`;
+        const floatTransform = `translateX(0) translateY(0) scale(1)`;
+        // Constrain the floating labels width to a scaled percentage of the
+        // resting label's width. This will prevent long clipped labels from
+        // overflowing the container.
+        const restingClientWidth = restingLabelEl.clientWidth;
+        const isRestingClipped = restingScrollWidth > restingClientWidth;
+        const width = isRestingClipped ? `${restingClientWidth / scale}px` : '';
+        if (this.focused || this.populated) {
+            return [
+                { transform: restTransform, width },
+                { transform: floatTransform, width },
+            ];
+        }
+        return [
+            { transform: floatTransform, width },
+            { transform: restTransform, width },
+        ];
+    }
+    getSurfacePositionClientRect() {
+        return this.containerEl.getBoundingClientRect();
+    }
+}
+__decorate([
+    property_n({ type: Boolean })
+], Field.prototype, "disabled", void 0);
+__decorate([
+    property_n({ type: Boolean })
+], Field.prototype, "error", void 0);
+__decorate([
+    property_n({ type: Boolean })
+], Field.prototype, "focused", void 0);
+__decorate([
+    property_n()
+], Field.prototype, "label", void 0);
+__decorate([
+    property_n({ type: Boolean })
+], Field.prototype, "populated", void 0);
+__decorate([
+    property_n({ type: Boolean })
+], Field.prototype, "required", void 0);
+__decorate([
+    property_n({ type: Boolean })
+], Field.prototype, "resizable", void 0);
+__decorate([
+    property_n({ attribute: 'supporting-text' })
+], Field.prototype, "supportingText", void 0);
+__decorate([
+    property_n({ attribute: 'error-text' })
+], Field.prototype, "errorText", void 0);
+__decorate([
+    property_n({ type: Number })
+], Field.prototype, "count", void 0);
+__decorate([
+    property_n({ type: Number })
+], Field.prototype, "max", void 0);
+__decorate([
+    property_n({ type: Boolean, attribute: 'has-start' })
+], Field.prototype, "hasStart", void 0);
+__decorate([
+    property_n({ type: Boolean, attribute: 'has-end' })
+], Field.prototype, "hasEnd", void 0);
+__decorate([
+    query_assigned_elements_o({ slot: 'aria-describedby' })
+], Field.prototype, "slottedAriaDescribedBy", void 0);
+__decorate([
+    state_r()
+], Field.prototype, "isAnimating", void 0);
+__decorate([
+    state_r()
+], Field.prototype, "refreshErrorAlert", void 0);
+__decorate([
+    state_r()
+], Field.prototype, "disableTransitions", void 0);
+__decorate([
+    query_e('.label.floating')
+], Field.prototype, "floatingLabelEl", void 0);
+__decorate([
+    query_e('.label.resting')
+], Field.prototype, "restingLabelEl", void 0);
+__decorate([
+    query_e('.container')
+], Field.prototype, "containerEl", void 0);
+//# sourceMappingURL=field.js.map
+;// CONCATENATED MODULE: ./node_modules/@material/web/field/internal/filled-field.js
+/**
+ * @license
+ * Copyright 2021 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+
+/**
+ * A filled field component.
+ */
+class FilledField extends Field {
+    renderBackground() {
+        return x `
+      <div class="background"></div>
+      <div class="state-layer"></div>
+    `;
+    }
+    renderIndicator() {
+        return x `<div class="active-indicator"></div>`;
+    }
+}
+//# sourceMappingURL=filled-field.js.map
+;// CONCATENATED MODULE: ./node_modules/@material/web/field/internal/filled-styles.css.js
+/**
+  * @license
+  * Copyright 2022 Google LLC
+  * SPDX-License-Identifier: Apache-2.0
+  */
+
+const internal_filled_styles_css_styles = i `@layer styles{:host{--_active-indicator-color: var(--md-filled-field-active-indicator-color, var(--md-sys-color-on-surface-variant, #49454f));--_active-indicator-height: var(--md-filled-field-active-indicator-height, 1px);--_bottom-space: var(--md-filled-field-bottom-space, 16px);--_container-color: var(--md-filled-field-container-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_container-shape-start-start: var( --md-filled-field-container-shape-start-start, var(--md-filled-field-container-shape, 4px) );--_container-shape-start-end: var( --md-filled-field-container-shape-start-end, var(--md-filled-field-container-shape, 4px) );--_container-shape-end-end: var( --md-filled-field-container-shape-end-end, var(--md-filled-field-container-shape, 0px) );--_container-shape-end-start: var( --md-filled-field-container-shape-end-start, var(--md-filled-field-container-shape, 0px) );--_content-color: var(--md-filled-field-content-color, var(--md-sys-color-on-surface, #1d1b20));--_content-font: var(--md-filled-field-content-font, var(--md-sys-typescale-body-large-font, var(--md-ref-typeface-plain, Roboto)));--_content-line-height: var(--md-filled-field-content-line-height, var(--md-sys-typescale-body-large-line-height, 1.5rem));--_content-size: var(--md-filled-field-content-size, var(--md-sys-typescale-body-large-size, 1rem));--_content-weight: var(--md-filled-field-content-weight, var(--md-sys-typescale-body-large-weight, var(--md-ref-typeface-weight-regular, 400)));--_disabled-active-indicator-color: var(--md-filled-field-disabled-active-indicator-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-active-indicator-height: var(--md-filled-field-disabled-active-indicator-height, 1px);--_disabled-active-indicator-opacity: var(--md-filled-field-disabled-active-indicator-opacity, 0.38);--_disabled-container-color: var(--md-filled-field-disabled-container-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-container-opacity: var(--md-filled-field-disabled-container-opacity, 0.04);--_disabled-content-color: var(--md-filled-field-disabled-content-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-content-opacity: var(--md-filled-field-disabled-content-opacity, 0.38);--_disabled-label-text-color: var(--md-filled-field-disabled-label-text-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-label-text-opacity: var(--md-filled-field-disabled-label-text-opacity, 0.38);--_disabled-leading-content-color: var(--md-filled-field-disabled-leading-content-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-leading-content-opacity: var(--md-filled-field-disabled-leading-content-opacity, 0.38);--_disabled-supporting-text-color: var(--md-filled-field-disabled-supporting-text-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-supporting-text-opacity: var(--md-filled-field-disabled-supporting-text-opacity, 0.38);--_disabled-trailing-content-color: var(--md-filled-field-disabled-trailing-content-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-trailing-content-opacity: var(--md-filled-field-disabled-trailing-content-opacity, 0.38);--_error-active-indicator-color: var(--md-filled-field-error-active-indicator-color, var(--md-sys-color-error, #b3261e));--_error-content-color: var(--md-filled-field-error-content-color, var(--md-sys-color-on-surface, #1d1b20));--_error-focus-active-indicator-color: var(--md-filled-field-error-focus-active-indicator-color, var(--md-sys-color-error, #b3261e));--_error-focus-content-color: var(--md-filled-field-error-focus-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_error-focus-label-text-color: var(--md-filled-field-error-focus-label-text-color, var(--md-sys-color-error, #b3261e));--_error-focus-leading-content-color: var(--md-filled-field-error-focus-leading-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_error-focus-supporting-text-color: var(--md-filled-field-error-focus-supporting-text-color, var(--md-sys-color-error, #b3261e));--_error-focus-trailing-content-color: var(--md-filled-field-error-focus-trailing-content-color, var(--md-sys-color-error, #b3261e));--_error-hover-active-indicator-color: var(--md-filled-field-error-hover-active-indicator-color, var(--md-sys-color-on-error-container, #410e0b));--_error-hover-content-color: var(--md-filled-field-error-hover-content-color, var(--md-sys-color-on-surface, #1d1b20));--_error-hover-label-text-color: var(--md-filled-field-error-hover-label-text-color, var(--md-sys-color-on-error-container, #410e0b));--_error-hover-leading-content-color: var(--md-filled-field-error-hover-leading-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_error-hover-state-layer-color: var(--md-filled-field-error-hover-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--_error-hover-state-layer-opacity: var(--md-filled-field-error-hover-state-layer-opacity, 0.08);--_error-hover-supporting-text-color: var(--md-filled-field-error-hover-supporting-text-color, var(--md-sys-color-error, #b3261e));--_error-hover-trailing-content-color: var(--md-filled-field-error-hover-trailing-content-color, var(--md-sys-color-on-error-container, #410e0b));--_error-label-text-color: var(--md-filled-field-error-label-text-color, var(--md-sys-color-error, #b3261e));--_error-leading-content-color: var(--md-filled-field-error-leading-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_error-supporting-text-color: var(--md-filled-field-error-supporting-text-color, var(--md-sys-color-error, #b3261e));--_error-trailing-content-color: var(--md-filled-field-error-trailing-content-color, var(--md-sys-color-error, #b3261e));--_focus-active-indicator-color: var(--md-filled-field-focus-active-indicator-color, var(--md-sys-color-primary, #6750a4));--_focus-active-indicator-height: var(--md-filled-field-focus-active-indicator-height, 3px);--_focus-content-color: var(--md-filled-field-focus-content-color, var(--md-sys-color-on-surface, #1d1b20));--_focus-label-text-color: var(--md-filled-field-focus-label-text-color, var(--md-sys-color-primary, #6750a4));--_focus-leading-content-color: var(--md-filled-field-focus-leading-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_focus-supporting-text-color: var(--md-filled-field-focus-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_focus-trailing-content-color: var(--md-filled-field-focus-trailing-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-active-indicator-color: var(--md-filled-field-hover-active-indicator-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-active-indicator-height: var(--md-filled-field-hover-active-indicator-height, 1px);--_hover-content-color: var(--md-filled-field-hover-content-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-label-text-color: var(--md-filled-field-hover-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-leading-content-color: var(--md-filled-field-hover-leading-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-state-layer-color: var(--md-filled-field-hover-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-state-layer-opacity: var(--md-filled-field-hover-state-layer-opacity, 0.08);--_hover-supporting-text-color: var(--md-filled-field-hover-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-trailing-content-color: var(--md-filled-field-hover-trailing-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_label-text-color: var(--md-filled-field-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_label-text-font: var(--md-filled-field-label-text-font, var(--md-sys-typescale-body-large-font, var(--md-ref-typeface-plain, Roboto)));--_label-text-line-height: var(--md-filled-field-label-text-line-height, var(--md-sys-typescale-body-large-line-height, 1.5rem));--_label-text-populated-line-height: var(--md-filled-field-label-text-populated-line-height, var(--md-sys-typescale-body-small-line-height, 1rem));--_label-text-populated-size: var(--md-filled-field-label-text-populated-size, var(--md-sys-typescale-body-small-size, 0.75rem));--_label-text-size: var(--md-filled-field-label-text-size, var(--md-sys-typescale-body-large-size, 1rem));--_label-text-weight: var(--md-filled-field-label-text-weight, var(--md-sys-typescale-body-large-weight, var(--md-ref-typeface-weight-regular, 400)));--_leading-content-color: var(--md-filled-field-leading-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_leading-space: var(--md-filled-field-leading-space, 16px);--_supporting-text-color: var(--md-filled-field-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_supporting-text-font: var(--md-filled-field-supporting-text-font, var(--md-sys-typescale-body-small-font, var(--md-ref-typeface-plain, Roboto)));--_supporting-text-leading-space: var(--md-filled-field-supporting-text-leading-space, 16px);--_supporting-text-line-height: var(--md-filled-field-supporting-text-line-height, var(--md-sys-typescale-body-small-line-height, 1rem));--_supporting-text-size: var(--md-filled-field-supporting-text-size, var(--md-sys-typescale-body-small-size, 0.75rem));--_supporting-text-top-space: var(--md-filled-field-supporting-text-top-space, 4px);--_supporting-text-trailing-space: var(--md-filled-field-supporting-text-trailing-space, 16px);--_supporting-text-weight: var(--md-filled-field-supporting-text-weight, var(--md-sys-typescale-body-small-weight, var(--md-ref-typeface-weight-regular, 400)));--_top-space: var(--md-filled-field-top-space, 16px);--_trailing-content-color: var(--md-filled-field-trailing-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_trailing-space: var(--md-filled-field-trailing-space, 16px);--_with-label-bottom-space: var(--md-filled-field-with-label-bottom-space, 8px);--_with-label-top-space: var(--md-filled-field-with-label-top-space, 8px)}.background,.state-layer{border-radius:inherit;inset:0;pointer-events:none;position:absolute}.background{background:var(--_container-color)}.state-layer{visibility:hidden}.field:not(.disabled):hover .state-layer{visibility:visible}.label.floating{position:absolute;top:var(--_with-label-top-space)}.field:not(.with-start) .label-wrapper{margin-inline-start:var(--_leading-space)}.field:not(.with-end) .label-wrapper{margin-inline-end:var(--_trailing-space)}.active-indicator{inset:auto 0 0 0;pointer-events:none;position:absolute;width:100%;z-index:1}.active-indicator::before,.active-indicator::after{border-bottom:var(--_active-indicator-height) solid var(--_active-indicator-color);inset:auto 0 0 0;content:"";position:absolute;width:100%}.active-indicator::after{opacity:0;transition:opacity 150ms cubic-bezier(0.2, 0, 0, 1)}.focused .active-indicator::after{opacity:1}.field:not(.with-start) .content ::slotted(*){padding-inline-start:var(--_leading-space)}.field:not(.with-end) .content ::slotted(*){padding-inline-end:var(--_trailing-space)}.field:not(.no-label) .content ::slotted(:not(textarea)){padding-bottom:var(--_with-label-bottom-space);padding-top:calc(var(--_with-label-top-space) + var(--_label-text-populated-line-height))}.field:not(.no-label) .content ::slotted(textarea){margin-bottom:var(--_with-label-bottom-space);margin-top:calc(var(--_with-label-top-space) + var(--_label-text-populated-line-height))}:hover .active-indicator::before{border-bottom-color:var(--_hover-active-indicator-color);border-bottom-width:var(--_hover-active-indicator-height)}.active-indicator::after{border-bottom-color:var(--_focus-active-indicator-color);border-bottom-width:var(--_focus-active-indicator-height)}:hover .state-layer{background:var(--_hover-state-layer-color);opacity:var(--_hover-state-layer-opacity)}.disabled .active-indicator::before{border-bottom-color:var(--_disabled-active-indicator-color);border-bottom-width:var(--_disabled-active-indicator-height);opacity:var(--_disabled-active-indicator-opacity)}.disabled .background{background:var(--_disabled-container-color);opacity:var(--_disabled-container-opacity)}.error .active-indicator::before{border-bottom-color:var(--_error-active-indicator-color)}.error:hover .active-indicator::before{border-bottom-color:var(--_error-hover-active-indicator-color)}.error:hover .state-layer{background:var(--_error-hover-state-layer-color);opacity:var(--_error-hover-state-layer-opacity)}.error .active-indicator::after{border-bottom-color:var(--_error-focus-active-indicator-color)}.resizable .container{bottom:var(--_focus-active-indicator-height);clip-path:inset(var(--_focus-active-indicator-height) 0 0 0)}.resizable .container>*{top:var(--_focus-active-indicator-height)}}@layer hcm{@media(forced-colors: active){.disabled .active-indicator::before{border-color:GrayText;opacity:1}}}/*# sourceMappingURL=filled-styles.css.map */
+`;
+//# sourceMappingURL=filled-styles.css.js.map
+;// CONCATENATED MODULE: ./node_modules/@material/web/field/internal/shared-styles.css.js
+/**
+  * @license
+  * Copyright 2022 Google LLC
+  * SPDX-License-Identifier: Apache-2.0
+  */
+
+const field_internal_shared_styles_css_styles = i `:host{display:inline-flex;resize:both}.field{display:flex;flex:1;flex-direction:column;writing-mode:horizontal-tb;max-width:100%}.container-overflow{border-start-start-radius:var(--_container-shape-start-start);border-start-end-radius:var(--_container-shape-start-end);border-end-end-radius:var(--_container-shape-end-end);border-end-start-radius:var(--_container-shape-end-start);display:flex;height:100%;position:relative}.container{align-items:center;border-radius:inherit;display:flex;flex:1;max-height:100%;min-height:100%;min-width:min-content;position:relative}.field,.container-overflow{resize:inherit}.resizable:not(.disabled) .container{resize:inherit;overflow:hidden}.disabled{pointer-events:none}@layer styles{.start,.middle,.end{display:flex;box-sizing:border-box;height:100%;position:relative}.start{color:var(--_leading-content-color)}.end{color:var(--_trailing-content-color)}.start,.end{align-items:center;justify-content:center}.with-start .start,.with-end .end{min-width:48px}.with-start .start{margin-inline-end:4px}.with-end .end{margin-inline-start:4px}.middle{align-items:stretch;align-self:baseline;flex:1}.content{color:var(--_content-color);display:flex;flex:1;opacity:0;transition:opacity 83ms cubic-bezier(0.2, 0, 0, 1)}.no-label .content,.focused .content,.populated .content{opacity:1;transition-delay:67ms}:is(.disabled,.disable-transitions) .content{transition:none}.content ::slotted(*){all:unset;color:currentColor;font-family:var(--_content-font);font-size:var(--_content-size);line-height:var(--_content-line-height);font-weight:var(--_content-weight);width:100%;white-space:pre-wrap}.content ::slotted(:not(textarea)){padding-top:var(--_top-space);padding-bottom:var(--_bottom-space)}.content ::slotted(textarea){margin-top:var(--_top-space);margin-bottom:var(--_bottom-space)}:hover .content{color:var(--_hover-content-color)}:hover .start{color:var(--_hover-leading-content-color)}:hover .end{color:var(--_hover-trailing-content-color)}.focused .content{color:var(--_focus-content-color)}.focused .start{color:var(--_focus-leading-content-color)}.focused .end{color:var(--_focus-trailing-content-color)}.disabled .content{color:var(--_disabled-content-color)}.disabled.no-label .content,.disabled.focused .content,.disabled.populated .content{opacity:var(--_disabled-content-opacity)}.disabled .start{color:var(--_disabled-leading-content-color);opacity:var(--_disabled-leading-content-opacity)}.disabled .end{color:var(--_disabled-trailing-content-color);opacity:var(--_disabled-trailing-content-opacity)}.error .content{color:var(--_error-content-color)}.error .start{color:var(--_error-leading-content-color)}.error .end{color:var(--_error-trailing-content-color)}.error:hover .content{color:var(--_error-hover-content-color)}.error:hover .start{color:var(--_error-hover-leading-content-color)}.error:hover .end{color:var(--_error-hover-trailing-content-color)}.error.focused .content{color:var(--_error-focus-content-color)}.error.focused .start{color:var(--_error-focus-leading-content-color)}.error.focused .end{color:var(--_error-focus-trailing-content-color)}}@layer hcm{@media(forced-colors: active){.disabled :is(.start,.content,.end){color:GrayText;opacity:1}}}@layer styles{.label{box-sizing:border-box;color:var(--_label-text-color);overflow:hidden;max-width:100%;text-overflow:ellipsis;white-space:nowrap;z-index:1;font-family:var(--_label-text-font);font-size:var(--_label-text-size);line-height:var(--_label-text-line-height);font-weight:var(--_label-text-weight);width:min-content}.label-wrapper{inset:0;pointer-events:none;position:absolute}.label.resting{position:absolute;top:var(--_top-space)}.label.floating{font-size:var(--_label-text-populated-size);line-height:var(--_label-text-populated-line-height);transform-origin:top left}.label.hidden{opacity:0}.no-label .label{display:none}.label-wrapper{inset:0;position:absolute;text-align:initial}:hover .label{color:var(--_hover-label-text-color)}.focused .label{color:var(--_focus-label-text-color)}.disabled .label{color:var(--_disabled-label-text-color)}.disabled .label:not(.hidden){opacity:var(--_disabled-label-text-opacity)}.error .label{color:var(--_error-label-text-color)}.error:hover .label{color:var(--_error-hover-label-text-color)}.error.focused .label{color:var(--_error-focus-label-text-color)}}@layer hcm{@media(forced-colors: active){.disabled .label:not(.hidden){color:GrayText;opacity:1}}}@layer styles{.supporting-text{color:var(--_supporting-text-color);display:flex;font-family:var(--_supporting-text-font);font-size:var(--_supporting-text-size);line-height:var(--_supporting-text-line-height);font-weight:var(--_supporting-text-weight);gap:16px;justify-content:space-between;padding-inline-start:var(--_supporting-text-leading-space);padding-inline-end:var(--_supporting-text-trailing-space);padding-top:var(--_supporting-text-top-space)}.supporting-text :nth-child(2){flex-shrink:0}:hover .supporting-text{color:var(--_hover-supporting-text-color)}.focus .supporting-text{color:var(--_focus-supporting-text-color)}.disabled .supporting-text{color:var(--_disabled-supporting-text-color);opacity:var(--_disabled-supporting-text-opacity)}.error .supporting-text{color:var(--_error-supporting-text-color)}.error:hover .supporting-text{color:var(--_error-hover-supporting-text-color)}.error.focus .supporting-text{color:var(--_error-focus-supporting-text-color)}}@layer hcm{@media(forced-colors: active){.disabled .supporting-text{color:GrayText;opacity:1}}}/*# sourceMappingURL=shared-styles.css.map */
+`;
+//# sourceMappingURL=shared-styles.css.js.map
+;// CONCATENATED MODULE: ./node_modules/@material/web/field/filled-field.js
+/**
+ * @license
+ * Copyright 2021 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+
+
+
+
+/**
+ * TODO(b/228525797): add docs
+ * @final
+ * @suppress {visibility}
+ */
+let MdFilledField = class MdFilledField extends FilledField {
+};
+MdFilledField.styles = [field_internal_shared_styles_css_styles, internal_filled_styles_css_styles];
+MdFilledField = __decorate([
+    t('md-filled-field')
+], MdFilledField);
+//# sourceMappingURL=filled-field.js.map
+;// CONCATENATED MODULE: ./node_modules/@material/web/field/internal/outlined-field.js
+/**
+ * @license
+ * Copyright 2021 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+
+/**
+ * An outlined field component.
+ */
+class OutlinedField extends Field {
+    renderOutline(floatingLabel) {
+        return x `
+      <div class="outline">
+        <div class="outline-start"></div>
+        <div class="outline-notch">
+          <div class="outline-panel-inactive"></div>
+          <div class="outline-panel-active"></div>
+          <div class="outline-label">${floatingLabel}</div>
+        </div>
+        <div class="outline-end"></div>
+      </div>
+    `;
+    }
+}
+//# sourceMappingURL=outlined-field.js.map
+;// CONCATENATED MODULE: ./node_modules/@material/web/field/internal/outlined-styles.css.js
+/**
+  * @license
+  * Copyright 2022 Google LLC
+  * SPDX-License-Identifier: Apache-2.0
+  */
+
+const internal_outlined_styles_css_styles = i `@layer styles{:host{--_bottom-space: var(--md-outlined-field-bottom-space, 16px);--_container-shape: var(--md-outlined-field-container-shape, 4px);--_content-color: var(--md-outlined-field-content-color, var(--md-sys-color-on-surface, #1d1b20));--_content-font: var(--md-outlined-field-content-font, var(--md-sys-typescale-body-large-font, var(--md-ref-typeface-plain, Roboto)));--_content-line-height: var(--md-outlined-field-content-line-height, var(--md-sys-typescale-body-large-line-height, 1.5rem));--_content-size: var(--md-outlined-field-content-size, var(--md-sys-typescale-body-large-size, 1rem));--_content-weight: var(--md-outlined-field-content-weight, var(--md-sys-typescale-body-large-weight, var(--md-ref-typeface-weight-regular, 400)));--_disabled-content-color: var(--md-outlined-field-disabled-content-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-content-opacity: var(--md-outlined-field-disabled-content-opacity, 0.38);--_disabled-label-text-color: var(--md-outlined-field-disabled-label-text-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-label-text-opacity: var(--md-outlined-field-disabled-label-text-opacity, 0.38);--_disabled-leading-content-color: var(--md-outlined-field-disabled-leading-content-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-leading-content-opacity: var(--md-outlined-field-disabled-leading-content-opacity, 0.38);--_disabled-outline-color: var(--md-outlined-field-disabled-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-outline-opacity: var(--md-outlined-field-disabled-outline-opacity, 0.12);--_disabled-outline-width: var(--md-outlined-field-disabled-outline-width, 1px);--_disabled-supporting-text-color: var(--md-outlined-field-disabled-supporting-text-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-supporting-text-opacity: var(--md-outlined-field-disabled-supporting-text-opacity, 0.38);--_disabled-trailing-content-color: var(--md-outlined-field-disabled-trailing-content-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-trailing-content-opacity: var(--md-outlined-field-disabled-trailing-content-opacity, 0.38);--_error-content-color: var(--md-outlined-field-error-content-color, var(--md-sys-color-on-surface, #1d1b20));--_error-focus-content-color: var(--md-outlined-field-error-focus-content-color, var(--md-sys-color-on-surface, #1d1b20));--_error-focus-label-text-color: var(--md-outlined-field-error-focus-label-text-color, var(--md-sys-color-error, #b3261e));--_error-focus-leading-content-color: var(--md-outlined-field-error-focus-leading-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_error-focus-outline-color: var(--md-outlined-field-error-focus-outline-color, var(--md-sys-color-error, #b3261e));--_error-focus-supporting-text-color: var(--md-outlined-field-error-focus-supporting-text-color, var(--md-sys-color-error, #b3261e));--_error-focus-trailing-content-color: var(--md-outlined-field-error-focus-trailing-content-color, var(--md-sys-color-error, #b3261e));--_error-hover-content-color: var(--md-outlined-field-error-hover-content-color, var(--md-sys-color-on-surface, #1d1b20));--_error-hover-label-text-color: var(--md-outlined-field-error-hover-label-text-color, var(--md-sys-color-on-error-container, #410e0b));--_error-hover-leading-content-color: var(--md-outlined-field-error-hover-leading-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_error-hover-outline-color: var(--md-outlined-field-error-hover-outline-color, var(--md-sys-color-on-error-container, #410e0b));--_error-hover-supporting-text-color: var(--md-outlined-field-error-hover-supporting-text-color, var(--md-sys-color-error, #b3261e));--_error-hover-trailing-content-color: var(--md-outlined-field-error-hover-trailing-content-color, var(--md-sys-color-on-error-container, #410e0b));--_error-label-text-color: var(--md-outlined-field-error-label-text-color, var(--md-sys-color-error, #b3261e));--_error-leading-content-color: var(--md-outlined-field-error-leading-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_error-outline-color: var(--md-outlined-field-error-outline-color, var(--md-sys-color-error, #b3261e));--_error-supporting-text-color: var(--md-outlined-field-error-supporting-text-color, var(--md-sys-color-error, #b3261e));--_error-trailing-content-color: var(--md-outlined-field-error-trailing-content-color, var(--md-sys-color-error, #b3261e));--_focus-content-color: var(--md-outlined-field-focus-content-color, var(--md-sys-color-on-surface, #1d1b20));--_focus-label-text-color: var(--md-outlined-field-focus-label-text-color, var(--md-sys-color-primary, #6750a4));--_focus-leading-content-color: var(--md-outlined-field-focus-leading-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_focus-outline-color: var(--md-outlined-field-focus-outline-color, var(--md-sys-color-primary, #6750a4));--_focus-outline-width: var(--md-outlined-field-focus-outline-width, 3px);--_focus-supporting-text-color: var(--md-outlined-field-focus-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_focus-trailing-content-color: var(--md-outlined-field-focus-trailing-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-content-color: var(--md-outlined-field-hover-content-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-label-text-color: var(--md-outlined-field-hover-label-text-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-leading-content-color: var(--md-outlined-field-hover-leading-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-outline-color: var(--md-outlined-field-hover-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-outline-width: var(--md-outlined-field-hover-outline-width, 1px);--_hover-supporting-text-color: var(--md-outlined-field-hover-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-trailing-content-color: var(--md-outlined-field-hover-trailing-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_label-text-color: var(--md-outlined-field-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_label-text-font: var(--md-outlined-field-label-text-font, var(--md-sys-typescale-body-large-font, var(--md-ref-typeface-plain, Roboto)));--_label-text-line-height: var(--md-outlined-field-label-text-line-height, var(--md-sys-typescale-body-large-line-height, 1.5rem));--_label-text-padding-bottom: var(--md-outlined-field-label-text-padding-bottom, 8px);--_label-text-populated-line-height: var(--md-outlined-field-label-text-populated-line-height, var(--md-sys-typescale-body-small-line-height, 1rem));--_label-text-populated-size: var(--md-outlined-field-label-text-populated-size, var(--md-sys-typescale-body-small-size, 0.75rem));--_label-text-size: var(--md-outlined-field-label-text-size, var(--md-sys-typescale-body-large-size, 1rem));--_label-text-weight: var(--md-outlined-field-label-text-weight, var(--md-sys-typescale-body-large-weight, var(--md-ref-typeface-weight-regular, 400)));--_leading-content-color: var(--md-outlined-field-leading-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_leading-space: var(--md-outlined-field-leading-space, 16px);--_outline-color: var(--md-outlined-field-outline-color, var(--md-sys-color-outline, #79747e));--_outline-label-padding: var(--md-outlined-field-outline-label-padding, 4px);--_outline-width: var(--md-outlined-field-outline-width, 1px);--_supporting-text-color: var(--md-outlined-field-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_supporting-text-font: var(--md-outlined-field-supporting-text-font, var(--md-sys-typescale-body-small-font, var(--md-ref-typeface-plain, Roboto)));--_supporting-text-leading-space: var(--md-outlined-field-supporting-text-leading-space, 16px);--_supporting-text-line-height: var(--md-outlined-field-supporting-text-line-height, var(--md-sys-typescale-body-small-line-height, 1rem));--_supporting-text-size: var(--md-outlined-field-supporting-text-size, var(--md-sys-typescale-body-small-size, 0.75rem));--_supporting-text-top-space: var(--md-outlined-field-supporting-text-top-space, 4px);--_supporting-text-trailing-space: var(--md-outlined-field-supporting-text-trailing-space, 16px);--_supporting-text-weight: var(--md-outlined-field-supporting-text-weight, var(--md-sys-typescale-body-small-weight, var(--md-ref-typeface-weight-regular, 400)));--_top-space: var(--md-outlined-field-top-space, 16px);--_trailing-content-color: var(--md-outlined-field-trailing-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_trailing-space: var(--md-outlined-field-trailing-space, 16px);--_container-shape-start-start: var( --md-outlined-field-container-shape-start-start, var(--_container-shape) );--_container-shape-start-end: var( --md-outlined-field-container-shape-start-end, var(--_container-shape) );--_container-shape-end-end: var( --md-outlined-field-container-shape-end-end, var(--_container-shape) );--_container-shape-end-start: var( --md-outlined-field-container-shape-end-start, var(--_container-shape) )}.outline{border-color:var(--_outline-color);border-radius:inherit;display:flex;pointer-events:none;height:100%;position:absolute;width:100%;z-index:1}.outline-start::before,.outline-start::after,.outline-panel-inactive::before,.outline-panel-inactive::after,.outline-panel-active::before,.outline-panel-active::after,.outline-end::before,.outline-end::after{border:inherit;content:"";inset:0;position:absolute}.outline-start,.outline-end{border:inherit;border-radius:inherit;box-sizing:border-box;position:relative}.outline-start::before,.outline-start::after,.outline-end::before,.outline-end::after{border-bottom-style:solid;border-top-style:solid}.outline-start::after,.outline-end::after{opacity:0;transition:opacity 150ms cubic-bezier(0.2, 0, 0, 1)}.focused .outline-start::after,.focused .outline-end::after{opacity:1}.outline-start::before,.outline-start::after{border-inline-start-style:solid;border-inline-end-style:none;border-start-start-radius:inherit;border-start-end-radius:0;border-end-start-radius:inherit;border-end-end-radius:0;margin-inline-end:var(--_outline-label-padding)}.outline-end{flex-grow:1;margin-inline-start:calc(-1*var(--_outline-label-padding))}.outline-end::before,.outline-end::after{border-inline-start-style:none;border-inline-end-style:solid;border-start-start-radius:0;border-start-end-radius:inherit;border-end-start-radius:0;border-end-end-radius:inherit}.outline-notch{align-items:flex-start;border:inherit;display:flex;margin-inline-start:calc(-1*var(--_outline-label-padding));margin-inline-end:var(--_outline-label-padding);max-width:calc(100% - var(--_leading-space) - var(--_trailing-space));padding:0 var(--_outline-label-padding);position:relative}.no-label .outline-notch{display:none}.outline-panel-inactive,.outline-panel-active{border:inherit;border-bottom-style:solid;inset:0;position:absolute}.outline-panel-inactive::before,.outline-panel-inactive::after,.outline-panel-active::before,.outline-panel-active::after{border-top-style:solid;border-bottom:none;bottom:auto;transform:scaleX(1);transition:transform 150ms cubic-bezier(0.2, 0, 0, 1)}.outline-panel-inactive::before,.outline-panel-active::before{right:50%;transform-origin:top left}.outline-panel-inactive::after,.outline-panel-active::after{left:50%;transform-origin:top right}.populated .outline-panel-inactive::before,.populated .outline-panel-inactive::after,.populated .outline-panel-active::before,.populated .outline-panel-active::after,.focused .outline-panel-inactive::before,.focused .outline-panel-inactive::after,.focused .outline-panel-active::before,.focused .outline-panel-active::after{transform:scaleX(0)}.outline-panel-active{opacity:0;transition:opacity 150ms cubic-bezier(0.2, 0, 0, 1)}.focused .outline-panel-active{opacity:1}.outline-label{display:flex;max-width:100%;transform:translateY(calc(-100% + var(--_label-text-padding-bottom)))}.outline-start,.field:not(.with-start) .content ::slotted(*){padding-inline-start:max(var(--_leading-space),max(var(--_container-shape-start-start),var(--_container-shape-end-start)) + var(--_outline-label-padding))}.field:not(.with-start) .label-wrapper{margin-inline-start:max(var(--_leading-space),max(var(--_container-shape-start-start),var(--_container-shape-end-start)) + var(--_outline-label-padding))}.field:not(.with-end) .content ::slotted(*){padding-inline-end:max(var(--_trailing-space),max(var(--_container-shape-start-end),var(--_container-shape-end-end)))}.field:not(.with-end) .label-wrapper{margin-inline-end:max(var(--_trailing-space),max(var(--_container-shape-start-end),var(--_container-shape-end-end)))}.outline-start::before,.outline-end::before,.outline-panel-inactive,.outline-panel-inactive::before,.outline-panel-inactive::after{border-width:var(--_outline-width)}:hover .outline{border-color:var(--_hover-outline-color);color:var(--_hover-outline-color)}:hover .outline-start::before,:hover .outline-end::before,:hover .outline-panel-inactive,:hover .outline-panel-inactive::before,:hover .outline-panel-inactive::after{border-width:var(--_hover-outline-width)}.focused .outline{border-color:var(--_focus-outline-color);color:var(--_focus-outline-color)}.outline-start::after,.outline-end::after,.outline-panel-active,.outline-panel-active::before,.outline-panel-active::after{border-width:var(--_focus-outline-width)}.disabled .outline{border-color:var(--_disabled-outline-color);color:var(--_disabled-outline-color)}.disabled .outline-start,.disabled .outline-end,.disabled .outline-panel-inactive{opacity:var(--_disabled-outline-opacity)}.disabled .outline-start::before,.disabled .outline-end::before,.disabled .outline-panel-inactive,.disabled .outline-panel-inactive::before,.disabled .outline-panel-inactive::after{border-width:var(--_disabled-outline-width)}.error .outline{border-color:var(--_error-outline-color);color:var(--_error-outline-color)}.error:hover .outline{border-color:var(--_error-hover-outline-color);color:var(--_error-hover-outline-color)}.error.focused .outline{border-color:var(--_error-focus-outline-color);color:var(--_error-focus-outline-color)}.resizable .container{bottom:var(--_focus-outline-width);inset-inline-end:var(--_focus-outline-width);clip-path:inset(var(--_focus-outline-width) 0 0 var(--_focus-outline-width))}.resizable .container>*{top:var(--_focus-outline-width);inset-inline-start:var(--_focus-outline-width)}:host-context([dir=rtl]) .resizable .container,:host([dir=rtl]) .resizable .container{clip-path:inset(var(--_focus-outline-width) var(--_focus-outline-width) 0 0)}.resizable .container:dir(rtl){clip-path:inset(var(--_focus-outline-width) var(--_focus-outline-width) 0 0)}}@layer hcm{@media(forced-colors: active){.disabled .outline{border-color:GrayText;color:GrayText}.disabled :is(.outline-start,.outline-end,.outline-panel-inactive){opacity:1}}}/*# sourceMappingURL=outlined-styles.css.map */
+`;
+//# sourceMappingURL=outlined-styles.css.js.map
+;// CONCATENATED MODULE: ./node_modules/@material/web/field/outlined-field.js
+/**
+ * @license
+ * Copyright 2021 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+
+
+
+
+/**
+ * TODO(b/228525797): add docs
+ * @final
+ * @suppress {visibility}
+ */
+let MdOutlinedField = class MdOutlinedField extends OutlinedField {
+};
+MdOutlinedField.styles = [field_internal_shared_styles_css_styles, internal_outlined_styles_css_styles];
+MdOutlinedField = __decorate([
+    t('md-outlined-field')
+], MdOutlinedField);
+//# sourceMappingURL=outlined-field.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/icon/internal/icon.js
 /**
  * @license
@@ -4701,7 +5354,7 @@ class Icon extends lit_element_s {
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const icon_styles_css_styles = i `:host{font-size:24px;width:24px;height:24px;color:inherit;font-variation-settings:inherit;font-weight:400;font-family:var(--md-icon-font, Material Symbols Outlined);display:inline-flex;font-style:normal;line-height:1;overflow:hidden;letter-spacing:normal;text-transform:none;user-select:none;white-space:nowrap;word-wrap:normal;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;-moz-osx-font-smoothing:grayscale}::slotted(svg){fill:currentColor}::slotted(*){height:100%;width:100%}/*# sourceMappingURL=icon-styles.css.map */
+const icon_styles_css_styles = i `:host{font-size:var(--md-icon-size, 24px);width:var(--md-icon-size, 24px);height:var(--md-icon-size, 24px);color:inherit;font-variation-settings:inherit;font-weight:400;font-family:var(--md-icon-font, Material Symbols Outlined);display:inline-flex;font-style:normal;line-height:1;overflow:hidden;letter-spacing:normal;text-transform:none;user-select:none;white-space:nowrap;word-wrap:normal;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;-moz-osx-font-smoothing:grayscale}::slotted(svg){fill:currentColor}::slotted(*){height:100%;width:100%}/*# sourceMappingURL=icon-styles.css.map */
 `;
 //# sourceMappingURL=icon-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/icon/icon.js
@@ -4733,9 +5386,22 @@ MdIcon = __decorate([
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const internal_filled_styles_css_styles = i `:host{--_container-color: var(--md-filled-icon-button-container-color, var(--md-sys-color-primary, #6750a4));--_container-height: var(--md-filled-icon-button-container-height, 40px);--_container-shape: var(--md-filled-icon-button-container-shape, 9999px);--_container-width: var(--md-filled-icon-button-container-width, 40px);--_disabled-container-color: var(--md-filled-icon-button-disabled-container-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-container-opacity: var(--md-filled-icon-button-disabled-container-opacity, 0.12);--_disabled-icon-color: var(--md-filled-icon-button-disabled-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-icon-opacity: var(--md-filled-icon-button-disabled-icon-opacity, 0.38);--_focus-icon-color: var(--md-filled-icon-button-focus-icon-color, var(--md-sys-color-on-primary, #fff));--_hover-icon-color: var(--md-filled-icon-button-hover-icon-color, var(--md-sys-color-on-primary, #fff));--_hover-state-layer-color: var(--md-filled-icon-button-hover-state-layer-color, var(--md-sys-color-on-primary, #fff));--_hover-state-layer-opacity: var(--md-filled-icon-button-hover-state-layer-opacity, 0.08);--_icon-color: var(--md-filled-icon-button-icon-color, var(--md-sys-color-on-primary, #fff));--_icon-size: var(--md-filled-icon-button-icon-size, 24px);--_pressed-icon-color: var(--md-filled-icon-button-pressed-icon-color, var(--md-sys-color-on-primary, #fff));--_pressed-state-layer-color: var(--md-filled-icon-button-pressed-state-layer-color, var(--md-sys-color-on-primary, #fff));--_pressed-state-layer-opacity: var(--md-filled-icon-button-pressed-state-layer-opacity, 0.12);--_selected-container-color: var(--md-filled-icon-button-selected-container-color, var(--md-sys-color-primary, #6750a4));--_toggle-selected-focus-icon-color: var(--md-filled-icon-button-toggle-selected-focus-icon-color, var(--md-sys-color-on-primary, #fff));--_toggle-selected-hover-icon-color: var(--md-filled-icon-button-toggle-selected-hover-icon-color, var(--md-sys-color-on-primary, #fff));--_toggle-selected-hover-state-layer-color: var(--md-filled-icon-button-toggle-selected-hover-state-layer-color, var(--md-sys-color-on-primary, #fff));--_toggle-selected-icon-color: var(--md-filled-icon-button-toggle-selected-icon-color, var(--md-sys-color-on-primary, #fff));--_toggle-selected-pressed-icon-color: var(--md-filled-icon-button-toggle-selected-pressed-icon-color, var(--md-sys-color-on-primary, #fff));--_toggle-selected-pressed-state-layer-color: var(--md-filled-icon-button-toggle-selected-pressed-state-layer-color, var(--md-sys-color-on-primary, #fff));--_unselected-container-color: var(--md-filled-icon-button-unselected-container-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_toggle-focus-icon-color: var(--md-filled-icon-button-toggle-focus-icon-color, var(--md-sys-color-primary, #6750a4));--_toggle-hover-icon-color: var(--md-filled-icon-button-toggle-hover-icon-color, var(--md-sys-color-primary, #6750a4));--_toggle-hover-state-layer-color: var(--md-filled-icon-button-toggle-hover-state-layer-color, var(--md-sys-color-primary, #6750a4));--_toggle-icon-color: var(--md-filled-icon-button-toggle-icon-color, var(--md-sys-color-primary, #6750a4));--_toggle-pressed-icon-color: var(--md-filled-icon-button-toggle-pressed-icon-color, var(--md-sys-color-primary, #6750a4));--_toggle-pressed-state-layer-color: var(--md-filled-icon-button-toggle-pressed-state-layer-color, var(--md-sys-color-primary, #6750a4));--_container-shape-start-start: var( --md-filled-icon-button-container-shape-start-start, var(--_container-shape) );--_container-shape-start-end: var( --md-filled-icon-button-container-shape-start-end, var(--_container-shape) );--_container-shape-end-end: var( --md-filled-icon-button-container-shape-end-end, var(--_container-shape) );--_container-shape-end-start: var( --md-filled-icon-button-container-shape-end-start, var(--_container-shape) )}.icon-button{color:var(--_icon-color);--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-color: var(--_pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity)}.icon-button:hover{color:var(--_hover-icon-color)}.icon-button:focus{color:var(--_focus-icon-color)}.icon-button:active{color:var(--_pressed-icon-color)}.icon-button:disabled{color:var(--_disabled-icon-color)}.icon-button::before{background-color:var(--_container-color);border-radius:inherit;content:"";inset:0;position:absolute;z-index:-1}.icon-button:disabled::before{background-color:var(--_disabled-container-color);opacity:var(--_disabled-container-opacity)}.icon-button:disabled .icon{opacity:var(--_disabled-icon-opacity)}.toggle-filled{--md-ripple-hover-color: var(--_toggle-hover-state-layer-color);--md-ripple-pressed-color: var(--_toggle-pressed-state-layer-color)}.toggle-filled:not(:disabled){color:var(--_toggle-icon-color)}.toggle-filled:not(:disabled):hover{color:var(--_toggle-hover-icon-color)}.toggle-filled:not(:disabled):focus{color:var(--_toggle-focus-icon-color)}.toggle-filled:not(:disabled):active{color:var(--_toggle-pressed-icon-color)}.toggle-filled:not(:disabled)::before{background-color:var(--_unselected-container-color)}.selected{--md-ripple-hover-color: var(--_toggle-selected-hover-state-layer-color);--md-ripple-pressed-color: var(--_toggle-selected-pressed-state-layer-color)}.selected:not(:disabled){color:var(--_toggle-selected-icon-color)}.selected:not(:disabled):hover{color:var(--_toggle-selected-hover-icon-color)}.selected:not(:disabled):focus{color:var(--_toggle-selected-focus-icon-color)}.selected:not(:disabled):active{color:var(--_toggle-selected-pressed-icon-color)}.selected:not(:disabled)::before{background-color:var(--_selected-container-color)}/*# sourceMappingURL=filled-styles.css.map */
+const iconbutton_internal_filled_styles_css_styles = i `:host{--_container-color: var(--md-filled-icon-button-container-color, var(--md-sys-color-primary, #6750a4));--_container-height: var(--md-filled-icon-button-container-height, 40px);--_container-shape: var(--md-filled-icon-button-container-shape, 9999px);--_container-width: var(--md-filled-icon-button-container-width, 40px);--_disabled-container-color: var(--md-filled-icon-button-disabled-container-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-container-opacity: var(--md-filled-icon-button-disabled-container-opacity, 0.12);--_disabled-icon-color: var(--md-filled-icon-button-disabled-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-icon-opacity: var(--md-filled-icon-button-disabled-icon-opacity, 0.38);--_focus-icon-color: var(--md-filled-icon-button-focus-icon-color, var(--md-sys-color-on-primary, #fff));--_hover-icon-color: var(--md-filled-icon-button-hover-icon-color, var(--md-sys-color-on-primary, #fff));--_hover-state-layer-color: var(--md-filled-icon-button-hover-state-layer-color, var(--md-sys-color-on-primary, #fff));--_hover-state-layer-opacity: var(--md-filled-icon-button-hover-state-layer-opacity, 0.08);--_icon-color: var(--md-filled-icon-button-icon-color, var(--md-sys-color-on-primary, #fff));--_icon-size: var(--md-filled-icon-button-icon-size, 24px);--_pressed-icon-color: var(--md-filled-icon-button-pressed-icon-color, var(--md-sys-color-on-primary, #fff));--_pressed-state-layer-color: var(--md-filled-icon-button-pressed-state-layer-color, var(--md-sys-color-on-primary, #fff));--_pressed-state-layer-opacity: var(--md-filled-icon-button-pressed-state-layer-opacity, 0.12);--_selected-container-color: var(--md-filled-icon-button-selected-container-color, var(--md-sys-color-primary, #6750a4));--_toggle-selected-focus-icon-color: var(--md-filled-icon-button-toggle-selected-focus-icon-color, var(--md-sys-color-on-primary, #fff));--_toggle-selected-hover-icon-color: var(--md-filled-icon-button-toggle-selected-hover-icon-color, var(--md-sys-color-on-primary, #fff));--_toggle-selected-hover-state-layer-color: var(--md-filled-icon-button-toggle-selected-hover-state-layer-color, var(--md-sys-color-on-primary, #fff));--_toggle-selected-icon-color: var(--md-filled-icon-button-toggle-selected-icon-color, var(--md-sys-color-on-primary, #fff));--_toggle-selected-pressed-icon-color: var(--md-filled-icon-button-toggle-selected-pressed-icon-color, var(--md-sys-color-on-primary, #fff));--_toggle-selected-pressed-state-layer-color: var(--md-filled-icon-button-toggle-selected-pressed-state-layer-color, var(--md-sys-color-on-primary, #fff));--_unselected-container-color: var(--md-filled-icon-button-unselected-container-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_toggle-focus-icon-color: var(--md-filled-icon-button-toggle-focus-icon-color, var(--md-sys-color-primary, #6750a4));--_toggle-hover-icon-color: var(--md-filled-icon-button-toggle-hover-icon-color, var(--md-sys-color-primary, #6750a4));--_toggle-hover-state-layer-color: var(--md-filled-icon-button-toggle-hover-state-layer-color, var(--md-sys-color-primary, #6750a4));--_toggle-icon-color: var(--md-filled-icon-button-toggle-icon-color, var(--md-sys-color-primary, #6750a4));--_toggle-pressed-icon-color: var(--md-filled-icon-button-toggle-pressed-icon-color, var(--md-sys-color-primary, #6750a4));--_toggle-pressed-state-layer-color: var(--md-filled-icon-button-toggle-pressed-state-layer-color, var(--md-sys-color-primary, #6750a4));--_container-shape-start-start: var( --md-filled-icon-button-container-shape-start-start, var(--_container-shape) );--_container-shape-start-end: var( --md-filled-icon-button-container-shape-start-end, var(--_container-shape) );--_container-shape-end-end: var( --md-filled-icon-button-container-shape-end-end, var(--_container-shape) );--_container-shape-end-start: var( --md-filled-icon-button-container-shape-end-start, var(--_container-shape) )}.icon-button{color:var(--_icon-color);--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-color: var(--_pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity)}.icon-button:hover{color:var(--_hover-icon-color)}.icon-button:focus{color:var(--_focus-icon-color)}.icon-button:active{color:var(--_pressed-icon-color)}.icon-button:disabled{color:var(--_disabled-icon-color)}.icon-button::before{background-color:var(--_container-color);border-radius:inherit;content:"";inset:0;position:absolute;z-index:-1}.icon-button:disabled::before{background-color:var(--_disabled-container-color);opacity:var(--_disabled-container-opacity)}.icon-button:disabled .icon{opacity:var(--_disabled-icon-opacity)}.toggle-filled{--md-ripple-hover-color: var(--_toggle-hover-state-layer-color);--md-ripple-pressed-color: var(--_toggle-pressed-state-layer-color)}.toggle-filled:not(:disabled){color:var(--_toggle-icon-color)}.toggle-filled:not(:disabled):hover{color:var(--_toggle-hover-icon-color)}.toggle-filled:not(:disabled):focus{color:var(--_toggle-focus-icon-color)}.toggle-filled:not(:disabled):active{color:var(--_toggle-pressed-icon-color)}.toggle-filled:not(:disabled)::before{background-color:var(--_unselected-container-color)}.selected{--md-ripple-hover-color: var(--_toggle-selected-hover-state-layer-color);--md-ripple-pressed-color: var(--_toggle-selected-pressed-state-layer-color)}.selected:not(:disabled){color:var(--_toggle-selected-icon-color)}.selected:not(:disabled):hover{color:var(--_toggle-selected-hover-icon-color)}.selected:not(:disabled):focus{color:var(--_toggle-selected-focus-icon-color)}.selected:not(:disabled):active{color:var(--_toggle-selected-pressed-icon-color)}.selected:not(:disabled)::before{background-color:var(--_selected-container-color)}/*# sourceMappingURL=filled-styles.css.map */
 `;
 //# sourceMappingURL=filled-styles.css.js.map
+;// CONCATENATED MODULE: ./node_modules/lit-html/static.js
+
+/**
+ * @license
+ * Copyright 2020 Google LLC
+ * SPDX-License-Identifier: BSD-3-Clause
+ */const static_e=Symbol.for(""),static_o=t=>{if(t?.r===static_e)return t?._$litStatic$},static_i=t=>({_$litStatic$:t,r:static_e}),static_s=(t,...r)=>({_$litStatic$:r.reduce(((r,e,o)=>r+(t=>{if(void 0!==t._$litStatic$)return t._$litStatic$;throw Error(`Value passed to 'literal' function must be a 'literal' result: ${t}. Use 'unsafeStatic' to pass non-literal values, but\n            take care to ensure page security.`)})(e)+t[o+1]),t[0]),r:static_e}),static_a=new Map,static_l=t=>(r,...e)=>{const i=e.length;let s,l;const n=[],u=[];let c,$=0,f=!1;for(;$<i;){for(c=r[$];$<i&&void 0!==(l=e[$],s=static_o(l));)c+=s+r[++$],f=!0;$!==i&&u.push(l),n.push(c),$++}if($===i&&n.push(r[i]),f){const t=n.join("$$lit$$");void 0===(r=static_a.get(t))&&(n.raw=n,static_a.set(t,r=n)),e=u}return t(r,...e)},static_n=static_l(x),static_u=static_l(lit_html_b);
+//# sourceMappingURL=static.js.map
+
+;// CONCATENATED MODULE: ./node_modules/lit/static-html.js
+
+//# sourceMappingURL=static-html.js.map
+
 ;// CONCATENATED MODULE: ./node_modules/@material/web/internal/controller/is-rtl.js
 /**
  * @license
@@ -4751,8 +5417,8 @@ const internal_filled_styles_css_styles = i `:host{--_container-color: var(--md-
  *     this parameter can be used as a conditional guard. Defaults to `true`.
  */
 function isRtl(el, shouldCheck = true) {
-    return shouldCheck &&
-        getComputedStyle(el).getPropertyValue('direction').trim() === 'rtl';
+    return (shouldCheck &&
+        getComputedStyle(el).getPropertyValue('direction').trim() === 'rtl');
 }
 //# sourceMappingURL=is-rtl.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/iconbutton/internal/icon-button.js
@@ -4761,7 +5427,6 @@ function isRtl(el, shouldCheck = true) {
  * Copyright 2018 Google LLC
  * SPDX-License-Identifier: Apache-2.0
  */
-var icon_button_a;
 
 
 
@@ -4773,8 +5438,16 @@ var icon_button_a;
 
 
 
-// tslint:disable-next-line:enforce-comments-on-exported-symbols
-class IconButton extends lit_element_s {
+// Separate variable needed for closure.
+const iconButtonBaseClass = mixinElementInternals(lit_element_s);
+/**
+ * A button for rendering icons.
+ *
+ * @fires input {InputEvent} Dispatched when a toggle button toggles --bubbles
+ * --composed
+ * @fires change {Event} Dispatched when a toggle button toggles --bubbles
+ */
+class IconButton extends iconButtonBaseClass {
     constructor() {
         super(...arguments);
         /**
@@ -4811,8 +5484,6 @@ class IconButton extends lit_element_s {
         this.type = 'submit';
         this.value = '';
         this.flipIcon = isRtl(this, this.flipIconInRtl);
-        /** @private */
-        this[icon_button_a] = this /* needed for closure */.attachInternals();
     }
     get name() {
         return this.getAttribute('name') ?? '';
@@ -4848,16 +5519,17 @@ class IconButton extends lit_element_s {
         const ariaPressedValue = !this.toggle ? T : this.selected;
         let ariaLabelValue = T;
         if (!this.href) {
-            ariaLabelValue = (hasToggledAriaLabel && this.selected) ?
-                this.ariaLabelSelected :
-                ariaLabel;
+            ariaLabelValue =
+                hasToggledAriaLabel && this.selected
+                    ? this.ariaLabelSelected
+                    : ariaLabel;
         }
         return static_n `<${tag}
         class="icon-button ${class_map_e(this.getRenderClasses())}"
         id="button"
         aria-label="${ariaLabelValue || T}"
-        aria-haspopup="${!this.href && ariaHasPopup || T}"
-        aria-expanded="${!this.href && ariaExpanded || T}"
+        aria-haspopup="${(!this.href && ariaHasPopup) || T}"
+        aria-expanded="${(!this.href && ariaExpanded) || T}"
         aria-pressed="${ariaPressedValue}"
         ?disabled="${!this.href && this.disabled}"
         @click="${this.handleClick}">
@@ -4873,12 +5545,12 @@ class IconButton extends lit_element_s {
         // Needed for closure conformance
         const { ariaLabel } = this;
         return x `
-      <a class="link"
+      <a
+        class="link"
         id="link"
         href="${this.href}"
         target="${this.target || T}"
-        aria-label="${ariaLabel || T}"
-      ></a>
+        aria-label="${ariaLabel || T}"></a>
     `;
     }
     getRenderClasses() {
@@ -4892,19 +5564,24 @@ class IconButton extends lit_element_s {
     }
     renderSelectedIcon() {
         // Use default slot as fallback to not require specifying multiple icons
-        return x `<span class="icon icon--selected"><slot name="selected"><slot></slot></slot></span>`;
+        return x `<span class="icon icon--selected"
+      ><slot name="selected"><slot></slot></slot
+    ></span>`;
     }
     renderTouchTarget() {
         return x `<span class="touch"></span>`;
     }
     renderFocusRing() {
-        return x `<md-focus-ring part="focus-ring" for=${this.href ? 'link' : 'button'}></md-focus-ring>`;
+        // TODO(b/310046938): use the same id for both elements
+        return x `<md-focus-ring
+      part="focus-ring"
+      for=${this.href ? 'link' : 'button'}></md-focus-ring>`;
     }
     renderRipple() {
+        // TODO(b/310046938): use the same id for both elements
         return x `<md-ripple
       for=${this.href ? 'link' : T}
-      ?disabled="${!this.href && this.disabled}"
-    ></md-ripple>`;
+      ?disabled="${!this.href && this.disabled}"></md-ripple>`;
     }
     connectedCallback() {
         this.flipIcon = isRtl(this, this.flipIconInRtl);
@@ -4923,7 +5600,6 @@ class IconButton extends lit_element_s {
         this.dispatchEvent(new Event('change', { bubbles: true }));
     }
 }
-icon_button_a = internals;
 (() => {
     requestUpdateOnAriaChange(IconButton);
     setupFormSubmitter(IconButton);
@@ -4931,7 +5607,10 @@ icon_button_a = internals;
 /** @nocollapse */
 IconButton.formAssociated = true;
 /** @nocollapse */
-IconButton.shadowRootOptions = { mode: 'open', delegatesFocus: true };
+IconButton.shadowRootOptions = {
+    mode: 'open',
+    delegatesFocus: true,
+};
 __decorate([
     property_n({ type: Boolean, reflect: true })
 ], IconButton.prototype, "disabled", void 0);
@@ -5008,7 +5687,7 @@ let MdFilledIconButton = class MdFilledIconButton extends IconButton {
         };
     }
 };
-MdFilledIconButton.styles = [iconbutton_internal_shared_styles_css_styles, internal_filled_styles_css_styles];
+MdFilledIconButton.styles = [iconbutton_internal_shared_styles_css_styles, iconbutton_internal_filled_styles_css_styles];
 MdFilledIconButton = __decorate([
     t('md-filled-icon-button')
 ], MdFilledIconButton);
@@ -5119,7 +5798,7 @@ MdIconButton = __decorate([
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const internal_outlined_styles_css_styles = i `:host{--_container-height: var(--md-outlined-icon-button-container-height, 40px);--_container-shape: var(--md-outlined-icon-button-container-shape, 9999px);--_container-width: var(--md-outlined-icon-button-container-width, 40px);--_disabled-icon-color: var(--md-outlined-icon-button-disabled-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-icon-opacity: var(--md-outlined-icon-button-disabled-icon-opacity, 0.38);--_disabled-selected-container-color: var(--md-outlined-icon-button-disabled-selected-container-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-selected-container-opacity: var(--md-outlined-icon-button-disabled-selected-container-opacity, 0.12);--_hover-state-layer-opacity: var(--md-outlined-icon-button-hover-state-layer-opacity, 0.08);--_icon-size: var(--md-outlined-icon-button-icon-size, 24px);--_pressed-state-layer-opacity: var(--md-outlined-icon-button-pressed-state-layer-opacity, 0.12);--_selected-container-color: var(--md-outlined-icon-button-selected-container-color, var(--md-sys-color-inverse-surface, #322f35));--_selected-focus-icon-color: var(--md-outlined-icon-button-selected-focus-icon-color, var(--md-sys-color-inverse-on-surface, #f5eff7));--_selected-hover-icon-color: var(--md-outlined-icon-button-selected-hover-icon-color, var(--md-sys-color-inverse-on-surface, #f5eff7));--_selected-hover-state-layer-color: var(--md-outlined-icon-button-selected-hover-state-layer-color, var(--md-sys-color-inverse-on-surface, #f5eff7));--_selected-icon-color: var(--md-outlined-icon-button-selected-icon-color, var(--md-sys-color-inverse-on-surface, #f5eff7));--_selected-pressed-icon-color: var(--md-outlined-icon-button-selected-pressed-icon-color, var(--md-sys-color-inverse-on-surface, #f5eff7));--_selected-pressed-state-layer-color: var(--md-outlined-icon-button-selected-pressed-state-layer-color, var(--md-sys-color-inverse-on-surface, #f5eff7));--_disabled-outline-color: var(--md-outlined-icon-button-disabled-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-outline-opacity: var(--md-outlined-icon-button-disabled-outline-opacity, 0.12);--_focus-icon-color: var(--md-outlined-icon-button-focus-icon-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-icon-color: var(--md-outlined-icon-button-hover-icon-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-state-layer-color: var(--md-outlined-icon-button-hover-state-layer-color, var(--md-sys-color-on-surface-variant, #49454f));--_icon-color: var(--md-outlined-icon-button-icon-color, var(--md-sys-color-on-surface-variant, #49454f));--_outline-color: var(--md-outlined-icon-button-outline-color, var(--md-sys-color-outline, #79747e));--_outline-width: var(--md-outlined-icon-button-outline-width, 1px);--_pressed-icon-color: var(--md-outlined-icon-button-pressed-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_pressed-state-layer-color: var(--md-outlined-icon-button-pressed-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--_container-shape-start-start: var( --md-outlined-icon-button-container-shape-start-start, var(--_container-shape) );--_container-shape-start-end: var( --md-outlined-icon-button-container-shape-start-end, var(--_container-shape) );--_container-shape-end-end: var( --md-outlined-icon-button-container-shape-end-end, var(--_container-shape) );--_container-shape-end-start: var( --md-outlined-icon-button-container-shape-end-start, var(--_container-shape) )}.outlined{background-color:rgba(0,0,0,0);color:var(--_icon-color);--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-color: var(--_pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity)}.outlined::before{border-color:var(--_outline-color);border-width:var(--_outline-width)}.outlined:hover{color:var(--_hover-icon-color)}.outlined:focus{color:var(--_focus-icon-color)}.outlined:active{color:var(--_pressed-icon-color)}.outlined:disabled{color:var(--_disabled-icon-color)}.outlined:disabled::before{border-color:var(--_disabled-outline-color);opacity:var(--_disabled-outline-opacity)}.outlined:disabled .icon{opacity:var(--_disabled-icon-opacity)}.outlined::before{block-size:100%;border-style:solid;border-radius:inherit;box-sizing:border-box;content:"";inline-size:100%;inset:0;pointer-events:none;position:absolute;z-index:-1}.outlined.selected::before{border-width:0}.selected{--md-ripple-hover-color: var(--_selected-hover-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-color: var(--_selected-pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity)}.selected:not(:disabled){color:var(--_selected-icon-color)}.selected:not(:disabled):hover{color:var(--_selected-hover-icon-color)}.selected:not(:disabled):focus{color:var(--_selected-focus-icon-color)}.selected:not(:disabled):active{color:var(--_selected-pressed-icon-color)}.selected:not(:disabled)::before{background-color:var(--_selected-container-color)}.selected:disabled::before{background-color:var(--_disabled-selected-container-color);opacity:var(--_disabled-selected-container-opacity)}@media(forced-colors: active){:host([disabled]){--_disabled-outline-opacity: 1}.selected::before{border-color:CanvasText;border-width:var(--_outline-width)}.selected:disabled::before{border-color:GrayText;opacity:1}}/*# sourceMappingURL=outlined-styles.css.map */
+const iconbutton_internal_outlined_styles_css_styles = i `:host{--_container-height: var(--md-outlined-icon-button-container-height, 40px);--_container-shape: var(--md-outlined-icon-button-container-shape, 9999px);--_container-width: var(--md-outlined-icon-button-container-width, 40px);--_disabled-icon-color: var(--md-outlined-icon-button-disabled-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-icon-opacity: var(--md-outlined-icon-button-disabled-icon-opacity, 0.38);--_disabled-selected-container-color: var(--md-outlined-icon-button-disabled-selected-container-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-selected-container-opacity: var(--md-outlined-icon-button-disabled-selected-container-opacity, 0.12);--_hover-state-layer-opacity: var(--md-outlined-icon-button-hover-state-layer-opacity, 0.08);--_icon-size: var(--md-outlined-icon-button-icon-size, 24px);--_pressed-state-layer-opacity: var(--md-outlined-icon-button-pressed-state-layer-opacity, 0.12);--_selected-container-color: var(--md-outlined-icon-button-selected-container-color, var(--md-sys-color-inverse-surface, #322f35));--_selected-focus-icon-color: var(--md-outlined-icon-button-selected-focus-icon-color, var(--md-sys-color-inverse-on-surface, #f5eff7));--_selected-hover-icon-color: var(--md-outlined-icon-button-selected-hover-icon-color, var(--md-sys-color-inverse-on-surface, #f5eff7));--_selected-hover-state-layer-color: var(--md-outlined-icon-button-selected-hover-state-layer-color, var(--md-sys-color-inverse-on-surface, #f5eff7));--_selected-icon-color: var(--md-outlined-icon-button-selected-icon-color, var(--md-sys-color-inverse-on-surface, #f5eff7));--_selected-pressed-icon-color: var(--md-outlined-icon-button-selected-pressed-icon-color, var(--md-sys-color-inverse-on-surface, #f5eff7));--_selected-pressed-state-layer-color: var(--md-outlined-icon-button-selected-pressed-state-layer-color, var(--md-sys-color-inverse-on-surface, #f5eff7));--_disabled-outline-color: var(--md-outlined-icon-button-disabled-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-outline-opacity: var(--md-outlined-icon-button-disabled-outline-opacity, 0.12);--_focus-icon-color: var(--md-outlined-icon-button-focus-icon-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-icon-color: var(--md-outlined-icon-button-hover-icon-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-state-layer-color: var(--md-outlined-icon-button-hover-state-layer-color, var(--md-sys-color-on-surface-variant, #49454f));--_icon-color: var(--md-outlined-icon-button-icon-color, var(--md-sys-color-on-surface-variant, #49454f));--_outline-color: var(--md-outlined-icon-button-outline-color, var(--md-sys-color-outline, #79747e));--_outline-width: var(--md-outlined-icon-button-outline-width, 1px);--_pressed-icon-color: var(--md-outlined-icon-button-pressed-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_pressed-state-layer-color: var(--md-outlined-icon-button-pressed-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--_container-shape-start-start: var( --md-outlined-icon-button-container-shape-start-start, var(--_container-shape) );--_container-shape-start-end: var( --md-outlined-icon-button-container-shape-start-end, var(--_container-shape) );--_container-shape-end-end: var( --md-outlined-icon-button-container-shape-end-end, var(--_container-shape) );--_container-shape-end-start: var( --md-outlined-icon-button-container-shape-end-start, var(--_container-shape) )}.outlined{background-color:rgba(0,0,0,0);color:var(--_icon-color);--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-color: var(--_pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity)}.outlined::before{border-color:var(--_outline-color);border-width:var(--_outline-width)}.outlined:hover{color:var(--_hover-icon-color)}.outlined:focus{color:var(--_focus-icon-color)}.outlined:active{color:var(--_pressed-icon-color)}.outlined:disabled{color:var(--_disabled-icon-color)}.outlined:disabled::before{border-color:var(--_disabled-outline-color);opacity:var(--_disabled-outline-opacity)}.outlined:disabled .icon{opacity:var(--_disabled-icon-opacity)}.outlined::before{block-size:100%;border-style:solid;border-radius:inherit;box-sizing:border-box;content:"";inline-size:100%;inset:0;pointer-events:none;position:absolute;z-index:-1}.outlined.selected::before{border-width:0}.selected{--md-ripple-hover-color: var(--_selected-hover-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-color: var(--_selected-pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity)}.selected:not(:disabled){color:var(--_selected-icon-color)}.selected:not(:disabled):hover{color:var(--_selected-hover-icon-color)}.selected:not(:disabled):focus{color:var(--_selected-focus-icon-color)}.selected:not(:disabled):active{color:var(--_selected-pressed-icon-color)}.selected:not(:disabled)::before{background-color:var(--_selected-container-color)}.selected:disabled::before{background-color:var(--_disabled-selected-container-color);opacity:var(--_disabled-selected-container-opacity)}@media(forced-colors: active){:host([disabled]){--_disabled-outline-opacity: 1}.selected::before{border-color:CanvasText;border-width:var(--_outline-width)}.selected:disabled::before{border-color:GrayText;opacity:1}}/*# sourceMappingURL=outlined-styles.css.map */
 `;
 //# sourceMappingURL=outlined-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/iconbutton/outlined-icon-button.js
@@ -5156,7 +5835,7 @@ let MdOutlinedIconButton = class MdOutlinedIconButton extends IconButton {
         };
     }
 };
-MdOutlinedIconButton.styles = [iconbutton_internal_shared_styles_css_styles, internal_outlined_styles_css_styles];
+MdOutlinedIconButton.styles = [iconbutton_internal_shared_styles_css_styles, iconbutton_internal_outlined_styles_css_styles];
 MdOutlinedIconButton = __decorate([
     t('md-outlined-icon-button')
 ], MdOutlinedIconButton);
@@ -5426,8 +6105,12 @@ class ListController {
             }
             event.preventDefault();
             const isRtl = this.isRtl();
-            const inlinePrevious = isRtl ? NavigableKeys.ArrowRight : NavigableKeys.ArrowLeft;
-            const inlineNext = isRtl ? NavigableKeys.ArrowLeft : NavigableKeys.ArrowRight;
+            const inlinePrevious = isRtl
+                ? NavigableKeys.ArrowRight
+                : NavigableKeys.ArrowLeft;
+            const inlineNext = isRtl
+                ? NavigableKeys.ArrowLeft
+                : NavigableKeys.ArrowRight;
             switch (key) {
                 // Activate the next item
                 case NavigableKeys.ArrowDown:
@@ -5590,7 +6273,9 @@ class List extends lit_element_s {
             isNavigableKey: (key) => NAVIGABLE_KEY_SET.has(key),
             isActivatable: (item) => !item.disabled && item.type !== 'text',
         });
-        this.internals = polyfillElementInternalsAria(this, this /* needed for closure */.attachInternals());
+        this.internals = polyfillElementInternalsAria(this, 
+        // Cast needed for closure
+        this.attachInternals());
         if (!is_server_o) {
             this.internals.role = 'list';
             this.addEventListener('keydown', this.listController.handleKeydown);
@@ -5599,9 +6284,9 @@ class List extends lit_element_s {
     render() {
         return x `
       <slot
-          @deactivate-items=${this.listController.onDeactivateItems}
-          @request-activation=${this.listController.onRequestActivation}
-          @slotchange=${this.listController.onSlotchange}>
+        @deactivate-items=${this.listController.onDeactivateItems}
+        @request-activation=${this.listController.onRequestActivation}
+        @slotchange=${this.listController.onSlotchange}>
       </slot>
     `;
     }
@@ -5625,7 +6310,7 @@ class List extends lit_element_s {
     }
 }
 (() => {
-    setupHostAria(List, { focusable: false });
+    polyfillARIAMixin(List);
 })();
 __decorate([
     query_assigned_elements_o({ flatten: true })
@@ -5677,16 +6362,6 @@ MdList = __decorate([
     t('md-list')
 ], MdList);
 //# sourceMappingURL=list.js.map
-;// CONCATENATED MODULE: ./node_modules/@material/web/list/internal/listitem/forced-colors-styles.css.js
-/**
-  * @license
-  * Copyright 2022 Google LLC
-  * SPDX-License-Identifier: Apache-2.0
-  */
-
-const listitem_forced_colors_styles_css_styles = i `@media(forced-colors: active){.disabled slot{color:GrayText}.list-item.disabled{color:GrayText;opacity:1}}/*# sourceMappingURL=forced-colors-styles.css.map */
-`;
-//# sourceMappingURL=forced-colors-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/labs/item/internal/item.js
 /**
  * @license
@@ -5716,14 +6391,14 @@ class Item extends lit_element_s {
       <slot name="container"></slot>
       <slot class="non-text" name="start"></slot>
       <div class="text">
-        <slot name="overline"
-            @slotchange=${this.handleTextSlotChange}></slot>
-        <slot class="default-slot"
-            @slotchange=${this.handleTextSlotChange}></slot>
-        <slot name="headline"
-            @slotchange=${this.handleTextSlotChange}></slot>
-        <slot name="supporting-text"
-            @slotchange=${this.handleTextSlotChange}></slot>
+        <slot name="overline" @slotchange=${this.handleTextSlotChange}></slot>
+        <slot
+          class="default-slot"
+          @slotchange=${this.handleTextSlotChange}></slot>
+        <slot name="headline" @slotchange=${this.handleTextSlotChange}></slot>
+        <slot
+          name="supporting-text"
+          @slotchange=${this.handleTextSlotChange}></slot>
       </div>
       <slot class="non-text" name="trailing-supporting-text"></slot>
       <slot class="non-text" name="end"></slot>
@@ -5773,7 +6448,7 @@ function slotHasContent(slot) {
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const item_styles_css_styles = i `:host{color:var(--md-sys-color-on-surface, #1d1b20);font-family:var(--md-sys-typescale-body-large-font, var(--md-ref-typeface-plain, Roboto));font-size:var(--md-sys-typescale-body-large-size, 1rem);font-weight:var(--md-sys-typescale-body-large-weight, var(--md-ref-typeface-weight-regular, 400));line-height:var(--md-sys-typescale-body-large-line-height, 1.5rem);align-items:center;box-sizing:border-box;display:flex;gap:16px;min-height:56px;overflow:hidden;padding:12px 16px;position:relative;text-overflow:ellipsis}:host([multiline]){min-height:72px}[name=overline]{color:var(--md-sys-color-on-surface-variant, #49454f);font-family:var(--md-sys-typescale-label-small-font, var(--md-ref-typeface-plain, Roboto));font-size:var(--md-sys-typescale-label-small-size, 0.6875rem);font-weight:var(--md-sys-typescale-label-small-weight, var(--md-ref-typeface-weight-medium, 500));line-height:var(--md-sys-typescale-label-small-line-height, 1rem)}[name=supporting-text]{color:var(--md-sys-color-on-surface-variant, #49454f);font-family:var(--md-sys-typescale-body-medium-font, var(--md-ref-typeface-plain, Roboto));font-size:var(--md-sys-typescale-body-medium-size, 0.875rem);font-weight:var(--md-sys-typescale-body-medium-weight, var(--md-ref-typeface-weight-regular, 400));line-height:var(--md-sys-typescale-body-medium-line-height, 1.25rem)}[name=trailing-supporting-text]{color:var(--md-sys-color-on-surface-variant, #49454f);font-family:var(--md-sys-typescale-label-small-font, var(--md-ref-typeface-plain, Roboto));font-size:var(--md-sys-typescale-label-small-size, 0.6875rem);font-weight:var(--md-sys-typescale-label-small-weight, var(--md-ref-typeface-weight-medium, 500));line-height:var(--md-sys-typescale-label-small-line-height, 1rem)}[name=container]::slotted(*){inset:0;position:absolute}.default-slot{display:inline}.default-slot,::slotted(*){overflow:hidden;text-overflow:ellipsis}.text{display:flex;flex:1;flex-direction:column;overflow:hidden}/*# sourceMappingURL=item-styles.css.map */
+const item_styles_css_styles = i `:host{color:var(--md-sys-color-on-surface, #1d1b20);font-family:var(--md-sys-typescale-body-large-font, var(--md-ref-typeface-plain, Roboto));font-size:var(--md-sys-typescale-body-large-size, 1rem);font-weight:var(--md-sys-typescale-body-large-weight, var(--md-ref-typeface-weight-regular, 400));line-height:var(--md-sys-typescale-body-large-line-height, 1.5rem);align-items:center;box-sizing:border-box;display:flex;gap:16px;min-height:56px;overflow:hidden;padding:12px 16px;position:relative;text-overflow:ellipsis}:host([multiline]){min-height:72px}[name=overline]{color:var(--md-sys-color-on-surface-variant, #49454f);font-family:var(--md-sys-typescale-label-small-font, var(--md-ref-typeface-plain, Roboto));font-size:var(--md-sys-typescale-label-small-size, 0.6875rem);font-weight:var(--md-sys-typescale-label-small-weight, var(--md-ref-typeface-weight-medium, 500));line-height:var(--md-sys-typescale-label-small-line-height, 1rem)}[name=supporting-text]{color:var(--md-sys-color-on-surface-variant, #49454f);font-family:var(--md-sys-typescale-body-medium-font, var(--md-ref-typeface-plain, Roboto));font-size:var(--md-sys-typescale-body-medium-size, 0.875rem);font-weight:var(--md-sys-typescale-body-medium-weight, var(--md-ref-typeface-weight-regular, 400));line-height:var(--md-sys-typescale-body-medium-line-height, 1.25rem)}[name=trailing-supporting-text]{color:var(--md-sys-color-on-surface-variant, #49454f);font-family:var(--md-sys-typescale-label-small-font, var(--md-ref-typeface-plain, Roboto));font-size:var(--md-sys-typescale-label-small-size, 0.6875rem);font-weight:var(--md-sys-typescale-label-small-weight, var(--md-ref-typeface-weight-medium, 500));line-height:var(--md-sys-typescale-label-small-line-height, 1rem)}[name=container]::slotted(*){inset:0;position:absolute}.default-slot{display:inline}.default-slot,.text ::slotted(*){overflow:hidden;text-overflow:ellipsis}.text{display:flex;flex:1;flex-direction:column;overflow:hidden}/*# sourceMappingURL=item-styles.css.map */
 `;
 //# sourceMappingURL=item-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/labs/item/item.js
@@ -5866,7 +6541,8 @@ MdItem = __decorate([
 
 
 /**
- * @fires request-activation
+ * @fires request-activation {Event} Requests the list to set `tabindex=0` on
+ * the item and focus it. --bubbles --composed
  */
 class ListItemEl extends lit_element_s {
     constructor() {
@@ -5907,8 +6583,7 @@ class ListItemEl extends lit_element_s {
         return this.renderListItem(x `
       <md-item>
         <div slot="container">
-          ${this.renderRipple()}
-          ${this.renderFocusRing()}
+          ${this.renderRipple()} ${this.renderFocusRing()}
         </div>
         <slot name="start" slot="start"></slot>
         <slot name="end" slot="end"></slot>
@@ -5964,11 +6639,10 @@ class ListItemEl extends lit_element_s {
         if (this.type === 'text') {
             return T;
         }
-        return x `
-      <md-ripple
-          part="ripple"
-          for="item"
-          ?disabled=${this.isDisabled}></md-ripple>`;
+        return x ` <md-ripple
+      part="ripple"
+      for="item"
+      ?disabled=${this.isDisabled}></md-ripple>`;
     }
     /**
      * Handles rendering of the focus ring.
@@ -5977,12 +6651,11 @@ class ListItemEl extends lit_element_s {
         if (this.type === 'text') {
             return T;
         }
-        return x `
-      <md-focus-ring
-          @visibility-changed=${this.onFocusRingVisibilityChanged}
-          part="focus-ring"
-          for="item"
-          inward></md-focus-ring>`;
+        return x ` <md-focus-ring
+      @visibility-changed=${this.onFocusRingVisibilityChanged}
+      part="focus-ring"
+      for="item"
+      inward></md-focus-ring>`;
     }
     onFocusRingVisibilityChanged(e) { }
     /**
@@ -6000,8 +6673,9 @@ class ListItemEl extends lit_element_s {
       <slot name="overline" slot="overline"></slot>
       <slot name="headline" slot="headline"></slot>
       <slot name="supporting-text" slot="supporting-text"></slot>
-      <slot name="trailing-supporting-text"
-          slot="trailing-supporting-text"></slot>
+      <slot
+        name="trailing-supporting-text"
+        slot="trailing-supporting-text"></slot>
     `;
     }
     onFocus() {
@@ -6023,13 +6697,13 @@ class ListItemEl extends lit_element_s {
 /** @nocollapse */
 ListItemEl.shadowRootOptions = {
     ...lit_element_s.shadowRootOptions,
-    delegatesFocus: true
+    delegatesFocus: true,
 };
 __decorate([
     property_n({ type: Boolean, reflect: true })
 ], ListItemEl.prototype, "disabled", void 0);
 __decorate([
-    property_n()
+    property_n({ reflect: true })
 ], ListItemEl.prototype, "type", void 0);
 __decorate([
     property_n({ type: Boolean, attribute: 'md-list-item', reflect: true })
@@ -6051,7 +6725,7 @@ __decorate([
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const list_item_styles_css_styles = i `:host{display:flex;--md-ripple-hover-color: var(--md-list-item-hover-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--md-ripple-hover-opacity: var(--md-list-item-hover-state-layer-opacity, 0.08);--md-ripple-pressed-color: var(--md-list-item-pressed-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--md-ripple-pressed-opacity: var(--md-list-item-pressed-state-layer-opacity, 0.12)}md-focus-ring{z-index:1;--md-focus-ring-shape: 8px}a,button,li{background:none;border:none;padding:0;margin:0;text-align:unset;text-decoration:none}.list-item{border-radius:inherit;display:flex;flex:1;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}.list-item.interactive{cursor:pointer}.list-item.disabled{opacity:var(--md-list-item-disabled-opacity, 0.3);pointer-events:none}[slot=container]{pointer-events:none}md-ripple{border-radius:inherit}md-item{border-radius:inherit;flex:1;height:100%;color:var(--md-list-item-label-text-color, var(--md-sys-color-on-surface, #1d1b20));font-family:var(--md-list-item-label-text-font, var(--md-sys-typescale-body-large-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-list-item-label-text-size, var(--md-sys-typescale-body-large-size, 1rem));line-height:var(--md-list-item-label-text-line-height, var(--md-sys-typescale-body-large-line-height, 1.5rem));font-weight:var(--md-list-item-label-text-weight, var(--md-sys-typescale-body-large-weight, var(--md-ref-typeface-weight-regular, 400)));min-height:var(--md-list-item-one-line-container-height, 56px);padding-top:var(--md-list-item-top-space, 12px);padding-bottom:var(--md-list-item-bottom-space, 12px);padding-inline-start:var(--md-list-item-leading-space, 16px);padding-inline-end:var(--md-list-item-trailing-space, 16px)}md-item[multiline]{min-height:var(--md-list-item-two-line-container-height, 72px)}[slot=supporting-text]{color:var(--md-list-item-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));font-family:var(--md-list-item-supporting-text-font, var(--md-sys-typescale-body-medium-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-list-item-supporting-text-size, var(--md-sys-typescale-body-medium-size, 0.875rem));line-height:var(--md-list-item-supporting-text-line-height, var(--md-sys-typescale-body-medium-line-height, 1.25rem));font-weight:var(--md-list-item-supporting-text-weight, var(--md-sys-typescale-body-medium-weight, var(--md-ref-typeface-weight-regular, 400)))}[slot=trailing-supporting-text]{color:var(--md-list-item-trailing-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));font-family:var(--md-list-item-trailing-supporting-text-font, var(--md-sys-typescale-label-small-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-list-item-trailing-supporting-text-size, var(--md-sys-typescale-label-small-size, 0.6875rem));line-height:var(--md-list-item-trailing-supporting-text-line-height, var(--md-sys-typescale-label-small-line-height, 1rem));font-weight:var(--md-list-item-trailing-supporting-text-weight, var(--md-sys-typescale-label-small-weight, var(--md-ref-typeface-weight-medium, 500)))}:is([slot=start],[slot=end])::slotted(*){fill:currentColor}[slot=start]{color:var(--md-list-item-leading-icon-color, var(--md-sys-color-on-surface-variant, #49454f))}[slot=end]{color:var(--md-list-item-trailing-icon-color, var(--md-sys-color-on-surface-variant, #49454f))}/*# sourceMappingURL=list-item-styles.css.map */
+const list_item_styles_css_styles = i `:host{display:flex;--md-ripple-hover-color: var(--md-list-item-hover-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--md-ripple-hover-opacity: var(--md-list-item-hover-state-layer-opacity, 0.08);--md-ripple-pressed-color: var(--md-list-item-pressed-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--md-ripple-pressed-opacity: var(--md-list-item-pressed-state-layer-opacity, 0.12)}:host(:is([type=button]:not([disabled]),[type=link])){cursor:pointer}md-focus-ring{z-index:1;--md-focus-ring-shape: 8px}a,button,li{background:none;border:none;cursor:inherit;padding:0;margin:0;text-align:unset;text-decoration:none}.list-item{border-radius:inherit;display:flex;flex:1;max-width:inherit;min-width:inherit;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}.list-item.interactive{cursor:pointer}.list-item.disabled{opacity:var(--md-list-item-disabled-opacity, 0.3);pointer-events:none}[slot=container]{pointer-events:none}md-ripple{border-radius:inherit}md-item{border-radius:inherit;flex:1;height:100%;color:var(--md-list-item-label-text-color, var(--md-sys-color-on-surface, #1d1b20));font-family:var(--md-list-item-label-text-font, var(--md-sys-typescale-body-large-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-list-item-label-text-size, var(--md-sys-typescale-body-large-size, 1rem));line-height:var(--md-list-item-label-text-line-height, var(--md-sys-typescale-body-large-line-height, 1.5rem));font-weight:var(--md-list-item-label-text-weight, var(--md-sys-typescale-body-large-weight, var(--md-ref-typeface-weight-regular, 400)));min-height:var(--md-list-item-one-line-container-height, 56px);padding-top:var(--md-list-item-top-space, 12px);padding-bottom:var(--md-list-item-bottom-space, 12px);padding-inline-start:var(--md-list-item-leading-space, 16px);padding-inline-end:var(--md-list-item-trailing-space, 16px)}md-item[multiline]{min-height:var(--md-list-item-two-line-container-height, 72px)}[slot=supporting-text]{color:var(--md-list-item-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));font-family:var(--md-list-item-supporting-text-font, var(--md-sys-typescale-body-medium-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-list-item-supporting-text-size, var(--md-sys-typescale-body-medium-size, 0.875rem));line-height:var(--md-list-item-supporting-text-line-height, var(--md-sys-typescale-body-medium-line-height, 1.25rem));font-weight:var(--md-list-item-supporting-text-weight, var(--md-sys-typescale-body-medium-weight, var(--md-ref-typeface-weight-regular, 400)))}[slot=trailing-supporting-text]{color:var(--md-list-item-trailing-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));font-family:var(--md-list-item-trailing-supporting-text-font, var(--md-sys-typescale-label-small-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-list-item-trailing-supporting-text-size, var(--md-sys-typescale-label-small-size, 0.6875rem));line-height:var(--md-list-item-trailing-supporting-text-line-height, var(--md-sys-typescale-label-small-line-height, 1rem));font-weight:var(--md-list-item-trailing-supporting-text-weight, var(--md-sys-typescale-label-small-weight, var(--md-ref-typeface-weight-medium, 500)))}:is([slot=start],[slot=end])::slotted(*){fill:currentColor}[slot=start]{color:var(--md-list-item-leading-icon-color, var(--md-sys-color-on-surface-variant, #49454f))}[slot=end]{color:var(--md-list-item-trailing-icon-color, var(--md-sys-color-on-surface-variant, #49454f))}@media(forced-colors: active){.disabled slot{color:GrayText}.list-item.disabled{color:GrayText;opacity:1}}/*# sourceMappingURL=list-item-styles.css.map */
 `;
 //# sourceMappingURL=list-item-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/list/list-item.js
@@ -6060,7 +6734,6 @@ const list_item_styles_css_styles = i `:host{display:flex;--md-ripple-hover-colo
  * Copyright 2022 Google LLC
  * SPDX-License-Identifier: Apache-2.0
  */
-
 
 
 
@@ -6085,24 +6758,16 @@ const list_item_styles_css_styles = i `:host{display:flex;--md-ripple-hover-colo
  *
  * Acceptable slot child variants are:
  *
- * - `video[slot=start-video]`
- * - `video[slot=start-video-large]`
- * - `img,span[slot=start-avatar]`
- * - `img[slot=start-image]`
- * - `md-icon[slot=start-icon]`
- * - `svg[slot=start-icon]`
- * - `img[slot=start-icon]`
- * - `md-icon[slot=end-icon]`
- * - `svg[slot=end-icon]`
- * - `img[slot=end-icon]`
+ * - `img[slot=end]`
+ * - `img[slot=start]`
  *
  *  @example
  * ```html
  * <md-list-item
  *     headline="User Name"
  *     supportingText="user@name.com">
- *   <md-icon slot="start-icon">account_circle</md-icon>
- *   <md-icon slot="end-icon">check</md-icon>
+ *   <md-icon slot="start">account_circle</md-icon>
+ *   <md-icon slot="end">check</md-icon>
  * </md-list-item>
  * ```
  *
@@ -6113,21 +6778,11 @@ const list_item_styles_css_styles = i `:host{display:flex;--md-ripple-hover-colo
  */
 let MdListItem = class MdListItem extends ListItemEl {
 };
-MdListItem.styles = [list_item_styles_css_styles, listitem_forced_colors_styles_css_styles];
+MdListItem.styles = [list_item_styles_css_styles];
 MdListItem = __decorate([
     t('md-list-item')
 ], MdListItem);
 //# sourceMappingURL=list-item.js.map
-;// CONCATENATED MODULE: ./node_modules/@material/web/menu/internal/forced-colors-styles.css.js
-/**
-  * @license
-  * Copyright 2022 Google LLC
-  * SPDX-License-Identifier: Apache-2.0
-  */
-
-const internal_forced_colors_styles_css_styles = i `@media(forced-colors: active){.menu{border-style:solid;border-color:CanvasText;border-width:1px}}/*# sourceMappingURL=forced-colors-styles.css.map */
-`;
-//# sourceMappingURL=forced-colors-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/lit-html/directives/style-map.js
 
 /**
@@ -6154,7 +6809,7 @@ function createCloseMenuEvent(initiator, reason) {
     return new CustomEvent('close-menu', {
         bubbles: true,
         composed: true,
-        detail: { initiator, reason, itemPath: [initiator] }
+        detail: { initiator, reason, itemPath: [initiator] },
     });
 }
 /**
@@ -6232,7 +6887,7 @@ const KeydownCloseKey = {
  * menu.
  */
 function isClosableKey(code) {
-    return Object.values(KeydownCloseKey).some(value => (value === code));
+    return Object.values(KeydownCloseKey).some((value) => value === code);
 }
 /**
  * Determines whether the given key code is a key code that should select a menu
@@ -6243,7 +6898,7 @@ function isClosableKey(code) {
  * menu item.
  */
 function isSelectableKey(code) {
-    return Object.values(SelectionKey).some(value => (value === code));
+    return Object.values(SelectionKey).some((value) => value === code);
 }
 /**
  * Determines whether a target element is contained inside another element's
@@ -6276,7 +6931,7 @@ const FocusState = {
     NONE: 'none',
     LIST_ROOT: 'list-root',
     FIRST_ITEM: 'first-item',
-    LAST_ITEM: 'last-item'
+    LAST_ITEM: 'last-item',
 };
 //# sourceMappingURL=shared.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/menu/internal/controllers/surfacePositionController.js
@@ -6316,7 +6971,9 @@ class SurfacePositionController {
         };
         // Previous values stored for change detection. Open change detection is
         // calculated separately so initialize it here.
-        this.lastValues = { isOpen: false };
+        this.lastValues = {
+            isOpen: false,
+        };
         this.host.addController(this);
     }
     /**
@@ -6338,6 +6995,22 @@ class SurfacePositionController {
         if (!surfaceEl || !anchorEl) {
             return;
         }
+        // Store these before we potentially resize the window with the next set of
+        // lines
+        const windowInnerWidth = window.innerWidth;
+        const windowInnerHeight = window.innerHeight;
+        const div = document.createElement('div');
+        div.style.opacity = '0';
+        div.style.position = 'fixed';
+        div.style.display = 'block';
+        div.style.inset = '0';
+        document.body.appendChild(div);
+        const scrollbarTestRect = div.getBoundingClientRect();
+        div.remove();
+        // Calculate the widths of the scrollbars in the inline and block directions
+        // to account for window-relative calculations.
+        const blockScrollbarHeight = window.innerHeight - scrollbarTestRect.bottom;
+        const inlineScrollbarWidth = window.innerWidth - scrollbarTestRect.right;
         // Paint the surface transparently so that we can get the position and the
         // rect info of the surface.
         this.surfaceStylesInternal = {
@@ -6347,46 +7020,61 @@ class SurfacePositionController {
         // Wait for it to be visible.
         this.host.requestUpdate();
         await this.host.updateComplete;
-        const surfaceRect = surfaceEl.getSurfacePositionClientRect ?
-            surfaceEl.getSurfacePositionClientRect() :
-            surfaceEl.getBoundingClientRect();
-        const anchorRect = anchorEl.getSurfacePositionClientRect ?
-            anchorEl.getSurfacePositionClientRect() :
-            anchorEl.getBoundingClientRect();
+        // Safari has a bug that makes popovers render incorrectly if the node is
+        // made visible + Animation Frame before calling showPopover().
+        // https://bugs.webkit.org/show_bug.cgi?id=264069
+        // also the cast is required due to differing TS types in Google and OSS.
+        if (surfaceEl.popover &&
+            surfaceEl.isConnected) {
+            surfaceEl.showPopover();
+        }
+        const surfaceRect = surfaceEl.getSurfacePositionClientRect
+            ? surfaceEl.getSurfacePositionClientRect()
+            : surfaceEl.getBoundingClientRect();
+        const anchorRect = anchorEl.getSurfacePositionClientRect
+            ? anchorEl.getSurfacePositionClientRect()
+            : anchorEl.getBoundingClientRect();
         const [surfaceBlock, surfaceInline] = surfaceCorner.split('-');
         const [anchorBlock, anchorInline] = anchorCorner.split('-');
         // LTR depends on the direction of the SURFACE not the anchor.
         const isLTR = getComputedStyle(surfaceEl).direction === 'ltr';
         /*
-         * A diagram that helps describe some of the variables used in the following
-         * calculations.
+         * For more on inline and block dimensions, see MDN article:
+         * https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values
          *
-         * ┌───── inline/blockTopLayerOffset
-         * │       │
-         * │     ┌─▼───┐                  Window
-         * │    ┌┼─────┴────────────────────────┐
-         * │    ││                              │
-         * └──► ││  ┌──inline/blockAnchorOffset │
-         *      ││  │     │                     │
-         *      └┤  │  ┌──▼───┐                 │
-         *       │  │ ┌┼──────┤                 │
-         *       │  └─►│Anchor│                 │
-         *       │    └┴──────┘                 │
-         *       │                              │
-         *       │     ┌────────────────────────┼────┐
-         *       │     │ Surface                │    │
-         *       │     │                        │    │
-         *       │     │                        │    │
-         *       │     │                        │    │
-         *       │     │                        │    │
-         *       │     │                        │    │
-         *       └─────┼────────────────────────┘    ├┐
-         *             │ inline/blockOOBCorrection   ││
-         *             │                         │   ││
-         *             │                         ├──►││
-         *             │                         │   ││
-         *             └────────────────────────┐▼───┼┘
-         *                                      └────┘
+         * ┌───── inline/blockDocumentOffset  inlineScrollbarWidth
+         * │       │                                    │
+         * │     ┌─▼─────┐                              │Document
+         * │    ┌┼───────┴──────────────────────────────┼────────┐
+         * │    ││                                      │        │
+         * └──► ││ ┌───── inline/blockWindowOffset      │        │
+         *      ││ │       │                            ▼        │
+         *      ││ │     ┌─▼───┐                 Window┌┐        │
+         *      └┤ │    ┌┼─────┴───────────────────────┼│        │
+         *       │ │    ││                             ││        │
+         *       │ └──► ││  ┌──inline/blockAnchorOffset││        │
+         *       │      ││  │     │                    ││        │
+         *       │      └┤  │  ┌──▼───┐                ││        │
+         *       │       │  │ ┌┼──────┤                ││        │
+         *       │       │  └─►│Anchor│                ││        │
+         *       │       │    └┴──────┘                ││        │
+         *       │       │                             ││        │
+         *       │       │     ┌───────────────────────┼┼────┐   │
+         *       │       │     │ Surface               ││    │   │
+         *       │       │     │                       ││    │   │
+         *       │       │     │                       ││    │   │
+         *       │       │     │                       ││    │   │
+         *       │       │     │                       ││    │   │
+         *       │      ┌┼─────┼───────────────────────┼│    │   │
+         *       │   ┌─►┴──────┼────────────────────────┘    ├┐  │
+         *       │   │         │ inline/blockOOBCorrection   ││  │
+         *       │   │         │                         │   ││  │
+         *       │   │         │                         ├──►├│  │
+         *       │   │         │                         │   ││  │
+         *       │   │         └────────────────────────┐▼───┼┘  │
+         *       │  blockScrollbarHeight                └────┘   │
+         *       │                                               │
+         *       └───────────────────────────────────────────────┘
          */
         // Calculate the block positioning properties
         let { blockInset, blockOutOfBoundsCorrection, surfaceBlockProperty } = this.calculateBlock({
@@ -6395,7 +7083,9 @@ class SurfacePositionController {
             anchorBlock,
             surfaceBlock,
             yOffset,
-            positioning
+            positioning,
+            windowInnerHeight,
+            blockScrollbarHeight,
         });
         // If the surface should be out of bounds in the block direction, flip the
         // surface and anchor corner block values and recalculate
@@ -6408,12 +7098,13 @@ class SurfacePositionController {
                 anchorBlock: flippedAnchorBlock,
                 surfaceBlock: flippedSurfaceBlock,
                 yOffset,
-                positioning
+                positioning,
+                windowInnerHeight,
+                blockScrollbarHeight,
             });
             // In the case that the flipped verion would require less out of bounds
             // correcting, use the flipped corner block values
-            if (blockOutOfBoundsCorrection >
-                flippedBlock.blockOutOfBoundsCorrection) {
+            if (blockOutOfBoundsCorrection > flippedBlock.blockOutOfBoundsCorrection) {
                 blockInset = flippedBlock.blockInset;
                 blockOutOfBoundsCorrection = flippedBlock.blockOutOfBoundsCorrection;
                 surfaceBlockProperty = flippedBlock.surfaceBlockProperty;
@@ -6428,6 +7119,8 @@ class SurfacePositionController {
             xOffset,
             positioning,
             isLTR,
+            windowInnerWidth,
+            inlineScrollbarWidth,
         });
         // If the surface should be out of bounds in the inline direction, flip the
         // surface and anchor corner inline values and recalculate
@@ -6442,6 +7135,8 @@ class SurfacePositionController {
                 xOffset,
                 positioning,
                 isLTR,
+                windowInnerWidth,
+                inlineScrollbarWidth,
             });
             // In the case that the flipped verion would require less out of bounds
             // correcting, use the flipped corner inline values
@@ -6469,13 +7164,11 @@ class SurfacePositionController {
         if (repositionStrategy === 'resize') {
             // Add a height property to the styles if there is block height correction
             if (blockOutOfBoundsCorrection) {
-                this.surfaceStylesInternal['height'] =
-                    `${surfaceRect.height - blockOutOfBoundsCorrection}px`;
+                this.surfaceStylesInternal['height'] = `${surfaceRect.height - blockOutOfBoundsCorrection}px`;
             }
             // Add a width property to the styles if there is block height correction
             if (inlineOutOfBoundsCorrection) {
-                this.surfaceStylesInternal['width'] =
-                    `${surfaceRect.width - inlineOutOfBoundsCorrection}px`;
+                this.surfaceStylesInternal['width'] = `${surfaceRect.width - inlineOutOfBoundsCorrection}px`;
             }
         }
         this.host.requestUpdate();
@@ -6485,10 +7178,11 @@ class SurfacePositionController {
      * for the surface in the block direction.
      */
     calculateBlock(config) {
-        const { surfaceRect, anchorRect, anchorBlock, surfaceBlock, yOffset, positioning, } = config;
+        const { surfaceRect, anchorRect, anchorBlock, surfaceBlock, yOffset, positioning, windowInnerHeight, blockScrollbarHeight, } = config;
         // We use number booleans to multiply values rather than `if` / ternary
         // statements because it _heavily_ cuts down on nesting and readability
-        const relativeToWindow = positioning === 'fixed' ? 1 : 0;
+        const relativeToWindow = positioning === 'fixed' || positioning === 'document' ? 1 : 0;
+        const relativeToDocument = positioning === 'document' ? 1 : 0;
         const isSurfaceBlockStart = surfaceBlock === 'start' ? 1 : 0;
         const isSurfaceBlockEnd = surfaceBlock === 'end' ? 1 : 0;
         const isOneBlockEnd = anchorBlock !== surfaceBlock ? 1 : 0;
@@ -6496,13 +7190,19 @@ class SurfacePositionController {
         const blockAnchorOffset = isOneBlockEnd * anchorRect.height + yOffset;
         // The absolute block position of the anchor relative to window
         const blockTopLayerOffset = isSurfaceBlockStart * anchorRect.top +
-            isSurfaceBlockEnd * (window.innerHeight - anchorRect.bottom);
+            isSurfaceBlockEnd *
+                (windowInnerHeight - anchorRect.bottom - blockScrollbarHeight);
+        const blockDocumentOffset = isSurfaceBlockStart * window.scrollY - isSurfaceBlockEnd * window.scrollY;
         // If the surface's block would be out of bounds of the window, move it back
         // in
-        const blockOutOfBoundsCorrection = Math.abs(Math.min(0, window.innerHeight - blockTopLayerOffset - blockAnchorOffset -
+        const blockOutOfBoundsCorrection = Math.abs(Math.min(0, windowInnerHeight -
+            blockTopLayerOffset -
+            blockAnchorOffset -
             surfaceRect.height));
         // The block logical value of the surface
-        const blockInset = relativeToWindow * blockTopLayerOffset + blockAnchorOffset;
+        const blockInset = relativeToWindow * blockTopLayerOffset +
+            relativeToDocument * blockDocumentOffset +
+            blockAnchorOffset;
         const surfaceBlockProperty = surfaceBlock === 'start' ? 'inset-block-start' : 'inset-block-end';
         return { blockInset, blockOutOfBoundsCorrection, surfaceBlockProperty };
     }
@@ -6511,10 +7211,11 @@ class SurfacePositionController {
      * for the surface in the inline direction.
      */
     calculateInline(config) {
-        const { isLTR: isLTRBool, surfaceInline, anchorInline, anchorRect, surfaceRect, xOffset, positioning, } = config;
+        const { isLTR: isLTRBool, surfaceInline, anchorInline, anchorRect, surfaceRect, xOffset, positioning, windowInnerWidth, inlineScrollbarWidth, } = config;
         // We use number booleans to multiply values rather than `if` / ternary
         // statements because it _heavily_ cuts down on nesting and readability
-        const relativeToWindow = positioning === 'fixed' ? 1 : 0;
+        const relativeToWindow = positioning === 'fixed' || positioning === 'document' ? 1 : 0;
+        const relativeToDocument = positioning === 'document' ? 1 : 0;
         const isLTR = isLTRBool ? 1 : 0;
         const isRTL = isLTRBool ? 0 : 1;
         const isSurfaceInlineStart = surfaceInline === 'start' ? 1 : 0;
@@ -6524,19 +7225,44 @@ class SurfacePositionController {
         const inlineAnchorOffset = isOneInlineEnd * anchorRect.width + xOffset;
         // The inline position of the anchor relative to window in LTR
         const inlineTopLayerOffsetLTR = isSurfaceInlineStart * anchorRect.left +
-            isSurfaceInlineEnd * (window.innerWidth - anchorRect.right);
+            isSurfaceInlineEnd *
+                (windowInnerWidth - anchorRect.right - inlineScrollbarWidth);
         // The inline position of the anchor relative to window in RTL
-        const inlineTopLayerOffsetRTL = isSurfaceInlineStart * (window.innerWidth - anchorRect.right) +
+        const inlineTopLayerOffsetRTL = isSurfaceInlineStart *
+            (windowInnerWidth - anchorRect.right - inlineScrollbarWidth) +
             isSurfaceInlineEnd * anchorRect.left;
         // The inline position of the anchor relative to window
         const inlineTopLayerOffset = isLTR * inlineTopLayerOffsetLTR + isRTL * inlineTopLayerOffsetRTL;
+        // The inline position of the anchor relative to window in LTR
+        const inlineDocumentOffsetLTR = isSurfaceInlineStart * window.scrollX -
+            isSurfaceInlineEnd * window.scrollX;
+        // The inline position of the anchor relative to window in RTL
+        const inlineDocumentOffsetRTL = isSurfaceInlineEnd * window.scrollX -
+            isSurfaceInlineStart * window.scrollX;
+        // The inline position of the anchor relative to window
+        const inlineDocumentOffset = isLTR * inlineDocumentOffsetLTR + isRTL * inlineDocumentOffsetRTL;
         // If the surface's inline would be out of bounds of the window, move it
         // back in
-        const inlineOutOfBoundsCorrection = Math.abs(Math.min(0, window.innerWidth - inlineTopLayerOffset - inlineAnchorOffset -
+        const inlineOutOfBoundsCorrection = Math.abs(Math.min(0, windowInnerWidth -
+            inlineTopLayerOffset -
+            inlineAnchorOffset -
             surfaceRect.width));
         // The inline logical value of the surface
-        const inlineInset = relativeToWindow * inlineTopLayerOffset + inlineAnchorOffset;
-        const surfaceInlineProperty = surfaceInline === 'start' ? 'inset-inline-start' : 'inset-inline-end';
+        const inlineInset = relativeToWindow * inlineTopLayerOffset +
+            inlineAnchorOffset +
+            relativeToDocument * inlineDocumentOffset;
+        let surfaceInlineProperty = surfaceInline === 'start' ? 'inset-inline-start' : 'inset-inline-end';
+        // There are cases where the element is RTL but the root of the page is not.
+        // In these cases we want to not use logical properties.
+        if (positioning === 'document' || positioning === 'fixed') {
+            if ((surfaceInline === 'start' && isLTRBool) ||
+                (surfaceInline === 'end' && !isLTRBool)) {
+                surfaceInlineProperty = 'left';
+            }
+            else {
+                surfaceInlineProperty = 'right';
+            }
+        }
         return {
             inlineInset,
             inlineOutOfBoundsCorrection,
@@ -6559,7 +7285,7 @@ class SurfacePositionController {
         let hasChanged = false;
         for (const [key, value] of Object.entries(props)) {
             // tslint:disable-next-line
-            hasChanged = hasChanged || (value !== this.lastValues[key]);
+            hasChanged = hasChanged || value !== this.lastValues[key];
             if (hasChanged)
                 break;
         }
@@ -6593,6 +7319,13 @@ class SurfacePositionController {
             'display': 'none',
         };
         this.host.requestUpdate();
+        const surfaceEl = this.getProperties().surfaceEl;
+        // The following type casts are required due to differing TS types in Google
+        // and open source.
+        if (surfaceEl?.popover &&
+            surfaceEl?.isConnected) {
+            surfaceEl.hidePopover();
+        }
     }
 }
 //# sourceMappingURL=surfacePositionController.js.map
@@ -6711,17 +7444,22 @@ class TypeaheadController {
         // We don't want to typeahead if the _beginning_ of the typeahead is a menu
         // navigation, or a selection. We will handle "Space" only if it's in the
         // middle of a typeahead
-        if (event.code === 'Space' || event.code === 'Enter' ||
-            event.code.startsWith('Arrow') || event.code === 'Escape') {
+        if (event.code === 'Space' ||
+            event.code === 'Enter' ||
+            event.code.startsWith('Arrow') ||
+            event.code === 'Escape') {
             return;
         }
         this.isTypingAhead = true;
         // Generates the record array data structure which is the index, the element
         // and a normalized header.
-        this.typeaheadRecords = this.items.map((el, index) => [index, el, el.typeaheadText.trim().toLowerCase()]);
+        this.typeaheadRecords = this.items.map((el, index) => [
+            index,
+            el,
+            el.typeaheadText.trim().toLowerCase(),
+        ]);
         this.lastActiveRecord =
-            this.typeaheadRecords.find(record => (record[TYPEAHEAD_RECORD.ITEM].tabIndex === 0)) ??
-                null;
+            this.typeaheadRecords.find((record) => record[TYPEAHEAD_RECORD.ITEM].tabIndex === 0) ?? null;
         if (this.lastActiveRecord) {
             this.lastActiveRecord[TYPEAHEAD_RECORD.ITEM].tabIndex = -1;
         }
@@ -6769,7 +7507,8 @@ class TypeaheadController {
         clearTimeout(this.cancelTypeaheadTimeout);
         // Stop typingahead if one of the navigation or selection keys (except for
         // Space) are pressed
-        if (event.code === 'Enter' || event.code.startsWith('Arrow') ||
+        if (event.code === 'Enter' ||
+            event.code.startsWith('Arrow') ||
             event.code === 'Escape') {
             this.endTypeahead();
             if (this.lastActiveRecord) {
@@ -6782,12 +7521,11 @@ class TypeaheadController {
             event.preventDefault();
         }
         // Start up a new keystroke buffer timeout
-        this.cancelTypeaheadTimeout =
-            setTimeout(this.endTypeahead, this.getProperties().typeaheadBufferTime);
+        this.cancelTypeaheadTimeout = setTimeout(this.endTypeahead, this.getProperties().typeaheadBufferTime);
         this.typaheadBuffer += event.key.toLowerCase();
-        const lastActiveIndex = this.lastActiveRecord ?
-            this.lastActiveRecord[TYPEAHEAD_RECORD.INDEX] :
-            -1;
+        const lastActiveIndex = this.lastActiveRecord
+            ? this.lastActiveRecord[TYPEAHEAD_RECORD.INDEX]
+            : -1;
         const numRecords = this.typeaheadRecords.length;
         /**
          * Sorting function that will resort the items starting with the given index
@@ -6812,12 +7550,12 @@ class TypeaheadController {
          * 5: [2, <reference>, 'banana']
          */
         const rebaseIndexOnActive = (record) => {
-            return (record[TYPEAHEAD_RECORD.INDEX] + numRecords - lastActiveIndex) %
-                numRecords;
+            return ((record[TYPEAHEAD_RECORD.INDEX] + numRecords - lastActiveIndex) %
+                numRecords);
         };
         // records filtered and sorted / rebased around the last active index
         const matchingRecords = this.typeaheadRecords
-            .filter(record => !record[TYPEAHEAD_RECORD.ITEM].disabled &&
+            .filter((record) => !record[TYPEAHEAD_RECORD.ITEM].disabled &&
             record[TYPEAHEAD_RECORD.TEXT].startsWith(this.typaheadBuffer))
             .sort((a, b) => rebaseIndexOnActive(a) - rebaseIndexOnActive(b));
         // Just leave if there's nothing that matches. Native select will just
@@ -6904,10 +7642,10 @@ function getFocusedElement(activeDoc = document) {
     return activeEl;
 }
 /**
- * @fires opening Fired before the opening animation begins
- * @fires opened Fired once the menu is open, after any animations
- * @fires closing Fired before the closing animation begins
- * @fires closed Fired once the menu is closed, after any animations
+ * @fires opening {Event} Fired before the opening animation begins
+ * @fires opened {Event} Fired once the menu is open, after any animations
+ * @fires closing {Event} Fired before the closing animation begins
+ * @fires closed {Event} Fired once the menu is closed, after any animations
  */
 class Menu extends lit_element_s {
     /**
@@ -6915,8 +7653,8 @@ class Menu extends lit_element_s {
      * helpful for calculating some animation calculations.
      */
     get openDirection() {
-        const menuCornerBlock = this.menuCorner.split('_')[0];
-        return menuCornerBlock === 'START' ? 'DOWN' : 'UP';
+        const menuCornerBlock = this.menuCorner.split('-')[0];
+        return menuCornerBlock === 'start' ? 'DOWN' : 'UP';
     }
     /**
      * The element which the menu should align to. If `anchor` is set to a
@@ -6925,8 +7663,7 @@ class Menu extends lit_element_s {
      */
     get anchorElement() {
         if (this.anchor) {
-            return this.getRootNode()
-                .querySelector(`#${this.anchor}`);
+            return this.getRootNode().querySelector(`#${this.anchor}`);
         }
         return this.currentAnchorElement;
     }
@@ -6946,9 +7683,12 @@ class Menu extends lit_element_s {
         this.anchor = '';
         /**
          * Whether the positioning algorithim should calculate relative to the parent
-         * of the anchor element (absolute) or relative to the window (fixed).
+         * of the anchor element (`absolute`), relative to the window (`fixed`), or
+         * relative to the document (`document`). `popover` will use the popover API
+         * to render the menu in the top-layer. If your browser does not support the
+         * popover API, it will fall back to `fixed`.
          *
-         * Examples for `position = 'fixed'`:
+         * __Examples for `position = 'fixed'`:__
          *
          * - If there is no `position:relative` in the given parent tree and the
          *   surface is `position:absolute`
@@ -6957,12 +7697,27 @@ class Menu extends lit_element_s {
          * - The anchor and the surface do not share a common `position:relative`
          *   ancestor
          *
-         * When using positioning = fixed, in most cases, the menu should position
+         * When using `positioning=fixed`, in most cases, the menu should position
          * itself above most other `position:absolute` or `position:fixed` elements
          * when placed inside of them. e.g. using a menu inside of an `md-dialog`.
          *
          * __NOTE__: Fixed menus will not scroll with the page and will be fixed to
          * the window instead.
+         *
+         * __Examples for `position = 'document'`:__
+         *
+         * - There is no parent that creates a relative positioning context e.g.
+         *   `position: relative`, `position: absolute`, `transform: translate(x, y)`,
+         *   etc.
+         * - You put the effort into hoisting the menu to the top of the DOM like the
+         *   end of the `<body>` to render over everything or in a top-layer.
+         * - You are reusing a single `md-menu` element that dynamically renders
+         *   content.
+         *
+         * __Examples for `position = 'popover'`:__
+         *
+         * - Your browser supports `popover`.
+         * - Most cases. Once popover is in browsers, this will become the default.
          */
         this.positioning = 'absolute';
         /**
@@ -6970,7 +7725,8 @@ class Menu extends lit_element_s {
          */
         this.quick = false;
         /**
-         * Displays overflow content like a submenu.
+         * Displays overflow content like a submenu. Not required in most cases when
+         * using `positioning="popover"`.
          *
          * __NOTE__: This may cause adverse effects if you set
          * `md-menu {max-height:...}`
@@ -7058,14 +7814,17 @@ class Menu extends lit_element_s {
          * The event path of the last window pointerdown event.
          */
         this.pointerPath = [];
-        this.isPointerDown = false;
+        /**
+         * Whether or not the menu is repositoining due to window / document resize
+         */
+        this.isRepositioning = false;
         this.openCloseAnimationSignal = createAnimationSignal();
         this.listController = new ListController({
             isItem: (maybeItem) => {
                 return maybeItem.hasAttribute('md-menu-item');
             },
             getPossibleItems: () => this.slotItems,
-            isRtl: () => (getComputedStyle(this).direction === 'rtl'),
+            isRtl: () => getComputedStyle(this).direction === 'rtl',
             deactivateItem: (item) => {
                 item.selected = false;
                 item.tabIndex = -1;
@@ -7083,7 +7842,9 @@ class Menu extends lit_element_s {
                 // key so it can close the menu instead of navigate the list.
                 // Therefore we need to include all keys but left/right arrow close
                 // key
-                const arrowOpen = isRtl ? NavigableKeys.ArrowLeft : NavigableKeys.ArrowRight;
+                const arrowOpen = isRtl
+                    ? NavigableKeys.ArrowLeft
+                    : NavigableKeys.ArrowRight;
                 if (key === arrowOpen) {
                     return true;
                 }
@@ -7101,11 +7862,13 @@ class Menu extends lit_element_s {
             return {
                 getItems: () => this.items,
                 typeaheadBufferTime: this.typeaheadDelay,
-                active: this.typeaheadActive
+                active: this.typeaheadActive,
             };
         });
         this.currentAnchorElement = null;
-        this.internals = polyfillElementInternalsAria(this, this /* needed for closure */.attachInternals());
+        this.internals = polyfillElementInternalsAria(this, 
+        // Cast needed for closure
+        this.attachInternals());
         /**
          * Handles positioning the surface and aligning it to the anchor as well as
          * keeping it in the viewport.
@@ -7116,7 +7879,7 @@ class Menu extends lit_element_s {
                 surfaceCorner: this.menuCorner,
                 surfaceEl: this.surfaceEl,
                 anchorEl: this.anchorElement,
-                positioning: this.positioning,
+                positioning: this.positioning === 'popover' ? 'document' : this.positioning,
                 isOpen: this.open,
                 xOffset: this.xOffset,
                 yOffset: this.yOffset,
@@ -7125,28 +7888,44 @@ class Menu extends lit_element_s {
                 onClose: this.onClosed,
                 // We can't resize components that have overflow like menus with
                 // submenus because the overflow-y will show menu items / content
-                // outside the bounds of the menu. (to be fixed w/ popover API)
-                repositionStrategy: this.hasOverflow ? 'move' : 'resize',
+                // outside the bounds of the menu. Popover API fixes this because each
+                // submenu is hoisted to the top-layer and are not considered overflow
+                // content.
+                repositionStrategy: this.hasOverflow && this.positioning !== 'popover'
+                    ? 'move'
+                    : 'resize',
             };
         });
+        this.onWindowResize = () => {
+            if (this.isRepositioning ||
+                (this.positioning !== 'document' &&
+                    this.positioning !== 'fixed' &&
+                    this.positioning !== 'popover')) {
+                return;
+            }
+            this.isRepositioning = true;
+            this.reposition();
+            this.isRepositioning = false;
+        };
         this.handleFocusout = async (event) => {
-            if (this.stayOpenOnFocusout || !this.open) {
+            const anchorEl = this.anchorElement;
+            // Do not close if we focused out by clicking on the anchor element. We
+            // can't assume anchor buttons can be the related target because of iOS does
+            // not focus buttons.
+            if (this.stayOpenOnFocusout ||
+                !this.open ||
+                this.pointerPath.includes(anchorEl)) {
                 return;
             }
             if (event.relatedTarget) {
                 // Don't close the menu if we are switching focus between menu,
-                // md-menu-item, and md-list
-                if (isElementInSubtree(event.relatedTarget, this)) {
-                    return;
-                }
-                const anchorEl = this.anchorElement;
-                const wasAnchorClickFocused = isElementInSubtree(event.relatedTarget, anchorEl) &&
-                    this.isPointerDown;
-                if (wasAnchorClickFocused) {
+                // md-menu-item, and md-list or if the anchor was click focused.
+                if (isElementInSubtree(event.relatedTarget, this) ||
+                    isElementInSubtree(event.relatedTarget, anchorEl)) {
                     return;
                 }
             }
-            else if (this.isPointerDown && this.pointerPath.includes(this)) {
+            else if (this.pointerPath.includes(this)) {
                 // If menu tabindex == -1 and the user clicks on the menu or a divider, we
                 // want to keep the menu open.
                 return;
@@ -7176,7 +7955,7 @@ class Menu extends lit_element_s {
                 this.dispatchEvent(new Event('opening'));
             }
             else {
-                animationAborted = !!await this.animateOpen();
+                animationAborted = !!(await this.animateOpen());
             }
             // This must come after the opening animation or else it may focus one of
             // the items before the animation has begun and causes the list to slide
@@ -7232,25 +8011,27 @@ class Menu extends lit_element_s {
             }
         };
         this.onWindowPointerdown = (event) => {
-            this.isPointerDown = true;
             this.pointerPath = event.composedPath();
         };
-        this.onWindowPointerup = () => {
-            this.isPointerDown = false;
-        };
-        this.onWindowClick = (event) => {
+        /**
+         * We cannot listen to window click because Safari on iOS will not bubble a
+         * click event on window if the item clicked is not a "clickable" item such as
+         * <body>
+         */
+        this.onDocumentClick = (event) => {
             if (!this.open) {
                 return;
             }
             const path = event.composedPath();
-            if (!this.stayOpenOnOutsideClick && !path.includes(this) &&
+            if (!this.stayOpenOnOutsideClick &&
+                !path.includes(this) &&
                 !path.includes(this.anchorElement)) {
                 this.open = false;
             }
         };
         if (!is_server_o) {
             this.internals.role = 'menu';
-            this.addEventListener('keydown', this.listController.handleKeydown);
+            this.addEventListener('keydown', this.handleKeydown);
             // Capture so that we can grab the event before it reaches the menu item
             // istelf. Specifically useful for the case where typeahead encounters a
             // space and we don't want the menu item to close the menu.
@@ -7275,6 +8056,34 @@ class Menu extends lit_element_s {
         }
         this.setAttribute('aria-hidden', 'true');
     }
+    update(changed) {
+        if (changed.has('open')) {
+            if (this.open) {
+                this.setUpGlobalEventListeners();
+            }
+            else {
+                this.cleanUpGlobalEventListeners();
+            }
+        }
+        // Firefox does not support popover. Fall-back to using fixed.
+        if (changed.has('positioning') &&
+            this.positioning === 'popover' &&
+            // type required for Google JS conformance
+            !this.showPopover) {
+            this.positioning = 'fixed';
+        }
+        super.update(changed);
+    }
+    connectedCallback() {
+        super.connectedCallback();
+        if (this.open) {
+            this.setUpGlobalEventListeners();
+        }
+    }
+    disconnectedCallback() {
+        super.disconnectedCallback();
+        this.cleanUpGlobalEventListeners();
+    }
     render() {
         return this.renderSurface();
     }
@@ -7283,31 +8092,30 @@ class Menu extends lit_element_s {
      */
     renderSurface() {
         return x `
-       <div
-          class="menu ${class_map_e(this.getSurfaceClasses())}"
-          style=${style_map_o(this.menuPositionController.surfaceStyles)}>
+      <div
+        class="menu ${class_map_e(this.getSurfaceClasses())}"
+        style=${style_map_o(this.menuPositionController.surfaceStyles)}
+        popover=${this.positioning === 'popover' ? 'manual' : T}>
         ${this.renderElevation()}
         <div class="items">
-          <div class="item-padding">
-            ${this.renderMenuItems()}
-          </div>
+          <div class="item-padding"> ${this.renderMenuItems()} </div>
         </div>
-       </div>
-     `;
+      </div>
+    `;
     }
     /**
      * Renders the menu items' slot
      */
     renderMenuItems() {
         return x `<slot
-        @close-menu=${this.onCloseMenu}
-        @deactivate-items=${this.onDeactivateItems}
-        @request-activation=${this.onRequestActivation}
-        @deactivate-typeahead=${this.handleDeactivateTypeahead}
-        @activate-typeahead=${this.handleActivateTypeahead}
-        @stay-open-on-focusout=${this.handleStayOpenOnFocusout}
-        @close-on-focusout=${this.handleCloseOnFocusout}
-        @slotchange=${this.listController.onSlotchange}></slot>`;
+      @close-menu=${this.onCloseMenu}
+      @deactivate-items=${this.onDeactivateItems}
+      @request-activation=${this.onRequestActivation}
+      @deactivate-typeahead=${this.handleDeactivateTypeahead}
+      @activate-typeahead=${this.handleActivateTypeahead}
+      @stay-open-on-focusout=${this.handleStayOpenOnFocusout}
+      @close-on-focusout=${this.handleCloseOnFocusout}
+      @slotchange=${this.listController.onSlotchange}></slot>`;
     }
     /**
      * Renders the elevation component.
@@ -7323,7 +8131,8 @@ class Menu extends lit_element_s {
         };
     }
     captureKeydown(event) {
-        if (event.target === this && !event.defaultPrevented &&
+        if (event.target === this &&
+            !event.defaultPrevented &&
             isClosableKey(event.code)) {
             event.preventDefault();
             this.close();
@@ -7367,7 +8176,7 @@ class Menu extends lit_element_s {
         // height animation
         const upPositionCorrectionAnimation = slotEl.animate([
             { transform: openingUpwards ? `translateY(-${height}px)` : '' },
-            { transform: '' }
+            { transform: '' },
         ], { duration: FULL_DURATION, easing: EASING.EMPHASIZED });
         const surfaceOpacityAnimation = surfaceEl.animate([{ opacity: 0 }, { opacity: 1 }], SURFACE_OPACITY_DURATION);
         const childrenAnimations = [];
@@ -7443,7 +8252,7 @@ class Menu extends lit_element_s {
         const SURFACE_OPACITY_DELAY = FULL_DURATION - SURFACE_OPACITY_DURATION;
         const ITEM_OPACITY_DURATION = 50;
         const ITEM_OPACITY_INITIAL_DELAY = 50;
-        const END_HEIGHT_PERCENTAGE = .35;
+        const END_HEIGHT_PERCENTAGE = 0.35;
         // We want to fit every child fade-out animation within the full duration of
         // the animation.
         const DELAY_BETWEEN_ITEMS = (FULL_DURATION - ITEM_OPACITY_INITIAL_DELAY - ITEM_OPACITY_DURATION) /
@@ -7451,7 +8260,7 @@ class Menu extends lit_element_s {
         // The mock has the animation shrink to 35%
         const surfaceHeightAnimation = surfaceEl.animate([
             { height: `${height}px` },
-            { height: `${height * END_HEIGHT_PERCENTAGE}px` }
+            { height: `${height * END_HEIGHT_PERCENTAGE}px` },
         ], {
             duration: FULL_DURATION,
             easing: EASING.EMPHASIZED_ACCELERATE,
@@ -7460,11 +8269,12 @@ class Menu extends lit_element_s {
         // always in view, so we need to translate it upwards the opposite direction
         // of the height animation
         const downPositionCorrectionAnimation = slotEl.animate([
-            { transform: '' }, {
-                transform: closingDownwards ?
-                    `translateY(-${height * (1 - END_HEIGHT_PERCENTAGE)}px)` :
-                    ''
-            }
+            { transform: '' },
+            {
+                transform: closingDownwards
+                    ? `translateY(-${height * (1 - END_HEIGHT_PERCENTAGE)}px)`
+                    : '',
+            },
         ], { duration: FULL_DURATION, easing: EASING.EMPHASIZED_ACCELERATE });
         const surfaceOpacityAnimation = surfaceEl.animate([{ opacity: 1 }, { opacity: 0 }], { duration: SURFACE_OPACITY_DURATION, delay: SURFACE_OPACITY_DELAY });
         const childrenAnimations = [];
@@ -7505,21 +8315,26 @@ class Menu extends lit_element_s {
         });
         return animationEnded;
     }
-    connectedCallback() {
-        super.connectedCallback();
-        if (!is_server_o) {
-            window.addEventListener('click', this.onWindowClick, { capture: true });
-            window.addEventListener('pointerdown', this.onWindowPointerdown);
-            window.addEventListener('pointerup', this.onWindowPointerup);
-        }
+    handleKeydown(event) {
+        // At any key event, the pointer interaction is done so we need to clear our
+        // cached pointerpath. This handles the case where the user clicks on the
+        // anchor, and then hits shift+tab
+        this.pointerPath = [];
+        this.listController.handleKeydown(event);
     }
-    disconnectedCallback() {
-        super.disconnectedCallback();
-        if (!is_server_o) {
-            window.removeEventListener('click', this.onWindowClick, { capture: true });
-            window.removeEventListener('pointerdown', this.onWindowPointerdown);
-            window.removeEventListener('pointerup', this.onWindowPointerup);
-        }
+    setUpGlobalEventListeners() {
+        document.addEventListener('click', this.onDocumentClick, { capture: true });
+        window.addEventListener('pointerdown', this.onWindowPointerdown);
+        document.addEventListener('resize', this.onWindowResize, { passive: true });
+        window.addEventListener('resize', this.onWindowResize, { passive: true });
+    }
+    cleanUpGlobalEventListeners() {
+        document.removeEventListener('click', this.onDocumentClick, {
+            capture: true,
+        });
+        window.removeEventListener('pointerdown', this.onWindowPointerdown);
+        document.removeEventListener('resize', this.onWindowResize);
+        window.removeEventListener('resize', this.onWindowResize);
     }
     onCloseMenu() {
         this.close();
@@ -7555,7 +8370,7 @@ class Menu extends lit_element_s {
     close() {
         this.open = false;
         const maybeSubmenu = this.slotItems;
-        maybeSubmenu.forEach(item => {
+        maybeSubmenu.forEach((item) => {
             item.close?.();
         });
     }
@@ -7580,10 +8395,20 @@ class Menu extends lit_element_s {
     activatePreviousItem() {
         return this.listController.activatePreviousItem() ?? null;
     }
+    /**
+     * Repositions the menu if it is open.
+     *
+     * Useful for the case where document or window-positioned menus have their
+     * anchors moved while open.
+     */
+    reposition() {
+        if (this.open) {
+            this.menuPositionController.position();
+        }
+    }
 }
 (() => {
-    // We want to manage tabindex ourselves.
-    setupHostAria(Menu, { focusable: false });
+    polyfillARIAMixin(Menu);
 })();
 __decorate([
     query_e('.menu')
@@ -7647,7 +8472,7 @@ __decorate([
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const menu_styles_css_styles = i `:host{--md-elevation-level: var(--md-menu-container-elevation, 2);--md-elevation-shadow-color: var(--md-menu-container-shadow-color, var(--md-sys-color-shadow, #000));min-width:112px;color:unset;display:contents}md-focus-ring{--md-focus-ring-shape: var(--md-menu-container-shape, 4px)}.menu{border-radius:var(--md-menu-container-shape, 4px);display:none;opacity:0;z-index:20;position:absolute;user-select:none;max-height:inherit;height:inherit;min-width:inherit;max-width:inherit}.fixed{position:fixed}.items{display:block;list-style-type:none;margin:0;outline:none;box-sizing:border-box;background-color:var(--md-menu-container-color, var(--md-sys-color-surface-container, #f3edf7));height:inherit;max-height:inherit;overflow:auto;min-width:inherit;max-width:inherit;border-radius:inherit}.item-padding{padding-block:8px}.has-overflow .items{overflow:visible}.animating .items{overflow:hidden}.has-overflow.animating .items{pointer-events:none}.animating ::slotted(.md-menu-hidden){opacity:0}slot{display:block;height:inherit;max-height:inherit}::slotted(:is(md-divider,[role=separator])){margin:8px 0}/*# sourceMappingURL=menu-styles.css.map */
+const menu_styles_css_styles = i `:host{--md-elevation-level: var(--md-menu-container-elevation, 2);--md-elevation-shadow-color: var(--md-menu-container-shadow-color, var(--md-sys-color-shadow, #000));min-width:112px;color:unset;display:contents}md-focus-ring{--md-focus-ring-shape: var(--md-menu-container-shape, 4px)}.menu{border-radius:var(--md-menu-container-shape, 4px);display:none;inset:auto;border:none;padding:0px;overflow:visible;background-color:rgba(0,0,0,0);opacity:0;z-index:20;position:absolute;user-select:none;max-height:inherit;height:inherit;min-width:inherit;max-width:inherit}.menu::backdrop{display:none}.fixed{position:fixed}.items{display:block;list-style-type:none;margin:0;outline:none;box-sizing:border-box;background-color:var(--md-menu-container-color, var(--md-sys-color-surface-container, #f3edf7));height:inherit;max-height:inherit;overflow:auto;min-width:inherit;max-width:inherit;border-radius:inherit}.item-padding{padding-block:8px}.has-overflow:not([popover]) .items{overflow:visible}.has-overflow.animating .items,.animating .items{overflow:hidden}.has-overflow.animating .items{pointer-events:none}.animating ::slotted(.md-menu-hidden){opacity:0}slot{display:block;height:inherit;max-height:inherit}::slotted(:is(md-divider,[role=separator])){margin:8px 0}@media(forced-colors: active){.menu{border-style:solid;border-color:CanvasText;border-width:1px}}/*# sourceMappingURL=menu-styles.css.map */
 `;
 //# sourceMappingURL=menu-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/menu/menu.js
@@ -7656,7 +8481,6 @@ const menu_styles_css_styles = i `:host{--md-elevation-level: var(--md-menu-cont
  * Copyright 2022 Google LLC
  * SPDX-License-Identifier: Apache-2.0
  */
-
 
 
 
@@ -7714,21 +8538,11 @@ const menu_styles_css_styles = i `:host{--md-elevation-level: var(--md-menu-cont
  */
 let MdMenu = class MdMenu extends Menu {
 };
-MdMenu.styles = [menu_styles_css_styles, internal_forced_colors_styles_css_styles];
+MdMenu.styles = [menu_styles_css_styles];
 MdMenu = __decorate([
     t('md-menu')
 ], MdMenu);
 //# sourceMappingURL=menu.js.map
-;// CONCATENATED MODULE: ./node_modules/@material/web/menu/internal/menuitem/forced-colors-styles.css.js
-/**
-  * @license
-  * Copyright 2022 Google LLC
-  * SPDX-License-Identifier: Apache-2.0
-  */
-
-const menuitem_forced_colors_styles_css_styles = i `@media(forced-colors: active){:host([disabled]),:host([disabled]) slot{color:GrayText;opacity:1}.list-item{position:relative}.list-item.selected::before{content:"";position:absolute;inset:0;box-sizing:border-box;border-radius:inherit;pointer-events:none;border:3px double CanvasText}}/*# sourceMappingURL=forced-colors-styles.css.map */
-`;
-//# sourceMappingURL=forced-colors-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/menu/internal/controllers/menuItemController.js
 /**
  * @license
@@ -7755,23 +8569,36 @@ class MenuItemController {
         this.onClick = () => {
             if (this.host.keepOpen)
                 return;
-            this.host.dispatchEvent(createDefaultCloseMenuEvent(this.host, { kind: CloseReason.CLICK_SELECTION }));
+            this.host.dispatchEvent(createDefaultCloseMenuEvent(this.host, {
+                kind: CloseReason.CLICK_SELECTION,
+            }));
         };
         /**
          * Bind this click listener to the interactive element. Handles closing the
          * menu.
          */
         this.onKeydown = (event) => {
+            // Check if the interactive element is an anchor tag. If so, click it.
+            if (this.host.href && event.code === 'Enter') {
+                const interactiveElement = this.getInteractiveElement();
+                if (interactiveElement instanceof HTMLAnchorElement) {
+                    interactiveElement.click();
+                }
+            }
             if (this.host.keepOpen || event.defaultPrevented)
                 return;
             const keyCode = event.code;
             if (!event.defaultPrevented && isClosableKey(keyCode)) {
                 event.preventDefault();
-                this.host.dispatchEvent(createDefaultCloseMenuEvent(this.host, { kind: CloseReason.KEYDOWN, key: keyCode }));
+                this.host.dispatchEvent(createDefaultCloseMenuEvent(this.host, {
+                    kind: CloseReason.KEYDOWN,
+                    key: keyCode,
+                }));
             }
         };
-        const { getHeadlineElements, } = config;
+        const { getHeadlineElements, getInteractiveElement } = config;
         this.getHeadlineElements = getHeadlineElements;
+        this.getInteractiveElement = getInteractiveElement;
         this.host.addController(this);
     }
     /**
@@ -7846,7 +8673,8 @@ class MenuItemController {
 
 
 /**
- * @fires close-menu {CloseMenuEvent}
+ * @fires close-menu {CustomEvent<{initiator: SelectOption, reason: Reason, itemPath: SelectOption[]}>}
+ * Closes the encapsulating menu on closable interaction. --bubbles --composed
  */
 class MenuItemEl extends lit_element_s {
     constructor() {
@@ -7879,7 +8707,8 @@ class MenuItemEl extends lit_element_s {
         this.menuItemController = new MenuItemController(this, {
             getHeadlineElements: () => {
                 return this.headlineElements;
-            }
+            },
+            getInteractiveElement: () => this.listItemRoot,
         });
     }
     /**
@@ -7896,8 +8725,7 @@ class MenuItemEl extends lit_element_s {
         return this.renderListItem(x `
       <md-item>
         <div slot="container">
-          ${this.renderRipple()}
-          ${this.renderFocusRing()}
+          ${this.renderRipple()} ${this.renderFocusRing()}
         </div>
         <slot name="start" slot="start"></slot>
         <slot name="end" slot="end"></slot>
@@ -7950,21 +8778,19 @@ class MenuItemEl extends lit_element_s {
      * Handles rendering of the ripple element.
      */
     renderRipple() {
-        return x `
-      <md-ripple
-          part="ripple"
-          for="item"
-          ?disabled=${this.disabled}></md-ripple>`;
+        return x ` <md-ripple
+      part="ripple"
+      for="item"
+      ?disabled=${this.disabled}></md-ripple>`;
     }
     /**
      * Handles rendering of the focus ring.
      */
     renderFocusRing() {
-        return x `
-      <md-focus-ring
-          part="focus-ring"
-          for="item"
-          inward></md-focus-ring>`;
+        return x ` <md-focus-ring
+      part="focus-ring"
+      for="item"
+      inward></md-focus-ring>`;
     }
     /**
      * Classes applied to the list item root.
@@ -7984,8 +8810,9 @@ class MenuItemEl extends lit_element_s {
       <slot name="overline" slot="overline"></slot>
       <slot name="headline" slot="headline"></slot>
       <slot name="supporting-text" slot="supporting-text"></slot>
-      <slot name="trailing-supporting-text"
-          slot="trailing-supporting-text"></slot>
+      <slot
+        name="trailing-supporting-text"
+        slot="trailing-supporting-text"></slot>
     `;
     }
     focus() {
@@ -8000,7 +8827,7 @@ class MenuItemEl extends lit_element_s {
 /** @nocollapse */
 MenuItemEl.shadowRootOptions = {
     ...lit_element_s.shadowRootOptions,
-    delegatesFocus: true
+    delegatesFocus: true,
 };
 __decorate([
     property_n({ type: Boolean, reflect: true })
@@ -8037,7 +8864,7 @@ __decorate([
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const menu_item_styles_css_styles = i `:host{display:flex;--md-ripple-hover-color: var(--md-menu-item-hover-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--md-ripple-hover-opacity: var(--md-menu-item-hover-state-layer-opacity, 0.08);--md-ripple-pressed-color: var(--md-menu-item-pressed-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--md-ripple-pressed-opacity: var(--md-menu-item-pressed-state-layer-opacity, 0.12)}:host([disabled]){opacity:var(--md-menu-item-disabled-opacity, 0.3);pointer-events:none}md-focus-ring{z-index:1;--md-focus-ring-shape: 8px}a,button,li{background:none;border:none;padding:0;margin:0;text-align:unset;text-decoration:none}.list-item{border-radius:inherit;display:flex;flex:1;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}.list-item:not(.disabled){cursor:pointer}[slot=container]{pointer-events:none}md-ripple{border-radius:inherit}md-item{border-radius:inherit;flex:1;color:var(--md-menu-item-label-text-color, var(--md-sys-color-on-surface, #1d1b20));font-family:var(--md-menu-item-label-text-font, var(--md-sys-typescale-body-large-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-menu-item-label-text-size, var(--md-sys-typescale-body-large-size, 1rem));line-height:var(--md-menu-item-label-text-line-height, var(--md-sys-typescale-body-large-line-height, 1.5rem));font-weight:var(--md-menu-item-label-text-weight, var(--md-sys-typescale-body-large-weight, var(--md-ref-typeface-weight-regular, 400)));min-height:var(--md-menu-item-one-line-container-height, 56px);padding-top:var(--md-menu-item-top-space, 12px);padding-bottom:var(--md-menu-item-bottom-space, 12px);padding-inline-start:var(--md-menu-item-leading-space, 16px);padding-inline-end:var(--md-menu-item-trailing-space, 16px)}md-item[multiline]{min-height:var(--md-menu-item-two-line-container-height, 72px)}[slot=supporting-text]{color:var(--md-menu-item-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));font-family:var(--md-menu-item-supporting-text-font, var(--md-sys-typescale-body-medium-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-menu-item-supporting-text-size, var(--md-sys-typescale-body-medium-size, 0.875rem));line-height:var(--md-menu-item-supporting-text-line-height, var(--md-sys-typescale-body-medium-line-height, 1.25rem));font-weight:var(--md-menu-item-supporting-text-weight, var(--md-sys-typescale-body-medium-weight, var(--md-ref-typeface-weight-regular, 400)))}[slot=trailing-supporting-text]{color:var(--md-menu-item-trailing-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));font-family:var(--md-menu-item-trailing-supporting-text-font, var(--md-sys-typescale-label-small-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-menu-item-trailing-supporting-text-size, var(--md-sys-typescale-label-small-size, 0.6875rem));line-height:var(--md-menu-item-trailing-supporting-text-line-height, var(--md-sys-typescale-label-small-line-height, 1rem));font-weight:var(--md-menu-item-trailing-supporting-text-weight, var(--md-sys-typescale-label-small-weight, var(--md-ref-typeface-weight-medium, 500)))}:is([slot=start],[slot=end])::slotted(*){fill:currentColor}[slot=start]{color:var(--md-menu-item-leading-icon-color, var(--md-sys-color-on-surface-variant, #49454f))}[slot=end]{color:var(--md-menu-item-trailing-icon-color, var(--md-sys-color-on-surface-variant, #49454f))}.list-item.selected{background-color:var(--md-menu-item-selected-container-color, var(--md-sys-color-secondary-container, #e8def8))}.selected:not(.disabled) ::slotted(*){color:var(--md-menu-item-selected-label-text-color, var(--md-sys-color-on-secondary-container, #1d192b))}/*# sourceMappingURL=menu-item-styles.css.map */
+const menu_item_styles_css_styles = i `:host{display:flex;--md-ripple-hover-color: var(--md-menu-item-hover-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--md-ripple-hover-opacity: var(--md-menu-item-hover-state-layer-opacity, 0.08);--md-ripple-pressed-color: var(--md-menu-item-pressed-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--md-ripple-pressed-opacity: var(--md-menu-item-pressed-state-layer-opacity, 0.12)}:host([disabled]){opacity:var(--md-menu-item-disabled-opacity, 0.3);pointer-events:none}md-focus-ring{z-index:1;--md-focus-ring-shape: 8px}a,button,li{background:none;border:none;padding:0;margin:0;text-align:unset;text-decoration:none}.list-item{border-radius:inherit;display:flex;flex:1;max-width:inherit;min-width:inherit;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}.list-item:not(.disabled){cursor:pointer}[slot=container]{pointer-events:none}md-ripple{border-radius:inherit}md-item{border-radius:inherit;flex:1;color:var(--md-menu-item-label-text-color, var(--md-sys-color-on-surface, #1d1b20));font-family:var(--md-menu-item-label-text-font, var(--md-sys-typescale-body-large-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-menu-item-label-text-size, var(--md-sys-typescale-body-large-size, 1rem));line-height:var(--md-menu-item-label-text-line-height, var(--md-sys-typescale-body-large-line-height, 1.5rem));font-weight:var(--md-menu-item-label-text-weight, var(--md-sys-typescale-body-large-weight, var(--md-ref-typeface-weight-regular, 400)));min-height:var(--md-menu-item-one-line-container-height, 56px);padding-top:var(--md-menu-item-top-space, 12px);padding-bottom:var(--md-menu-item-bottom-space, 12px);padding-inline-start:var(--md-menu-item-leading-space, 16px);padding-inline-end:var(--md-menu-item-trailing-space, 16px)}md-item[multiline]{min-height:var(--md-menu-item-two-line-container-height, 72px)}[slot=supporting-text]{color:var(--md-menu-item-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));font-family:var(--md-menu-item-supporting-text-font, var(--md-sys-typescale-body-medium-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-menu-item-supporting-text-size, var(--md-sys-typescale-body-medium-size, 0.875rem));line-height:var(--md-menu-item-supporting-text-line-height, var(--md-sys-typescale-body-medium-line-height, 1.25rem));font-weight:var(--md-menu-item-supporting-text-weight, var(--md-sys-typescale-body-medium-weight, var(--md-ref-typeface-weight-regular, 400)))}[slot=trailing-supporting-text]{color:var(--md-menu-item-trailing-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));font-family:var(--md-menu-item-trailing-supporting-text-font, var(--md-sys-typescale-label-small-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-menu-item-trailing-supporting-text-size, var(--md-sys-typescale-label-small-size, 0.6875rem));line-height:var(--md-menu-item-trailing-supporting-text-line-height, var(--md-sys-typescale-label-small-line-height, 1rem));font-weight:var(--md-menu-item-trailing-supporting-text-weight, var(--md-sys-typescale-label-small-weight, var(--md-ref-typeface-weight-medium, 500)))}:is([slot=start],[slot=end])::slotted(*){fill:currentColor}[slot=start]{color:var(--md-menu-item-leading-icon-color, var(--md-sys-color-on-surface-variant, #49454f))}[slot=end]{color:var(--md-menu-item-trailing-icon-color, var(--md-sys-color-on-surface-variant, #49454f))}.list-item.selected{background-color:var(--md-menu-item-selected-container-color, var(--md-sys-color-secondary-container, #e8def8))}.selected:not(.disabled) ::slotted(*){color:var(--md-menu-item-selected-label-text-color, var(--md-sys-color-on-secondary-container, #1d192b))}@media(forced-colors: active){:host([disabled]),:host([disabled]) slot{color:GrayText;opacity:1}.list-item{position:relative}.list-item.selected::before{content:"";position:absolute;inset:0;box-sizing:border-box;border-radius:inherit;pointer-events:none;border:3px double CanvasText}}/*# sourceMappingURL=menu-item-styles.css.map */
 `;
 //# sourceMappingURL=menu-item-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/menu/menu-item.js
@@ -8046,7 +8873,6 @@ const menu_item_styles_css_styles = i `:host{display:flex;--md-ripple-hover-colo
  * Copyright 2022 Google LLC
  * SPDX-License-Identifier: Apache-2.0
  */
-
 
 
 
@@ -8068,7 +8894,7 @@ const menu_item_styles_css_styles = i `:host{display:flex;--md-ripple-hover-colo
  */
 let MdMenuItem = class MdMenuItem extends MenuItemEl {
 };
-MdMenuItem.styles = [menu_item_styles_css_styles, menuitem_forced_colors_styles_css_styles];
+MdMenuItem.styles = [menu_item_styles_css_styles];
 MdMenuItem = __decorate([
     t('md-menu-item')
 ], MdMenuItem);
@@ -8086,14 +8912,14 @@ MdMenuItem = __decorate([
 
 
 /**
- * @fires deactivate-items Requests the parent menu to deselect other items when
- * a submenu opens
- * @fires request-activation Requests the parent make the slotted item focusable
- * and focuses the item.
- * @fires deactivate-typeahead Requests the parent menu to deactivate the
- * typeahead functionality when a submenu opens
- * @fires activate-typeahead Requests the parent menu to activate the typeahead
- * functionality when a submenu closes
+ * @fires deactivate-items {Event} Requests the parent menu to deselect other
+ * items when a submenu opens. --bubbles --composed
+ * @fires request-activation {Event} Requests the parent make the slotted item
+ * focusable and focuses the item. --bubbles --composed
+ * @fires deactivate-typeahead {Event} Requests the parent menu to deactivate
+ * the typeahead functionality when a submenu opens. --bubbles --composed
+ * @fires activate-typeahead {Event} Requests the parent menu to activate the
+ * typeahead functionality when a submenu closes. --bubbles --composed
  */
 class SubMenu extends lit_element_s {
     get item() {
@@ -8181,19 +9007,23 @@ class SubMenu extends lit_element_s {
     }
     render() {
         return x `
-        <slot
-            name="item"
-            @click=${this.onClick}
-            @keydown=${this.onKeydown}
-            @slotchange=${this.onSlotchange}
-        >
-        </slot>
-        <slot name="menu"
-            @keydown=${this.onSubMenuKeydown}
-            @close-menu=${this.onCloseSubmenu}
-            @slotchange=${this.onSlotchange}>
-        </slot>
+      <slot
+        name="item"
+        @click=${this.onClick}
+        @keydown=${this.onKeydown}
+        @slotchange=${this.onSlotchange}>
+      </slot>
+      <slot
+        name="menu"
+        @keydown=${this.onSubMenuKeydown}
+        @close-menu=${this.onCloseSubmenu}
+        @slotchange=${this.onSlotchange}>
+      </slot>
     `;
+    }
+    firstUpdated() {
+        // slotchange is not fired if the contents have been SSRd
+        this.onSlotchange();
     }
     /**
      * Shows the submenu.
@@ -8217,6 +9047,15 @@ class SubMenu extends lit_element_s {
             // aria-hidden required so ChromeVox doesn't announce the closed menu
             menu.ariaHidden = 'true';
         }, { once: true });
+        // Parent menu is `position: absolute` – this creates a new CSS relative
+        // positioning context (similar to doing `position: relative`), so the
+        // submenu's `<md-menu slot="submenu" positioning="document">` would be
+        // wrong even if we change `md-sub-menu` from `position: relative` to
+        // `position: static` because the submenu it would still be positioning
+        // itself relative to the parent menu.
+        if (menu.positioning === 'document') {
+            menu.positioning = 'absolute';
+        }
         menu.quick = true;
         // Submenus are in overflow when not fixed. Can remove once we have native
         // popup support
@@ -8539,13 +9378,15 @@ class Progress extends lit_element_s {
         // Needed for closure conformance
         const { ariaLabel } = this;
         return x `
-      <div class="progress ${class_map_e(this.getRenderClasses())}"
+      <div
+        class="progress ${class_map_e(this.getRenderClasses())}"
         role="progressbar"
         aria-label="${ariaLabel || T}"
         aria-valuemin="0"
         aria-valuemax=${this.max}
         aria-valuenow=${this.indeterminate ? T : this.value}
-      >${this.renderIndicator()}</div>
+        >${this.renderIndicator()}</div
+      >
     `;
     }
     getRenderClasses() {
@@ -8598,7 +9439,9 @@ class CircularProgress extends Progress {
         return x `
       <svg viewBox="0 0 4800 4800">
         <circle class="track" pathLength="100"></circle>
-        <circle class="active-track" pathLength="100"
+        <circle
+          class="active-track"
+          pathLength="100"
           stroke-dashoffset=${dashOffset}></circle>
       </svg>
     `;
@@ -8609,15 +9452,14 @@ class CircularProgress extends Progress {
     // This approach has 4.5x the FPS of rendering via svg on Chrome 111.
     // See https://lit.dev/playground/#gist=febb773565272f75408ab06a0eb49746.
     renderIndeterminateContainer() {
-        return x `
-      <div class="spinner">
-        <div class="left">
-          <div class="circle"></div>
-        </div>
-        <div class="right">
-          <div class="circle"></div>
-        </div>
-      </div>`;
+        return x ` <div class="spinner">
+      <div class="left">
+        <div class="circle"></div>
+      </div>
+      <div class="right">
+        <div class="circle"></div>
+      </div>
+    </div>`;
     }
 }
 //# sourceMappingURL=circular-progress.js.map
@@ -8628,7 +9470,7 @@ class CircularProgress extends Progress {
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const circular_progress_styles_css_styles = i `:host{--_active-indicator-color: var(--md-circular-progress-active-indicator-color, var(--md-sys-color-primary, #6750a4));--_active-indicator-width: var(--md-circular-progress-active-indicator-width, 10);--_four-color-active-indicator-four-color: var(--md-circular-progress-four-color-active-indicator-four-color, var(--md-sys-color-tertiary-container, #ffd8e4));--_four-color-active-indicator-one-color: var(--md-circular-progress-four-color-active-indicator-one-color, var(--md-sys-color-primary, #6750a4));--_four-color-active-indicator-three-color: var(--md-circular-progress-four-color-active-indicator-three-color, var(--md-sys-color-tertiary, #7d5260));--_four-color-active-indicator-two-color: var(--md-circular-progress-four-color-active-indicator-two-color, var(--md-sys-color-primary-container, #eaddff));--_size: var(--md-circular-progress-size, 48px);display:inline-flex;vertical-align:middle;min-block-size:var(--_size);min-inline-size:var(--_size);position:relative;align-items:center;justify-content:center;contain:strict;content-visibility:auto}.progress{flex:1;align-self:stretch;margin:4px}.progress,.spinner,.left,.right,.circle,svg,.track,.active-track{position:absolute;inset:0}svg{transform:rotate(-90deg)}circle{cx:50%;cy:50%;r:calc(50%*(1 - var(--_active-indicator-width)/100));stroke-width:calc(var(--_active-indicator-width)*1%);stroke-dasharray:100;fill:rgba(0,0,0,0)}.active-track{transition:stroke-dashoffset 500ms cubic-bezier(0, 0, 0.2, 1);stroke:var(--_active-indicator-color)}.track{stroke:rgba(0,0,0,0)}.progress.indeterminate{animation:linear infinite linear-rotate;animation-duration:1568.2352941176ms}.spinner{animation:infinite both rotate-arc;animation-duration:5332ms;animation-timing-function:cubic-bezier(0.4, 0, 0.2, 1)}.left{overflow:hidden;inset:0 50% 0 0}.right{overflow:hidden;inset:0 0 0 50%}.circle{box-sizing:border-box;border-radius:50%;border:solid calc(var(--_active-indicator-width)/100*(var(--_size) - 8px));border-color:var(--_active-indicator-color) var(--_active-indicator-color) rgba(0,0,0,0) rgba(0,0,0,0);animation:expand-arc;animation-iteration-count:infinite;animation-fill-mode:both;animation-duration:1333ms,5332ms;animation-timing-function:cubic-bezier(0.4, 0, 0.2, 1)}.four-color .circle{animation-name:expand-arc,four-color}.left .circle{rotate:135deg;inset:0 -100% 0 0}.right .circle{rotate:100deg;inset:0 0 0 -100%;animation-delay:-666.5ms,0ms}@media(forced-colors: active){.active-track{stroke:CanvasText}.circle{border-color:CanvasText CanvasText Canvas Canvas}}@keyframes expand-arc{0%{transform:rotate(265deg)}50%{transform:rotate(130deg)}100%{transform:rotate(265deg)}}@keyframes rotate-arc{12.5%{transform:rotate(135deg)}25%{transform:rotate(270deg)}37.5%{transform:rotate(405deg)}50%{transform:rotate(540deg)}62.5%{transform:rotate(675deg)}75%{transform:rotate(810deg)}87.5%{transform:rotate(945deg)}100%{transform:rotate(1080deg)}}@keyframes linear-rotate{to{transform:rotate(360deg)}}@keyframes four-color{0%{border-top-color:var(--_four-color-active-indicator-one-color);border-right-color:var(--_four-color-active-indicator-one-color)}15%{border-top-color:var(--_four-color-active-indicator-one-color);border-right-color:var(--_four-color-active-indicator-one-color)}25%{border-top-color:var(--_four-color-active-indicator-two-color);border-right-color:var(--_four-color-active-indicator-two-color)}40%{border-top-color:var(--_four-color-active-indicator-two-color);border-right-color:var(--_four-color-active-indicator-two-color)}50%{border-top-color:var(--_four-color-active-indicator-three-color);border-right-color:var(--_four-color-active-indicator-three-color)}65%{border-top-color:var(--_four-color-active-indicator-three-color);border-right-color:var(--_four-color-active-indicator-three-color)}75%{border-top-color:var(--_four-color-active-indicator-four-color);border-right-color:var(--_four-color-active-indicator-four-color)}90%{border-top-color:var(--_four-color-active-indicator-four-color);border-right-color:var(--_four-color-active-indicator-four-color)}100%{border-top-color:var(--_four-color-active-indicator-one-color);border-right-color:var(--_four-color-active-indicator-one-color)}}/*# sourceMappingURL=circular-progress-styles.css.map */
+const circular_progress_styles_css_styles = i `:host{--_active-indicator-color: var(--md-circular-progress-active-indicator-color, var(--md-sys-color-primary, #6750a4));--_active-indicator-width: var(--md-circular-progress-active-indicator-width, 10);--_four-color-active-indicator-four-color: var(--md-circular-progress-four-color-active-indicator-four-color, var(--md-sys-color-tertiary-container, #ffd8e4));--_four-color-active-indicator-one-color: var(--md-circular-progress-four-color-active-indicator-one-color, var(--md-sys-color-primary, #6750a4));--_four-color-active-indicator-three-color: var(--md-circular-progress-four-color-active-indicator-three-color, var(--md-sys-color-tertiary, #7d5260));--_four-color-active-indicator-two-color: var(--md-circular-progress-four-color-active-indicator-two-color, var(--md-sys-color-primary-container, #eaddff));--_size: var(--md-circular-progress-size, 48px);display:inline-flex;vertical-align:middle;width:var(--_size);height:var(--_size);position:relative;align-items:center;justify-content:center;contain:strict;content-visibility:auto}.progress{flex:1;align-self:stretch;margin:4px}.progress,.spinner,.left,.right,.circle,svg,.track,.active-track{position:absolute;inset:0}svg{transform:rotate(-90deg)}circle{cx:50%;cy:50%;r:calc(50%*(1 - var(--_active-indicator-width)/100));stroke-width:calc(var(--_active-indicator-width)*1%);stroke-dasharray:100;fill:rgba(0,0,0,0)}.active-track{transition:stroke-dashoffset 500ms cubic-bezier(0, 0, 0.2, 1);stroke:var(--_active-indicator-color)}.track{stroke:rgba(0,0,0,0)}.progress.indeterminate{animation:linear infinite linear-rotate;animation-duration:1568.2352941176ms}.spinner{animation:infinite both rotate-arc;animation-duration:5332ms;animation-timing-function:cubic-bezier(0.4, 0, 0.2, 1)}.left{overflow:hidden;inset:0 50% 0 0}.right{overflow:hidden;inset:0 0 0 50%}.circle{box-sizing:border-box;border-radius:50%;border:solid calc(var(--_active-indicator-width)/100*(var(--_size) - 8px));border-color:var(--_active-indicator-color) var(--_active-indicator-color) rgba(0,0,0,0) rgba(0,0,0,0);animation:expand-arc;animation-iteration-count:infinite;animation-fill-mode:both;animation-duration:1333ms,5332ms;animation-timing-function:cubic-bezier(0.4, 0, 0.2, 1)}.four-color .circle{animation-name:expand-arc,four-color}.left .circle{rotate:135deg;inset:0 -100% 0 0}.right .circle{rotate:100deg;inset:0 0 0 -100%;animation-delay:-666.5ms,0ms}@media(forced-colors: active){.active-track{stroke:CanvasText}.circle{border-color:CanvasText CanvasText Canvas Canvas}}@keyframes expand-arc{0%{transform:rotate(265deg)}50%{transform:rotate(130deg)}100%{transform:rotate(265deg)}}@keyframes rotate-arc{12.5%{transform:rotate(135deg)}25%{transform:rotate(270deg)}37.5%{transform:rotate(405deg)}50%{transform:rotate(540deg)}62.5%{transform:rotate(675deg)}75%{transform:rotate(810deg)}87.5%{transform:rotate(945deg)}100%{transform:rotate(1080deg)}}@keyframes linear-rotate{to{transform:rotate(360deg)}}@keyframes four-color{0%{border-top-color:var(--_four-color-active-indicator-one-color);border-right-color:var(--_four-color-active-indicator-one-color)}15%{border-top-color:var(--_four-color-active-indicator-one-color);border-right-color:var(--_four-color-active-indicator-one-color)}25%{border-top-color:var(--_four-color-active-indicator-two-color);border-right-color:var(--_four-color-active-indicator-two-color)}40%{border-top-color:var(--_four-color-active-indicator-two-color);border-right-color:var(--_four-color-active-indicator-two-color)}50%{border-top-color:var(--_four-color-active-indicator-three-color);border-right-color:var(--_four-color-active-indicator-three-color)}65%{border-top-color:var(--_four-color-active-indicator-three-color);border-right-color:var(--_four-color-active-indicator-three-color)}75%{border-top-color:var(--_four-color-active-indicator-four-color);border-right-color:var(--_four-color-active-indicator-four-color)}90%{border-top-color:var(--_four-color-active-indicator-four-color);border-right-color:var(--_four-color-active-indicator-four-color)}100%{border-top-color:var(--_four-color-active-indicator-one-color);border-right-color:var(--_four-color-active-indicator-one-color)}}/*# sourceMappingURL=circular-progress-styles.css.map */
 `;
 //# sourceMappingURL=circular-progress-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/progress/circular-progress.js
@@ -8676,7 +9518,7 @@ class LinearProgress extends Progress {
     constructor() {
         super(...arguments);
         /**
-         * Buffer amount to display, a fraction between 0 and 1.
+         * Buffer amount to display, a fraction between 0 and `max`.
          */
         this.buffer = 1;
     }
@@ -8685,10 +9527,10 @@ class LinearProgress extends Progress {
     // due to a now fixed Chrome bug: crbug.com/389359.
     renderIndicator() {
         const progressStyles = {
-            transform: `scaleX(${(this.indeterminate ? 1 : this.value / this.max) * 100}%)`
+            transform: `scaleX(${(this.indeterminate ? 1 : this.value / this.max) * 100}%)`,
         };
         const dotStyles = {
-            transform: `scaleX(${(this.indeterminate ? 1 : this.buffer / this.max) * 100}%)`
+            transform: `scaleX(${(this.indeterminate ? 1 : this.buffer / this.max) * 100}%)`,
         };
         return x `
       <div class="dots"></div>
@@ -8713,7 +9555,7 @@ __decorate([
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const linear_progress_styles_css_styles = i `:host{--_active-indicator-color: var(--md-linear-progress-active-indicator-color, var(--md-sys-color-primary, #6750a4));--_active-indicator-height: var(--md-linear-progress-active-indicator-height, 4px);--_four-color-active-indicator-four-color: var(--md-linear-progress-four-color-active-indicator-four-color, var(--md-sys-color-tertiary-container, #ffd8e4));--_four-color-active-indicator-one-color: var(--md-linear-progress-four-color-active-indicator-one-color, var(--md-sys-color-primary, #6750a4));--_four-color-active-indicator-three-color: var(--md-linear-progress-four-color-active-indicator-three-color, var(--md-sys-color-tertiary, #7d5260));--_four-color-active-indicator-two-color: var(--md-linear-progress-four-color-active-indicator-two-color, var(--md-sys-color-primary-container, #eaddff));--_track-color: var(--md-linear-progress-track-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_track-height: var(--md-linear-progress-track-height, 4px);--_track-shape: var(--md-linear-progress-track-shape, 0px);border-radius:var(--_track-shape);display:flex;position:relative;width:80px;height:var(--_track-height);content-visibility:auto;contain:strict}.progress,.dots,.inactive-track,.bar,.bar-inner{position:absolute}.progress{direction:ltr;inset:0;border-radius:inherit;overflow:hidden;display:flex;align-items:center}.bar{animation:none;width:100%;height:var(--_active-indicator-height);transform-origin:left center;transition:transform 250ms cubic-bezier(0.4, 0, 0.6, 1)}.secondary-bar{display:none}.bar-inner{inset:0;animation:none;background:var(--_active-indicator-color)}.inactive-track{background:var(--_track-color);inset:0;transition:transform 250ms cubic-bezier(0.4, 0, 0.6, 1);transform-origin:left center}.dots{inset:0;animation:linear infinite 250ms;animation-name:buffering;background-color:var(--_track-color);background-repeat:repeat-x;-webkit-mask-image:url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5 2' preserveAspectRatio='xMinYMin slice'%3E%3Ccircle cx='1' cy='1' r='1'/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5 2' preserveAspectRatio='xMinYMin slice'%3E%3Ccircle cx='1' cy='1' r='1'/%3E%3C/svg%3E");z-index:-1}.indeterminate .bar{transition:none}.indeterminate .primary-bar{inset-inline-start:-145.167%}.indeterminate .secondary-bar{inset-inline-start:-54.8889%;display:block}.indeterminate .dots{display:none}.indeterminate .primary-bar{animation:linear infinite 2s;animation-name:primary-indeterminate-translate}.indeterminate .primary-bar>.bar-inner{animation:linear infinite 2s primary-indeterminate-scale}.indeterminate.four-color .primary-bar>.bar-inner{animation-name:primary-indeterminate-scale,four-color;animation-duration:2s,4s}.indeterminate .secondary-bar{animation:linear infinite 2s;animation-name:secondary-indeterminate-translate}.indeterminate .secondary-bar>.bar-inner{animation:linear infinite 2s secondary-indeterminate-scale}.indeterminate.four-color .secondary-bar>.bar-inner{animation-name:secondary-indeterminate-scale,four-color;animation-duration:2s,4s}:host-context([dir=rtl]),:host([dir=rtl]){transform:scale(-1)}:host(:dir(rtl)){transform:scale(-1)}@keyframes primary-indeterminate-scale{0%{transform:scaleX(0.08)}36.65%{animation-timing-function:cubic-bezier(0.334731, 0.12482, 0.785844, 1);transform:scaleX(0.08)}69.15%{animation-timing-function:cubic-bezier(0.06, 0.11, 0.6, 1);transform:scaleX(0.661479)}100%{transform:scaleX(0.08)}}@keyframes secondary-indeterminate-scale{0%{animation-timing-function:cubic-bezier(0.205028, 0.057051, 0.57661, 0.453971);transform:scaleX(0.08)}19.15%{animation-timing-function:cubic-bezier(0.152313, 0.196432, 0.648374, 1.00432);transform:scaleX(0.457104)}44.15%{animation-timing-function:cubic-bezier(0.257759, -0.003163, 0.211762, 1.38179);transform:scaleX(0.72796)}100%{transform:scaleX(0.08)}}@keyframes buffering{0%{transform:translateX(calc(var(--_track-height) / 2 * 5))}}@keyframes primary-indeterminate-translate{0%{transform:translateX(0px)}20%{animation-timing-function:cubic-bezier(0.5, 0, 0.701732, 0.495819);transform:translateX(0px)}59.15%{animation-timing-function:cubic-bezier(0.302435, 0.381352, 0.55, 0.956352);transform:translateX(83.6714%)}100%{transform:translateX(200.611%)}}@keyframes secondary-indeterminate-translate{0%{animation-timing-function:cubic-bezier(0.15, 0, 0.515058, 0.409685);transform:translateX(0px)}25%{animation-timing-function:cubic-bezier(0.31033, 0.284058, 0.8, 0.733712);transform:translateX(37.6519%)}48.35%{animation-timing-function:cubic-bezier(0.4, 0.627035, 0.6, 0.902026);transform:translateX(84.3862%)}100%{transform:translateX(160.278%)}}@keyframes four-color{0%{background:var(--_four-color-active-indicator-one-color)}15%{background:var(--_four-color-active-indicator-one-color)}25%{background:var(--_four-color-active-indicator-two-color)}40%{background:var(--_four-color-active-indicator-two-color)}50%{background:var(--_four-color-active-indicator-three-color)}65%{background:var(--_four-color-active-indicator-three-color)}75%{background:var(--_four-color-active-indicator-four-color)}90%{background:var(--_four-color-active-indicator-four-color)}100%{background:var(--_four-color-active-indicator-one-color)}}@media(forced-colors: active){:host{outline:1px solid CanvasText}.bar-inner,.dots{background-color:CanvasText}}/*# sourceMappingURL=linear-progress-styles.css.map */
+const linear_progress_styles_css_styles = i `:host{--_active-indicator-color: var(--md-linear-progress-active-indicator-color, var(--md-sys-color-primary, #6750a4));--_active-indicator-height: var(--md-linear-progress-active-indicator-height, 4px);--_four-color-active-indicator-four-color: var(--md-linear-progress-four-color-active-indicator-four-color, var(--md-sys-color-tertiary-container, #ffd8e4));--_four-color-active-indicator-one-color: var(--md-linear-progress-four-color-active-indicator-one-color, var(--md-sys-color-primary, #6750a4));--_four-color-active-indicator-three-color: var(--md-linear-progress-four-color-active-indicator-three-color, var(--md-sys-color-tertiary, #7d5260));--_four-color-active-indicator-two-color: var(--md-linear-progress-four-color-active-indicator-two-color, var(--md-sys-color-primary-container, #eaddff));--_track-color: var(--md-linear-progress-track-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_track-height: var(--md-linear-progress-track-height, 4px);--_track-shape: var(--md-linear-progress-track-shape, 0px);border-radius:var(--_track-shape);display:flex;position:relative;min-width:80px;height:var(--_track-height);content-visibility:auto;contain:strict}.progress,.dots,.inactive-track,.bar,.bar-inner{position:absolute}.progress{direction:ltr;inset:0;border-radius:inherit;overflow:hidden;display:flex;align-items:center}.bar{animation:none;width:100%;height:var(--_active-indicator-height);transform-origin:left center;transition:transform 250ms cubic-bezier(0.4, 0, 0.6, 1)}.secondary-bar{display:none}.bar-inner{inset:0;animation:none;background:var(--_active-indicator-color)}.inactive-track{background:var(--_track-color);inset:0;transition:transform 250ms cubic-bezier(0.4, 0, 0.6, 1);transform-origin:left center}.dots{inset:0;animation:linear infinite 250ms;animation-name:buffering;background-color:var(--_track-color);background-repeat:repeat-x;-webkit-mask-image:url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5 2' preserveAspectRatio='xMinYMin slice'%3E%3Ccircle cx='1' cy='1' r='1'/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5 2' preserveAspectRatio='xMinYMin slice'%3E%3Ccircle cx='1' cy='1' r='1'/%3E%3C/svg%3E");z-index:-1}.indeterminate .bar{transition:none}.indeterminate .primary-bar{inset-inline-start:-145.167%}.indeterminate .secondary-bar{inset-inline-start:-54.8889%;display:block}.indeterminate .dots{display:none}.indeterminate .primary-bar{animation:linear infinite 2s;animation-name:primary-indeterminate-translate}.indeterminate .primary-bar>.bar-inner{animation:linear infinite 2s primary-indeterminate-scale}.indeterminate.four-color .primary-bar>.bar-inner{animation-name:primary-indeterminate-scale,four-color;animation-duration:2s,4s}.indeterminate .secondary-bar{animation:linear infinite 2s;animation-name:secondary-indeterminate-translate}.indeterminate .secondary-bar>.bar-inner{animation:linear infinite 2s secondary-indeterminate-scale}.indeterminate.four-color .secondary-bar>.bar-inner{animation-name:secondary-indeterminate-scale,four-color;animation-duration:2s,4s}:host-context([dir=rtl]),:host([dir=rtl]){transform:scale(-1)}:host(:dir(rtl)){transform:scale(-1)}@keyframes primary-indeterminate-scale{0%{transform:scaleX(0.08)}36.65%{animation-timing-function:cubic-bezier(0.334731, 0.12482, 0.785844, 1);transform:scaleX(0.08)}69.15%{animation-timing-function:cubic-bezier(0.06, 0.11, 0.6, 1);transform:scaleX(0.661479)}100%{transform:scaleX(0.08)}}@keyframes secondary-indeterminate-scale{0%{animation-timing-function:cubic-bezier(0.205028, 0.057051, 0.57661, 0.453971);transform:scaleX(0.08)}19.15%{animation-timing-function:cubic-bezier(0.152313, 0.196432, 0.648374, 1.00432);transform:scaleX(0.457104)}44.15%{animation-timing-function:cubic-bezier(0.257759, -0.003163, 0.211762, 1.38179);transform:scaleX(0.72796)}100%{transform:scaleX(0.08)}}@keyframes buffering{0%{transform:translateX(calc(var(--_track-height) / 2 * 5))}}@keyframes primary-indeterminate-translate{0%{transform:translateX(0px)}20%{animation-timing-function:cubic-bezier(0.5, 0, 0.701732, 0.495819);transform:translateX(0px)}59.15%{animation-timing-function:cubic-bezier(0.302435, 0.381352, 0.55, 0.956352);transform:translateX(83.6714%)}100%{transform:translateX(200.611%)}}@keyframes secondary-indeterminate-translate{0%{animation-timing-function:cubic-bezier(0.15, 0, 0.515058, 0.409685);transform:translateX(0px)}25%{animation-timing-function:cubic-bezier(0.31033, 0.284058, 0.8, 0.733712);transform:translateX(37.6519%)}48.35%{animation-timing-function:cubic-bezier(0.4, 0.627035, 0.6, 0.902026);transform:translateX(84.3862%)}100%{transform:translateX(160.278%)}}@keyframes four-color{0%{background:var(--_four-color-active-indicator-one-color)}15%{background:var(--_four-color-active-indicator-one-color)}25%{background:var(--_four-color-active-indicator-two-color)}40%{background:var(--_four-color-active-indicator-two-color)}50%{background:var(--_four-color-active-indicator-three-color)}65%{background:var(--_four-color-active-indicator-three-color)}75%{background:var(--_four-color-active-indicator-four-color)}90%{background:var(--_four-color-active-indicator-four-color)}100%{background:var(--_four-color-active-indicator-one-color)}}@media(forced-colors: active){:host{outline:1px solid CanvasText}.bar-inner,.dots{background-color:CanvasText}}/*# sourceMappingURL=linear-progress-styles.css.map */
 `;
 //# sourceMappingURL=linear-progress-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/progress/linear-progress.js
@@ -8742,16 +9584,89 @@ MdLinearProgress = __decorate([
     t('md-linear-progress')
 ], MdLinearProgress);
 //# sourceMappingURL=linear-progress.js.map
-;// CONCATENATED MODULE: ./node_modules/@material/web/radio/internal/forced-colors-styles.css.js
+;// CONCATENATED MODULE: ./node_modules/@material/web/labs/behaviors/focusable.js
 /**
-  * @license
-  * Copyright 2022 Google LLC
-  * SPDX-License-Identifier: Apache-2.0
-  */
+ * @license
+ * Copyright 2023 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
 
-const radio_internal_forced_colors_styles_css_styles = i `@media(forced-colors: active){:host{--md-radio-disabled-selected-icon-color: GrayText;--md-radio-disabled-selected-icon-opacity: 1;--md-radio-disabled-unselected-icon-color: GrayText;--md-radio-disabled-unselected-icon-opacity: 1;--md-radio-selected-icon-color: CanvasText;--md-radio-selected-hover-icon-color: CanvasText;--md-radio-selected-focus-icon-color: CanvasText;--md-radio-selected-pressed-icon-color: CanvasText;--md-radio-icon-color: CanvasText;--md-radio-hover-icon-color: CanvasText;--md-radio-focus-icon-color: CanvasText;--md-radio-pressed-icon-color: CanvasText}}/*# sourceMappingURL=forced-colors-styles.css.map */
-`;
-//# sourceMappingURL=forced-colors-styles.css.js.map
+
+/**
+ * A property symbol that indicates whether or not a `Focusable` element can be
+ * focused.
+ */
+const isFocusable = Symbol('isFocusable');
+const privateIsFocusable = Symbol('privateIsFocusable');
+const externalTabIndex = Symbol('externalTabIndex');
+const isUpdatingTabIndex = Symbol('isUpdatingTabIndex');
+const updateTabIndex = Symbol('updateTabIndex');
+/**
+ * Mixes in focusable functionality for a class.
+ *
+ * Elements can enable and disable their focusability with the `isFocusable`
+ * symbol property. Changing `tabIndex` will trigger a lit render, meaning
+ * `this.tabIndex` can be used in template expressions.
+ *
+ * This mixin will preserve externally-set tabindices. If an element turns off
+ * focusability, but a user sets `tabindex="0"`, it will still be focusable.
+ *
+ * To remove user overrides and restore focusability control to the element,
+ * remove the `tabindex` attribute.
+ *
+ * @param base The class to mix functionality into.
+ * @return The provided class with `Focusable` mixed in.
+ */
+function mixinFocusable(base) {
+    var _a, _b, _c;
+    class FocusableElement extends base {
+        get [isFocusable]() {
+            return this[privateIsFocusable];
+        }
+        set [isFocusable](value) {
+            if (this[isFocusable] === value) {
+                return;
+            }
+            this[privateIsFocusable] = value;
+            this[updateTabIndex]();
+        }
+        // tslint:disable-next-line:no-any
+        constructor(...args) {
+            super(...args);
+            this[_a] = false;
+            this[_b] = null;
+            this[_c] = false;
+            this[isFocusable] = true;
+        }
+        attributeChangedCallback(name, old, value) {
+            super.attributeChangedCallback(name, old, value);
+            if (name !== 'tabindex' || this[isUpdatingTabIndex]) {
+                return;
+            }
+            if (!this.hasAttribute('tabindex')) {
+                // User removed the attribute, can now use internal tabIndex
+                this[externalTabIndex] = null;
+                this[updateTabIndex]();
+                return;
+            }
+            this[externalTabIndex] = this.tabIndex;
+        }
+        async [(_a = privateIsFocusable, _b = externalTabIndex, _c = isUpdatingTabIndex, updateTabIndex)]() {
+            const internalTabIndex = this[isFocusable] ? 0 : -1;
+            const computedTabIndex = this[externalTabIndex] ?? internalTabIndex;
+            this[isUpdatingTabIndex] = true;
+            this.tabIndex = computedTabIndex;
+            this.requestUpdate();
+            await this.updateComplete;
+            this[isUpdatingTabIndex] = false;
+        }
+    }
+    __decorate([
+        property_n({ reflect: true })
+    ], FocusableElement.prototype, "tabIndex", void 0);
+    return FocusableElement;
+}
+//# sourceMappingURL=focusable.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/radio/internal/single-selection-controller.js
 /**
  * @license
@@ -8920,7 +9835,7 @@ class SingleSelectionController {
         // There are three tabindex states for a group of elements:
         // 1. If any are checked, that element is focusable.
         const siblings = this.getNamedSiblings();
-        const checkedSibling = siblings.find(sibling => sibling.checked);
+        const checkedSibling = siblings.find((sibling) => sibling.checked);
         // 2. If an element is focused, the others are no longer focusable.
         if (checkedSibling || this.focused) {
             const focusable = checkedSibling || this.host;
@@ -8956,7 +9871,9 @@ class SingleSelectionController {
  * Copyright 2018 Google LLC
  * SPDX-License-Identifier: Apache-2.0
  */
-var radio_a;
+var _a;
+
+
 
 
 
@@ -8968,10 +9885,17 @@ var radio_a;
 
 const CHECKED = Symbol('checked');
 let maskId = 0;
+// Separate variable needed for closure.
+const radioBaseClass = mixinFormAssociated(mixinElementInternals(mixinFocusable(lit_element_s)));
 /**
  * A radio component.
+ *
+ * @fires input {InputEvent} Dispatched when the value changes from user
+ * interaction. --bubbles
+ * @fires change {Event} Dispatched when the value changes from user
+ * interaction. --bubbles --composed
  */
-class Radio extends lit_element_s {
+class Radio extends radioBaseClass {
     /**
      * Whether or not the radio is selected.
      */
@@ -8984,69 +9908,47 @@ class Radio extends lit_element_s {
             return;
         }
         this[CHECKED] = checked;
-        const state = String(checked);
-        this.internals.setFormValue(this.checked ? this.value : null, state);
         this.requestUpdate('checked', wasChecked);
         this.selectionController.handleCheckedChange();
-    }
-    /**
-     * The HTML name to use in form submission.
-     */
-    get name() {
-        return this.getAttribute('name') ?? '';
-    }
-    set name(name) {
-        this.setAttribute('name', name);
-    }
-    /**
-     * The associated form element with which this element's value will submit.
-     */
-    get form() {
-        return this.internals.form;
-    }
-    /**
-     * The labels this element is associated with.
-     */
-    get labels() {
-        return this.internals.labels;
     }
     constructor() {
         super();
         // Unique maskId is required because of a Safari bug that fail to persist
         // reference to the mask. This should be removed once the bug is fixed.
         this.maskId = `cutout${++maskId}`;
-        this[radio_a] = false;
-        /**
-         * Whether or not the radio is disabled.
-         */
-        this.disabled = false;
+        this[_a] = false;
         /**
          * The element value to use in form submission when checked.
          */
         this.value = 'on';
         this.selectionController = new SingleSelectionController(this);
-        this.internals = polyfillElementInternalsAria(this, this /* needed for closure */.attachInternals());
         this.addController(this.selectionController);
         if (!is_server_o) {
-            this.internals.role = 'radio';
+            this[internals].role = 'radio';
             this.addEventListener('click', this.handleClick.bind(this));
             this.addEventListener('keydown', this.handleKeydown.bind(this));
         }
     }
     render() {
-        const classes = { checked: this.checked };
+        const classes = { 'checked': this.checked };
         return x `
       <div class="container ${class_map_e(classes)}" aria-hidden="true">
-        <md-ripple part="ripple" .control=${this}
-            ?disabled=${this.disabled}></md-ripple>
+        <md-ripple
+          part="ripple"
+          .control=${this}
+          ?disabled=${this.disabled}></md-ripple>
         <md-focus-ring part="focus-ring" .control=${this}></md-focus-ring>
         <svg class="icon" viewBox="0 0 20 20">
           <mask id="${this.maskId}">
             <rect width="100%" height="100%" fill="white" />
             <circle cx="10" cy="10" r="8" fill="black" />
           </mask>
-          <circle class="outer circle" cx="10" cy="10" r="10"
-              mask="url(#${this.maskId})" />
+          <circle
+            class="outer circle"
+            cx="10"
+            cy="10"
+            r="10"
+            mask="url(#${this.maskId})" />
           <circle class="inner circle" cx="10" cy="10" r="5" />
         </svg>
 
@@ -9056,13 +9958,12 @@ class Radio extends lit_element_s {
           tabindex="-1"
           .checked=${this.checked}
           .value=${this.value}
-          ?disabled=${this.disabled}
-        >
+          ?disabled=${this.disabled} />
       </div>
     `;
     }
     updated() {
-        this.internals.ariaChecked = String(this.checked);
+        this[internals].ariaChecked = String(this.checked);
     }
     async handleClick(event) {
         if (this.disabled) {
@@ -9089,29 +9990,24 @@ class Radio extends lit_element_s {
         }
         this.click();
     }
-    /** @private */
+    [(_a = CHECKED, getFormValue)]() {
+        return this.checked ? this.value : null;
+    }
+    [getFormState]() {
+        return String(this.checked);
+    }
     formResetCallback() {
         // The checked property does not reflect, so the original attribute set by
         // the user is used to determine the default value.
         this.checked = this.hasAttribute('checked');
     }
-    /** @private */
     formStateRestoreCallback(state) {
         this.checked = state === 'true';
     }
 }
-radio_a = CHECKED;
-(() => {
-    setupHostAria(Radio);
-})();
-/** @nocollapse */
-Radio.formAssociated = true;
 __decorate([
     property_n({ type: Boolean })
 ], Radio.prototype, "checked", null);
-__decorate([
-    property_n({ type: Boolean, reflect: true })
-], Radio.prototype, "disabled", void 0);
 __decorate([
     property_n()
 ], Radio.prototype, "value", void 0);
@@ -9123,7 +10019,7 @@ __decorate([
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const radio_styles_css_styles = i `:host{--_disabled-selected-icon-color: var(--md-radio-disabled-selected-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-selected-icon-opacity: var(--md-radio-disabled-selected-icon-opacity, 0.38);--_disabled-unselected-icon-color: var(--md-radio-disabled-unselected-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-unselected-icon-opacity: var(--md-radio-disabled-unselected-icon-opacity, 0.38);--_icon-size: var(--md-radio-icon-size, 20px);--_selected-focus-icon-color: var(--md-radio-selected-focus-icon-color, var(--md-sys-color-primary, #6750a4));--_selected-hover-icon-color: var(--md-radio-selected-hover-icon-color, var(--md-sys-color-primary, #6750a4));--_selected-hover-state-layer-color: var(--md-radio-selected-hover-state-layer-color, var(--md-sys-color-primary, #6750a4));--_selected-hover-state-layer-opacity: var(--md-radio-selected-hover-state-layer-opacity, 0.08);--_selected-icon-color: var(--md-radio-selected-icon-color, var(--md-sys-color-primary, #6750a4));--_selected-pressed-icon-color: var(--md-radio-selected-pressed-icon-color, var(--md-sys-color-primary, #6750a4));--_selected-pressed-state-layer-color: var(--md-radio-selected-pressed-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--_selected-pressed-state-layer-opacity: var(--md-radio-selected-pressed-state-layer-opacity, 0.12);--_state-layer-size: var(--md-radio-state-layer-size, 40px);--_focus-icon-color: var(--md-radio-focus-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-icon-color: var(--md-radio-hover-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-state-layer-color: var(--md-radio-hover-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-state-layer-opacity: var(--md-radio-hover-state-layer-opacity, 0.08);--_icon-color: var(--md-radio-icon-color, var(--md-sys-color-on-surface-variant, #49454f));--_pressed-icon-color: var(--md-radio-pressed-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_pressed-state-layer-color: var(--md-radio-pressed-state-layer-color, var(--md-sys-color-primary, #6750a4));--_pressed-state-layer-opacity: var(--md-radio-pressed-state-layer-opacity, 0.12);--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-color: var(--_pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity);display:inline-flex;height:var(--_icon-size);outline:none;position:relative;vertical-align:top;width:var(--_icon-size);-webkit-tap-highlight-color:rgba(0,0,0,0)}:host([touch-target=wrapper]){margin:max(0px,(48px - var(--_icon-size))/2)}.container{display:flex;height:100%;place-content:center;place-items:center;width:100%}md-focus-ring{height:44px;inset:unset;width:44px}.checked{--md-ripple-hover-color: var(--_selected-hover-state-layer-color);--md-ripple-hover-opacity: var(--_selected-hover-state-layer-opacity);--md-ripple-pressed-color: var(--_selected-pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_selected-pressed-state-layer-opacity)}input{appearance:none;height:48px;margin:0;position:absolute;width:48px}:host([touch-target=none]) input{width:100%;height:100%}md-ripple{border-radius:50%;height:var(--_state-layer-size);inset:unset;width:var(--_state-layer-size)}.icon{fill:var(--_icon-color);inset:0;position:absolute}.outer.circle{transition:fill 50ms linear}.inner.circle{opacity:0;transform-origin:center;transition:opacity 50ms linear}.checked .icon{fill:var(--_selected-icon-color)}.checked .inner.circle{animation:inner-circle-grow 300ms cubic-bezier(0.05, 0.7, 0.1, 1);opacity:1}@keyframes inner-circle-grow{from{transform:scale(0)}to{transform:scale(1)}}:host([disabled]) .circle{animation-duration:0s;transition-duration:0s}:host(:hover) .icon{fill:var(--_hover-icon-color)}:host(:focus-within) .icon{fill:var(--_focus-icon-color)}:host(:active) .icon{fill:var(--_pressed-icon-color)}:host([disabled]) .icon{fill:var(--_disabled-unselected-icon-color);opacity:var(--_disabled-unselected-icon-opacity)}:host(:hover) .checked .icon{fill:var(--_selected-hover-icon-color)}:host(:focus-within) .checked .icon{fill:var(--_selected-focus-icon-color)}:host(:active) .checked .icon{fill:var(--_selected-pressed-icon-color)}:host([disabled]) .checked .icon{fill:var(--_disabled-selected-icon-color);opacity:var(--_disabled-selected-icon-opacity)}/*# sourceMappingURL=radio-styles.css.map */
+const radio_styles_css_styles = i `@layer{:host{--_disabled-selected-icon-color: var(--md-radio-disabled-selected-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-selected-icon-opacity: var(--md-radio-disabled-selected-icon-opacity, 0.38);--_disabled-unselected-icon-color: var(--md-radio-disabled-unselected-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-unselected-icon-opacity: var(--md-radio-disabled-unselected-icon-opacity, 0.38);--_icon-size: var(--md-radio-icon-size, 20px);--_selected-focus-icon-color: var(--md-radio-selected-focus-icon-color, var(--md-sys-color-primary, #6750a4));--_selected-hover-icon-color: var(--md-radio-selected-hover-icon-color, var(--md-sys-color-primary, #6750a4));--_selected-hover-state-layer-color: var(--md-radio-selected-hover-state-layer-color, var(--md-sys-color-primary, #6750a4));--_selected-hover-state-layer-opacity: var(--md-radio-selected-hover-state-layer-opacity, 0.08);--_selected-icon-color: var(--md-radio-selected-icon-color, var(--md-sys-color-primary, #6750a4));--_selected-pressed-icon-color: var(--md-radio-selected-pressed-icon-color, var(--md-sys-color-primary, #6750a4));--_selected-pressed-state-layer-color: var(--md-radio-selected-pressed-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--_selected-pressed-state-layer-opacity: var(--md-radio-selected-pressed-state-layer-opacity, 0.12);--_state-layer-size: var(--md-radio-state-layer-size, 40px);--_focus-icon-color: var(--md-radio-focus-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-icon-color: var(--md-radio-hover-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-state-layer-color: var(--md-radio-hover-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-state-layer-opacity: var(--md-radio-hover-state-layer-opacity, 0.08);--_icon-color: var(--md-radio-icon-color, var(--md-sys-color-on-surface-variant, #49454f));--_pressed-icon-color: var(--md-radio-pressed-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_pressed-state-layer-color: var(--md-radio-pressed-state-layer-color, var(--md-sys-color-primary, #6750a4));--_pressed-state-layer-opacity: var(--md-radio-pressed-state-layer-opacity, 0.12);--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-color: var(--_pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity);display:inline-flex;height:var(--_icon-size);outline:none;position:relative;vertical-align:top;width:var(--_icon-size);-webkit-tap-highlight-color:rgba(0,0,0,0);cursor:pointer}:host([disabled]){cursor:default}:host([touch-target=wrapper]){margin:max(0px,(48px - var(--_icon-size))/2)}.container{display:flex;height:100%;place-content:center;place-items:center;width:100%}md-focus-ring{height:44px;inset:unset;width:44px}.checked{--md-ripple-hover-color: var(--_selected-hover-state-layer-color);--md-ripple-hover-opacity: var(--_selected-hover-state-layer-opacity);--md-ripple-pressed-color: var(--_selected-pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_selected-pressed-state-layer-opacity)}input{appearance:none;height:48px;margin:0;position:absolute;width:48px;cursor:inherit}:host([touch-target=none]) input{width:100%;height:100%}md-ripple{border-radius:50%;height:var(--_state-layer-size);inset:unset;width:var(--_state-layer-size)}.icon{fill:var(--_icon-color);inset:0;position:absolute}.outer.circle{transition:fill 50ms linear}.inner.circle{opacity:0;transform-origin:center;transition:opacity 50ms linear}.checked .icon{fill:var(--_selected-icon-color)}.checked .inner.circle{animation:inner-circle-grow 300ms cubic-bezier(0.05, 0.7, 0.1, 1);opacity:1}@keyframes inner-circle-grow{from{transform:scale(0)}to{transform:scale(1)}}:host([disabled]) .circle{animation-duration:0s;transition-duration:0s}:host(:hover) .icon{fill:var(--_hover-icon-color)}:host(:focus-within) .icon{fill:var(--_focus-icon-color)}:host(:active) .icon{fill:var(--_pressed-icon-color)}:host([disabled]) .icon{fill:var(--_disabled-unselected-icon-color);opacity:var(--_disabled-unselected-icon-opacity)}:host(:hover) .checked .icon{fill:var(--_selected-hover-icon-color)}:host(:focus-within) .checked .icon{fill:var(--_selected-focus-icon-color)}:host(:active) .checked .icon{fill:var(--_selected-pressed-icon-color)}:host([disabled]) .checked .icon{fill:var(--_disabled-selected-icon-color);opacity:var(--_disabled-selected-icon-opacity)}}@layer hcm{@media(forced-colors: active){.icon{fill:CanvasText}:host([disabled]) .icon{fill:GrayText;opacity:1}}}/*# sourceMappingURL=radio-styles.css.map */
 `;
 //# sourceMappingURL=radio-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/radio/radio.js
@@ -9132,7 +10028,6 @@ const radio_styles_css_styles = i `:host{--_disabled-selected-icon-color: var(--
  * Copyright 2022 Google LLC
  * SPDX-License-Identifier: Apache-2.0
  */
-
 
 
 
@@ -9155,425 +10050,11 @@ const radio_styles_css_styles = i `:host{--_disabled-selected-icon-color: var(--
  */
 let MdRadio = class MdRadio extends Radio {
 };
-MdRadio.styles = [radio_styles_css_styles, radio_internal_forced_colors_styles_css_styles];
+MdRadio.styles = [radio_styles_css_styles];
 MdRadio = __decorate([
     t('md-radio')
 ], MdRadio);
 //# sourceMappingURL=radio.js.map
-;// CONCATENATED MODULE: ./node_modules/@material/web/select/internal/filled-forced-colors-styles.css.js
-/**
-  * @license
-  * Copyright 2022 Google LLC
-  * SPDX-License-Identifier: Apache-2.0
-  */
-
-const filled_forced_colors_styles_css_styles = i `@media(forced-colors: active){:host{--md-filled-select-text-field-disabled-active-indicator-color: GrayText;--md-filled-select-text-field-disabled-active-indicator-opacity: 1;--md-filled-select-text-field-disabled-input-text-color: GrayText;--md-filled-select-text-field-disabled-input-text-opacity: 1;--md-filled-select-text-field-disabled-label-text-color: GrayText;--md-filled-select-text-field-disabled-label-text-opacity: 1;--md-filled-select-text-field-disabled-leading-icon-color: GrayText;--md-filled-select-text-field-disabled-leading-icon-opacity: 1;--md-filled-select-text-field-disabled-supporting-text-color: GrayText;--md-filled-select-text-field-disabled-supporting-text-opacity: 1;--md-filled-select-text-field-disabled-trailing-icon-color: GrayText;--md-filled-select-text-field-disabled-trailing-icon-opacity: 1}}/*# sourceMappingURL=filled-forced-colors-styles.css.map */
-`;
-//# sourceMappingURL=filled-forced-colors-styles.css.js.map
-;// CONCATENATED MODULE: ./node_modules/@material/web/field/internal/field.js
-/**
- * @license
- * Copyright 2021 Google LLC
- * SPDX-License-Identifier: Apache-2.0
- */
-
-
-
-
-
-/**
- * A field component.
- */
-class Field extends lit_element_s {
-    constructor() {
-        super(...arguments);
-        this.disabled = false;
-        this.error = false;
-        this.focused = false;
-        this.label = '';
-        this.populated = false;
-        this.required = false;
-        this.resizable = false;
-        this.supportingText = '';
-        this.errorText = '';
-        this.count = -1;
-        this.max = -1;
-        /**
-         * Whether or not the field has leading content.
-         */
-        this.hasStart = false;
-        /**
-         * Whether or not the field has trailing content.
-         */
-        this.hasEnd = false;
-        this.isAnimating = false;
-        /**
-         * When set to true, the error text's `role="alert"` will be removed, then
-         * re-added after an animation frame. This will re-announce an error message
-         * to screen readers.
-         */
-        this.refreshErrorAlert = false;
-        this.disableTransitions = false;
-    }
-    get counterText() {
-        if (this.count < 0 || this.max < 0) {
-            return '';
-        }
-        return `${this.count} / ${this.max}`;
-    }
-    get supportingOrErrorText() {
-        return this.error && this.errorText ? this.errorText : this.supportingText;
-    }
-    /**
-     * Re-announces the field's error supporting text to screen readers.
-     *
-     * Error text announces to screen readers anytime it is visible and changes.
-     * Use the method to re-announce the message when the text has not changed,
-     * but announcement is still needed (such as for `reportValidity()`).
-     */
-    reannounceError() {
-        this.refreshErrorAlert = true;
-    }
-    update(props) {
-        // Client-side property updates
-        const isDisabledChanging = props.has('disabled') && props.get('disabled') !== undefined;
-        if (isDisabledChanging) {
-            this.disableTransitions = true;
-        }
-        // When disabling, remove focus styles if focused.
-        if (this.disabled && this.focused) {
-            props.set('focused', true);
-            this.focused = false;
-        }
-        // Animate if focused or populated change.
-        this.animateLabelIfNeeded({
-            wasFocused: props.get('focused'),
-            wasPopulated: props.get('populated')
-        });
-        super.update(props);
-    }
-    render() {
-        const floatingLabel = this.renderLabel(/*isFloating*/ true);
-        const restingLabel = this.renderLabel(/*isFloating*/ false);
-        const outline = this.renderOutline?.(floatingLabel);
-        const classes = {
-            'disabled': this.disabled,
-            'disable-transitions': this.disableTransitions,
-            'error': this.error && !this.disabled,
-            'focused': this.focused,
-            'with-start': this.hasStart,
-            'with-end': this.hasEnd,
-            'populated': this.populated,
-            'resizable': this.resizable,
-            'required': this.required,
-            'no-label': !this.label,
-        };
-        return x `
-      <div class="field ${class_map_e(classes)}">
-        <div class="container-overflow">
-          ${this.renderBackground?.()}
-          ${this.renderIndicator?.()}
-          ${outline}
-          <div class="container">
-            <div class="start">
-              <slot name="start"></slot>
-            </div>
-            <div class="middle">
-              <div class="label-wrapper">
-                ${restingLabel}
-                ${outline ? T : floatingLabel}
-              </div>
-              <div class="content">
-                <slot></slot>
-              </div>
-            </div>
-            <div class="end">
-              <slot name="end"></slot>
-            </div>
-          </div>
-        </div>
-        ${this.renderSupportingText()}
-      </div>
-    `;
-    }
-    updated(changed) {
-        if (changed.has('supportingText') || changed.has('errorText') ||
-            changed.has('count') || changed.has('max')) {
-            this.updateSlottedAriaDescribedBy();
-        }
-        if (this.refreshErrorAlert) {
-            // The past render cycle removed the role="alert" from the error message.
-            // Re-add it after an animation frame to re-announce the error.
-            requestAnimationFrame(() => {
-                this.refreshErrorAlert = false;
-            });
-        }
-        if (this.disableTransitions) {
-            requestAnimationFrame(() => {
-                this.disableTransitions = false;
-            });
-        }
-    }
-    renderSupportingText() {
-        const { supportingOrErrorText, counterText } = this;
-        if (!supportingOrErrorText && !counterText) {
-            return T;
-        }
-        // Always render the supporting text span so that our `space-around`
-        // container puts the counter at the end.
-        const start = x `<span>${supportingOrErrorText}</span>`;
-        // Conditionally render counter so we don't render the extra `gap`.
-        // TODO(b/244473435): add aria-label and announcements
-        const end = counterText ?
-            x `<span class="counter">${counterText}</span>` :
-            T;
-        // Announce if there is an error and error text visible.
-        // If refreshErrorAlert is true, do not announce. This will remove the
-        // role="alert" attribute. Another render cycle will happen after an
-        // animation frame to re-add the role.
-        const shouldErrorAnnounce = this.error && this.errorText && !this.refreshErrorAlert;
-        const role = shouldErrorAnnounce ? 'alert' : T;
-        return x `
-      <div class="supporting-text" role=${role}>${start}${end}</div>
-      <slot name="aria-describedby" @slotchange=${this.updateSlottedAriaDescribedBy}></slot>
-    `;
-    }
-    updateSlottedAriaDescribedBy() {
-        for (const element of this.slottedAriaDescribedBy) {
-            j(x `${this.supportingOrErrorText} ${this.counterText}`, element);
-            element.setAttribute('hidden', '');
-        }
-    }
-    renderLabel(isFloating) {
-        if (!this.label) {
-            return T;
-        }
-        let visible;
-        if (isFloating) {
-            // Floating label is visible when focused/populated or when animating.
-            visible = this.focused || this.populated || this.isAnimating;
-        }
-        else {
-            // Resting label is visible when unfocused. It is never visible while
-            // animating.
-            visible = !this.focused && !this.populated && !this.isAnimating;
-        }
-        const classes = {
-            'hidden': !visible,
-            'floating': isFloating,
-            'resting': !isFloating,
-        };
-        // Add '*' if a label is present and the field is required
-        const labelText = `${this.label}${this.required ? '*' : ''}`;
-        return x `
-      <span class="label ${class_map_e(classes)}"
-        aria-hidden=${!visible}
-      >${labelText}</span>
-    `;
-    }
-    animateLabelIfNeeded({ wasFocused, wasPopulated }) {
-        if (!this.label) {
-            return;
-        }
-        wasFocused ?? (wasFocused = this.focused);
-        wasPopulated ?? (wasPopulated = this.populated);
-        const wasFloating = wasFocused || wasPopulated;
-        const shouldBeFloating = this.focused || this.populated;
-        if (wasFloating === shouldBeFloating) {
-            return;
-        }
-        this.isAnimating = true;
-        this.labelAnimation?.cancel();
-        // Only one label is visible at a time for clearer text rendering.
-        // The floating label is visible and used during animation. At the end of
-        // the animation, it will either remain visible (if floating) or hide and
-        // the resting label will be shown.
-        //
-        // We don't use forward filling because if the dimensions of the text field
-        // change (leading icon removed, density changes, etc), then the animation
-        // will be inaccurate.
-        //
-        // Re-calculating the animation each time will prevent any visual glitches
-        // from appearing.
-        // TODO(b/241113345): use animation tokens
-        this.labelAnimation = this.floatingLabelEl?.animate(this.getLabelKeyframes(), { duration: 150, easing: EASING.STANDARD });
-        this.labelAnimation?.addEventListener('finish', () => {
-            // At the end of the animation, update the visible label.
-            this.isAnimating = false;
-        });
-    }
-    getLabelKeyframes() {
-        const { floatingLabelEl, restingLabelEl } = this;
-        if (!floatingLabelEl || !restingLabelEl) {
-            return [];
-        }
-        const { x: floatingX, y: floatingY, height: floatingHeight } = floatingLabelEl.getBoundingClientRect();
-        const { x: restingX, y: restingY, height: restingHeight } = restingLabelEl.getBoundingClientRect();
-        const floatingScrollWidth = floatingLabelEl.scrollWidth;
-        const restingScrollWidth = restingLabelEl.scrollWidth;
-        // Scale by width ratio instead of font size since letter-spacing will scale
-        // incorrectly. Using the width we can better approximate the adjusted
-        // scale and compensate for tracking and overflow.
-        // (use scrollWidth instead of width to account for clipped labels)
-        const scale = restingScrollWidth / floatingScrollWidth;
-        const xDelta = restingX - floatingX;
-        // The line-height of the resting and floating label are different. When
-        // we move the floating label down to the resting label's position, it won't
-        // exactly match because of this. We need to adjust by half of what the
-        // final scaled floating label's height will be.
-        const yDelta = restingY - floatingY +
-            Math.round((restingHeight - floatingHeight * scale) / 2);
-        // Create the two transforms: floating to resting (using the calculations
-        // above), and resting to floating (re-setting the transform to initial
-        // values).
-        const restTransform = `translateX(${xDelta}px) translateY(${yDelta}px) scale(${scale})`;
-        const floatTransform = `translateX(0) translateY(0) scale(1)`;
-        // Constrain the floating labels width to a scaled percentage of the
-        // resting label's width. This will prevent long clipped labels from
-        // overflowing the container.
-        const restingClientWidth = restingLabelEl.clientWidth;
-        const isRestingClipped = restingScrollWidth > restingClientWidth;
-        const width = isRestingClipped ? `${restingClientWidth / scale}px` : '';
-        if (this.focused || this.populated) {
-            return [
-                { transform: restTransform, width }, { transform: floatTransform, width }
-            ];
-        }
-        return [
-            { transform: floatTransform, width }, { transform: restTransform, width }
-        ];
-    }
-    getSurfacePositionClientRect() {
-        return this.containerEl.getBoundingClientRect();
-    }
-}
-__decorate([
-    property_n({ type: Boolean })
-], Field.prototype, "disabled", void 0);
-__decorate([
-    property_n({ type: Boolean })
-], Field.prototype, "error", void 0);
-__decorate([
-    property_n({ type: Boolean })
-], Field.prototype, "focused", void 0);
-__decorate([
-    property_n()
-], Field.prototype, "label", void 0);
-__decorate([
-    property_n({ type: Boolean })
-], Field.prototype, "populated", void 0);
-__decorate([
-    property_n({ type: Boolean })
-], Field.prototype, "required", void 0);
-__decorate([
-    property_n({ type: Boolean })
-], Field.prototype, "resizable", void 0);
-__decorate([
-    property_n({ attribute: 'supporting-text' })
-], Field.prototype, "supportingText", void 0);
-__decorate([
-    property_n({ attribute: 'error-text' })
-], Field.prototype, "errorText", void 0);
-__decorate([
-    property_n({ type: Number })
-], Field.prototype, "count", void 0);
-__decorate([
-    property_n({ type: Number })
-], Field.prototype, "max", void 0);
-__decorate([
-    property_n({ type: Boolean, attribute: 'has-start' })
-], Field.prototype, "hasStart", void 0);
-__decorate([
-    property_n({ type: Boolean, attribute: 'has-end' })
-], Field.prototype, "hasEnd", void 0);
-__decorate([
-    query_assigned_elements_o({ slot: 'aria-describedby' })
-], Field.prototype, "slottedAriaDescribedBy", void 0);
-__decorate([
-    state_r()
-], Field.prototype, "isAnimating", void 0);
-__decorate([
-    state_r()
-], Field.prototype, "refreshErrorAlert", void 0);
-__decorate([
-    state_r()
-], Field.prototype, "disableTransitions", void 0);
-__decorate([
-    query_e('.label.floating')
-], Field.prototype, "floatingLabelEl", void 0);
-__decorate([
-    query_e('.label.resting')
-], Field.prototype, "restingLabelEl", void 0);
-__decorate([
-    query_e('.container')
-], Field.prototype, "containerEl", void 0);
-//# sourceMappingURL=field.js.map
-;// CONCATENATED MODULE: ./node_modules/@material/web/field/internal/filled-field.js
-/**
- * @license
- * Copyright 2021 Google LLC
- * SPDX-License-Identifier: Apache-2.0
- */
-
-
-/**
- * A filled field component.
- */
-class FilledField extends Field {
-    renderBackground() {
-        return x `
-      <div class="background"></div>
-      <div class="state-layer"></div>
-    `;
-    }
-    renderIndicator() {
-        return x `<div class="active-indicator"></div>`;
-    }
-}
-//# sourceMappingURL=filled-field.js.map
-;// CONCATENATED MODULE: ./node_modules/@material/web/field/internal/filled-styles.css.js
-/**
-  * @license
-  * Copyright 2022 Google LLC
-  * SPDX-License-Identifier: Apache-2.0
-  */
-
-const field_internal_filled_styles_css_styles = i `:host{--_active-indicator-color: var(--md-filled-field-active-indicator-color, var(--md-sys-color-on-surface-variant, #49454f));--_active-indicator-height: var(--md-filled-field-active-indicator-height, 1px);--_bottom-space: var(--md-filled-field-bottom-space, 16px);--_container-color: var(--md-filled-field-container-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_container-shape-start-start: var( --md-filled-field-container-shape-start-start, var(--md-filled-field-container-shape, 4px) );--_container-shape-start-end: var( --md-filled-field-container-shape-start-end, var(--md-filled-field-container-shape, 4px) );--_container-shape-end-end: var( --md-filled-field-container-shape-end-end, var(--md-filled-field-container-shape, 0px) );--_container-shape-end-start: var( --md-filled-field-container-shape-end-start, var(--md-filled-field-container-shape, 0px) );--_content-color: var(--md-filled-field-content-color, var(--md-sys-color-on-surface, #1d1b20));--_content-font: var(--md-filled-field-content-font, var(--md-sys-typescale-body-large-font, var(--md-ref-typeface-plain, Roboto)));--_content-line-height: var(--md-filled-field-content-line-height, var(--md-sys-typescale-body-large-line-height, 1.5rem));--_content-size: var(--md-filled-field-content-size, var(--md-sys-typescale-body-large-size, 1rem));--_content-weight: var(--md-filled-field-content-weight, var(--md-sys-typescale-body-large-weight, var(--md-ref-typeface-weight-regular, 400)));--_disabled-active-indicator-color: var(--md-filled-field-disabled-active-indicator-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-active-indicator-height: var(--md-filled-field-disabled-active-indicator-height, 1px);--_disabled-active-indicator-opacity: var(--md-filled-field-disabled-active-indicator-opacity, 0.38);--_disabled-container-color: var(--md-filled-field-disabled-container-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-container-opacity: var(--md-filled-field-disabled-container-opacity, 0.04);--_disabled-content-color: var(--md-filled-field-disabled-content-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-content-opacity: var(--md-filled-field-disabled-content-opacity, 0.38);--_disabled-label-text-color: var(--md-filled-field-disabled-label-text-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-label-text-opacity: var(--md-filled-field-disabled-label-text-opacity, 0.38);--_disabled-leading-content-color: var(--md-filled-field-disabled-leading-content-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-leading-content-opacity: var(--md-filled-field-disabled-leading-content-opacity, 0.38);--_disabled-supporting-text-color: var(--md-filled-field-disabled-supporting-text-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-supporting-text-opacity: var(--md-filled-field-disabled-supporting-text-opacity, 0.38);--_disabled-trailing-content-color: var(--md-filled-field-disabled-trailing-content-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-trailing-content-opacity: var(--md-filled-field-disabled-trailing-content-opacity, 0.38);--_error-active-indicator-color: var(--md-filled-field-error-active-indicator-color, var(--md-sys-color-error, #b3261e));--_error-content-color: var(--md-filled-field-error-content-color, var(--md-sys-color-on-surface, #1d1b20));--_error-focus-active-indicator-color: var(--md-filled-field-error-focus-active-indicator-color, var(--md-sys-color-error, #b3261e));--_error-focus-content-color: var(--md-filled-field-error-focus-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_error-focus-label-text-color: var(--md-filled-field-error-focus-label-text-color, var(--md-sys-color-error, #b3261e));--_error-focus-leading-content-color: var(--md-filled-field-error-focus-leading-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_error-focus-supporting-text-color: var(--md-filled-field-error-focus-supporting-text-color, var(--md-sys-color-error, #b3261e));--_error-focus-trailing-content-color: var(--md-filled-field-error-focus-trailing-content-color, var(--md-sys-color-error, #b3261e));--_error-hover-active-indicator-color: var(--md-filled-field-error-hover-active-indicator-color, var(--md-sys-color-on-error-container, #410e0b));--_error-hover-content-color: var(--md-filled-field-error-hover-content-color, var(--md-sys-color-on-surface, #1d1b20));--_error-hover-label-text-color: var(--md-filled-field-error-hover-label-text-color, var(--md-sys-color-on-error-container, #410e0b));--_error-hover-leading-content-color: var(--md-filled-field-error-hover-leading-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_error-hover-state-layer-color: var(--md-filled-field-error-hover-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--_error-hover-state-layer-opacity: var(--md-filled-field-error-hover-state-layer-opacity, 0.08);--_error-hover-supporting-text-color: var(--md-filled-field-error-hover-supporting-text-color, var(--md-sys-color-error, #b3261e));--_error-hover-trailing-content-color: var(--md-filled-field-error-hover-trailing-content-color, var(--md-sys-color-on-error-container, #410e0b));--_error-label-text-color: var(--md-filled-field-error-label-text-color, var(--md-sys-color-error, #b3261e));--_error-leading-content-color: var(--md-filled-field-error-leading-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_error-supporting-text-color: var(--md-filled-field-error-supporting-text-color, var(--md-sys-color-error, #b3261e));--_error-trailing-content-color: var(--md-filled-field-error-trailing-content-color, var(--md-sys-color-error, #b3261e));--_focus-active-indicator-color: var(--md-filled-field-focus-active-indicator-color, var(--md-sys-color-primary, #6750a4));--_focus-active-indicator-height: var(--md-filled-field-focus-active-indicator-height, 3px);--_focus-content-color: var(--md-filled-field-focus-content-color, var(--md-sys-color-on-surface, #1d1b20));--_focus-label-text-color: var(--md-filled-field-focus-label-text-color, var(--md-sys-color-primary, #6750a4));--_focus-leading-content-color: var(--md-filled-field-focus-leading-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_focus-supporting-text-color: var(--md-filled-field-focus-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_focus-trailing-content-color: var(--md-filled-field-focus-trailing-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-active-indicator-color: var(--md-filled-field-hover-active-indicator-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-active-indicator-height: var(--md-filled-field-hover-active-indicator-height, 1px);--_hover-content-color: var(--md-filled-field-hover-content-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-label-text-color: var(--md-filled-field-hover-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-leading-content-color: var(--md-filled-field-hover-leading-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-state-layer-color: var(--md-filled-field-hover-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-state-layer-opacity: var(--md-filled-field-hover-state-layer-opacity, 0.08);--_hover-supporting-text-color: var(--md-filled-field-hover-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-trailing-content-color: var(--md-filled-field-hover-trailing-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_label-text-color: var(--md-filled-field-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_label-text-font: var(--md-filled-field-label-text-font, var(--md-sys-typescale-body-large-font, var(--md-ref-typeface-plain, Roboto)));--_label-text-line-height: var(--md-filled-field-label-text-line-height, var(--md-sys-typescale-body-large-line-height, 1.5rem));--_label-text-populated-line-height: var(--md-filled-field-label-text-populated-line-height, var(--md-sys-typescale-body-small-line-height, 1rem));--_label-text-populated-size: var(--md-filled-field-label-text-populated-size, var(--md-sys-typescale-body-small-size, 0.75rem));--_label-text-size: var(--md-filled-field-label-text-size, var(--md-sys-typescale-body-large-size, 1rem));--_label-text-weight: var(--md-filled-field-label-text-weight, var(--md-sys-typescale-body-large-weight, var(--md-ref-typeface-weight-regular, 400)));--_leading-content-color: var(--md-filled-field-leading-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_leading-space: var(--md-filled-field-leading-space, 16px);--_supporting-text-color: var(--md-filled-field-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_supporting-text-font: var(--md-filled-field-supporting-text-font, var(--md-sys-typescale-body-small-font, var(--md-ref-typeface-plain, Roboto)));--_supporting-text-leading-space: var(--md-filled-field-supporting-text-leading-space, 16px);--_supporting-text-line-height: var(--md-filled-field-supporting-text-line-height, var(--md-sys-typescale-body-small-line-height, 1rem));--_supporting-text-size: var(--md-filled-field-supporting-text-size, var(--md-sys-typescale-body-small-size, 0.75rem));--_supporting-text-top-space: var(--md-filled-field-supporting-text-top-space, 4px);--_supporting-text-trailing-space: var(--md-filled-field-supporting-text-trailing-space, 16px);--_supporting-text-weight: var(--md-filled-field-supporting-text-weight, var(--md-sys-typescale-body-small-weight, var(--md-ref-typeface-weight-regular, 400)));--_top-space: var(--md-filled-field-top-space, 16px);--_trailing-content-color: var(--md-filled-field-trailing-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_trailing-space: var(--md-filled-field-trailing-space, 16px);--_with-label-bottom-space: var(--md-filled-field-with-label-bottom-space, 8px);--_with-label-top-space: var(--md-filled-field-with-label-top-space, 8px)}.background,.state-layer{border-radius:inherit;inset:0;pointer-events:none;position:absolute}.background{background:var(--_container-color)}.state-layer{visibility:hidden}.field:not(.disabled):hover .state-layer{visibility:visible}.label.floating{position:absolute;top:var(--_with-label-top-space)}.field:not(.with-start) .label-wrapper{margin-inline-start:var(--_leading-space)}.field:not(.with-end) .label-wrapper{margin-inline-end:var(--_trailing-space)}.active-indicator{inset:auto 0 0 0;pointer-events:none;position:absolute;width:100%}.active-indicator::before,.active-indicator::after{border-bottom:var(--_active-indicator-height) solid var(--_active-indicator-color);inset:auto 0 0 0;content:"";position:absolute;width:100%}.active-indicator::after{opacity:0;transition:opacity 150ms cubic-bezier(0.2, 0, 0, 1)}.focused .active-indicator::after{opacity:1}.field:not(.with-start) .content ::slotted(*){padding-inline-start:var(--_leading-space)}.field:not(.with-end) .content ::slotted(*){padding-inline-end:var(--_trailing-space)}.field:not(.no-label) .content ::slotted(:not(textarea)){padding-bottom:var(--_with-label-bottom-space);padding-top:calc(var(--_with-label-top-space) + var(--_label-text-populated-line-height))}.field:not(.no-label) .content ::slotted(textarea){margin-bottom:var(--_with-label-bottom-space);margin-top:calc(var(--_with-label-top-space) + var(--_label-text-populated-line-height))}:hover .active-indicator::before{border-bottom-color:var(--_hover-active-indicator-color);border-bottom-width:var(--_hover-active-indicator-height)}.active-indicator::after{border-bottom-color:var(--_focus-active-indicator-color);border-bottom-width:var(--_focus-active-indicator-height)}:hover .state-layer{background:var(--_hover-state-layer-color);opacity:var(--_hover-state-layer-opacity)}.disabled .active-indicator::before{border-bottom-color:var(--_disabled-active-indicator-color);border-bottom-width:var(--_disabled-active-indicator-height);opacity:var(--_disabled-active-indicator-opacity)}.disabled .background{background:var(--_disabled-container-color);opacity:var(--_disabled-container-opacity)}.error .active-indicator::before{border-bottom-color:var(--_error-active-indicator-color)}.error:hover .active-indicator::before{border-bottom-color:var(--_error-hover-active-indicator-color)}.error:hover .state-layer{background:var(--_error-hover-state-layer-color);opacity:var(--_error-hover-state-layer-opacity)}.error .active-indicator::after{border-bottom-color:var(--_error-focus-active-indicator-color)}.resizable .container{bottom:var(--_focus-active-indicator-height);clip-path:inset(var(--_focus-active-indicator-height) 0 0 0)}.resizable .container>*{top:var(--_focus-active-indicator-height)}/*# sourceMappingURL=filled-styles.css.map */
-`;
-//# sourceMappingURL=filled-styles.css.js.map
-;// CONCATENATED MODULE: ./node_modules/@material/web/field/internal/shared-styles.css.js
-/**
-  * @license
-  * Copyright 2022 Google LLC
-  * SPDX-License-Identifier: Apache-2.0
-  */
-
-const field_internal_shared_styles_css_styles = i `:host{display:inline-flex;resize:both}.field{display:flex;flex:1;flex-direction:column;writing-mode:horizontal-tb;max-width:100%}.container-overflow{border-start-start-radius:var(--_container-shape-start-start);border-start-end-radius:var(--_container-shape-start-end);border-end-end-radius:var(--_container-shape-end-end);border-end-start-radius:var(--_container-shape-end-start);display:flex;height:100%;position:relative}.container{align-items:center;border-radius:inherit;display:flex;flex:1;max-height:100%;min-height:100%;min-width:min-content;position:relative}.field,.container-overflow{resize:inherit}.resizable:not(.disabled) .container{resize:inherit;overflow:hidden}.disabled{pointer-events:none}.start,.middle,.end{display:flex;box-sizing:border-box;height:100%;position:relative}.start{color:var(--_leading-content-color)}.end{color:var(--_trailing-content-color)}.start,.end{align-items:center;justify-content:center}.with-start .start,.with-end .end{min-width:48px}.with-start .start{margin-inline-end:4px}.with-end .end{margin-inline-start:4px}.middle{align-items:stretch;align-self:baseline;flex:1}.content{color:var(--_content-color);display:flex;flex:1;opacity:0;transition:opacity 83ms cubic-bezier(0.2, 0, 0, 1)}.no-label .content,.focused .content,.populated .content{opacity:1;transition-delay:67ms}:is(.disabled,.disable-transitions) .content{transition:none}.content ::slotted(*){all:unset;color:currentColor;font-family:var(--_content-font);font-size:var(--_content-size);line-height:var(--_content-line-height);font-weight:var(--_content-weight);width:100%;white-space:pre-wrap}.content ::slotted(:not(textarea)){padding-top:var(--_top-space);padding-bottom:var(--_bottom-space)}.content ::slotted(textarea){margin-top:var(--_top-space);margin-bottom:var(--_bottom-space)}:hover .content{color:var(--_hover-content-color)}:hover .start{color:var(--_hover-leading-content-color)}:hover .end{color:var(--_hover-trailing-content-color)}.focused .content{color:var(--_focus-content-color)}.focused .start{color:var(--_focus-leading-content-color)}.focused .end{color:var(--_focus-trailing-content-color)}.disabled .content{color:var(--_disabled-content-color)}.disabled.no-label .content,.disabled.focused .content,.disabled.populated .content{opacity:var(--_disabled-content-opacity)}.disabled .start{color:var(--_disabled-leading-content-color);opacity:var(--_disabled-leading-content-opacity)}.disabled .end{color:var(--_disabled-trailing-content-color);opacity:var(--_disabled-trailing-content-opacity)}.error .content{color:var(--_error-content-color)}.error .start{color:var(--_error-leading-content-color)}.error .end{color:var(--_error-trailing-content-color)}.error:hover .content{color:var(--_error-hover-content-color)}.error:hover .start{color:var(--_error-hover-leading-content-color)}.error:hover .end{color:var(--_error-hover-trailing-content-color)}.error.focused .content{color:var(--_error-focus-content-color)}.error.focused .start{color:var(--_error-focus-leading-content-color)}.error.focused .end{color:var(--_error-focus-trailing-content-color)}.label{box-sizing:border-box;color:var(--_label-text-color);overflow:hidden;max-width:100%;text-overflow:ellipsis;white-space:nowrap;z-index:1;font-family:var(--_label-text-font);font-size:var(--_label-text-size);line-height:var(--_label-text-line-height);font-weight:var(--_label-text-weight);width:min-content}.label-wrapper{inset:0;pointer-events:none;position:absolute}.label.resting{position:absolute;top:var(--_top-space)}.label.floating{font-size:var(--_label-text-populated-size);line-height:var(--_label-text-populated-line-height);transform-origin:top left}.label.hidden{opacity:0}.no-label .label{display:none}.label-wrapper{inset:0;position:absolute;text-align:initial}:hover .label{color:var(--_hover-label-text-color)}.focused .label{color:var(--_focus-label-text-color)}.disabled .label{color:var(--_disabled-label-text-color)}.disabled .label:not(.hidden){opacity:var(--_disabled-label-text-opacity)}.error .label{color:var(--_error-label-text-color)}.error:hover .label{color:var(--_error-hover-label-text-color)}.error.focused .label{color:var(--_error-focus-label-text-color)}.supporting-text{color:var(--_supporting-text-color);display:flex;font-family:var(--_supporting-text-font);font-size:var(--_supporting-text-size);line-height:var(--_supporting-text-line-height);font-weight:var(--_supporting-text-weight);gap:16px;justify-content:space-between;padding-inline-start:var(--_supporting-text-leading-space);padding-inline-end:var(--_supporting-text-trailing-space);padding-top:var(--_supporting-text-top-space)}.supporting-text :nth-child(2){flex-shrink:0}:hover .supporting-text{color:var(--_hover-supporting-text-color)}.focus .supporting-text{color:var(--_focus-supporting-text-color)}.disabled .supporting-text{color:var(--_disabled-supporting-text-color);opacity:var(--_disabled-supporting-text-opacity)}.error .supporting-text{color:var(--_error-supporting-text-color)}.error:hover .supporting-text{color:var(--_error-hover-supporting-text-color)}.error.focus .supporting-text{color:var(--_error-focus-supporting-text-color)}/*# sourceMappingURL=shared-styles.css.map */
-`;
-//# sourceMappingURL=shared-styles.css.js.map
-;// CONCATENATED MODULE: ./node_modules/@material/web/field/filled-field.js
-/**
- * @license
- * Copyright 2021 Google LLC
- * SPDX-License-Identifier: Apache-2.0
- */
-
-
-
-
-
-/**
- * TODO(b/228525797): add docs
- * @final
- * @suppress {visibility}
- */
-let MdFilledField = class MdFilledField extends FilledField {
-};
-MdFilledField.styles = [field_internal_shared_styles_css_styles, field_internal_filled_styles_css_styles];
-MdFilledField = __decorate([
-    t('md-filled-field')
-], MdFilledField);
-//# sourceMappingURL=filled-field.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/select/internal/shared.js
 /**
  * @license
@@ -9618,20 +10099,26 @@ var select_a;
 
 
 
+
+
 const VALUE = Symbol('value');
+// Separate variable needed for closure.
+const selectBaseClass = mixinFormAssociated(mixinElementInternals(lit_element_s));
 /**
- * @fires input Fired when a selection is made by the user via mouse or keyboard
- * interaction.
- * @fires change Fired when a selection is made by the user via mouse or
- * keyboard interaction.
- * @fires opening Fired when the select's menu is about to open.
- * @fires opened Fired when the select's menu has finished animations and
- * opened.
- * @fires closing Fired when the select's menu is about to close.
- * @fires closed Fired when the select's menu has finished animations and
- * closed.
+ * @fires change {Event} The native `change` event on
+ * [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event)
+ * --bubbles
+ * @fires input {InputEvent} The native `input` event on
+ * [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event)
+ * --bubbles --composed
+ * @fires opening {Event} Fired when the select's menu is about to open.
+ * @fires opened {Event} Fired when the select's menu has finished animations
+ * and opened.
+ * @fires closing {Event} Fired when the select's menu is about to close.
+ * @fires closed {Event} Fired when the select's menu has finished animations
+ * and closed.
  */
-class Select extends lit_element_s {
+class Select extends selectBaseClass {
     constructor() {
         super(...arguments);
         /**
@@ -9642,10 +10129,6 @@ class Select extends lit_element_s {
          * Whether or not the select is required.
          */
         this.required = false;
-        /**
-         * Disables the select.
-         */
-        this.disabled = false;
         /**
          * The error message that replaces supporting text when `error` is true. If
          * `errorText` is an empty string, then the supporting text will continue to
@@ -9678,7 +10161,7 @@ class Select extends lit_element_s {
          * position:fixed is useful for cases where select is inside of another
          * element with stacking context and hidden overflows such as `md-dialog`.
          */
-        this.menuPositioning = 'absolute';
+        this.menuPositioning = 'popover';
         /**
          * The max time between the keystrokes of the typeahead select / menu behavior
          * before it clears the typeahead buffer.
@@ -9719,8 +10202,15 @@ class Select extends lit_element_s {
         this.nativeErrorText = '';
         this.focused = false;
         this.open = false;
+        this.isCheckingValidity = false;
+        this.isReportingValidity = false;
         this.customValidationMessage = '';
-        this.internals = this /* needed for closure */.attachInternals();
+        this.onInvalid = (invalidEvent) => {
+            if (this.isCheckingValidity || this.isReportingValidity) {
+                return;
+            }
+            this.showErrorMessage(false, invalidEvent);
+        };
     }
     /**
      * The value of the currently selected option.
@@ -9766,27 +10256,6 @@ class Select extends lit_element_s {
         return (this.getSelectedOptions() ?? []).map(([option]) => option);
     }
     /**
-     * The HTML name to use in form submission.
-     */
-    get name() {
-        return this.getAttribute('name') ?? '';
-    }
-    set name(name) {
-        this.setAttribute('name', name);
-    }
-    /**
-     * The associated form element with which this element's value will submit.
-     */
-    get form() {
-        return this.internals.form;
-    }
-    /**
-     * The labels this element is associated with.
-     */
-    get labels() {
-        return this.internals.labels;
-    }
-    /**
      * Returns a ValidityState object that represents the validity states of the
      * checkbox.
      *
@@ -9795,7 +10264,7 @@ class Select extends lit_element_s {
      */
     get validity() {
         this.syncValidity();
-        return this.internals.validity;
+        return this[internals].validity;
     }
     /**
      * Returns the native validation error message.
@@ -9804,7 +10273,7 @@ class Select extends lit_element_s {
      */
     get validationMessage() {
         this.syncValidity();
-        return this.internals.validationMessage;
+        return this[internals].validationMessage;
     }
     /**
      * Returns whether an element will successfully validate based on forms
@@ -9814,7 +10283,7 @@ class Select extends lit_element_s {
      */
     get willValidate() {
         this.syncValidity();
-        return this.internals.willValidate;
+        return this[internals].willValidate;
     }
     get hasError() {
         return this.error || this.nativeError;
@@ -9824,7 +10293,7 @@ class Select extends lit_element_s {
      * value.
      */
     select(value) {
-        const optionToSelect = this.options.find(option => option.value === value);
+        const optionToSelect = this.options.find((option) => option.value === value);
         if (optionToSelect) {
             this.selectItem(optionToSelect);
         }
@@ -9861,8 +10330,11 @@ class Select extends lit_element_s {
      * @return true if the select is valid, or false if not.
      */
     checkValidity() {
+        this.isCheckingValidity = true;
         this.syncValidity();
-        return this.internals.checkValidity();
+        const isValid = this[internals].checkValidity();
+        this.isCheckingValidity = false;
+        return isValid;
     }
     /**
      * Checks the select's native validation and returns whether or not the
@@ -9881,11 +10353,17 @@ class Select extends lit_element_s {
      * @return true if the select is valid, or false if not.
      */
     reportValidity() {
+        this.isReportingValidity = true;
         let invalidEvent;
-        this.addEventListener('invalid', event => {
+        this.addEventListener('invalid', (event) => {
             invalidEvent = event;
         }, { once: true });
         const valid = this.checkValidity();
+        this.showErrorMessage(valid, invalidEvent);
+        this.isReportingValidity = false;
+        return valid;
+    }
+    showErrorMessage(valid, invalidEvent) {
         if (invalidEvent?.defaultPrevented) {
             return valid;
         }
@@ -9923,10 +10401,9 @@ class Select extends lit_element_s {
     render() {
         return x `
       <span
-          class="select ${class_map_e(this.getRenderClasses())}"
-          @focusout=${this.handleFocusout}>
-        ${this.renderField()}
-        ${this.renderMenu()}
+        class="select ${class_map_e(this.getRenderClasses())}"
+        @focusout=${this.handleFocusout}>
+        ${this.renderField()} ${this.renderMenu()}
       </span>
     `;
     }
@@ -9943,7 +10420,8 @@ class Select extends lit_element_s {
         }
         // Case for when the DOM is streaming, there are no children, and a child
         // has [selected] set on it, we need to wait for DOM to render something.
-        if (!this.lastSelectedOptionRecords.length && !is_server_o &&
+        if (!this.lastSelectedOptionRecords.length &&
+            !is_server_o &&
             !this.options.length) {
             setTimeout(() => {
                 this.updateValueAndDisplayText();
@@ -10000,21 +10478,29 @@ class Select extends lit_element_s {
     renderLeadingIcon() {
         return x `
       <span class="icon leading" slot="start">
-         <slot name="leading-icon" @slotchange=${this.handleIconChange}></slot>
+        <slot name="leading-icon" @slotchange=${this.handleIconChange}></slot>
       </span>
-     `;
+    `;
     }
     renderTrailingIcon() {
         return x `
       <span class="icon trailing" slot="end">
         <slot name="trailing-icon" @slotchange=${this.handleIconChange}>
           <svg height="5" viewBox="7 10 10 5" focusable="false">
-            <polygon class="down" stroke="none" fill-rule="evenodd" points="7 10 12 15 17 10"></polygon>
-            <polygon class="up" stroke="none" fill-rule="evenodd" points="7 15 12 10 17 15"></polygon>
+            <polygon
+              class="down"
+              stroke="none"
+              fill-rule="evenodd"
+              points="7 10 12 15 17 10"></polygon>
+            <polygon
+              class="up"
+              stroke="none"
+              fill-rule="evenodd"
+              points="7 15 12 10 17 15"></polygon>
           </svg>
         </slot>
       </span>
-     `;
+    `;
     }
     renderLabel() {
         // need to render &nbsp; so that line-height can apply and give it a
@@ -10023,30 +10509,29 @@ class Select extends lit_element_s {
     }
     renderMenu() {
         const ariaLabel = this.label || this.ariaLabel;
-        return x `
-      <md-menu
-          id="listbox"
-          default-focus="none"
-          role="listbox"
-          tabindex="-1"
-          aria-label=${ariaLabel || T}
-          stay-open-on-focusout
-          part="menu"
-          exportparts="focus-ring: menu-focus-ring"
-          anchor="field"
-          .open=${this.open}
-          .quick=${this.quick}
-          .positioning=${this.menuPositioning}
-          .typeaheadDelay=${this.typeaheadDelay}
-          @opening=${this.handleOpening}
-          @opened=${this.redispatchEvent}
-          @closing=${this.redispatchEvent}
-          @closed=${this.handleClosed}
-          @close-menu=${this.handleCloseMenu}
-          @request-selection=${this.handleRequestSelection}
-          @request-deselection=${this.handleRequestDeselection}>
-        ${this.renderMenuContent()}
-      </md-menu>`;
+        return x ` <md-menu
+      id="listbox"
+      default-focus="none"
+      role="listbox"
+      tabindex="-1"
+      aria-label=${ariaLabel || T}
+      stay-open-on-focusout
+      part="menu"
+      exportparts="focus-ring: menu-focus-ring"
+      anchor="field"
+      .open=${this.open}
+      .quick=${this.quick}
+      .positioning=${this.menuPositioning}
+      .typeaheadDelay=${this.typeaheadDelay}
+      @opening=${this.handleOpening}
+      @opened=${this.redispatchEvent}
+      @closing=${this.redispatchEvent}
+      @closed=${this.handleClosed}
+      @close-menu=${this.handleCloseMenu}
+      @request-selection=${this.handleRequestSelection}
+      @request-deselection=${this.handleRequestDeselection}>
+      ${this.renderMenuContent()}
+    </md-menu>`;
     }
     renderMenuContent() {
         return x `<slot></slot>`;
@@ -10060,7 +10545,8 @@ class Select extends lit_element_s {
             return;
         }
         const typeaheadController = this.menu.typeaheadController;
-        const isOpenKey = event.code === 'Space' || event.code === 'ArrowDown' ||
+        const isOpenKey = event.code === 'Space' ||
+            event.code === 'ArrowDown' ||
             event.code === 'Enter';
         // Do not open if currently typing ahead because the user may be typing the
         // spacebar to match a word with a space
@@ -10150,7 +10636,6 @@ class Select extends lit_element_s {
             this[VALUE] = '';
             this.displayText = '';
         }
-        this.internals.setFormValue(this.value);
         this.syncValidity();
         return hasSelectedOptionChanged;
     }
@@ -10284,8 +10769,9 @@ class Select extends lit_element_s {
         const valueMissing = this.required && !this.value;
         const customError = !!this.customValidationMessage;
         const validationMessage = this.customValidationMessage ||
-            valueMissing && this.getRequiredValidationMessage() || '';
-        this.internals.setValidity({ valueMissing, customError }, validationMessage);
+            (valueMissing && this.getRequiredValidationMessage()) ||
+            '';
+        this[internals].setValidity({ valueMissing, customError }, validationMessage, this.field ?? undefined);
     }
     // Returns the platform `<select>` validation message for i18n.
     getRequiredValidationMessage() {
@@ -10293,30 +10779,35 @@ class Select extends lit_element_s {
         select.required = true;
         return select.validationMessage;
     }
-    /** @private */
+    connectedCallback() {
+        super.connectedCallback();
+        // Handles the case where the user submits the form and native validation
+        // error pops up. We want the error styles to show.
+        this.addEventListener('invalid', this.onInvalid);
+    }
+    disconnectedCallback() {
+        super.disconnectedCallback();
+        this.removeEventListener('invalid', this.onInvalid);
+    }
+    [(select_a = VALUE, getFormValue)]() {
+        return this.value;
+    }
     formResetCallback() {
         this.reset();
     }
-    /** @private */
     formStateRestoreCallback(state) {
         this.value = state;
     }
 }
-select_a = VALUE;
 (() => {
     requestUpdateOnAriaChange(Select);
 })();
-/** @nocollapse  */
-Select.formAssociated = true;
 __decorate([
     property_n({ type: Boolean })
 ], Select.prototype, "quick", void 0);
 __decorate([
     property_n({ type: Boolean })
 ], Select.prototype, "required", void 0);
-__decorate([
-    property_n({ type: Boolean, reflect: true })
-], Select.prototype, "disabled", void 0);
 __decorate([
     property_n({ type: String, attribute: 'error-text' })
 ], Select.prototype, "errorText", void 0);
@@ -10406,7 +10897,7 @@ const filled_select_styles_css_styles = i `:host{--_text-field-active-indicator-
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const select_internal_shared_styles_css_styles = i `:host{color:unset;min-width:210px;display:flex}.field{cursor:default;outline:none}.select{position:relative;flex-direction:column}.icon.trailing svg,.icon ::slotted(*){fill:currentColor}.icon ::slotted(*){width:inherit;height:inherit;font-size:inherit}.icon slot{display:flex;height:100%;width:100%;align-items:center;justify-content:center}.icon.trailing :is(.up,.down){opacity:0;transition:opacity 75ms linear 75ms}.select:not(.open) .down,.select.open .up{opacity:1}.field,.select,md-menu{min-width:inherit;width:inherit;max-width:inherit;display:flex}.field,.select{width:100%}:host{display:inline-flex}:host([disabled]){pointer-events:none}/*# sourceMappingURL=shared-styles.css.map */
+const select_internal_shared_styles_css_styles = i `:host{color:unset;min-width:210px;display:flex}.field{cursor:default;outline:none}.select{position:relative;flex-direction:column}.icon.trailing svg,.icon ::slotted(*){fill:currentColor}.icon ::slotted(*){width:inherit;height:inherit;font-size:inherit}.icon slot{display:flex;height:100%;width:100%;align-items:center;justify-content:center}.icon.trailing :is(.up,.down){opacity:0;transition:opacity 75ms linear 75ms}.select:not(.open) .down,.select.open .up{opacity:1}.field,.select,md-menu{min-width:inherit;width:inherit;max-width:inherit;display:flex}md-menu ::slotted(:not[disabled]){cursor:pointer}.field,.select{width:100%}:host{display:inline-flex}:host([disabled]){pointer-events:none}/*# sourceMappingURL=shared-styles.css.map */
 `;
 //# sourceMappingURL=shared-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/select/filled-select.js
@@ -10415,7 +10906,6 @@ const select_internal_shared_styles_css_styles = i `:host{color:unset;min-width:
  * Copyright 2023 Google LLC
  * SPDX-License-Identifier: Apache-2.0
  */
-
 
 
 
@@ -10450,81 +10940,11 @@ const select_internal_shared_styles_css_styles = i `:host{color:unset;min-width:
  */
 let MdFilledSelect = class MdFilledSelect extends FilledSelect {
 };
-MdFilledSelect.styles = [select_internal_shared_styles_css_styles, filled_select_styles_css_styles, filled_forced_colors_styles_css_styles];
+MdFilledSelect.styles = [select_internal_shared_styles_css_styles, filled_select_styles_css_styles];
 MdFilledSelect = __decorate([
     t('md-filled-select')
 ], MdFilledSelect);
 //# sourceMappingURL=filled-select.js.map
-;// CONCATENATED MODULE: ./node_modules/@material/web/select/internal/outlined-forced-colors-styles.css.js
-/**
-  * @license
-  * Copyright 2022 Google LLC
-  * SPDX-License-Identifier: Apache-2.0
-  */
-
-const outlined_forced_colors_styles_css_styles = i `@media(forced-colors: active){:host{--md-outlined-select-text-field-disabled-input-text-color: GrayText;--md-outlined-select-text-field-disabled-input-text-opacity: 1;--md-outlined-select-text-field-disabled-label-text-color: GrayText;--md-outlined-select-text-field-disabled-label-text-opacity: 1;--md-outlined-select-text-field-disabled-leading-icon-color: GrayText;--md-outlined-select-text-field-disabled-leading-icon-opacity: 1;--md-outlined-select-text-field-disabled-outline-color: GrayText;--md-outlined-select-text-field-disabled-outline-opacity: 1;--md-outlined-select-text-field-disabled-supporting-text-color: GrayText;--md-outlined-select-text-field-disabled-supporting-text-opacity: 1;--md-outlined-select-text-field-disabled-trailing-icon-color: GrayText;--md-outlined-select-text-field-disabled-trailing-icon-opacity: 1}}/*# sourceMappingURL=outlined-forced-colors-styles.css.map */
-`;
-//# sourceMappingURL=outlined-forced-colors-styles.css.js.map
-;// CONCATENATED MODULE: ./node_modules/@material/web/field/internal/outlined-field.js
-/**
- * @license
- * Copyright 2021 Google LLC
- * SPDX-License-Identifier: Apache-2.0
- */
-
-
-/**
- * An outlined field component.
- */
-class OutlinedField extends Field {
-    renderOutline(floatingLabel) {
-        return x `
-      <div class="outline">
-        <div class="outline-start"></div>
-        <div class="outline-notch">
-          <div class="outline-panel-inactive"></div>
-          <div class="outline-panel-active"></div>
-          <div class="outline-label">${floatingLabel}</div>
-        </div>
-        <div class="outline-end"></div>
-      </div>
-    `;
-    }
-}
-//# sourceMappingURL=outlined-field.js.map
-;// CONCATENATED MODULE: ./node_modules/@material/web/field/internal/outlined-styles.css.js
-/**
-  * @license
-  * Copyright 2022 Google LLC
-  * SPDX-License-Identifier: Apache-2.0
-  */
-
-const field_internal_outlined_styles_css_styles = i `:host{--_bottom-space: var(--md-outlined-field-bottom-space, 16px);--_container-shape: var(--md-outlined-field-container-shape, 4px);--_content-color: var(--md-outlined-field-content-color, var(--md-sys-color-on-surface, #1d1b20));--_content-font: var(--md-outlined-field-content-font, var(--md-sys-typescale-body-large-font, var(--md-ref-typeface-plain, Roboto)));--_content-line-height: var(--md-outlined-field-content-line-height, var(--md-sys-typescale-body-large-line-height, 1.5rem));--_content-size: var(--md-outlined-field-content-size, var(--md-sys-typescale-body-large-size, 1rem));--_content-weight: var(--md-outlined-field-content-weight, var(--md-sys-typescale-body-large-weight, var(--md-ref-typeface-weight-regular, 400)));--_disabled-content-color: var(--md-outlined-field-disabled-content-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-content-opacity: var(--md-outlined-field-disabled-content-opacity, 0.38);--_disabled-label-text-color: var(--md-outlined-field-disabled-label-text-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-label-text-opacity: var(--md-outlined-field-disabled-label-text-opacity, 0.38);--_disabled-leading-content-color: var(--md-outlined-field-disabled-leading-content-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-leading-content-opacity: var(--md-outlined-field-disabled-leading-content-opacity, 0.38);--_disabled-outline-color: var(--md-outlined-field-disabled-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-outline-opacity: var(--md-outlined-field-disabled-outline-opacity, 0.12);--_disabled-outline-width: var(--md-outlined-field-disabled-outline-width, 1px);--_disabled-supporting-text-color: var(--md-outlined-field-disabled-supporting-text-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-supporting-text-opacity: var(--md-outlined-field-disabled-supporting-text-opacity, 0.38);--_disabled-trailing-content-color: var(--md-outlined-field-disabled-trailing-content-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-trailing-content-opacity: var(--md-outlined-field-disabled-trailing-content-opacity, 0.38);--_error-content-color: var(--md-outlined-field-error-content-color, var(--md-sys-color-on-surface, #1d1b20));--_error-focus-content-color: var(--md-outlined-field-error-focus-content-color, var(--md-sys-color-on-surface, #1d1b20));--_error-focus-label-text-color: var(--md-outlined-field-error-focus-label-text-color, var(--md-sys-color-error, #b3261e));--_error-focus-leading-content-color: var(--md-outlined-field-error-focus-leading-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_error-focus-outline-color: var(--md-outlined-field-error-focus-outline-color, var(--md-sys-color-error, #b3261e));--_error-focus-supporting-text-color: var(--md-outlined-field-error-focus-supporting-text-color, var(--md-sys-color-error, #b3261e));--_error-focus-trailing-content-color: var(--md-outlined-field-error-focus-trailing-content-color, var(--md-sys-color-error, #b3261e));--_error-hover-content-color: var(--md-outlined-field-error-hover-content-color, var(--md-sys-color-on-surface, #1d1b20));--_error-hover-label-text-color: var(--md-outlined-field-error-hover-label-text-color, var(--md-sys-color-on-error-container, #410e0b));--_error-hover-leading-content-color: var(--md-outlined-field-error-hover-leading-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_error-hover-outline-color: var(--md-outlined-field-error-hover-outline-color, var(--md-sys-color-on-error-container, #410e0b));--_error-hover-supporting-text-color: var(--md-outlined-field-error-hover-supporting-text-color, var(--md-sys-color-error, #b3261e));--_error-hover-trailing-content-color: var(--md-outlined-field-error-hover-trailing-content-color, var(--md-sys-color-on-error-container, #410e0b));--_error-label-text-color: var(--md-outlined-field-error-label-text-color, var(--md-sys-color-error, #b3261e));--_error-leading-content-color: var(--md-outlined-field-error-leading-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_error-outline-color: var(--md-outlined-field-error-outline-color, var(--md-sys-color-error, #b3261e));--_error-supporting-text-color: var(--md-outlined-field-error-supporting-text-color, var(--md-sys-color-error, #b3261e));--_error-trailing-content-color: var(--md-outlined-field-error-trailing-content-color, var(--md-sys-color-error, #b3261e));--_focus-content-color: var(--md-outlined-field-focus-content-color, var(--md-sys-color-on-surface, #1d1b20));--_focus-label-text-color: var(--md-outlined-field-focus-label-text-color, var(--md-sys-color-primary, #6750a4));--_focus-leading-content-color: var(--md-outlined-field-focus-leading-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_focus-outline-color: var(--md-outlined-field-focus-outline-color, var(--md-sys-color-primary, #6750a4));--_focus-outline-width: var(--md-outlined-field-focus-outline-width, 3px);--_focus-supporting-text-color: var(--md-outlined-field-focus-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_focus-trailing-content-color: var(--md-outlined-field-focus-trailing-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-content-color: var(--md-outlined-field-hover-content-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-label-text-color: var(--md-outlined-field-hover-label-text-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-leading-content-color: var(--md-outlined-field-hover-leading-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-outline-color: var(--md-outlined-field-hover-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-outline-width: var(--md-outlined-field-hover-outline-width, 1px);--_hover-supporting-text-color: var(--md-outlined-field-hover-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-trailing-content-color: var(--md-outlined-field-hover-trailing-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_label-text-color: var(--md-outlined-field-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_label-text-font: var(--md-outlined-field-label-text-font, var(--md-sys-typescale-body-large-font, var(--md-ref-typeface-plain, Roboto)));--_label-text-line-height: var(--md-outlined-field-label-text-line-height, var(--md-sys-typescale-body-large-line-height, 1.5rem));--_label-text-padding-bottom: var(--md-outlined-field-label-text-padding-bottom, 8px);--_label-text-populated-line-height: var(--md-outlined-field-label-text-populated-line-height, var(--md-sys-typescale-body-small-line-height, 1rem));--_label-text-populated-size: var(--md-outlined-field-label-text-populated-size, var(--md-sys-typescale-body-small-size, 0.75rem));--_label-text-size: var(--md-outlined-field-label-text-size, var(--md-sys-typescale-body-large-size, 1rem));--_label-text-weight: var(--md-outlined-field-label-text-weight, var(--md-sys-typescale-body-large-weight, var(--md-ref-typeface-weight-regular, 400)));--_leading-content-color: var(--md-outlined-field-leading-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_leading-space: var(--md-outlined-field-leading-space, 16px);--_outline-color: var(--md-outlined-field-outline-color, var(--md-sys-color-outline, #79747e));--_outline-label-padding: var(--md-outlined-field-outline-label-padding, 4px);--_outline-width: var(--md-outlined-field-outline-width, 1px);--_supporting-text-color: var(--md-outlined-field-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));--_supporting-text-font: var(--md-outlined-field-supporting-text-font, var(--md-sys-typescale-body-small-font, var(--md-ref-typeface-plain, Roboto)));--_supporting-text-leading-space: var(--md-outlined-field-supporting-text-leading-space, 16px);--_supporting-text-line-height: var(--md-outlined-field-supporting-text-line-height, var(--md-sys-typescale-body-small-line-height, 1rem));--_supporting-text-size: var(--md-outlined-field-supporting-text-size, var(--md-sys-typescale-body-small-size, 0.75rem));--_supporting-text-top-space: var(--md-outlined-field-supporting-text-top-space, 4px);--_supporting-text-trailing-space: var(--md-outlined-field-supporting-text-trailing-space, 16px);--_supporting-text-weight: var(--md-outlined-field-supporting-text-weight, var(--md-sys-typescale-body-small-weight, var(--md-ref-typeface-weight-regular, 400)));--_top-space: var(--md-outlined-field-top-space, 16px);--_trailing-content-color: var(--md-outlined-field-trailing-content-color, var(--md-sys-color-on-surface-variant, #49454f));--_trailing-space: var(--md-outlined-field-trailing-space, 16px);--_container-shape-start-start: var( --md-outlined-field-container-shape-start-start, var(--_container-shape) );--_container-shape-start-end: var( --md-outlined-field-container-shape-start-end, var(--_container-shape) );--_container-shape-end-end: var( --md-outlined-field-container-shape-end-end, var(--_container-shape) );--_container-shape-end-start: var( --md-outlined-field-container-shape-end-start, var(--_container-shape) )}.outline{border-color:var(--_outline-color);border-radius:inherit;color:var(--_outline-color);display:flex;pointer-events:none;height:100%;position:absolute;width:100%}.outline-start::before,.outline-start::after,.outline-panel-inactive::before,.outline-panel-inactive::after,.outline-panel-active::before,.outline-panel-active::after,.outline-end::before,.outline-end::after{border:inherit;content:"";inset:0;position:absolute}.outline-start,.outline-end{border:inherit;border-radius:inherit;box-sizing:border-box;position:relative}.outline-start::before,.outline-start::after,.outline-end::before,.outline-end::after{border-bottom-style:solid;border-top-style:solid}.outline-start::after,.outline-end::after{opacity:0;transition:opacity 150ms cubic-bezier(0.2, 0, 0, 1)}.focused .outline-start::after,.focused .outline-end::after{opacity:1}.outline-start::before,.outline-start::after{border-inline-start-style:solid;border-inline-end-style:none;border-start-start-radius:inherit;border-start-end-radius:0;border-end-start-radius:inherit;border-end-end-radius:0;margin-inline-end:var(--_outline-label-padding)}.outline-end{flex-grow:1;margin-inline-start:calc(-1*var(--_outline-label-padding))}.outline-end::before,.outline-end::after{border-inline-start-style:none;border-inline-end-style:solid;border-start-start-radius:0;border-start-end-radius:inherit;border-end-start-radius:0;border-end-end-radius:inherit}.outline-notch{align-items:flex-start;border:inherit;display:flex;margin-inline-start:calc(-1*var(--_outline-label-padding));margin-inline-end:var(--_outline-label-padding);max-width:calc(100% - var(--_leading-space) - var(--_trailing-space));padding:0 var(--_outline-label-padding);position:relative}.no-label .outline-notch{display:none}.outline-panel-inactive,.outline-panel-active{border:inherit;border-bottom-style:solid;inset:0;position:absolute}.outline-panel-inactive::before,.outline-panel-inactive::after,.outline-panel-active::before,.outline-panel-active::after{border-top-style:solid;border-bottom:none;bottom:auto;transform:scaleX(1);transition:transform 150ms cubic-bezier(0.2, 0, 0, 1)}.outline-panel-inactive::before,.outline-panel-active::before{right:50%;transform-origin:top left}.outline-panel-inactive::after,.outline-panel-active::after{left:50%;transform-origin:top right}.populated .outline-panel-inactive::before,.populated .outline-panel-inactive::after,.populated .outline-panel-active::before,.populated .outline-panel-active::after,.focused .outline-panel-inactive::before,.focused .outline-panel-inactive::after,.focused .outline-panel-active::before,.focused .outline-panel-active::after{transform:scaleX(0)}.outline-panel-active{opacity:0;transition:opacity 150ms cubic-bezier(0.2, 0, 0, 1)}.focused .outline-panel-active{opacity:1}.outline-label{display:flex;max-width:100%;transform:translateY(calc(-100% + var(--_label-text-padding-bottom)))}.outline-start,.field:not(.with-start) .content ::slotted(*){padding-inline-start:max(var(--_leading-space),max(var(--_container-shape-start-start),var(--_container-shape-end-start)) + var(--_outline-label-padding))}.field:not(.with-start) .label-wrapper{margin-inline-start:max(var(--_leading-space),max(var(--_container-shape-start-start),var(--_container-shape-end-start)) + var(--_outline-label-padding))}.field:not(.with-end) .content ::slotted(*){padding-inline-end:max(var(--_trailing-space),max(var(--_container-shape-start-end),var(--_container-shape-end-end)))}.field:not(.with-end) .label-wrapper{margin-inline-end:max(var(--_trailing-space),max(var(--_container-shape-start-end),var(--_container-shape-end-end)))}.outline-start::before,.outline-end::before,.outline-panel-inactive,.outline-panel-inactive::before,.outline-panel-inactive::after{border-width:var(--_outline-width)}:hover .outline{border-color:var(--_hover-outline-color);color:var(--_hover-outline-color)}:hover .outline-start::before,:hover .outline-end::before,:hover .outline-panel-inactive,:hover .outline-panel-inactive::before,:hover .outline-panel-inactive::after{border-width:var(--_hover-outline-width)}.focused .outline{border-color:var(--_focus-outline-color);color:var(--_focus-outline-color)}.outline-start::after,.outline-end::after,.outline-panel-active,.outline-panel-active::before,.outline-panel-active::after{border-width:var(--_focus-outline-width)}.disabled .outline{border-color:var(--_disabled-outline-color);color:var(--_disabled-outline-color)}.disabled .outline-start,.disabled .outline-end,.disabled .outline-panel-inactive{opacity:var(--_disabled-outline-opacity)}.disabled .outline-start::before,.disabled .outline-end::before,.disabled .outline-panel-inactive,.disabled .outline-panel-inactive::before,.disabled .outline-panel-inactive::after{border-width:var(--_disabled-outline-width)}.error .outline{border-color:var(--_error-outline-color);color:var(--_error-outline-color)}.error:hover .outline{border-color:var(--_error-hover-outline-color);color:var(--_error-hover-outline-color)}.error.focused .outline{border-color:var(--_error-focus-outline-color);color:var(--_error-focus-outline-color)}.resizable .container{bottom:var(--_focus-outline-width);inset-inline-end:var(--_focus-outline-width);clip-path:inset(var(--_focus-outline-width) 0 0 var(--_focus-outline-width))}.resizable .container>*{top:var(--_focus-outline-width);inset-inline-start:var(--_focus-outline-width)}:host-context([dir=rtl]) .resizable .container,:host([dir=rtl]) .resizable .container{clip-path:inset(var(--_focus-outline-width) var(--_focus-outline-width) 0 0)}.resizable .container:dir(rtl){clip-path:inset(var(--_focus-outline-width) var(--_focus-outline-width) 0 0)}/*# sourceMappingURL=outlined-styles.css.map */
-`;
-//# sourceMappingURL=outlined-styles.css.js.map
-;// CONCATENATED MODULE: ./node_modules/@material/web/field/outlined-field.js
-/**
- * @license
- * Copyright 2021 Google LLC
- * SPDX-License-Identifier: Apache-2.0
- */
-
-
-
-
-
-/**
- * TODO(b/228525797): add docs
- * @final
- * @suppress {visibility}
- */
-let MdOutlinedField = class MdOutlinedField extends OutlinedField {
-};
-MdOutlinedField.styles = [field_internal_shared_styles_css_styles, field_internal_outlined_styles_css_styles];
-MdOutlinedField = __decorate([
-    t('md-outlined-field')
-], MdOutlinedField);
-//# sourceMappingURL=outlined-field.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/select/internal/outlined-select.js
 /**
  * @license
@@ -10563,7 +10983,6 @@ const outlined_select_styles_css_styles = i `:host{--_text-field-container-shape
 
 
 
-
 /**
  * @summary
  * Select menus display a list of choices on temporary surfaces and display the
@@ -10593,7 +11012,7 @@ const outlined_select_styles_css_styles = i `:host{--_text-field-container-shape
  */
 let MdOutlinedSelect = class MdOutlinedSelect extends OutlinedSelect {
 };
-MdOutlinedSelect.styles = [select_internal_shared_styles_css_styles, outlined_select_styles_css_styles, outlined_forced_colors_styles_css_styles];
+MdOutlinedSelect.styles = [select_internal_shared_styles_css_styles, outlined_select_styles_css_styles];
 MdOutlinedSelect = __decorate([
     t('md-outlined-select')
 ], MdOutlinedSelect);
@@ -10733,11 +11152,13 @@ class SelectOptionController {
 
 
 /**
- * @fires close-menu Closes the encapsulating menu on
- * @fires request-selection Requests the parent md-select to select this element
- * (and deselect others if single-selection) when `selected` changed to `true`.
- * @fires request-deselection Requests the parent md-select to deselect this
- * element when `selected` changed to `false`.
+ * @fires close-menu {CustomEvent<{initiator: SelectOption, reason: Reason, itemPath: SelectOption[]}>}
+ * Closes the encapsulating menu on closable interaction. --bubbles --composed
+ * @fires request-selection {Event} Requests the parent md-select to select this
+ * element (and deselect others if single-selection) when `selected` changed to
+ * `true`. --bubbles --composed
+ * @fires request-deselection {Event} Requests the parent md-select to deselect
+ * this element when `selected` changed to `false`. --bubbles --composed
  */
 class SelectOptionEl extends lit_element_s {
     constructor() {
@@ -10762,7 +11183,8 @@ class SelectOptionEl extends lit_element_s {
         this.selectOptionController = new SelectOptionController(this, {
             getHeadlineElements: () => {
                 return this.headlineElements;
-            }
+            },
+            getInteractiveElement: () => this.listItemRoot,
         });
     }
     /**
@@ -10789,8 +11211,7 @@ class SelectOptionEl extends lit_element_s {
         return this.renderListItem(x `
       <md-item>
         <div slot="container">
-          ${this.renderRipple()}
-          ${this.renderFocusRing()}
+          ${this.renderRipple()} ${this.renderFocusRing()}
         </div>
         <slot name="start" slot="start"></slot>
         <slot name="end" slot="end"></slot>
@@ -10817,28 +11238,27 @@ class SelectOptionEl extends lit_element_s {
         class="list-item ${class_map_e(this.getRenderClasses())}"
         @click=${this.selectOptionController.onClick}
         @keydown=${this.selectOptionController.onKeydown}
-      >${content}</li>
+        >${content}</li
+      >
     `;
     }
     /**
      * Handles rendering of the ripple element.
      */
     renderRipple() {
-        return x `
-      <md-ripple
-          part="ripple"
-          for="item"
-          ?disabled=${this.disabled}></md-ripple>`;
+        return x ` <md-ripple
+      part="ripple"
+      for="item"
+      ?disabled=${this.disabled}></md-ripple>`;
     }
     /**
      * Handles rendering of the focus ring.
      */
     renderFocusRing() {
-        return x `
-      <md-focus-ring
-          part="focus-ring"
-          for="item"
-          inward></md-focus-ring>`;
+        return x ` <md-focus-ring
+      part="focus-ring"
+      for="item"
+      inward></md-focus-ring>`;
     }
     /**
      * Classes applied to the list item root.
@@ -10858,8 +11278,9 @@ class SelectOptionEl extends lit_element_s {
       <slot name="overline" slot="overline"></slot>
       <slot name="headline" slot="headline"></slot>
       <slot name="supporting-text" slot="supporting-text"></slot>
-      <slot name="trailing-supporting-text"
-          slot="trailing-supporting-text"></slot>
+      <slot
+        name="trailing-supporting-text"
+        slot="trailing-supporting-text"></slot>
     `;
     }
     focus() {
@@ -10874,7 +11295,7 @@ class SelectOptionEl extends lit_element_s {
 /** @nocollapse */
 SelectOptionEl.shadowRootOptions = {
     ...lit_element_s.shadowRootOptions,
-    delegatesFocus: true
+    delegatesFocus: true,
 };
 __decorate([
     property_n({ type: Boolean, reflect: true })
@@ -10907,7 +11328,6 @@ __decorate([
  * Copyright 2023 Google LLC
  * SPDX-License-Identifier: Apache-2.0
  */
-
 
 
 
@@ -10945,7 +11365,7 @@ __decorate([
  */
 let MdSelectOption = class MdSelectOption extends SelectOptionEl {
 };
-MdSelectOption.styles = [menu_item_styles_css_styles, menuitem_forced_colors_styles_css_styles];
+MdSelectOption.styles = [menu_item_styles_css_styles];
 MdSelectOption = __decorate([
     t('md-select-option')
 ], MdSelectOption);
@@ -10957,7 +11377,7 @@ MdSelectOption = __decorate([
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const slider_internal_forced_colors_styles_css_styles = i `@media(forced-colors: active){:host{--md-slider-active-track-color: CanvasText;--md-slider-disabled-active-track-color: GrayText;--md-slider-disabled-active-track-opacity: 1;--md-slider-disabled-handle-color: GrayText;--md-slider-disabled-inactive-track-color: GrayText;--md-slider-disabled-inactive-track-opacity: 1;--md-slider-focus-handle-color: CanvasText;--md-slider-handle-color: CanvasText;--md-slider-handle-shadow-color: Canvas;--md-slider-hover-handle-color: CanvasText;--md-slider-hover-state-layer-color: Canvas;--md-slider-hover-state-layer-opacity: 1;--md-slider-inactive-track-color: Canvas;--md-slider-label-container-color: Canvas;--md-slider-label-text-color: CanvasText;--md-slider-pressed-handle-color: CanvasText;--md-slider-pressed-state-layer-color: Canvas;--md-slider-pressed-state-layer-opacity: 1;--md-slider-with-overlap-handle-outline-color: CanvasText}.label,.label::before{border:var(--_with-overlap-handle-outline-color) solid var(--_with-overlap-handle-outline-width)}:host(:not([disabled])) .track::before{border:1px solid var(--_active-track-color)}.tickmarks::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='CanvasText'%3E%3Ccircle cx='2' cy='2'  r='1'/%3E%3C/svg%3E")}.tickmarks::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='Canvas'%3E%3Ccircle cx='2' cy='2' r='1'/%3E%3C/svg%3E")}:host([disabled]) .tickmarks::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='Canvas'%3E%3Ccircle cx='2' cy='2'  r='1'/%3E%3C/svg%3E")}}/*# sourceMappingURL=forced-colors-styles.css.map */
+const internal_forced_colors_styles_css_styles = i `@media(forced-colors: active){:host{--md-slider-active-track-color: CanvasText;--md-slider-disabled-active-track-color: GrayText;--md-slider-disabled-active-track-opacity: 1;--md-slider-disabled-handle-color: GrayText;--md-slider-disabled-inactive-track-color: GrayText;--md-slider-disabled-inactive-track-opacity: 1;--md-slider-focus-handle-color: CanvasText;--md-slider-handle-color: CanvasText;--md-slider-handle-shadow-color: Canvas;--md-slider-hover-handle-color: CanvasText;--md-slider-hover-state-layer-color: Canvas;--md-slider-hover-state-layer-opacity: 1;--md-slider-inactive-track-color: Canvas;--md-slider-label-container-color: Canvas;--md-slider-label-text-color: CanvasText;--md-slider-pressed-handle-color: CanvasText;--md-slider-pressed-state-layer-color: Canvas;--md-slider-pressed-state-layer-opacity: 1;--md-slider-with-overlap-handle-outline-color: CanvasText}.label,.label::before{border:var(--_with-overlap-handle-outline-color) solid var(--_with-overlap-handle-outline-width)}:host(:not([disabled])) .track::before{border:1px solid var(--_active-track-color)}.tickmarks::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='CanvasText'%3E%3Ccircle cx='2' cy='2'  r='1'/%3E%3C/svg%3E")}.tickmarks::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='Canvas'%3E%3Ccircle cx='2' cy='2' r='1'/%3E%3C/svg%3E")}:host([disabled]) .tickmarks::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='Canvas'%3E%3Ccircle cx='2' cy='2'  r='1'/%3E%3C/svg%3E")}}/*# sourceMappingURL=forced-colors-styles.css.map */
 `;
 //# sourceMappingURL=forced-colors-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/lit-html/directives/when.js
@@ -10986,21 +11406,24 @@ function when_n(n,r,t){return n?r(n):t?.(n)}
 
 
 
+
+
 // Disable warning for classMap with destructuring
-// tslint:disable:quoted-properties-on-dictionary
+// tslint:disable:no-implicit-dictionary-conversion
+// Separate variable needed for closure.
+const sliderBaseClass = mixinFormAssociated(mixinElementInternals(lit_element_s));
 /**
  * Slider component.
+ *
+ *
+ * @fires change {Event} The native `change` event on
+ * [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event)
+ * --bubbles
+ * @fires input {InputEvent} The native `input` event on
+ * [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event)
+ * --bubbles --composed
  */
-class Slider extends lit_element_s {
-    /**
-     * The HTML name to use in form submission.
-     */
-    get name() {
-        return this.getAttribute('name') ?? '';
-    }
-    set name(name) {
-        this.setAttribute('name', name);
-    }
+class Slider extends sliderBaseClass {
     /**
      * The HTML name to use in form submission for a range slider's starting
      * value. Use `name` instead if both the start and end values should use the
@@ -11023,29 +11446,18 @@ class Slider extends lit_element_s {
     set nameEnd(name) {
         this.setAttribute('name-end', name);
     }
-    /**
-     * The associated form element with which this element's value will submit.
-     */
-    get form() {
-        return this.internals.form;
-    }
-    /**
-     * The labels this element is associated with.
-     */
-    get labels() {
-        return this.internals.labels;
-    }
     // Note: start aria-* properties are only applied when range=true, which is
     // why they do not need to handle both cases.
     get renderAriaLabelStart() {
         // Needed for closure conformance
         const { ariaLabel } = this;
-        return this.ariaLabelStart || ariaLabel && `${ariaLabel} start` ||
-            this.valueLabelStart || String(this.valueStart);
+        return (this.ariaLabelStart ||
+            (ariaLabel && `${ariaLabel} start`) ||
+            this.valueLabelStart ||
+            String(this.valueStart));
     }
     get renderAriaValueTextStart() {
-        return this.ariaValueTextStart || this.valueLabelStart ||
-            String(this.valueStart);
+        return (this.ariaValueTextStart || this.valueLabelStart || String(this.valueStart));
     }
     // Note: end aria-* properties are applied for single and range sliders, which
     // is why it needs to handle `this.range` (while start aria-* properties do
@@ -11054,15 +11466,16 @@ class Slider extends lit_element_s {
         // Needed for closure conformance
         const { ariaLabel } = this;
         if (this.range) {
-            return this.ariaLabelEnd || ariaLabel && `${ariaLabel} end` ||
-                this.valueLabelEnd || String(this.valueEnd);
+            return (this.ariaLabelEnd ||
+                (ariaLabel && `${ariaLabel} end`) ||
+                this.valueLabelEnd ||
+                String(this.valueEnd));
         }
         return ariaLabel || this.valueLabel || String(this.value);
     }
     get renderAriaValueTextEnd() {
         if (this.range) {
-            return this.ariaValueTextEnd || this.valueLabelEnd ||
-                String(this.valueEnd);
+            return (this.ariaValueTextEnd || this.valueLabelEnd || String(this.valueEnd));
         }
         // Needed for conformance
         const { ariaValueText } = this;
@@ -11070,10 +11483,6 @@ class Slider extends lit_element_s {
     }
     constructor() {
         super();
-        /**
-         * Whether or not the slider is disabled.
-         */
-        this.disabled = false;
         /**
          * The slider minimum value
          */
@@ -11144,9 +11553,8 @@ class Slider extends lit_element_s {
         this.handlesOverlapping = false;
         // used in synthetic events generated to control ripple hover state.
         this.ripplePointerId = 1;
-        // flag to prvent processing of re-dispatched input event.
-        this.isRedisptchingEvent = false;
-        this.internals = this /* needed for closure */.attachInternals();
+        // flag to prevent processing of re-dispatched input event.
+        this.isRedispatchingEvent = false;
         if (!is_server_o) {
             this.addEventListener('click', (event) => {
                 if (!isActivationClick(event) || !this.inputEnd) {
@@ -11161,13 +11569,15 @@ class Slider extends lit_element_s {
         this.inputEnd?.focus();
     }
     willUpdate(changed) {
-        this.renderValueStart = changed.has('valueStart') ?
-            this.valueStart :
-            this.inputStart?.valueAsNumber;
+        this.renderValueStart = changed.has('valueStart')
+            ? this.valueStart
+            : this.inputStart?.valueAsNumber;
         const endValueChanged = (changed.has('valueEnd') && this.range) || changed.has('value');
-        this.renderValueEnd = endValueChanged ?
-            (this.range ? this.valueEnd : this.value) :
-            this.inputEnd?.valueAsNumber;
+        this.renderValueEnd = endValueChanged
+            ? this.range
+                ? this.valueEnd
+                : this.value
+            : this.inputEnd?.valueAsNumber;
         // manually handle ripple hover state since the handle is pointer events
         // none.
         if (changed.get('handleStartHover') !== undefined) {
@@ -11176,21 +11586,6 @@ class Slider extends lit_element_s {
         else if (changed.get('handleEndHover') !== undefined) {
             this.toggleRippleHover(this.rippleEnd, this.handleEndHover);
         }
-    }
-    update(changed) {
-        if (changed.has('value') || changed.has('range') ||
-            changed.has('valueStart') || changed.has('valueEnd')) {
-            if (this.range) {
-                const data = new FormData();
-                data.append(this.nameStart, String(this.valueStart));
-                data.append(this.nameEnd, String(this.valueEnd));
-                this.internals.setFormValue(data);
-            }
-            else {
-                this.internals.setFormValue(String(this.value));
-            }
-        }
-        super.update(changed);
     }
     updated(changed) {
         // Validate input rendered value and re-render if necessary. This ensures
@@ -11222,8 +11617,10 @@ class Slider extends lit_element_s {
         else {
             this.value ?? (this.value = this.renderValueEnd);
         }
-        if (changed.has('range') || changed.has('renderValueStart') ||
-            changed.has('renderValueEnd') || this.isUpdatePending) {
+        if (changed.has('range') ||
+            changed.has('renderValueStart') ||
+            changed.has('renderValueEnd') ||
+            this.isUpdatePending) {
             // Only check if the handle nubs are overlapping, as the ripple touch
             // target extends subtantially beyond the boundary of the handle nub.
             const startNub = this.handleStart?.querySelector('.handleNub');
@@ -11237,9 +11634,9 @@ class Slider extends lit_element_s {
     render() {
         const step = this.step === 0 ? 1 : this.step;
         const range = Math.max(this.max - this.min, step);
-        const startFraction = this.range ?
-            (((this.renderValueStart ?? this.min) - this.min) / range) :
-            0;
+        const startFraction = this.range
+            ? ((this.renderValueStart ?? this.min) - this.min) / range
+            : 0;
         const endFraction = ((this.renderValueEnd ?? this.min) - this.min) / range;
         const containerStyles = {
             // for clipping inputs and active track.
@@ -11272,70 +11669,72 @@ class Slider extends lit_element_s {
         const handleStartProps = {
             start: true,
             hover: this.handleStartHover,
-            label: labelStart
+            label: labelStart,
         };
         const handleEndProps = {
             start: false,
             hover: this.handleEndHover,
-            label: labelEnd
+            label: labelEnd,
         };
         const handleContainerClasses = {
-            hover: this.handleStartHover || this.handleEndHover
+            hover: this.handleStartHover || this.handleEndHover,
         };
-        return x `
-      <div
-        class="container ${class_map_e(containerClasses)}"
-        style=${style_map_o(containerStyles)}
-      >
-        ${when_n(this.range, () => this.renderInput(inputStartProps))}
-        ${this.renderInput(inputEndProps)}
-        ${this.renderTrack()}
-        <div class="handleContainerPadded">
-          <div class="handleContainerBlock">
-            <div class="handleContainer ${class_map_e(handleContainerClasses)}">
-              ${when_n(this.range, () => this.renderHandle(handleStartProps))}
-              ${this.renderHandle(handleEndProps)}
-            </div>
+        return x ` <div
+      class="container ${class_map_e(containerClasses)}"
+      style=${style_map_o(containerStyles)}>
+      ${when_n(this.range, () => this.renderInput(inputStartProps))}
+      ${this.renderInput(inputEndProps)} ${this.renderTrack()}
+      <div class="handleContainerPadded">
+        <div class="handleContainerBlock">
+          <div class="handleContainer ${class_map_e(handleContainerClasses)}">
+            ${when_n(this.range, () => this.renderHandle(handleStartProps))}
+            ${this.renderHandle(handleEndProps)}
           </div>
         </div>
-      </div>`;
+      </div>
+    </div>`;
     }
     renderTrack() {
         return x `
-        <div class="track"></div>
-        ${this.ticks ? x `<div class="tickmarks"></div>` : T}
-      `;
+      <div class="track"></div>
+      ${this.ticks ? x `<div class="tickmarks"></div>` : T}
+    `;
     }
     renderLabel(value) {
         return x `<div class="label" aria-hidden="true">
-        <span class="labelContent" part="label">${value}</span>
-      </div>`;
+      <span class="labelContent" part="label">${value}</span>
+    </div>`;
     }
-    renderHandle({ start, hover, label }) {
+    renderHandle({ start, hover, label, }) {
         const onTop = !this.disabled && start === this.startOnTop;
         const isOverlapping = !this.disabled && this.handlesOverlapping;
         const name = start ? 'start' : 'end';
-        return x `<div class="handle ${class_map_e({
+        return x `<div
+      class="handle ${class_map_e({
             [name]: true,
             hover,
             onTop,
-            isOverlapping
+            isOverlapping,
         })}">
       <div class="handleNub"><md-elevation></md-elevation></div>
       ${when_n(this.labeled, () => this.renderLabel(label))}
       <md-focus-ring part="focus-ring" for=${name}></md-focus-ring>
-      <md-ripple for=${name} class=${name} ?disabled=${this.disabled}></md-ripple>
+      <md-ripple
+        for=${name}
+        class=${name}
+        ?disabled=${this.disabled}></md-ripple>
     </div>`;
     }
-    renderInput({ start, value, ariaLabel, ariaValueText, ariaMin, ariaMax }) {
+    renderInput({ start, value, ariaLabel, ariaValueText, ariaMin, ariaMax, }) {
         // Slider requires min/max set to the overall min/max for both inputs.
         // This is reported to screen readers, which is why we need aria-valuemin
         // and aria-valuemax.
         const name = start ? `start` : `end`;
-        return x `<input type="range"
+        return x `<input
+      type="range"
       class="${class_map_e({
             start,
-            end: !start
+            end: !start,
         })}"
       @focus=${this.handleFocus}
       @pointerdown=${this.handleDown}
@@ -11357,7 +11756,7 @@ class Slider extends lit_element_s {
       .value=${String(value)}
       .tabIndex=${start ? 1 : 0}
       aria-label=${ariaLabel || T}
-      aria-valuetext=${ariaValueText}>`;
+      aria-valuetext=${ariaValueText} />`;
     }
     async toggleRippleHover(ripple, hovering) {
         const rippleEl = await ripple;
@@ -11366,10 +11765,16 @@ class Slider extends lit_element_s {
         }
         // TODO(b/269799771): improve slider ripple connection
         if (hovering) {
-            rippleEl.handlePointerenter(new PointerEvent('pointerenter', { isPrimary: true, pointerId: this.ripplePointerId }));
+            rippleEl.handlePointerenter(new PointerEvent('pointerenter', {
+                isPrimary: true,
+                pointerId: this.ripplePointerId,
+            }));
         }
         else {
-            rippleEl.handlePointerleave(new PointerEvent('pointerleave', { isPrimary: true, pointerId: this.ripplePointerId }));
+            rippleEl.handlePointerleave(new PointerEvent('pointerleave', {
+                isPrimary: true,
+                pointerId: this.ripplePointerId,
+            }));
         }
     }
     handleFocus(event) {
@@ -11377,13 +11782,16 @@ class Slider extends lit_element_s {
     }
     startAction(event) {
         const target = event.target;
-        const fixed = (target === this.inputStart) ? this.inputEnd : this.inputStart;
+        const fixed = target === this.inputStart ? this.inputEnd : this.inputStart;
         this.action = {
             canFlip: event.type === 'pointerdown',
             flipped: false,
             target,
             fixed,
-            values: new Map([[target, target.valueAsNumber], [fixed, fixed?.valueAsNumber]])
+            values: new Map([
+                [target, target.valueAsNumber],
+                [fixed, fixed?.valueAsNumber],
+            ]),
         };
     }
     finishAction(event) {
@@ -11458,8 +11866,9 @@ class Slider extends lit_element_s {
         }
         const { target, fixed } = this.action;
         const isStart = target === this.inputStart;
-        return isStart ? target.valueAsNumber > fixed.valueAsNumber :
-            target.valueAsNumber < fixed.valueAsNumber;
+        return isStart
+            ? target.valueAsNumber > fixed.valueAsNumber
+            : target.valueAsNumber < fixed.valueAsNumber;
     }
     // if start/end start coincident and the first drag input would e.g. move
     // start > end, avoid clamping and "flip" to use the other input
@@ -11504,7 +11913,7 @@ class Slider extends lit_element_s {
     }
     handleInput(event) {
         // avoid processing a re-dispatched event
-        if (this.isRedisptchingEvent) {
+        if (this.isRedispatchingEvent) {
             return;
         }
         let stopPropagation = false;
@@ -11535,9 +11944,9 @@ class Slider extends lit_element_s {
         }
         // ensure event path is correct when flipped.
         if (redispatch) {
-            this.isRedisptchingEvent = true;
+            this.isRedispatchingEvent = true;
             redispatchEvent(target, event);
-            this.isRedisptchingEvent = false;
+            this.isRedispatchingEvent = false;
         }
     }
     handleChange(event) {
@@ -11545,14 +11954,22 @@ class Slider extends lit_element_s {
         // clamped values; note, this only occurs for keyboard
         const changeTarget = event.target;
         const { target, values } = this.action ?? {};
-        const squelch = (target && (target.valueAsNumber === values.get(changeTarget)));
+        const squelch = target && target.valueAsNumber === values.get(changeTarget);
         if (!squelch) {
             redispatchEvent(this, event);
         }
         // ensure keyboard triggered change clears action.
         this.finishAction(event);
     }
-    /** @private */
+    [getFormValue]() {
+        if (this.range) {
+            const data = new FormData();
+            data.append(this.nameStart, String(this.valueStart));
+            data.append(this.nameEnd, String(this.valueEnd));
+            return data;
+        }
+        return String(this.value);
+    }
     formResetCallback() {
         if (this.range) {
             const valueStart = this.getAttribute('value-start');
@@ -11564,7 +11981,6 @@ class Slider extends lit_element_s {
         const value = this.getAttribute('value');
         this.value = value !== null ? Number(value) : undefined;
     }
-    /** @private */
     formStateRestoreCallback(state) {
         if (Array.isArray(state)) {
             const [[, valueStart], [, valueEnd]] = state;
@@ -11581,12 +11997,10 @@ class Slider extends lit_element_s {
     requestUpdateOnAriaChange(Slider);
 })();
 /** @nocollapse */
-Slider.shadowRootOptions = { ...lit_element_s.shadowRootOptions, delegatesFocus: true };
-/** @nocollapse */
-Slider.formAssociated = true;
-__decorate([
-    property_n({ type: Boolean, reflect: true })
-], Slider.prototype, "disabled", void 0);
+Slider.shadowRootOptions = {
+    ...lit_element_s.shadowRootOptions,
+    delegatesFocus: true,
+};
 __decorate([
     property_n({ type: Number })
 ], Slider.prototype, "min", void 0);
@@ -11684,7 +12098,9 @@ function isOverlapping(elA, elB) {
     }
     const a = elA.getBoundingClientRect();
     const b = elB.getBoundingClientRect();
-    return !(a.top > b.bottom || a.right < b.left || a.bottom < b.top ||
+    return !(a.top > b.bottom ||
+        a.right < b.left ||
+        a.bottom < b.top ||
         a.left > b.right);
 }
 //# sourceMappingURL=slider.js.map
@@ -11695,7 +12111,7 @@ function isOverlapping(elA, elB) {
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const slider_styles_css_styles = i `:host{--_active-track-color: var(--md-slider-active-track-color, var(--md-sys-color-primary, #6750a4));--_active-track-height: var(--md-slider-active-track-height, 4px);--_active-track-shape: var(--md-slider-active-track-shape, 9999px);--_disabled-active-track-color: var(--md-slider-disabled-active-track-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-active-track-opacity: var(--md-slider-disabled-active-track-opacity, 0.38);--_disabled-handle-color: var(--md-slider-disabled-handle-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-handle-elevation: var(--md-slider-disabled-handle-elevation, 0);--_disabled-inactive-track-color: var(--md-slider-disabled-inactive-track-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-inactive-track-opacity: var(--md-slider-disabled-inactive-track-opacity, 0.12);--_focus-handle-color: var(--md-slider-focus-handle-color, var(--md-sys-color-primary, #6750a4));--_handle-color: var(--md-slider-handle-color, var(--md-sys-color-primary, #6750a4));--_handle-elevation: var(--md-slider-handle-elevation, 1);--_handle-height: var(--md-slider-handle-height, 20px);--_handle-shadow-color: var(--md-slider-handle-shadow-color, var(--md-sys-color-shadow, #000));--_handle-shape: var(--md-slider-handle-shape, 9999px);--_handle-width: var(--md-slider-handle-width, 20px);--_hover-handle-color: var(--md-slider-hover-handle-color, var(--md-sys-color-primary, #6750a4));--_hover-state-layer-color: var(--md-slider-hover-state-layer-color, var(--md-sys-color-primary, #6750a4));--_hover-state-layer-opacity: var(--md-slider-hover-state-layer-opacity, 0.08);--_inactive-track-color: var(--md-slider-inactive-track-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_inactive-track-height: var(--md-slider-inactive-track-height, 4px);--_inactive-track-shape: var(--md-slider-inactive-track-shape, 9999px);--_label-container-color: var(--md-slider-label-container-color, var(--md-sys-color-primary, #6750a4));--_label-container-height: var(--md-slider-label-container-height, 28px);--_pressed-handle-color: var(--md-slider-pressed-handle-color, var(--md-sys-color-primary, #6750a4));--_pressed-state-layer-color: var(--md-slider-pressed-state-layer-color, var(--md-sys-color-primary, #6750a4));--_pressed-state-layer-opacity: var(--md-slider-pressed-state-layer-opacity, 0.12);--_state-layer-size: var(--md-slider-state-layer-size, 40px);--_with-overlap-handle-outline-color: var(--md-slider-with-overlap-handle-outline-color, var(--md-sys-color-on-primary, #fff));--_with-overlap-handle-outline-width: var(--md-slider-with-overlap-handle-outline-width, 1px);--_with-tick-marks-active-container-color: var(--md-slider-with-tick-marks-active-container-color, var(--md-sys-color-on-primary, #fff));--_with-tick-marks-container-size: var(--md-slider-with-tick-marks-container-size, 2px);--_with-tick-marks-disabled-container-color: var(--md-slider-with-tick-marks-disabled-container-color, var(--md-sys-color-on-surface, #1d1b20));--_with-tick-marks-inactive-container-color: var(--md-slider-with-tick-marks-inactive-container-color, var(--md-sys-color-on-surface-variant, #49454f));--_label-text-color: var(--md-slider-label-text-color, var(--md-sys-color-on-primary, #fff));--_label-text-font: var(--md-slider-label-text-font, var(--md-sys-typescale-label-medium-font, var(--md-ref-typeface-plain, Roboto)));--_label-text-line-height: var(--md-slider-label-text-line-height, var(--md-sys-typescale-label-medium-line-height, 1rem));--_label-text-size: var(--md-slider-label-text-size, var(--md-sys-typescale-label-medium-size, 0.75rem));--_label-text-weight: var(--md-slider-label-text-weight, var(--md-sys-typescale-label-medium-weight, var(--md-ref-typeface-weight-medium, 500)));--_start-fraction: 0;--_end-fraction: 0;--_tick-count: 0;display:inline-flex;vertical-align:middle;min-inline-size:200px;--md-elevation-level: var(--_handle-elevation);--md-elevation-shadow-color: var(--_handle-shadow-color)}md-focus-ring{height:48px;inset:unset;width:48px}md-elevation{transition-duration:250ms}@media(prefers-reduced-motion){.label{transition-duration:0}}:host([disabled]){opacity:var(--_disabled-active-track-opacity);--md-elevation-level: var(--_disabled-handle-elevation)}.container{flex:1;display:flex;align-items:center;position:relative;block-size:var(--_state-layer-size);pointer-events:none;touch-action:none}.track,.tickmarks{position:absolute;inset:0;display:flex;align-items:center}.track::before,.tickmarks::before,.track::after,.tickmarks::after{position:absolute;content:"";inset-inline-start:calc(var(--_state-layer-size)/2 - var(--_with-tick-marks-container-size));inset-inline-end:calc(var(--_state-layer-size)/2 - var(--_with-tick-marks-container-size));background-size:calc((100% - var(--_with-tick-marks-container-size)*2)/var(--_tick-count)) 100%}.track::before,.tickmarks::before{block-size:var(--_inactive-track-height);border-radius:var(--_inactive-track-shape)}.track::before{background-color:var(--_inactive-track-color)}.tickmarks::before{background-image:radial-gradient(circle at var(--_with-tick-marks-container-size) center, var(--_with-tick-marks-inactive-container-color) 0, var(--_with-tick-marks-inactive-container-color) calc(var(--_with-tick-marks-container-size) / 2), transparent calc(var(--_with-tick-marks-container-size) / 2))}:host([disabled]) .track::before{opacity:calc(1/var(--_disabled-active-track-opacity)*var(--_disabled-inactive-track-opacity));background-color:var(--_disabled-inactive-track-color)}.track::after,.tickmarks::after{block-size:var(--_active-track-height);border-radius:var(--_active-track-shape);clip-path:inset(0 calc(var(--_with-tick-marks-container-size) * min((1 - var(--_end-fraction)) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * (1 - var(--_end-fraction))) 0 calc(var(--_with-tick-marks-container-size) * min(var(--_start-fraction) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * var(--_start-fraction)))}.track::after{background-color:var(--_active-track-color)}.tickmarks::after{background-image:radial-gradient(circle at var(--_with-tick-marks-container-size) center, var(--_with-tick-marks-active-container-color) 0, var(--_with-tick-marks-active-container-color) calc(var(--_with-tick-marks-container-size) / 2), transparent calc(var(--_with-tick-marks-container-size) / 2))}:host-context([dir=rtl]) .track::after{clip-path:inset(0 calc(var(--_with-tick-marks-container-size) * min(var(--_start-fraction) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * var(--_start-fraction)) 0 calc(var(--_with-tick-marks-container-size) * min((1 - var(--_end-fraction)) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * (1 - var(--_end-fraction))))}:host([dir=rtl]) .track::after{clip-path:inset(0 calc(var(--_with-tick-marks-container-size) * min(var(--_start-fraction) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * var(--_start-fraction)) 0 calc(var(--_with-tick-marks-container-size) * min((1 - var(--_end-fraction)) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * (1 - var(--_end-fraction))))}.track:dir(rtl)::after{clip-path:inset(0 calc(var(--_with-tick-marks-container-size) * min(var(--_start-fraction) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * var(--_start-fraction)) 0 calc(var(--_with-tick-marks-container-size) * min((1 - var(--_end-fraction)) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * (1 - var(--_end-fraction))))}:host-context([dir=rtl]) .tickmarks::after{clip-path:inset(0 calc(var(--_with-tick-marks-container-size) * min(var(--_start-fraction) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * var(--_start-fraction)) 0 calc(var(--_with-tick-marks-container-size) * min((1 - var(--_end-fraction)) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * (1 - var(--_end-fraction))))}:host([dir=rtl]) .tickmarks::after{clip-path:inset(0 calc(var(--_with-tick-marks-container-size) * min(var(--_start-fraction) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * var(--_start-fraction)) 0 calc(var(--_with-tick-marks-container-size) * min((1 - var(--_end-fraction)) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * (1 - var(--_end-fraction))))}.tickmarks:dir(rtl)::after{clip-path:inset(0 calc(var(--_with-tick-marks-container-size) * min(var(--_start-fraction) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * var(--_start-fraction)) 0 calc(var(--_with-tick-marks-container-size) * min((1 - var(--_end-fraction)) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * (1 - var(--_end-fraction))))}:host([disabled]) .track::after{background-color:var(--_disabled-active-track-color)}:host([disabled]) .tickmarks::before{background-image:radial-gradient(circle at var(--_with-tick-marks-container-size) center, var(--_with-tick-marks-disabled-container-color) 0, var(--_with-tick-marks-disabled-container-color) calc(var(--_with-tick-marks-container-size) / 2), transparent calc(var(--_with-tick-marks-container-size) / 2))}.handleContainerPadded{position:relative;block-size:100%;inline-size:100%;padding-inline:calc(var(--_state-layer-size)/2)}.handleContainerBlock{position:relative;block-size:100%;inline-size:100%}.handleContainer{position:absolute;inset-block-start:0;inset-block-end:0;inset-inline-start:calc(100%*var(--_start-fraction));inline-size:calc(100%*(var(--_end-fraction) - var(--_start-fraction)))}.handle{position:absolute;block-size:var(--_state-layer-size);inline-size:var(--_state-layer-size);border-radius:var(--_handle-shape);display:flex;place-content:center;place-items:center}.handleNub{position:absolute;height:var(--_handle-height);width:var(--_handle-width);border-radius:var(--_handle-shape);background:var(--_handle-color)}:host([disabled]) .handleNub{background:var(--_disabled-handle-color)}input.end:focus~.handleContainerPadded .handle.end>.handleNub,input.start:focus~.handleContainerPadded .handle.start>.handleNub{background:var(--_focus-handle-color)}.container>.handleContainerPadded .handle.hover>.handleNub{background:var(--_hover-handle-color)}:host(:not([disabled])) input.end:active~.handleContainerPadded .handle.end>.handleNub,:host(:not([disabled])) input.start:active~.handleContainerPadded .handle.start>.handleNub{background:var(--_pressed-handle-color)}.onTop.isOverlapping .label,.onTop.isOverlapping .label::before{outline:var(--_with-overlap-handle-outline-color) solid var(--_with-overlap-handle-outline-width)}.onTop.isOverlapping .handleNub{border:var(--_with-overlap-handle-outline-color) solid var(--_with-overlap-handle-outline-width)}.handle.start{inset-inline-start:calc(0px - var(--_state-layer-size)/2)}.handle.end{inset-inline-end:calc(0px - var(--_state-layer-size)/2)}.label{position:absolute;box-sizing:border-box;display:flex;padding:4px;place-content:center;place-items:center;border-radius:9999px;color:var(--_label-text-color);font-family:var(--_label-text-font);font-size:var(--_label-text-size);line-height:var(--_label-text-line-height);font-weight:var(--_label-text-weight);inset-block-end:100%;min-inline-size:var(--_label-container-height);min-block-size:var(--_label-container-height);background:var(--_label-container-color);transition:transform 100ms cubic-bezier(0.2, 0, 0, 1);transform-origin:center bottom;transform:scale(0)}:host(:focus-within) .label,.handleContainer.hover .label,:where(:has(input:active)) .label{transform:scale(1)}.label::before,.label::after{position:absolute;display:block;content:"";background:inherit}.label::before{inline-size:calc(var(--_label-container-height)/2);block-size:calc(var(--_label-container-height)/2);bottom:calc(var(--_label-container-height)/-10);transform:rotate(45deg)}.label::after{inset:0px;border-radius:inherit}.labelContent{z-index:1}input[type=range]{opacity:0;-webkit-tap-highlight-color:rgba(0,0,0,0);position:absolute;box-sizing:border-box;height:100%;width:100%;margin:0;background:rgba(0,0,0,0);cursor:pointer;pointer-events:auto;appearance:none}input[type=range]:focus{outline:none}::-webkit-slider-runnable-track{-webkit-appearance:none}::-moz-range-track{appearance:none}::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;block-size:var(--_state-layer-size);inline-size:var(--_state-layer-size);transform:scaleX(0);opacity:0;z-index:2}::-moz-range-thumb{appearance:none;block-size:var(--_state-layer-size);inline-size:var(--_state-layer-size);transform:scaleX(0);opacity:0;z-index:2}.ranged input.start{clip-path:inset(0 calc(100% - (var(--_state-layer-size) / 2 + (100% - var(--_state-layer-size)) * (var(--_start-fraction) + (var(--_end-fraction) - var(--_start-fraction)) / 2))) 0 0)}:host-context([dir=rtl]) .ranged input.start{clip-path:inset(0 0 0 calc(100% - (var(--_state-layer-size) / 2 + (100% - var(--_state-layer-size)) * (var(--_start-fraction) + (var(--_end-fraction) - var(--_start-fraction)) / 2))))}:host([dir=rtl]) .ranged input.start{clip-path:inset(0 0 0 calc(100% - (var(--_state-layer-size) / 2 + (100% - var(--_state-layer-size)) * (var(--_start-fraction) + (var(--_end-fraction) - var(--_start-fraction)) / 2))))}.ranged input.start:dir(rtl){clip-path:inset(0 0 0 calc(100% - (var(--_state-layer-size) / 2 + (100% - var(--_state-layer-size)) * (var(--_start-fraction) + (var(--_end-fraction) - var(--_start-fraction)) / 2))))}.ranged input.end{clip-path:inset(0 0 0 calc(var(--_state-layer-size) / 2 + (100% - var(--_state-layer-size)) * (var(--_start-fraction) + (var(--_end-fraction) - var(--_start-fraction)) / 2)))}:host-context([dir=rtl]) .ranged input.end{clip-path:inset(0 calc(var(--_state-layer-size) / 2 + (100% - var(--_state-layer-size)) * (var(--_start-fraction) + (var(--_end-fraction) - var(--_start-fraction)) / 2)) 0 0)}:host([dir=rtl]) .ranged input.end{clip-path:inset(0 calc(var(--_state-layer-size) / 2 + (100% - var(--_state-layer-size)) * (var(--_start-fraction) + (var(--_end-fraction) - var(--_start-fraction)) / 2)) 0 0)}.ranged input.end:dir(rtl){clip-path:inset(0 calc(var(--_state-layer-size) / 2 + (100% - var(--_state-layer-size)) * (var(--_start-fraction) + (var(--_end-fraction) - var(--_start-fraction)) / 2)) 0 0)}.onTop{z-index:1}.handle{--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-color: var(--_pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity)}md-ripple{border-radius:50%;height:var(--_state-layer-size);width:var(--_state-layer-size)}/*# sourceMappingURL=slider-styles.css.map */
+const slider_styles_css_styles = i `:host{--_active-track-color: var(--md-slider-active-track-color, var(--md-sys-color-primary, #6750a4));--_active-track-height: var(--md-slider-active-track-height, 4px);--_active-track-shape: var(--md-slider-active-track-shape, 9999px);--_disabled-active-track-color: var(--md-slider-disabled-active-track-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-active-track-opacity: var(--md-slider-disabled-active-track-opacity, 0.38);--_disabled-handle-color: var(--md-slider-disabled-handle-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-handle-elevation: var(--md-slider-disabled-handle-elevation, 0);--_disabled-inactive-track-color: var(--md-slider-disabled-inactive-track-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-inactive-track-opacity: var(--md-slider-disabled-inactive-track-opacity, 0.12);--_focus-handle-color: var(--md-slider-focus-handle-color, var(--md-sys-color-primary, #6750a4));--_handle-color: var(--md-slider-handle-color, var(--md-sys-color-primary, #6750a4));--_handle-elevation: var(--md-slider-handle-elevation, 1);--_handle-height: var(--md-slider-handle-height, 20px);--_handle-shadow-color: var(--md-slider-handle-shadow-color, var(--md-sys-color-shadow, #000));--_handle-shape: var(--md-slider-handle-shape, 9999px);--_handle-width: var(--md-slider-handle-width, 20px);--_hover-handle-color: var(--md-slider-hover-handle-color, var(--md-sys-color-primary, #6750a4));--_hover-state-layer-color: var(--md-slider-hover-state-layer-color, var(--md-sys-color-primary, #6750a4));--_hover-state-layer-opacity: var(--md-slider-hover-state-layer-opacity, 0.08);--_inactive-track-color: var(--md-slider-inactive-track-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_inactive-track-height: var(--md-slider-inactive-track-height, 4px);--_inactive-track-shape: var(--md-slider-inactive-track-shape, 9999px);--_label-container-color: var(--md-slider-label-container-color, var(--md-sys-color-primary, #6750a4));--_label-container-height: var(--md-slider-label-container-height, 28px);--_pressed-handle-color: var(--md-slider-pressed-handle-color, var(--md-sys-color-primary, #6750a4));--_pressed-state-layer-color: var(--md-slider-pressed-state-layer-color, var(--md-sys-color-primary, #6750a4));--_pressed-state-layer-opacity: var(--md-slider-pressed-state-layer-opacity, 0.12);--_state-layer-size: var(--md-slider-state-layer-size, 40px);--_with-overlap-handle-outline-color: var(--md-slider-with-overlap-handle-outline-color, var(--md-sys-color-on-primary, #fff));--_with-overlap-handle-outline-width: var(--md-slider-with-overlap-handle-outline-width, 1px);--_with-tick-marks-active-container-color: var(--md-slider-with-tick-marks-active-container-color, var(--md-sys-color-on-primary, #fff));--_with-tick-marks-container-size: var(--md-slider-with-tick-marks-container-size, 2px);--_with-tick-marks-disabled-container-color: var(--md-slider-with-tick-marks-disabled-container-color, var(--md-sys-color-on-surface, #1d1b20));--_with-tick-marks-inactive-container-color: var(--md-slider-with-tick-marks-inactive-container-color, var(--md-sys-color-on-surface-variant, #49454f));--_label-text-color: var(--md-slider-label-text-color, var(--md-sys-color-on-primary, #fff));--_label-text-font: var(--md-slider-label-text-font, var(--md-sys-typescale-label-medium-font, var(--md-ref-typeface-plain, Roboto)));--_label-text-line-height: var(--md-slider-label-text-line-height, var(--md-sys-typescale-label-medium-line-height, 1rem));--_label-text-size: var(--md-slider-label-text-size, var(--md-sys-typescale-label-medium-size, 0.75rem));--_label-text-weight: var(--md-slider-label-text-weight, var(--md-sys-typescale-label-medium-weight, var(--md-ref-typeface-weight-medium, 500)));--_start-fraction: 0;--_end-fraction: 0;--_tick-count: 0;display:inline-flex;vertical-align:middle;min-inline-size:200px;--md-elevation-level: var(--_handle-elevation);--md-elevation-shadow-color: var(--_handle-shadow-color)}md-focus-ring{height:48px;inset:unset;width:48px}md-elevation{transition-duration:250ms}@media(prefers-reduced-motion){.label{transition-duration:0}}:host([disabled]){opacity:var(--_disabled-active-track-opacity);--md-elevation-level: var(--_disabled-handle-elevation)}.container{flex:1;display:flex;align-items:center;position:relative;block-size:var(--_state-layer-size);pointer-events:none;touch-action:none}.track,.tickmarks{position:absolute;inset:0;display:flex;align-items:center}.track::before,.tickmarks::before,.track::after,.tickmarks::after{position:absolute;content:"";inset-inline-start:calc(var(--_state-layer-size)/2 - var(--_with-tick-marks-container-size));inset-inline-end:calc(var(--_state-layer-size)/2 - var(--_with-tick-marks-container-size));background-size:calc((100% - var(--_with-tick-marks-container-size)*2)/var(--_tick-count)) 100%}.track::before,.tickmarks::before{block-size:var(--_inactive-track-height);border-radius:var(--_inactive-track-shape)}.track::before{background-color:var(--_inactive-track-color)}.tickmarks::before{background-image:radial-gradient(circle at var(--_with-tick-marks-container-size) center, var(--_with-tick-marks-inactive-container-color) 0, var(--_with-tick-marks-inactive-container-color) calc(var(--_with-tick-marks-container-size) / 2), transparent calc(var(--_with-tick-marks-container-size) / 2))}:host([disabled]) .track::before{opacity:calc(1/var(--_disabled-active-track-opacity)*var(--_disabled-inactive-track-opacity));background-color:var(--_disabled-inactive-track-color)}.track::after,.tickmarks::after{block-size:var(--_active-track-height);border-radius:var(--_active-track-shape);clip-path:inset(0 calc(var(--_with-tick-marks-container-size) * min((1 - var(--_end-fraction)) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * (1 - var(--_end-fraction))) 0 calc(var(--_with-tick-marks-container-size) * min(var(--_start-fraction) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * var(--_start-fraction)))}.track::after{background-color:var(--_active-track-color)}.tickmarks::after{background-image:radial-gradient(circle at var(--_with-tick-marks-container-size) center, var(--_with-tick-marks-active-container-color) 0, var(--_with-tick-marks-active-container-color) calc(var(--_with-tick-marks-container-size) / 2), transparent calc(var(--_with-tick-marks-container-size) / 2))}:host-context([dir=rtl]) .track::after{clip-path:inset(0 calc(var(--_with-tick-marks-container-size) * min(var(--_start-fraction) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * var(--_start-fraction)) 0 calc(var(--_with-tick-marks-container-size) * min((1 - var(--_end-fraction)) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * (1 - var(--_end-fraction))))}:host([dir=rtl]) .track::after{clip-path:inset(0 calc(var(--_with-tick-marks-container-size) * min(var(--_start-fraction) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * var(--_start-fraction)) 0 calc(var(--_with-tick-marks-container-size) * min((1 - var(--_end-fraction)) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * (1 - var(--_end-fraction))))}.track:dir(rtl)::after{clip-path:inset(0 calc(var(--_with-tick-marks-container-size) * min(var(--_start-fraction) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * var(--_start-fraction)) 0 calc(var(--_with-tick-marks-container-size) * min((1 - var(--_end-fraction)) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * (1 - var(--_end-fraction))))}:host-context([dir=rtl]) .tickmarks::after{clip-path:inset(0 calc(var(--_with-tick-marks-container-size) * min(var(--_start-fraction) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * var(--_start-fraction)) 0 calc(var(--_with-tick-marks-container-size) * min((1 - var(--_end-fraction)) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * (1 - var(--_end-fraction))))}:host([dir=rtl]) .tickmarks::after{clip-path:inset(0 calc(var(--_with-tick-marks-container-size) * min(var(--_start-fraction) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * var(--_start-fraction)) 0 calc(var(--_with-tick-marks-container-size) * min((1 - var(--_end-fraction)) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * (1 - var(--_end-fraction))))}.tickmarks:dir(rtl)::after{clip-path:inset(0 calc(var(--_with-tick-marks-container-size) * min(var(--_start-fraction) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * var(--_start-fraction)) 0 calc(var(--_with-tick-marks-container-size) * min((1 - var(--_end-fraction)) * 1000000000, 1) + (100% - var(--_with-tick-marks-container-size) * 2) * (1 - var(--_end-fraction))))}:host([disabled]) .track::after{background-color:var(--_disabled-active-track-color)}:host([disabled]) .tickmarks::before{background-image:radial-gradient(circle at var(--_with-tick-marks-container-size) center, var(--_with-tick-marks-disabled-container-color) 0, var(--_with-tick-marks-disabled-container-color) calc(var(--_with-tick-marks-container-size) / 2), transparent calc(var(--_with-tick-marks-container-size) / 2))}.handleContainerPadded{position:relative;block-size:100%;inline-size:100%;padding-inline:calc(var(--_state-layer-size)/2)}.handleContainerBlock{position:relative;block-size:100%;inline-size:100%}.handleContainer{position:absolute;inset-block-start:0;inset-block-end:0;inset-inline-start:calc(100%*var(--_start-fraction));inline-size:calc(100%*(var(--_end-fraction) - var(--_start-fraction)))}.handle{position:absolute;block-size:var(--_state-layer-size);inline-size:var(--_state-layer-size);border-radius:var(--_handle-shape);display:flex;place-content:center;place-items:center}.handleNub{position:absolute;height:var(--_handle-height);width:var(--_handle-width);border-radius:var(--_handle-shape);background:var(--_handle-color)}:host([disabled]) .handleNub{background:var(--_disabled-handle-color)}input.end:focus~.handleContainerPadded .handle.end>.handleNub,input.start:focus~.handleContainerPadded .handle.start>.handleNub{background:var(--_focus-handle-color)}.container>.handleContainerPadded .handle.hover>.handleNub{background:var(--_hover-handle-color)}:host(:not([disabled])) input.end:active~.handleContainerPadded .handle.end>.handleNub,:host(:not([disabled])) input.start:active~.handleContainerPadded .handle.start>.handleNub{background:var(--_pressed-handle-color)}.onTop.isOverlapping .label,.onTop.isOverlapping .label::before{outline:var(--_with-overlap-handle-outline-color) solid var(--_with-overlap-handle-outline-width)}.onTop.isOverlapping .handleNub{border:var(--_with-overlap-handle-outline-color) solid var(--_with-overlap-handle-outline-width)}.handle.start{inset-inline-start:calc(0px - var(--_state-layer-size)/2)}.handle.end{inset-inline-end:calc(0px - var(--_state-layer-size)/2)}.label{position:absolute;box-sizing:border-box;display:flex;padding:4px;place-content:center;place-items:center;border-radius:9999px;color:var(--_label-text-color);font-family:var(--_label-text-font);font-size:var(--_label-text-size);line-height:var(--_label-text-line-height);font-weight:var(--_label-text-weight);inset-block-end:100%;min-inline-size:var(--_label-container-height);min-block-size:var(--_label-container-height);background:var(--_label-container-color);transition:transform 100ms cubic-bezier(0.2, 0, 0, 1);transform-origin:center bottom;transform:scale(0)}:host(:focus-within) .label,.handleContainer.hover .label,:where(:has(input:active)) .label{transform:scale(1)}.label::before,.label::after{position:absolute;display:block;content:"";background:inherit}.label::before{inline-size:calc(var(--_label-container-height)/2);block-size:calc(var(--_label-container-height)/2);bottom:calc(var(--_label-container-height)/-10);transform:rotate(45deg)}.label::after{inset:0px;border-radius:inherit}.labelContent{z-index:1}input[type=range]{opacity:0;-webkit-tap-highlight-color:rgba(0,0,0,0);position:absolute;box-sizing:border-box;height:100%;width:100%;margin:0;background:rgba(0,0,0,0);cursor:pointer;pointer-events:auto;appearance:none}input[type=range]:focus{outline:none}::-webkit-slider-runnable-track{-webkit-appearance:none}::-moz-range-track{appearance:none}::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;block-size:var(--_handle-height);inline-size:var(--_handle-width);opacity:0;z-index:2}input.end::-webkit-slider-thumb{--_track-and-knob-padding: calc( (var(--_state-layer-size) - var(--_handle-width)) / 2 );--_x-translate: calc( var(--_track-and-knob-padding) - 2 * var(--_end-fraction) * var(--_track-and-knob-padding) );transform:translateX(var(--_x-translate))}:host-context([dir=rtl]) input.end::-webkit-slider-thumb{transform:translateX(calc(-1 * var(--_x-translate)))}:host([dir=rtl]) input.end::-webkit-slider-thumb{transform:translateX(calc(-1 * var(--_x-translate)))}input.end:dir(rtl)::-webkit-slider-thumb{transform:translateX(calc(-1 * var(--_x-translate)))}input.start::-webkit-slider-thumb{--_track-and-knob-padding: calc( (var(--_state-layer-size) - var(--_handle-width)) / 2 );--_x-translate: calc( var(--_track-and-knob-padding) - 2 * var(--_start-fraction) * var(--_track-and-knob-padding) );transform:translateX(var(--_x-translate))}:host-context([dir=rtl]) input.start::-webkit-slider-thumb{transform:translateX(calc(-1 * var(--_x-translate)))}:host([dir=rtl]) input.start::-webkit-slider-thumb{transform:translateX(calc(-1 * var(--_x-translate)))}input.start:dir(rtl)::-webkit-slider-thumb{transform:translateX(calc(-1 * var(--_x-translate)))}::-moz-range-thumb{appearance:none;block-size:var(--_state-layer-size);inline-size:var(--_state-layer-size);transform:scaleX(0);opacity:0;z-index:2}.ranged input.start{clip-path:inset(0 calc(100% - (var(--_state-layer-size) / 2 + (100% - var(--_state-layer-size)) * (var(--_start-fraction) + (var(--_end-fraction) - var(--_start-fraction)) / 2))) 0 0)}:host-context([dir=rtl]) .ranged input.start{clip-path:inset(0 0 0 calc(100% - (var(--_state-layer-size) / 2 + (100% - var(--_state-layer-size)) * (var(--_start-fraction) + (var(--_end-fraction) - var(--_start-fraction)) / 2))))}:host([dir=rtl]) .ranged input.start{clip-path:inset(0 0 0 calc(100% - (var(--_state-layer-size) / 2 + (100% - var(--_state-layer-size)) * (var(--_start-fraction) + (var(--_end-fraction) - var(--_start-fraction)) / 2))))}.ranged input.start:dir(rtl){clip-path:inset(0 0 0 calc(100% - (var(--_state-layer-size) / 2 + (100% - var(--_state-layer-size)) * (var(--_start-fraction) + (var(--_end-fraction) - var(--_start-fraction)) / 2))))}.ranged input.end{clip-path:inset(0 0 0 calc(var(--_state-layer-size) / 2 + (100% - var(--_state-layer-size)) * (var(--_start-fraction) + (var(--_end-fraction) - var(--_start-fraction)) / 2)))}:host-context([dir=rtl]) .ranged input.end{clip-path:inset(0 calc(var(--_state-layer-size) / 2 + (100% - var(--_state-layer-size)) * (var(--_start-fraction) + (var(--_end-fraction) - var(--_start-fraction)) / 2)) 0 0)}:host([dir=rtl]) .ranged input.end{clip-path:inset(0 calc(var(--_state-layer-size) / 2 + (100% - var(--_state-layer-size)) * (var(--_start-fraction) + (var(--_end-fraction) - var(--_start-fraction)) / 2)) 0 0)}.ranged input.end:dir(rtl){clip-path:inset(0 calc(var(--_state-layer-size) / 2 + (100% - var(--_state-layer-size)) * (var(--_start-fraction) + (var(--_end-fraction) - var(--_start-fraction)) / 2)) 0 0)}.onTop{z-index:1}.handle{--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-color: var(--_pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity)}md-ripple{border-radius:50%;height:var(--_state-layer-size);width:var(--_state-layer-size)}/*# sourceMappingURL=slider-styles.css.map */
 `;
 //# sourceMappingURL=slider-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/slider/slider.js
@@ -11725,11 +12141,349 @@ const slider_styles_css_styles = i `:host{--_active-track-color: var(--md-slider
  */
 let MdSlider = class MdSlider extends Slider {
 };
-MdSlider.styles = [slider_styles_css_styles, slider_internal_forced_colors_styles_css_styles];
+MdSlider.styles = [slider_styles_css_styles, internal_forced_colors_styles_css_styles];
 MdSlider = __decorate([
     t('md-slider')
 ], MdSlider);
 //# sourceMappingURL=slider.js.map
+;// CONCATENATED MODULE: ./node_modules/@material/web/switch/internal/switch.js
+/**
+ * @license
+ * Copyright 2021 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+
+
+
+
+
+
+
+
+
+// Separate variable needed for closure.
+const switchBaseClass = mixinFormAssociated(mixinElementInternals(lit_element_s));
+/**
+ * @fires input {InputEvent} Fired whenever `selected` changes due to user
+ * interaction (bubbles and composed).
+ * @fires change {Event} Fired whenever `selected` changes due to user
+ * interaction (bubbles).
+ */
+class Switch extends switchBaseClass {
+    /**
+     * Returns a ValidityState object that represents the validity states of the
+     * switch.
+     *
+     * Note that switches will only set `valueMissing` if `required` and not
+     * selected.
+     *
+     * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#validation
+     */
+    get validity() {
+        this.syncValidity();
+        return this[internals].validity;
+    }
+    /**
+     * Returns the native validation error message.
+     *
+     * https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process
+     */
+    get validationMessage() {
+        this.syncValidity();
+        return this[internals].validationMessage;
+    }
+    /**
+     * Returns whether an element will successfully validate based on forms
+     * validation rules and constraints.
+     *
+     * https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process
+     */
+    get willValidate() {
+        this.syncValidity();
+        return this[internals].willValidate;
+    }
+    constructor() {
+        super();
+        /**
+         * Puts the switch in the selected state and sets the form submission value to
+         * the `value` property.
+         */
+        this.selected = false;
+        /**
+         * Shows both the selected and deselected icons.
+         */
+        this.icons = false;
+        /**
+         * Shows only the selected icon, and not the deselected icon. If `true`,
+         * overrides the behavior of the `icons` property.
+         */
+        this.showOnlySelectedIcon = false;
+        /**
+         * When true, require the switch to be selected when participating in
+         * form submission.
+         *
+         * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#validation
+         */
+        this.required = false;
+        /**
+         * The value associated with this switch on form submission. `null` is
+         * submitted when `selected` is `false`.
+         */
+        this.value = 'on';
+        // Needed for Safari, see https://bugs.webkit.org/show_bug.cgi?id=261432
+        // Replace with this[internals].validity.customError when resolved.
+        this.hasCustomValidityError = false;
+        if (!is_server_o) {
+            this.addEventListener('click', (event) => {
+                if (!isActivationClick(event)) {
+                    return;
+                }
+                this.focus();
+                dispatchActivationClick(this.input);
+            });
+        }
+    }
+    /**
+     * Checks the switch's native validation and returns whether or not the
+     * element is valid.
+     *
+     * If invalid, this method will dispatch the `invalid` event.
+     *
+     * https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/checkValidity
+     *
+     * @return true if the switch is valid, or false if not.
+     */
+    checkValidity() {
+        this.syncValidity();
+        return this[internals].checkValidity();
+    }
+    /**
+     * Checks the switch's native validation and returns whether or not the
+     * element is valid.
+     *
+     * If invalid, this method will dispatch the `invalid` event.
+     *
+     * The `validationMessage` is reported to the user by the browser. Use
+     * `setCustomValidity()` to customize the `validationMessage`.
+     *
+     * https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/reportValidity
+     *
+     * @return true if the switch is valid, or false if not.
+     */
+    reportValidity() {
+        this.syncValidity();
+        return this[internals].reportValidity();
+    }
+    /**
+     * Sets the switch's native validation error message. This is used to
+     * customize `validationMessage`.
+     *
+     * When the error is not an empty string, the switch is considered invalid
+     * and `validity.customError` will be true.
+     *
+     * https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setCustomValidity
+     *
+     * @param error The error message to display.
+     */
+    setCustomValidity(error) {
+        this.hasCustomValidityError = !!error;
+        this[internals].setValidity({ customError: !!error }, error, this.getInput());
+    }
+    render() {
+        // NOTE: buttons must use only [phrasing
+        // content](https://html.spec.whatwg.org/multipage/dom.html#phrasing-content)
+        // children, which includes custom elements, but not `div`s
+        return x `
+      <div class="switch ${class_map_e(this.getRenderClasses())}">
+        <input
+          id="switch"
+          class="touch"
+          type="checkbox"
+          role="switch"
+          aria-label=${this.ariaLabel || T}
+          ?checked=${this.selected}
+          ?disabled=${this.disabled}
+          ?required=${this.required}
+          @change=${this.handleChange} />
+
+        <md-focus-ring part="focus-ring" for="switch"></md-focus-ring>
+        <span class="track"> ${this.renderHandle()} </span>
+      </div>
+    `;
+    }
+    updated() {
+        // Sync validity when properties change, since validation properties may
+        // have changed.
+        this.syncValidity();
+    }
+    getRenderClasses() {
+        return {
+            'selected': this.selected,
+            'unselected': !this.selected,
+            'disabled': this.disabled,
+        };
+    }
+    renderHandle() {
+        const classes = {
+            'with-icon': this.showOnlySelectedIcon ? this.selected : this.icons,
+        };
+        return x `
+      ${this.renderTouchTarget()}
+      <span class="handle-container">
+        <md-ripple for="switch" ?disabled="${this.disabled}"></md-ripple>
+        <span class="handle ${class_map_e(classes)}">
+          ${this.shouldShowIcons() ? this.renderIcons() : x ``}
+        </span>
+      </span>
+    `;
+    }
+    renderIcons() {
+        return x `
+      <div class="icons">
+        ${this.renderOnIcon()}
+        ${this.showOnlySelectedIcon ? x `` : this.renderOffIcon()}
+      </div>
+    `;
+    }
+    /**
+     * https://fonts.google.com/icons?selected=Material%20Symbols%20Outlined%3Acheck%3AFILL%400%3Bwght%40500%3BGRAD%400%3Bopsz%4024
+     */
+    renderOnIcon() {
+        return x `
+      <svg class="icon icon--on" viewBox="0 0 24 24">
+        <path
+          d="M9.55 18.2 3.65 12.3 5.275 10.675 9.55 14.95 18.725 5.775 20.35 7.4Z" />
+      </svg>
+    `;
+    }
+    /**
+     * https://fonts.google.com/icons?selected=Material%20Symbols%20Outlined%3Aclose%3AFILL%400%3Bwght%40500%3BGRAD%400%3Bopsz%4024
+     */
+    renderOffIcon() {
+        return x `
+      <svg class="icon icon--off" viewBox="0 0 24 24">
+        <path
+          d="M6.4 19.2 4.8 17.6 10.4 12 4.8 6.4 6.4 4.8 12 10.4 17.6 4.8 19.2 6.4 13.6 12 19.2 17.6 17.6 19.2 12 13.6Z" />
+      </svg>
+    `;
+    }
+    renderTouchTarget() {
+        return x `<span class="touch"></span>`;
+    }
+    shouldShowIcons() {
+        return this.icons || this.showOnlySelectedIcon;
+    }
+    handleChange(event) {
+        const target = event.target;
+        this.selected = target.checked;
+        redispatchEvent(this, event);
+    }
+    syncValidity() {
+        // Sync the internal <input>'s validity and the host's ElementInternals
+        // validity. We do this to re-use native `<input>` validation messages.
+        const input = this.getInput();
+        if (this.hasCustomValidityError) {
+            input.setCustomValidity(this[internals].validationMessage);
+        }
+        else {
+            input.setCustomValidity('');
+        }
+        this[internals].setValidity(input.validity, input.validationMessage, this.getInput());
+    }
+    getInput() {
+        if (!this.input) {
+            // If the input is not yet defined, synchronously render.
+            this.connectedCallback();
+            this.performUpdate();
+        }
+        if (this.isUpdatePending) {
+            // If there are pending updates, synchronously perform them. This ensures
+            // that constraint validation properties (like `required`) are synced
+            // before interacting with input APIs that depend on them.
+            this.scheduleUpdate();
+        }
+        return this.input;
+    }
+    [getFormValue]() {
+        return this.selected ? this.value : null;
+    }
+    [getFormState]() {
+        return String(this.selected);
+    }
+    formResetCallback() {
+        // The selected property does not reflect, so the original attribute set by
+        // the user is used to determine the default value.
+        this.selected = this.hasAttribute('selected');
+    }
+    formStateRestoreCallback(state) {
+        this.selected = state === 'true';
+    }
+}
+(() => {
+    requestUpdateOnAriaChange(Switch);
+})();
+/** @nocollapse */
+Switch.shadowRootOptions = {
+    mode: 'open',
+    delegatesFocus: true,
+};
+__decorate([
+    property_n({ type: Boolean })
+], Switch.prototype, "selected", void 0);
+__decorate([
+    property_n({ type: Boolean })
+], Switch.prototype, "icons", void 0);
+__decorate([
+    property_n({ type: Boolean, attribute: 'show-only-selected-icon' })
+], Switch.prototype, "showOnlySelectedIcon", void 0);
+__decorate([
+    property_n({ type: Boolean })
+], Switch.prototype, "required", void 0);
+__decorate([
+    property_n()
+], Switch.prototype, "value", void 0);
+__decorate([
+    query_e('input')
+], Switch.prototype, "input", void 0);
+//# sourceMappingURL=switch.js.map
+;// CONCATENATED MODULE: ./node_modules/@material/web/switch/internal/switch-styles.css.js
+/**
+  * @license
+  * Copyright 2022 Google LLC
+  * SPDX-License-Identifier: Apache-2.0
+  */
+
+const switch_styles_css_styles = i `@layer styles, hcm;@layer styles{:host{--_disabled-selected-handle-color: var(--md-switch-disabled-selected-handle-color, var(--md-sys-color-surface, #fef7ff));--_disabled-selected-handle-opacity: var(--md-switch-disabled-selected-handle-opacity, 1);--_disabled-selected-icon-color: var(--md-switch-disabled-selected-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-selected-icon-opacity: var(--md-switch-disabled-selected-icon-opacity, 0.38);--_disabled-selected-track-color: var(--md-switch-disabled-selected-track-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-track-opacity: var(--md-switch-disabled-track-opacity, 0.12);--_handle-shape: var(--md-switch-handle-shape, 9999px);--_pressed-handle-height: var(--md-switch-pressed-handle-height, 28px);--_pressed-handle-width: var(--md-switch-pressed-handle-width, 28px);--_selected-focus-handle-color: var(--md-switch-selected-focus-handle-color, var(--md-sys-color-primary-container, #eaddff));--_selected-focus-icon-color: var(--md-switch-selected-focus-icon-color, var(--md-sys-color-on-primary-container, #21005d));--_selected-focus-track-color: var(--md-switch-selected-focus-track-color, var(--md-sys-color-primary, #6750a4));--_selected-handle-color: var(--md-switch-selected-handle-color, var(--md-sys-color-on-primary, #fff));--_selected-handle-height: var(--md-switch-selected-handle-height, 24px);--_selected-handle-width: var(--md-switch-selected-handle-width, 24px);--_selected-hover-handle-color: var(--md-switch-selected-hover-handle-color, var(--md-sys-color-primary-container, #eaddff));--_selected-hover-icon-color: var(--md-switch-selected-hover-icon-color, var(--md-sys-color-on-primary-container, #21005d));--_selected-hover-state-layer-color: var(--md-switch-selected-hover-state-layer-color, var(--md-sys-color-primary, #6750a4));--_selected-hover-state-layer-opacity: var(--md-switch-selected-hover-state-layer-opacity, 0.08);--_selected-hover-track-color: var(--md-switch-selected-hover-track-color, var(--md-sys-color-primary, #6750a4));--_selected-icon-color: var(--md-switch-selected-icon-color, var(--md-sys-color-on-primary-container, #21005d));--_selected-icon-size: var(--md-switch-selected-icon-size, 16px);--_selected-pressed-handle-color: var(--md-switch-selected-pressed-handle-color, var(--md-sys-color-primary-container, #eaddff));--_selected-pressed-icon-color: var(--md-switch-selected-pressed-icon-color, var(--md-sys-color-on-primary-container, #21005d));--_selected-pressed-state-layer-color: var(--md-switch-selected-pressed-state-layer-color, var(--md-sys-color-primary, #6750a4));--_selected-pressed-state-layer-opacity: var(--md-switch-selected-pressed-state-layer-opacity, 0.12);--_selected-pressed-track-color: var(--md-switch-selected-pressed-track-color, var(--md-sys-color-primary, #6750a4));--_selected-track-color: var(--md-switch-selected-track-color, var(--md-sys-color-primary, #6750a4));--_state-layer-shape: var(--md-switch-state-layer-shape, 9999px);--_state-layer-size: var(--md-switch-state-layer-size, 40px);--_track-height: var(--md-switch-track-height, 32px);--_track-outline-width: var(--md-switch-track-outline-width, 2px);--_track-shape: var(--md-switch-track-shape, 9999px);--_track-width: var(--md-switch-track-width, 52px);--_with-icon-handle-height: var(--md-switch-with-icon-handle-height, 24px);--_with-icon-handle-width: var(--md-switch-with-icon-handle-width, 24px);--_disabled-handle-color: var(--md-switch-disabled-handle-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-handle-opacity: var(--md-switch-disabled-handle-opacity, 0.38);--_disabled-icon-color: var(--md-switch-disabled-icon-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_disabled-icon-opacity: var(--md-switch-disabled-icon-opacity, 0.38);--_disabled-track-color: var(--md-switch-disabled-track-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_disabled-track-outline-color: var(--md-switch-disabled-track-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_focus-handle-color: var(--md-switch-focus-handle-color, var(--md-sys-color-on-surface-variant, #49454f));--_focus-icon-color: var(--md-switch-focus-icon-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_focus-track-color: var(--md-switch-focus-track-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_focus-track-outline-color: var(--md-switch-focus-track-outline-color, var(--md-sys-color-outline, #79747e));--_handle-color: var(--md-switch-handle-color, var(--md-sys-color-outline, #79747e));--_handle-height: var(--md-switch-handle-height, 16px);--_handle-width: var(--md-switch-handle-width, 16px);--_hover-handle-color: var(--md-switch-hover-handle-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-icon-color: var(--md-switch-hover-icon-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_hover-state-layer-color: var(--md-switch-hover-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-state-layer-opacity: var(--md-switch-hover-state-layer-opacity, 0.08);--_hover-track-color: var(--md-switch-hover-track-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_hover-track-outline-color: var(--md-switch-hover-track-outline-color, var(--md-sys-color-outline, #79747e));--_icon-color: var(--md-switch-icon-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_icon-size: var(--md-switch-icon-size, 16px);--_pressed-handle-color: var(--md-switch-pressed-handle-color, var(--md-sys-color-on-surface-variant, #49454f));--_pressed-icon-color: var(--md-switch-pressed-icon-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_pressed-state-layer-color: var(--md-switch-pressed-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--_pressed-state-layer-opacity: var(--md-switch-pressed-state-layer-opacity, 0.12);--_pressed-track-color: var(--md-switch-pressed-track-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_pressed-track-outline-color: var(--md-switch-pressed-track-outline-color, var(--md-sys-color-outline, #79747e));--_track-color: var(--md-switch-track-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_track-outline-color: var(--md-switch-track-outline-color, var(--md-sys-color-outline, #79747e));--_handle-shape-start-start: var( --md-switch-handle-shape-start-start, var(--_handle-shape) );--_handle-shape-start-end: var( --md-switch-handle-shape-start-end, var(--_handle-shape) );--_handle-shape-end-end: var( --md-switch-handle-shape-end-end, var(--_handle-shape) );--_handle-shape-end-start: var( --md-switch-handle-shape-end-start, var(--_handle-shape) );--_track-shape-start-start: var( --md-switch-track-shape-start-start, var(--_track-shape) );--_track-shape-start-end: var( --md-switch-track-shape-start-end, var(--_track-shape) );--_track-shape-end-end: var( --md-switch-track-shape-end-end, var(--_track-shape) );--_track-shape-end-start: var( --md-switch-track-shape-end-start, var(--_track-shape) );display:inline-flex;outline:none;vertical-align:top;-webkit-tap-highlight-color:rgba(0,0,0,0);cursor:pointer}:host([disabled]){cursor:default}:host([touch-target=wrapper]){margin:max(0px,(48px - var(--_track-height))/2) 0px}md-focus-ring{--md-focus-ring-shape-start-start: var(--_track-shape-start-start);--md-focus-ring-shape-start-end: var(--_track-shape-start-end);--md-focus-ring-shape-end-end: var(--_track-shape-end-end);--md-focus-ring-shape-end-start: var(--_track-shape-end-start)}.switch{align-items:center;display:inline-flex;flex-shrink:0;position:relative;width:var(--_track-width);height:var(--_track-height);border-start-start-radius:var(--_track-shape-start-start);border-start-end-radius:var(--_track-shape-start-end);border-end-end-radius:var(--_track-shape-end-end);border-end-start-radius:var(--_track-shape-end-start)}input{appearance:none;height:48px;outline:none;margin:0;position:absolute;width:100%;z-index:1;cursor:inherit}:host([touch-target=none]) input{display:none}}@layer styles{.track{position:absolute;width:100%;height:100%;box-sizing:border-box;border-radius:inherit;display:flex;justify-content:center;align-items:center}.track::before{content:"";display:flex;position:absolute;height:100%;width:100%;border-radius:inherit;box-sizing:border-box;transition-property:opacity,background-color;transition-timing-function:linear;transition-duration:67ms}.disabled .track{background-color:rgba(0,0,0,0);border-color:rgba(0,0,0,0)}.disabled .track::before,.disabled .track::after{transition:none;opacity:var(--_disabled-track-opacity)}.disabled .track::before{background-clip:content-box}.selected .track::before{background-color:var(--_selected-track-color)}.selected:hover .track::before{background-color:var(--_selected-hover-track-color)}.selected:focus-within .track::before{background-color:var(--_selected-focus-track-color)}.selected:active .track::before{background-color:var(--_selected-pressed-track-color)}.selected.disabled .track{background-clip:border-box}.selected.disabled .track::before{background-color:var(--_disabled-selected-track-color)}.unselected .track::before{background-color:var(--_track-color);border-color:var(--_track-outline-color);border-style:solid;border-width:var(--_track-outline-width)}.unselected:hover .track::before{background-color:var(--_hover-track-color);border-color:var(--_hover-track-outline-color)}.unselected:focus-visible .track::before{background-color:var(--_focus-track-color);border-color:var(--_focus-track-outline-color)}.unselected:active .track::before{background-color:var(--_pressed-track-color);border-color:var(--_pressed-track-outline-color)}.unselected.disabled .track::before{background-color:var(--_disabled-track-color);border-color:var(--_disabled-track-outline-color)}}@layer hcm{@media(forced-colors: active){.selected .track::before{background:ButtonText;border-color:ButtonText}.disabled .track::before{border-color:GrayText;opacity:1}.disabled.selected .track::before{background:GrayText}}}@layer styles{.handle-container{display:flex;place-content:center;place-items:center;position:relative;transition:margin 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275)}.selected .handle-container{margin-inline-start:calc(var(--_track-width) - var(--_track-height))}.unselected .handle-container{margin-inline-end:calc(var(--_track-width) - var(--_track-height))}.disabled .handle-container{transition:none}.handle{border-start-start-radius:var(--_handle-shape-start-start);border-start-end-radius:var(--_handle-shape-start-end);border-end-end-radius:var(--_handle-shape-end-end);border-end-start-radius:var(--_handle-shape-end-start);height:var(--_handle-height);width:var(--_handle-width);transform-origin:center;transition-property:height,width;transition-duration:250ms,250ms;transition-timing-function:cubic-bezier(0.2, 0, 0, 1),cubic-bezier(0.2, 0, 0, 1);z-index:0}.handle::before{content:"";display:flex;inset:0;position:absolute;border-radius:inherit;box-sizing:border-box;transition:background-color 67ms linear}.disabled .handle,.disabled .handle::before{transition:none}.selected .handle{height:var(--_selected-handle-height);width:var(--_selected-handle-width)}.handle.with-icon{height:var(--_with-icon-handle-height);width:var(--_with-icon-handle-width)}.selected:not(.disabled):active .handle,.unselected:not(.disabled):active .handle{height:var(--_pressed-handle-height);width:var(--_pressed-handle-width);transition-timing-function:linear;transition-duration:100ms}.selected .handle::before{background-color:var(--_selected-handle-color)}.selected:hover .handle::before{background-color:var(--_selected-hover-handle-color)}.selected:focus-within .handle::before{background-color:var(--_selected-focus-handle-color)}.selected:active .handle::before{background-color:var(--_selected-pressed-handle-color)}.selected.disabled .handle::before{background-color:var(--_disabled-selected-handle-color);opacity:var(--_disabled-selected-handle-opacity)}.unselected .handle::before{background-color:var(--_handle-color)}.unselected:hover .handle::before{background-color:var(--_hover-handle-color)}.unselected:focus-within .handle::before{background-color:var(--_focus-handle-color)}.unselected:active .handle::before{background-color:var(--_pressed-handle-color)}.unselected.disabled .handle::before{background-color:var(--_disabled-handle-color);opacity:var(--_disabled-handle-opacity)}md-ripple{border-radius:var(--_state-layer-shape);height:var(--_state-layer-size);inset:unset;width:var(--_state-layer-size)}.selected md-ripple{--md-ripple-hover-color: var(--_selected-hover-state-layer-color);--md-ripple-pressed-color: var(--_selected-pressed-state-layer-color);--md-ripple-hover-opacity: var(--_selected-hover-state-layer-opacity);--md-ripple-pressed-opacity: var(--_selected-pressed-state-layer-opacity)}.unselected md-ripple{--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-pressed-color: var(--_pressed-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity)}}@layer hcm{@media(forced-colors: active){.unselected .handle::before{background:ButtonText}.disabled .handle::before{opacity:1}.disabled.unselected .handle::before{background:GrayText}}}@layer styles{.icons{position:relative;height:100%;width:100%}.icon{position:absolute;inset:0;margin:auto;transition:fill 67ms linear,opacity 33ms linear,transform 167ms cubic-bezier(0.2, 0, 0, 1);opacity:0}.disabled .icon{transition:none}.selected .icon--on,.unselected .icon--off{opacity:1}.unselected .handle:not(.with-icon) .icon--on{transform:rotate(-45deg)}.icon--off{width:var(--_icon-size);height:var(--_icon-size);fill:var(--_icon-color)}.unselected:hover .icon--off{fill:var(--_hover-icon-color)}.unselected:focus-within .icon--off{fill:var(--_focus-icon-color)}.unselected:active .icon--off{fill:var(--_pressed-icon-color)}.unselected.disabled .icon--off{fill:var(--_disabled-icon-color);opacity:var(--_disabled-icon-opacity)}.icon--on{width:var(--_selected-icon-size);height:var(--_selected-icon-size);fill:var(--_selected-icon-color)}.selected:hover .icon--on{fill:var(--_selected-hover-icon-color)}.selected:focus-within .icon--on{fill:var(--_selected-focus-icon-color)}.selected:active .icon--on{fill:var(--_selected-pressed-icon-color)}.selected.disabled .icon--on{fill:var(--_disabled-selected-icon-color);opacity:var(--_disabled-selected-icon-opacity)}}@layer hcm{@media(forced-colors: active){.icon--off{fill:Canvas}.icon--on{fill:ButtonText}.disabled.unselected .icon--off,.disabled.selected .icon--on{opacity:1}.disabled .icon--on{fill:GrayText}}}/*# sourceMappingURL=switch-styles.css.map */
+`;
+//# sourceMappingURL=switch-styles.css.js.map
+;// CONCATENATED MODULE: ./node_modules/@material/web/switch/switch.js
+/**
+ * @license
+ * Copyright 2021 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+
+
+
+/**
+ * @summary Switches toggle the state of a single item on or off.
+ *
+ * @description
+ * There's one type of switch in Material. Use this selection control when the
+ * user needs to toggle a single item on or off.
+ *
+ * @final
+ * @suppress {visibility}
+ */
+let MdSwitch = class MdSwitch extends Switch {
+};
+MdSwitch.styles = [switch_styles_css_styles];
+MdSwitch = __decorate([
+    t('md-switch')
+], MdSwitch);
+//# sourceMappingURL=switch.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/tabs/internal/tab.js
 /**
  * @license
@@ -11737,6 +12491,7 @@ MdSlider = __decorate([
  * SPDX-License-Identifier: Apache-2.0
  */
 var tab_a;
+
 
 
 
@@ -11756,10 +12511,12 @@ const INDICATOR = Symbol('indicator');
  * previously selected tab.
  */
 const ANIMATE_INDICATOR = Symbol('animateIndicator');
+// Separate variable needed for closure.
+const tabBaseClass = mixinFocusable(lit_element_s);
 /**
  * Tab component.
  */
-class Tab extends lit_element_s {
+class Tab extends tabBaseClass {
     /**
      * TODO(b/293476210): remove after migrating
      * @deprecated use `active`
@@ -11773,6 +12530,12 @@ class Tab extends lit_element_s {
     constructor() {
         super();
         /**
+         * The attribute `md-tab` indicates that the element is a tab for the parent
+         * element, `<md-tabs>`. Make sure if you're implementing your own `md-tab`
+         * component that you have an `md-tab` attribute set.
+         */
+        this.isTab = true;
+        /**
          * Whether or not the tab is selected.
          **/
         this.active = false;
@@ -11785,7 +12548,9 @@ class Tab extends lit_element_s {
          */
         this.iconOnly = false;
         this.fullWidthIndicator = false;
-        this.internals = polyfillElementInternalsAria(this, this /* needed for closure */.attachInternals());
+        this.internals = polyfillElementInternalsAria(this, 
+        // Cast needed for closure
+        this.attachInternals());
         if (!is_server_o) {
             this.internals.role = 'tab';
             this.addEventListener('keydown', this.handleKeydown.bind(this));
@@ -11793,20 +12558,22 @@ class Tab extends lit_element_s {
     }
     render() {
         const indicator = x `<div class="indicator"></div>`;
-        return x `
-      <div class="button" role="presentation" @click=${this.handleContentClick}>
-        <md-focus-ring part="focus-ring" inward
-            .control=${this}></md-focus-ring>
-        <md-elevation></md-elevation>
-        <md-ripple .control=${this}></md-ripple>
-        <div class="content ${class_map_e(this.getContentClasses())}"
-            role="presentation">
-          <slot name="icon" @slotchange=${this.handleIconSlotChange}></slot>
-          <slot @slotchange=${this.handleSlotChange}></slot>
-          ${this.fullWidthIndicator ? T : indicator}
-        </div>
-        ${this.fullWidthIndicator ? indicator : T}
-      </div>`;
+        return x `<div
+      class="button"
+      role="presentation"
+      @click=${this.handleContentClick}>
+      <md-focus-ring part="focus-ring" inward .control=${this}></md-focus-ring>
+      <md-elevation></md-elevation>
+      <md-ripple .control=${this}></md-ripple>
+      <div
+        class="content ${class_map_e(this.getContentClasses())}"
+        role="presentation">
+        <slot name="icon" @slotchange=${this.handleIconSlotChange}></slot>
+        <slot @slotchange=${this.handleSlotChange}></slot>
+        ${this.fullWidthIndicator ? T : indicator}
+      </div>
+      ${this.fullWidthIndicator ? indicator : T}
+    </div>`;
     }
     getContentClasses() {
         return {
@@ -11839,12 +12606,15 @@ class Tab extends lit_element_s {
         if (!this[INDICATOR]) {
             return;
         }
-        this[INDICATOR].getAnimations().forEach(a => {
+        this[INDICATOR].getAnimations().forEach((a) => {
             a.cancel();
         });
         const frames = this.getKeyframes(previousTab);
         if (frames !== null) {
-            this[INDICATOR].animate(frames, { duration: 250, easing: EASING.EMPHASIZED });
+            this[INDICATOR].animate(frames, {
+                duration: 250,
+                easing: EASING.EMPHASIZED,
+            });
         }
     }
     getKeyframes(previousTab) {
@@ -11860,7 +12630,9 @@ class Tab extends lit_element_s {
         const toPos = toRect.left;
         const toExtent = toRect.width;
         const scale = fromExtent / toExtent;
-        if (!reduceMotion && fromPos !== undefined && toPos !== undefined &&
+        if (!reduceMotion &&
+            fromPos !== undefined &&
+            toPos !== undefined &&
             !isNaN(scale)) {
             from['transform'] = `translateX(${(fromPos - toPos).toFixed(4)}px) scaleX(${scale.toFixed(4)})`;
         }
@@ -11889,8 +12661,11 @@ class Tab extends lit_element_s {
     }
 }
 (() => {
-    setupHostAria(Tab);
+    polyfillARIAMixin(Tab);
 })();
+__decorate([
+    property_n({ type: Boolean, reflect: true, attribute: 'md-tab' })
+], Tab.prototype, "isTab", void 0);
 __decorate([
     property_n({ type: Boolean, reflect: true })
 ], Tab.prototype, "active", void 0);
@@ -11967,7 +12742,7 @@ const primary_tab_styles_css_styles = i `:host{--_active-indicator-color: var(--
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const tab_styles_css_styles = i `:host{display:inline-flex;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0);vertical-align:middle;user-select:none;--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-color: var(--_pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity)}md-focus-ring{--md-focus-ring-shape: 8px}:host([active]) md-focus-ring{margin-bottom:calc(var(--_active-indicator-height) + 1px)}.button{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;width:100%;position:relative;padding:0 16px;margin:0;z-index:0;font-family:var(--_label-text-font);font-size:var(--_label-text-size);line-height:var(--_label-text-line-height);font-weight:var(--_label-text-weight);color:var(--_label-text-color)}.button::before{background:var(--_container-color);content:"";inset:0;position:absolute;z-index:-1}.button::before,md-ripple{border-start-start-radius:var(--_container-shape-start-start);border-start-end-radius:var(--_container-shape-start-end);border-end-end-radius:var(--_container-shape-end-end);border-end-start-radius:var(--_container-shape-end-start)}.content{position:relative;box-sizing:border-box;display:inline-flex;flex-direction:row;align-items:center;justify-content:center;height:var(--_container-height);gap:8px}.indicator{position:absolute;box-sizing:border-box;z-index:-1;transform-origin:bottom left;background:var(--_active-indicator-color);border-radius:var(--_active-indicator-shape);height:var(--_active-indicator-height);inset:auto 0 0 0;opacity:0}.button ::slotted([slot=icon]){display:inline-flex;position:relative;writing-mode:horizontal-tb;fill:currentColor;color:var(--_icon-color);font-size:var(--_icon-size);width:var(--_icon-size);height:var(--_icon-size)}.button:hover{color:var(--_hover-label-text-color);cursor:pointer}.button:hover ::slotted([slot=icon]){color:var(--_hover-icon-color)}.button:focus{color:var(--_focus-label-text-color)}.button:focus ::slotted([slot=icon]){color:var(--_focus-icon-color)}.button:active{color:var(--_pressed-label-text-color);outline:none}.button:active ::slotted([slot=icon]){color:var(--_pressed-icon-color)}:host([active]) .indicator{opacity:1}:host([active]) .button{color:var(--_active-label-text-color);--md-elevation-level: var(--_container-elevation);--md-ripple-hover-color: var(--_active-hover-state-layer-color);--md-ripple-hover-opacity: var(--_active-hover-state-layer-opacity);--md-ripple-pressed-color: var(--_active-pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_active-pressed-state-layer-opacity)}:host([active]) .button ::slotted([slot=icon]){color:var(--_active-icon-color)}:host([active]) .button:hover{color:var(--_active-hover-label-text-color)}:host([active]) .button:hover ::slotted([slot=icon]){color:var(--_active-hover-icon-color)}:host([active]) .button:focus{color:var(--_active-focus-label-text-color)}:host([active]) .button:focus ::slotted([slot=icon]){color:var(--_active-focus-icon-color)}:host([active]) .button:active{color:var(--_active-pressed-label-text-color)}:host([active]) .button:active ::slotted([slot=icon]){color:var(--_active-pressed-icon-color)}:host,::slotted(*){white-space:nowrap}@media(forced-colors: active){.indicator{background:CanvasText}}/*# sourceMappingURL=tab-styles.css.map */
+const tab_styles_css_styles = i `:host{display:inline-flex;align-items:center;justify-content:center;outline:none;padding:0 16px;position:relative;-webkit-tap-highlight-color:rgba(0,0,0,0);vertical-align:middle;user-select:none;font-family:var(--_label-text-font);font-size:var(--_label-text-size);line-height:var(--_label-text-line-height);font-weight:var(--_label-text-weight);color:var(--_label-text-color);z-index:0;--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-color: var(--_pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity)}md-focus-ring{--md-focus-ring-shape: 8px}:host([active]) md-focus-ring{margin-bottom:calc(var(--_active-indicator-height) + 1px)}.button::before{background:var(--_container-color);content:"";inset:0;position:absolute;z-index:-1}.button::before,md-ripple,md-elevation{border-start-start-radius:var(--_container-shape-start-start);border-start-end-radius:var(--_container-shape-start-end);border-end-end-radius:var(--_container-shape-end-end);border-end-start-radius:var(--_container-shape-end-start)}.content{position:relative;box-sizing:border-box;display:inline-flex;flex-direction:row;align-items:center;justify-content:center;height:var(--_container-height);gap:8px}.indicator{position:absolute;box-sizing:border-box;z-index:-1;transform-origin:bottom left;background:var(--_active-indicator-color);border-radius:var(--_active-indicator-shape);height:var(--_active-indicator-height);inset:auto 0 0 0;opacity:0}::slotted([slot=icon]){display:inline-flex;position:relative;writing-mode:horizontal-tb;fill:currentColor;color:var(--_icon-color);font-size:var(--_icon-size);width:var(--_icon-size);height:var(--_icon-size)}:host(:hover){color:var(--_hover-label-text-color);cursor:pointer}:host(:hover) ::slotted([slot=icon]){color:var(--_hover-icon-color)}:host(:focus){color:var(--_focus-label-text-color)}:host(:focus) ::slotted([slot=icon]){color:var(--_focus-icon-color)}:host(:active){color:var(--_pressed-label-text-color)}:host(:active) ::slotted([slot=icon]){color:var(--_pressed-icon-color)}:host([active]) .indicator{opacity:1}:host([active]){color:var(--_active-label-text-color);--md-elevation-level: var(--_container-elevation);--md-ripple-hover-color: var(--_active-hover-state-layer-color);--md-ripple-hover-opacity: var(--_active-hover-state-layer-opacity);--md-ripple-pressed-color: var(--_active-pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_active-pressed-state-layer-opacity)}:host([active]) ::slotted([slot=icon]){color:var(--_active-icon-color)}:host([active]:hover){color:var(--_active-hover-label-text-color)}:host([active]:hover) ::slotted([slot=icon]){color:var(--_active-hover-icon-color)}:host([active]:focus){color:var(--_active-focus-label-text-color)}:host([active]:focus) ::slotted([slot=icon]){color:var(--_active-focus-icon-color)}:host([active]:active){color:var(--_active-pressed-label-text-color)}:host([active]:active) ::slotted([slot=icon]){color:var(--_active-pressed-icon-color)}:host,::slotted(*){white-space:nowrap}@media(forced-colors: active){.indicator{background:CanvasText}}/*# sourceMappingURL=tab-styles.css.map */
 `;
 //# sourceMappingURL=tab-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/tabs/primary-tab.js
@@ -12056,12 +12831,12 @@ MdSecondaryTab = __decorate([
 
 
 /**
- * @fires change Fired when the selected tab changes. The target's selected or
+ * @fires change {Event} Fired when the selected tab changes. The target's selected or
  * selectedItem and previousSelected or previousSelectedItem provide information
  * about the selection change. The change event is fired when a user interaction
  * like a space/enter key or click cause a selection change. The tab selection
  * based on these actions can be cancelled by calling preventDefault on the
- * triggering `keydown` or `click` event.
+ * triggering `keydown` or `click` event. --bubbles
  *
  * @example
  * // perform an action if a tab is clicked
@@ -12081,16 +12856,12 @@ MdSecondaryTab = __decorate([
  */
 class Tabs extends lit_element_s {
     /**
-     * The tabs of this tab bar.
-     */
-    get tabs() {
-        return this.maybeTabs.filter(isTab);
-    }
-    /**
      * The currently selected tab, `null` only when there are no tab children.
+     *
+     * @export
      */
     get activeTab() {
-        return this.tabs.find(tab => tab.active) ?? null;
+        return this.tabs.find((tab) => tab.active) ?? null;
     }
     set activeTab(tab) {
         // Ignore setting activeTab to null. As long as there are children, one tab
@@ -12101,9 +12872,11 @@ class Tabs extends lit_element_s {
     }
     /**
      * The index of the currently selected tab.
+     *
+     * @export
      */
     get activeTabIndex() {
-        return this.tabs.findIndex(tab => tab.active);
+        return this.tabs.findIndex((tab) => tab.active);
     }
     set activeTabIndex(index) {
         const activateTabAtIndex = () => {
@@ -12134,7 +12907,7 @@ class Tabs extends lit_element_s {
         activateTabAtIndex();
     }
     get focusedTab() {
-        return this.tabs.find(tab => tab.matches(':focus-within'));
+        return this.tabs.find((tab) => tab.matches(':focus-within'));
     }
     constructor() {
         super();
@@ -12142,7 +12915,9 @@ class Tabs extends lit_element_s {
          * Whether or not to automatically select a tab when it is focused.
          */
         this.autoActivate = false;
-        this.internals = polyfillElementInternalsAria(this, this /* needed for closure */.attachInternals());
+        this.internals = polyfillElementInternalsAria(this, 
+        // Cast needed for closure
+        this.attachInternals());
         if (!is_server_o) {
             this.internals.role = 'tablist';
             this.addEventListener('keydown', this.handleKeydown.bind(this));
@@ -12184,8 +12959,9 @@ class Tabs extends lit_element_s {
     render() {
         return x `
       <div class="tabs">
-        <slot @slotchange=${this.handleSlotChange}
-            @click=${this.handleTabClick}></slot>
+        <slot
+          @slotchange=${this.handleSlotChange}
+          @click=${this.handleTabClick}></slot>
       </div>
       <md-divider part="divider"></md-divider>
     `;
@@ -12238,7 +13014,7 @@ class Tabs extends lit_element_s {
         const isHome = event.key === 'Home';
         const isEnd = event.key === 'End';
         // Ignore non-navigation keys
-        if (event.defaultPrevented || !isLeft && !isRight && !isHome && !isEnd) {
+        if (event.defaultPrevented || (!isLeft && !isRight && !isHome && !isEnd)) {
             return;
         }
         const { tabs } = this;
@@ -12312,19 +13088,19 @@ class Tabs extends lit_element_s {
     }
 }
 (() => {
-    setupHostAria(Tabs, { focusable: false });
+    polyfillARIAMixin(Tabs);
 })();
+__decorate([
+    query_assigned_elements_o({ flatten: true, selector: '[md-tab]' })
+], Tabs.prototype, "tabs", void 0);
 __decorate([
     property_n({ type: Boolean, attribute: 'auto-activate' })
 ], Tabs.prototype, "autoActivate", void 0);
 __decorate([
     query_e('slot')
 ], Tabs.prototype, "slotElement", void 0);
-__decorate([
-    query_assigned_elements_o({ flatten: true })
-], Tabs.prototype, "maybeTabs", void 0);
 function isTab(element) {
-    return element instanceof Tab;
+    return element instanceof HTMLElement && element.hasAttribute('md-tab');
 }
 //# sourceMappingURL=tabs.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/tabs/internal/tabs-styles.css.js
@@ -12359,16 +13135,6 @@ MdTabs = __decorate([
     t('md-tabs')
 ], MdTabs);
 //# sourceMappingURL=tabs.js.map
-;// CONCATENATED MODULE: ./node_modules/@material/web/textfield/internal/filled-forced-colors-styles.css.js
-/**
-  * @license
-  * Copyright 2022 Google LLC
-  * SPDX-License-Identifier: Apache-2.0
-  */
-
-const internal_filled_forced_colors_styles_css_styles = i `@media(forced-colors: active){:host{--md-filled-text-field-disabled-active-indicator-color: GrayText;--md-filled-text-field-disabled-active-indicator-opacity: 1;--md-filled-text-field-disabled-input-text-color: GrayText;--md-filled-text-field-disabled-input-text-opacity: 1;--md-filled-text-field-disabled-label-text-color: GrayText;--md-filled-text-field-disabled-label-text-opacity: 1;--md-filled-text-field-disabled-leading-icon-color: GrayText;--md-filled-text-field-disabled-leading-icon-opacity: 1;--md-filled-text-field-disabled-supporting-text-color: GrayText;--md-filled-text-field-disabled-supporting-text-opacity: 1;--md-filled-text-field-disabled-trailing-icon-color: GrayText;--md-filled-text-field-disabled-trailing-icon-opacity: 1}}/*# sourceMappingURL=filled-forced-colors-styles.css.map */
-`;
-//# sourceMappingURL=filled-forced-colors-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/textfield/internal/filled-styles.css.js
 /**
   * @license
@@ -12413,7 +13179,7 @@ const stringConverter = {
     },
     toAttribute(value) {
         return value || null;
-    }
+    },
 };
 //# sourceMappingURL=string-converter.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/textfield/internal/text-field.js
@@ -12432,13 +13198,26 @@ const stringConverter = {
 
 
 
+
+
+// Separate variable needed for closure.
+const textFieldBaseClass = mixinFormAssociated(mixinElementInternals(lit_element_s));
 /**
  * A text field component.
+ *
+ * @fires select {Event} The native `select` event on
+ * [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/select_event)
+ * --bubbles
+ * @fires change {Event} The native `change` event on
+ * [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event)
+ * --bubbles
+ * @fires input {InputEvent} The native `input` event on
+ * [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event)
+ * --bubbles --composed
  */
-class TextField extends lit_element_s {
+class TextField extends textFieldBaseClass {
     constructor() {
         super(...arguments);
-        this.disabled = false;
         /**
          * Gets or sets whether or not the text field is in a visually invalid state.
          *
@@ -12492,6 +13271,11 @@ class TextField extends lit_element_s {
          * Defaults to 2.
          */
         this.rows = 2;
+        /**
+         * The number of cols to display for a `type="textarea"` text field.
+         * Defaults to 20.
+         */
+        this.cols = 20;
         // <input> properties
         this.inputMode = '';
         /**
@@ -12535,6 +13319,12 @@ class TextField extends lit_element_s {
          * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#readonly
          */
         this.readOnly = false;
+        /**
+         * Indicates that input accepts multiple email addresses.
+         *
+         * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/email#multiple
+         */
+        this.multiple = false;
         /**
          * Returns or sets the element's step attribute, which works with min and max
          * to limit the increments at which a numeric or date-time value can be set.
@@ -12584,31 +13374,17 @@ class TextField extends lit_element_s {
          * `reportValidity()`.
          */
         this.nativeErrorText = '';
+        this.isCheckingValidity = false;
+        this.isReportingValidity = false;
         // Needed for Safari, see https://bugs.webkit.org/show_bug.cgi?id=261432
-        // Replace with this.internals.validity.customError when resolved.
+        // Replace with this[internals].validity.customError when resolved.
         this.hasCustomValidityError = false;
-        this.internals = this /* needed for closure */.attachInternals();
-    }
-    /**
-     * The associated form element with which this element's value will submit.
-     */
-    get form() {
-        return this.internals.form;
-    }
-    /**
-     * The labels this element is associated with.
-     */
-    get labels() {
-        return this.internals.labels;
-    }
-    /**
-     * The HTML name to use in form submission.
-     */
-    get name() {
-        return this.getAttribute('name') ?? '';
-    }
-    set name(name) {
-        this.setAttribute('name', name);
+        this.onInvalid = (invalidEvent) => {
+            if (this.isCheckingValidity || this.isReportingValidity) {
+                return;
+            }
+            this.showErrorMessage(false, invalidEvent);
+        };
     }
     /**
      * Gets or sets the direction in which selection occurred.
@@ -12644,7 +13420,7 @@ class TextField extends lit_element_s {
      */
     get validationMessage() {
         this.syncValidity();
-        return this.internals.validationMessage;
+        return this[internals].validationMessage;
     }
     /**
      * Returns a `ValidityState` object that represents the validity states of the
@@ -12654,7 +13430,7 @@ class TextField extends lit_element_s {
      */
     get validity() {
         this.syncValidity();
-        return this.internals.validity;
+        return this[internals].validity;
     }
     /**
      * The text field's value as a number.
@@ -12700,7 +13476,7 @@ class TextField extends lit_element_s {
      */
     get willValidate() {
         this.syncValidity();
-        return this.internals.willValidate;
+        return this[internals].willValidate;
     }
     get hasError() {
         return this.error || this.nativeError;
@@ -12716,8 +13492,11 @@ class TextField extends lit_element_s {
      * @return true if the text field is valid, or false if not.
      */
     checkValidity() {
+        this.isCheckingValidity = true;
         this.syncValidity();
-        return this.internals.checkValidity();
+        const isValid = this[internals].checkValidity();
+        this.isCheckingValidity = false;
+        return isValid;
     }
     /**
      * Checks the text field's native validation and returns whether or not the
@@ -12738,11 +13517,17 @@ class TextField extends lit_element_s {
      * @return true if the text field is valid, or false if not.
      */
     reportValidity() {
+        this.isReportingValidity = true;
         let invalidEvent;
-        this.addEventListener('invalid', event => {
+        this.addEventListener('invalid', (event) => {
             invalidEvent = event;
         }, { once: true });
         const valid = this.checkValidity();
+        this.showErrorMessage(valid, invalidEvent);
+        this.isReportingValidity = false;
+        return valid;
+    }
+    showErrorMessage(valid, invalidEvent) {
         if (invalidEvent?.defaultPrevented) {
             return valid;
         }
@@ -12775,7 +13560,7 @@ class TextField extends lit_element_s {
      */
     setCustomValidity(error) {
         this.hasCustomValidityError = !!error;
-        this.internals.setValidity({ customError: !!error }, error, this.getInputOrTextarea());
+        this[internals].setValidity({ customError: !!error }, error, this.getInputOrTextarea());
     }
     setRangeText(...args) {
         // Calling setRangeText with 1 vs 3-4 arguments has different behavior.
@@ -12851,10 +13636,10 @@ class TextField extends lit_element_s {
             'textarea': this.type === 'textarea',
         };
         return x `
-       <span class="text-field ${class_map_e(classes)}">
-         ${this.renderField()}
-       </span>
-     `;
+      <span class="text-field ${class_map_e(classes)}">
+        ${this.renderField()}
+      </span>
+    `;
     }
     updated(changedProperties) {
         // Keep changedProperties arg so that subclasses may call it
@@ -12867,7 +13652,6 @@ class TextField extends lit_element_s {
             // before checking its value.
             this.value = value;
         }
-        this.internals.setFormValue(value);
         // Sync validity when properties change, since validation properties may
         // have changed.
         this.syncValidity();
@@ -12897,17 +13681,17 @@ class TextField extends lit_element_s {
     }
     renderLeadingIcon() {
         return x `
-       <span class="icon leading" slot="start">
-         <slot name="leading-icon" @slotchange=${this.handleIconChange}></slot>
-       </span>
-     `;
+      <span class="icon leading" slot="start">
+        <slot name="leading-icon" @slotchange=${this.handleIconChange}></slot>
+      </span>
+    `;
     }
     renderTrailingIcon() {
         return x `
-       <span class="icon trailing" slot="end">
-         <slot name="trailing-icon" @slotchange=${this.handleIconChange}></slot>
-       </span>
-     `;
+      <span class="icon trailing" slot="end">
+        <slot name="trailing-icon" @slotchange=${this.handleIconChange}></slot>
+      </span>
+    `;
     }
     renderInputOrTextarea() {
         const style = { direction: this.textDirection };
@@ -12931,13 +13715,13 @@ class TextField extends lit_element_s {
           ?readonly=${this.readOnly}
           ?required=${this.required}
           rows=${this.rows}
+          cols=${this.cols}
           .value=${live_l(this.value)}
           @change=${this.handleChange}
           @focusin=${this.handleFocusin}
           @focusout=${this.handleFocusout}
           @input=${this.handleInput}
-          @select=${this.redispatchEvent}
-        ></textarea>
+          @select=${this.redispatchEvent}></textarea>
       `;
         }
         const prefix = this.renderPrefix();
@@ -12966,6 +13750,7 @@ class TextField extends lit_element_s {
           placeholder=${this.placeholder || T}
           ?readonly=${this.readOnly}
           ?required=${this.required}
+          ?multiple=${this.multiple}
           step=${(this.step || T)}
           type=${this.type}
           .value=${live_l(this.value)}
@@ -12973,8 +13758,7 @@ class TextField extends lit_element_s {
           @focusin=${this.handleFocusin}
           @focusout=${this.handleFocusout}
           @input=${this.handleInput}
-          @select=${this.redispatchEvent}
-        >
+          @select=${this.redispatchEvent} />
         ${suffix}
       </div>
     `;
@@ -13047,36 +13831,50 @@ class TextField extends lit_element_s {
         // validity. We do this to re-use native `<input>` validation messages.
         const input = this.getInputOrTextarea();
         if (this.hasCustomValidityError) {
-            input.setCustomValidity(this.internals.validationMessage);
+            input.setCustomValidity(this[internals].validationMessage);
         }
         else {
             input.setCustomValidity('');
         }
-        this.internals.setValidity(input.validity, input.validationMessage, this.getInputOrTextarea());
+        this[internals].setValidity(input.validity, input.validationMessage, this.getInputOrTextarea());
     }
     handleIconChange() {
         this.hasLeadingIcon = this.leadingIcons.length > 0;
         this.hasTrailingIcon = this.trailingIcons.length > 0;
     }
-    /** @private */
+    connectedCallback() {
+        super.connectedCallback();
+        // Handles the case where the user submits the form and native validation
+        // error pops up. We want the error styles to show.
+        this.addEventListener('invalid', this.onInvalid);
+    }
+    disconnectedCallback() {
+        super.disconnectedCallback();
+        this.removeEventListener('invalid', this.onInvalid);
+    }
+    [getFormValue]() {
+        return this.value;
+    }
     formResetCallback() {
         this.reset();
     }
-    /** @private */
     formStateRestoreCallback(state) {
         this.value = state;
+    }
+    focus() {
+        // Required for the case that the user slots a focusable element into the
+        // leading icon slot such as an iconbutton due to how delegatesFocus works.
+        this.getInputOrTextarea().focus();
     }
 }
 (() => {
     requestUpdateOnAriaChange(TextField);
 })();
 /** @nocollapse */
-TextField.shadowRootOptions = { ...lit_element_s.shadowRootOptions, delegatesFocus: true };
-/** @nocollapse  */
-TextField.formAssociated = true;
-__decorate([
-    property_n({ type: Boolean, reflect: true })
-], TextField.prototype, "disabled", void 0);
+TextField.shadowRootOptions = {
+    ...lit_element_s.shadowRootOptions,
+    delegatesFocus: true,
+};
 __decorate([
     property_n({ type: Boolean, reflect: true })
 ], TextField.prototype, "error", void 0);
@@ -13114,6 +13912,9 @@ __decorate([
     property_n({ type: Number })
 ], TextField.prototype, "rows", void 0);
 __decorate([
+    property_n({ type: Number })
+], TextField.prototype, "cols", void 0);
+__decorate([
     property_n({ reflect: true })
 ], TextField.prototype, "inputMode", void 0);
 __decorate([
@@ -13137,6 +13938,9 @@ __decorate([
 __decorate([
     property_n({ type: Boolean, reflect: true })
 ], TextField.prototype, "readOnly", void 0);
+__decorate([
+    property_n({ type: Boolean, reflect: true })
+], TextField.prototype, "multiple", void 0);
 __decorate([
     property_n()
 ], TextField.prototype, "step", void 0);
@@ -13213,7 +14017,6 @@ const textfield_internal_shared_styles_css_styles = i `:host{display:inline-flex
 
 
 
-
 /**
  * TODO(b/228525797): Add docs
  * @final
@@ -13225,21 +14028,11 @@ let MdFilledTextField = class MdFilledTextField extends FilledTextField {
         this.fieldTag = static_s `md-filled-field`;
     }
 };
-MdFilledTextField.styles = [textfield_internal_shared_styles_css_styles, textfield_internal_filled_styles_css_styles, internal_filled_forced_colors_styles_css_styles];
+MdFilledTextField.styles = [textfield_internal_shared_styles_css_styles, textfield_internal_filled_styles_css_styles];
 MdFilledTextField = __decorate([
     t('md-filled-text-field')
 ], MdFilledTextField);
 //# sourceMappingURL=filled-text-field.js.map
-;// CONCATENATED MODULE: ./node_modules/@material/web/textfield/internal/outlined-forced-colors-styles.css.js
-/**
-  * @license
-  * Copyright 2022 Google LLC
-  * SPDX-License-Identifier: Apache-2.0
-  */
-
-const internal_outlined_forced_colors_styles_css_styles = i `@media(forced-colors: active){:host{--md-outlined-text-field-disabled-input-text-color: GrayText;--md-outlined-text-field-disabled-input-text-opacity: 1;--md-outlined-text-field-disabled-label-text-color: GrayText;--md-outlined-text-field-disabled-label-text-opacity: 1;--md-outlined-text-field-disabled-leading-icon-color: GrayText;--md-outlined-text-field-disabled-leading-icon-opacity: 1;--md-outlined-text-field-disabled-outline-color: GrayText;--md-outlined-text-field-disabled-outline-opacity: 1;--md-outlined-text-field-disabled-supporting-text-color: GrayText;--md-outlined-text-field-disabled-supporting-text-opacity: 1;--md-outlined-text-field-disabled-trailing-icon-color: GrayText;--md-outlined-text-field-disabled-trailing-icon-opacity: 1}}/*# sourceMappingURL=outlined-forced-colors-styles.css.map */
-`;
-//# sourceMappingURL=outlined-forced-colors-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/textfield/internal/outlined-styles.css.js
 /**
   * @license
@@ -13282,7 +14075,6 @@ class OutlinedTextField extends TextField {
 
 
 
-
 /**
  * TODO(b/228525797): Add docs
  * @final
@@ -13294,386 +14086,118 @@ let MdOutlinedTextField = class MdOutlinedTextField extends OutlinedTextField {
         this.fieldTag = static_s `md-outlined-field`;
     }
 };
-MdOutlinedTextField.styles = [textfield_internal_shared_styles_css_styles, textfield_internal_outlined_styles_css_styles, internal_outlined_forced_colors_styles_css_styles];
+MdOutlinedTextField.styles = [textfield_internal_shared_styles_css_styles, textfield_internal_outlined_styles_css_styles];
 MdOutlinedTextField = __decorate([
     t('md-outlined-text-field')
 ], MdOutlinedTextField);
 //# sourceMappingURL=outlined-text-field.js.map
-;// CONCATENATED MODULE: ./node_modules/@material/web/switch/internal/forced-colors-styles.css.js
-/**
-  * @license
-  * Copyright 2022 Google LLC
-  * SPDX-License-Identifier: Apache-2.0
-  */
-
-const switch_internal_forced_colors_styles_css_styles = i `@media(forced-colors: active){:host{--md-switch-disabled-selected-icon-color: GrayText;--md-switch-disabled-selected-icon-opacity: 1;--md-switch-disabled-selected-track-color: GrayText;--md-switch-disabled-track-outline-color: GrayText;--md-switch-disabled-track-opacity: 1;--md-switch-disabled-handle-color: GrayText;--md-switch-disabled-handle-opacity: 1;--md-switch-disabled-icon-color: Canvas;--md-switch-disabled-icon-opacity: 1;--md-switch-selected-focus-track-color: ButtonText;--md-switch-selected-hover-track-color: ButtonText;--md-switch-selected-icon-color: ButtonText;--md-switch-selected-hover-icon-color: ButtonText;--md-switch-selected-focus-icon-color: ButtonText;--md-switch-selected-pressed-icon-color: ButtonText;--md-switch-selected-pressed-track-color: ButtonText;--md-switch-selected-track-color: ButtonText;--md-switch-focus-handle-color: ButtonText;--md-switch-handle-color: ButtonText;--md-switch-hover-handle-color: ButtonText;--md-switch-icon-color: Canvas;--md-switch-hover-icon-color: Canvas;--md-switch-focus-icon-color: Canvas;--md-switch-pressed-icon-color: Canvas;--md-switch-pressed-handle-color: ButtonText}}/*# sourceMappingURL=forced-colors-styles.css.map */
-`;
-//# sourceMappingURL=forced-colors-styles.css.js.map
-;// CONCATENATED MODULE: ./node_modules/@material/web/switch/internal/switch.js
+;// CONCATENATED MODULE: ./node_modules/@material/web/all.js
 /**
  * @license
- * Copyright 2021 Google LLC
+ * Copyright 2023 Google LLC
  * SPDX-License-Identifier: Apache-2.0
  */
-
-
-
-
-
-
-
-
 /**
- * @fires input {InputEvent} Fired whenever `selected` changes due to user
- * interaction (bubbles and composed).
- * @fires change {Event} Fired whenever `selected` changes due to user
- * interaction (bubbles).
- */
-class Switch extends lit_element_s {
-    /**
-     * The HTML name to use in form submission.
-     */
-    get name() {
-        return this.getAttribute('name') ?? '';
-    }
-    set name(name) {
-        this.setAttribute('name', name);
-    }
-    /**
-     * The associated form element with which this element's value will submit.
-     */
-    get form() {
-        return this.internals.form;
-    }
-    /**
-     * The labels this element is associated with.
-     */
-    get labels() {
-        return this.internals.labels;
-    }
-    /**
-     * Returns a ValidityState object that represents the validity states of the
-     * switch.
-     *
-     * Note that switches will only set `valueMissing` if `required` and not
-     * selected.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#validation
-     */
-    get validity() {
-        this.syncValidity();
-        return this.internals.validity;
-    }
-    /**
-     * Returns the native validation error message.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process
-     */
-    get validationMessage() {
-        this.syncValidity();
-        return this.internals.validationMessage;
-    }
-    /**
-     * Returns whether an element will successfully validate based on forms
-     * validation rules and constraints.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process
-     */
-    get willValidate() {
-        this.syncValidity();
-        return this.internals.willValidate;
-    }
-    constructor() {
-        super();
-        /**
-         * Disables the switch and makes it non-interactive.
-         */
-        this.disabled = false;
-        /**
-         * Puts the switch in the selected state and sets the form submission value to
-         * the `value` property.
-         */
-        this.selected = false;
-        /**
-         * Shows both the selected and deselected icons.
-         */
-        this.icons = false;
-        /**
-         * Shows only the selected icon, and not the deselected icon. If `true`,
-         * overrides the behavior of the `icons` property.
-         */
-        this.showOnlySelectedIcon = false;
-        /**
-         * When true, require the switch to be selected when participating in
-         * form submission.
-         *
-         * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#validation
-         */
-        this.required = false;
-        /**
-         * The value associated with this switch on form submission. `null` is
-         * submitted when `selected` is `false`.
-         */
-        this.value = 'on';
-        // Needed for Safari, see https://bugs.webkit.org/show_bug.cgi?id=261432
-        // Replace with this.internals.validity.customError when resolved.
-        this.hasCustomValidityError = false;
-        this.internals = this /* needed for closure */.attachInternals();
-        if (!is_server_o) {
-            this.addEventListener('click', (event) => {
-                if (!isActivationClick(event)) {
-                    return;
-                }
-                this.focus();
-                dispatchActivationClick(this.input);
-            });
-        }
-    }
-    /**
-     * Checks the switch's native validation and returns whether or not the
-     * element is valid.
-     *
-     * If invalid, this method will dispatch the `invalid` event.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/checkValidity
-     *
-     * @return true if the switch is valid, or false if not.
-     */
-    checkValidity() {
-        this.syncValidity();
-        return this.internals.checkValidity();
-    }
-    /**
-     * Checks the switch's native validation and returns whether or not the
-     * element is valid.
-     *
-     * If invalid, this method will dispatch the `invalid` event.
-     *
-     * The `validationMessage` is reported to the user by the browser. Use
-     * `setCustomValidity()` to customize the `validationMessage`.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/reportValidity
-     *
-     * @return true if the switch is valid, or false if not.
-     */
-    reportValidity() {
-        this.syncValidity();
-        return this.internals.reportValidity();
-    }
-    /**
-     * Sets the switch's native validation error message. This is used to
-     * customize `validationMessage`.
-     *
-     * When the error is not an empty string, the switch is considered invalid
-     * and `validity.customError` will be true.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setCustomValidity
-     *
-     * @param error The error message to display.
-     */
-    setCustomValidity(error) {
-        this.hasCustomValidityError = !!error;
-        this.internals.setValidity({ customError: !!error }, error, this.getInput());
-    }
-    update(changed) {
-        const state = String(this.selected);
-        this.internals.setFormValue(this.selected ? this.value : null, state);
-        super.update(changed);
-    }
-    render() {
-        // NOTE: buttons must use only [phrasing
-        // content](https://html.spec.whatwg.org/multipage/dom.html#phrasing-content)
-        // children, which includes custom elements, but not `div`s
-        return x `
-      <div class="switch ${class_map_e(this.getRenderClasses())}">
-        <input
-          id="switch"
-          class="touch"
-          type="checkbox"
-          role="switch"
-          aria-label=${this.ariaLabel || T}
-          ?checked=${this.selected}
-          ?disabled=${this.disabled}
-          ?required=${this.required}
-          @change=${this.handleChange}
-        >
-
-        <md-focus-ring part="focus-ring" for="switch"></md-focus-ring>
-        <span class="track">
-          ${this.renderHandle()}
-        </span>
-      </div>
-    `;
-    }
-    updated() {
-        // Sync validity when properties change, since validation properties may
-        // have changed.
-        this.syncValidity();
-    }
-    getRenderClasses() {
-        return {
-            'selected': this.selected,
-            'unselected': !this.selected,
-            'disabled': this.disabled,
-        };
-    }
-    renderHandle() {
-        const classes = {
-            'with-icon': this.showOnlySelectedIcon ? this.selected : this.icons,
-        };
-        return x `
-      ${this.renderTouchTarget()}
-      <span class="handle-container">
-        <md-ripple for="switch" ?disabled="${this.disabled}"></md-ripple>
-        <span class="handle ${class_map_e(classes)}">
-          ${this.shouldShowIcons() ? this.renderIcons() : x ``}
-        </span>
-      </span>
-    `;
-    }
-    renderIcons() {
-        return x `
-      <div class="icons">
-        ${this.renderOnIcon()}
-        ${this.showOnlySelectedIcon ? x `` : this.renderOffIcon()}
-      </div>
-    `;
-    }
-    /**
-     * https://fonts.google.com/icons?selected=Material%20Symbols%20Outlined%3Acheck%3AFILL%400%3Bwght%40500%3BGRAD%400%3Bopsz%4024
-     */
-    renderOnIcon() {
-        return x `
-      <svg class="icon icon--on" viewBox="0 0 24 24">
-        <path d="M9.55 18.2 3.65 12.3 5.275 10.675 9.55 14.95 18.725 5.775 20.35 7.4Z"/>
-      </svg>
-    `;
-    }
-    /**
-     * https://fonts.google.com/icons?selected=Material%20Symbols%20Outlined%3Aclose%3AFILL%400%3Bwght%40500%3BGRAD%400%3Bopsz%4024
-     */
-    renderOffIcon() {
-        return x `
-      <svg class="icon icon--off" viewBox="0 0 24 24">
-        <path d="M6.4 19.2 4.8 17.6 10.4 12 4.8 6.4 6.4 4.8 12 10.4 17.6 4.8 19.2 6.4 13.6 12 19.2 17.6 17.6 19.2 12 13.6Z"/>
-      </svg>
-    `;
-    }
-    renderTouchTarget() {
-        return x `<span class="touch"></span>`;
-    }
-    shouldShowIcons() {
-        return this.icons || this.showOnlySelectedIcon;
-    }
-    handleChange(event) {
-        const target = event.target;
-        this.selected = target.checked;
-        redispatchEvent(this, event);
-    }
-    syncValidity() {
-        // Sync the internal <input>'s validity and the host's ElementInternals
-        // validity. We do this to re-use native `<input>` validation messages.
-        const input = this.getInput();
-        if (this.hasCustomValidityError) {
-            input.setCustomValidity(this.internals.validationMessage);
-        }
-        else {
-            input.setCustomValidity('');
-        }
-        this.internals.setValidity(input.validity, input.validationMessage, this.getInput());
-    }
-    getInput() {
-        if (!this.input) {
-            // If the input is not yet defined, synchronously render.
-            this.connectedCallback();
-            this.performUpdate();
-        }
-        if (this.isUpdatePending) {
-            // If there are pending updates, synchronously perform them. This ensures
-            // that constraint validation properties (like `required`) are synced
-            // before interacting with input APIs that depend on them.
-            this.scheduleUpdate();
-        }
-        return this.input;
-    }
-    /** @private */
-    formResetCallback() {
-        // The selected property does not reflect, so the original attribute set by
-        // the user is used to determine the default value.
-        this.selected = this.hasAttribute('selected');
-    }
-    /** @private */
-    formStateRestoreCallback(state) {
-        this.selected = state === 'true';
-    }
-}
-(() => {
-    requestUpdateOnAriaChange(Switch);
-})();
-/** @nocollapse */
-Switch.shadowRootOptions = { mode: 'open', delegatesFocus: true };
-/** @nocollapse */
-Switch.formAssociated = true;
-__decorate([
-    property_n({ type: Boolean, reflect: true })
-], Switch.prototype, "disabled", void 0);
-__decorate([
-    property_n({ type: Boolean })
-], Switch.prototype, "selected", void 0);
-__decorate([
-    property_n({ type: Boolean })
-], Switch.prototype, "icons", void 0);
-__decorate([
-    property_n({ type: Boolean, attribute: 'show-only-selected-icon' })
-], Switch.prototype, "showOnlySelectedIcon", void 0);
-__decorate([
-    property_n({ type: Boolean })
-], Switch.prototype, "required", void 0);
-__decorate([
-    property_n()
-], Switch.prototype, "value", void 0);
-__decorate([
-    query_e('input')
-], Switch.prototype, "input", void 0);
-//# sourceMappingURL=switch.js.map
-;// CONCATENATED MODULE: ./node_modules/@material/web/switch/internal/switch-styles.css.js
-/**
-  * @license
-  * Copyright 2022 Google LLC
-  * SPDX-License-Identifier: Apache-2.0
-  */
-
-const switch_styles_css_styles = i `:host{--_disabled-selected-handle-color: var(--md-switch-disabled-selected-handle-color, var(--md-sys-color-surface, #fef7ff));--_disabled-selected-handle-opacity: var(--md-switch-disabled-selected-handle-opacity, 1);--_disabled-selected-icon-color: var(--md-switch-disabled-selected-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-selected-icon-opacity: var(--md-switch-disabled-selected-icon-opacity, 0.38);--_disabled-selected-track-color: var(--md-switch-disabled-selected-track-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-track-opacity: var(--md-switch-disabled-track-opacity, 0.12);--_handle-shape: var(--md-switch-handle-shape, 9999px);--_pressed-handle-height: var(--md-switch-pressed-handle-height, 28px);--_pressed-handle-width: var(--md-switch-pressed-handle-width, 28px);--_selected-focus-handle-color: var(--md-switch-selected-focus-handle-color, var(--md-sys-color-primary-container, #eaddff));--_selected-focus-icon-color: var(--md-switch-selected-focus-icon-color, var(--md-sys-color-on-primary-container, #21005d));--_selected-focus-track-color: var(--md-switch-selected-focus-track-color, var(--md-sys-color-primary, #6750a4));--_selected-handle-color: var(--md-switch-selected-handle-color, var(--md-sys-color-on-primary, #fff));--_selected-handle-height: var(--md-switch-selected-handle-height, 24px);--_selected-handle-width: var(--md-switch-selected-handle-width, 24px);--_selected-hover-handle-color: var(--md-switch-selected-hover-handle-color, var(--md-sys-color-primary-container, #eaddff));--_selected-hover-icon-color: var(--md-switch-selected-hover-icon-color, var(--md-sys-color-on-primary-container, #21005d));--_selected-hover-state-layer-color: var(--md-switch-selected-hover-state-layer-color, var(--md-sys-color-primary, #6750a4));--_selected-hover-state-layer-opacity: var(--md-switch-selected-hover-state-layer-opacity, 0.08);--_selected-hover-track-color: var(--md-switch-selected-hover-track-color, var(--md-sys-color-primary, #6750a4));--_selected-icon-color: var(--md-switch-selected-icon-color, var(--md-sys-color-on-primary-container, #21005d));--_selected-icon-size: var(--md-switch-selected-icon-size, 16px);--_selected-pressed-handle-color: var(--md-switch-selected-pressed-handle-color, var(--md-sys-color-primary-container, #eaddff));--_selected-pressed-icon-color: var(--md-switch-selected-pressed-icon-color, var(--md-sys-color-on-primary-container, #21005d));--_selected-pressed-state-layer-color: var(--md-switch-selected-pressed-state-layer-color, var(--md-sys-color-primary, #6750a4));--_selected-pressed-state-layer-opacity: var(--md-switch-selected-pressed-state-layer-opacity, 0.12);--_selected-pressed-track-color: var(--md-switch-selected-pressed-track-color, var(--md-sys-color-primary, #6750a4));--_selected-track-color: var(--md-switch-selected-track-color, var(--md-sys-color-primary, #6750a4));--_state-layer-shape: var(--md-switch-state-layer-shape, 9999px);--_state-layer-size: var(--md-switch-state-layer-size, 40px);--_track-height: var(--md-switch-track-height, 32px);--_track-outline-width: var(--md-switch-track-outline-width, 2px);--_track-shape: var(--md-switch-track-shape, 9999px);--_track-width: var(--md-switch-track-width, 52px);--_with-icon-handle-height: var(--md-switch-with-icon-handle-height, 24px);--_with-icon-handle-width: var(--md-switch-with-icon-handle-width, 24px);--_disabled-handle-color: var(--md-switch-disabled-handle-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-handle-opacity: var(--md-switch-disabled-handle-opacity, 0.38);--_disabled-icon-color: var(--md-switch-disabled-icon-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_disabled-icon-opacity: var(--md-switch-disabled-icon-opacity, 0.38);--_disabled-track-color: var(--md-switch-disabled-track-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_disabled-track-outline-color: var(--md-switch-disabled-track-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_focus-handle-color: var(--md-switch-focus-handle-color, var(--md-sys-color-on-surface-variant, #49454f));--_focus-icon-color: var(--md-switch-focus-icon-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_focus-track-color: var(--md-switch-focus-track-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_focus-track-outline-color: var(--md-switch-focus-track-outline-color, var(--md-sys-color-outline, #79747e));--_handle-color: var(--md-switch-handle-color, var(--md-sys-color-outline, #79747e));--_handle-height: var(--md-switch-handle-height, 16px);--_handle-width: var(--md-switch-handle-width, 16px);--_hover-handle-color: var(--md-switch-hover-handle-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-icon-color: var(--md-switch-hover-icon-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_hover-state-layer-color: var(--md-switch-hover-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-state-layer-opacity: var(--md-switch-hover-state-layer-opacity, 0.08);--_hover-track-color: var(--md-switch-hover-track-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_hover-track-outline-color: var(--md-switch-hover-track-outline-color, var(--md-sys-color-outline, #79747e));--_icon-color: var(--md-switch-icon-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_icon-size: var(--md-switch-icon-size, 16px);--_pressed-handle-color: var(--md-switch-pressed-handle-color, var(--md-sys-color-on-surface-variant, #49454f));--_pressed-icon-color: var(--md-switch-pressed-icon-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_pressed-state-layer-color: var(--md-switch-pressed-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--_pressed-state-layer-opacity: var(--md-switch-pressed-state-layer-opacity, 0.12);--_pressed-track-color: var(--md-switch-pressed-track-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_pressed-track-outline-color: var(--md-switch-pressed-track-outline-color, var(--md-sys-color-outline, #79747e));--_track-color: var(--md-switch-track-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_track-outline-color: var(--md-switch-track-outline-color, var(--md-sys-color-outline, #79747e));--_handle-shape-start-start: var( --md-switch-handle-shape-start-start, var(--_handle-shape) );--_handle-shape-start-end: var( --md-switch-handle-shape-start-end, var(--_handle-shape) );--_handle-shape-end-end: var( --md-switch-handle-shape-end-end, var(--_handle-shape) );--_handle-shape-end-start: var( --md-switch-handle-shape-end-start, var(--_handle-shape) );--_track-shape-start-start: var( --md-switch-track-shape-start-start, var(--_track-shape) );--_track-shape-start-end: var( --md-switch-track-shape-start-end, var(--_track-shape) );--_track-shape-end-end: var( --md-switch-track-shape-end-end, var(--_track-shape) );--_track-shape-end-start: var( --md-switch-track-shape-end-start, var(--_track-shape) );display:inline-flex;outline:none;vertical-align:top;-webkit-tap-highlight-color:rgba(0,0,0,0)}:host([touch-target=wrapper]){margin:max(0px,(48px - var(--_track-height))/2) 0px}md-focus-ring{--md-focus-ring-shape-start-start: var(--_track-shape-start-start);--md-focus-ring-shape-start-end: var(--_track-shape-start-end);--md-focus-ring-shape-end-end: var(--_track-shape-end-end);--md-focus-ring-shape-end-start: var(--_track-shape-end-start)}.switch{align-items:center;display:inline-flex;flex-shrink:0;position:relative;width:var(--_track-width);height:var(--_track-height);border-start-start-radius:var(--_track-shape-start-start);border-start-end-radius:var(--_track-shape-start-end);border-end-end-radius:var(--_track-shape-end-end);border-end-start-radius:var(--_track-shape-end-start)}input{appearance:none;height:48px;outline:none;margin:0;position:absolute;width:100%;z-index:1}:host([touch-target=none]) input{display:none}.disabled .track{background-color:rgba(0,0,0,0);border-color:rgba(0,0,0,0)}.disabled .track::before{background-clip:content-box}.selected.disabled .track{background-clip:border-box}.track{position:absolute;width:100%;height:100%;box-sizing:border-box;border-radius:inherit;display:flex;justify-content:center;align-items:center}.track::before{content:"";display:flex;position:absolute;height:100%;width:100%;border-radius:inherit;box-sizing:border-box;transition-property:opacity,background-color;transition-timing-function:linear;transition-duration:67ms}.disabled .track::before,.disabled .track::after{transition:none;opacity:var(--_disabled-track-opacity)}.selected .track::before{background-color:var(--_selected-track-color)}.selected:hover .track::before{background-color:var(--_selected-hover-track-color)}.selected:focus-within .track::before{background-color:var(--_selected-focus-track-color)}.selected:active .track::before{background-color:var(--_selected-pressed-track-color)}.selected.disabled .track::before{background-color:var(--_disabled-selected-track-color)}.unselected .track::before{background-color:var(--_track-color);border-color:var(--_track-outline-color);border-style:solid;border-width:var(--_track-outline-width)}.unselected:hover .track::before{background-color:var(--_hover-track-color);border-color:var(--_hover-track-outline-color)}.unselected:focus-visible .track::before{background-color:var(--_focus-track-color);border-color:var(--_focus-track-outline-color)}.unselected:active .track::before{background-color:var(--_pressed-track-color);border-color:var(--_pressed-track-outline-color)}.unselected.disabled .track::before{background-color:var(--_disabled-track-color);border-color:var(--_disabled-track-outline-color)}.handle-container{display:flex;place-content:center;place-items:center;position:relative;transition:margin 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275)}.selected .handle-container{margin-inline-start:calc(var(--_track-width) - var(--_track-height))}.unselected .handle-container{margin-inline-end:calc(var(--_track-width) - var(--_track-height))}.disabled .handle-container{transition:none}.handle{border-start-start-radius:var(--_handle-shape-start-start);border-start-end-radius:var(--_handle-shape-start-end);border-end-end-radius:var(--_handle-shape-end-end);border-end-start-radius:var(--_handle-shape-end-start);height:var(--_handle-height);width:var(--_handle-width);transform-origin:center;transition-property:height,width;transition-duration:250ms,250ms;transition-timing-function:cubic-bezier(0.2, 0, 0, 1),cubic-bezier(0.2, 0, 0, 1);z-index:0}.handle::before{content:"";display:flex;inset:0;position:absolute;border-radius:inherit;box-sizing:border-box;transition:background-color 67ms linear}.disabled .handle,.disabled .handle::before{transition:none}.selected .handle{height:var(--_selected-handle-height);width:var(--_selected-handle-width)}.handle.with-icon{height:var(--_with-icon-handle-height);width:var(--_with-icon-handle-width)}.selected:not(.disabled):active .handle,.unselected:not(.disabled):active .handle{height:var(--_pressed-handle-height);width:var(--_pressed-handle-width);transition-timing-function:linear;transition-duration:100ms}.selected .handle::before{background-color:var(--_selected-handle-color)}.selected:hover .handle::before{background-color:var(--_selected-hover-handle-color)}.selected:focus-within .handle::before{background-color:var(--_selected-focus-handle-color)}.selected:active .handle::before{background-color:var(--_selected-pressed-handle-color)}.selected.disabled .handle::before{background-color:var(--_disabled-selected-handle-color);opacity:var(--_disabled-selected-handle-opacity)}.unselected .handle::before{background-color:var(--_handle-color)}.unselected:hover .handle::before{background-color:var(--_hover-handle-color)}.unselected:focus-within .handle::before{background-color:var(--_focus-handle-color)}.unselected:active .handle::before{background-color:var(--_pressed-handle-color)}.unselected.disabled .handle::before{background-color:var(--_disabled-handle-color);opacity:var(--_disabled-handle-opacity)}md-ripple{border-radius:var(--_state-layer-shape);height:var(--_state-layer-size);inset:unset;width:var(--_state-layer-size)}.selected md-ripple{--md-ripple-hover-color: var(--_selected-hover-state-layer-color);--md-ripple-pressed-color: var(--_selected-pressed-state-layer-color);--md-ripple-hover-opacity: var(--_selected-hover-state-layer-opacity);--md-ripple-pressed-opacity: var(--_selected-pressed-state-layer-opacity)}.unselected md-ripple{--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-pressed-color: var(--_pressed-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity)}.icons{position:relative;height:100%;width:100%}.icon{position:absolute;inset:0;margin:auto;transition:fill 67ms linear,opacity 33ms linear,transform 167ms cubic-bezier(0.2, 0, 0, 1);opacity:0}.disabled .icon{transition:none}.selected .icon--on,.unselected .icon--off{opacity:1}.unselected .handle:not(.with-icon) .icon--on{transform:rotate(-45deg)}.icon--off{width:var(--_icon-size);height:var(--_icon-size);fill:var(--_icon-color)}.unselected:hover .icon--off{fill:var(--_hover-icon-color)}.unselected:focus-within .icon--off{fill:var(--_focus-icon-color)}.unselected:active .icon--off{fill:var(--_pressed-icon-color)}.unselected.disabled .icon--off{fill:var(--_disabled-icon-color);opacity:var(--_disabled-icon-opacity)}.icon--on{width:var(--_selected-icon-size);height:var(--_selected-icon-size);fill:var(--_selected-icon-color)}.selected:hover .icon--on{fill:var(--_selected-hover-icon-color)}.selected:focus-within .icon--on{fill:var(--_selected-focus-icon-color)}.selected:active .icon--on{fill:var(--_selected-pressed-icon-color)}.selected.disabled .icon--on{fill:var(--_disabled-selected-icon-color);opacity:var(--_disabled-selected-icon-opacity)}/*# sourceMappingURL=switch-styles.css.map */
-`;
-//# sourceMappingURL=switch-styles.css.js.map
-;// CONCATENATED MODULE: ./node_modules/@material/web/switch/switch.js
-/**
- * @license
- * Copyright 2021 Google LLC
- * SPDX-License-Identifier: Apache-2.0
- */
-
-
-
-
-
-/**
- * @summary Switches toggle the state of a single item on or off.
+ * @fileoverview A convenience bundle import that includes all components.
  *
- * @description
- * There's one type of switch in Material. Use this selection control when the
- * user needs to toggle a single item on or off.
- *
- * @final
- * @suppress {visibility}
+ * WARNING: This import is intended for prototyping and development builds only.
+ * Import only the individual components used for production.
  */
-let MdSwitch = class MdSwitch extends Switch {
-};
-MdSwitch.styles = [switch_styles_css_styles, switch_internal_forced_colors_styles_css_styles];
-MdSwitch = __decorate([
-    t('md-switch')
-], MdSwitch);
-//# sourceMappingURL=switch.js.map
+// LINT.IfChange(imports)
+// go/keep-sorted start
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// go/keep-sorted end
+// LINT.ThenChange(:exports)
+// LINT.IfChange(exports)
+// go/keep-sorted start
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// go/keep-sorted end
+// LINT.ThenChange(:imports)
+//# sourceMappingURL=all.js.map
 ;// CONCATENATED MODULE: ./Components/Dialog/MBDialog.ts
 function dialogShow(dialogID) {
   var dialogElement = document.getElementById(dialogID);
@@ -21123,52 +21647,19 @@ function MBTopAppBar_init(elem, scrollTarget) {
 }
 ;// CONCATENATED MODULE: ./scripts/material.blazor.ts
 /*
-MD3 JS
+MW3 JS
+*/
+
+
+/*
+M.B.MD3 JS
 */
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
-MD2 JS
+MWC2 JS
 */
 
 
