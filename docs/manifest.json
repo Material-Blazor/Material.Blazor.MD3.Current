@@ -23,9 +23,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Articles/CascadingDefaults.md",
       "output": {
@@ -46,9 +43,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Articles/Density.md",
       "output": {
@@ -79,9 +73,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Articles/Installation.md",
       "output": {
@@ -92,9 +83,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Articles/Introduction.md",
       "output": {
@@ -125,9 +113,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Articles/Services.md",
       "output": {
@@ -361,9 +346,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Components/NumericField/MBNumericField.md",
       "output": {
@@ -429,6 +411,16 @@
       "output": {
         ".html": {
           "relative_path": "Material.Blazor.MD3/Components/Switch/MBSwitch.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Material.Blazor.MD3/Components/Tabs/MBTabs.md",
+      "output": {
+        ".html": {
+          "relative_path": "Material.Blazor.MD3/Components/Tabs/MBTabs.html"
         }
       },
       "version": ""
@@ -1368,6 +1360,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBMenuPositioning.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBMenuPositioning.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.MBMenuSurfacePositioningMD2.yml",
       "output": {
         ".html": {
@@ -1502,6 +1504,26 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBSwitch.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBTabItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBTabItem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBTabs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBTabs.html"
         }
       },
       "version": ""

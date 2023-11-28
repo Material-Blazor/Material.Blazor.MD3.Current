@@ -40,7 +40,8 @@ function eventArgsCreatorMenuClose(event) {
 ** Register all custom events
 */
 function afterStarted(blazor) {
-  blazor.registerCustomEventType('menu-close', {
+  blazor.registerCustomEventType('menuclose', {
+    browserEventName: "menu-closex",
     createEventArgs: eventArgsCreatorMenuClose
   });
 }

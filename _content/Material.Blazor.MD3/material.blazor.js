@@ -47,6 +47,7 @@ __webpack_require__.d(MBDialog_namespaceObject, {
 var MBMenu_namespaceObject = {};
 __webpack_require__.r(MBMenu_namespaceObject);
 __webpack_require__.d(MBMenu_namespaceObject, {
+  setMenuCloseEvent: () => (setMenuCloseEvent),
   toggleMenuOpen: () => (toggleMenuOpen)
 });
 
@@ -2548,6 +2549,121 @@ MdTextButton = __decorate([
     t('md-text-button')
 ], MdTextButton);
 //# sourceMappingURL=text-button.js.map
+;// CONCATENATED MODULE: ./node_modules/@material/web/labs/behaviors/constraint-validation.js
+/**
+ * @license
+ * Copyright 2023 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+
+/**
+ * A symbol property used to create a constraint validation `Validator`.
+ * Required for all `mixinConstraintValidation()` elements.
+ */
+const createValidator = Symbol('createValidator');
+/**
+ * A symbol property used to return an anchor for constraint validation popups.
+ * Required for all `mixinConstraintValidation()` elements.
+ */
+const getValidityAnchor = Symbol('getValidityAnchor');
+// Private symbol members, used to avoid name clashing.
+const privateValidator = Symbol('privateValidator');
+const privateSyncValidity = Symbol('privateSyncValidity');
+const privateCustomValidationMessage = Symbol('privateCustomValidationMessage');
+/**
+ * Mixes in constraint validation APIs for an element.
+ *
+ * See https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation
+ * for more details.
+ *
+ * Implementations must provide a validator to cache and compute its validity,
+ * along with a shadow root element to anchor validation popups to.
+ *
+ * @example
+ * ```ts
+ * const baseClass = mixinConstraintValidation(
+ *   mixinFormAssociated(mixinElementInternals(LitElement))
+ * );
+ *
+ * class MyCheckbox extends baseClass {
+ *   \@property({type: Boolean}) checked = false;
+ *   \@property({type: Boolean}) required = false;
+ *
+ *   [createValidator]() {
+ *     return new CheckboxValidator(() => this);
+ *   }
+ *
+ *   [getValidityAnchor]() {
+ *     return this.renderRoot.querySelector('.root');
+ *   }
+ * }
+ * ```
+ *
+ * @param base The class to mix functionality into.
+ * @return The provided class with `ConstraintValidation` mixed in.
+ */
+function mixinConstraintValidation(base) {
+    var _a;
+    class ConstraintValidationElement extends base {
+        constructor() {
+            super(...arguments);
+            /**
+             * Needed for Safari, see https://bugs.webkit.org/show_bug.cgi?id=261432
+             * Replace with this[internals].validity.customError when resolved.
+             */
+            this[_a] = '';
+        }
+        get validity() {
+            this[privateSyncValidity]();
+            return this[internals].validity;
+        }
+        get validationMessage() {
+            this[privateSyncValidity]();
+            return this[internals].validationMessage;
+        }
+        get willValidate() {
+            this[privateSyncValidity]();
+            return this[internals].willValidate;
+        }
+        checkValidity() {
+            this[privateSyncValidity]();
+            return this[internals].checkValidity();
+        }
+        reportValidity() {
+            this[privateSyncValidity]();
+            return this[internals].reportValidity();
+        }
+        setCustomValidity(error) {
+            this[privateCustomValidationMessage] = error;
+            this[privateSyncValidity]();
+        }
+        requestUpdate(name, oldValue, options) {
+            super.requestUpdate(name, oldValue, options);
+            this[privateSyncValidity]();
+        }
+        [(_a = privateCustomValidationMessage, privateSyncValidity)]() {
+            if (is_server_o) {
+                return;
+            }
+            if (!this[privateValidator]) {
+                this[privateValidator] = this[createValidator]();
+            }
+            const { validity, validationMessage: nonCustomValidationMessage } = this[privateValidator].getValidity();
+            const customError = !!this[privateCustomValidationMessage];
+            const validationMessage = this[privateCustomValidationMessage] || nonCustomValidationMessage;
+            this[internals].setValidity({ ...validity, customError }, validationMessage, this[getValidityAnchor]() ?? undefined);
+        }
+        [createValidator]() {
+            throw new Error('Implement [createValidator]');
+        }
+        [getValidityAnchor]() {
+            throw new Error('Implement [getValidityAnchor]');
+        }
+    }
+    return ConstraintValidationElement;
+}
+//# sourceMappingURL=constraint-validation.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/labs/behaviors/form-associated.js
 /**
  * @license
@@ -2704,6 +2820,120 @@ function mixinFormAssociated(base) {
     return FormAssociatedElement;
 }
 //# sourceMappingURL=form-associated.js.map
+;// CONCATENATED MODULE: ./node_modules/@material/web/labs/behaviors/validators/validator.js
+/**
+ * @license
+ * Copyright 2023 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+/**
+ * A class that computes and caches `ValidityStateFlags` for a component with
+ * a given `State` interface.
+ *
+ * Cached performance before computing validity is important since constraint
+ * validation must be checked frequently and synchronously when properties
+ * change.
+ *
+ * @template State The expected interface of properties relevant to constraint
+ *     validation.
+ */
+class Validator {
+    /**
+     * Creates a new validator.
+     *
+     * @param getCurrentState A callback that returns the current state of
+     *     constraint validation-related properties.
+     */
+    constructor(getCurrentState) {
+        this.getCurrentState = getCurrentState;
+        /**
+         * The current validity state and message. This is cached and returns if
+         * constraint validation state does not change.
+         */
+        this.currentValidity = {
+            validity: {},
+            validationMessage: '',
+        };
+    }
+    /**
+     * Returns the current `ValidityStateFlags` and validation message for the
+     * validator.
+     *
+     * If the constraint validation state has not changed, this will return a
+     * cached result. This is important since `getValidity()` can be called
+     * frequently in response to synchronous property changes.
+     *
+     * @return The current validity and validation message.
+     */
+    getValidity() {
+        const state = this.getCurrentState();
+        const hasStateChanged = !this.prevState || !this.equals(this.prevState, state);
+        if (!hasStateChanged) {
+            return this.currentValidity;
+        }
+        const { validity, validationMessage } = this.computeValidity(state);
+        this.prevState = this.copy(state);
+        this.currentValidity = {
+            validationMessage,
+            validity: {
+                // Change any `ValidityState` instances into `ValidityStateFlags` since
+                // `ValidityState` cannot be easily `{...spread}`.
+                badInput: validity.badInput,
+                customError: validity.customError,
+                patternMismatch: validity.patternMismatch,
+                rangeOverflow: validity.rangeOverflow,
+                rangeUnderflow: validity.rangeUnderflow,
+                stepMismatch: validity.stepMismatch,
+                tooLong: validity.tooLong,
+                tooShort: validity.tooShort,
+                typeMismatch: validity.typeMismatch,
+                valueMissing: validity.valueMissing,
+            },
+        };
+        return this.currentValidity;
+    }
+    /**
+     * Creates a copy of a state. This is used to cache state and check if it
+     * changes.
+     *
+     * @param state The state to copy.
+     * @return A copy of the state.
+     */
+    copy(state) {
+        return { ...state };
+    }
+}
+//# sourceMappingURL=validator.js.map
+;// CONCATENATED MODULE: ./node_modules/@material/web/labs/behaviors/validators/checkbox-validator.js
+/**
+ * @license
+ * Copyright 2023 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/**
+ * A validator that provides constraint validation that emulates
+ * `<input type="checkbox">` validation.
+ */
+class CheckboxValidator extends Validator {
+    computeValidity(state) {
+        if (!this.checkboxControl) {
+            // Lazily create the platform input
+            this.checkboxControl = document.createElement('input');
+            this.checkboxControl.type = 'checkbox';
+        }
+        this.checkboxControl.checked = state.checked;
+        this.checkboxControl.required = state.required;
+        return {
+            validity: this.checkboxControl.validity,
+            validationMessage: this.checkboxControl.validationMessage,
+        };
+    }
+    equals(prev, next) {
+        return prev.checked === next.checked && prev.required === next.required;
+    }
+}
+//# sourceMappingURL=checkbox-validator.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/checkbox/internal/checkbox.js
 /**
  * @license
@@ -2720,8 +2950,10 @@ function mixinFormAssociated(base) {
 
 
 
+
+
 // Separate variable needed for closure.
-const checkboxBaseClass = mixinFormAssociated(mixinElementInternals(lit_element_s));
+const checkboxBaseClass = mixinConstraintValidation(mixinFormAssociated(mixinElementInternals(lit_element_s)));
 /**
  * A checkbox component.
  *
@@ -2734,38 +2966,6 @@ const checkboxBaseClass = mixinFormAssociated(mixinElementInternals(lit_element_
  * --bubbles --composed
  */
 class Checkbox extends checkboxBaseClass {
-    /**
-     * Returns a ValidityState object that represents the validity states of the
-     * checkbox.
-     *
-     * Note that checkboxes will only set `valueMissing` if `required` and not
-     * checked.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#validation
-     */
-    get validity() {
-        this.syncValidity();
-        return this[internals].validity;
-    }
-    /**
-     * Returns the native validation error message.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process
-     */
-    get validationMessage() {
-        this.syncValidity();
-        return this[internals].validationMessage;
-    }
-    /**
-     * Returns whether an element will successfully validate based on forms
-     * validation rules and constraints.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process
-     */
-    get willValidate() {
-        this.syncValidity();
-        return this[internals].willValidate;
-    }
     constructor() {
         super();
         /**
@@ -2794,64 +2994,15 @@ class Checkbox extends checkboxBaseClass {
         this.prevChecked = false;
         this.prevDisabled = false;
         this.prevIndeterminate = false;
-        // Needed for Safari, see https://bugs.webkit.org/show_bug.cgi?id=261432
-        // Replace with this[internals].validity.customError when resolved.
-        this.hasCustomValidityError = false;
         if (!is_server_o) {
             this.addEventListener('click', (event) => {
-                if (!isActivationClick(event)) {
+                if (!isActivationClick(event) || !this.input) {
                     return;
                 }
                 this.focus();
                 dispatchActivationClick(this.input);
             });
         }
-    }
-    /**
-     * Checks the checkbox's native validation and returns whether or not the
-     * element is valid.
-     *
-     * If invalid, this method will dispatch the `invalid` event.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/checkValidity
-     *
-     * @return true if the checkbox is valid, or false if not.
-     */
-    checkValidity() {
-        this.syncValidity();
-        return this[internals].checkValidity();
-    }
-    /**
-     * Checks the checkbox's native validation and returns whether or not the
-     * element is valid.
-     *
-     * If invalid, this method will dispatch the `invalid` event.
-     *
-     * The `validationMessage` is reported to the user by the browser. Use
-     * `setCustomValidity()` to customize the `validationMessage`.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/reportValidity
-     *
-     * @return true if the checkbox is valid, or false if not.
-     */
-    reportValidity() {
-        this.syncValidity();
-        return this[internals].reportValidity();
-    }
-    /**
-     * Sets the checkbox's native validation error message. This is used to
-     * customize `validationMessage`.
-     *
-     * When the error is not an empty string, the checkbox is considered invalid
-     * and `validity.customError` will be true.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setCustomValidity
-     *
-     * @param error The error message to display.
-     */
-    setCustomValidity(error) {
-        this.hasCustomValidityError = !!error;
-        this[internals].setValidity({ customError: !!error }, error, this.getInput());
     }
     update(changed) {
         if (changed.has('checked') ||
@@ -2910,42 +3061,11 @@ class Checkbox extends checkboxBaseClass {
       </div>
     `;
     }
-    updated() {
-        // Sync validity when properties change, since validation properties may
-        // have changed.
-        this.syncValidity();
-    }
     handleChange(event) {
         const target = event.target;
         this.checked = target.checked;
         this.indeterminate = target.indeterminate;
         redispatchEvent(this, event);
-    }
-    syncValidity() {
-        // Sync the internal <input>'s validity and the host's ElementInternals
-        // validity. We do this to re-use native `<input>` validation messages.
-        const input = this.getInput();
-        if (this.hasCustomValidityError) {
-            input.setCustomValidity(this[internals].validationMessage);
-        }
-        else {
-            input.setCustomValidity('');
-        }
-        this[internals].setValidity(input.validity, input.validationMessage, this.getInput());
-    }
-    getInput() {
-        if (!this.input) {
-            // If the input is not yet defined, synchronously render.
-            this.connectedCallback();
-            this.performUpdate();
-        }
-        if (this.isUpdatePending) {
-            // If there are pending updates, synchronously perform them. This ensures
-            // that constraint validation properties (like `required`) are synced
-            // before interacting with input APIs that depend on them.
-            this.scheduleUpdate();
-        }
-        return this.input;
     }
     [getFormValue]() {
         if (!this.checked || this.indeterminate) {
@@ -2963,6 +3083,12 @@ class Checkbox extends checkboxBaseClass {
     }
     formStateRestoreCallback(state) {
         this.checked = state === 'true';
+    }
+    [createValidator]() {
+        return new CheckboxValidator(() => this);
+    }
+    [getValidityAnchor]() {
+        return this.input;
     }
 }
 (() => {
@@ -3258,7 +3384,7 @@ const internal_elevated_styles_css_styles = i `.elevated{--md-elevation-level: v
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const internal_shared_styles_css_styles = i `:host{border-start-start-radius:var(--_container-shape-start-start);border-start-end-radius:var(--_container-shape-start-end);border-end-start-radius:var(--_container-shape-end-start);border-end-end-radius:var(--_container-shape-end-end);display:inline-flex;height:var(--_container-height);cursor:pointer;--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-color: var(--_pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity)}:host([touch-target=wrapper]){margin:max(0px,(48px - var(--_container-height))/2) 0}md-focus-ring{--md-focus-ring-shape-start-start: var(--_container-shape-start-start);--md-focus-ring-shape-start-end: var(--_container-shape-start-end);--md-focus-ring-shape-end-end: var(--_container-shape-end-end);--md-focus-ring-shape-end-start: var(--_container-shape-end-start)}.container{border-radius:inherit;box-sizing:border-box;display:flex;height:100%;position:relative;width:100%}.container::before{border-radius:inherit;content:"";inset:0;pointer-events:none;position:absolute}.container:not(.disabled){cursor:pointer}.container.disabled{pointer-events:none}.cell{display:flex}.action{align-items:baseline;appearance:none;background:none;border:none;border-radius:inherit;display:flex;gap:8px;outline:none;padding:0;position:relative;text-decoration:none}.primary.action{padding-inline-start:8px;padding-inline-end:16px}.touch{height:48px;inset:50% 0 0;position:absolute;transform:translateY(-50%);width:100%}:host([touch-target=none]) .touch{display:none}.outline{border:var(--_outline-width) solid var(--_outline-color);border-radius:inherit;inset:0;pointer-events:none;position:absolute}:where(:focus) .outline{border-color:var(--_focus-outline-color)}:where(.disabled) .outline{border-color:var(--_disabled-outline-color);opacity:var(--_disabled-outline-opacity)}md-ripple{border-radius:inherit}.label,.icon,.touch{z-index:1}.label{align-items:center;color:var(--_label-text-color);display:flex;font-family:var(--_label-text-font);font-size:var(--_label-text-size);line-height:var(--_label-text-line-height);font-weight:var(--_label-text-weight);height:100%;text-overflow:ellipsis;user-select:none;white-space:nowrap}:where(:hover) .label{color:var(--_hover-label-text-color)}:where(:focus) .label{color:var(--_focus-label-text-color)}:where(:active) .label{color:var(--_pressed-label-text-color)}:where(.disabled) .label{color:var(--_disabled-label-text-color);opacity:var(--_disabled-label-text-opacity)}.icon{align-self:center;display:flex;fill:currentColor;position:relative}.icon ::slotted(:first-child){font-size:var(--_icon-size);height:var(--_icon-size);width:var(--_icon-size)}.leading.icon{color:var(--_leading-icon-color)}:where(:hover) .leading.icon{color:var(--_hover-leading-icon-color)}:where(:focus) .leading.icon{color:var(--_focus-leading-icon-color)}:where(:active) .leading.icon{color:var(--_pressed-leading-icon-color)}:where(.disabled) .leading.icon{color:var(--_disabled-leading-icon-color);opacity:var(--_disabled-leading-icon-opacity)}@media(forced-colors: active){:where(.disabled) :is(.label,.outline,.leading.icon){color:GrayText;opacity:1}}a,button:not(:disabled){cursor:inherit}/*# sourceMappingURL=shared-styles.css.map */
+const internal_shared_styles_css_styles = i `:host{border-start-start-radius:var(--_container-shape-start-start);border-start-end-radius:var(--_container-shape-start-end);border-end-start-radius:var(--_container-shape-end-start);border-end-end-radius:var(--_container-shape-end-end);display:inline-flex;height:var(--_container-height);cursor:pointer;-webkit-tap-highlight-color:rgba(0,0,0,0);--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-color: var(--_pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity)}:host([touch-target=wrapper]){margin:max(0px,(48px - var(--_container-height))/2) 0}md-focus-ring{--md-focus-ring-shape-start-start: var(--_container-shape-start-start);--md-focus-ring-shape-start-end: var(--_container-shape-start-end);--md-focus-ring-shape-end-end: var(--_container-shape-end-end);--md-focus-ring-shape-end-start: var(--_container-shape-end-start)}.container{border-radius:inherit;box-sizing:border-box;display:flex;height:100%;position:relative;width:100%}.container::before{border-radius:inherit;content:"";inset:0;pointer-events:none;position:absolute}.container:not(.disabled){cursor:pointer}.container.disabled{pointer-events:none}.cell{display:flex}.action{align-items:baseline;appearance:none;background:none;border:none;border-radius:inherit;display:flex;gap:8px;outline:none;padding:0;position:relative;text-decoration:none}.primary.action{padding-inline-start:8px;padding-inline-end:16px}.touch{height:48px;inset:50% 0 0;position:absolute;transform:translateY(-50%);width:100%}:host([touch-target=none]) .touch{display:none}.outline{border:var(--_outline-width) solid var(--_outline-color);border-radius:inherit;inset:0;pointer-events:none;position:absolute}:where(:focus) .outline{border-color:var(--_focus-outline-color)}:where(.disabled) .outline{border-color:var(--_disabled-outline-color);opacity:var(--_disabled-outline-opacity)}md-ripple{border-radius:inherit}.label,.icon,.touch{z-index:1}.label{align-items:center;color:var(--_label-text-color);display:flex;font-family:var(--_label-text-font);font-size:var(--_label-text-size);line-height:var(--_label-text-line-height);font-weight:var(--_label-text-weight);height:100%;text-overflow:ellipsis;user-select:none;white-space:nowrap}:where(:hover) .label{color:var(--_hover-label-text-color)}:where(:focus) .label{color:var(--_focus-label-text-color)}:where(:active) .label{color:var(--_pressed-label-text-color)}:where(.disabled) .label{color:var(--_disabled-label-text-color);opacity:var(--_disabled-label-text-opacity)}.icon{align-self:center;display:flex;fill:currentColor;position:relative}.icon ::slotted(:first-child){font-size:var(--_icon-size);height:var(--_icon-size);width:var(--_icon-size)}.leading.icon{color:var(--_leading-icon-color)}:where(:hover) .leading.icon{color:var(--_hover-leading-icon-color)}:where(:focus) .leading.icon{color:var(--_focus-leading-icon-color)}:where(:active) .leading.icon{color:var(--_pressed-leading-icon-color)}:where(.disabled) .leading.icon{color:var(--_disabled-leading-icon-color);opacity:var(--_disabled-leading-icon-opacity)}@media(forced-colors: active){:where(.disabled) :is(.label,.outline,.leading.icon){color:GrayText;opacity:1}}a,button:not(:disabled){cursor:inherit}/*# sourceMappingURL=shared-styles.css.map */
 `;
 //# sourceMappingURL=shared-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/chips/assist-chip.js
@@ -4735,7 +4861,7 @@ const forced_colors_styles_css_styles = i `@media(forced-colors: active){.fab{bo
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const fab_internal_shared_styles_css_styles = i `:host{--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity);display:inline-flex}:host([size=medium][touch-target=wrapper]){margin:max(0px,48px - var(--_container-height))}:host([size=large][touch-target=wrapper]){margin:max(0px,48px - var(--_large-container-height))}.fab,.icon,.icon ::slotted(*){display:flex}.fab{align-items:center;justify-content:center;vertical-align:middle;padding:0;position:relative;height:var(--_container-height);transition-property:background-color;border-width:0px;outline:none;z-index:0;--md-elevation-level: var(--_container-elevation);--md-elevation-shadow-color: var(--_container-shadow-color);background-color:var(--_container-color);--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-pressed-color: var(--_pressed-state-layer-color)}.fab.extended{width:inherit;box-sizing:border-box;padding-inline-start:16px;padding-inline-end:20px}.fab:not(.extended){width:var(--_container-width)}.fab.large{width:var(--_large-container-width);height:var(--_large-container-height)}.fab.large .icon ::slotted(*){width:var(--_large-icon-size);height:var(--_large-icon-size);font-size:var(--_large-icon-size)}.fab.large,.fab.large .ripple{border-start-start-radius:var(--_large-container-shape-start-start);border-start-end-radius:var(--_large-container-shape-start-end);border-end-start-radius:var(--_large-container-shape-end-start);border-end-end-radius:var(--_large-container-shape-end-end)}.fab.large md-focus-ring{--md-focus-ring-shape-start-start: var(--_large-container-shape-start-start);--md-focus-ring-shape-start-end: var(--_large-container-shape-start-end);--md-focus-ring-shape-end-end: var(--_large-container-shape-end-end);--md-focus-ring-shape-end-start: var(--_large-container-shape-end-start)}.fab:focus{--md-elevation-level: var(--_focus-container-elevation)}.fab:hover{--md-elevation-level: var(--_hover-container-elevation)}.fab:active{--md-elevation-level: var(--_pressed-container-elevation)}.fab.lowered{background-color:var(--_lowered-container-color);--md-elevation-level: var(--_lowered-container-elevation)}.fab.lowered:focus{--md-elevation-level: var(--_lowered-focus-container-elevation)}.fab.lowered:hover{--md-elevation-level: var(--_lowered-hover-container-elevation)}.fab.lowered:active{--md-elevation-level: var(--_lowered-pressed-container-elevation)}.fab .label{color:var(--_label-text-color)}.fab:hover .fab .label{color:var(--_hover-label-text-color)}.fab:focus .fab .label{color:var(--_focus-label-text-color)}.fab:active .fab .label{color:var(--_pressed-label-text-color)}.label{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:var(--_label-text-font);font-size:var(--_label-text-size);line-height:var(--_label-text-line-height);font-weight:var(--_label-text-weight)}.fab.extended .icon ::slotted(*){margin-inline-end:12px}.ripple{overflow:hidden}.ripple,md-elevation{z-index:-1}.touch-target{position:absolute;top:50%;height:48px;left:50%;width:48px;transform:translate(-50%, -50%)}:host([touch-target=none]) .touch-target{display:none}md-elevation,.fab{transition-duration:280ms;transition-timing-function:cubic-bezier(0.2, 0, 0, 1)}.fab,.ripple{border-start-start-radius:var(--_container-shape-start-start);border-start-end-radius:var(--_container-shape-start-end);border-end-start-radius:var(--_container-shape-end-start);border-end-end-radius:var(--_container-shape-end-end)}md-focus-ring{--md-focus-ring-shape-start-start: var(--_container-shape-start-start);--md-focus-ring-shape-start-end: var(--_container-shape-start-end);--md-focus-ring-shape-end-end: var(--_container-shape-end-end);--md-focus-ring-shape-end-start: var(--_container-shape-end-start)}.icon ::slotted(*){width:var(--_icon-size);height:var(--_icon-size);font-size:var(--_icon-size)}/*# sourceMappingURL=shared-styles.css.map */
+const fab_internal_shared_styles_css_styles = i `:host{--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity);display:inline-flex;-webkit-tap-highlight-color:rgba(0,0,0,0)}:host([size=medium][touch-target=wrapper]){margin:max(0px,48px - var(--_container-height))}:host([size=large][touch-target=wrapper]){margin:max(0px,48px - var(--_large-container-height))}.fab,.icon,.icon ::slotted(*){display:flex}.fab{align-items:center;justify-content:center;vertical-align:middle;padding:0;position:relative;height:var(--_container-height);transition-property:background-color;border-width:0px;outline:none;z-index:0;--md-elevation-level: var(--_container-elevation);--md-elevation-shadow-color: var(--_container-shadow-color);background-color:var(--_container-color);--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-pressed-color: var(--_pressed-state-layer-color)}.fab.extended{width:inherit;box-sizing:border-box;padding-inline-start:16px;padding-inline-end:20px}.fab:not(.extended){width:var(--_container-width)}.fab.large{width:var(--_large-container-width);height:var(--_large-container-height)}.fab.large .icon ::slotted(*){width:var(--_large-icon-size);height:var(--_large-icon-size);font-size:var(--_large-icon-size)}.fab.large,.fab.large .ripple{border-start-start-radius:var(--_large-container-shape-start-start);border-start-end-radius:var(--_large-container-shape-start-end);border-end-start-radius:var(--_large-container-shape-end-start);border-end-end-radius:var(--_large-container-shape-end-end)}.fab.large md-focus-ring{--md-focus-ring-shape-start-start: var(--_large-container-shape-start-start);--md-focus-ring-shape-start-end: var(--_large-container-shape-start-end);--md-focus-ring-shape-end-end: var(--_large-container-shape-end-end);--md-focus-ring-shape-end-start: var(--_large-container-shape-end-start)}.fab:focus{--md-elevation-level: var(--_focus-container-elevation)}.fab:hover{--md-elevation-level: var(--_hover-container-elevation)}.fab:active{--md-elevation-level: var(--_pressed-container-elevation)}.fab.lowered{background-color:var(--_lowered-container-color);--md-elevation-level: var(--_lowered-container-elevation)}.fab.lowered:focus{--md-elevation-level: var(--_lowered-focus-container-elevation)}.fab.lowered:hover{--md-elevation-level: var(--_lowered-hover-container-elevation)}.fab.lowered:active{--md-elevation-level: var(--_lowered-pressed-container-elevation)}.fab .label{color:var(--_label-text-color)}.fab:hover .fab .label{color:var(--_hover-label-text-color)}.fab:focus .fab .label{color:var(--_focus-label-text-color)}.fab:active .fab .label{color:var(--_pressed-label-text-color)}.label{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:var(--_label-text-font);font-size:var(--_label-text-size);line-height:var(--_label-text-line-height);font-weight:var(--_label-text-weight)}.fab.extended .icon ::slotted(*){margin-inline-end:12px}.ripple{overflow:hidden}.ripple,md-elevation{z-index:-1}.touch-target{position:absolute;top:50%;height:48px;left:50%;width:48px;transform:translate(-50%, -50%)}:host([touch-target=none]) .touch-target{display:none}md-elevation,.fab{transition-duration:280ms;transition-timing-function:cubic-bezier(0.2, 0, 0, 1)}.fab,.ripple{border-start-start-radius:var(--_container-shape-start-start);border-start-end-radius:var(--_container-shape-start-end);border-end-start-radius:var(--_container-shape-end-start);border-end-end-radius:var(--_container-shape-end-end)}md-focus-ring{--md-focus-ring-shape-start-start: var(--_container-shape-start-start);--md-focus-ring-shape-start-end: var(--_container-shape-start-end);--md-focus-ring-shape-end-end: var(--_container-shape-end-end);--md-focus-ring-shape-end-start: var(--_container-shape-end-start)}.icon ::slotted(*){width:var(--_icon-size);height:var(--_icon-size);font-size:var(--_icon-size)}/*# sourceMappingURL=shared-styles.css.map */
 `;
 //# sourceMappingURL=shared-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/fab/branded-fab.js
@@ -6725,7 +6851,7 @@ __decorate([
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const list_item_styles_css_styles = i `:host{display:flex;--md-ripple-hover-color: var(--md-list-item-hover-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--md-ripple-hover-opacity: var(--md-list-item-hover-state-layer-opacity, 0.08);--md-ripple-pressed-color: var(--md-list-item-pressed-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--md-ripple-pressed-opacity: var(--md-list-item-pressed-state-layer-opacity, 0.12)}:host(:is([type=button]:not([disabled]),[type=link])){cursor:pointer}md-focus-ring{z-index:1;--md-focus-ring-shape: 8px}a,button,li{background:none;border:none;cursor:inherit;padding:0;margin:0;text-align:unset;text-decoration:none}.list-item{border-radius:inherit;display:flex;flex:1;max-width:inherit;min-width:inherit;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}.list-item.interactive{cursor:pointer}.list-item.disabled{opacity:var(--md-list-item-disabled-opacity, 0.3);pointer-events:none}[slot=container]{pointer-events:none}md-ripple{border-radius:inherit}md-item{border-radius:inherit;flex:1;height:100%;color:var(--md-list-item-label-text-color, var(--md-sys-color-on-surface, #1d1b20));font-family:var(--md-list-item-label-text-font, var(--md-sys-typescale-body-large-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-list-item-label-text-size, var(--md-sys-typescale-body-large-size, 1rem));line-height:var(--md-list-item-label-text-line-height, var(--md-sys-typescale-body-large-line-height, 1.5rem));font-weight:var(--md-list-item-label-text-weight, var(--md-sys-typescale-body-large-weight, var(--md-ref-typeface-weight-regular, 400)));min-height:var(--md-list-item-one-line-container-height, 56px);padding-top:var(--md-list-item-top-space, 12px);padding-bottom:var(--md-list-item-bottom-space, 12px);padding-inline-start:var(--md-list-item-leading-space, 16px);padding-inline-end:var(--md-list-item-trailing-space, 16px)}md-item[multiline]{min-height:var(--md-list-item-two-line-container-height, 72px)}[slot=supporting-text]{color:var(--md-list-item-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));font-family:var(--md-list-item-supporting-text-font, var(--md-sys-typescale-body-medium-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-list-item-supporting-text-size, var(--md-sys-typescale-body-medium-size, 0.875rem));line-height:var(--md-list-item-supporting-text-line-height, var(--md-sys-typescale-body-medium-line-height, 1.25rem));font-weight:var(--md-list-item-supporting-text-weight, var(--md-sys-typescale-body-medium-weight, var(--md-ref-typeface-weight-regular, 400)))}[slot=trailing-supporting-text]{color:var(--md-list-item-trailing-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));font-family:var(--md-list-item-trailing-supporting-text-font, var(--md-sys-typescale-label-small-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-list-item-trailing-supporting-text-size, var(--md-sys-typescale-label-small-size, 0.6875rem));line-height:var(--md-list-item-trailing-supporting-text-line-height, var(--md-sys-typescale-label-small-line-height, 1rem));font-weight:var(--md-list-item-trailing-supporting-text-weight, var(--md-sys-typescale-label-small-weight, var(--md-ref-typeface-weight-medium, 500)))}:is([slot=start],[slot=end])::slotted(*){fill:currentColor}[slot=start]{color:var(--md-list-item-leading-icon-color, var(--md-sys-color-on-surface-variant, #49454f))}[slot=end]{color:var(--md-list-item-trailing-icon-color, var(--md-sys-color-on-surface-variant, #49454f))}@media(forced-colors: active){.disabled slot{color:GrayText}.list-item.disabled{color:GrayText;opacity:1}}/*# sourceMappingURL=list-item-styles.css.map */
+const list_item_styles_css_styles = i `:host{display:flex;-webkit-tap-highlight-color:rgba(0,0,0,0);--md-ripple-hover-color: var(--md-list-item-hover-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--md-ripple-hover-opacity: var(--md-list-item-hover-state-layer-opacity, 0.08);--md-ripple-pressed-color: var(--md-list-item-pressed-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--md-ripple-pressed-opacity: var(--md-list-item-pressed-state-layer-opacity, 0.12)}:host(:is([type=button]:not([disabled]),[type=link])){cursor:pointer}md-focus-ring{z-index:1;--md-focus-ring-shape: 8px}a,button,li{background:none;border:none;cursor:inherit;padding:0;margin:0;text-align:unset;text-decoration:none}.list-item{border-radius:inherit;display:flex;flex:1;max-width:inherit;min-width:inherit;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}.list-item.interactive{cursor:pointer}.list-item.disabled{opacity:var(--md-list-item-disabled-opacity, 0.3);pointer-events:none}[slot=container]{pointer-events:none}md-ripple{border-radius:inherit}md-item{border-radius:inherit;flex:1;height:100%;color:var(--md-list-item-label-text-color, var(--md-sys-color-on-surface, #1d1b20));font-family:var(--md-list-item-label-text-font, var(--md-sys-typescale-body-large-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-list-item-label-text-size, var(--md-sys-typescale-body-large-size, 1rem));line-height:var(--md-list-item-label-text-line-height, var(--md-sys-typescale-body-large-line-height, 1.5rem));font-weight:var(--md-list-item-label-text-weight, var(--md-sys-typescale-body-large-weight, var(--md-ref-typeface-weight-regular, 400)));min-height:var(--md-list-item-one-line-container-height, 56px);padding-top:var(--md-list-item-top-space, 12px);padding-bottom:var(--md-list-item-bottom-space, 12px);padding-inline-start:var(--md-list-item-leading-space, 16px);padding-inline-end:var(--md-list-item-trailing-space, 16px)}md-item[multiline]{min-height:var(--md-list-item-two-line-container-height, 72px)}[slot=supporting-text]{color:var(--md-list-item-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));font-family:var(--md-list-item-supporting-text-font, var(--md-sys-typescale-body-medium-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-list-item-supporting-text-size, var(--md-sys-typescale-body-medium-size, 0.875rem));line-height:var(--md-list-item-supporting-text-line-height, var(--md-sys-typescale-body-medium-line-height, 1.25rem));font-weight:var(--md-list-item-supporting-text-weight, var(--md-sys-typescale-body-medium-weight, var(--md-ref-typeface-weight-regular, 400)))}[slot=trailing-supporting-text]{color:var(--md-list-item-trailing-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));font-family:var(--md-list-item-trailing-supporting-text-font, var(--md-sys-typescale-label-small-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-list-item-trailing-supporting-text-size, var(--md-sys-typescale-label-small-size, 0.6875rem));line-height:var(--md-list-item-trailing-supporting-text-line-height, var(--md-sys-typescale-label-small-line-height, 1rem));font-weight:var(--md-list-item-trailing-supporting-text-weight, var(--md-sys-typescale-label-small-weight, var(--md-ref-typeface-weight-medium, 500)))}:is([slot=start],[slot=end])::slotted(*){fill:currentColor}[slot=start]{color:var(--md-list-item-leading-icon-color, var(--md-sys-color-on-surface-variant, #49454f))}[slot=end]{color:var(--md-list-item-trailing-icon-color, var(--md-sys-color-on-surface-variant, #49454f))}@media(forced-colors: active){.disabled slot{color:GrayText}.list-item.disabled{color:GrayText;opacity:1}}/*# sourceMappingURL=list-item-styles.css.map */
 `;
 //# sourceMappingURL=list-item-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/list/list-item.js
@@ -10055,6 +10181,188 @@ MdRadio = __decorate([
     t('md-radio')
 ], MdRadio);
 //# sourceMappingURL=radio.js.map
+;// CONCATENATED MODULE: ./node_modules/@material/web/labs/behaviors/on-report-validity.js
+/**
+ * @license
+ * Copyright 2023 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+/**
+ * A symbol property used for a callback when validity has been reported.
+ */
+const onReportValidity = Symbol('onReportValidity');
+// Private symbol members, used to avoid name clashing.
+const privateCleanupFormListeners = Symbol('privateCleanupFormListeners');
+/**
+ * Mixes in a callback for constraint validation when validity should be
+ * styled and reported to the user.
+ *
+ * This is commonly used in text-field-like controls that display error styles
+ * and error messages.
+ *
+ * @example
+ * ```ts
+ * const baseClass = mixinOnReportValidity(
+ *   mixinConstraintValidation(
+ *     mixinFormAssociated(mixinElementInternals(LitElement)),
+ *   ),
+ * );
+ *
+ * class MyField extends baseClass {
+ *   \@property({type: Boolean}) error = false;
+ *   \@property() errorMessage = '';
+ *
+ *   [onReportValidity](invalidEvent: Event | null) {
+ *     this.error = !!invalidEvent;
+ *     this.errorMessage = this.validationMessage;
+ *
+ *     // Optionally prevent platform popup from displaying
+ *     invalidEvent?.preventDefault();
+ *   }
+ * }
+ * ```
+ *
+ * @param base The class to mix functionality into.
+ * @return The provided class with `OnReportValidity` mixed in.
+ */
+function mixinOnReportValidity(base) {
+    var _a;
+    class OnReportValidityElement extends base {
+        constructor() {
+            super(...arguments);
+            /**
+             * Used to clean up event listeners when a new form is associated.
+             */
+            this[_a] = new AbortController();
+        }
+        reportValidity() {
+            let invalidEvent = null;
+            const cleanupInvalidListener = new AbortController();
+            this.addEventListener('invalid', (event) => {
+                invalidEvent = event;
+            }, { signal: cleanupInvalidListener.signal });
+            const valid = super.reportValidity();
+            cleanupInvalidListener.abort();
+            // event may be null, so check for strict `true`. If null it should still
+            // be reported.
+            if (invalidEvent?.defaultPrevented !== true) {
+                this[onReportValidity](invalidEvent);
+            }
+            return valid;
+        }
+        [(_a = privateCleanupFormListeners, onReportValidity)](invalidEvent) {
+            throw new Error('Implement [onReportValidity]');
+        }
+        formAssociatedCallback(form) {
+            // can't use super.formAssociatedCallback?.() due to closure
+            if (super.formAssociatedCallback) {
+                super.formAssociatedCallback(form);
+            }
+            // Clean up previous submit listener
+            this[privateCleanupFormListeners].abort();
+            if (!form) {
+                return;
+            }
+            this[privateCleanupFormListeners] = new AbortController();
+            // If the element's form submits, then all controls are valid. This lets
+            // the element remove its error styles that may have been set when
+            // `reportValidity()` was called.
+            form.addEventListener('submit', () => {
+                this[onReportValidity](null);
+            }, {
+                signal: this[privateCleanupFormListeners].signal,
+            });
+            // Inject a callback when `form.reportValidity()` is called and the form
+            // is valid. There isn't an event that is dispatched to alert us (unlike
+            // the 'invalid' event), and we need to remove error styles when
+            // `form.reportValidity()` is called and returns true.
+            let reportedInvalidEventFromForm = false;
+            let formReportValidityCleanup = new AbortController();
+            injectFormReportValidityHooks({
+                form,
+                cleanup: this[privateCleanupFormListeners].signal,
+                beforeReportValidity: () => {
+                    reportedInvalidEventFromForm = false;
+                    this.addEventListener('invalid', (invalidEvent) => {
+                        reportedInvalidEventFromForm = true;
+                        if (!invalidEvent.defaultPrevented) {
+                            this[onReportValidity](invalidEvent);
+                        }
+                    }, { signal: formReportValidityCleanup.signal });
+                },
+                afterReportValidity: () => {
+                    formReportValidityCleanup.abort();
+                    formReportValidityCleanup = new AbortController();
+                    if (reportedInvalidEventFromForm) {
+                        reportedInvalidEventFromForm = false;
+                        return;
+                    }
+                    // Report successful form validation if an invalid event wasn't
+                    // fired.
+                    this[onReportValidity](null);
+                },
+            });
+        }
+    }
+    return OnReportValidityElement;
+}
+const FORM_REPORT_VALIDITY_HOOKS = new WeakMap();
+function injectFormReportValidityHooks({ form, beforeReportValidity, afterReportValidity, cleanup, }) {
+    if (!FORM_REPORT_VALIDITY_HOOKS.has(form)) {
+        // Patch form.reportValidity() to add an event target that can be used to
+        // react when the method is called.
+        // We should only patch this method once, since multiple controls and other
+        // forces may want to patch this method. We cannot reliably clean it up by
+        // resetting the method to "superReportValidity", which may be a patched
+        // function.
+        // Instead, we never clean up the patch but add and clean up event listener
+        // hooks once it's patched.
+        const hooks = new EventTarget();
+        const superReportValidity = form.reportValidity;
+        form.reportValidity = function () {
+            hooks.dispatchEvent(new Event('before'));
+            const valid = superReportValidity.call(this);
+            hooks.dispatchEvent(new Event('after'));
+            return valid;
+        };
+        FORM_REPORT_VALIDITY_HOOKS.set(form, hooks);
+    }
+    const hooks = FORM_REPORT_VALIDITY_HOOKS.get(form);
+    hooks.addEventListener('before', beforeReportValidity, { signal: cleanup });
+    hooks.addEventListener('after', afterReportValidity, { signal: cleanup });
+}
+//# sourceMappingURL=on-report-validity.js.map
+;// CONCATENATED MODULE: ./node_modules/@material/web/labs/behaviors/validators/select-validator.js
+/**
+ * @license
+ * Copyright 2023 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+
+/**
+ * A validator that provides constraint validation that emulates `<select>`
+ * validation.
+ */
+class SelectValidator extends Validator {
+    computeValidity(state) {
+        if (!this.selectControl) {
+            // Lazily create the platform select
+            this.selectControl = document.createElement('select');
+        }
+        j(x `<option value=${state.value}></option>`, this.selectControl);
+        this.selectControl.value = state.value;
+        this.selectControl.required = state.required;
+        return {
+            validity: this.selectControl.validity,
+            validationMessage: this.selectControl.validationMessage,
+        };
+    }
+    equals(prev, next) {
+        return prev.value === next.value && prev.required === next.required;
+    }
+}
+//# sourceMappingURL=select-validator.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/select/internal/shared.js
 /**
  * @license
@@ -10101,9 +10409,12 @@ var select_a;
 
 
 
+
+
+
 const VALUE = Symbol('value');
 // Separate variable needed for closure.
-const selectBaseClass = mixinFormAssociated(mixinElementInternals(lit_element_s));
+const selectBaseClass = mixinOnReportValidity(mixinConstraintValidation(mixinFormAssociated(mixinElementInternals(lit_element_s))));
 /**
  * @fires change {Event} The native `change` event on
  * [`<input>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event)
@@ -10202,15 +10513,6 @@ class Select extends selectBaseClass {
         this.nativeErrorText = '';
         this.focused = false;
         this.open = false;
-        this.isCheckingValidity = false;
-        this.isReportingValidity = false;
-        this.customValidationMessage = '';
-        this.onInvalid = (invalidEvent) => {
-            if (this.isCheckingValidity || this.isReportingValidity) {
-                return;
-            }
-            this.showErrorMessage(false, invalidEvent);
-        };
     }
     /**
      * The value of the currently selected option.
@@ -10255,36 +10557,6 @@ class Select extends selectBaseClass {
     get selectedOptions() {
         return (this.getSelectedOptions() ?? []).map(([option]) => option);
     }
-    /**
-     * Returns a ValidityState object that represents the validity states of the
-     * checkbox.
-     *
-     * Note that selects will only set `valueMissing` if unselected and
-     * `required`.
-     */
-    get validity() {
-        this.syncValidity();
-        return this[internals].validity;
-    }
-    /**
-     * Returns the native validation error message.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process
-     */
-    get validationMessage() {
-        this.syncValidity();
-        return this[internals].validationMessage;
-    }
-    /**
-     * Returns whether an element will successfully validate based on forms
-     * validation rules and constraints.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process
-     */
-    get willValidate() {
-        this.syncValidity();
-        return this[internals].willValidate;
-    }
     get hasError() {
         return this.error || this.nativeError;
     }
@@ -10319,76 +10591,17 @@ class Select extends selectBaseClass {
         this.nativeError = false;
         this.nativeErrorText = '';
     }
-    /**
-     * Checks the select's native validation and returns whether or not the
-     * element is valid.
-     *
-     * If invalid, this method will dispatch the `invalid` event.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/checkValidity
-     *
-     * @return true if the select is valid, or false if not.
-     */
-    checkValidity() {
-        this.isCheckingValidity = true;
-        this.syncValidity();
-        const isValid = this[internals].checkValidity();
-        this.isCheckingValidity = false;
-        return isValid;
-    }
-    /**
-     * Checks the select's native validation and returns whether or not the
-     * element is valid.
-     *
-     * If invalid, this method will dispatch the `invalid` event.
-     *
-     * This method will display or clear an error text message equal to the
-     * select's `validationMessage`, unless the invalid event is canceled.
-     *
-     * Use `setCustomValidity()` to customize the `validationMessage`.
-     *
-     * This method can also be used to re-announce error messages to screen
-     * readers.
-     *
-     * @return true if the select is valid, or false if not.
-     */
-    reportValidity() {
-        this.isReportingValidity = true;
-        let invalidEvent;
-        this.addEventListener('invalid', (event) => {
-            invalidEvent = event;
-        }, { once: true });
-        const valid = this.checkValidity();
-        this.showErrorMessage(valid, invalidEvent);
-        this.isReportingValidity = false;
-        return valid;
-    }
-    showErrorMessage(valid, invalidEvent) {
+    [(select_a = VALUE, onReportValidity)](invalidEvent) {
         if (invalidEvent?.defaultPrevented) {
-            return valid;
+            return;
         }
+        invalidEvent?.preventDefault();
         const prevMessage = this.getErrorText();
-        this.nativeError = !valid;
+        this.nativeError = !!invalidEvent;
         this.nativeErrorText = this.validationMessage;
         if (prevMessage === this.getErrorText()) {
             this.field?.reannounceError();
         }
-        return valid;
-    }
-    /**
-     * Sets the select's native validation error message. This is used to
-     * customize `validationMessage`.
-     *
-     * When the error is not an empty string, the select is considered invalid
-     * and `validity.customError` will be true.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/setCustomValidity
-     *
-     * @param error The error message to display.
-     */
-    setCustomValidity(error) {
-        this.customValidationMessage = error;
-        this.syncValidity();
     }
     update(changed) {
         // In SSR the options will be ready to query, so try to figure out what
@@ -10406,11 +10619,6 @@ class Select extends selectBaseClass {
         ${this.renderField()} ${this.renderMenu()}
       </span>
     `;
-    }
-    updated(changed) {
-        if (changed.has('required')) {
-            this.syncValidity();
-        }
     }
     async firstUpdated(changed) {
         await this.menu?.updateComplete;
@@ -10636,7 +10844,6 @@ class Select extends selectBaseClass {
             this[VALUE] = '';
             this.displayText = '';
         }
-        this.syncValidity();
         return hasSelectedOptionChanged;
     }
     /**
@@ -10765,31 +10972,7 @@ class Select extends selectBaseClass {
     getErrorText() {
         return this.error ? this.errorText : this.nativeErrorText;
     }
-    syncValidity() {
-        const valueMissing = this.required && !this.value;
-        const customError = !!this.customValidationMessage;
-        const validationMessage = this.customValidationMessage ||
-            (valueMissing && this.getRequiredValidationMessage()) ||
-            '';
-        this[internals].setValidity({ valueMissing, customError }, validationMessage, this.field ?? undefined);
-    }
-    // Returns the platform `<select>` validation message for i18n.
-    getRequiredValidationMessage() {
-        const select = document.createElement('select');
-        select.required = true;
-        return select.validationMessage;
-    }
-    connectedCallback() {
-        super.connectedCallback();
-        // Handles the case where the user submits the form and native validation
-        // error pops up. We want the error styles to show.
-        this.addEventListener('invalid', this.onInvalid);
-    }
-    disconnectedCallback() {
-        super.disconnectedCallback();
-        this.removeEventListener('invalid', this.onInvalid);
-    }
-    [(select_a = VALUE, getFormValue)]() {
+    [getFormValue]() {
         return this.value;
     }
     formResetCallback() {
@@ -10797,6 +10980,12 @@ class Select extends selectBaseClass {
     }
     formStateRestoreCallback(state) {
         this.value = state;
+    }
+    [createValidator]() {
+        return new SelectValidator(() => this);
+    }
+    [getValidityAnchor]() {
+        return this.field;
     }
 }
 (() => {
@@ -12162,8 +12351,10 @@ MdSlider = __decorate([
 
 
 
+
+
 // Separate variable needed for closure.
-const switchBaseClass = mixinFormAssociated(mixinElementInternals(lit_element_s));
+const switchBaseClass = mixinConstraintValidation(mixinFormAssociated(mixinElementInternals(lit_element_s)));
 /**
  * @fires input {InputEvent} Fired whenever `selected` changes due to user
  * interaction (bubbles and composed).
@@ -12171,38 +12362,6 @@ const switchBaseClass = mixinFormAssociated(mixinElementInternals(lit_element_s)
  * interaction (bubbles).
  */
 class Switch extends switchBaseClass {
-    /**
-     * Returns a ValidityState object that represents the validity states of the
-     * switch.
-     *
-     * Note that switches will only set `valueMissing` if `required` and not
-     * selected.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#validation
-     */
-    get validity() {
-        this.syncValidity();
-        return this[internals].validity;
-    }
-    /**
-     * Returns the native validation error message.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process
-     */
-    get validationMessage() {
-        this.syncValidity();
-        return this[internals].validationMessage;
-    }
-    /**
-     * Returns whether an element will successfully validate based on forms
-     * validation rules and constraints.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process
-     */
-    get willValidate() {
-        this.syncValidity();
-        return this[internals].willValidate;
-    }
     constructor() {
         super();
         /**
@@ -12231,64 +12390,15 @@ class Switch extends switchBaseClass {
          * submitted when `selected` is `false`.
          */
         this.value = 'on';
-        // Needed for Safari, see https://bugs.webkit.org/show_bug.cgi?id=261432
-        // Replace with this[internals].validity.customError when resolved.
-        this.hasCustomValidityError = false;
         if (!is_server_o) {
             this.addEventListener('click', (event) => {
-                if (!isActivationClick(event)) {
+                if (!isActivationClick(event) || !this.input) {
                     return;
                 }
                 this.focus();
                 dispatchActivationClick(this.input);
             });
         }
-    }
-    /**
-     * Checks the switch's native validation and returns whether or not the
-     * element is valid.
-     *
-     * If invalid, this method will dispatch the `invalid` event.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/checkValidity
-     *
-     * @return true if the switch is valid, or false if not.
-     */
-    checkValidity() {
-        this.syncValidity();
-        return this[internals].checkValidity();
-    }
-    /**
-     * Checks the switch's native validation and returns whether or not the
-     * element is valid.
-     *
-     * If invalid, this method will dispatch the `invalid` event.
-     *
-     * The `validationMessage` is reported to the user by the browser. Use
-     * `setCustomValidity()` to customize the `validationMessage`.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/reportValidity
-     *
-     * @return true if the switch is valid, or false if not.
-     */
-    reportValidity() {
-        this.syncValidity();
-        return this[internals].reportValidity();
-    }
-    /**
-     * Sets the switch's native validation error message. This is used to
-     * customize `validationMessage`.
-     *
-     * When the error is not an empty string, the switch is considered invalid
-     * and `validity.customError` will be true.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setCustomValidity
-     *
-     * @param error The error message to display.
-     */
-    setCustomValidity(error) {
-        this.hasCustomValidityError = !!error;
-        this[internals].setValidity({ customError: !!error }, error, this.getInput());
     }
     render() {
         // NOTE: buttons must use only [phrasing
@@ -12311,11 +12421,6 @@ class Switch extends switchBaseClass {
         <span class="track"> ${this.renderHandle()} </span>
       </div>
     `;
-    }
-    updated() {
-        // Sync validity when properties change, since validation properties may
-        // have changed.
-        this.syncValidity();
     }
     getRenderClasses() {
         return {
@@ -12379,32 +12484,6 @@ class Switch extends switchBaseClass {
         this.selected = target.checked;
         redispatchEvent(this, event);
     }
-    syncValidity() {
-        // Sync the internal <input>'s validity and the host's ElementInternals
-        // validity. We do this to re-use native `<input>` validation messages.
-        const input = this.getInput();
-        if (this.hasCustomValidityError) {
-            input.setCustomValidity(this[internals].validationMessage);
-        }
-        else {
-            input.setCustomValidity('');
-        }
-        this[internals].setValidity(input.validity, input.validationMessage, this.getInput());
-    }
-    getInput() {
-        if (!this.input) {
-            // If the input is not yet defined, synchronously render.
-            this.connectedCallback();
-            this.performUpdate();
-        }
-        if (this.isUpdatePending) {
-            // If there are pending updates, synchronously perform them. This ensures
-            // that constraint validation properties (like `required`) are synced
-            // before interacting with input APIs that depend on them.
-            this.scheduleUpdate();
-        }
-        return this.input;
-    }
     [getFormValue]() {
         return this.selected ? this.value : null;
     }
@@ -12418,6 +12497,15 @@ class Switch extends switchBaseClass {
     }
     formStateRestoreCallback(state) {
         this.selected = state === 'true';
+    }
+    [createValidator]() {
+        return new CheckboxValidator(() => ({
+            checked: this.selected,
+            required: this.required,
+        }));
+    }
+    [getValidityAnchor]() {
+        return this.input;
     }
 }
 (() => {
@@ -14212,10 +14300,28 @@ function dialogHide(dialogID) {
   }
 }
 ;// CONCATENATED MODULE: ./Components/Menu/MBMenu.ts
+function reportMenuCloseEvent() {
+  console.log("Menu close event");
+}
+
+//function reportMenuCloseEvent(cme: CloseMenuEvent) {
+//    console.log("Menu close event");
+//}
+
+function setMenuCloseEvent(menuID) {
+  var menuElement = document.getElementById(menuID);
+  if (menuElement != null) {
+    console.log("Adding listener for menu-close events");
+    menuElement.addEventListener('menu-close', function () {
+      reportMenuCloseEvent();
+    });
+  }
+}
 function toggleMenuOpen(menuButtonID, menuID) {
   var buttonElement = document.getElementById(menuButtonID);
   var menuElement = document.getElementById(menuID);
   if (buttonElement != null && menuElement != null) {
+    console.log("Adding listener for click events");
     buttonElement.addEventListener('click', function () {
       menuElement.open = !menuElement.open;
     });
