@@ -2656,18 +2656,6 @@ references:
   commentId: Overload:Material.Blazor.MBDialog.ButtonItems
   fullName: Material.Blazor.MBDialog.ButtonItems
   nameWithType: MBDialog.ButtonItems
-- uid: Material.Blazor.MBDialog.DialogId
-  name: DialogId
-  href: api/Material.Blazor.MBDialog.html#Material_Blazor_MBDialog_DialogId
-  commentId: P:Material.Blazor.MBDialog.DialogId
-  fullName: Material.Blazor.MBDialog.DialogId
-  nameWithType: MBDialog.DialogId
-- uid: Material.Blazor.MBDialog.DialogId*
-  name: DialogId
-  href: api/Material.Blazor.MBDialog.html#Material_Blazor_MBDialog_DialogId_
-  commentId: Overload:Material.Blazor.MBDialog.DialogId
-  fullName: Material.Blazor.MBDialog.DialogId
-  nameWithType: MBDialog.DialogId
 - uid: Material.Blazor.MBDialog.EscapeKeyAction
   name: EscapeKeyAction
   href: api/Material.Blazor.MBDialog.html#Material_Blazor_MBDialog_EscapeKeyAction
@@ -2680,30 +2668,30 @@ references:
   commentId: Overload:Material.Blazor.MBDialog.EscapeKeyAction
   fullName: Material.Blazor.MBDialog.EscapeKeyAction
   nameWithType: MBDialog.EscapeKeyAction
-- uid: Material.Blazor.MBDialog.Header
-  name: Header
-  href: api/Material.Blazor.MBDialog.html#Material_Blazor_MBDialog_Header
-  commentId: P:Material.Blazor.MBDialog.Header
-  fullName: Material.Blazor.MBDialog.Header
-  nameWithType: MBDialog.Header
-- uid: Material.Blazor.MBDialog.Header*
-  name: Header
-  href: api/Material.Blazor.MBDialog.html#Material_Blazor_MBDialog_Header_
-  commentId: Overload:Material.Blazor.MBDialog.Header
-  fullName: Material.Blazor.MBDialog.Header
-  nameWithType: MBDialog.Header
-- uid: Material.Blazor.MBDialog.HideAsync
-  name: HideAsync()
-  href: api/Material.Blazor.MBDialog.html#Material_Blazor_MBDialog_HideAsync
-  commentId: M:Material.Blazor.MBDialog.HideAsync
-  fullName: Material.Blazor.MBDialog.HideAsync()
-  nameWithType: MBDialog.HideAsync()
-- uid: Material.Blazor.MBDialog.HideAsync*
-  name: HideAsync
-  href: api/Material.Blazor.MBDialog.html#Material_Blazor_MBDialog_HideAsync_
-  commentId: Overload:Material.Blazor.MBDialog.HideAsync
-  fullName: Material.Blazor.MBDialog.HideAsync
-  nameWithType: MBDialog.HideAsync
+- uid: Material.Blazor.MBDialog.Headline
+  name: Headline
+  href: api/Material.Blazor.MBDialog.html#Material_Blazor_MBDialog_Headline
+  commentId: P:Material.Blazor.MBDialog.Headline
+  fullName: Material.Blazor.MBDialog.Headline
+  nameWithType: MBDialog.Headline
+- uid: Material.Blazor.MBDialog.Headline*
+  name: Headline
+  href: api/Material.Blazor.MBDialog.html#Material_Blazor_MBDialog_Headline_
+  commentId: Overload:Material.Blazor.MBDialog.Headline
+  fullName: Material.Blazor.MBDialog.Headline
+  nameWithType: MBDialog.Headline
+- uid: Material.Blazor.MBDialog.IconDescriptor
+  name: IconDescriptor
+  href: api/Material.Blazor.MBDialog.html#Material_Blazor_MBDialog_IconDescriptor
+  commentId: P:Material.Blazor.MBDialog.IconDescriptor
+  fullName: Material.Blazor.MBDialog.IconDescriptor
+  nameWithType: MBDialog.IconDescriptor
+- uid: Material.Blazor.MBDialog.IconDescriptor*
+  name: IconDescriptor
+  href: api/Material.Blazor.MBDialog.html#Material_Blazor_MBDialog_IconDescriptor_
+  commentId: Overload:Material.Blazor.MBDialog.IconDescriptor
+  fullName: Material.Blazor.MBDialog.IconDescriptor
+  nameWithType: MBDialog.IconDescriptor
 - uid: Material.Blazor.MBDialog.ScrimClickAction
   name: ScrimClickAction
   href: api/Material.Blazor.MBDialog.html#Material_Blazor_MBDialog_ScrimClickAction
@@ -2728,18 +2716,6 @@ references:
   commentId: Overload:Material.Blazor.MBDialog.ShowAsync
   fullName: Material.Blazor.MBDialog.ShowAsync
   nameWithType: MBDialog.ShowAsync
-- uid: Material.Blazor.MBDialog.Title
-  name: Title
-  href: api/Material.Blazor.MBDialog.html#Material_Blazor_MBDialog_Title
-  commentId: P:Material.Blazor.MBDialog.Title
-  fullName: Material.Blazor.MBDialog.Title
-  nameWithType: MBDialog.Title
-- uid: Material.Blazor.MBDialog.Title*
-  name: Title
-  href: api/Material.Blazor.MBDialog.html#Material_Blazor_MBDialog_Title_
-  commentId: Overload:Material.Blazor.MBDialog.Title
-  fullName: Material.Blazor.MBDialog.Title
-  nameWithType: MBDialog.Title
 - uid: Material.Blazor.MBDialogButton
   name: MBDialogButton
   href: api/Material.Blazor.MBDialogButton.html

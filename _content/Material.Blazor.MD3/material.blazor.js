@@ -39,7 +39,6 @@ var __webpack_exports__ = {};
 var MBDialog_namespaceObject = {};
 __webpack_require__.r(MBDialog_namespaceObject);
 __webpack_require__.d(MBDialog_namespaceObject, {
-  dialogHide: () => (dialogHide),
   dialogShow: () => (dialogShow)
 });
 
@@ -9793,6 +9792,72 @@ function mixinFocusable(base) {
     return FocusableElement;
 }
 //# sourceMappingURL=focusable.js.map
+;// CONCATENATED MODULE: ./node_modules/@material/web/labs/behaviors/validators/radio-validator.js
+/**
+ * @license
+ * Copyright 2023 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/**
+ * A validator that provides constraint validation that emulates
+ * `<input type="radio">` validation.
+ */
+class RadioValidator extends Validator {
+    computeValidity(states) {
+        if (!this.radioElement) {
+            // Lazily create the radio element
+            this.radioElement = document.createElement('input');
+            this.radioElement.type = 'radio';
+            // A name is required for validation to run
+            this.radioElement.name = 'group';
+        }
+        let isRequired = false;
+        let isChecked = false;
+        for (const { checked, required } of states) {
+            if (required) {
+                isRequired = true;
+            }
+            if (checked) {
+                isChecked = true;
+            }
+        }
+        // Firefox v119 doesn't compute grouped radio validation correctly while
+        // they are detached from the DOM, which is why we don't render multiple
+        // virtual <input>s. Instead, we can check the required/checked states and
+        // grab the i18n'd validation message if the value is missing.
+        this.radioElement.checked = isChecked;
+        this.radioElement.required = isRequired;
+        return {
+            validity: {
+                valueMissing: isRequired && !isChecked,
+            },
+            validationMessage: this.radioElement.validationMessage,
+        };
+    }
+    equals(prevGroup, nextGroup) {
+        if (prevGroup.length !== nextGroup.length) {
+            return false;
+        }
+        for (let i = 0; i < prevGroup.length; i++) {
+            const prev = prevGroup[i];
+            const next = nextGroup[i];
+            if (prev.checked !== next.checked || prev.required !== next.required) {
+                return false;
+            }
+        }
+        return true;
+    }
+    copy(states) {
+        // Cast as unknown since typescript does not have enough information to
+        // infer that the array always has at least one element.
+        return states.map(({ checked, required }) => ({
+            checked,
+            required,
+        }));
+    }
+}
+//# sourceMappingURL=radio-validator.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/radio/internal/single-selection-controller.js
 /**
  * @license
@@ -9834,6 +9899,19 @@ function mixinFocusable(base) {
  * }
  */
 class SingleSelectionController {
+    /**
+     * All single selection elements in the host element's root with the same
+     * `name` attribute, including the host element.
+     */
+    get controls() {
+        const name = this.host.getAttribute('name');
+        if (!name || !this.root || !this.host.isConnected) {
+            return [this.host];
+        }
+        // Cast as unknown since there is not enough information for typescript to
+        // know that there is always at least one element (the host).
+        return Array.from(this.root.querySelectorAll(`[name="${name}"]`));
+    }
     constructor(host) {
         this.host = host;
         this.focused = false;
@@ -9861,7 +9939,7 @@ class SingleSelectionController {
                 return;
             }
             // Don't try to select another sibling if there aren't any.
-            const siblings = this.getNamedSiblings();
+            const siblings = this.controls;
             if (!siblings.length) {
                 return;
             }
@@ -9948,7 +10026,7 @@ class SingleSelectionController {
         this.updateTabIndices();
     }
     uncheckSiblings() {
-        for (const sibling of this.getNamedSiblings()) {
+        for (const sibling of this.controls) {
             if (sibling !== this.host) {
                 sibling.checked = false;
             }
@@ -9960,7 +10038,7 @@ class SingleSelectionController {
     updateTabIndices() {
         // There are three tabindex states for a group of elements:
         // 1. If any are checked, that element is focusable.
-        const siblings = this.getNamedSiblings();
+        const siblings = this.controls;
         const checkedSibling = siblings.find((sibling) => sibling.checked);
         // 2. If an element is focused, the others are no longer focusable.
         if (checkedSibling || this.focused) {
@@ -9977,17 +10055,6 @@ class SingleSelectionController {
         for (const sibling of siblings) {
             sibling.tabIndex = 0;
         }
-    }
-    /**
-     * Retrieves all siblings in the host element's root with the same `name`
-     * attribute.
-     */
-    getNamedSiblings() {
-        const name = this.host.getAttribute('name');
-        if (!name || !this.root) {
-            return [];
-        }
-        return Array.from(this.root.querySelectorAll(`[name="${name}"]`));
     }
 }
 //# sourceMappingURL=single-selection-controller.js.map
@@ -10009,10 +10076,12 @@ var _a;
 
 
 
+
+
 const CHECKED = Symbol('checked');
 let maskId = 0;
 // Separate variable needed for closure.
-const radioBaseClass = mixinFormAssociated(mixinElementInternals(mixinFocusable(lit_element_s)));
+const radioBaseClass = mixinConstraintValidation(mixinFormAssociated(mixinElementInternals(mixinFocusable(lit_element_s))));
 /**
  * A radio component.
  *
@@ -10043,6 +10112,11 @@ class Radio extends radioBaseClass {
         // reference to the mask. This should be removed once the bug is fixed.
         this.maskId = `cutout${++maskId}`;
         this[_a] = false;
+        /**
+         * Whether or not the radio is required. If any radio is required in a group,
+         * all radios are implicitly required.
+         */
+        this.required = false;
         /**
          * The element value to use in form submission when checked.
          */
@@ -10130,13 +10204,32 @@ class Radio extends radioBaseClass {
     formStateRestoreCallback(state) {
         this.checked = state === 'true';
     }
+    [createValidator]() {
+        return new RadioValidator(() => {
+            if (!this.selectionController) {
+                // Validation runs on superclass construction, so selection controller
+                // might not actually be ready until this class constructs.
+                return [this];
+            }
+            return this.selectionController.controls;
+        });
+    }
+    [getValidityAnchor]() {
+        return this.container;
+    }
 }
 __decorate([
     property_n({ type: Boolean })
 ], Radio.prototype, "checked", null);
 __decorate([
+    property_n({ type: Boolean })
+], Radio.prototype, "required", void 0);
+__decorate([
     property_n()
 ], Radio.prototype, "value", void 0);
+__decorate([
+    query_e('.container')
+], Radio.prototype, "container", void 0);
 //# sourceMappingURL=radio.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/radio/internal/radio-styles.css.js
 /**
@@ -14288,16 +14381,8 @@ MdOutlinedTextField = __decorate([
 //# sourceMappingURL=all.js.map
 ;// CONCATENATED MODULE: ./Components/Dialog/MBDialog.ts
 function dialogShow(dialogID) {
-  var dialogElement = document.getElementById(dialogID);
-  if (dialogElement != null) {
-    dialogElement.open();
-  }
-}
-function dialogHide(dialogID) {
-  var dialogElement = document.getElementById(dialogID);
-  if (dialogElement != null) {
-    dialogElement.close();
-  }
+  var _document$getElementB;
+  (_document$getElementB = document.getElementById(dialogID)) === null || _document$getElementB === void 0 || _document$getElementB.show();
 }
 ;// CONCATENATED MODULE: ./Components/Menu/MBMenu.ts
 function reportMenuCloseEvent() {

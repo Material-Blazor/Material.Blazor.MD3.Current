@@ -321,39 +321,6 @@ public MBDialogButton[] ButtonItems { get; set; }</code></pre>
 
 
 
-  <a id="Material_Blazor_MBDialog_DialogId_" data-uid="Material.Blazor.MBDialog.DialogId*"></a>
-
-  <h3 id="Material_Blazor_MBDialog_DialogId" data-uid="Material.Blazor.MBDialog.DialogId">
-  DialogId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/Dialog/MBDialog.cs"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Parameter]
-[EditorRequired]
-public string DialogId { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
   <a id="Material_Blazor_MBDialog_EscapeKeyAction_" data-uid="Material.Blazor.MBDialog.EscapeKeyAction*"></a>
 
   <h3 id="Material_Blazor_MBDialog_EscapeKeyAction" data-uid="Material.Blazor.MBDialog.EscapeKeyAction">
@@ -386,10 +353,10 @@ public string EscapeKeyAction { get; set; }</code></pre>
 
 
 
-  <a id="Material_Blazor_MBDialog_Header_" data-uid="Material.Blazor.MBDialog.Header*"></a>
+  <a id="Material_Blazor_MBDialog_Headline_" data-uid="Material.Blazor.MBDialog.Headline*"></a>
 
-  <h3 id="Material_Blazor_MBDialog_Header" data-uid="Material.Blazor.MBDialog.Header">
-  Header
+  <h3 id="Material_Blazor_MBDialog_Headline" data-uid="Material.Blazor.MBDialog.Headline">
+  Headline
   <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/Dialog/MBDialog.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -398,7 +365,7 @@ public string EscapeKeyAction { get; set; }</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Parameter]
-public RenderFragment Header { get; set; }</code></pre>
+public string Headline { get; set; }</code></pre>
   </div>
 
 
@@ -407,7 +374,39 @@ public RenderFragment Header { get; set; }</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.renderfragment">RenderFragment</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Material_Blazor_MBDialog_IconDescriptor_" data-uid="Material.Blazor.MBDialog.IconDescriptor*"></a>
+
+  <h3 id="Material_Blazor_MBDialog_IconDescriptor" data-uid="Material.Blazor.MBDialog.IconDescriptor">
+  IconDescriptor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/Dialog/MBDialog.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Parameter]
+public MBIconDescriptor IconDescriptor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Material.Blazor.MBIconDescriptor.html">MBIconDescriptor</a></dt>
     <dd></dd>
   </dl>
 
@@ -431,38 +430,6 @@ public RenderFragment Header { get; set; }</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Parameter]
 public string ScrimClickAction { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Material_Blazor_MBDialog_Title_" data-uid="Material.Blazor.MBDialog.Title*"></a>
-
-  <h3 id="Material_Blazor_MBDialog_Title" data-uid="Material.Blazor.MBDialog.Title">
-  Title
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/Dialog/MBDialog.cs"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Parameter]
-public string Title { get; set; }</code></pre>
   </div>
 
 
@@ -508,37 +475,6 @@ public string Title { get; set; }</code></pre>
 </dd>
   </dl>
 
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Material_Blazor_MBDialog_HideAsync_" data-uid="Material.Blazor.MBDialog.HideAsync*"></a>
-
-  <h3 id="Material_Blazor_MBDialog_HideAsync" data-uid="Material.Blazor.MBDialog.HideAsync">
-  HideAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/Dialog/MBDialog.cs"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task HideAsync()</code></pre>
-  </div>
-
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
