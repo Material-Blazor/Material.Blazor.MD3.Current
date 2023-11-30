@@ -834,6 +834,34 @@
   -webkit-font-smoothing: antialiased;
 }
 
+.mb-dialog-overflow-visible.mdc-dialog__surface, .mb-dialog-overflow-visible.mdc-dialog__surface .mdc-dialog__content {
+  overflow: visible !important;
+}
+
+.mb-dialog__header {
+  padding-bottom: 0px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 0px;
+}
+.mb-dialog__header .mdc-dialog__title {
+  padding-left: 0px;
+}
+
+.mb-radiobuttongroup__horizontal {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 0;
+  align-items: flex-start;
+}
+
+.mb-radiobuttongroup__vertical {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  align-items: flex-start;
+}
+
 :root {
   --mb-toast-color-info: white;
   --mb-toast-color-success: white;
@@ -1216,4 +1244,37 @@
 
 .mb-full-width {
   width: 100%;
+}
+
+.loading-progress {
+  position: relative;
+  display: block;
+  width: 8rem;
+  height: 8rem;
+  margin: 20vh auto 1rem auto;
+}
+
+.loading-progress circle {
+  fill: none;
+  stroke: #e0e0e0;
+  stroke-width: 0.6rem;
+  transform-origin: 50% 50%;
+  transform: rotate(-90deg);
+}
+
+.loading-progress circle:last-child {
+  stroke: #1b6ec2;
+  stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
+  transition: stroke-dasharray 0.05s ease-in-out;
+}
+
+.loading-progress-text {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  inset: calc(20vh + 3.25rem) 0 auto 0.2rem;
+}
+
+.loading-progress-text:after {
+  content: var(--blazor-load-percentage-text, "Loading");
 }
