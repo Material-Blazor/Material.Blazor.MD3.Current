@@ -417,6 +417,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "Material.Blazor.MD3/Components/Tabs/MBTabs.md",
+      "output": {
+        ".html": {
+          "relative_path": "Material.Blazor.MD3/Components/Tabs/MBTabs.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Components/TextField/MBTextField.md",
       "output": {
         ".html": {
@@ -1350,6 +1360,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBMenuPositioning.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBMenuPositioning.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.MBMenuSurfacePositioningMD2.yml",
       "output": {
         ".html": {
@@ -1484,6 +1504,26 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBSwitch.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBTabItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBTabItem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBTabs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBTabs.html"
         }
       },
       "version": ""
@@ -1714,6 +1754,36 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MD3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MenuClose.EventHandlers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MenuClose.EventHandlers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MenuClose.MenuCloseEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MenuClose.MenuCloseEventArgs.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MenuClose.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MenuClose.html"
         }
       },
       "version": ""
