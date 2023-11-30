@@ -1496,7 +1496,6 @@ MdRipple = __decorate([
  * Copyright 2023 Google LLC
  * SPDX-License-Identifier: Apache-2.0
  */
-
 /**
  * Accessibility Object Model reflective aria properties.
  */
@@ -1570,146 +1569,6 @@ function ariaPropertyToAttribute(property) {
         // IDREF attributes also include an "Element" or "Elements" suffix
         .replace(/Elements?/g, '')
         .toLowerCase();
-}
-/**
- * This function will polyfill `ARIAMixin` properties for Firefox.
- *
- * @param ctor The `ReactiveElement` constructor to set up.
- */
-function polyfillARIAMixin(ctor) {
-    if (is_server_o || 'role' in Element.prototype) {
-        return;
-    }
-    // Polyfill reflective aria properties for Firefox
-    for (const ariaProperty of ARIA_PROPERTIES) {
-        ctor.createProperty(ariaProperty, {
-            attribute: ariaPropertyToAttribute(ariaProperty),
-            reflect: true,
-        });
-    }
-    ctor.createProperty('role', { reflect: true });
-}
-/**
- * Polyfills an element and its `ElementInternals` to support `ARIAMixin`
- * properties on internals. This is needed for Firefox.
- *
- * `polyfillARIAMixin()` must be called for the element class.
- *
- * @example
- * class XButton extends LitElement {
- *   static {
- *     polyfillARIAMixin(XButton);
- *   }
- *
- *   private internals =
- *       polyfillElementInternalsAria(this, this.attachInternals());
- *
- *   constructor() {
- *     super();
- *     this.internals.role = 'button';
- *   }
- * }
- */
-function polyfillElementInternalsAria(host, internals) {
-    if (checkIfElementInternalsSupportsAria(internals)) {
-        return internals;
-    }
-    if (!('role' in host)) {
-        throw new Error('Missing polyfillARIAMixin()');
-    }
-    let firstConnectedCallbacks = [];
-    let hasBeenConnected = false;
-    // Add support for Firefox, which has not yet implement ElementInternals aria
-    for (const ariaProperty of ARIA_PROPERTIES) {
-        let internalAriaValue = null;
-        Object.defineProperty(internals, ariaProperty, {
-            enumerable: true,
-            configurable: true,
-            get() {
-                return internalAriaValue;
-            },
-            set(value) {
-                const setValue = () => {
-                    internalAriaValue = value;
-                    if (!hasBeenConnected) {
-                        firstConnectedCallbacks.push({
-                            property: ariaProperty,
-                            callback: setValue,
-                        });
-                        return;
-                    }
-                    // Dynamic lookup rather than hardcoding all properties.
-                    // tslint:disable-next-line:no-dict-access-on-struct-type
-                    host[ariaProperty] = value;
-                };
-                setValue();
-            },
-        });
-    }
-    let internalRoleValue = null;
-    Object.defineProperty(internals, 'role', {
-        enumerable: true,
-        configurable: true,
-        get() {
-            return internalRoleValue;
-        },
-        set(value) {
-            const setRole = () => {
-                internalRoleValue = value;
-                if (!hasBeenConnected) {
-                    firstConnectedCallbacks.push({
-                        property: 'role',
-                        callback: setRole,
-                    });
-                    return;
-                }
-                if (value === null) {
-                    host.removeAttribute('role');
-                }
-                else {
-                    host.setAttribute('role', value);
-                }
-            };
-            setRole();
-        },
-    });
-    host.addController({
-        hostConnected() {
-            if (hasBeenConnected) {
-                return;
-            }
-            hasBeenConnected = true;
-            const propertiesSetByUser = new Set();
-            // See which properties were set by the user on host before we apply
-            // internals values as attributes to host. Needs to be done in another
-            // for loop because the callbacks set these attributes on host.
-            for (const { property } of firstConnectedCallbacks) {
-                const wasSetByUser = host.getAttribute(ariaPropertyToAttribute(property)) !== null ||
-                    // Dynamic lookup rather than hardcoding all properties.
-                    // tslint:disable-next-line:no-dict-access-on-struct-type
-                    host[property] !== undefined;
-                if (wasSetByUser) {
-                    propertiesSetByUser.add(property);
-                }
-            }
-            for (const { property, callback } of firstConnectedCallbacks) {
-                // If the user has set the attribute or property, do not override the
-                // user's value
-                if (propertiesSetByUser.has(property)) {
-                    continue;
-                }
-                callback();
-            }
-            // Remove strong callback references
-            firstConnectedCallbacks = [];
-        },
-    });
-    return internals;
-}
-// Separate function so that typescript doesn't complain about internals being
-// "never".
-function checkIfElementInternalsSupportsAria(internals) {
-    return 'role' in internals;
 }
 //# sourceMappingURL=aria.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/internal/aria/delegate.js
@@ -1903,7 +1762,6 @@ async function squelchEventsForMicrotask() {
  * Copyright 2023 Google LLC
  * SPDX-License-Identifier: Apache-2.0
  */
-
 /**
  * A unique symbol used for protected access to an instance's
  * `ElementInternals`.
@@ -1937,14 +1795,11 @@ function mixinElementInternals(base) {
             // construction in `ReactiveElement`, such as `requestUpdate()`.
             if (!this[privateInternals]) {
                 // Cast needed for closure
-                this[privateInternals] = polyfillElementInternalsAria(this, this.attachInternals());
+                this[privateInternals] = this.attachInternals();
             }
             return this[privateInternals];
         }
     }
-    (() => {
-        polyfillARIAMixin(WithElementInternalsElement);
-    })();
     return WithElementInternalsElement;
 }
 //# sourceMappingURL=element-internals.js.map
@@ -2891,16 +2746,6 @@ class Validator {
         };
         return this.currentValidity;
     }
-    /**
-     * Creates a copy of a state. This is used to cache state and check if it
-     * changes.
-     *
-     * @param state The state to copy.
-     * @return A copy of the state.
-     */
-    copy(state) {
-        return { ...state };
-    }
 }
 //# sourceMappingURL=validator.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/labs/behaviors/validators/checkbox-validator.js
@@ -2930,6 +2775,9 @@ class CheckboxValidator extends Validator {
     }
     equals(prev, next) {
         return prev.checked === next.checked && prev.required === next.required;
+    }
+    copy({ checked, required }) {
+        return { checked, required };
     }
 }
 //# sourceMappingURL=checkbox-validator.js.map
@@ -3268,7 +3116,7 @@ Chip.shadowRootOptions = {
     delegatesFocus: true,
 };
 __decorate([
-    property_n({ type: Boolean })
+    property_n({ type: Boolean, reflect: true })
 ], Chip.prototype, "disabled", void 0);
 __decorate([
     property_n({ type: Boolean, attribute: 'always-focusable' })
@@ -3383,7 +3231,7 @@ const internal_elevated_styles_css_styles = i `.elevated{--md-elevation-level: v
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const internal_shared_styles_css_styles = i `:host{border-start-start-radius:var(--_container-shape-start-start);border-start-end-radius:var(--_container-shape-start-end);border-end-start-radius:var(--_container-shape-end-start);border-end-end-radius:var(--_container-shape-end-end);display:inline-flex;height:var(--_container-height);cursor:pointer;-webkit-tap-highlight-color:rgba(0,0,0,0);--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-color: var(--_pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity)}:host([touch-target=wrapper]){margin:max(0px,(48px - var(--_container-height))/2) 0}md-focus-ring{--md-focus-ring-shape-start-start: var(--_container-shape-start-start);--md-focus-ring-shape-start-end: var(--_container-shape-start-end);--md-focus-ring-shape-end-end: var(--_container-shape-end-end);--md-focus-ring-shape-end-start: var(--_container-shape-end-start)}.container{border-radius:inherit;box-sizing:border-box;display:flex;height:100%;position:relative;width:100%}.container::before{border-radius:inherit;content:"";inset:0;pointer-events:none;position:absolute}.container:not(.disabled){cursor:pointer}.container.disabled{pointer-events:none}.cell{display:flex}.action{align-items:baseline;appearance:none;background:none;border:none;border-radius:inherit;display:flex;gap:8px;outline:none;padding:0;position:relative;text-decoration:none}.primary.action{padding-inline-start:8px;padding-inline-end:16px}.touch{height:48px;inset:50% 0 0;position:absolute;transform:translateY(-50%);width:100%}:host([touch-target=none]) .touch{display:none}.outline{border:var(--_outline-width) solid var(--_outline-color);border-radius:inherit;inset:0;pointer-events:none;position:absolute}:where(:focus) .outline{border-color:var(--_focus-outline-color)}:where(.disabled) .outline{border-color:var(--_disabled-outline-color);opacity:var(--_disabled-outline-opacity)}md-ripple{border-radius:inherit}.label,.icon,.touch{z-index:1}.label{align-items:center;color:var(--_label-text-color);display:flex;font-family:var(--_label-text-font);font-size:var(--_label-text-size);line-height:var(--_label-text-line-height);font-weight:var(--_label-text-weight);height:100%;text-overflow:ellipsis;user-select:none;white-space:nowrap}:where(:hover) .label{color:var(--_hover-label-text-color)}:where(:focus) .label{color:var(--_focus-label-text-color)}:where(:active) .label{color:var(--_pressed-label-text-color)}:where(.disabled) .label{color:var(--_disabled-label-text-color);opacity:var(--_disabled-label-text-opacity)}.icon{align-self:center;display:flex;fill:currentColor;position:relative}.icon ::slotted(:first-child){font-size:var(--_icon-size);height:var(--_icon-size);width:var(--_icon-size)}.leading.icon{color:var(--_leading-icon-color)}:where(:hover) .leading.icon{color:var(--_hover-leading-icon-color)}:where(:focus) .leading.icon{color:var(--_focus-leading-icon-color)}:where(:active) .leading.icon{color:var(--_pressed-leading-icon-color)}:where(.disabled) .leading.icon{color:var(--_disabled-leading-icon-color);opacity:var(--_disabled-leading-icon-opacity)}@media(forced-colors: active){:where(.disabled) :is(.label,.outline,.leading.icon){color:GrayText;opacity:1}}a,button:not(:disabled){cursor:inherit}/*# sourceMappingURL=shared-styles.css.map */
+const internal_shared_styles_css_styles = i `:host{border-start-start-radius:var(--_container-shape-start-start);border-start-end-radius:var(--_container-shape-start-end);border-end-start-radius:var(--_container-shape-end-start);border-end-end-radius:var(--_container-shape-end-end);display:inline-flex;height:var(--_container-height);cursor:pointer;-webkit-tap-highlight-color:rgba(0,0,0,0);--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-color: var(--_pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity)}:host([disabled]){pointer-events:none}:host([touch-target=wrapper]){margin:max(0px,(48px - var(--_container-height))/2) 0}md-focus-ring{--md-focus-ring-shape-start-start: var(--_container-shape-start-start);--md-focus-ring-shape-start-end: var(--_container-shape-start-end);--md-focus-ring-shape-end-end: var(--_container-shape-end-end);--md-focus-ring-shape-end-start: var(--_container-shape-end-start)}.container{border-radius:inherit;box-sizing:border-box;display:flex;height:100%;position:relative;width:100%}.container::before{border-radius:inherit;content:"";inset:0;pointer-events:none;position:absolute}.container:not(.disabled){cursor:pointer}.container.disabled{pointer-events:none}.cell{display:flex}.action{align-items:baseline;appearance:none;background:none;border:none;border-radius:inherit;display:flex;gap:8px;outline:none;padding:0;position:relative;text-decoration:none}.primary.action{padding-inline-start:8px;padding-inline-end:16px}.touch{height:48px;inset:50% 0 0;position:absolute;transform:translateY(-50%);width:100%}:host([touch-target=none]) .touch{display:none}.outline{border:var(--_outline-width) solid var(--_outline-color);border-radius:inherit;inset:0;pointer-events:none;position:absolute}:where(:focus) .outline{border-color:var(--_focus-outline-color)}:where(.disabled) .outline{border-color:var(--_disabled-outline-color);opacity:var(--_disabled-outline-opacity)}md-ripple{border-radius:inherit}.label,.icon,.touch{z-index:1}.label{align-items:center;color:var(--_label-text-color);display:flex;font-family:var(--_label-text-font);font-size:var(--_label-text-size);line-height:var(--_label-text-line-height);font-weight:var(--_label-text-weight);height:100%;text-overflow:ellipsis;user-select:none;white-space:nowrap}:where(:hover) .label{color:var(--_hover-label-text-color)}:where(:focus) .label{color:var(--_focus-label-text-color)}:where(:active) .label{color:var(--_pressed-label-text-color)}:where(.disabled) .label{color:var(--_disabled-label-text-color);opacity:var(--_disabled-label-text-opacity)}.icon{align-self:center;display:flex;fill:currentColor;position:relative}.icon ::slotted(:first-child){font-size:var(--_icon-size);height:var(--_icon-size);width:var(--_icon-size)}.leading.icon{color:var(--_leading-icon-color)}:where(:hover) .leading.icon{color:var(--_hover-leading-icon-color)}:where(:focus) .leading.icon{color:var(--_focus-leading-icon-color)}:where(:active) .leading.icon{color:var(--_pressed-leading-icon-color)}:where(.disabled) .leading.icon{color:var(--_disabled-leading-icon-color);opacity:var(--_disabled-leading-icon-opacity)}@media(forced-colors: active){:where(.disabled) :is(.label,.outline,.leading.icon){color:GrayText;opacity:1}}a,button:not(:disabled){cursor:inherit}/*# sourceMappingURL=shared-styles.css.map */
 `;
 //# sourceMappingURL=shared-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/chips/assist-chip.js
@@ -3421,7 +3269,6 @@ MdAssistChip = __decorate([
 
 
 
-
 /**
  * A chip set component.
  */
@@ -3431,9 +3278,9 @@ class ChipSet extends lit_element_s {
     }
     constructor() {
         super();
-        this.internals = polyfillElementInternalsAria(this, 
+        this.internals = 
         // Cast needed for closure
-        this.attachInternals());
+        this.attachInternals();
         if (!is_server_o) {
             this.addEventListener('focusin', this.updateTabIndices.bind(this));
             this.addEventListener('update-focus', this.updateTabIndices.bind(this));
@@ -3537,9 +3384,6 @@ class ChipSet extends lit_element_s {
         }
     }
 }
-(() => {
-    polyfillARIAMixin(ChipSet);
-})();
 __decorate([
     query_assigned_elements_o()
 ], ChipSet.prototype, "childElements", void 0);
@@ -5357,7 +5201,7 @@ const internal_filled_styles_css_styles = i `@layer styles{:host{--_active-indic
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const field_internal_shared_styles_css_styles = i `:host{display:inline-flex;resize:both}.field{display:flex;flex:1;flex-direction:column;writing-mode:horizontal-tb;max-width:100%}.container-overflow{border-start-start-radius:var(--_container-shape-start-start);border-start-end-radius:var(--_container-shape-start-end);border-end-end-radius:var(--_container-shape-end-end);border-end-start-radius:var(--_container-shape-end-start);display:flex;height:100%;position:relative}.container{align-items:center;border-radius:inherit;display:flex;flex:1;max-height:100%;min-height:100%;min-width:min-content;position:relative}.field,.container-overflow{resize:inherit}.resizable:not(.disabled) .container{resize:inherit;overflow:hidden}.disabled{pointer-events:none}@layer styles{.start,.middle,.end{display:flex;box-sizing:border-box;height:100%;position:relative}.start{color:var(--_leading-content-color)}.end{color:var(--_trailing-content-color)}.start,.end{align-items:center;justify-content:center}.with-start .start,.with-end .end{min-width:48px}.with-start .start{margin-inline-end:4px}.with-end .end{margin-inline-start:4px}.middle{align-items:stretch;align-self:baseline;flex:1}.content{color:var(--_content-color);display:flex;flex:1;opacity:0;transition:opacity 83ms cubic-bezier(0.2, 0, 0, 1)}.no-label .content,.focused .content,.populated .content{opacity:1;transition-delay:67ms}:is(.disabled,.disable-transitions) .content{transition:none}.content ::slotted(*){all:unset;color:currentColor;font-family:var(--_content-font);font-size:var(--_content-size);line-height:var(--_content-line-height);font-weight:var(--_content-weight);width:100%;white-space:pre-wrap}.content ::slotted(:not(textarea)){padding-top:var(--_top-space);padding-bottom:var(--_bottom-space)}.content ::slotted(textarea){margin-top:var(--_top-space);margin-bottom:var(--_bottom-space)}:hover .content{color:var(--_hover-content-color)}:hover .start{color:var(--_hover-leading-content-color)}:hover .end{color:var(--_hover-trailing-content-color)}.focused .content{color:var(--_focus-content-color)}.focused .start{color:var(--_focus-leading-content-color)}.focused .end{color:var(--_focus-trailing-content-color)}.disabled .content{color:var(--_disabled-content-color)}.disabled.no-label .content,.disabled.focused .content,.disabled.populated .content{opacity:var(--_disabled-content-opacity)}.disabled .start{color:var(--_disabled-leading-content-color);opacity:var(--_disabled-leading-content-opacity)}.disabled .end{color:var(--_disabled-trailing-content-color);opacity:var(--_disabled-trailing-content-opacity)}.error .content{color:var(--_error-content-color)}.error .start{color:var(--_error-leading-content-color)}.error .end{color:var(--_error-trailing-content-color)}.error:hover .content{color:var(--_error-hover-content-color)}.error:hover .start{color:var(--_error-hover-leading-content-color)}.error:hover .end{color:var(--_error-hover-trailing-content-color)}.error.focused .content{color:var(--_error-focus-content-color)}.error.focused .start{color:var(--_error-focus-leading-content-color)}.error.focused .end{color:var(--_error-focus-trailing-content-color)}}@layer hcm{@media(forced-colors: active){.disabled :is(.start,.content,.end){color:GrayText;opacity:1}}}@layer styles{.label{box-sizing:border-box;color:var(--_label-text-color);overflow:hidden;max-width:100%;text-overflow:ellipsis;white-space:nowrap;z-index:1;font-family:var(--_label-text-font);font-size:var(--_label-text-size);line-height:var(--_label-text-line-height);font-weight:var(--_label-text-weight);width:min-content}.label-wrapper{inset:0;pointer-events:none;position:absolute}.label.resting{position:absolute;top:var(--_top-space)}.label.floating{font-size:var(--_label-text-populated-size);line-height:var(--_label-text-populated-line-height);transform-origin:top left}.label.hidden{opacity:0}.no-label .label{display:none}.label-wrapper{inset:0;position:absolute;text-align:initial}:hover .label{color:var(--_hover-label-text-color)}.focused .label{color:var(--_focus-label-text-color)}.disabled .label{color:var(--_disabled-label-text-color)}.disabled .label:not(.hidden){opacity:var(--_disabled-label-text-opacity)}.error .label{color:var(--_error-label-text-color)}.error:hover .label{color:var(--_error-hover-label-text-color)}.error.focused .label{color:var(--_error-focus-label-text-color)}}@layer hcm{@media(forced-colors: active){.disabled .label:not(.hidden){color:GrayText;opacity:1}}}@layer styles{.supporting-text{color:var(--_supporting-text-color);display:flex;font-family:var(--_supporting-text-font);font-size:var(--_supporting-text-size);line-height:var(--_supporting-text-line-height);font-weight:var(--_supporting-text-weight);gap:16px;justify-content:space-between;padding-inline-start:var(--_supporting-text-leading-space);padding-inline-end:var(--_supporting-text-trailing-space);padding-top:var(--_supporting-text-top-space)}.supporting-text :nth-child(2){flex-shrink:0}:hover .supporting-text{color:var(--_hover-supporting-text-color)}.focus .supporting-text{color:var(--_focus-supporting-text-color)}.disabled .supporting-text{color:var(--_disabled-supporting-text-color);opacity:var(--_disabled-supporting-text-opacity)}.error .supporting-text{color:var(--_error-supporting-text-color)}.error:hover .supporting-text{color:var(--_error-hover-supporting-text-color)}.error.focus .supporting-text{color:var(--_error-focus-supporting-text-color)}}@layer hcm{@media(forced-colors: active){.disabled .supporting-text{color:GrayText;opacity:1}}}/*# sourceMappingURL=shared-styles.css.map */
+const field_internal_shared_styles_css_styles = i `:host{display:inline-flex;resize:both}.field{display:flex;flex:1;flex-direction:column;writing-mode:horizontal-tb;max-width:100%}.container-overflow{border-start-start-radius:var(--_container-shape-start-start);border-start-end-radius:var(--_container-shape-start-end);border-end-end-radius:var(--_container-shape-end-end);border-end-start-radius:var(--_container-shape-end-start);display:flex;height:100%;position:relative}.container{align-items:center;border-radius:inherit;display:flex;flex:1;max-height:100%;min-height:100%;min-width:min-content;position:relative}.field,.container-overflow{resize:inherit}.resizable:not(.disabled) .container{resize:inherit;overflow:hidden}.disabled{pointer-events:none}@layer styles{.start,.middle,.end{display:flex;box-sizing:border-box;height:100%;position:relative}.start{color:var(--_leading-content-color)}.end{color:var(--_trailing-content-color)}.start,.end{align-items:center;justify-content:center}.with-start .start,.with-end .end{min-width:48px}.with-start .start{margin-inline-end:4px}.with-end .end{margin-inline-start:4px}.middle{align-items:stretch;align-self:baseline;flex:1}.content{color:var(--_content-color);display:flex;flex:1;opacity:0;transition:opacity 83ms cubic-bezier(0.2, 0, 0, 1)}.no-label .content,.focused .content,.populated .content{opacity:1;transition-delay:67ms}:is(.disabled,.disable-transitions) .content{transition:none}.content ::slotted(*){all:unset;color:currentColor;font-family:var(--_content-font);font-size:var(--_content-size);line-height:var(--_content-line-height);font-weight:var(--_content-weight);width:100%;overflow-wrap:revert;white-space:revert}.content ::slotted(:not(textarea)){padding-top:var(--_top-space);padding-bottom:var(--_bottom-space)}.content ::slotted(textarea){margin-top:var(--_top-space);margin-bottom:var(--_bottom-space)}:hover .content{color:var(--_hover-content-color)}:hover .start{color:var(--_hover-leading-content-color)}:hover .end{color:var(--_hover-trailing-content-color)}.focused .content{color:var(--_focus-content-color)}.focused .start{color:var(--_focus-leading-content-color)}.focused .end{color:var(--_focus-trailing-content-color)}.disabled .content{color:var(--_disabled-content-color)}.disabled.no-label .content,.disabled.focused .content,.disabled.populated .content{opacity:var(--_disabled-content-opacity)}.disabled .start{color:var(--_disabled-leading-content-color);opacity:var(--_disabled-leading-content-opacity)}.disabled .end{color:var(--_disabled-trailing-content-color);opacity:var(--_disabled-trailing-content-opacity)}.error .content{color:var(--_error-content-color)}.error .start{color:var(--_error-leading-content-color)}.error .end{color:var(--_error-trailing-content-color)}.error:hover .content{color:var(--_error-hover-content-color)}.error:hover .start{color:var(--_error-hover-leading-content-color)}.error:hover .end{color:var(--_error-hover-trailing-content-color)}.error.focused .content{color:var(--_error-focus-content-color)}.error.focused .start{color:var(--_error-focus-leading-content-color)}.error.focused .end{color:var(--_error-focus-trailing-content-color)}}@layer hcm{@media(forced-colors: active){.disabled :is(.start,.content,.end){color:GrayText;opacity:1}}}@layer styles{.label{box-sizing:border-box;color:var(--_label-text-color);overflow:hidden;max-width:100%;text-overflow:ellipsis;white-space:nowrap;z-index:1;font-family:var(--_label-text-font);font-size:var(--_label-text-size);line-height:var(--_label-text-line-height);font-weight:var(--_label-text-weight);width:min-content}.label-wrapper{inset:0;pointer-events:none;position:absolute}.label.resting{position:absolute;top:var(--_top-space)}.label.floating{font-size:var(--_label-text-populated-size);line-height:var(--_label-text-populated-line-height);transform-origin:top left}.label.hidden{opacity:0}.no-label .label{display:none}.label-wrapper{inset:0;position:absolute;text-align:initial}:hover .label{color:var(--_hover-label-text-color)}.focused .label{color:var(--_focus-label-text-color)}.disabled .label{color:var(--_disabled-label-text-color)}.disabled .label:not(.hidden){opacity:var(--_disabled-label-text-opacity)}.error .label{color:var(--_error-label-text-color)}.error:hover .label{color:var(--_error-hover-label-text-color)}.error.focused .label{color:var(--_error-focus-label-text-color)}}@layer hcm{@media(forced-colors: active){.disabled .label:not(.hidden){color:GrayText;opacity:1}}}@layer styles{.supporting-text{color:var(--_supporting-text-color);display:flex;font-family:var(--_supporting-text-font);font-size:var(--_supporting-text-size);line-height:var(--_supporting-text-line-height);font-weight:var(--_supporting-text-weight);gap:16px;justify-content:space-between;padding-inline-start:var(--_supporting-text-leading-space);padding-inline-end:var(--_supporting-text-trailing-space);padding-top:var(--_supporting-text-top-space)}.supporting-text :nth-child(2){flex-shrink:0}:hover .supporting-text{color:var(--_hover-supporting-text-color)}.focus .supporting-text{color:var(--_focus-supporting-text-color)}.disabled .supporting-text{color:var(--_disabled-supporting-text-color);opacity:var(--_disabled-supporting-text-opacity)}.error .supporting-text{color:var(--_error-supporting-text-color)}.error:hover .supporting-text{color:var(--_error-hover-supporting-text-color)}.error.focus .supporting-text{color:var(--_error-focus-supporting-text-color)}}@layer hcm{@media(forced-colors: active){.disabled .supporting-text{color:GrayText;opacity:1}}}/*# sourceMappingURL=shared-styles.css.map */
 `;
 //# sourceMappingURL=shared-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/field/filled-field.js
@@ -6375,7 +6219,6 @@ class ListController {
 
 
 
-
 const NAVIGABLE_KEY_SET = new Set(Object.values(NavigableKeys));
 // tslint:disable-next-line:enforce-comments-on-exported-symbols
 class List extends lit_element_s {
@@ -6398,9 +6241,9 @@ class List extends lit_element_s {
             isNavigableKey: (key) => NAVIGABLE_KEY_SET.has(key),
             isActivatable: (item) => !item.disabled && item.type !== 'text',
         });
-        this.internals = polyfillElementInternalsAria(this, 
+        this.internals = 
         // Cast needed for closure
-        this.attachInternals());
+        this.attachInternals();
         if (!is_server_o) {
             this.internals.role = 'list';
             this.addEventListener('keydown', this.listController.handleKeydown);
@@ -6434,9 +6277,6 @@ class List extends lit_element_s {
         return this.listController.activatePreviousItem();
     }
 }
-(() => {
-    polyfillARIAMixin(List);
-})();
 __decorate([
     query_assigned_elements_o({ flatten: true })
 ], List.prototype, "slotItems", void 0);
@@ -6850,7 +6690,7 @@ __decorate([
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const list_item_styles_css_styles = i `:host{display:flex;-webkit-tap-highlight-color:rgba(0,0,0,0);--md-ripple-hover-color: var(--md-list-item-hover-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--md-ripple-hover-opacity: var(--md-list-item-hover-state-layer-opacity, 0.08);--md-ripple-pressed-color: var(--md-list-item-pressed-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--md-ripple-pressed-opacity: var(--md-list-item-pressed-state-layer-opacity, 0.12)}:host(:is([type=button]:not([disabled]),[type=link])){cursor:pointer}md-focus-ring{z-index:1;--md-focus-ring-shape: 8px}a,button,li{background:none;border:none;cursor:inherit;padding:0;margin:0;text-align:unset;text-decoration:none}.list-item{border-radius:inherit;display:flex;flex:1;max-width:inherit;min-width:inherit;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}.list-item.interactive{cursor:pointer}.list-item.disabled{opacity:var(--md-list-item-disabled-opacity, 0.3);pointer-events:none}[slot=container]{pointer-events:none}md-ripple{border-radius:inherit}md-item{border-radius:inherit;flex:1;height:100%;color:var(--md-list-item-label-text-color, var(--md-sys-color-on-surface, #1d1b20));font-family:var(--md-list-item-label-text-font, var(--md-sys-typescale-body-large-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-list-item-label-text-size, var(--md-sys-typescale-body-large-size, 1rem));line-height:var(--md-list-item-label-text-line-height, var(--md-sys-typescale-body-large-line-height, 1.5rem));font-weight:var(--md-list-item-label-text-weight, var(--md-sys-typescale-body-large-weight, var(--md-ref-typeface-weight-regular, 400)));min-height:var(--md-list-item-one-line-container-height, 56px);padding-top:var(--md-list-item-top-space, 12px);padding-bottom:var(--md-list-item-bottom-space, 12px);padding-inline-start:var(--md-list-item-leading-space, 16px);padding-inline-end:var(--md-list-item-trailing-space, 16px)}md-item[multiline]{min-height:var(--md-list-item-two-line-container-height, 72px)}[slot=supporting-text]{color:var(--md-list-item-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));font-family:var(--md-list-item-supporting-text-font, var(--md-sys-typescale-body-medium-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-list-item-supporting-text-size, var(--md-sys-typescale-body-medium-size, 0.875rem));line-height:var(--md-list-item-supporting-text-line-height, var(--md-sys-typescale-body-medium-line-height, 1.25rem));font-weight:var(--md-list-item-supporting-text-weight, var(--md-sys-typescale-body-medium-weight, var(--md-ref-typeface-weight-regular, 400)))}[slot=trailing-supporting-text]{color:var(--md-list-item-trailing-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));font-family:var(--md-list-item-trailing-supporting-text-font, var(--md-sys-typescale-label-small-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-list-item-trailing-supporting-text-size, var(--md-sys-typescale-label-small-size, 0.6875rem));line-height:var(--md-list-item-trailing-supporting-text-line-height, var(--md-sys-typescale-label-small-line-height, 1rem));font-weight:var(--md-list-item-trailing-supporting-text-weight, var(--md-sys-typescale-label-small-weight, var(--md-ref-typeface-weight-medium, 500)))}:is([slot=start],[slot=end])::slotted(*){fill:currentColor}[slot=start]{color:var(--md-list-item-leading-icon-color, var(--md-sys-color-on-surface-variant, #49454f))}[slot=end]{color:var(--md-list-item-trailing-icon-color, var(--md-sys-color-on-surface-variant, #49454f))}@media(forced-colors: active){.disabled slot{color:GrayText}.list-item.disabled{color:GrayText;opacity:1}}/*# sourceMappingURL=list-item-styles.css.map */
+const list_item_styles_css_styles = i `:host{display:flex;-webkit-tap-highlight-color:rgba(0,0,0,0);--md-ripple-hover-color: var(--md-list-item-hover-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--md-ripple-hover-opacity: var(--md-list-item-hover-state-layer-opacity, 0.08);--md-ripple-pressed-color: var(--md-list-item-pressed-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--md-ripple-pressed-opacity: var(--md-list-item-pressed-state-layer-opacity, 0.12)}:host(:is([type=button]:not([disabled]),[type=link])){cursor:pointer}md-focus-ring{z-index:1;--md-focus-ring-shape: 8px}a,button,li{background:none;border:none;cursor:inherit;padding:0;margin:0;text-align:unset;text-decoration:none}.list-item{border-radius:inherit;display:flex;flex:1;max-width:inherit;min-width:inherit;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0);width:100%}.list-item.interactive{cursor:pointer}.list-item.disabled{opacity:var(--md-list-item-disabled-opacity, 0.3);pointer-events:none}[slot=container]{pointer-events:none}md-ripple{border-radius:inherit}md-item{border-radius:inherit;flex:1;height:100%;color:var(--md-list-item-label-text-color, var(--md-sys-color-on-surface, #1d1b20));font-family:var(--md-list-item-label-text-font, var(--md-sys-typescale-body-large-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-list-item-label-text-size, var(--md-sys-typescale-body-large-size, 1rem));line-height:var(--md-list-item-label-text-line-height, var(--md-sys-typescale-body-large-line-height, 1.5rem));font-weight:var(--md-list-item-label-text-weight, var(--md-sys-typescale-body-large-weight, var(--md-ref-typeface-weight-regular, 400)));min-height:var(--md-list-item-one-line-container-height, 56px);padding-top:var(--md-list-item-top-space, 12px);padding-bottom:var(--md-list-item-bottom-space, 12px);padding-inline-start:var(--md-list-item-leading-space, 16px);padding-inline-end:var(--md-list-item-trailing-space, 16px)}md-item[multiline]{min-height:var(--md-list-item-two-line-container-height, 72px)}[slot=supporting-text]{color:var(--md-list-item-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));font-family:var(--md-list-item-supporting-text-font, var(--md-sys-typescale-body-medium-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-list-item-supporting-text-size, var(--md-sys-typescale-body-medium-size, 0.875rem));line-height:var(--md-list-item-supporting-text-line-height, var(--md-sys-typescale-body-medium-line-height, 1.25rem));font-weight:var(--md-list-item-supporting-text-weight, var(--md-sys-typescale-body-medium-weight, var(--md-ref-typeface-weight-regular, 400)))}[slot=trailing-supporting-text]{color:var(--md-list-item-trailing-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));font-family:var(--md-list-item-trailing-supporting-text-font, var(--md-sys-typescale-label-small-font, var(--md-ref-typeface-plain, Roboto)));font-size:var(--md-list-item-trailing-supporting-text-size, var(--md-sys-typescale-label-small-size, 0.6875rem));line-height:var(--md-list-item-trailing-supporting-text-line-height, var(--md-sys-typescale-label-small-line-height, 1rem));font-weight:var(--md-list-item-trailing-supporting-text-weight, var(--md-sys-typescale-label-small-weight, var(--md-ref-typeface-weight-medium, 500)))}:is([slot=start],[slot=end])::slotted(*){fill:currentColor}[slot=start]{color:var(--md-list-item-leading-icon-color, var(--md-sys-color-on-surface-variant, #49454f))}[slot=end]{color:var(--md-list-item-trailing-icon-color, var(--md-sys-color-on-surface-variant, #49454f))}@media(forced-colors: active){.disabled slot{color:GrayText}.list-item.disabled{color:GrayText;opacity:1}}/*# sourceMappingURL=list-item-styles.css.map */
 `;
 //# sourceMappingURL=list-item-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/list/list-item.js
@@ -7734,7 +7574,6 @@ class TypeaheadController {
 
 
 
-
 /**
  * The default value for the typeahead buffer time in Milliseconds.
  */
@@ -7991,9 +7830,9 @@ class Menu extends lit_element_s {
             };
         });
         this.currentAnchorElement = null;
-        this.internals = polyfillElementInternalsAria(this, 
+        this.internals = 
         // Cast needed for closure
-        this.attachInternals());
+        this.attachInternals();
         /**
          * Handles positioning the surface and aligning it to the anchor as well as
          * keeping it in the viewport.
@@ -8532,9 +8371,6 @@ class Menu extends lit_element_s {
         }
     }
 }
-(() => {
-    polyfillARIAMixin(Menu);
-})();
 __decorate([
     query_e('.menu')
 ], Menu.prototype, "surfaceEl", void 0);
@@ -10453,6 +10289,9 @@ class SelectValidator extends Validator {
     }
     equals(prev, next) {
         return prev.value === next.value && prev.required === next.required;
+    }
+    copy({ value, required }) {
+        return { value, required };
     }
 }
 //# sourceMappingURL=select-validator.js.map
@@ -12681,7 +12520,6 @@ var tab_a;
 
 
 
-
 /**
  * Symbol for tabs to use to animate their indicators based off another tab's
  * indicator.
@@ -12729,9 +12567,9 @@ class Tab extends tabBaseClass {
          */
         this.iconOnly = false;
         this.fullWidthIndicator = false;
-        this.internals = polyfillElementInternalsAria(this, 
+        this.internals = 
         // Cast needed for closure
-        this.attachInternals());
+        this.attachInternals();
         if (!is_server_o) {
             this.internals.role = 'tab';
             this.addEventListener('keydown', this.handleKeydown.bind(this));
@@ -12841,9 +12679,6 @@ class Tab extends tabBaseClass {
         this.hasIcon = this.assignedIcons.length > 0;
     }
 }
-(() => {
-    polyfillARIAMixin(Tab);
-})();
 __decorate([
     property_n({ type: Boolean, reflect: true, attribute: 'md-tab' })
 ], Tab.prototype, "isTab", void 0);
@@ -13010,7 +12845,6 @@ MdSecondaryTab = __decorate([
 
 
 
-
 /**
  * @fires change {Event} Fired when the selected tab changes. The target's selected or
  * selectedItem and previousSelected or previousSelectedItem provide information
@@ -13096,9 +12930,9 @@ class Tabs extends lit_element_s {
          * Whether or not to automatically select a tab when it is focused.
          */
         this.autoActivate = false;
-        this.internals = polyfillElementInternalsAria(this, 
+        this.internals = 
         // Cast needed for closure
-        this.attachInternals());
+        this.attachInternals();
         if (!is_server_o) {
             this.internals.role = 'tablist';
             this.addEventListener('keydown', this.handleKeydown.bind(this));
@@ -13268,9 +13102,6 @@ class Tabs extends lit_element_s {
         this.scrollToTab(this.activeTab);
     }
 }
-(() => {
-    polyfillARIAMixin(Tabs);
-})();
 __decorate([
     query_assigned_elements_o({ flatten: true, selector: '[md-tab]' })
 ], Tabs.prototype, "tabs", void 0);
