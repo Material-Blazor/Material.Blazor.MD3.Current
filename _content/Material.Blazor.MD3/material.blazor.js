@@ -14315,13 +14315,19 @@ function setMenuCloseEvent(menuID) {
     });
   }
 }
+function toggleMenu(menuElement) {
+  console.log("toggleMenu invoked");
+  if (menuElement != null) {
+    menuElement.open = !menuElement.open;
+  }
+}
 function toggleMenuOpen(menuButtonID, menuID) {
   var buttonElement = document.getElementById(menuButtonID);
   var menuElement = document.getElementById(menuID);
   if (buttonElement != null && menuElement != null) {
     console.log("Adding listener for click events");
     buttonElement.addEventListener('click', function () {
-      menuElement.open = !menuElement.open;
+      toggleMenu(menuElement);
     });
   }
 }
