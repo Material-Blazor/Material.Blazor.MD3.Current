@@ -2496,6 +2496,23 @@ function mixinConstraintValidation(base) {
             super.requestUpdate(name, oldValue, options);
             this[privateSyncValidity]();
         }
+        firstUpdated(changed) {
+            super.firstUpdated(changed);
+            // Sync the validity again when the element first renders, since the
+            // validity anchor is now available.
+            //
+            // Elements that `delegatesFocus: true` to an `<input>` will throw an
+            // error in Chrome and Safari when a form tries to submit or call
+            // `form.reportValidity()`:
+            // "An invalid form control with name='' is not focusable"
+            //
+            // The validity anchor MUST be provided in `internals.setValidity()` and
+            // MUST be the `<input>` element rendered.
+            //
+            // See https://lit.dev/playground/#gist=6c26e418e0010f7a5aac15005cde8bde
+            // for a reproduction.
+            this[privateSyncValidity]();
+        }
         [(_a = privateCustomValidationMessage, privateSyncValidity)]() {
             if (is_server_o) {
                 return;
@@ -9562,6 +9579,7 @@ const privateIsFocusable = Symbol('privateIsFocusable');
 const externalTabIndex = Symbol('externalTabIndex');
 const isUpdatingTabIndex = Symbol('isUpdatingTabIndex');
 const updateTabIndex = Symbol('updateTabIndex');
+const hasConstructed = Symbol('hasConstructed');
 /**
  * Mixes in focusable functionality for a class.
  *
@@ -9579,7 +9597,7 @@ const updateTabIndex = Symbol('updateTabIndex');
  * @return The provided class with `Focusable` mixed in.
  */
 function mixinFocusable(base) {
-    var _a, _b, _c;
+    var _a, _b, _c, _d;
     class FocusableElement extends base {
         get [isFocusable]() {
             return this[privateIsFocusable];
@@ -9597,11 +9615,21 @@ function mixinFocusable(base) {
             this[_a] = false;
             this[_b] = null;
             this[_c] = false;
+            this[_d] = false;
             this[isFocusable] = true;
+            queueMicrotask(() => {
+                this[hasConstructed] = true;
+                this[updateTabIndex]();
+            });
         }
         attributeChangedCallback(name, old, value) {
-            super.attributeChangedCallback(name, old, value);
-            if (name !== 'tabindex' || this[isUpdatingTabIndex]) {
+            if (name !== 'tabindex') {
+                super.attributeChangedCallback(name, old, value);
+                return;
+            }
+            this.requestUpdate('tabIndex', Number(old ?? -1));
+            if (this[isUpdatingTabIndex]) {
+                // Not an externally-initiated update.
                 return;
             }
             if (!this.hasAttribute('tabindex')) {
@@ -9612,18 +9640,20 @@ function mixinFocusable(base) {
             }
             this[externalTabIndex] = this.tabIndex;
         }
-        async [(_a = privateIsFocusable, _b = externalTabIndex, _c = isUpdatingTabIndex, updateTabIndex)]() {
+        [(_a = privateIsFocusable, _b = externalTabIndex, _c = isUpdatingTabIndex, _d = hasConstructed, updateTabIndex)]() {
+            if (!this[hasConstructed]) {
+                // Custom elements may not hydrate attributes during construction.
+                return;
+            }
             const internalTabIndex = this[isFocusable] ? 0 : -1;
             const computedTabIndex = this[externalTabIndex] ?? internalTabIndex;
             this[isUpdatingTabIndex] = true;
             this.tabIndex = computedTabIndex;
-            this.requestUpdate();
-            await this.updateComplete;
             this[isUpdatingTabIndex] = false;
         }
     }
     __decorate([
-        property_n({ reflect: true })
+        property_n({ noAccessor: true })
     ], FocusableElement.prototype, "tabIndex", void 0);
     return FocusableElement;
 }
@@ -10116,12 +10146,14 @@ MdRadio = __decorate([
  * Copyright 2023 Google LLC
  * SPDX-License-Identifier: Apache-2.0
  */
+
 /**
  * A symbol property used for a callback when validity has been reported.
  */
 const onReportValidity = Symbol('onReportValidity');
 // Private symbol members, used to avoid name clashing.
 const privateCleanupFormListeners = Symbol('privateCleanupFormListeners');
+const privateDoNotReportInvalid = Symbol('privateDoNotReportInvalid');
 /**
  * Mixes in a callback for constraint validation when validity should be
  * styled and reported to the user.
@@ -10155,31 +10187,64 @@ const privateCleanupFormListeners = Symbol('privateCleanupFormListeners');
  * @return The provided class with `OnReportValidity` mixed in.
  */
 function mixinOnReportValidity(base) {
-    var _a;
+    var _a, _b;
     class OnReportValidityElement extends base {
-        constructor() {
-            super(...arguments);
+        // Mixins must have a constructor with `...args: any[]`
+        // tslint:disable-next-line:no-any
+        constructor(...args) {
+            super(...args);
             /**
              * Used to clean up event listeners when a new form is associated.
              */
             this[_a] = new AbortController();
+            /**
+             * Used to determine if an invalid event should report validity. Invalid
+             * events from `checkValidity()` do not trigger reporting.
+             */
+            this[_b] = false;
+            if (is_server_o) {
+                return;
+            }
+            this.addEventListener('invalid', (invalidEvent) => {
+                // Listen for invalid events dispatched by a `<form>` when it tries to
+                // submit and the element is invalid. We ignore events dispatched when
+                // calling `checkValidity()` as well as untrusted events, since the
+                // `reportValidity()` and `<form>`-dispatched events are always
+                // trusted.
+                if (this[privateDoNotReportInvalid] || !invalidEvent.isTrusted) {
+                    return;
+                }
+                this.addEventListener('invalid', () => {
+                    // A normal bubbling phase event listener. By adding it here, we
+                    // ensure it's the last event listener that is called during the
+                    // bubbling phase.
+                    if (!invalidEvent.defaultPrevented) {
+                        this[onReportValidity](invalidEvent);
+                    }
+                }, { once: true });
+            }, {
+                // Listen during the capture phase, which will happen before the
+                // bubbling phase. That way, we can add a final event listener that
+                // will run after other event listeners, and we can check if it was
+                // default prevented. This works because invalid does not bubble.
+                capture: true,
+            });
+        }
+        checkValidity() {
+            this[privateDoNotReportInvalid] = true;
+            const valid = super.checkValidity();
+            this[privateDoNotReportInvalid] = false;
+            return valid;
         }
         reportValidity() {
-            let invalidEvent = null;
-            const cleanupInvalidListener = new AbortController();
-            this.addEventListener('invalid', (event) => {
-                invalidEvent = event;
-            }, { signal: cleanupInvalidListener.signal });
             const valid = super.reportValidity();
-            cleanupInvalidListener.abort();
-            // event may be null, so check for strict `true`. If null it should still
-            // be reported.
-            if (invalidEvent?.defaultPrevented !== true) {
-                this[onReportValidity](invalidEvent);
+            // Constructor's invalid listener will handle reporting invalid events.
+            if (valid) {
+                this[onReportValidity](null);
             }
             return valid;
         }
-        [(_a = privateCleanupFormListeners, onReportValidity)](invalidEvent) {
+        [(_a = privateCleanupFormListeners, _b = privateDoNotReportInvalid, onReportValidity)](invalidEvent) {
             throw new Error('Implement [onReportValidity]');
         }
         formAssociatedCallback(form) {
@@ -10362,8 +10427,54 @@ const selectBaseClass = mixinOnReportValidity(mixinConstraintValidation(mixinFor
  * and closed.
  */
 class Select extends selectBaseClass {
+    /**
+     * The value of the currently selected option.
+     *
+     * Note: For SSR, set `[selected]` on the requested option and `displayText`
+     * rather than setting `value` setting `value` will incur a DOM query.
+     */
+    get value() {
+        return this[VALUE];
+    }
+    set value(value) {
+        if (is_server_o)
+            return;
+        this.lastUserSetValue = value;
+        this.select(value);
+    }
+    get options() {
+        // NOTE: this does a DOM query.
+        return (this.menu?.items ?? []);
+    }
+    /**
+     * The index of the currently selected option.
+     *
+     * Note: For SSR, set `[selected]` on the requested option and `displayText`
+     * rather than setting `selectedIndex` setting `selectedIndex` will incur a
+     * DOM query.
+     */
+    get selectedIndex() {
+        // tslint:disable-next-line:enforce-name-casing
+        const [_option, index] = (this.getSelectedOptions() ?? [])[0] ?? [];
+        return index ?? -1;
+    }
+    set selectedIndex(index) {
+        this.lastUserSetSelectedIndex = index;
+        this.selectIndex(index);
+    }
+    /**
+     * Returns an array of selected options.
+     *
+     * NOTE: md-select only suppoprts single selection.
+     */
+    get selectedOptions() {
+        return (this.getSelectedOptions() ?? []).map(([option]) => option);
+    }
+    get hasError() {
+        return this.error || this.nativeError;
+    }
     constructor() {
-        super(...arguments);
+        super();
         /**
          * Opens the menu synchronously with no animation.
          */
@@ -10445,52 +10556,11 @@ class Select extends selectBaseClass {
         this.nativeErrorText = '';
         this.focused = false;
         this.open = false;
-    }
-    /**
-     * The value of the currently selected option.
-     *
-     * Note: For SSR, set `[selected]` on the requested option and `displayText`
-     * rather than setting `value` setting `value` will incur a DOM query.
-     */
-    get value() {
-        return this[VALUE];
-    }
-    set value(value) {
-        if (is_server_o)
+        if (is_server_o) {
             return;
-        this.lastUserSetValue = value;
-        this.select(value);
-    }
-    get options() {
-        // NOTE: this does a DOM query.
-        return (this.menu?.items ?? []);
-    }
-    /**
-     * The index of the currently selected option.
-     *
-     * Note: For SSR, set `[selected]` on the requested option and `displayText`
-     * rather than setting `selectedIndex` setting `selectedIndex` will incur a
-     * DOM query.
-     */
-    get selectedIndex() {
-        // tslint:disable-next-line:enforce-name-casing
-        const [_option, index] = (this.getSelectedOptions() ?? [])[0] ?? [];
-        return index ?? -1;
-    }
-    set selectedIndex(index) {
-        this.lastUserSetSelectedIndex = index;
-        this.selectIndex(index);
-    }
-    /**
-     * Returns an array of selected options.
-     *
-     * NOTE: md-select only suppoprts single selection.
-     */
-    get selectedOptions() {
-        return (this.getSelectedOptions() ?? []).map(([option]) => option);
-    }
-    get hasError() {
-        return this.error || this.nativeError;
+        }
+        this.addEventListener('focus', this.handleFocus.bind(this));
+        this.addEventListener('blur', this.handleBlur.bind(this));
     }
     /**
      * Selects an option given the value of the option, and updates MdSelect's
@@ -10527,7 +10597,12 @@ class Select extends selectBaseClass {
         if (invalidEvent?.defaultPrevented) {
             return;
         }
-        invalidEvent?.preventDefault();
+        if (invalidEvent) {
+            // Prevent default pop-up behavior. This also prevents focusing, so we
+            // manually focus.
+            invalidEvent.preventDefault();
+            this.focus();
+        }
         const prevMessage = this.getErrorText();
         this.nativeError = !!invalidEvent;
         this.nativeErrorText = this.validationMessage;
@@ -10601,9 +10676,7 @@ class Select extends selectBaseClass {
           supporting-text=${this.supportingText}
           error-text=${this.getErrorText()}
           @keydown=${this.handleKeydown}
-          @click=${this.handleClick}
-          @focus=${this.handleFocus}
-          @blur=${this.handleBlur}>
+          @click=${this.handleClick}>
          ${this.renderFieldContent()}
          <div id="description" slot="aria-describedby"></div>
       </${this.fieldTag}>`;
@@ -10923,6 +10996,11 @@ class Select extends selectBaseClass {
 (() => {
     requestUpdateOnAriaChange(Select);
 })();
+/** @nocollapse */
+Select.shadowRootOptions = {
+    ...lit_element_s.shadowRootOptions,
+    delegatesFocus: true,
+};
 __decorate([
     property_n({ type: Boolean })
 ], Select.prototype, "quick", void 0);
@@ -12388,10 +12466,12 @@ class Switch extends switchBaseClass {
      */
     renderOnIcon() {
         return x `
-      <svg class="icon icon--on" viewBox="0 0 24 24">
-        <path
-          d="M9.55 18.2 3.65 12.3 5.275 10.675 9.55 14.95 18.725 5.775 20.35 7.4Z" />
-      </svg>
+      <slot class="icon icon--on" name="on-icon">
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M9.55 18.2 3.65 12.3 5.275 10.675 9.55 14.95 18.725 5.775 20.35 7.4Z" />
+        </svg>
+      </slot>
     `;
     }
     /**
@@ -12399,10 +12479,12 @@ class Switch extends switchBaseClass {
      */
     renderOffIcon() {
         return x `
-      <svg class="icon icon--off" viewBox="0 0 24 24">
-        <path
-          d="M6.4 19.2 4.8 17.6 10.4 12 4.8 6.4 6.4 4.8 12 10.4 17.6 4.8 19.2 6.4 13.6 12 19.2 17.6 17.6 19.2 12 13.6Z" />
-      </svg>
+      <slot class="icon icon--off" name="off-icon">
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M6.4 19.2 4.8 17.6 10.4 12 4.8 6.4 6.4 4.8 12 10.4 17.6 4.8 19.2 6.4 13.6 12 19.2 17.6 17.6 19.2 12 13.6Z" />
+        </svg>
+      </slot>
     `;
     }
     renderTouchTarget() {
@@ -12474,7 +12556,7 @@ __decorate([
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const switch_styles_css_styles = i `@layer styles, hcm;@layer styles{:host{--_disabled-selected-handle-color: var(--md-switch-disabled-selected-handle-color, var(--md-sys-color-surface, #fef7ff));--_disabled-selected-handle-opacity: var(--md-switch-disabled-selected-handle-opacity, 1);--_disabled-selected-icon-color: var(--md-switch-disabled-selected-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-selected-icon-opacity: var(--md-switch-disabled-selected-icon-opacity, 0.38);--_disabled-selected-track-color: var(--md-switch-disabled-selected-track-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-track-opacity: var(--md-switch-disabled-track-opacity, 0.12);--_handle-shape: var(--md-switch-handle-shape, 9999px);--_pressed-handle-height: var(--md-switch-pressed-handle-height, 28px);--_pressed-handle-width: var(--md-switch-pressed-handle-width, 28px);--_selected-focus-handle-color: var(--md-switch-selected-focus-handle-color, var(--md-sys-color-primary-container, #eaddff));--_selected-focus-icon-color: var(--md-switch-selected-focus-icon-color, var(--md-sys-color-on-primary-container, #21005d));--_selected-focus-track-color: var(--md-switch-selected-focus-track-color, var(--md-sys-color-primary, #6750a4));--_selected-handle-color: var(--md-switch-selected-handle-color, var(--md-sys-color-on-primary, #fff));--_selected-handle-height: var(--md-switch-selected-handle-height, 24px);--_selected-handle-width: var(--md-switch-selected-handle-width, 24px);--_selected-hover-handle-color: var(--md-switch-selected-hover-handle-color, var(--md-sys-color-primary-container, #eaddff));--_selected-hover-icon-color: var(--md-switch-selected-hover-icon-color, var(--md-sys-color-on-primary-container, #21005d));--_selected-hover-state-layer-color: var(--md-switch-selected-hover-state-layer-color, var(--md-sys-color-primary, #6750a4));--_selected-hover-state-layer-opacity: var(--md-switch-selected-hover-state-layer-opacity, 0.08);--_selected-hover-track-color: var(--md-switch-selected-hover-track-color, var(--md-sys-color-primary, #6750a4));--_selected-icon-color: var(--md-switch-selected-icon-color, var(--md-sys-color-on-primary-container, #21005d));--_selected-icon-size: var(--md-switch-selected-icon-size, 16px);--_selected-pressed-handle-color: var(--md-switch-selected-pressed-handle-color, var(--md-sys-color-primary-container, #eaddff));--_selected-pressed-icon-color: var(--md-switch-selected-pressed-icon-color, var(--md-sys-color-on-primary-container, #21005d));--_selected-pressed-state-layer-color: var(--md-switch-selected-pressed-state-layer-color, var(--md-sys-color-primary, #6750a4));--_selected-pressed-state-layer-opacity: var(--md-switch-selected-pressed-state-layer-opacity, 0.12);--_selected-pressed-track-color: var(--md-switch-selected-pressed-track-color, var(--md-sys-color-primary, #6750a4));--_selected-track-color: var(--md-switch-selected-track-color, var(--md-sys-color-primary, #6750a4));--_state-layer-shape: var(--md-switch-state-layer-shape, 9999px);--_state-layer-size: var(--md-switch-state-layer-size, 40px);--_track-height: var(--md-switch-track-height, 32px);--_track-outline-width: var(--md-switch-track-outline-width, 2px);--_track-shape: var(--md-switch-track-shape, 9999px);--_track-width: var(--md-switch-track-width, 52px);--_with-icon-handle-height: var(--md-switch-with-icon-handle-height, 24px);--_with-icon-handle-width: var(--md-switch-with-icon-handle-width, 24px);--_disabled-handle-color: var(--md-switch-disabled-handle-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-handle-opacity: var(--md-switch-disabled-handle-opacity, 0.38);--_disabled-icon-color: var(--md-switch-disabled-icon-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_disabled-icon-opacity: var(--md-switch-disabled-icon-opacity, 0.38);--_disabled-track-color: var(--md-switch-disabled-track-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_disabled-track-outline-color: var(--md-switch-disabled-track-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_focus-handle-color: var(--md-switch-focus-handle-color, var(--md-sys-color-on-surface-variant, #49454f));--_focus-icon-color: var(--md-switch-focus-icon-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_focus-track-color: var(--md-switch-focus-track-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_focus-track-outline-color: var(--md-switch-focus-track-outline-color, var(--md-sys-color-outline, #79747e));--_handle-color: var(--md-switch-handle-color, var(--md-sys-color-outline, #79747e));--_handle-height: var(--md-switch-handle-height, 16px);--_handle-width: var(--md-switch-handle-width, 16px);--_hover-handle-color: var(--md-switch-hover-handle-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-icon-color: var(--md-switch-hover-icon-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_hover-state-layer-color: var(--md-switch-hover-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-state-layer-opacity: var(--md-switch-hover-state-layer-opacity, 0.08);--_hover-track-color: var(--md-switch-hover-track-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_hover-track-outline-color: var(--md-switch-hover-track-outline-color, var(--md-sys-color-outline, #79747e));--_icon-color: var(--md-switch-icon-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_icon-size: var(--md-switch-icon-size, 16px);--_pressed-handle-color: var(--md-switch-pressed-handle-color, var(--md-sys-color-on-surface-variant, #49454f));--_pressed-icon-color: var(--md-switch-pressed-icon-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_pressed-state-layer-color: var(--md-switch-pressed-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--_pressed-state-layer-opacity: var(--md-switch-pressed-state-layer-opacity, 0.12);--_pressed-track-color: var(--md-switch-pressed-track-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_pressed-track-outline-color: var(--md-switch-pressed-track-outline-color, var(--md-sys-color-outline, #79747e));--_track-color: var(--md-switch-track-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_track-outline-color: var(--md-switch-track-outline-color, var(--md-sys-color-outline, #79747e));--_handle-shape-start-start: var( --md-switch-handle-shape-start-start, var(--_handle-shape) );--_handle-shape-start-end: var( --md-switch-handle-shape-start-end, var(--_handle-shape) );--_handle-shape-end-end: var( --md-switch-handle-shape-end-end, var(--_handle-shape) );--_handle-shape-end-start: var( --md-switch-handle-shape-end-start, var(--_handle-shape) );--_track-shape-start-start: var( --md-switch-track-shape-start-start, var(--_track-shape) );--_track-shape-start-end: var( --md-switch-track-shape-start-end, var(--_track-shape) );--_track-shape-end-end: var( --md-switch-track-shape-end-end, var(--_track-shape) );--_track-shape-end-start: var( --md-switch-track-shape-end-start, var(--_track-shape) );display:inline-flex;outline:none;vertical-align:top;-webkit-tap-highlight-color:rgba(0,0,0,0);cursor:pointer}:host([disabled]){cursor:default}:host([touch-target=wrapper]){margin:max(0px,(48px - var(--_track-height))/2) 0px}md-focus-ring{--md-focus-ring-shape-start-start: var(--_track-shape-start-start);--md-focus-ring-shape-start-end: var(--_track-shape-start-end);--md-focus-ring-shape-end-end: var(--_track-shape-end-end);--md-focus-ring-shape-end-start: var(--_track-shape-end-start)}.switch{align-items:center;display:inline-flex;flex-shrink:0;position:relative;width:var(--_track-width);height:var(--_track-height);border-start-start-radius:var(--_track-shape-start-start);border-start-end-radius:var(--_track-shape-start-end);border-end-end-radius:var(--_track-shape-end-end);border-end-start-radius:var(--_track-shape-end-start)}input{appearance:none;height:48px;outline:none;margin:0;position:absolute;width:100%;z-index:1;cursor:inherit}:host([touch-target=none]) input{display:none}}@layer styles{.track{position:absolute;width:100%;height:100%;box-sizing:border-box;border-radius:inherit;display:flex;justify-content:center;align-items:center}.track::before{content:"";display:flex;position:absolute;height:100%;width:100%;border-radius:inherit;box-sizing:border-box;transition-property:opacity,background-color;transition-timing-function:linear;transition-duration:67ms}.disabled .track{background-color:rgba(0,0,0,0);border-color:rgba(0,0,0,0)}.disabled .track::before,.disabled .track::after{transition:none;opacity:var(--_disabled-track-opacity)}.disabled .track::before{background-clip:content-box}.selected .track::before{background-color:var(--_selected-track-color)}.selected:hover .track::before{background-color:var(--_selected-hover-track-color)}.selected:focus-within .track::before{background-color:var(--_selected-focus-track-color)}.selected:active .track::before{background-color:var(--_selected-pressed-track-color)}.selected.disabled .track{background-clip:border-box}.selected.disabled .track::before{background-color:var(--_disabled-selected-track-color)}.unselected .track::before{background-color:var(--_track-color);border-color:var(--_track-outline-color);border-style:solid;border-width:var(--_track-outline-width)}.unselected:hover .track::before{background-color:var(--_hover-track-color);border-color:var(--_hover-track-outline-color)}.unselected:focus-visible .track::before{background-color:var(--_focus-track-color);border-color:var(--_focus-track-outline-color)}.unselected:active .track::before{background-color:var(--_pressed-track-color);border-color:var(--_pressed-track-outline-color)}.unselected.disabled .track::before{background-color:var(--_disabled-track-color);border-color:var(--_disabled-track-outline-color)}}@layer hcm{@media(forced-colors: active){.selected .track::before{background:ButtonText;border-color:ButtonText}.disabled .track::before{border-color:GrayText;opacity:1}.disabled.selected .track::before{background:GrayText}}}@layer styles{.handle-container{display:flex;place-content:center;place-items:center;position:relative;transition:margin 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275)}.selected .handle-container{margin-inline-start:calc(var(--_track-width) - var(--_track-height))}.unselected .handle-container{margin-inline-end:calc(var(--_track-width) - var(--_track-height))}.disabled .handle-container{transition:none}.handle{border-start-start-radius:var(--_handle-shape-start-start);border-start-end-radius:var(--_handle-shape-start-end);border-end-end-radius:var(--_handle-shape-end-end);border-end-start-radius:var(--_handle-shape-end-start);height:var(--_handle-height);width:var(--_handle-width);transform-origin:center;transition-property:height,width;transition-duration:250ms,250ms;transition-timing-function:cubic-bezier(0.2, 0, 0, 1),cubic-bezier(0.2, 0, 0, 1);z-index:0}.handle::before{content:"";display:flex;inset:0;position:absolute;border-radius:inherit;box-sizing:border-box;transition:background-color 67ms linear}.disabled .handle,.disabled .handle::before{transition:none}.selected .handle{height:var(--_selected-handle-height);width:var(--_selected-handle-width)}.handle.with-icon{height:var(--_with-icon-handle-height);width:var(--_with-icon-handle-width)}.selected:not(.disabled):active .handle,.unselected:not(.disabled):active .handle{height:var(--_pressed-handle-height);width:var(--_pressed-handle-width);transition-timing-function:linear;transition-duration:100ms}.selected .handle::before{background-color:var(--_selected-handle-color)}.selected:hover .handle::before{background-color:var(--_selected-hover-handle-color)}.selected:focus-within .handle::before{background-color:var(--_selected-focus-handle-color)}.selected:active .handle::before{background-color:var(--_selected-pressed-handle-color)}.selected.disabled .handle::before{background-color:var(--_disabled-selected-handle-color);opacity:var(--_disabled-selected-handle-opacity)}.unselected .handle::before{background-color:var(--_handle-color)}.unselected:hover .handle::before{background-color:var(--_hover-handle-color)}.unselected:focus-within .handle::before{background-color:var(--_focus-handle-color)}.unselected:active .handle::before{background-color:var(--_pressed-handle-color)}.unselected.disabled .handle::before{background-color:var(--_disabled-handle-color);opacity:var(--_disabled-handle-opacity)}md-ripple{border-radius:var(--_state-layer-shape);height:var(--_state-layer-size);inset:unset;width:var(--_state-layer-size)}.selected md-ripple{--md-ripple-hover-color: var(--_selected-hover-state-layer-color);--md-ripple-pressed-color: var(--_selected-pressed-state-layer-color);--md-ripple-hover-opacity: var(--_selected-hover-state-layer-opacity);--md-ripple-pressed-opacity: var(--_selected-pressed-state-layer-opacity)}.unselected md-ripple{--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-pressed-color: var(--_pressed-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity)}}@layer hcm{@media(forced-colors: active){.unselected .handle::before{background:ButtonText}.disabled .handle::before{opacity:1}.disabled.unselected .handle::before{background:GrayText}}}@layer styles{.icons{position:relative;height:100%;width:100%}.icon{position:absolute;inset:0;margin:auto;transition:fill 67ms linear,opacity 33ms linear,transform 167ms cubic-bezier(0.2, 0, 0, 1);opacity:0}.disabled .icon{transition:none}.selected .icon--on,.unselected .icon--off{opacity:1}.unselected .handle:not(.with-icon) .icon--on{transform:rotate(-45deg)}.icon--off{width:var(--_icon-size);height:var(--_icon-size);fill:var(--_icon-color)}.unselected:hover .icon--off{fill:var(--_hover-icon-color)}.unselected:focus-within .icon--off{fill:var(--_focus-icon-color)}.unselected:active .icon--off{fill:var(--_pressed-icon-color)}.unselected.disabled .icon--off{fill:var(--_disabled-icon-color);opacity:var(--_disabled-icon-opacity)}.icon--on{width:var(--_selected-icon-size);height:var(--_selected-icon-size);fill:var(--_selected-icon-color)}.selected:hover .icon--on{fill:var(--_selected-hover-icon-color)}.selected:focus-within .icon--on{fill:var(--_selected-focus-icon-color)}.selected:active .icon--on{fill:var(--_selected-pressed-icon-color)}.selected.disabled .icon--on{fill:var(--_disabled-selected-icon-color);opacity:var(--_disabled-selected-icon-opacity)}}@layer hcm{@media(forced-colors: active){.icon--off{fill:Canvas}.icon--on{fill:ButtonText}.disabled.unselected .icon--off,.disabled.selected .icon--on{opacity:1}.disabled .icon--on{fill:GrayText}}}/*# sourceMappingURL=switch-styles.css.map */
+const switch_styles_css_styles = i `@layer styles, hcm;@layer styles{:host{--_disabled-selected-handle-color: var(--md-switch-disabled-selected-handle-color, var(--md-sys-color-surface, #fef7ff));--_disabled-selected-handle-opacity: var(--md-switch-disabled-selected-handle-opacity, 1);--_disabled-selected-icon-color: var(--md-switch-disabled-selected-icon-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-selected-icon-opacity: var(--md-switch-disabled-selected-icon-opacity, 0.38);--_disabled-selected-track-color: var(--md-switch-disabled-selected-track-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-track-opacity: var(--md-switch-disabled-track-opacity, 0.12);--_handle-shape: var(--md-switch-handle-shape, 9999px);--_pressed-handle-height: var(--md-switch-pressed-handle-height, 28px);--_pressed-handle-width: var(--md-switch-pressed-handle-width, 28px);--_selected-focus-handle-color: var(--md-switch-selected-focus-handle-color, var(--md-sys-color-primary-container, #eaddff));--_selected-focus-icon-color: var(--md-switch-selected-focus-icon-color, var(--md-sys-color-on-primary-container, #21005d));--_selected-focus-track-color: var(--md-switch-selected-focus-track-color, var(--md-sys-color-primary, #6750a4));--_selected-handle-color: var(--md-switch-selected-handle-color, var(--md-sys-color-on-primary, #fff));--_selected-handle-height: var(--md-switch-selected-handle-height, 24px);--_selected-handle-width: var(--md-switch-selected-handle-width, 24px);--_selected-hover-handle-color: var(--md-switch-selected-hover-handle-color, var(--md-sys-color-primary-container, #eaddff));--_selected-hover-icon-color: var(--md-switch-selected-hover-icon-color, var(--md-sys-color-on-primary-container, #21005d));--_selected-hover-state-layer-color: var(--md-switch-selected-hover-state-layer-color, var(--md-sys-color-primary, #6750a4));--_selected-hover-state-layer-opacity: var(--md-switch-selected-hover-state-layer-opacity, 0.08);--_selected-hover-track-color: var(--md-switch-selected-hover-track-color, var(--md-sys-color-primary, #6750a4));--_selected-icon-color: var(--md-switch-selected-icon-color, var(--md-sys-color-on-primary-container, #21005d));--_selected-icon-size: var(--md-switch-selected-icon-size, 16px);--_selected-pressed-handle-color: var(--md-switch-selected-pressed-handle-color, var(--md-sys-color-primary-container, #eaddff));--_selected-pressed-icon-color: var(--md-switch-selected-pressed-icon-color, var(--md-sys-color-on-primary-container, #21005d));--_selected-pressed-state-layer-color: var(--md-switch-selected-pressed-state-layer-color, var(--md-sys-color-primary, #6750a4));--_selected-pressed-state-layer-opacity: var(--md-switch-selected-pressed-state-layer-opacity, 0.12);--_selected-pressed-track-color: var(--md-switch-selected-pressed-track-color, var(--md-sys-color-primary, #6750a4));--_selected-track-color: var(--md-switch-selected-track-color, var(--md-sys-color-primary, #6750a4));--_state-layer-shape: var(--md-switch-state-layer-shape, 9999px);--_state-layer-size: var(--md-switch-state-layer-size, 40px);--_track-height: var(--md-switch-track-height, 32px);--_track-outline-width: var(--md-switch-track-outline-width, 2px);--_track-shape: var(--md-switch-track-shape, 9999px);--_track-width: var(--md-switch-track-width, 52px);--_with-icon-handle-height: var(--md-switch-with-icon-handle-height, 24px);--_with-icon-handle-width: var(--md-switch-with-icon-handle-width, 24px);--_disabled-handle-color: var(--md-switch-disabled-handle-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-handle-opacity: var(--md-switch-disabled-handle-opacity, 0.38);--_disabled-icon-color: var(--md-switch-disabled-icon-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_disabled-icon-opacity: var(--md-switch-disabled-icon-opacity, 0.38);--_disabled-track-color: var(--md-switch-disabled-track-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_disabled-track-outline-color: var(--md-switch-disabled-track-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_focus-handle-color: var(--md-switch-focus-handle-color, var(--md-sys-color-on-surface-variant, #49454f));--_focus-icon-color: var(--md-switch-focus-icon-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_focus-track-color: var(--md-switch-focus-track-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_focus-track-outline-color: var(--md-switch-focus-track-outline-color, var(--md-sys-color-outline, #79747e));--_handle-color: var(--md-switch-handle-color, var(--md-sys-color-outline, #79747e));--_handle-height: var(--md-switch-handle-height, 16px);--_handle-width: var(--md-switch-handle-width, 16px);--_hover-handle-color: var(--md-switch-hover-handle-color, var(--md-sys-color-on-surface-variant, #49454f));--_hover-icon-color: var(--md-switch-hover-icon-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_hover-state-layer-color: var(--md-switch-hover-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-state-layer-opacity: var(--md-switch-hover-state-layer-opacity, 0.08);--_hover-track-color: var(--md-switch-hover-track-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_hover-track-outline-color: var(--md-switch-hover-track-outline-color, var(--md-sys-color-outline, #79747e));--_icon-color: var(--md-switch-icon-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_icon-size: var(--md-switch-icon-size, 16px);--_pressed-handle-color: var(--md-switch-pressed-handle-color, var(--md-sys-color-on-surface-variant, #49454f));--_pressed-icon-color: var(--md-switch-pressed-icon-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_pressed-state-layer-color: var(--md-switch-pressed-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--_pressed-state-layer-opacity: var(--md-switch-pressed-state-layer-opacity, 0.12);--_pressed-track-color: var(--md-switch-pressed-track-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_pressed-track-outline-color: var(--md-switch-pressed-track-outline-color, var(--md-sys-color-outline, #79747e));--_track-color: var(--md-switch-track-color, var(--md-sys-color-surface-container-highest, #e6e0e9));--_track-outline-color: var(--md-switch-track-outline-color, var(--md-sys-color-outline, #79747e));--_handle-shape-start-start: var( --md-switch-handle-shape-start-start, var(--_handle-shape) );--_handle-shape-start-end: var( --md-switch-handle-shape-start-end, var(--_handle-shape) );--_handle-shape-end-end: var( --md-switch-handle-shape-end-end, var(--_handle-shape) );--_handle-shape-end-start: var( --md-switch-handle-shape-end-start, var(--_handle-shape) );--_track-shape-start-start: var( --md-switch-track-shape-start-start, var(--_track-shape) );--_track-shape-start-end: var( --md-switch-track-shape-start-end, var(--_track-shape) );--_track-shape-end-end: var( --md-switch-track-shape-end-end, var(--_track-shape) );--_track-shape-end-start: var( --md-switch-track-shape-end-start, var(--_track-shape) );display:inline-flex;outline:none;vertical-align:top;-webkit-tap-highlight-color:rgba(0,0,0,0);cursor:pointer}:host([disabled]){cursor:default}:host([touch-target=wrapper]){margin:max(0px,(48px - var(--_track-height))/2) 0px}md-focus-ring{--md-focus-ring-shape-start-start: var(--_track-shape-start-start);--md-focus-ring-shape-start-end: var(--_track-shape-start-end);--md-focus-ring-shape-end-end: var(--_track-shape-end-end);--md-focus-ring-shape-end-start: var(--_track-shape-end-start)}.switch{align-items:center;display:inline-flex;flex-shrink:0;position:relative;width:var(--_track-width);height:var(--_track-height);border-start-start-radius:var(--_track-shape-start-start);border-start-end-radius:var(--_track-shape-start-end);border-end-end-radius:var(--_track-shape-end-end);border-end-start-radius:var(--_track-shape-end-start)}input{appearance:none;height:48px;outline:none;margin:0;position:absolute;width:100%;z-index:1;cursor:inherit}:host([touch-target=none]) input{display:none}}@layer styles{.track{position:absolute;width:100%;height:100%;box-sizing:border-box;border-radius:inherit;display:flex;justify-content:center;align-items:center}.track::before{content:"";display:flex;position:absolute;height:100%;width:100%;border-radius:inherit;box-sizing:border-box;transition-property:opacity,background-color;transition-timing-function:linear;transition-duration:67ms}.disabled .track{background-color:rgba(0,0,0,0);border-color:rgba(0,0,0,0)}.disabled .track::before,.disabled .track::after{transition:none;opacity:var(--_disabled-track-opacity)}.disabled .track::before{background-clip:content-box}.selected .track::before{background-color:var(--_selected-track-color)}.selected:hover .track::before{background-color:var(--_selected-hover-track-color)}.selected:focus-within .track::before{background-color:var(--_selected-focus-track-color)}.selected:active .track::before{background-color:var(--_selected-pressed-track-color)}.selected.disabled .track{background-clip:border-box}.selected.disabled .track::before{background-color:var(--_disabled-selected-track-color)}.unselected .track::before{background-color:var(--_track-color);border-color:var(--_track-outline-color);border-style:solid;border-width:var(--_track-outline-width)}.unselected:hover .track::before{background-color:var(--_hover-track-color);border-color:var(--_hover-track-outline-color)}.unselected:focus-visible .track::before{background-color:var(--_focus-track-color);border-color:var(--_focus-track-outline-color)}.unselected:active .track::before{background-color:var(--_pressed-track-color);border-color:var(--_pressed-track-outline-color)}.unselected.disabled .track::before{background-color:var(--_disabled-track-color);border-color:var(--_disabled-track-outline-color)}}@layer hcm{@media(forced-colors: active){.selected .track::before{background:ButtonText;border-color:ButtonText}.disabled .track::before{border-color:GrayText;opacity:1}.disabled.selected .track::before{background:GrayText}}}@layer styles{.handle-container{display:flex;place-content:center;place-items:center;position:relative;transition:margin 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275)}.selected .handle-container{margin-inline-start:calc(var(--_track-width) - var(--_track-height))}.unselected .handle-container{margin-inline-end:calc(var(--_track-width) - var(--_track-height))}.disabled .handle-container{transition:none}.handle{border-start-start-radius:var(--_handle-shape-start-start);border-start-end-radius:var(--_handle-shape-start-end);border-end-end-radius:var(--_handle-shape-end-end);border-end-start-radius:var(--_handle-shape-end-start);height:var(--_handle-height);width:var(--_handle-width);transform-origin:center;transition-property:height,width;transition-duration:250ms,250ms;transition-timing-function:cubic-bezier(0.2, 0, 0, 1),cubic-bezier(0.2, 0, 0, 1);z-index:0}.handle::before{content:"";display:flex;inset:0;position:absolute;border-radius:inherit;box-sizing:border-box;transition:background-color 67ms linear}.disabled .handle,.disabled .handle::before{transition:none}.selected .handle{height:var(--_selected-handle-height);width:var(--_selected-handle-width)}.handle.with-icon{height:var(--_with-icon-handle-height);width:var(--_with-icon-handle-width)}.selected:not(.disabled):active .handle,.unselected:not(.disabled):active .handle{height:var(--_pressed-handle-height);width:var(--_pressed-handle-width);transition-timing-function:linear;transition-duration:100ms}.selected .handle::before{background-color:var(--_selected-handle-color)}.selected:hover .handle::before{background-color:var(--_selected-hover-handle-color)}.selected:focus-within .handle::before{background-color:var(--_selected-focus-handle-color)}.selected:active .handle::before{background-color:var(--_selected-pressed-handle-color)}.selected.disabled .handle::before{background-color:var(--_disabled-selected-handle-color);opacity:var(--_disabled-selected-handle-opacity)}.unselected .handle::before{background-color:var(--_handle-color)}.unselected:hover .handle::before{background-color:var(--_hover-handle-color)}.unselected:focus-within .handle::before{background-color:var(--_focus-handle-color)}.unselected:active .handle::before{background-color:var(--_pressed-handle-color)}.unselected.disabled .handle::before{background-color:var(--_disabled-handle-color);opacity:var(--_disabled-handle-opacity)}md-ripple{border-radius:var(--_state-layer-shape);height:var(--_state-layer-size);inset:unset;width:var(--_state-layer-size)}.selected md-ripple{--md-ripple-hover-color: var(--_selected-hover-state-layer-color);--md-ripple-pressed-color: var(--_selected-pressed-state-layer-color);--md-ripple-hover-opacity: var(--_selected-hover-state-layer-opacity);--md-ripple-pressed-opacity: var(--_selected-pressed-state-layer-opacity)}.unselected md-ripple{--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-pressed-color: var(--_pressed-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity)}}@layer hcm{@media(forced-colors: active){.unselected .handle::before{background:ButtonText}.disabled .handle::before{opacity:1}.disabled.unselected .handle::before{background:GrayText}}}@layer styles{.icons{position:relative;height:100%;width:100%}.icon{position:absolute;inset:0;margin:auto;display:flex;align-items:center;justify-content:center;fill:currentColor;transition:fill 67ms linear,opacity 33ms linear,transform 167ms cubic-bezier(0.2, 0, 0, 1);opacity:0}.disabled .icon{transition:none}.selected .icon--on,.unselected .icon--off{opacity:1}.unselected .handle:not(.with-icon) .icon--on{transform:rotate(-45deg)}.icon--off{width:var(--_icon-size);height:var(--_icon-size);color:var(--_icon-color)}.unselected:hover .icon--off{color:var(--_hover-icon-color)}.unselected:focus-within .icon--off{color:var(--_focus-icon-color)}.unselected:active .icon--off{color:var(--_pressed-icon-color)}.unselected.disabled .icon--off{color:var(--_disabled-icon-color);opacity:var(--_disabled-icon-opacity)}.icon--on{width:var(--_selected-icon-size);height:var(--_selected-icon-size);color:var(--_selected-icon-color)}.selected:hover .icon--on{color:var(--_selected-hover-icon-color)}.selected:focus-within .icon--on{color:var(--_selected-focus-icon-color)}.selected:active .icon--on{color:var(--_selected-pressed-icon-color)}.selected.disabled .icon--on{color:var(--_disabled-selected-icon-color);opacity:var(--_disabled-selected-icon-opacity)}}@layer hcm{@media(forced-colors: active){.icon--off{fill:Canvas}.icon--on{fill:ButtonText}.disabled.unselected .icon--off,.disabled.selected .icon--on{opacity:1}.disabled .icon--on{fill:GrayText}}}/*# sourceMappingURL=switch-styles.css.map */
 `;
 //# sourceMappingURL=switch-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/switch/switch.js
