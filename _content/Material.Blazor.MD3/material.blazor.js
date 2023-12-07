@@ -39,7 +39,8 @@ var __webpack_exports__ = {};
 var MBDialog_namespaceObject = {};
 __webpack_require__.r(MBDialog_namespaceObject);
 __webpack_require__.d(MBDialog_namespaceObject, {
-  dialogShow: () => (dialogShow)
+  dialogShow: () => (dialogShow),
+  setDialogCloseEvent: () => (setDialogCloseEvent)
 });
 
 // NAMESPACE OBJECT: ./Components/Menu/MBMenu.ts
@@ -47,7 +48,7 @@ var MBMenu_namespaceObject = {};
 __webpack_require__.r(MBMenu_namespaceObject);
 __webpack_require__.d(MBMenu_namespaceObject, {
   setMenuCloseEvent: () => (setMenuCloseEvent),
-  toggleMenuOpen: () => (toggleMenuOpen)
+  setToggleMenuOpen: () => (setToggleMenuOpen)
 });
 
 // NAMESPACE OBJECT: ./Components/TextField/MBTextField.ts
@@ -2912,6 +2913,7 @@ class Checkbox extends checkboxBaseClass {
           ?required=${this.required}
           .indeterminate=${this.indeterminate}
           .checked=${this.checked}
+          @input=${this.handleInput}
           @change=${this.handleChange} />
 
         <div class="outline"></div>
@@ -2925,10 +2927,14 @@ class Checkbox extends checkboxBaseClass {
       </div>
     `;
     }
-    handleChange(event) {
+    handleInput(event) {
         const target = event.target;
         this.checked = target.checked;
         this.indeterminate = target.indeterminate;
+        // <input> 'input' event bubbles and is composed, don't re-dispatch it.
+    }
+    handleChange(event) {
+        // <input> 'change' event is not composed, re-dispatch it.
         redispatchEvent(this, event);
     }
     [getFormValue]() {
@@ -8563,10 +8569,15 @@ class MenuItemController {
                     interactiveElement.click();
                 }
             }
-            if (this.host.keepOpen || event.defaultPrevented)
+            if (event.defaultPrevented)
                 return;
+            // If the host has keepOpen = true we should ignore clicks & Space/Enter,
+            // however we always maintain the ability to close a menu with a explicit
+            // `escape` keypress.
             const keyCode = event.code;
-            if (!event.defaultPrevented && isClosableKey(keyCode)) {
+            if (this.host.keepOpen && keyCode !== 'Escape')
+                return;
+            if (isClosableKey(keyCode)) {
                 event.preventDefault();
                 this.host.dispatchEvent(createDefaultCloseMenuEvent(this.host, {
                     kind: CloseReason.KEYDOWN,
@@ -8574,14 +8585,17 @@ class MenuItemController {
                 }));
             }
         };
-        const { getHeadlineElements, getInteractiveElement } = config;
-        this.getHeadlineElements = getHeadlineElements;
-        this.getInteractiveElement = getInteractiveElement;
+        this.getHeadlineElements = config.getHeadlineElements;
+        this.getSupportingTextElements = config.getSupportingTextElements;
+        this.getDefaultElements = config.getDefaultElements;
+        this.getInteractiveElement = config.getInteractiveElement;
         this.host.addController(this);
     }
     /**
      * The text that is selectable via typeahead. If not set, defaults to the
-     * innerText of the item slotted into the `"headline"` slot.
+     * innerText of the item slotted into the `"headline"` slot, and if there are
+     * no slotted elements into headline, then it checks the _default_ slot, and
+     * then the `"supporting-text"` slot if nothing is in _default_.
      */
     get typeaheadText() {
         if (this.internalTypeaheadText !== null) {
@@ -8594,6 +8608,24 @@ class MenuItemController {
                 textParts.push(headlineElement.textContent.trim());
             }
         });
+        // If there are no headline elements, check the default slot's text content
+        if (textParts.length === 0) {
+            this.getDefaultElements().forEach((defaultElement) => {
+                if (defaultElement.textContent && defaultElement.textContent.trim()) {
+                    textParts.push(defaultElement.textContent.trim());
+                }
+            });
+        }
+        // If there are no headline nor default slot elements, check the
+        //supporting-text slot's text content
+        if (textParts.length === 0) {
+            this.getSupportingTextElements().forEach((supportingTextElement) => {
+                if (supportingTextElement.textContent &&
+                    supportingTextElement.textContent.trim()) {
+                    textParts.push(supportingTextElement.textContent.trim());
+                }
+            });
+        }
         return textParts.join(' ');
     }
     /**
@@ -8685,6 +8717,12 @@ class MenuItemEl extends lit_element_s {
         this.menuItemController = new MenuItemController(this, {
             getHeadlineElements: () => {
                 return this.headlineElements;
+            },
+            getSupportingTextElements: () => {
+                return this.supportingTextElements;
+            },
+            getDefaultElements: () => {
+                return this.defaultElements;
             },
             getInteractiveElement: () => this.listItemRoot,
         });
@@ -8831,6 +8869,12 @@ __decorate([
 __decorate([
     query_assigned_elements_o({ slot: 'headline' })
 ], MenuItemEl.prototype, "headlineElements", void 0);
+__decorate([
+    query_assigned_elements_o({ slot: 'supporting-text' })
+], MenuItemEl.prototype, "supportingTextElements", void 0);
+__decorate([
+    query_assigned_nodes_n({ slot: '' })
+], MenuItemEl.prototype, "defaultElements", void 0);
 __decorate([
     property_n({ attribute: 'typeahead-text' })
 ], MenuItemEl.prototype, "typeaheadText", null);
@@ -10409,6 +10453,7 @@ var select_a;
 
 
 
+
 const VALUE = Symbol('value');
 // Separate variable needed for closure.
 const selectBaseClass = mixinOnReportValidity(mixinConstraintValidation(mixinFormAssociated(mixinElementInternals(lit_element_s))));
@@ -10517,6 +10562,10 @@ class Select extends selectBaseClass {
          */
         this.menuPositioning = 'popover';
         /**
+         * Clamps the menu-width to the width of the select.
+         */
+        this.clampMenuWidth = false;
+        /**
          * The max time between the keystrokes of the typeahead select / menu behavior
          * before it clears the typeahead buffer.
          */
@@ -10556,6 +10605,10 @@ class Select extends selectBaseClass {
         this.nativeErrorText = '';
         this.focused = false;
         this.open = false;
+        // Have to keep track of previous open because it's state and private and thus
+        // cannot be tracked in PropertyValues<this> map.
+        this.prevOpen = this.open;
+        this.selectWidth = 0;
         if (is_server_o) {
             return;
         }
@@ -10616,6 +10669,16 @@ class Select extends selectBaseClass {
         if (!this.hasUpdated) {
             this.initUserSelection();
         }
+        // We have just opened the menu.
+        // We are only able to check for the select's rect in `update()` instead of
+        // having to wait for `updated()` because the menu can never be open on
+        // first render since it is not settable and Lit SSR does not support click
+        // events which would open the menu.
+        if (this.prevOpen !== this.open && this.open) {
+            const selectRect = this.getBoundingClientRect();
+            this.selectWidth = selectRect.width;
+        }
+        this.prevOpen = this.open;
         super.update(changed);
     }
     render() {
@@ -10732,6 +10795,12 @@ class Select extends selectBaseClass {
       part="menu"
       exportparts="focus-ring: menu-focus-ring"
       anchor="field"
+      style=${style_map_o({
+            '--__menu-min-width': `${this.selectWidth}px`,
+            '--__menu-max-width': this.clampMenuWidth
+                ? `${this.selectWidth}px`
+                : undefined,
+        })}
       .open=${this.open}
       .quick=${this.quick}
       .positioning=${this.menuPositioning}
@@ -11023,6 +11092,9 @@ __decorate([
     property_n({ attribute: 'menu-positioning' })
 ], Select.prototype, "menuPositioning", void 0);
 __decorate([
+    property_n({ type: Boolean, attribute: 'clamp-menu-width' })
+], Select.prototype, "clampMenuWidth", void 0);
+__decorate([
     property_n({ type: Number, attribute: 'typeahead-delay' })
 ], Select.prototype, "typeaheadDelay", void 0);
 __decorate([
@@ -11096,7 +11168,7 @@ const filled_select_styles_css_styles = i `:host{--_text-field-active-indicator-
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const select_internal_shared_styles_css_styles = i `:host{color:unset;min-width:210px;display:flex}.field{cursor:default;outline:none}.select{position:relative;flex-direction:column}.icon.trailing svg,.icon ::slotted(*){fill:currentColor}.icon ::slotted(*){width:inherit;height:inherit;font-size:inherit}.icon slot{display:flex;height:100%;width:100%;align-items:center;justify-content:center}.icon.trailing :is(.up,.down){opacity:0;transition:opacity 75ms linear 75ms}.select:not(.open) .down,.select.open .up{opacity:1}.field,.select,md-menu{min-width:inherit;width:inherit;max-width:inherit;display:flex}md-menu ::slotted(:not[disabled]){cursor:pointer}.field,.select{width:100%}:host{display:inline-flex}:host([disabled]){pointer-events:none}/*# sourceMappingURL=shared-styles.css.map */
+const select_internal_shared_styles_css_styles = i `:host{color:unset;min-width:210px;display:flex}.field{cursor:default;outline:none}.select{position:relative;flex-direction:column}.icon.trailing svg,.icon ::slotted(*){fill:currentColor}.icon ::slotted(*){width:inherit;height:inherit;font-size:inherit}.icon slot{display:flex;height:100%;width:100%;align-items:center;justify-content:center}.icon.trailing :is(.up,.down){opacity:0;transition:opacity 75ms linear 75ms}.select:not(.open) .down,.select.open .up{opacity:1}.field,.select,md-menu{min-width:inherit;width:inherit;max-width:inherit;display:flex}md-menu{min-width:var(--__menu-min-width, inherit);max-width:var(--__menu-max-width, inherit)}md-menu ::slotted(:not[disabled]){cursor:pointer}.field,.select{width:100%}:host{display:inline-flex}:host([disabled]){pointer-events:none}/*# sourceMappingURL=shared-styles.css.map */
 `;
 //# sourceMappingURL=shared-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/select/filled-select.js
@@ -11256,7 +11328,9 @@ class SelectOptionController {
     }
     /**
      * The text that is selectable via typeahead. If not set, defaults to the
-     * innerText of the item slotted into the `"headline"` slot.
+     * innerText of the item slotted into the `"headline"` slot, and if there are
+     * no slotted elements into headline, then it checks the _default_ slot, and
+     * then the `"supporting-text"` slot if nothing is in _default_.
      */
     get typeaheadText() {
         return this.menuItemController.typeaheadText;
@@ -11266,20 +11340,16 @@ class SelectOptionController {
     }
     /**
      * The text that is displayed in the select field when selected. If not set,
-     * defaults to the textContent of the item slotted into the `"headline"` slot.
+     * defaults to the textContent of the item slotted into the `"headline"` slot,
+     * and if there are no slotted elements into headline, then it checks the
+     * _default_ slot, and then the `"supporting-text"` slot if nothing is in
+     * _default_.
      */
     get displayText() {
         if (this.internalDisplayText !== null) {
             return this.internalDisplayText;
         }
-        const headlineElements = this.getHeadlineElements();
-        const textParts = [];
-        headlineElements.forEach((headlineElement) => {
-            if (headlineElement.textContent && headlineElement.textContent.trim()) {
-                textParts.push(headlineElement.textContent.trim());
-            }
-        });
-        return textParts.join(' ');
+        return this.menuItemController.typeaheadText;
     }
     setDisplayText(text) {
         this.internalDisplayText = text;
@@ -11308,7 +11378,6 @@ class SelectOptionController {
             this.menuItemController.onKeydown(e);
         };
         this.menuItemController = new MenuItemController(host, config);
-        this.getHeadlineElements = config.getHeadlineElements;
         host.addController(this);
     }
     hostUpdate() {
@@ -11382,6 +11451,12 @@ class SelectOptionEl extends lit_element_s {
         this.selectOptionController = new SelectOptionController(this, {
             getHeadlineElements: () => {
                 return this.headlineElements;
+            },
+            getSupportingTextElements: () => {
+                return this.supportingTextElements;
+            },
+            getDefaultElements: () => {
+                return this.defaultElements;
             },
             getInteractiveElement: () => this.listItemRoot,
         });
@@ -11514,6 +11589,12 @@ __decorate([
 __decorate([
     query_assigned_elements_o({ slot: 'headline' })
 ], SelectOptionEl.prototype, "headlineElements", void 0);
+__decorate([
+    query_assigned_elements_o({ slot: 'supporting-text' })
+], SelectOptionEl.prototype, "supportingTextElements", void 0);
+__decorate([
+    query_assigned_nodes_n({ slot: '' })
+], SelectOptionEl.prototype, "defaultElements", void 0);
 __decorate([
     property_n({ attribute: 'typeahead-text' })
 ], SelectOptionEl.prototype, "typeaheadText", null);
@@ -13276,6 +13357,153 @@ const stringConverter = {
     },
 };
 //# sourceMappingURL=string-converter.js.map
+;// CONCATENATED MODULE: ./node_modules/@material/web/labs/behaviors/validators/text-field-validator.js
+/**
+ * @license
+ * Copyright 2023 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/**
+ * A validator that provides constraint validation that emulates `<input>` and
+ * `<textarea>` validation.
+ */
+class TextFieldValidator extends Validator {
+    computeValidity({ state, renderedControl }) {
+        let inputOrTextArea = renderedControl;
+        if (isInputState(state) && !inputOrTextArea) {
+            // Get cached <input> or create it.
+            inputOrTextArea = this.inputControl || document.createElement('input');
+            // Cache the <input> to re-use it next time.
+            this.inputControl = inputOrTextArea;
+        }
+        else if (!inputOrTextArea) {
+            // Get cached <textarea> or create it.
+            inputOrTextArea =
+                this.textAreaControl || document.createElement('textarea');
+            // Cache the <textarea> to re-use it next time.
+            this.textAreaControl = inputOrTextArea;
+        }
+        // Set this variable so we can check it for input-specific properties.
+        const input = isInputState(state)
+            ? inputOrTextArea
+            : null;
+        // Set input's "type" first, since this can change the other properties
+        if (input) {
+            input.type = state.type;
+        }
+        if (inputOrTextArea.value !== state.value) {
+            // Only programmatically set the value if there's a difference. When using
+            // the rendered control, the value will always be up to date. Setting the
+            // property (even if it's the same string) will reset the internal <input>
+            // dirty flag, making minlength and maxlength validation reset.
+            inputOrTextArea.value = state.value;
+        }
+        inputOrTextArea.required = state.required;
+        // The following IDLAttribute properties will always hydrate an attribute,
+        // even if set to a the default value ('' or -1). The presence of the
+        // attribute triggers constraint validation, so we must remove the attribute
+        // when empty.
+        if (input) {
+            const inputState = state;
+            if (inputState.pattern) {
+                input.pattern = inputState.pattern;
+            }
+            else {
+                input.removeAttribute('pattern');
+            }
+            if (inputState.min) {
+                input.min = inputState.min;
+            }
+            else {
+                input.removeAttribute('min');
+            }
+            if (inputState.max) {
+                input.max = inputState.max;
+            }
+            else {
+                input.removeAttribute('max');
+            }
+            if (inputState.step) {
+                input.step = inputState.step;
+            }
+            else {
+                input.removeAttribute('step');
+            }
+        }
+        // Use -1 to represent no minlength and maxlength, which is what the
+        // platform input returns. However, it will throw an error if you try to
+        // manually set it to -1.
+        if (state.minLength > -1) {
+            inputOrTextArea.minLength = state.minLength;
+        }
+        else {
+            inputOrTextArea.removeAttribute('minlength');
+        }
+        if (state.maxLength > -1) {
+            inputOrTextArea.maxLength = state.maxLength;
+        }
+        else {
+            inputOrTextArea.removeAttribute('maxlength');
+        }
+        return {
+            validity: inputOrTextArea.validity,
+            validationMessage: inputOrTextArea.validationMessage,
+        };
+    }
+    equals({ state: prev }, { state: next }) {
+        // Check shared input and textarea properties
+        const inputOrTextAreaEqual = prev.type === next.type &&
+            prev.value === next.value &&
+            prev.required === next.required &&
+            prev.minLength === next.minLength &&
+            prev.maxLength === next.maxLength;
+        if (!isInputState(prev) || !isInputState(next)) {
+            // Both are textareas, all relevant properties are equal.
+            return inputOrTextAreaEqual;
+        }
+        // Check additional input-specific properties.
+        return (inputOrTextAreaEqual &&
+            prev.pattern === next.pattern &&
+            prev.min === next.min &&
+            prev.max === next.max &&
+            prev.step === next.step);
+    }
+    copy({ state }) {
+        // Don't hold a reference to the rendered control when copying since we
+        // don't use it when checking if the state changed.
+        return {
+            state: isInputState(state)
+                ? this.copyInput(state)
+                : this.copyTextArea(state),
+            renderedControl: null,
+        };
+    }
+    copyInput(state) {
+        const { type, pattern, min, max, step } = state;
+        return {
+            ...this.copySharedState(state),
+            type,
+            pattern,
+            min,
+            max,
+            step,
+        };
+    }
+    copyTextArea(state) {
+        return {
+            ...this.copySharedState(state),
+            type: state.type,
+        };
+    }
+    copySharedState({ value, required, minLength, maxLength, }) {
+        return { value, required, minLength, maxLength };
+    }
+}
+function isInputState(state) {
+    return state.type !== 'textarea';
+}
+//# sourceMappingURL=text-field-validator.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/textfield/internal/text-field.js
 /**
  * @license
@@ -13294,8 +13522,11 @@ const stringConverter = {
 
 
 
+
+
+
 // Separate variable needed for closure.
-const textFieldBaseClass = mixinFormAssociated(mixinElementInternals(lit_element_s));
+const textFieldBaseClass = mixinOnReportValidity(mixinConstraintValidation(mixinFormAssociated(mixinElementInternals(lit_element_s))));
 /**
  * A text field component.
  *
@@ -13468,17 +13699,6 @@ class TextField extends textFieldBaseClass {
          * `reportValidity()`.
          */
         this.nativeErrorText = '';
-        this.isCheckingValidity = false;
-        this.isReportingValidity = false;
-        // Needed for Safari, see https://bugs.webkit.org/show_bug.cgi?id=261432
-        // Replace with this[internals].validity.customError when resolved.
-        this.hasCustomValidityError = false;
-        this.onInvalid = (invalidEvent) => {
-            if (this.isCheckingValidity || this.isReportingValidity) {
-                return;
-            }
-            this.showErrorMessage(false, invalidEvent);
-        };
     }
     /**
      * Gets or sets the direction in which selection occurred.
@@ -13506,25 +13726,6 @@ class TextField extends textFieldBaseClass {
     }
     set selectionStart(value) {
         this.getInputOrTextarea().selectionStart = value;
-    }
-    /**
-     * Returns the text field's validation error message.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation
-     */
-    get validationMessage() {
-        this.syncValidity();
-        return this[internals].validationMessage;
-    }
-    /**
-     * Returns a `ValidityState` object that represents the validity states of the
-     * text field.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/API/ValidityState
-     */
-    get validity() {
-        this.syncValidity();
-        return this[internals].validity;
     }
     /**
      * The text field's value as a number.
@@ -13562,76 +13763,8 @@ class TextField extends textFieldBaseClass {
         input.valueAsDate = value;
         this.value = input.value;
     }
-    /**
-     * Returns whether an element will successfully validate based on forms
-     * validation rules and constraints.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/willValidate
-     */
-    get willValidate() {
-        this.syncValidity();
-        return this[internals].willValidate;
-    }
     get hasError() {
         return this.error || this.nativeError;
-    }
-    /**
-     * Checks the text field's native validation and returns whether or not the
-     * element is valid.
-     *
-     * If invalid, this method will dispatch the `invalid` event.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/checkValidity
-     *
-     * @return true if the text field is valid, or false if not.
-     */
-    checkValidity() {
-        this.isCheckingValidity = true;
-        this.syncValidity();
-        const isValid = this[internals].checkValidity();
-        this.isCheckingValidity = false;
-        return isValid;
-    }
-    /**
-     * Checks the text field's native validation and returns whether or not the
-     * element is valid.
-     *
-     * If invalid, this method will dispatch the `invalid` event.
-     *
-     * This method will display or clear an error text message equal to the text
-     * field's `validationMessage`, unless the invalid event is canceled.
-     *
-     * Use `setCustomValidity()` to customize the `validationMessage`.
-     *
-     * This method can also be used to re-announce error messages to screen
-     * readers.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/reportValidity
-     *
-     * @return true if the text field is valid, or false if not.
-     */
-    reportValidity() {
-        this.isReportingValidity = true;
-        let invalidEvent;
-        this.addEventListener('invalid', (event) => {
-            invalidEvent = event;
-        }, { once: true });
-        const valid = this.checkValidity();
-        this.showErrorMessage(valid, invalidEvent);
-        this.isReportingValidity = false;
-        return valid;
-    }
-    showErrorMessage(valid, invalidEvent) {
-        if (invalidEvent?.defaultPrevented) {
-            return valid;
-        }
-        const prevMessage = this.getErrorText();
-        this.nativeError = !valid;
-        this.nativeErrorText = this.validationMessage;
-        if (prevMessage === this.getErrorText()) {
-            this.field?.reannounceError();
-        }
-        return valid;
     }
     /**
      * Selects all the text in the text field.
@@ -13640,21 +13773,6 @@ class TextField extends textFieldBaseClass {
      */
     select() {
         this.getInputOrTextarea().select();
-    }
-    /**
-     * Sets a custom validation error message for the text field. Use this for
-     * custom error message.
-     *
-     * When the error is not an empty string, the text field is considered invalid
-     * and `validity.customError` will be true.
-     *
-     * https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setCustomValidity
-     *
-     * @param error The error message to display.
-     */
-    setCustomValidity(error) {
-        this.hasCustomValidityError = !!error;
-        this[internals].setValidity({ customError: !!error }, error, this.getInputOrTextarea());
     }
     setRangeText(...args) {
         // Calling setRangeText with 1 vs 3-4 arguments has different behavior.
@@ -13746,9 +13864,6 @@ class TextField extends textFieldBaseClass {
             // before checking its value.
             this.value = value;
         }
-        // Sync validity when properties change, since validation properties may
-        // have changed.
-        this.syncValidity();
     }
     renderField() {
         return static_n `<${this.fieldTag}
@@ -13788,7 +13903,7 @@ class TextField extends textFieldBaseClass {
     `;
     }
     renderInputOrTextarea() {
-        const style = { direction: this.textDirection };
+        const style = { 'direction': this.textDirection };
         const ariaLabel = this.ariaLabel || this.label || T;
         // lit-anaylzer `autocomplete` types are too strict
         // tslint:disable-next-line:no-any
@@ -13811,7 +13926,7 @@ class TextField extends textFieldBaseClass {
           rows=${this.rows}
           cols=${this.cols}
           .value=${live_l(this.value)}
-          @change=${this.handleChange}
+          @change=${this.redispatchEvent}
           @focusin=${this.handleFocusin}
           @focusout=${this.handleFocusout}
           @input=${this.handleInput}
@@ -13885,13 +14000,6 @@ class TextField extends textFieldBaseClass {
     handleInput(event) {
         this.dirty = true;
         this.value = event.target.value;
-        // Sync validity so that clients can check validity on input.
-        this.syncValidity();
-    }
-    handleChange(event) {
-        // Sync validity so that clients can check validity on change.
-        this.syncValidity();
-        this.redispatchEvent(event);
     }
     redispatchEvent(event) {
         redispatchEvent(this, event);
@@ -13920,31 +14028,9 @@ class TextField extends textFieldBaseClass {
         }
         return this.getInputOrTextarea();
     }
-    syncValidity() {
-        // Sync the internal <input>'s validity and the host's ElementInternals
-        // validity. We do this to re-use native `<input>` validation messages.
-        const input = this.getInputOrTextarea();
-        if (this.hasCustomValidityError) {
-            input.setCustomValidity(this[internals].validationMessage);
-        }
-        else {
-            input.setCustomValidity('');
-        }
-        this[internals].setValidity(input.validity, input.validationMessage, this.getInputOrTextarea());
-    }
     handleIconChange() {
         this.hasLeadingIcon = this.leadingIcons.length > 0;
         this.hasTrailingIcon = this.trailingIcons.length > 0;
-    }
-    connectedCallback() {
-        super.connectedCallback();
-        // Handles the case where the user submits the form and native validation
-        // error pops up. We want the error styles to show.
-        this.addEventListener('invalid', this.onInvalid);
-    }
-    disconnectedCallback() {
-        super.disconnectedCallback();
-        this.removeEventListener('invalid', this.onInvalid);
     }
     [getFormValue]() {
         return this.value;
@@ -13959,6 +14045,32 @@ class TextField extends textFieldBaseClass {
         // Required for the case that the user slots a focusable element into the
         // leading icon slot such as an iconbutton due to how delegatesFocus works.
         this.getInputOrTextarea().focus();
+    }
+    [createValidator]() {
+        return new TextFieldValidator(() => ({
+            state: this,
+            renderedControl: this.inputOrTextarea,
+        }));
+    }
+    [getValidityAnchor]() {
+        return this.inputOrTextarea;
+    }
+    [onReportValidity](invalidEvent) {
+        if (invalidEvent?.defaultPrevented) {
+            return;
+        }
+        if (invalidEvent) {
+            // Prevent default pop-up behavior. This also prevents focusing, so we
+            // manually focus.
+            invalidEvent.preventDefault();
+            this.focus();
+        }
+        const prevMessage = this.getErrorText();
+        this.nativeError = !!invalidEvent;
+        this.nativeErrorText = this.validationMessage;
+        if (prevMessage === this.getErrorText()) {
+            this.field?.reannounceError();
+        }
     }
 }
 (() => {
@@ -14297,7 +14409,21 @@ function dialogShow(dialogID) {
   var _document$getElementB;
   (_document$getElementB = document.getElementById(dialogID)) === null || _document$getElementB === void 0 || _document$getElementB.show();
 }
+function reportDialogCloseEvent() {
+  console.log("Dialog close event");
+}
+function setDialogCloseEvent(dialogID) {
+  var dialogElement = document.getElementById(dialogID);
+  if (dialogElement != null) {
+    console.log("Adding listener for dialog close events");
+    dialogElement.addEventListener('close', function () {
+      reportDialogCloseEvent();
+    });
+  }
+}
 ;// CONCATENATED MODULE: ./Components/Menu/MBMenu.ts
+//import { MdButton } from '@material/web/button/button';
+
 function reportMenuCloseEvent() {
   console.log("Menu close event");
 }
@@ -14321,7 +14447,7 @@ function toggleMenu(menuElement) {
     menuElement.open = !menuElement.open;
   }
 }
-function toggleMenuOpen(menuButtonID, menuID) {
+function setToggleMenuOpen(menuButtonID, menuID) {
   var buttonElement = document.getElementById(menuButtonID);
   var menuElement = document.getElementById(menuID);
   if (buttonElement != null && menuElement != null) {

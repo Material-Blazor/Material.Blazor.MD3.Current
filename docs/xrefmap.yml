@@ -692,22 +692,6 @@ references:
   fullName.vb: Material.Blazor.Internal.InputComponent(Of T).SetParametersAsync
   nameWithType: InputComponent<T>.SetParametersAsync
   nameWithType.vb: InputComponent(Of T).SetParametersAsync
-- uid: Material.Blazor.Internal.InputComponent`1.ShouldRender
-  name: ShouldRender()
-  href: api/Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_ShouldRender
-  commentId: M:Material.Blazor.Internal.InputComponent`1.ShouldRender
-  fullName: Material.Blazor.Internal.InputComponent<T>.ShouldRender()
-  fullName.vb: Material.Blazor.Internal.InputComponent(Of T).ShouldRender()
-  nameWithType: InputComponent<T>.ShouldRender()
-  nameWithType.vb: InputComponent(Of T).ShouldRender()
-- uid: Material.Blazor.Internal.InputComponent`1.ShouldRender*
-  name: ShouldRender
-  href: api/Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_ShouldRender_
-  commentId: Overload:Material.Blazor.Internal.InputComponent`1.ShouldRender
-  fullName: Material.Blazor.Internal.InputComponent<T>.ShouldRender
-  fullName.vb: Material.Blazor.Internal.InputComponent(Of T).ShouldRender
-  nameWithType: InputComponent<T>.ShouldRender
-  nameWithType.vb: InputComponent(Of T).ShouldRender
 - uid: Material.Blazor.Internal.InputComponent`1.TryParseValueFromString(System.String,`0@,System.String@)
   name: TryParseValueFromString(string, out T, out string)
   href: api/Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_TryParseValueFromString_System_String__0__System_String__
@@ -1669,6 +1653,21 @@ references:
   commentId: Overload:Material.Blazor.MBButton.BuildRenderTree
   fullName: Material.Blazor.MBButton.BuildRenderTree
   nameWithType: MBButton.BuildRenderTree
+- uid: Material.Blazor.MBButton.BuildRenderTreeWorker(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32@,Material.Blazor.MBCascadingDefaults,System.Collections.Generic.KeyValuePair{System.String,System.Object}[],System.String,System.String,System.String,System.Boolean,System.Nullable{Material.Blazor.MBButtonStyle},Material.Blazor.MBIconDescriptor,System.Boolean,System.String,System.String,System.String)
+  name: BuildRenderTreeWorker(RenderTreeBuilder, ref int, MBCascadingDefaults, KeyValuePair<string, object>[], string, string, string, bool, MBButtonStyle?, MBIconDescriptor, bool, string, string, string)
+  href: api/Material.Blazor.MBButton.html#Material_Blazor_MBButton_BuildRenderTreeWorker_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32__Material_Blazor_MBCascadingDefaults_System_Collections_Generic_KeyValuePair_System_String_System_Object____System_String_System_String_System_String_System_Boolean_System_Nullable_Material_Blazor_MBButtonStyle__Material_Blazor_MBIconDescriptor_System_Boolean_System_String_System_String_System_String_
+  commentId: M:Material.Blazor.MBButton.BuildRenderTreeWorker(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32@,Material.Blazor.MBCascadingDefaults,System.Collections.Generic.KeyValuePair{System.String,System.Object}[],System.String,System.String,System.String,System.Boolean,System.Nullable{Material.Blazor.MBButtonStyle},Material.Blazor.MBIconDescriptor,System.Boolean,System.String,System.String,System.String)
+  name.vb: BuildRenderTreeWorker(RenderTreeBuilder, Integer, MBCascadingDefaults, KeyValuePair(Of String, Object)(), String, String, String, Boolean, MBButtonStyle?, MBIconDescriptor, Boolean, String, String, String)
+  fullName: Material.Blazor.MBButton.BuildRenderTreeWorker(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, ref int, Material.Blazor.MBCascadingDefaults, System.Collections.Generic.KeyValuePair<string, object>[], string, string, string, bool, Material.Blazor.MBButtonStyle?, Material.Blazor.MBIconDescriptor, bool, string, string, string)
+  fullName.vb: Material.Blazor.MBButton.BuildRenderTreeWorker(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, Integer, Material.Blazor.MBCascadingDefaults, System.Collections.Generic.KeyValuePair(Of String, Object)(), String, String, String, Boolean, Material.Blazor.MBButtonStyle?, Material.Blazor.MBIconDescriptor, Boolean, String, String, String)
+  nameWithType: MBButton.BuildRenderTreeWorker(RenderTreeBuilder, ref int, MBCascadingDefaults, KeyValuePair<string, object>[], string, string, string, bool, MBButtonStyle?, MBIconDescriptor, bool, string, string, string)
+  nameWithType.vb: MBButton.BuildRenderTreeWorker(RenderTreeBuilder, Integer, MBCascadingDefaults, KeyValuePair(Of String, Object)(), String, String, String, Boolean, MBButtonStyle?, MBIconDescriptor, Boolean, String, String, String)
+- uid: Material.Blazor.MBButton.BuildRenderTreeWorker*
+  name: BuildRenderTreeWorker
+  href: api/Material.Blazor.MBButton.html#Material_Blazor_MBButton_BuildRenderTreeWorker_
+  commentId: Overload:Material.Blazor.MBButton.BuildRenderTreeWorker
+  fullName: Material.Blazor.MBButton.BuildRenderTreeWorker
+  nameWithType: MBButton.BuildRenderTreeWorker
 - uid: Material.Blazor.MBButton.ButtonStyle
   name: ButtonStyle
   href: api/Material.Blazor.MBButton.html#Material_Blazor_MBButton_ButtonStyle
@@ -2692,6 +2691,21 @@ references:
   commentId: Overload:Material.Blazor.MBDialog.IconDescriptor
   fullName: Material.Blazor.MBDialog.IconDescriptor
   nameWithType: MBDialog.IconDescriptor
+- uid: Material.Blazor.MBDialog.OnAfterRenderAsync(System.Boolean)
+  name: OnAfterRenderAsync(bool)
+  href: api/Material.Blazor.MBDialog.html#Material_Blazor_MBDialog_OnAfterRenderAsync_System_Boolean_
+  commentId: M:Material.Blazor.MBDialog.OnAfterRenderAsync(System.Boolean)
+  name.vb: OnAfterRenderAsync(Boolean)
+  fullName: Material.Blazor.MBDialog.OnAfterRenderAsync(bool)
+  fullName.vb: Material.Blazor.MBDialog.OnAfterRenderAsync(Boolean)
+  nameWithType: MBDialog.OnAfterRenderAsync(bool)
+  nameWithType.vb: MBDialog.OnAfterRenderAsync(Boolean)
+- uid: Material.Blazor.MBDialog.OnAfterRenderAsync*
+  name: OnAfterRenderAsync
+  href: api/Material.Blazor.MBDialog.html#Material_Blazor_MBDialog_OnAfterRenderAsync_
+  commentId: Overload:Material.Blazor.MBDialog.OnAfterRenderAsync
+  fullName: Material.Blazor.MBDialog.OnAfterRenderAsync
+  nameWithType: MBDialog.OnAfterRenderAsync
 - uid: Material.Blazor.MBDialog.ScrimClickAction
   name: ScrimClickAction
   href: api/Material.Blazor.MBDialog.html#Material_Blazor_MBDialog_ScrimClickAction
@@ -2761,6 +2775,18 @@ references:
   commentId: Overload:Material.Blazor.MBDialogButton.ButtonLabel
   fullName: Material.Blazor.MBDialogButton.ButtonLabel
   nameWithType: MBDialogButton.ButtonLabel
+- uid: Material.Blazor.MBDialogButton.ButtonStyle
+  name: ButtonStyle
+  href: api/Material.Blazor.MBDialogButton.html#Material_Blazor_MBDialogButton_ButtonStyle
+  commentId: P:Material.Blazor.MBDialogButton.ButtonStyle
+  fullName: Material.Blazor.MBDialogButton.ButtonStyle
+  nameWithType: MBDialogButton.ButtonStyle
+- uid: Material.Blazor.MBDialogButton.ButtonStyle*
+  name: ButtonStyle
+  href: api/Material.Blazor.MBDialogButton.html#Material_Blazor_MBDialogButton_ButtonStyle_
+  commentId: Overload:Material.Blazor.MBDialogButton.ButtonStyle
+  fullName: Material.Blazor.MBDialogButton.ButtonStyle
+  nameWithType: MBDialogButton.ButtonStyle
 - uid: Material.Blazor.MBDialogButton.ButtonValue
   name: ButtonValue
   href: api/Material.Blazor.MBDialogButton.html#Material_Blazor_MBDialogButton_ButtonValue
