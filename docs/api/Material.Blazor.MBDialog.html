@@ -315,10 +315,10 @@ public MBDialogButton[] ButtonItems { get; set; }</code></pre>
 
 
 
-  <a id="Material_Blazor_MBDialog_EscapeKeyAction_" data-uid="Material.Blazor.MBDialog.EscapeKeyAction*"></a>
+  <a id="Material_Blazor_MBDialog_CustomHeader_" data-uid="Material.Blazor.MBDialog.CustomHeader*"></a>
 
-  <h3 id="Material_Blazor_MBDialog_EscapeKeyAction" data-uid="Material.Blazor.MBDialog.EscapeKeyAction">
-  EscapeKeyAction
+  <h3 id="Material_Blazor_MBDialog_CustomHeader" data-uid="Material.Blazor.MBDialog.CustomHeader">
+  CustomHeader
   <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/Dialog/MBDialog.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -327,7 +327,7 @@ public MBDialogButton[] ButtonItems { get; set; }</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Parameter]
-public string EscapeKeyAction { get; set; }</code></pre>
+public RenderFragment CustomHeader { get; set; }</code></pre>
   </div>
 
 
@@ -336,7 +336,39 @@ public string EscapeKeyAction { get; set; }</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.renderfragment">RenderFragment</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Material_Blazor_MBDialog_GestureCancellation_" data-uid="Material.Blazor.MBDialog.GestureCancellation*"></a>
+
+  <h3 id="Material_Blazor_MBDialog_GestureCancellation" data-uid="Material.Blazor.MBDialog.GestureCancellation">
+  GestureCancellation
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/Dialog/MBDialog.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Parameter]
+public bool GestureCancellation { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
   </dl>
 
@@ -411,38 +443,6 @@ public MBIconDescriptor IconDescriptor { get; set; }</code></pre>
 
 
 
-  <a id="Material_Blazor_MBDialog_ScrimClickAction_" data-uid="Material.Blazor.MBDialog.ScrimClickAction*"></a>
-
-  <h3 id="Material_Blazor_MBDialog_ScrimClickAction" data-uid="Material.Blazor.MBDialog.ScrimClickAction">
-  ScrimClickAction
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/Dialog/MBDialog.cs"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Parameter]
-public string ScrimClickAction { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -500,6 +500,42 @@ public string ScrimClickAction { get; set; }</code></pre>
     <dd></dd>
   </dl>
 
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Material_Blazor_MBDialog_HideAsync_" data-uid="Material.Blazor.MBDialog.HideAsync*"></a>
+
+  <h3 id="Material_Blazor_MBDialog_HideAsync_System_String_" data-uid="Material.Blazor.MBDialog.HideAsync(System.String)">
+  HideAsync(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/Dialog/MBDialog.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task HideAsync(string dialogValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dialogValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
