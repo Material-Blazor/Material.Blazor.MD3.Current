@@ -39,8 +39,7 @@ var __webpack_exports__ = {};
 var MBDialog_namespaceObject = {};
 __webpack_require__.r(MBDialog_namespaceObject);
 __webpack_require__.d(MBDialog_namespaceObject, {
-  dialogShow: () => (dialogShow),
-  setDialogCloseEvent: () => (setDialogCloseEvent)
+  dialogShow: () => (dialogShow)
 });
 
 // NAMESPACE OBJECT: ./Components/Menu/MBMenu.ts
@@ -14421,20 +14420,26 @@ MdOutlinedTextField = __decorate([
 // LINT.ThenChange(:imports)
 //# sourceMappingURL=all.js.map
 ;// CONCATENATED MODULE: ./Components/Dialog/MBDialog.ts
-function dialogShow(dialogID) {
+function dialogShow(dialogID, dotNetObject, escapeKeyAction, scrimClickAction) {
   var _document$getElementB;
   (_document$getElementB = document.getElementById(dialogID)) === null || _document$getElementB === void 0 || _document$getElementB.show();
-}
-function reportDialogCloseEvent() {
-  console.log("Dialog close event");
-}
-function setDialogCloseEvent(dialogID) {
+  //    const dialogElement: MdDialog | null = (document.getElementById(dialogID) as MdDialog);
   var dialogElement = document.getElementById(dialogID);
   if (dialogElement != null) {
-    console.log("Adding listener for dialog close events");
-    dialogElement.addEventListener('close', function () {
-      reportDialogCloseEvent();
-    });
+    dialogElement._dialog = dialogElement;
+    dialogElement._dotNetObject = dotNetObject;
+    dialogElement._escapeKeyAction = escapeKeyAction;
+    dialogElement._scrimClickAction = scrimClickAction;
+    //dialogElement.returnValue = "";
+
+    console.log("Adding listener for dialog closed events");
+    var closedCallback = function closedCallback() {
+      console.log("Dialog close event");
+      dialogElement.removeEventListener('close', closedCallback);
+      dialogElement._dotNetObject.invokeMethodAsync('NotifyClosed', dialogElement.returnValue);
+    };
+    dialogElement.addEventListener('closed', closedCallback);
+    dialogElement.show();
   }
 }
 ;// CONCATENATED MODULE: ./Components/Menu/MBMenu.ts
