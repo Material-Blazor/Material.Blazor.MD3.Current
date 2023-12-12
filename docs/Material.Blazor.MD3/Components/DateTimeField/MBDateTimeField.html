@@ -2,20 +2,20 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>PlusComponents </title>
+      <title>MBDateTimeField </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="PlusComponents ">
+      <meta name="title" content="MBDateTimeField ">
       
-      <link rel="icon" href="../../favicon.ico">
-      <link rel="stylesheet" href="../../public/docfx.min.css">
-      <link rel="stylesheet" href="../../public/main.css">
-      <meta name="docfx:navrel" content="../../toc.html">
-      <meta name="docfx:tocrel" content="toc.html">
-      
-      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
       
       
-      <meta name="docfx:docurl" content="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Articles/PlusComponents.md/#L1">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DateTimeField/MBDateTimeField.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -30,7 +30,7 @@
       <meta name="loc:downloadPdf" content="Download PDF">
   </head>
 
-  <script type="module" src="./../../public/docfx.min.js"></script>
+  <script type="module" src="./../../../public/docfx.min.js"></script>
 
   <script>
     const theme = localStorage.getItem('theme') || 'auto'
@@ -42,8 +42,8 @@
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
-          <a class="navbar-brand" href="../../index.html">
-            <img id="logo" class="svg" src="../../logo.svg" alt="">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../logo.svg" alt="">
             
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
@@ -79,48 +79,37 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="A.PlusComponents">
-<h1 id="plus-components">Plus Components</h1>
+        <article data-uid="C.MBDateTimeField">
+<h1 id="mbdatetimefield">MBDateTimeField</h1>
 
-<p>Material Theme closely specifies component HTML markup. Material.Blazor implements many of these as <a class="xref" href="CoreComponents.html">Core Components</a>. Material.Blazor also
-implements further Blazor/Material Theme hybrid components that we term &quot;Plus Components&quot;.</p>
-<h2 id="component-list">Component List</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Component</th>
-<th style="text-align: left;">Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><a class="xref" href="../Components/DateTimeField/MBDateTimeField.html">MBDateTimeField</a></td>
-<td style="text-align: left;">A date or date/time typed text field</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a class="xref" href="../Components/NumericField/MBNumericField.html">MBNumericField</a></td>
-<td style="text-align: left;">A numeric typed text field. Can be decimal, double, or int.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a class="xref" href="../Components/RadioButtonGroup/MBRadioButtonGroup.html">MBRadioButtonGroup</a></td>
-<td style="text-align: left;">A collection of radio buttons with a single selection</td>
-</tr>
-</tbody>
-</table>
-<h2 id="experimental-component-list">Experimental Component List</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Component</th>
-<th style="text-align: left;">Notes</th>
-</tr>
-</thead>
-</table>
+<h2 id="summary">Summary</h2>
+<p>An <a class="xref" href="../TextField/MBTextField.html">MBTextField</a> designed for either a <code>date</code> or <code>datetime-local</code> value input.
+Has the following properties</p>
+<h2 id="detail">Detail</h2>
+<ul>
+<li>Includes <a class="xref" href="../TextField/MBTextField.html">MBTextField</a> properties; plus</li>
+<li>Minimum and maximum datetimes;</li>
+<li>Can suppress the default date</li>
+<li>Applies <a class="xref" href="../../Articles/Density.html">density subsystem</a> - note that filled text fields with density of -2 or less ignore labels by design within Material Theme.</li>
+<li>Renders Blazor validation messages in Material Theme's style. see the <a href="xref:A.FormValidation">Form Validation Article</a>.</li>
+</ul>
+<h2 id="caveats">Caveats</h2>
+<p>Note the use of multiple parameters that presume invariance during the
+life of this component.</p>
+<ul>
+<li>DateOnly</li>
+<li>MaxDate</li>
+<li>MinDate</li>
+<li>SuppressDefaultDate</li>
+</ul>
+<p> </p>
+<p><a class="xref" href="../../Articles/PlusComponents.html"><img src="https://img.shields.io/static/v1?label=Components&amp;message=Plus&amp;color=red" alt="Components"></a>
+<a class="xref" href="../../../api/Material.Blazor.MBDateTimeField.html"><img src="https://img.shields.io/static/v1?label=API%20Documentation&amp;message=MBDateTimeField&amp;color=brightgreen" alt="Docs"></a></p>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Articles/PlusComponents.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DateTimeField/MBDateTimeField.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

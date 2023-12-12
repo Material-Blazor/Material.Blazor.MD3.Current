@@ -799,6 +799,93 @@ public Expression&lt;Func&lt;object&gt;&gt; ValidationMessageFor { get; set; }</
 
 
 
+  <a id="Material_Blazor_Internal_InternalTextFieldBase_BuildRenderTreeWorker_" data-uid="Material.Blazor.Internal.InternalTextFieldBase.BuildRenderTreeWorker*"></a>
+
+  <h3 id="Material_Blazor_Internal_InternalTextFieldBase_BuildRenderTreeWorker_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32__Material_Blazor_MBCascadingDefaults_System_Nullable_Material_Blazor_MBTextInputStyle__System_Nullable_Material_Blazor_MBTextAlignStyle__System_Collections_Generic_KeyValuePair_System_String_System_Object____System_Nullable_Material_Blazor_MBDensity__System_String_System_String_System_String_System_Boolean_System_String_Microsoft_AspNetCore_Components_EventCallback_Microsoft_AspNetCore_Components_ChangeEventArgs__System_Linq_Expressions_Expression_System_Func_System_String___System_Nullable_Microsoft_AspNetCore_Components_EventCallback_Microsoft_AspNetCore_Components_Web_FocusEventArgs___System_String_System_String_System_String_System_String_Material_Blazor_MBIconDescriptor_Material_Blazor_MBIconDescriptor_System_String_System_String_System_Boolean_Material_Blazor_MBIconDescriptor_Material_Blazor_MBIconDescriptor_System_String_System_String_System_Boolean_" data-uid="Material.Blazor.Internal.InternalTextFieldBase.BuildRenderTreeWorker(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32@,Material.Blazor.MBCascadingDefaults,System.Nullable{Material.Blazor.MBTextInputStyle},System.Nullable{Material.Blazor.MBTextAlignStyle},System.Collections.Generic.KeyValuePair{System.String,System.Object}[],System.Nullable{Material.Blazor.MBDensity},System.String,System.String,System.String,System.Boolean,System.String,Microsoft.AspNetCore.Components.EventCallback{Microsoft.AspNetCore.Components.ChangeEventArgs},System.Linq.Expressions.Expression{System.Func{System.String}},System.Nullable{Microsoft.AspNetCore.Components.EventCallback{Microsoft.AspNetCore.Components.Web.FocusEventArgs}},System.String,System.String,System.String,System.String,Material.Blazor.MBIconDescriptor,Material.Blazor.MBIconDescriptor,System.String,System.String,System.Boolean,Material.Blazor.MBIconDescriptor,Material.Blazor.MBIconDescriptor,System.String,System.String,System.Boolean)">
+  BuildRenderTreeWorker(RenderTreeBuilder, ref int, MBCascadingDefaults, MBTextInputStyle?, MBTextAlignStyle?, KeyValuePair&lt;string, object&gt;[], MBDensity?, string, string, string, bool, string, EventCallback&lt;ChangeEventArgs&gt;, Expression&lt;Func&lt;string&gt;&gt;, EventCallback&lt;FocusEventArgs&gt;?, string, string, string, string, MBIconDescriptor, MBIconDescriptor, string, string, bool, MBIconDescriptor, MBIconDescriptor, string, string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/InternalTextFieldBase.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void BuildRenderTreeWorker(RenderTreeBuilder builder, ref int rendSeq, MBCascadingDefaults cascadingDefaults, MBTextInputStyle? textInputStyle, MBTextAlignStyle? textAlignStyle, KeyValuePair&lt;string, object&gt;[] attributesToSplat, MBDensity? density, string classString, string styleString, string idString, bool appliedDisabled, string value, EventCallback&lt;ChangeEventArgs&gt; valueChanged, Expression&lt;Func&lt;string&gt;&gt; valueExpression, EventCallback&lt;FocusEventArgs&gt;? focusOut, string displayLabel, string prefix, string suffix, string supportingText, MBIconDescriptor leadingIcon, MBIconDescriptor leadingToggleIcon, string leadingToggleIconButtonLink, string leadingToggleIconButtonLinkTarget, bool leadingToggleIconSelected, MBIconDescriptor trailingIcon, MBIconDescriptor trailingToggleIcon, string trailingToggleIconButtonLink, string trailingToggleIconButtonLinkTarget, bool trailingToggleIconSelected)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder">RenderTreeBuilder</a></dt>
+    <dd></dd>
+    <dt><code>rendSeq</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>cascadingDefaults</code> <a class="xref" href="Material.Blazor.MBCascadingDefaults.html">MBCascadingDefaults</a></dt>
+    <dd></dd>
+    <dt><code>textInputStyle</code> <a class="xref" href="Material.Blazor.MBTextInputStyle.html">MBTextInputStyle</a>?</dt>
+    <dd></dd>
+    <dt><code>textAlignStyle</code> <a class="xref" href="Material.Blazor.MBTextAlignStyle.html">MBTextAlignStyle</a>?</dt>
+    <dd></dd>
+    <dt><code>attributesToSplat</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</dt>
+    <dd></dd>
+    <dt><code>density</code> <a class="xref" href="Material.Blazor.MBDensity.html">MBDensity</a>?</dt>
+    <dd></dd>
+    <dt><code>classString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>styleString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>idString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>appliedDisabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>valueChanged</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.eventcallback-1">EventCallback</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.changeeventargs">ChangeEventArgs</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>valueExpression</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</dt>
+    <dd></dd>
+    <dt><code>focusOut</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.eventcallback-1">EventCallback</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.web.focuseventargs">FocusEventArgs</a>&gt;?</dt>
+    <dd></dd>
+    <dt><code>displayLabel</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>prefix</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>suffix</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>supportingText</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>leadingIcon</code> <a class="xref" href="Material.Blazor.MBIconDescriptor.html">MBIconDescriptor</a></dt>
+    <dd></dd>
+    <dt><code>leadingToggleIcon</code> <a class="xref" href="Material.Blazor.MBIconDescriptor.html">MBIconDescriptor</a></dt>
+    <dd></dd>
+    <dt><code>leadingToggleIconButtonLink</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>leadingToggleIconButtonLinkTarget</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>leadingToggleIconSelected</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>trailingIcon</code> <a class="xref" href="Material.Blazor.MBIconDescriptor.html">MBIconDescriptor</a></dt>
+    <dd></dd>
+    <dt><code>trailingToggleIcon</code> <a class="xref" href="Material.Blazor.MBIconDescriptor.html">MBIconDescriptor</a></dt>
+    <dd></dd>
+    <dt><code>trailingToggleIconButtonLink</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>trailingToggleIconButtonLinkTarget</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>trailingToggleIconSelected</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Material_Blazor_Internal_InternalTextFieldBase_Dispose_" data-uid="Material.Blazor.Internal.InternalTextFieldBase.Dispose*"></a>
 
   <h3 id="Material_Blazor_Internal_InternalTextFieldBase_Dispose_System_Boolean_" data-uid="Material.Blazor.Internal.InternalTextFieldBase.Dispose(System.Boolean)">

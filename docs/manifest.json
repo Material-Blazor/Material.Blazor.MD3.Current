@@ -287,6 +287,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "Material.Blazor.MD3/Components/DateTimeField/MBDateTimeField.md",
+      "output": {
+        ".html": {
+          "relative_path": "Material.Blazor.MD3/Components/DateTimeField/MBDateTimeField.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Components/Dialog/MBDialog.md",
       "output": {
         ".html": {
@@ -1084,6 +1094,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBChipType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBDateTimeField.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBDateTimeField.html"
         }
       },
       "version": ""
