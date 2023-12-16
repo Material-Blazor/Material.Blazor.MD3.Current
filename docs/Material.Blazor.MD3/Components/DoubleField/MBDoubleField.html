@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>MBNumericField </title>
+      <title>MBDoubleField </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="MBNumericField ">
+      <meta name="title" content="MBDoubleField ">
       
       <link rel="icon" href="../../../favicon.ico">
       <link rel="stylesheet" href="../../../public/docfx.min.css">
@@ -15,7 +15,7 @@
       
       
       
-      <meta name="docfx:docurl" content="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField/MBNumericField.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DoubleField/MBDoubleField.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -79,29 +79,33 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="C.MBNumericField">
-<h1 id="mbnumericfield">MBNumericField</h1>
+        <article data-uid="C.MBDoubleField">
+<h1 id="mbintfield">MBIntField</h1>
 
 <h2 id="summary">Summary</h2>
-<p>TBD</p>
-<h2 id="reserved-attributes">Reserved Attributes</h2>
-<p>The following attributes are reserved by Material Components Web and will be ignored if you supply them:</p>
+<p>a <code>double</code> variant of <a class="xref" href="../DecimalField/MBDecimalField.html">MBDecimalField</a>.</p>
 <ul>
-<li>role</li>
-<li>type</li>
+<li>Applies <a class="xref" href="../../Articles/Density.html">density subsystem</a> - note that filled text fields with denisty of -2 or less ignore labels by design within Material Theme.</li>
+<li>Renders Blazor validation messages in Material Theme's style. see the <a href="xref:A.FormValidation">Form Validation Article</a>.</li>
 </ul>
-<p><a class="xref" href="../../Articles/PlusComponents.html"><img src="https://img.shields.io/static/v1?label=Components&amp;message=Plus&amp;color=blue" alt="Components"></a>
-<a class="xref" href="../../../api/Material.Blazor.MBDecimalField.html"><img src="https://img.shields.io/static/v1?label=API%20Documentation&amp;message=MBDecimalField&amp;color=brightgreen" alt="Docs"></a>
-<a class="xref" href="../../../api/Material.Blazor.MBDoubleField.html"><img src="https://img.shields.io/static/v1?label=API%20Documentation&amp;message=MBDoubleField&amp;color=brightgreen" alt="Docs"></a>
-<a class="xref" href="../../../api/Material.Blazor.MBIntField.html"><img src="https://img.shields.io/static/v1?label=API%20Documentation&amp;message=MBIntField&amp;color=brightgreen" alt="Docs"></a>
-<a href="xref:Material.Blazor.Internal.InternalFloatingPointFieldBase"><img src="https://img.shields.io/static/v1?label=API%20Documentation&amp;message=InternalFloatingPointFieldBase&amp;color=brightgreen" alt="Docs"></a>
-<a href="xref:Material.Blazor.Internal.InternalIntFieldBase"><img src="https://img.shields.io/static/v1?label=API%20Documentation&amp;message=InternalIntFieldBase&amp;color=brightgreen" alt="Docs"></a>
-<a href="xref:Material.Blazor.Internal.InternalNumericFieldBase"><img src="https://img.shields.io/static/v1?label=API%20Documentation&amp;message=InternalNumericFieldBase&amp;color=brightgreen" alt="Docs"></a></p>
+<h2 id="caveats">Caveats</h2>
+<p>Note the use of multiple parameters that presume invariance during the
+life of this component (since this component uses DecimalField).</p>
+<ul>
+<li>DecimalPlaces</li>
+<li>FocusedMagnitude</li>
+<li>Min</li>
+<li>UnfocusedMagnitude</li>
+</ul>
+<p> </p>
+<p> </p>
+<p><a class="xref" href="../../Articles/PlusComponents.html"><img src="https://img.shields.io/static/v1?label=Components&amp;message=Plus&amp;color=red" alt="Components"></a>
+<a class="xref" href="../../../api/Material.Blazor.MBDoubleField.html"><img src="https://img.shields.io/static/v1?label=API%20Documentation&amp;message=MBDoubleField&amp;color=brightgreen" alt="Docs"></a></p>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField/MBNumericField.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DoubleField/MBDoubleField.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

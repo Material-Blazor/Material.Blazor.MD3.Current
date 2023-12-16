@@ -297,10 +297,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "Material.Blazor.MD3/Components/DecimalField/MBDecimalField.md",
+      "output": {
+        ".html": {
+          "relative_path": "Material.Blazor.MD3/Components/DecimalField/MBDecimalField.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Components/Dialog/MBDialog.md",
       "output": {
         ".html": {
           "relative_path": "Material.Blazor.MD3/Components/Dialog/MBDialog.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Material.Blazor.MD3/Components/DoubleField/MBDoubleField.md",
+      "output": {
+        ".html": {
+          "relative_path": "Material.Blazor.MD3/Components/DoubleField/MBDoubleField.html"
         }
       },
       "version": ""
@@ -337,6 +357,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "Material.Blazor.MD3/Components/IntField/MBIntField.md",
+      "output": {
+        ".html": {
+          "relative_path": "Material.Blazor.MD3/Components/IntField/MBIntField.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "Material.Blazor.MD3/Components/List/MBList.md",
       "output": {
         ".html": {
@@ -351,16 +381,6 @@
       "output": {
         ".html": {
           "relative_path": "Material.Blazor.MD3/Components/Menu/MBMenu.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Material.Blazor.MD3/Components/NumericField/MBNumericField.md",
-      "output": {
-        ".html": {
-          "relative_path": "Material.Blazor.MD3/Components/NumericField/MBNumericField.html"
         }
       },
       "version": ""
@@ -940,40 +960,20 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.Internal.InternalFloatingPointFieldBase-2.yml",
+      "source_relative_path": "api/Material.Blazor.Internal.InternalFloatingPointFieldBase-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Material.Blazor.Internal.InternalFloatingPointFieldBase-2.html"
+          "relative_path": "api/Material.Blazor.Internal.InternalFloatingPointFieldBase-1.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.Internal.InternalIntFieldBase-1.yml",
+      "source_relative_path": "api/Material.Blazor.Internal.InternalNumericFieldBase-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Material.Blazor.Internal.InternalIntFieldBase-1.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.Internal.InternalNumericFieldBase-2.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.Internal.InternalNumericFieldBase-2.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.Internal.InternalTextFieldBase.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.Internal.InternalTextFieldBase.html"
+          "relative_path": "api/Material.Blazor.Internal.InternalNumericFieldBase-1.html"
         }
       },
       "version": ""

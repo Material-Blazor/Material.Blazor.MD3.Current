@@ -99,7 +99,7 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class MBTextField : InternalTextFieldBase, IComponent, IHandleEvent, IHandleAfterRender, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class MBTextField : InputComponent&lt;string&gt;, IComponent, IHandleEvent, IHandleAfterRender, IDisposable</code></pre>
   </div>
 
 
@@ -112,7 +112,6 @@
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase">ComponentBase</a></div>
       <div><a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html">ComponentFoundation</a></div>
       <div><a class="xref" href="Material.Blazor.Internal.InputComponent-1.html">InputComponent</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</div>
-      <div><a class="xref" href="Material.Blazor.Internal.InternalTextFieldBase.html">InternalTextFieldBase</a></div>
       <div><span class="xref">MBTextField</span></div>
     </dd>
   </dl>
@@ -131,54 +130,6 @@
   <dl class="typelist derived">
     <dt>Inherited Members</dt>
     <dd>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_BuildRenderTreeWorker_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32__Material_Blazor_MBCascadingDefaults_System_Nullable_Material_Blazor_MBTextInputStyle__System_Nullable_Material_Blazor_MBTextAlignStyle__System_Collections_Generic_KeyValuePair_System_String_System_Object____System_Nullable_Material_Blazor_MBDensity__System_String_System_String_System_String_System_Boolean_System_String_Microsoft_AspNetCore_Components_EventCallback_Microsoft_AspNetCore_Components_ChangeEventArgs__System_Linq_Expressions_Expression_System_Func_System_String___System_Nullable_Microsoft_AspNetCore_Components_EventCallback_Microsoft_AspNetCore_Components_Web_FocusEventArgs___System_String_System_String_System_String_System_String_Material_Blazor_MBIconDescriptor_Material_Blazor_MBIconDescriptor_System_String_System_String_System_Boolean_Material_Blazor_MBIconDescriptor_Material_Blazor_MBIconDescriptor_System_String_System_String_System_Boolean_">InternalTextFieldBase.BuildRenderTreeWorker(RenderTreeBuilder, ref int, MBCascadingDefaults, MBTextInputStyle?, MBTextAlignStyle?, KeyValuePair&lt;string, object&gt;[], MBDensity?, string, string, string, bool, string, EventCallback&lt;ChangeEventArgs&gt;, Expression&lt;Func&lt;string&gt;&gt;, EventCallback&lt;FocusEventArgs&gt;?, string, string, string, string, MBIconDescriptor, MBIconDescriptor, string, string, bool, MBIconDescriptor, MBIconDescriptor, string, string, bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_Density">InternalTextFieldBase.Density</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_Label">InternalTextFieldBase.Label</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_LeadingIcon">InternalTextFieldBase.LeadingIcon</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_LeadingToggleIcon">InternalTextFieldBase.LeadingToggleIcon</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_LeadingToggleIconSelected">InternalTextFieldBase.LeadingToggleIconSelected</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_Prefix">InternalTextFieldBase.Prefix</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_Suffix">InternalTextFieldBase.Suffix</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_SupportingText">InternalTextFieldBase.SupportingText</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_SupportingTextPersistent">InternalTextFieldBase.SupportingTextPersistent</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_TextAlignStyle">InternalTextFieldBase.TextAlignStyle</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_TextInputStyle">InternalTextFieldBase.TextInputStyle</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_TrailingIcon">InternalTextFieldBase.TrailingIcon</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_TrailingToggleIcon">InternalTextFieldBase.TrailingToggleIcon</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_TrailingToggleIconSelected">InternalTextFieldBase.TrailingToggleIconSelected</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.InternalTextFieldBase.html#Material_Blazor_Internal_InternalTextFieldBase_ValidationMessageFor">InternalTextFieldBase.ValidationMessageFor</a>
-    </div>
     <div>
       <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_SetParametersAsync_Microsoft_AspNetCore_Components_ParameterView_">InputComponent&lt;string&gt;.SetParametersAsync(ParameterView)</a>
     </div>
@@ -253,6 +204,835 @@
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public MBTextField()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Material_Blazor_MBTextField_Density_" data-uid="Material.Blazor.MBTextField.Density*"></a>
+
+  <h3 id="Material_Blazor_MBTextField_Density" data-uid="Material.Blazor.MBTextField.Density">
+  Density
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Parameter]
+public MBDensity? Density { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Material.Blazor.MBDensity.html">MBDensity</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Material_Blazor_MBTextField_Label_" data-uid="Material.Blazor.MBTextField.Label*"></a>
+
+  <h3 id="Material_Blazor_MBTextField_Label" data-uid="Material.Blazor.MBTextField.Label">
+  Label
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Parameter]
+public string? Label { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Material_Blazor_MBTextField_LeadingIcon_" data-uid="Material.Blazor.MBTextField.LeadingIcon*"></a>
+
+  <h3 id="Material_Blazor_MBTextField_LeadingIcon" data-uid="Material.Blazor.MBTextField.LeadingIcon">
+  LeadingIcon
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Parameter]
+public MBIconDescriptor? LeadingIcon { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Material.Blazor.MBIconDescriptor.html">MBIconDescriptor</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Material_Blazor_MBTextField_LeadingToggleIcon_" data-uid="Material.Blazor.MBTextField.LeadingToggleIcon*"></a>
+
+  <h3 id="Material_Blazor_MBTextField_LeadingToggleIcon" data-uid="Material.Blazor.MBTextField.LeadingToggleIcon">
+  LeadingToggleIcon
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Parameter]
+public MBIconDescriptor? LeadingToggleIcon { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Material.Blazor.MBIconDescriptor.html">MBIconDescriptor</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Material_Blazor_MBTextField_LeadingToggleIconButtonLink_" data-uid="Material.Blazor.MBTextField.LeadingToggleIconButtonLink*"></a>
+
+  <h3 id="Material_Blazor_MBTextField_LeadingToggleIconButtonLink" data-uid="Material.Blazor.MBTextField.LeadingToggleIconButtonLink">
+  LeadingToggleIconButtonLink
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Parameter]
+public string LeadingToggleIconButtonLink { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Material_Blazor_MBTextField_LeadingToggleIconButtonLinkTarget_" data-uid="Material.Blazor.MBTextField.LeadingToggleIconButtonLinkTarget*"></a>
+
+  <h3 id="Material_Blazor_MBTextField_LeadingToggleIconButtonLinkTarget" data-uid="Material.Blazor.MBTextField.LeadingToggleIconButtonLinkTarget">
+  LeadingToggleIconButtonLinkTarget
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Parameter]
+public string LeadingToggleIconButtonLinkTarget { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Material_Blazor_MBTextField_LeadingToggleIconSelected_" data-uid="Material.Blazor.MBTextField.LeadingToggleIconSelected*"></a>
+
+  <h3 id="Material_Blazor_MBTextField_LeadingToggleIconSelected" data-uid="Material.Blazor.MBTextField.LeadingToggleIconSelected">
+  LeadingToggleIconSelected
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Parameter]
+public bool LeadingToggleIconSelected { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Material_Blazor_MBTextField_Prefix_" data-uid="Material.Blazor.MBTextField.Prefix*"></a>
+
+  <h3 id="Material_Blazor_MBTextField_Prefix" data-uid="Material.Blazor.MBTextField.Prefix">
+  Prefix
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Parameter]
+public string? Prefix { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Material_Blazor_MBTextField_Suffix_" data-uid="Material.Blazor.MBTextField.Suffix*"></a>
+
+  <h3 id="Material_Blazor_MBTextField_Suffix" data-uid="Material.Blazor.MBTextField.Suffix">
+  Suffix
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Parameter]
+public string? Suffix { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Material_Blazor_MBTextField_SupportingText_" data-uid="Material.Blazor.MBTextField.SupportingText*"></a>
+
+  <h3 id="Material_Blazor_MBTextField_SupportingText" data-uid="Material.Blazor.MBTextField.SupportingText">
+  SupportingText
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Parameter]
+public string SupportingText { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Material_Blazor_MBTextField_SupportingTextPersistent_" data-uid="Material.Blazor.MBTextField.SupportingTextPersistent*"></a>
+
+  <h3 id="Material_Blazor_MBTextField_SupportingTextPersistent" data-uid="Material.Blazor.MBTextField.SupportingTextPersistent">
+  SupportingTextPersistent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Parameter]
+public bool SupportingTextPersistent { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Material_Blazor_MBTextField_TextAlignStyle_" data-uid="Material.Blazor.MBTextField.TextAlignStyle*"></a>
+
+  <h3 id="Material_Blazor_MBTextField_TextAlignStyle" data-uid="Material.Blazor.MBTextField.TextAlignStyle">
+  TextAlignStyle
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Parameter]
+public MBTextAlignStyle? TextAlignStyle { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Material.Blazor.MBTextAlignStyle.html">MBTextAlignStyle</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Material_Blazor_MBTextField_TextInputStyle_" data-uid="Material.Blazor.MBTextField.TextInputStyle*"></a>
+
+  <h3 id="Material_Blazor_MBTextField_TextInputStyle" data-uid="Material.Blazor.MBTextField.TextInputStyle">
+  TextInputStyle
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Parameter]
+public MBTextInputStyle TextInputStyle { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Material.Blazor.MBTextInputStyle.html">MBTextInputStyle</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Material_Blazor_MBTextField_TrailingIcon_" data-uid="Material.Blazor.MBTextField.TrailingIcon*"></a>
+
+  <h3 id="Material_Blazor_MBTextField_TrailingIcon" data-uid="Material.Blazor.MBTextField.TrailingIcon">
+  TrailingIcon
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Parameter]
+public MBIconDescriptor? TrailingIcon { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Material.Blazor.MBIconDescriptor.html">MBIconDescriptor</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Material_Blazor_MBTextField_TrailingToggleIcon_" data-uid="Material.Blazor.MBTextField.TrailingToggleIcon*"></a>
+
+  <h3 id="Material_Blazor_MBTextField_TrailingToggleIcon" data-uid="Material.Blazor.MBTextField.TrailingToggleIcon">
+  TrailingToggleIcon
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Parameter]
+public MBIconDescriptor? TrailingToggleIcon { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Material.Blazor.MBIconDescriptor.html">MBIconDescriptor</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Material_Blazor_MBTextField_TrailingToggleIconButtonLink_" data-uid="Material.Blazor.MBTextField.TrailingToggleIconButtonLink*"></a>
+
+  <h3 id="Material_Blazor_MBTextField_TrailingToggleIconButtonLink" data-uid="Material.Blazor.MBTextField.TrailingToggleIconButtonLink">
+  TrailingToggleIconButtonLink
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Parameter]
+public string TrailingToggleIconButtonLink { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Material_Blazor_MBTextField_TrailingToggleIconButtonLinkTarget_" data-uid="Material.Blazor.MBTextField.TrailingToggleIconButtonLinkTarget*"></a>
+
+  <h3 id="Material_Blazor_MBTextField_TrailingToggleIconButtonLinkTarget" data-uid="Material.Blazor.MBTextField.TrailingToggleIconButtonLinkTarget">
+  TrailingToggleIconButtonLinkTarget
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Parameter]
+public string TrailingToggleIconButtonLinkTarget { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Material_Blazor_MBTextField_TrailingToggleIconSelected_" data-uid="Material.Blazor.MBTextField.TrailingToggleIconSelected*"></a>
+
+  <h3 id="Material_Blazor_MBTextField_TrailingToggleIconSelected" data-uid="Material.Blazor.MBTextField.TrailingToggleIconSelected">
+  TrailingToggleIconSelected
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Parameter]
+public bool TrailingToggleIconSelected { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Material_Blazor_MBTextField_ValidationMessageFor_" data-uid="Material.Blazor.MBTextField.ValidationMessageFor*"></a>
+
+  <h3 id="Material_Blazor_MBTextField_ValidationMessageFor" data-uid="Material.Blazor.MBTextField.ValidationMessageFor">
+  ValidationMessageFor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Parameter]
+public Expression&lt;Func&lt;object&gt;&gt; ValidationMessageFor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Material_Blazor_MBTextField_BuildRenderTree_" data-uid="Material.Blazor.MBTextField.BuildRenderTree*"></a>
+
+  <h3 id="Material_Blazor_MBTextField_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_" data-uid="Material.Blazor.MBTextField.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)">
+  BuildRenderTree(RenderTreeBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders the component to the supplied <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder">RenderTreeBuilder</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void BuildRenderTree(RenderTreeBuilder builder)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder">RenderTreeBuilder</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder">RenderTreeBuilder</a> that will receive the render output.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Material_Blazor_MBTextField_BuildRenderTreeWorker_" data-uid="Material.Blazor.MBTextField.BuildRenderTreeWorker*"></a>
+
+  <h3 id="Material_Blazor_MBTextField_BuildRenderTreeWorker_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32__Material_Blazor_MBCascadingDefaults_System_Nullable_Material_Blazor_MBTextInputStyle__System_Nullable_Material_Blazor_MBTextAlignStyle__System_Collections_Generic_KeyValuePair_System_String_System_Object____System_Nullable_Material_Blazor_MBDensity__System_String_System_String_System_String_System_Boolean_System_String_Microsoft_AspNetCore_Components_EventCallback_Microsoft_AspNetCore_Components_ChangeEventArgs__System_Linq_Expressions_Expression_System_Func_System_String___System_Nullable_Microsoft_AspNetCore_Components_EventCallback_Microsoft_AspNetCore_Components_Web_FocusEventArgs___System_String_System_String_System_String_System_String_Material_Blazor_MBIconDescriptor_Material_Blazor_MBIconDescriptor_System_String_System_String_System_Boolean_Material_Blazor_MBIconDescriptor_Material_Blazor_MBIconDescriptor_System_String_System_String_System_Boolean_" data-uid="Material.Blazor.MBTextField.BuildRenderTreeWorker(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32@,Material.Blazor.MBCascadingDefaults,System.Nullable{Material.Blazor.MBTextInputStyle},System.Nullable{Material.Blazor.MBTextAlignStyle},System.Collections.Generic.KeyValuePair{System.String,System.Object}[],System.Nullable{Material.Blazor.MBDensity},System.String,System.String,System.String,System.Boolean,System.String,Microsoft.AspNetCore.Components.EventCallback{Microsoft.AspNetCore.Components.ChangeEventArgs},System.Linq.Expressions.Expression{System.Func{System.String}},System.Nullable{Microsoft.AspNetCore.Components.EventCallback{Microsoft.AspNetCore.Components.Web.FocusEventArgs}},System.String,System.String,System.String,System.String,Material.Blazor.MBIconDescriptor,Material.Blazor.MBIconDescriptor,System.String,System.String,System.Boolean,Material.Blazor.MBIconDescriptor,Material.Blazor.MBIconDescriptor,System.String,System.String,System.Boolean)">
+  BuildRenderTreeWorker(RenderTreeBuilder, ref int, MBCascadingDefaults, MBTextInputStyle?, MBTextAlignStyle?, KeyValuePair&lt;string, object&gt;[], MBDensity?, string, string, string, bool, string, EventCallback&lt;ChangeEventArgs&gt;, Expression&lt;Func&lt;string&gt;&gt;, EventCallback&lt;FocusEventArgs&gt;?, string, string, string, string, MBIconDescriptor, MBIconDescriptor, string, string, bool, MBIconDescriptor, MBIconDescriptor, string, string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void BuildRenderTreeWorker(RenderTreeBuilder builder, ref int rendSeq, MBCascadingDefaults cascadingDefaults, MBTextInputStyle? textInputStyle, MBTextAlignStyle? textAlignStyle, KeyValuePair&lt;string, object&gt;[] attributesToSplat, MBDensity? density, string classString, string styleString, string idString, bool appliedDisabled, string value, EventCallback&lt;ChangeEventArgs&gt; valueChanged, Expression&lt;Func&lt;string&gt;&gt; valueExpression, EventCallback&lt;FocusEventArgs&gt;? focusOut, string displayLabel, string prefix, string suffix, string supportingText, MBIconDescriptor leadingIcon, MBIconDescriptor leadingToggleIcon, string leadingToggleIconButtonLink, string leadingToggleIconButtonLinkTarget, bool leadingToggleIconSelected, MBIconDescriptor trailingIcon, MBIconDescriptor trailingToggleIcon, string trailingToggleIconButtonLink, string trailingToggleIconButtonLinkTarget, bool trailingToggleIconSelected)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder">RenderTreeBuilder</a></dt>
+    <dd></dd>
+    <dt><code>rendSeq</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>cascadingDefaults</code> <a class="xref" href="Material.Blazor.MBCascadingDefaults.html">MBCascadingDefaults</a></dt>
+    <dd></dd>
+    <dt><code>textInputStyle</code> <a class="xref" href="Material.Blazor.MBTextInputStyle.html">MBTextInputStyle</a>?</dt>
+    <dd></dd>
+    <dt><code>textAlignStyle</code> <a class="xref" href="Material.Blazor.MBTextAlignStyle.html">MBTextAlignStyle</a>?</dt>
+    <dd></dd>
+    <dt><code>attributesToSplat</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;[]</dt>
+    <dd></dd>
+    <dt><code>density</code> <a class="xref" href="Material.Blazor.MBDensity.html">MBDensity</a>?</dt>
+    <dd></dd>
+    <dt><code>classString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>styleString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>idString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>appliedDisabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>valueChanged</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.eventcallback-1">EventCallback</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.changeeventargs">ChangeEventArgs</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>valueExpression</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</dt>
+    <dd></dd>
+    <dt><code>focusOut</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.eventcallback-1">EventCallback</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.web.focuseventargs">FocusEventArgs</a>&gt;?</dt>
+    <dd></dd>
+    <dt><code>displayLabel</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>prefix</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>suffix</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>supportingText</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>leadingIcon</code> <a class="xref" href="Material.Blazor.MBIconDescriptor.html">MBIconDescriptor</a></dt>
+    <dd></dd>
+    <dt><code>leadingToggleIcon</code> <a class="xref" href="Material.Blazor.MBIconDescriptor.html">MBIconDescriptor</a></dt>
+    <dd></dd>
+    <dt><code>leadingToggleIconButtonLink</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>leadingToggleIconButtonLinkTarget</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>leadingToggleIconSelected</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>trailingIcon</code> <a class="xref" href="Material.Blazor.MBIconDescriptor.html">MBIconDescriptor</a></dt>
+    <dd></dd>
+    <dt><code>trailingToggleIcon</code> <a class="xref" href="Material.Blazor.MBIconDescriptor.html">MBIconDescriptor</a></dt>
+    <dd></dd>
+    <dt><code>trailingToggleIconButtonLink</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>trailingToggleIconButtonLinkTarget</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>trailingToggleIconSelected</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Material_Blazor_MBTextField_Dispose_" data-uid="Material.Blazor.MBTextField.Dispose*"></a>
+
+  <h3 id="Material_Blazor_MBTextField_Dispose_System_Boolean_" data-uid="Material.Blazor.MBTextField.Dispose(System.Boolean)">
+  Dispose(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Dispose(bool disposing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>disposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Material_Blazor_MBTextField_OnInitializedAsync_" data-uid="Material.Blazor.MBTextField.OnInitializedAsync*"></a>
+
+  <h3 id="Material_Blazor_MBTextField_OnInitializedAsync" data-uid="Material.Blazor.MBTextField.OnInitializedAsync">
+  OnInitializedAsync()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Method invoked when the component is ready to start, having received its
+initial parameters from its parent in the render tree.</p>
+<p>Override this method if you will perform an asynchronous operation and
+want the component to refresh when that operation is completed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override Task OnInitializedAsync()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> representing any asynchronous operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Material_Blazor_MBTextField_SetDateErrorMessage_" data-uid="Material.Blazor.MBTextField.SetDateErrorMessage*"></a>
+
+  <h3 id="Material_Blazor_MBTextField_SetDateErrorMessage" data-uid="Material.Blazor.MBTextField.SetDateErrorMessage">
+  SetDateErrorMessage()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void SetDateErrorMessage()</code></pre>
   </div>
 
 
