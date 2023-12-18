@@ -1150,6 +1150,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBDecimalField.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBDecimalField.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.MBDecimalField2.yml",
       "output": {
         ".html": {
