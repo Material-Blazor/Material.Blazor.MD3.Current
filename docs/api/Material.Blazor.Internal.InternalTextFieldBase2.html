@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class MBTextField
+      <title>Class InternalTextFieldBase2
  </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class MBTextField
+      <meta name="title" content="Class InternalTextFieldBase2
  ">
       
       <link rel="icon" href="../favicon.ico">
@@ -81,17 +81,17 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Material.Blazor.MBTextField">
+        <article data-uid="Material.Blazor.Internal.InternalTextFieldBase2">
 
 
 
-  <h1 id="Material_Blazor_MBTextField" data-uid="Material.Blazor.MBTextField" class="text-break">
-    Class MBTextField
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  <h1 id="Material_Blazor_Internal_InternalTextFieldBase2" data-uid="Material.Blazor.Internal.InternalTextFieldBase2" class="text-break">
+    Class InternalTextFieldBase2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField%20-%20Deprecated/InternalTextFieldBase.cs"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="Material.html">Material</a>.<a class="xref" href="Material.Blazor.html">Blazor</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Material.html">Material</a>.<a class="xref" href="Material.Blazor.html">Blazor</a>.<a class="xref" href="Material.Blazor.Internal.html">Internal</a></dd></dl>
   <dl><dt>Assembly</dt><dd>Material.Blazor.MD3.dll</dd></dl>
   </div>
 
@@ -99,7 +99,7 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class MBTextField : InputComponent&lt;string&gt;, IComponent, IHandleEvent, IHandleAfterRender, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class InternalTextFieldBase2 : InputComponent&lt;string&gt;, IComponent, IHandleEvent, IHandleAfterRender, IDisposable</code></pre>
   </div>
 
 
@@ -112,7 +112,7 @@
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase">ComponentBase</a></div>
       <div><a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html">ComponentFoundation</a></div>
       <div><a class="xref" href="Material.Blazor.Internal.InputComponent-1.html">InputComponent</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</div>
-      <div><span class="xref">MBTextField</span></div>
+      <div><span class="xref">InternalTextFieldBase2</span></div>
     </dd>
   </dl>
 
@@ -131,7 +131,16 @@
     <dt>Inherited Members</dt>
     <dd>
     <div>
+      <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_FormatValueToString__0_">InputComponent&lt;string&gt;.FormatValueToString(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_OnParametersSetAsync">InputComponent&lt;string&gt;.OnParametersSetAsync()</a>
+    </div>
+    <div>
       <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_SetParametersAsync_Microsoft_AspNetCore_Components_ParameterView_">InputComponent&lt;string&gt;.SetParametersAsync(ParameterView)</a>
+    </div>
+    <div>
+      <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_TryParseValueFromString_System_String__0__System_String__">InputComponent&lt;string&gt;.TryParseValueFromString(string, out string, out string)</a>
     </div>
     <div>
       <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_Value">InputComponent&lt;string&gt;.Value</a>
@@ -143,7 +152,31 @@
       <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_ValueExpression">InputComponent&lt;string&gt;.ValueExpression</a>
     </div>
     <div>
+      <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_EditContext">InputComponent&lt;string&gt;.EditContext</a>
+    </div>
+    <div>
+      <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_FieldIdentifier">InputComponent&lt;string&gt;.FieldIdentifier</a>
+    </div>
+    <div>
+      <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_ComponentValueAsString">InputComponent&lt;string&gt;.ComponentValueAsString</a>
+    </div>
+    <div>
       <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_Dispose">ComponentFoundation.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_OnAfterRender_System_Boolean_">ComponentFoundation.OnAfterRender(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_OnAfterRenderAsync_System_Boolean_">ComponentFoundation.OnAfterRenderAsync(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_OnInitialized">ComponentFoundation.OnInitialized()</a>
+    </div>
+    <div>
+      <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_OnParametersSet">ComponentFoundation.OnParametersSet()</a>
+    </div>
+    <div>
+      <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_CascadingDefaults">ComponentFoundation.CascadingDefaults</a>
     </div>
     <div>
       <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_UnmatchedAttributes">ComponentFoundation.UnmatchedAttributes</a>
@@ -158,13 +191,34 @@
       <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_class">ComponentFoundation.class</a>
     </div>
     <div>
+      <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_ActiveConditionalClasses">ComponentFoundation.ActiveConditionalClasses</a>
+    </div>
+    <div>
       <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_style">ComponentFoundation.style</a>
     </div>
     <div>
       <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_Tooltip">ComponentFoundation.Tooltip</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.statehaschanged">ComponentBase.StateHasChanged()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.shouldrender">ComponentBase.ShouldRender()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.invokeasync#microsoft-aspnetcore-components-componentbase-invokeasync(system-action)">ComponentBase.InvokeAsync(Action)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.invokeasync#microsoft-aspnetcore-components-componentbase-invokeasync(system-func((system-threading-tasks-task)))">ComponentBase.InvokeAsync(Func&lt;Task&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.dispatchexceptionasync">ComponentBase.DispatchExceptionAsync(Exception)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
@@ -192,18 +246,18 @@
 </h2>
 
 
-  <a id="Material_Blazor_MBTextField__ctor_" data-uid="Material.Blazor.MBTextField.#ctor*"></a>
+  <a id="Material_Blazor_Internal_InternalTextFieldBase2__ctor_" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.#ctor*"></a>
 
-  <h3 id="Material_Blazor_MBTextField__ctor" data-uid="Material.Blazor.MBTextField.#ctor">
-  MBTextField()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Material_Blazor_Internal_InternalTextFieldBase2__ctor" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.#ctor">
+  InternalTextFieldBase2()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField%20-%20Deprecated/InternalTextFieldBase.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MBTextField()</code></pre>
+    <pre><code class="lang-csharp hljs">protected InternalTextFieldBase2()</code></pre>
   </div>
 
 
@@ -222,11 +276,11 @@
 </h2>
 
 
-  <a id="Material_Blazor_MBTextField_Density_" data-uid="Material.Blazor.MBTextField.Density*"></a>
+  <a id="Material_Blazor_Internal_InternalTextFieldBase2_Density_" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.Density*"></a>
 
-  <h3 id="Material_Blazor_MBTextField_Density" data-uid="Material.Blazor.MBTextField.Density">
+  <h3 id="Material_Blazor_Internal_InternalTextFieldBase2_Density" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.Density">
   Density
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField%20-%20Deprecated/InternalTextFieldBase.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -254,11 +308,11 @@ public MBDensity? Density { get; set; }</code></pre>
 
 
 
-  <a id="Material_Blazor_MBTextField_Label_" data-uid="Material.Blazor.MBTextField.Label*"></a>
+  <a id="Material_Blazor_Internal_InternalTextFieldBase2_Label_" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.Label*"></a>
 
-  <h3 id="Material_Blazor_MBTextField_Label" data-uid="Material.Blazor.MBTextField.Label">
+  <h3 id="Material_Blazor_Internal_InternalTextFieldBase2_Label" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.Label">
   Label
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField%20-%20Deprecated/InternalTextFieldBase.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -286,11 +340,11 @@ public string? Label { get; set; }</code></pre>
 
 
 
-  <a id="Material_Blazor_MBTextField_LeadingIcon_" data-uid="Material.Blazor.MBTextField.LeadingIcon*"></a>
+  <a id="Material_Blazor_Internal_InternalTextFieldBase2_LeadingIcon_" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.LeadingIcon*"></a>
 
-  <h3 id="Material_Blazor_MBTextField_LeadingIcon" data-uid="Material.Blazor.MBTextField.LeadingIcon">
+  <h3 id="Material_Blazor_Internal_InternalTextFieldBase2_LeadingIcon" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.LeadingIcon">
   LeadingIcon
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField%20-%20Deprecated/InternalTextFieldBase.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -318,11 +372,11 @@ public MBIconDescriptor? LeadingIcon { get; set; }</code></pre>
 
 
 
-  <a id="Material_Blazor_MBTextField_LeadingToggleIcon_" data-uid="Material.Blazor.MBTextField.LeadingToggleIcon*"></a>
+  <a id="Material_Blazor_Internal_InternalTextFieldBase2_LeadingToggleIcon_" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.LeadingToggleIcon*"></a>
 
-  <h3 id="Material_Blazor_MBTextField_LeadingToggleIcon" data-uid="Material.Blazor.MBTextField.LeadingToggleIcon">
+  <h3 id="Material_Blazor_Internal_InternalTextFieldBase2_LeadingToggleIcon" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.LeadingToggleIcon">
   LeadingToggleIcon
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField%20-%20Deprecated/InternalTextFieldBase.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -350,75 +404,11 @@ public MBIconDescriptor? LeadingToggleIcon { get; set; }</code></pre>
 
 
 
-  <a id="Material_Blazor_MBTextField_LeadingToggleIconButtonLink_" data-uid="Material.Blazor.MBTextField.LeadingToggleIconButtonLink*"></a>
+  <a id="Material_Blazor_Internal_InternalTextFieldBase2_LeadingToggleIconSelected_" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.LeadingToggleIconSelected*"></a>
 
-  <h3 id="Material_Blazor_MBTextField_LeadingToggleIconButtonLink" data-uid="Material.Blazor.MBTextField.LeadingToggleIconButtonLink">
-  LeadingToggleIconButtonLink
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Parameter]
-public string LeadingToggleIconButtonLink { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Material_Blazor_MBTextField_LeadingToggleIconButtonLinkTarget_" data-uid="Material.Blazor.MBTextField.LeadingToggleIconButtonLinkTarget*"></a>
-
-  <h3 id="Material_Blazor_MBTextField_LeadingToggleIconButtonLinkTarget" data-uid="Material.Blazor.MBTextField.LeadingToggleIconButtonLinkTarget">
-  LeadingToggleIconButtonLinkTarget
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Parameter]
-public string LeadingToggleIconButtonLinkTarget { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Material_Blazor_MBTextField_LeadingToggleIconSelected_" data-uid="Material.Blazor.MBTextField.LeadingToggleIconSelected*"></a>
-
-  <h3 id="Material_Blazor_MBTextField_LeadingToggleIconSelected" data-uid="Material.Blazor.MBTextField.LeadingToggleIconSelected">
+  <h3 id="Material_Blazor_Internal_InternalTextFieldBase2_LeadingToggleIconSelected" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.LeadingToggleIconSelected">
   LeadingToggleIconSelected
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField%20-%20Deprecated/InternalTextFieldBase.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -446,11 +436,11 @@ public bool LeadingToggleIconSelected { get; set; }</code></pre>
 
 
 
-  <a id="Material_Blazor_MBTextField_Prefix_" data-uid="Material.Blazor.MBTextField.Prefix*"></a>
+  <a id="Material_Blazor_Internal_InternalTextFieldBase2_Prefix_" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.Prefix*"></a>
 
-  <h3 id="Material_Blazor_MBTextField_Prefix" data-uid="Material.Blazor.MBTextField.Prefix">
+  <h3 id="Material_Blazor_Internal_InternalTextFieldBase2_Prefix" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.Prefix">
   Prefix
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField%20-%20Deprecated/InternalTextFieldBase.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -478,11 +468,11 @@ public string? Prefix { get; set; }</code></pre>
 
 
 
-  <a id="Material_Blazor_MBTextField_Suffix_" data-uid="Material.Blazor.MBTextField.Suffix*"></a>
+  <a id="Material_Blazor_Internal_InternalTextFieldBase2_Suffix_" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.Suffix*"></a>
 
-  <h3 id="Material_Blazor_MBTextField_Suffix" data-uid="Material.Blazor.MBTextField.Suffix">
+  <h3 id="Material_Blazor_Internal_InternalTextFieldBase2_Suffix" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.Suffix">
   Suffix
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField%20-%20Deprecated/InternalTextFieldBase.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -510,11 +500,11 @@ public string? Suffix { get; set; }</code></pre>
 
 
 
-  <a id="Material_Blazor_MBTextField_SupportingText_" data-uid="Material.Blazor.MBTextField.SupportingText*"></a>
+  <a id="Material_Blazor_Internal_InternalTextFieldBase2_SupportingText_" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.SupportingText*"></a>
 
-  <h3 id="Material_Blazor_MBTextField_SupportingText" data-uid="Material.Blazor.MBTextField.SupportingText">
+  <h3 id="Material_Blazor_Internal_InternalTextFieldBase2_SupportingText" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.SupportingText">
   SupportingText
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField%20-%20Deprecated/InternalTextFieldBase.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -542,11 +532,11 @@ public string SupportingText { get; set; }</code></pre>
 
 
 
-  <a id="Material_Blazor_MBTextField_SupportingTextPersistent_" data-uid="Material.Blazor.MBTextField.SupportingTextPersistent*"></a>
+  <a id="Material_Blazor_Internal_InternalTextFieldBase2_SupportingTextPersistent_" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.SupportingTextPersistent*"></a>
 
-  <h3 id="Material_Blazor_MBTextField_SupportingTextPersistent" data-uid="Material.Blazor.MBTextField.SupportingTextPersistent">
+  <h3 id="Material_Blazor_Internal_InternalTextFieldBase2_SupportingTextPersistent" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.SupportingTextPersistent">
   SupportingTextPersistent
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField%20-%20Deprecated/InternalTextFieldBase.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -574,11 +564,11 @@ public bool SupportingTextPersistent { get; set; }</code></pre>
 
 
 
-  <a id="Material_Blazor_MBTextField_TextAlignStyle_" data-uid="Material.Blazor.MBTextField.TextAlignStyle*"></a>
+  <a id="Material_Blazor_Internal_InternalTextFieldBase2_TextAlignStyle_" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.TextAlignStyle*"></a>
 
-  <h3 id="Material_Blazor_MBTextField_TextAlignStyle" data-uid="Material.Blazor.MBTextField.TextAlignStyle">
+  <h3 id="Material_Blazor_Internal_InternalTextFieldBase2_TextAlignStyle" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.TextAlignStyle">
   TextAlignStyle
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField%20-%20Deprecated/InternalTextFieldBase.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -606,11 +596,11 @@ public MBTextAlignStyle? TextAlignStyle { get; set; }</code></pre>
 
 
 
-  <a id="Material_Blazor_MBTextField_TextInputStyle_" data-uid="Material.Blazor.MBTextField.TextInputStyle*"></a>
+  <a id="Material_Blazor_Internal_InternalTextFieldBase2_TextInputStyle_" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.TextInputStyle*"></a>
 
-  <h3 id="Material_Blazor_MBTextField_TextInputStyle" data-uid="Material.Blazor.MBTextField.TextInputStyle">
+  <h3 id="Material_Blazor_Internal_InternalTextFieldBase2_TextInputStyle" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.TextInputStyle">
   TextInputStyle
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField%20-%20Deprecated/InternalTextFieldBase.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -638,11 +628,11 @@ public MBTextInputStyle TextInputStyle { get; set; }</code></pre>
 
 
 
-  <a id="Material_Blazor_MBTextField_TrailingIcon_" data-uid="Material.Blazor.MBTextField.TrailingIcon*"></a>
+  <a id="Material_Blazor_Internal_InternalTextFieldBase2_TrailingIcon_" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.TrailingIcon*"></a>
 
-  <h3 id="Material_Blazor_MBTextField_TrailingIcon" data-uid="Material.Blazor.MBTextField.TrailingIcon">
+  <h3 id="Material_Blazor_Internal_InternalTextFieldBase2_TrailingIcon" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.TrailingIcon">
   TrailingIcon
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField%20-%20Deprecated/InternalTextFieldBase.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -670,11 +660,11 @@ public MBIconDescriptor? TrailingIcon { get; set; }</code></pre>
 
 
 
-  <a id="Material_Blazor_MBTextField_TrailingToggleIcon_" data-uid="Material.Blazor.MBTextField.TrailingToggleIcon*"></a>
+  <a id="Material_Blazor_Internal_InternalTextFieldBase2_TrailingToggleIcon_" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.TrailingToggleIcon*"></a>
 
-  <h3 id="Material_Blazor_MBTextField_TrailingToggleIcon" data-uid="Material.Blazor.MBTextField.TrailingToggleIcon">
+  <h3 id="Material_Blazor_Internal_InternalTextFieldBase2_TrailingToggleIcon" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.TrailingToggleIcon">
   TrailingToggleIcon
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField%20-%20Deprecated/InternalTextFieldBase.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -702,75 +692,11 @@ public MBIconDescriptor? TrailingToggleIcon { get; set; }</code></pre>
 
 
 
-  <a id="Material_Blazor_MBTextField_TrailingToggleIconButtonLink_" data-uid="Material.Blazor.MBTextField.TrailingToggleIconButtonLink*"></a>
+  <a id="Material_Blazor_Internal_InternalTextFieldBase2_TrailingToggleIconSelected_" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.TrailingToggleIconSelected*"></a>
 
-  <h3 id="Material_Blazor_MBTextField_TrailingToggleIconButtonLink" data-uid="Material.Blazor.MBTextField.TrailingToggleIconButtonLink">
-  TrailingToggleIconButtonLink
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Parameter]
-public string TrailingToggleIconButtonLink { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Material_Blazor_MBTextField_TrailingToggleIconButtonLinkTarget_" data-uid="Material.Blazor.MBTextField.TrailingToggleIconButtonLinkTarget*"></a>
-
-  <h3 id="Material_Blazor_MBTextField_TrailingToggleIconButtonLinkTarget" data-uid="Material.Blazor.MBTextField.TrailingToggleIconButtonLinkTarget">
-  TrailingToggleIconButtonLinkTarget
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Parameter]
-public string TrailingToggleIconButtonLinkTarget { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Material_Blazor_MBTextField_TrailingToggleIconSelected_" data-uid="Material.Blazor.MBTextField.TrailingToggleIconSelected*"></a>
-
-  <h3 id="Material_Blazor_MBTextField_TrailingToggleIconSelected" data-uid="Material.Blazor.MBTextField.TrailingToggleIconSelected">
+  <h3 id="Material_Blazor_Internal_InternalTextFieldBase2_TrailingToggleIconSelected" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.TrailingToggleIconSelected">
   TrailingToggleIconSelected
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField%20-%20Deprecated/InternalTextFieldBase.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -798,11 +724,11 @@ public bool TrailingToggleIconSelected { get; set; }</code></pre>
 
 
 
-  <a id="Material_Blazor_MBTextField_ValidationMessageFor_" data-uid="Material.Blazor.MBTextField.ValidationMessageFor*"></a>
+  <a id="Material_Blazor_Internal_InternalTextFieldBase2_ValidationMessageFor_" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.ValidationMessageFor*"></a>
 
-  <h3 id="Material_Blazor_MBTextField_ValidationMessageFor" data-uid="Material.Blazor.MBTextField.ValidationMessageFor">
+  <h3 id="Material_Blazor_Internal_InternalTextFieldBase2_ValidationMessageFor" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.ValidationMessageFor">
   ValidationMessageFor
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField%20-%20Deprecated/InternalTextFieldBase.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -834,11 +760,11 @@ public Expression&lt;Func&lt;object&gt;&gt; ValidationMessageFor { get; set; }</
 </h2>
 
 
-  <a id="Material_Blazor_MBTextField_BuildRenderTree_" data-uid="Material.Blazor.MBTextField.BuildRenderTree*"></a>
+  <a id="Material_Blazor_Internal_InternalTextFieldBase2_BuildRenderTree_" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.BuildRenderTree*"></a>
 
-  <h3 id="Material_Blazor_MBTextField_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_" data-uid="Material.Blazor.MBTextField.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)">
+  <h3 id="Material_Blazor_Internal_InternalTextFieldBase2_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)">
   BuildRenderTree(RenderTreeBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField%20-%20Deprecated/InternalTextFieldBase.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Renders the component to the supplied <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder">RenderTreeBuilder</a>.</p>
@@ -867,11 +793,11 @@ public Expression&lt;Func&lt;object&gt;&gt; ValidationMessageFor { get; set; }</
 
 
 
-  <a id="Material_Blazor_MBTextField_Dispose_" data-uid="Material.Blazor.MBTextField.Dispose*"></a>
+  <a id="Material_Blazor_Internal_InternalTextFieldBase2_Dispose_" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.Dispose*"></a>
 
-  <h3 id="Material_Blazor_MBTextField_Dispose_System_Boolean_" data-uid="Material.Blazor.MBTextField.Dispose(System.Boolean)">
+  <h3 id="Material_Blazor_Internal_InternalTextFieldBase2_Dispose_System_Boolean_" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.Dispose(System.Boolean)">
   Dispose(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField%20-%20Deprecated/InternalTextFieldBase.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -898,11 +824,11 @@ public Expression&lt;Func&lt;object&gt;&gt; ValidationMessageFor { get; set; }</
 
 
 
-  <a id="Material_Blazor_MBTextField_OnInitializedAsync_" data-uid="Material.Blazor.MBTextField.OnInitializedAsync*"></a>
+  <a id="Material_Blazor_Internal_InternalTextFieldBase2_OnInitializedAsync_" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.OnInitializedAsync*"></a>
 
-  <h3 id="Material_Blazor_MBTextField_OnInitializedAsync" data-uid="Material.Blazor.MBTextField.OnInitializedAsync">
+  <h3 id="Material_Blazor_Internal_InternalTextFieldBase2_OnInitializedAsync" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.OnInitializedAsync">
   OnInitializedAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField%20-%20Deprecated/InternalTextFieldBase.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Method invoked when the component is ready to start, having received its
@@ -934,11 +860,11 @@ want the component to refresh when that operation is completed.</p>
 
 
 
-  <a id="Material_Blazor_MBTextField_SetDateErrorMessage_" data-uid="Material.Blazor.MBTextField.SetDateErrorMessage*"></a>
+  <a id="Material_Blazor_Internal_InternalTextFieldBase2_SetDateErrorMessage_" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.SetDateErrorMessage*"></a>
 
-  <h3 id="Material_Blazor_MBTextField_SetDateErrorMessage" data-uid="Material.Blazor.MBTextField.SetDateErrorMessage">
+  <h3 id="Material_Blazor_Internal_InternalTextFieldBase2_SetDateErrorMessage" data-uid="Material.Blazor.Internal.InternalTextFieldBase2.SetDateErrorMessage">
   SetDateErrorMessage()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField%20-%20Deprecated/InternalTextFieldBase.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -964,7 +890,7 @@ want the component to refresh when that operation is completed.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/TextField/MBTextField.cs" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/NumericField%20-%20Deprecated/InternalTextFieldBase.cs" class="edit-link">Edit this page</a>
         </div>
 
 
