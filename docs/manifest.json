@@ -1170,6 +1170,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBDecimalField3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBDecimalField3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.MBDensity.yml",
       "output": {
         ".html": {
@@ -1194,6 +1204,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBDialogButton.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBDoubleField.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBDoubleField.html"
         }
       },
       "version": ""
@@ -1324,6 +1344,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBIconWithParameters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBIntField.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBIntField.html"
         }
       },
       "version": ""
@@ -1614,6 +1644,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBTextField.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBTextField2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBTextField2.html"
         }
       },
       "version": ""

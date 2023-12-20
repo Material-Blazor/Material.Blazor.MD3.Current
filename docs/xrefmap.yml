@@ -796,54 +796,6 @@ references:
   fullName.vb: Material.Blazor.Internal.InternalFloatingPointFieldBase2(Of T, U).New
   nameWithType: InternalFloatingPointFieldBase2<T, U>.InternalFloatingPointFieldBase2
   nameWithType.vb: InternalFloatingPointFieldBase2(Of T, U).New
-- uid: Material.Blazor.Internal.InternalFloatingPointFieldBase2`2.DecimalPlaces
-  name: DecimalPlaces
-  href: api/Material.Blazor.Internal.InternalFloatingPointFieldBase2-2.html#Material_Blazor_Internal_InternalFloatingPointFieldBase2_2_DecimalPlaces
-  commentId: P:Material.Blazor.Internal.InternalFloatingPointFieldBase2`2.DecimalPlaces
-  fullName: Material.Blazor.Internal.InternalFloatingPointFieldBase2<T, U>.DecimalPlaces
-  fullName.vb: Material.Blazor.Internal.InternalFloatingPointFieldBase2(Of T, U).DecimalPlaces
-  nameWithType: InternalFloatingPointFieldBase2<T, U>.DecimalPlaces
-  nameWithType.vb: InternalFloatingPointFieldBase2(Of T, U).DecimalPlaces
-- uid: Material.Blazor.Internal.InternalFloatingPointFieldBase2`2.DecimalPlaces*
-  name: DecimalPlaces
-  href: api/Material.Blazor.Internal.InternalFloatingPointFieldBase2-2.html#Material_Blazor_Internal_InternalFloatingPointFieldBase2_2_DecimalPlaces_
-  commentId: Overload:Material.Blazor.Internal.InternalFloatingPointFieldBase2`2.DecimalPlaces
-  fullName: Material.Blazor.Internal.InternalFloatingPointFieldBase2<T, U>.DecimalPlaces
-  fullName.vb: Material.Blazor.Internal.InternalFloatingPointFieldBase2(Of T, U).DecimalPlaces
-  nameWithType: InternalFloatingPointFieldBase2<T, U>.DecimalPlaces
-  nameWithType.vb: InternalFloatingPointFieldBase2(Of T, U).DecimalPlaces
-- uid: Material.Blazor.Internal.InternalFloatingPointFieldBase2`2.FocusedMagnitude
-  name: FocusedMagnitude
-  href: api/Material.Blazor.Internal.InternalFloatingPointFieldBase2-2.html#Material_Blazor_Internal_InternalFloatingPointFieldBase2_2_FocusedMagnitude
-  commentId: P:Material.Blazor.Internal.InternalFloatingPointFieldBase2`2.FocusedMagnitude
-  fullName: Material.Blazor.Internal.InternalFloatingPointFieldBase2<T, U>.FocusedMagnitude
-  fullName.vb: Material.Blazor.Internal.InternalFloatingPointFieldBase2(Of T, U).FocusedMagnitude
-  nameWithType: InternalFloatingPointFieldBase2<T, U>.FocusedMagnitude
-  nameWithType.vb: InternalFloatingPointFieldBase2(Of T, U).FocusedMagnitude
-- uid: Material.Blazor.Internal.InternalFloatingPointFieldBase2`2.FocusedMagnitude*
-  name: FocusedMagnitude
-  href: api/Material.Blazor.Internal.InternalFloatingPointFieldBase2-2.html#Material_Blazor_Internal_InternalFloatingPointFieldBase2_2_FocusedMagnitude_
-  commentId: Overload:Material.Blazor.Internal.InternalFloatingPointFieldBase2`2.FocusedMagnitude
-  fullName: Material.Blazor.Internal.InternalFloatingPointFieldBase2<T, U>.FocusedMagnitude
-  fullName.vb: Material.Blazor.Internal.InternalFloatingPointFieldBase2(Of T, U).FocusedMagnitude
-  nameWithType: InternalFloatingPointFieldBase2<T, U>.FocusedMagnitude
-  nameWithType.vb: InternalFloatingPointFieldBase2(Of T, U).FocusedMagnitude
-- uid: Material.Blazor.Internal.InternalFloatingPointFieldBase2`2.UnfocusedMagnitude
-  name: UnfocusedMagnitude
-  href: api/Material.Blazor.Internal.InternalFloatingPointFieldBase2-2.html#Material_Blazor_Internal_InternalFloatingPointFieldBase2_2_UnfocusedMagnitude
-  commentId: P:Material.Blazor.Internal.InternalFloatingPointFieldBase2`2.UnfocusedMagnitude
-  fullName: Material.Blazor.Internal.InternalFloatingPointFieldBase2<T, U>.UnfocusedMagnitude
-  fullName.vb: Material.Blazor.Internal.InternalFloatingPointFieldBase2(Of T, U).UnfocusedMagnitude
-  nameWithType: InternalFloatingPointFieldBase2<T, U>.UnfocusedMagnitude
-  nameWithType.vb: InternalFloatingPointFieldBase2(Of T, U).UnfocusedMagnitude
-- uid: Material.Blazor.Internal.InternalFloatingPointFieldBase2`2.UnfocusedMagnitude*
-  name: UnfocusedMagnitude
-  href: api/Material.Blazor.Internal.InternalFloatingPointFieldBase2-2.html#Material_Blazor_Internal_InternalFloatingPointFieldBase2_2_UnfocusedMagnitude_
-  commentId: Overload:Material.Blazor.Internal.InternalFloatingPointFieldBase2`2.UnfocusedMagnitude
-  fullName: Material.Blazor.Internal.InternalFloatingPointFieldBase2<T, U>.UnfocusedMagnitude
-  fullName.vb: Material.Blazor.Internal.InternalFloatingPointFieldBase2(Of T, U).UnfocusedMagnitude
-  nameWithType: InternalFloatingPointFieldBase2<T, U>.UnfocusedMagnitude
-  nameWithType.vb: InternalFloatingPointFieldBase2(Of T, U).UnfocusedMagnitude
 - uid: Material.Blazor.Internal.InternalIntFieldBase2`1
   name: InternalIntFieldBase2<U>
   href: api/Material.Blazor.Internal.InternalIntFieldBase2-1.html
@@ -914,6 +866,22 @@ references:
   fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).BuildRenderTree
   nameWithType: InternalNumericFieldBase2<T, U>.BuildRenderTree
   nameWithType.vb: InternalNumericFieldBase2(Of T, U).BuildRenderTree
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.DecimalPlaces
+  name: DecimalPlaces
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_DecimalPlaces
+  commentId: P:Material.Blazor.Internal.InternalNumericFieldBase2`2.DecimalPlaces
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.DecimalPlaces
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).DecimalPlaces
+  nameWithType: InternalNumericFieldBase2<T, U>.DecimalPlaces
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).DecimalPlaces
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.DecimalPlaces*
+  name: DecimalPlaces
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_DecimalPlaces_
+  commentId: Overload:Material.Blazor.Internal.InternalNumericFieldBase2`2.DecimalPlaces
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.DecimalPlaces
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).DecimalPlaces
+  nameWithType: InternalNumericFieldBase2<T, U>.DecimalPlaces
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).DecimalPlaces
 - uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.Density
   name: Density
   href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_Density
@@ -930,6 +898,38 @@ references:
   fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).Density
   nameWithType: InternalNumericFieldBase2<T, U>.Density
   nameWithType.vb: InternalNumericFieldBase2(Of T, U).Density
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.FocusedMagnitude
+  name: FocusedMagnitude
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_FocusedMagnitude
+  commentId: P:Material.Blazor.Internal.InternalNumericFieldBase2`2.FocusedMagnitude
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.FocusedMagnitude
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).FocusedMagnitude
+  nameWithType: InternalNumericFieldBase2<T, U>.FocusedMagnitude
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).FocusedMagnitude
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.FocusedMagnitude*
+  name: FocusedMagnitude
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_FocusedMagnitude_
+  commentId: Overload:Material.Blazor.Internal.InternalNumericFieldBase2`2.FocusedMagnitude
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.FocusedMagnitude
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).FocusedMagnitude
+  nameWithType: InternalNumericFieldBase2<T, U>.FocusedMagnitude
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).FocusedMagnitude
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.HasFocus
+  name: HasFocus
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_HasFocus
+  commentId: P:Material.Blazor.Internal.InternalNumericFieldBase2`2.HasFocus
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.HasFocus
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).HasFocus
+  nameWithType: InternalNumericFieldBase2<T, U>.HasFocus
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).HasFocus
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.HasFocus*
+  name: HasFocus
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_HasFocus_
+  commentId: Overload:Material.Blazor.Internal.InternalNumericFieldBase2`2.HasFocus
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.HasFocus
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).HasFocus
+  nameWithType: InternalNumericFieldBase2<T, U>.HasFocus
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).HasFocus
 - uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.Label
   name: Label
   href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_Label
@@ -962,6 +962,70 @@ references:
   fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).LeadingIcon
   nameWithType: InternalNumericFieldBase2<T, U>.LeadingIcon
   nameWithType.vb: InternalNumericFieldBase2(Of T, U).LeadingIcon
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.LeadingToggleIcon
+  name: LeadingToggleIcon
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_LeadingToggleIcon
+  commentId: P:Material.Blazor.Internal.InternalNumericFieldBase2`2.LeadingToggleIcon
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.LeadingToggleIcon
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).LeadingToggleIcon
+  nameWithType: InternalNumericFieldBase2<T, U>.LeadingToggleIcon
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).LeadingToggleIcon
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.LeadingToggleIcon*
+  name: LeadingToggleIcon
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_LeadingToggleIcon_
+  commentId: Overload:Material.Blazor.Internal.InternalNumericFieldBase2`2.LeadingToggleIcon
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.LeadingToggleIcon
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).LeadingToggleIcon
+  nameWithType: InternalNumericFieldBase2<T, U>.LeadingToggleIcon
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).LeadingToggleIcon
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.LeadingToggleIconButtonLink
+  name: LeadingToggleIconButtonLink
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_LeadingToggleIconButtonLink
+  commentId: P:Material.Blazor.Internal.InternalNumericFieldBase2`2.LeadingToggleIconButtonLink
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.LeadingToggleIconButtonLink
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).LeadingToggleIconButtonLink
+  nameWithType: InternalNumericFieldBase2<T, U>.LeadingToggleIconButtonLink
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).LeadingToggleIconButtonLink
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.LeadingToggleIconButtonLink*
+  name: LeadingToggleIconButtonLink
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_LeadingToggleIconButtonLink_
+  commentId: Overload:Material.Blazor.Internal.InternalNumericFieldBase2`2.LeadingToggleIconButtonLink
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.LeadingToggleIconButtonLink
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).LeadingToggleIconButtonLink
+  nameWithType: InternalNumericFieldBase2<T, U>.LeadingToggleIconButtonLink
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).LeadingToggleIconButtonLink
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.LeadingToggleIconButtonLinkTarget
+  name: LeadingToggleIconButtonLinkTarget
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_LeadingToggleIconButtonLinkTarget
+  commentId: P:Material.Blazor.Internal.InternalNumericFieldBase2`2.LeadingToggleIconButtonLinkTarget
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.LeadingToggleIconButtonLinkTarget
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).LeadingToggleIconButtonLinkTarget
+  nameWithType: InternalNumericFieldBase2<T, U>.LeadingToggleIconButtonLinkTarget
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).LeadingToggleIconButtonLinkTarget
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.LeadingToggleIconButtonLinkTarget*
+  name: LeadingToggleIconButtonLinkTarget
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_LeadingToggleIconButtonLinkTarget_
+  commentId: Overload:Material.Blazor.Internal.InternalNumericFieldBase2`2.LeadingToggleIconButtonLinkTarget
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.LeadingToggleIconButtonLinkTarget
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).LeadingToggleIconButtonLinkTarget
+  nameWithType: InternalNumericFieldBase2<T, U>.LeadingToggleIconButtonLinkTarget
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).LeadingToggleIconButtonLinkTarget
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.LeadingToggleIconSelected
+  name: LeadingToggleIconSelected
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_LeadingToggleIconSelected
+  commentId: P:Material.Blazor.Internal.InternalNumericFieldBase2`2.LeadingToggleIconSelected
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.LeadingToggleIconSelected
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).LeadingToggleIconSelected
+  nameWithType: InternalNumericFieldBase2<T, U>.LeadingToggleIconSelected
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).LeadingToggleIconSelected
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.LeadingToggleIconSelected*
+  name: LeadingToggleIconSelected
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_LeadingToggleIconSelected_
+  commentId: Overload:Material.Blazor.Internal.InternalNumericFieldBase2`2.LeadingToggleIconSelected
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.LeadingToggleIconSelected
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).LeadingToggleIconSelected
+  nameWithType: InternalNumericFieldBase2<T, U>.LeadingToggleIconSelected
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).LeadingToggleIconSelected
 - uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.Max
   name: Max
   href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_Max
@@ -1075,6 +1139,22 @@ references:
   fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).Prefix
   nameWithType: InternalNumericFieldBase2<T, U>.Prefix
   nameWithType.vb: InternalNumericFieldBase2(Of T, U).Prefix
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.Regex
+  name: Regex
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_Regex
+  commentId: P:Material.Blazor.Internal.InternalNumericFieldBase2`2.Regex
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.Regex
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).Regex
+  nameWithType: InternalNumericFieldBase2<T, U>.Regex
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).Regex
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.Regex*
+  name: Regex
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_Regex_
+  commentId: Overload:Material.Blazor.Internal.InternalNumericFieldBase2`2.Regex
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.Regex
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).Regex
+  nameWithType: InternalNumericFieldBase2<T, U>.Regex
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).Regex
 - uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.Suffix
   name: Suffix
   href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_Suffix
@@ -1123,6 +1203,54 @@ references:
   fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).SupportingTextPersistent
   nameWithType: InternalNumericFieldBase2<T, U>.SupportingTextPersistent
   nameWithType.vb: InternalNumericFieldBase2(Of T, U).SupportingTextPersistent
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.TextAlignStyle
+  name: TextAlignStyle
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_TextAlignStyle
+  commentId: P:Material.Blazor.Internal.InternalNumericFieldBase2`2.TextAlignStyle
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.TextAlignStyle
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).TextAlignStyle
+  nameWithType: InternalNumericFieldBase2<T, U>.TextAlignStyle
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).TextAlignStyle
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.TextAlignStyle*
+  name: TextAlignStyle
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_TextAlignStyle_
+  commentId: Overload:Material.Blazor.Internal.InternalNumericFieldBase2`2.TextAlignStyle
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.TextAlignStyle
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).TextAlignStyle
+  nameWithType: InternalNumericFieldBase2<T, U>.TextAlignStyle
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).TextAlignStyle
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.TextFieldId
+  name: TextFieldId
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_TextFieldId
+  commentId: P:Material.Blazor.Internal.InternalNumericFieldBase2`2.TextFieldId
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.TextFieldId
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).TextFieldId
+  nameWithType: InternalNumericFieldBase2<T, U>.TextFieldId
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).TextFieldId
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.TextFieldId*
+  name: TextFieldId
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_TextFieldId_
+  commentId: Overload:Material.Blazor.Internal.InternalNumericFieldBase2`2.TextFieldId
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.TextFieldId
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).TextFieldId
+  nameWithType: InternalNumericFieldBase2<T, U>.TextFieldId
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).TextFieldId
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.TextInputStyle
+  name: TextInputStyle
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_TextInputStyle
+  commentId: P:Material.Blazor.Internal.InternalNumericFieldBase2`2.TextInputStyle
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.TextInputStyle
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).TextInputStyle
+  nameWithType: InternalNumericFieldBase2<T, U>.TextInputStyle
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).TextInputStyle
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.TextInputStyle*
+  name: TextInputStyle
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_TextInputStyle_
+  commentId: Overload:Material.Blazor.Internal.InternalNumericFieldBase2`2.TextInputStyle
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.TextInputStyle
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).TextInputStyle
+  nameWithType: InternalNumericFieldBase2<T, U>.TextInputStyle
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).TextInputStyle
 - uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.TrailingIcon
   name: TrailingIcon
   href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_TrailingIcon
@@ -1139,6 +1267,86 @@ references:
   fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).TrailingIcon
   nameWithType: InternalNumericFieldBase2<T, U>.TrailingIcon
   nameWithType.vb: InternalNumericFieldBase2(Of T, U).TrailingIcon
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.TrailingToggleIcon
+  name: TrailingToggleIcon
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_TrailingToggleIcon
+  commentId: P:Material.Blazor.Internal.InternalNumericFieldBase2`2.TrailingToggleIcon
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.TrailingToggleIcon
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).TrailingToggleIcon
+  nameWithType: InternalNumericFieldBase2<T, U>.TrailingToggleIcon
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).TrailingToggleIcon
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.TrailingToggleIcon*
+  name: TrailingToggleIcon
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_TrailingToggleIcon_
+  commentId: Overload:Material.Blazor.Internal.InternalNumericFieldBase2`2.TrailingToggleIcon
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.TrailingToggleIcon
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).TrailingToggleIcon
+  nameWithType: InternalNumericFieldBase2<T, U>.TrailingToggleIcon
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).TrailingToggleIcon
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.TrailingToggleIconButtonLink
+  name: TrailingToggleIconButtonLink
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_TrailingToggleIconButtonLink
+  commentId: P:Material.Blazor.Internal.InternalNumericFieldBase2`2.TrailingToggleIconButtonLink
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.TrailingToggleIconButtonLink
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).TrailingToggleIconButtonLink
+  nameWithType: InternalNumericFieldBase2<T, U>.TrailingToggleIconButtonLink
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).TrailingToggleIconButtonLink
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.TrailingToggleIconButtonLink*
+  name: TrailingToggleIconButtonLink
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_TrailingToggleIconButtonLink_
+  commentId: Overload:Material.Blazor.Internal.InternalNumericFieldBase2`2.TrailingToggleIconButtonLink
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.TrailingToggleIconButtonLink
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).TrailingToggleIconButtonLink
+  nameWithType: InternalNumericFieldBase2<T, U>.TrailingToggleIconButtonLink
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).TrailingToggleIconButtonLink
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.TrailingToggleIconButtonLinkTarget
+  name: TrailingToggleIconButtonLinkTarget
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_TrailingToggleIconButtonLinkTarget
+  commentId: P:Material.Blazor.Internal.InternalNumericFieldBase2`2.TrailingToggleIconButtonLinkTarget
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.TrailingToggleIconButtonLinkTarget
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).TrailingToggleIconButtonLinkTarget
+  nameWithType: InternalNumericFieldBase2<T, U>.TrailingToggleIconButtonLinkTarget
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).TrailingToggleIconButtonLinkTarget
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.TrailingToggleIconButtonLinkTarget*
+  name: TrailingToggleIconButtonLinkTarget
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_TrailingToggleIconButtonLinkTarget_
+  commentId: Overload:Material.Blazor.Internal.InternalNumericFieldBase2`2.TrailingToggleIconButtonLinkTarget
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.TrailingToggleIconButtonLinkTarget
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).TrailingToggleIconButtonLinkTarget
+  nameWithType: InternalNumericFieldBase2<T, U>.TrailingToggleIconButtonLinkTarget
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).TrailingToggleIconButtonLinkTarget
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.TrailingToggleIconSelected
+  name: TrailingToggleIconSelected
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_TrailingToggleIconSelected
+  commentId: P:Material.Blazor.Internal.InternalNumericFieldBase2`2.TrailingToggleIconSelected
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.TrailingToggleIconSelected
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).TrailingToggleIconSelected
+  nameWithType: InternalNumericFieldBase2<T, U>.TrailingToggleIconSelected
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).TrailingToggleIconSelected
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.TrailingToggleIconSelected*
+  name: TrailingToggleIconSelected
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_TrailingToggleIconSelected_
+  commentId: Overload:Material.Blazor.Internal.InternalNumericFieldBase2`2.TrailingToggleIconSelected
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.TrailingToggleIconSelected
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).TrailingToggleIconSelected
+  nameWithType: InternalNumericFieldBase2<T, U>.TrailingToggleIconSelected
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).TrailingToggleIconSelected
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.UnfocusedMagnitude
+  name: UnfocusedMagnitude
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_UnfocusedMagnitude
+  commentId: P:Material.Blazor.Internal.InternalNumericFieldBase2`2.UnfocusedMagnitude
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.UnfocusedMagnitude
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).UnfocusedMagnitude
+  nameWithType: InternalNumericFieldBase2<T, U>.UnfocusedMagnitude
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).UnfocusedMagnitude
+- uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.UnfocusedMagnitude*
+  name: UnfocusedMagnitude
+  href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_UnfocusedMagnitude_
+  commentId: Overload:Material.Blazor.Internal.InternalNumericFieldBase2`2.UnfocusedMagnitude
+  fullName: Material.Blazor.Internal.InternalNumericFieldBase2<T, U>.UnfocusedMagnitude
+  fullName.vb: Material.Blazor.Internal.InternalNumericFieldBase2(Of T, U).UnfocusedMagnitude
+  nameWithType: InternalNumericFieldBase2<T, U>.UnfocusedMagnitude
+  nameWithType.vb: InternalNumericFieldBase2(Of T, U).UnfocusedMagnitude
 - uid: Material.Blazor.Internal.InternalNumericFieldBase2`2.ValidationMessageFor
   name: ValidationMessageFor
   href: api/Material.Blazor.Internal.InternalNumericFieldBase2-2.html#Material_Blazor_Internal_InternalNumericFieldBase2_2_ValidationMessageFor
@@ -1434,15 +1642,15 @@ references:
   fullName.vb: Material.Blazor.Internal.InternalTextFieldRenderer.New
   nameWithType: InternalTextFieldRenderer.InternalTextFieldRenderer
   nameWithType.vb: InternalTextFieldRenderer.New
-- uid: Material.Blazor.Internal.InternalTextFieldRenderer.BuildTextFieldRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32@,Material.Blazor.MBCascadingDefaults,System.Type,System.String,System.String,System.Boolean,System.Nullable{Material.Blazor.MBDensity},System.Collections.Generic.KeyValuePair{System.String,System.Object}[],System.String,Microsoft.AspNetCore.Components.EventCallback{System.String},System.Linq.Expressions.Expression{System.Func{System.String}},System.Nullable{Microsoft.AspNetCore.Components.EventCallback},System.Nullable{Microsoft.AspNetCore.Components.EventCallback},System.String,System.String,System.String,System.String,System.Nullable{Material.Blazor.MBTextAlignStyle},System.String,System.String,Material.Blazor.MBIconDescriptor,Material.Blazor.MBIconDescriptor,System.String,System.String,System.Boolean,Material.Blazor.MBIconDescriptor,Material.Blazor.MBIconDescriptor,System.String,System.String,System.Boolean,System.Linq.Expressions.Expression{System.Func{System.Object}})
-  name: BuildTextFieldRenderTree(RenderTreeBuilder, ref int, MBCascadingDefaults, Type, string, string, bool, MBDensity?, KeyValuePair<string, object>[], string, EventCallback<string>, Expression<Func<string>>, EventCallback?, EventCallback?, string, string, string, string, MBTextAlignStyle?, string, string, MBIconDescriptor, MBIconDescriptor, string, string, bool, MBIconDescriptor, MBIconDescriptor, string, string, bool, Expression<Func<object>>)
-  href: api/Material.Blazor.Internal.InternalTextFieldRenderer.html#Material_Blazor_Internal_InternalTextFieldRenderer_BuildTextFieldRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32__Material_Blazor_MBCascadingDefaults_System_Type_System_String_System_String_System_Boolean_System_Nullable_Material_Blazor_MBDensity__System_Collections_Generic_KeyValuePair_System_String_System_Object____System_String_Microsoft_AspNetCore_Components_EventCallback_System_String__System_Linq_Expressions_Expression_System_Func_System_String___System_Nullable_Microsoft_AspNetCore_Components_EventCallback__System_Nullable_Microsoft_AspNetCore_Components_EventCallback__System_String_System_String_System_String_System_String_System_Nullable_Material_Blazor_MBTextAlignStyle__System_String_System_String_Material_Blazor_MBIconDescriptor_Material_Blazor_MBIconDescriptor_System_String_System_String_System_Boolean_Material_Blazor_MBIconDescriptor_Material_Blazor_MBIconDescriptor_System_String_System_String_System_Boolean_System_Linq_Expressions_Expression_System_Func_System_Object___
-  commentId: M:Material.Blazor.Internal.InternalTextFieldRenderer.BuildTextFieldRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32@,Material.Blazor.MBCascadingDefaults,System.Type,System.String,System.String,System.Boolean,System.Nullable{Material.Blazor.MBDensity},System.Collections.Generic.KeyValuePair{System.String,System.Object}[],System.String,Microsoft.AspNetCore.Components.EventCallback{System.String},System.Linq.Expressions.Expression{System.Func{System.String}},System.Nullable{Microsoft.AspNetCore.Components.EventCallback},System.Nullable{Microsoft.AspNetCore.Components.EventCallback},System.String,System.String,System.String,System.String,System.Nullable{Material.Blazor.MBTextAlignStyle},System.String,System.String,Material.Blazor.MBIconDescriptor,Material.Blazor.MBIconDescriptor,System.String,System.String,System.Boolean,Material.Blazor.MBIconDescriptor,Material.Blazor.MBIconDescriptor,System.String,System.String,System.Boolean,System.Linq.Expressions.Expression{System.Func{System.Object}})
-  name.vb: BuildTextFieldRenderTree(RenderTreeBuilder, Integer, MBCascadingDefaults, Type, String, String, Boolean, MBDensity?, KeyValuePair(Of String, Object)(), String, EventCallback(Of String), Expression(Of Func(Of String)), EventCallback?, EventCallback?, String, String, String, String, MBTextAlignStyle?, String, String, MBIconDescriptor, MBIconDescriptor, String, String, Boolean, MBIconDescriptor, MBIconDescriptor, String, String, Boolean, Expression(Of Func(Of Object)))
-  fullName: Material.Blazor.Internal.InternalTextFieldRenderer.BuildTextFieldRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, ref int, Material.Blazor.MBCascadingDefaults, System.Type, string, string, bool, Material.Blazor.MBDensity?, System.Collections.Generic.KeyValuePair<string, object>[], string, Microsoft.AspNetCore.Components.EventCallback<string>, System.Linq.Expressions.Expression<System.Func<string>>, Microsoft.AspNetCore.Components.EventCallback?, Microsoft.AspNetCore.Components.EventCallback?, string, string, string, string, Material.Blazor.MBTextAlignStyle?, string, string, Material.Blazor.MBIconDescriptor, Material.Blazor.MBIconDescriptor, string, string, bool, Material.Blazor.MBIconDescriptor, Material.Blazor.MBIconDescriptor, string, string, bool, System.Linq.Expressions.Expression<System.Func<object>>)
-  fullName.vb: Material.Blazor.Internal.InternalTextFieldRenderer.BuildTextFieldRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, Integer, Material.Blazor.MBCascadingDefaults, System.Type, String, String, Boolean, Material.Blazor.MBDensity?, System.Collections.Generic.KeyValuePair(Of String, Object)(), String, Microsoft.AspNetCore.Components.EventCallback(Of String), System.Linq.Expressions.Expression(Of System.Func(Of String)), Microsoft.AspNetCore.Components.EventCallback?, Microsoft.AspNetCore.Components.EventCallback?, String, String, String, String, Material.Blazor.MBTextAlignStyle?, String, String, Material.Blazor.MBIconDescriptor, Material.Blazor.MBIconDescriptor, String, String, Boolean, Material.Blazor.MBIconDescriptor, Material.Blazor.MBIconDescriptor, String, String, Boolean, System.Linq.Expressions.Expression(Of System.Func(Of Object)))
-  nameWithType: InternalTextFieldRenderer.BuildTextFieldRenderTree(RenderTreeBuilder, ref int, MBCascadingDefaults, Type, string, string, bool, MBDensity?, KeyValuePair<string, object>[], string, EventCallback<string>, Expression<Func<string>>, EventCallback?, EventCallback?, string, string, string, string, MBTextAlignStyle?, string, string, MBIconDescriptor, MBIconDescriptor, string, string, bool, MBIconDescriptor, MBIconDescriptor, string, string, bool, Expression<Func<object>>)
-  nameWithType.vb: InternalTextFieldRenderer.BuildTextFieldRenderTree(RenderTreeBuilder, Integer, MBCascadingDefaults, Type, String, String, Boolean, MBDensity?, KeyValuePair(Of String, Object)(), String, EventCallback(Of String), Expression(Of Func(Of String)), EventCallback?, EventCallback?, String, String, String, String, MBTextAlignStyle?, String, String, MBIconDescriptor, MBIconDescriptor, String, String, Boolean, MBIconDescriptor, MBIconDescriptor, String, String, Boolean, Expression(Of Func(Of Object)))
+- uid: Material.Blazor.Internal.InternalTextFieldRenderer.BuildTextFieldRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32@,Material.Blazor.MBCascadingDefaults,System.Type,System.String,System.String,System.Boolean,System.Nullable{Material.Blazor.MBDensity},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.Object}},System.String,Microsoft.AspNetCore.Components.EventCallback{System.String},System.Linq.Expressions.Expression{System.Func{System.String}},System.Nullable{Microsoft.AspNetCore.Components.EventCallback},System.Nullable{Microsoft.AspNetCore.Components.EventCallback},System.String,System.String,System.String,System.String,System.Nullable{Material.Blazor.MBTextAlignStyle},System.String,System.Nullable{Material.Blazor.MBTextInputStyle},System.String,Material.Blazor.MBIconDescriptor,Material.Blazor.MBIconDescriptor,System.String,System.String,System.Boolean,Material.Blazor.MBIconDescriptor,Material.Blazor.MBIconDescriptor,System.String,System.String,System.Boolean,System.Linq.Expressions.Expression{System.Func{System.Object}})
+  name: BuildTextFieldRenderTree(RenderTreeBuilder, ref int, MBCascadingDefaults, Type, string, string, bool, MBDensity?, IEnumerable<KeyValuePair<string, object>>, string, EventCallback<string>, Expression<Func<string>>, EventCallback?, EventCallback?, string, string, string, string, MBTextAlignStyle?, string, MBTextInputStyle?, string, MBIconDescriptor, MBIconDescriptor, string, string, bool, MBIconDescriptor, MBIconDescriptor, string, string, bool, Expression<Func<object>>)
+  href: api/Material.Blazor.Internal.InternalTextFieldRenderer.html#Material_Blazor_Internal_InternalTextFieldRenderer_BuildTextFieldRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32__Material_Blazor_MBCascadingDefaults_System_Type_System_String_System_String_System_Boolean_System_Nullable_Material_Blazor_MBDensity__System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_Object___System_String_Microsoft_AspNetCore_Components_EventCallback_System_String__System_Linq_Expressions_Expression_System_Func_System_String___System_Nullable_Microsoft_AspNetCore_Components_EventCallback__System_Nullable_Microsoft_AspNetCore_Components_EventCallback__System_String_System_String_System_String_System_String_System_Nullable_Material_Blazor_MBTextAlignStyle__System_String_System_Nullable_Material_Blazor_MBTextInputStyle__System_String_Material_Blazor_MBIconDescriptor_Material_Blazor_MBIconDescriptor_System_String_System_String_System_Boolean_Material_Blazor_MBIconDescriptor_Material_Blazor_MBIconDescriptor_System_String_System_String_System_Boolean_System_Linq_Expressions_Expression_System_Func_System_Object___
+  commentId: M:Material.Blazor.Internal.InternalTextFieldRenderer.BuildTextFieldRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32@,Material.Blazor.MBCascadingDefaults,System.Type,System.String,System.String,System.Boolean,System.Nullable{Material.Blazor.MBDensity},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.Object}},System.String,Microsoft.AspNetCore.Components.EventCallback{System.String},System.Linq.Expressions.Expression{System.Func{System.String}},System.Nullable{Microsoft.AspNetCore.Components.EventCallback},System.Nullable{Microsoft.AspNetCore.Components.EventCallback},System.String,System.String,System.String,System.String,System.Nullable{Material.Blazor.MBTextAlignStyle},System.String,System.Nullable{Material.Blazor.MBTextInputStyle},System.String,Material.Blazor.MBIconDescriptor,Material.Blazor.MBIconDescriptor,System.String,System.String,System.Boolean,Material.Blazor.MBIconDescriptor,Material.Blazor.MBIconDescriptor,System.String,System.String,System.Boolean,System.Linq.Expressions.Expression{System.Func{System.Object}})
+  name.vb: BuildTextFieldRenderTree(RenderTreeBuilder, Integer, MBCascadingDefaults, Type, String, String, Boolean, MBDensity?, IEnumerable(Of KeyValuePair(Of String, Object)), String, EventCallback(Of String), Expression(Of Func(Of String)), EventCallback?, EventCallback?, String, String, String, String, MBTextAlignStyle?, String, MBTextInputStyle?, String, MBIconDescriptor, MBIconDescriptor, String, String, Boolean, MBIconDescriptor, MBIconDescriptor, String, String, Boolean, Expression(Of Func(Of Object)))
+  fullName: Material.Blazor.Internal.InternalTextFieldRenderer.BuildTextFieldRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, ref int, Material.Blazor.MBCascadingDefaults, System.Type, string, string, bool, Material.Blazor.MBDensity?, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, object>>, string, Microsoft.AspNetCore.Components.EventCallback<string>, System.Linq.Expressions.Expression<System.Func<string>>, Microsoft.AspNetCore.Components.EventCallback?, Microsoft.AspNetCore.Components.EventCallback?, string, string, string, string, Material.Blazor.MBTextAlignStyle?, string, Material.Blazor.MBTextInputStyle?, string, Material.Blazor.MBIconDescriptor, Material.Blazor.MBIconDescriptor, string, string, bool, Material.Blazor.MBIconDescriptor, Material.Blazor.MBIconDescriptor, string, string, bool, System.Linq.Expressions.Expression<System.Func<object>>)
+  fullName.vb: Material.Blazor.Internal.InternalTextFieldRenderer.BuildTextFieldRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, Integer, Material.Blazor.MBCascadingDefaults, System.Type, String, String, Boolean, Material.Blazor.MBDensity?, System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of String, Object)), String, Microsoft.AspNetCore.Components.EventCallback(Of String), System.Linq.Expressions.Expression(Of System.Func(Of String)), Microsoft.AspNetCore.Components.EventCallback?, Microsoft.AspNetCore.Components.EventCallback?, String, String, String, String, Material.Blazor.MBTextAlignStyle?, String, Material.Blazor.MBTextInputStyle?, String, Material.Blazor.MBIconDescriptor, Material.Blazor.MBIconDescriptor, String, String, Boolean, Material.Blazor.MBIconDescriptor, Material.Blazor.MBIconDescriptor, String, String, Boolean, System.Linq.Expressions.Expression(Of System.Func(Of Object)))
+  nameWithType: InternalTextFieldRenderer.BuildTextFieldRenderTree(RenderTreeBuilder, ref int, MBCascadingDefaults, Type, string, string, bool, MBDensity?, IEnumerable<KeyValuePair<string, object>>, string, EventCallback<string>, Expression<Func<string>>, EventCallback?, EventCallback?, string, string, string, string, MBTextAlignStyle?, string, MBTextInputStyle?, string, MBIconDescriptor, MBIconDescriptor, string, string, bool, MBIconDescriptor, MBIconDescriptor, string, string, bool, Expression<Func<object>>)
+  nameWithType.vb: InternalTextFieldRenderer.BuildTextFieldRenderTree(RenderTreeBuilder, Integer, MBCascadingDefaults, Type, String, String, Boolean, MBDensity?, IEnumerable(Of KeyValuePair(Of String, Object)), String, EventCallback(Of String), Expression(Of Func(Of String)), EventCallback?, EventCallback?, String, String, String, String, MBTextAlignStyle?, String, MBTextInputStyle?, String, MBIconDescriptor, MBIconDescriptor, String, String, Boolean, MBIconDescriptor, MBIconDescriptor, String, String, Boolean, Expression(Of Func(Of Object)))
 - uid: Material.Blazor.Internal.InternalTextFieldRenderer.BuildTextFieldRenderTree*
   name: BuildTextFieldRenderTree
   href: api/Material.Blazor.Internal.InternalTextFieldRenderer.html#Material_Blazor_Internal_InternalTextFieldRenderer_BuildTextFieldRenderTree_
@@ -3312,6 +3520,378 @@ references:
   fullName.vb: Material.Blazor.MBDecimalField2.New
   nameWithType: MBDecimalField2.MBDecimalField2
   nameWithType.vb: MBDecimalField2.New
+- uid: Material.Blazor.MBDecimalField3
+  name: MBDecimalField3
+  href: api/Material.Blazor.MBDecimalField3.html
+  commentId: T:Material.Blazor.MBDecimalField3
+  fullName: Material.Blazor.MBDecimalField3
+  nameWithType: MBDecimalField3
+- uid: Material.Blazor.MBDecimalField3.#ctor
+  name: MBDecimalField3()
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3__ctor
+  commentId: M:Material.Blazor.MBDecimalField3.#ctor
+  name.vb: New()
+  fullName: Material.Blazor.MBDecimalField3.MBDecimalField3()
+  fullName.vb: Material.Blazor.MBDecimalField3.New()
+  nameWithType: MBDecimalField3.MBDecimalField3()
+  nameWithType.vb: MBDecimalField3.New()
+- uid: Material.Blazor.MBDecimalField3.#ctor*
+  name: MBDecimalField3
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3__ctor_
+  commentId: Overload:Material.Blazor.MBDecimalField3.#ctor
+  name.vb: New
+  fullName: Material.Blazor.MBDecimalField3.MBDecimalField3
+  fullName.vb: Material.Blazor.MBDecimalField3.New
+  nameWithType: MBDecimalField3.MBDecimalField3
+  nameWithType.vb: MBDecimalField3.New
+- uid: Material.Blazor.MBDecimalField3.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  name: BuildRenderTree(RenderTreeBuilder)
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
+  commentId: M:Material.Blazor.MBDecimalField3.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  fullName: Material.Blazor.MBDecimalField3.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  nameWithType: MBDecimalField3.BuildRenderTree(RenderTreeBuilder)
+- uid: Material.Blazor.MBDecimalField3.BuildRenderTree*
+  name: BuildRenderTree
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_BuildRenderTree_
+  commentId: Overload:Material.Blazor.MBDecimalField3.BuildRenderTree
+  fullName: Material.Blazor.MBDecimalField3.BuildRenderTree
+  nameWithType: MBDecimalField3.BuildRenderTree
+- uid: Material.Blazor.MBDecimalField3.DecimalPlaces
+  name: DecimalPlaces
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_DecimalPlaces
+  commentId: P:Material.Blazor.MBDecimalField3.DecimalPlaces
+  fullName: Material.Blazor.MBDecimalField3.DecimalPlaces
+  nameWithType: MBDecimalField3.DecimalPlaces
+- uid: Material.Blazor.MBDecimalField3.DecimalPlaces*
+  name: DecimalPlaces
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_DecimalPlaces_
+  commentId: Overload:Material.Blazor.MBDecimalField3.DecimalPlaces
+  fullName: Material.Blazor.MBDecimalField3.DecimalPlaces
+  nameWithType: MBDecimalField3.DecimalPlaces
+- uid: Material.Blazor.MBDecimalField3.Density
+  name: Density
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_Density
+  commentId: P:Material.Blazor.MBDecimalField3.Density
+  fullName: Material.Blazor.MBDecimalField3.Density
+  nameWithType: MBDecimalField3.Density
+- uid: Material.Blazor.MBDecimalField3.Density*
+  name: Density
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_Density_
+  commentId: Overload:Material.Blazor.MBDecimalField3.Density
+  fullName: Material.Blazor.MBDecimalField3.Density
+  nameWithType: MBDecimalField3.Density
+- uid: Material.Blazor.MBDecimalField3.FocusedMagnitude
+  name: FocusedMagnitude
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_FocusedMagnitude
+  commentId: P:Material.Blazor.MBDecimalField3.FocusedMagnitude
+  fullName: Material.Blazor.MBDecimalField3.FocusedMagnitude
+  nameWithType: MBDecimalField3.FocusedMagnitude
+- uid: Material.Blazor.MBDecimalField3.FocusedMagnitude*
+  name: FocusedMagnitude
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_FocusedMagnitude_
+  commentId: Overload:Material.Blazor.MBDecimalField3.FocusedMagnitude
+  fullName: Material.Blazor.MBDecimalField3.FocusedMagnitude
+  nameWithType: MBDecimalField3.FocusedMagnitude
+- uid: Material.Blazor.MBDecimalField3.Label
+  name: Label
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_Label
+  commentId: P:Material.Blazor.MBDecimalField3.Label
+  fullName: Material.Blazor.MBDecimalField3.Label
+  nameWithType: MBDecimalField3.Label
+- uid: Material.Blazor.MBDecimalField3.Label*
+  name: Label
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_Label_
+  commentId: Overload:Material.Blazor.MBDecimalField3.Label
+  fullName: Material.Blazor.MBDecimalField3.Label
+  nameWithType: MBDecimalField3.Label
+- uid: Material.Blazor.MBDecimalField3.LeadingIcon
+  name: LeadingIcon
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_LeadingIcon
+  commentId: P:Material.Blazor.MBDecimalField3.LeadingIcon
+  fullName: Material.Blazor.MBDecimalField3.LeadingIcon
+  nameWithType: MBDecimalField3.LeadingIcon
+- uid: Material.Blazor.MBDecimalField3.LeadingIcon*
+  name: LeadingIcon
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_LeadingIcon_
+  commentId: Overload:Material.Blazor.MBDecimalField3.LeadingIcon
+  fullName: Material.Blazor.MBDecimalField3.LeadingIcon
+  nameWithType: MBDecimalField3.LeadingIcon
+- uid: Material.Blazor.MBDecimalField3.LeadingToggleIcon
+  name: LeadingToggleIcon
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_LeadingToggleIcon
+  commentId: P:Material.Blazor.MBDecimalField3.LeadingToggleIcon
+  fullName: Material.Blazor.MBDecimalField3.LeadingToggleIcon
+  nameWithType: MBDecimalField3.LeadingToggleIcon
+- uid: Material.Blazor.MBDecimalField3.LeadingToggleIcon*
+  name: LeadingToggleIcon
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_LeadingToggleIcon_
+  commentId: Overload:Material.Blazor.MBDecimalField3.LeadingToggleIcon
+  fullName: Material.Blazor.MBDecimalField3.LeadingToggleIcon
+  nameWithType: MBDecimalField3.LeadingToggleIcon
+- uid: Material.Blazor.MBDecimalField3.LeadingToggleIconButtonLink
+  name: LeadingToggleIconButtonLink
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_LeadingToggleIconButtonLink
+  commentId: P:Material.Blazor.MBDecimalField3.LeadingToggleIconButtonLink
+  fullName: Material.Blazor.MBDecimalField3.LeadingToggleIconButtonLink
+  nameWithType: MBDecimalField3.LeadingToggleIconButtonLink
+- uid: Material.Blazor.MBDecimalField3.LeadingToggleIconButtonLink*
+  name: LeadingToggleIconButtonLink
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_LeadingToggleIconButtonLink_
+  commentId: Overload:Material.Blazor.MBDecimalField3.LeadingToggleIconButtonLink
+  fullName: Material.Blazor.MBDecimalField3.LeadingToggleIconButtonLink
+  nameWithType: MBDecimalField3.LeadingToggleIconButtonLink
+- uid: Material.Blazor.MBDecimalField3.LeadingToggleIconButtonLinkTarget
+  name: LeadingToggleIconButtonLinkTarget
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_LeadingToggleIconButtonLinkTarget
+  commentId: P:Material.Blazor.MBDecimalField3.LeadingToggleIconButtonLinkTarget
+  fullName: Material.Blazor.MBDecimalField3.LeadingToggleIconButtonLinkTarget
+  nameWithType: MBDecimalField3.LeadingToggleIconButtonLinkTarget
+- uid: Material.Blazor.MBDecimalField3.LeadingToggleIconButtonLinkTarget*
+  name: LeadingToggleIconButtonLinkTarget
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_LeadingToggleIconButtonLinkTarget_
+  commentId: Overload:Material.Blazor.MBDecimalField3.LeadingToggleIconButtonLinkTarget
+  fullName: Material.Blazor.MBDecimalField3.LeadingToggleIconButtonLinkTarget
+  nameWithType: MBDecimalField3.LeadingToggleIconButtonLinkTarget
+- uid: Material.Blazor.MBDecimalField3.LeadingToggleIconSelected
+  name: LeadingToggleIconSelected
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_LeadingToggleIconSelected
+  commentId: P:Material.Blazor.MBDecimalField3.LeadingToggleIconSelected
+  fullName: Material.Blazor.MBDecimalField3.LeadingToggleIconSelected
+  nameWithType: MBDecimalField3.LeadingToggleIconSelected
+- uid: Material.Blazor.MBDecimalField3.LeadingToggleIconSelected*
+  name: LeadingToggleIconSelected
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_LeadingToggleIconSelected_
+  commentId: Overload:Material.Blazor.MBDecimalField3.LeadingToggleIconSelected
+  fullName: Material.Blazor.MBDecimalField3.LeadingToggleIconSelected
+  nameWithType: MBDecimalField3.LeadingToggleIconSelected
+- uid: Material.Blazor.MBDecimalField3.Max
+  name: Max
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_Max
+  commentId: P:Material.Blazor.MBDecimalField3.Max
+  fullName: Material.Blazor.MBDecimalField3.Max
+  nameWithType: MBDecimalField3.Max
+- uid: Material.Blazor.MBDecimalField3.Max*
+  name: Max
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_Max_
+  commentId: Overload:Material.Blazor.MBDecimalField3.Max
+  fullName: Material.Blazor.MBDecimalField3.Max
+  nameWithType: MBDecimalField3.Max
+- uid: Material.Blazor.MBDecimalField3.Min
+  name: Min
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_Min
+  commentId: P:Material.Blazor.MBDecimalField3.Min
+  fullName: Material.Blazor.MBDecimalField3.Min
+  nameWithType: MBDecimalField3.Min
+- uid: Material.Blazor.MBDecimalField3.Min*
+  name: Min
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_Min_
+  commentId: Overload:Material.Blazor.MBDecimalField3.Min
+  fullName: Material.Blazor.MBDecimalField3.Min
+  nameWithType: MBDecimalField3.Min
+- uid: Material.Blazor.MBDecimalField3.NumericFormat
+  name: NumericFormat
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_NumericFormat
+  commentId: P:Material.Blazor.MBDecimalField3.NumericFormat
+  fullName: Material.Blazor.MBDecimalField3.NumericFormat
+  nameWithType: MBDecimalField3.NumericFormat
+- uid: Material.Blazor.MBDecimalField3.NumericFormat*
+  name: NumericFormat
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_NumericFormat_
+  commentId: Overload:Material.Blazor.MBDecimalField3.NumericFormat
+  fullName: Material.Blazor.MBDecimalField3.NumericFormat
+  nameWithType: MBDecimalField3.NumericFormat
+- uid: Material.Blazor.MBDecimalField3.NumericSingularFormat
+  name: NumericSingularFormat
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_NumericSingularFormat
+  commentId: P:Material.Blazor.MBDecimalField3.NumericSingularFormat
+  fullName: Material.Blazor.MBDecimalField3.NumericSingularFormat
+  nameWithType: MBDecimalField3.NumericSingularFormat
+- uid: Material.Blazor.MBDecimalField3.NumericSingularFormat*
+  name: NumericSingularFormat
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_NumericSingularFormat_
+  commentId: Overload:Material.Blazor.MBDecimalField3.NumericSingularFormat
+  fullName: Material.Blazor.MBDecimalField3.NumericSingularFormat
+  nameWithType: MBDecimalField3.NumericSingularFormat
+- uid: Material.Blazor.MBDecimalField3.OnInitializedAsync
+  name: OnInitializedAsync()
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_OnInitializedAsync
+  commentId: M:Material.Blazor.MBDecimalField3.OnInitializedAsync
+  fullName: Material.Blazor.MBDecimalField3.OnInitializedAsync()
+  nameWithType: MBDecimalField3.OnInitializedAsync()
+- uid: Material.Blazor.MBDecimalField3.OnInitializedAsync*
+  name: OnInitializedAsync
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_OnInitializedAsync_
+  commentId: Overload:Material.Blazor.MBDecimalField3.OnInitializedAsync
+  fullName: Material.Blazor.MBDecimalField3.OnInitializedAsync
+  nameWithType: MBDecimalField3.OnInitializedAsync
+- uid: Material.Blazor.MBDecimalField3.Prefix
+  name: Prefix
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_Prefix
+  commentId: P:Material.Blazor.MBDecimalField3.Prefix
+  fullName: Material.Blazor.MBDecimalField3.Prefix
+  nameWithType: MBDecimalField3.Prefix
+- uid: Material.Blazor.MBDecimalField3.Prefix*
+  name: Prefix
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_Prefix_
+  commentId: Overload:Material.Blazor.MBDecimalField3.Prefix
+  fullName: Material.Blazor.MBDecimalField3.Prefix
+  nameWithType: MBDecimalField3.Prefix
+- uid: Material.Blazor.MBDecimalField3.Suffix
+  name: Suffix
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_Suffix
+  commentId: P:Material.Blazor.MBDecimalField3.Suffix
+  fullName: Material.Blazor.MBDecimalField3.Suffix
+  nameWithType: MBDecimalField3.Suffix
+- uid: Material.Blazor.MBDecimalField3.Suffix*
+  name: Suffix
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_Suffix_
+  commentId: Overload:Material.Blazor.MBDecimalField3.Suffix
+  fullName: Material.Blazor.MBDecimalField3.Suffix
+  nameWithType: MBDecimalField3.Suffix
+- uid: Material.Blazor.MBDecimalField3.SupportingText
+  name: SupportingText
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_SupportingText
+  commentId: P:Material.Blazor.MBDecimalField3.SupportingText
+  fullName: Material.Blazor.MBDecimalField3.SupportingText
+  nameWithType: MBDecimalField3.SupportingText
+- uid: Material.Blazor.MBDecimalField3.SupportingText*
+  name: SupportingText
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_SupportingText_
+  commentId: Overload:Material.Blazor.MBDecimalField3.SupportingText
+  fullName: Material.Blazor.MBDecimalField3.SupportingText
+  nameWithType: MBDecimalField3.SupportingText
+- uid: Material.Blazor.MBDecimalField3.SupportingTextPersistent
+  name: SupportingTextPersistent
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_SupportingTextPersistent
+  commentId: P:Material.Blazor.MBDecimalField3.SupportingTextPersistent
+  fullName: Material.Blazor.MBDecimalField3.SupportingTextPersistent
+  nameWithType: MBDecimalField3.SupportingTextPersistent
+- uid: Material.Blazor.MBDecimalField3.SupportingTextPersistent*
+  name: SupportingTextPersistent
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_SupportingTextPersistent_
+  commentId: Overload:Material.Blazor.MBDecimalField3.SupportingTextPersistent
+  fullName: Material.Blazor.MBDecimalField3.SupportingTextPersistent
+  nameWithType: MBDecimalField3.SupportingTextPersistent
+- uid: Material.Blazor.MBDecimalField3.TextAlignStyle
+  name: TextAlignStyle
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_TextAlignStyle
+  commentId: P:Material.Blazor.MBDecimalField3.TextAlignStyle
+  fullName: Material.Blazor.MBDecimalField3.TextAlignStyle
+  nameWithType: MBDecimalField3.TextAlignStyle
+- uid: Material.Blazor.MBDecimalField3.TextAlignStyle*
+  name: TextAlignStyle
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_TextAlignStyle_
+  commentId: Overload:Material.Blazor.MBDecimalField3.TextAlignStyle
+  fullName: Material.Blazor.MBDecimalField3.TextAlignStyle
+  nameWithType: MBDecimalField3.TextAlignStyle
+- uid: Material.Blazor.MBDecimalField3.TextFieldId
+  name: TextFieldId
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_TextFieldId
+  commentId: P:Material.Blazor.MBDecimalField3.TextFieldId
+  fullName: Material.Blazor.MBDecimalField3.TextFieldId
+  nameWithType: MBDecimalField3.TextFieldId
+- uid: Material.Blazor.MBDecimalField3.TextFieldId*
+  name: TextFieldId
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_TextFieldId_
+  commentId: Overload:Material.Blazor.MBDecimalField3.TextFieldId
+  fullName: Material.Blazor.MBDecimalField3.TextFieldId
+  nameWithType: MBDecimalField3.TextFieldId
+- uid: Material.Blazor.MBDecimalField3.TextInputStyle
+  name: TextInputStyle
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_TextInputStyle
+  commentId: P:Material.Blazor.MBDecimalField3.TextInputStyle
+  fullName: Material.Blazor.MBDecimalField3.TextInputStyle
+  nameWithType: MBDecimalField3.TextInputStyle
+- uid: Material.Blazor.MBDecimalField3.TextInputStyle*
+  name: TextInputStyle
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_TextInputStyle_
+  commentId: Overload:Material.Blazor.MBDecimalField3.TextInputStyle
+  fullName: Material.Blazor.MBDecimalField3.TextInputStyle
+  nameWithType: MBDecimalField3.TextInputStyle
+- uid: Material.Blazor.MBDecimalField3.TrailingIcon
+  name: TrailingIcon
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_TrailingIcon
+  commentId: P:Material.Blazor.MBDecimalField3.TrailingIcon
+  fullName: Material.Blazor.MBDecimalField3.TrailingIcon
+  nameWithType: MBDecimalField3.TrailingIcon
+- uid: Material.Blazor.MBDecimalField3.TrailingIcon*
+  name: TrailingIcon
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_TrailingIcon_
+  commentId: Overload:Material.Blazor.MBDecimalField3.TrailingIcon
+  fullName: Material.Blazor.MBDecimalField3.TrailingIcon
+  nameWithType: MBDecimalField3.TrailingIcon
+- uid: Material.Blazor.MBDecimalField3.TrailingToggleIcon
+  name: TrailingToggleIcon
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_TrailingToggleIcon
+  commentId: P:Material.Blazor.MBDecimalField3.TrailingToggleIcon
+  fullName: Material.Blazor.MBDecimalField3.TrailingToggleIcon
+  nameWithType: MBDecimalField3.TrailingToggleIcon
+- uid: Material.Blazor.MBDecimalField3.TrailingToggleIcon*
+  name: TrailingToggleIcon
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_TrailingToggleIcon_
+  commentId: Overload:Material.Blazor.MBDecimalField3.TrailingToggleIcon
+  fullName: Material.Blazor.MBDecimalField3.TrailingToggleIcon
+  nameWithType: MBDecimalField3.TrailingToggleIcon
+- uid: Material.Blazor.MBDecimalField3.TrailingToggleIconButtonLink
+  name: TrailingToggleIconButtonLink
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_TrailingToggleIconButtonLink
+  commentId: P:Material.Blazor.MBDecimalField3.TrailingToggleIconButtonLink
+  fullName: Material.Blazor.MBDecimalField3.TrailingToggleIconButtonLink
+  nameWithType: MBDecimalField3.TrailingToggleIconButtonLink
+- uid: Material.Blazor.MBDecimalField3.TrailingToggleIconButtonLink*
+  name: TrailingToggleIconButtonLink
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_TrailingToggleIconButtonLink_
+  commentId: Overload:Material.Blazor.MBDecimalField3.TrailingToggleIconButtonLink
+  fullName: Material.Blazor.MBDecimalField3.TrailingToggleIconButtonLink
+  nameWithType: MBDecimalField3.TrailingToggleIconButtonLink
+- uid: Material.Blazor.MBDecimalField3.TrailingToggleIconButtonLinkTarget
+  name: TrailingToggleIconButtonLinkTarget
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_TrailingToggleIconButtonLinkTarget
+  commentId: P:Material.Blazor.MBDecimalField3.TrailingToggleIconButtonLinkTarget
+  fullName: Material.Blazor.MBDecimalField3.TrailingToggleIconButtonLinkTarget
+  nameWithType: MBDecimalField3.TrailingToggleIconButtonLinkTarget
+- uid: Material.Blazor.MBDecimalField3.TrailingToggleIconButtonLinkTarget*
+  name: TrailingToggleIconButtonLinkTarget
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_TrailingToggleIconButtonLinkTarget_
+  commentId: Overload:Material.Blazor.MBDecimalField3.TrailingToggleIconButtonLinkTarget
+  fullName: Material.Blazor.MBDecimalField3.TrailingToggleIconButtonLinkTarget
+  nameWithType: MBDecimalField3.TrailingToggleIconButtonLinkTarget
+- uid: Material.Blazor.MBDecimalField3.TrailingToggleIconSelected
+  name: TrailingToggleIconSelected
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_TrailingToggleIconSelected
+  commentId: P:Material.Blazor.MBDecimalField3.TrailingToggleIconSelected
+  fullName: Material.Blazor.MBDecimalField3.TrailingToggleIconSelected
+  nameWithType: MBDecimalField3.TrailingToggleIconSelected
+- uid: Material.Blazor.MBDecimalField3.TrailingToggleIconSelected*
+  name: TrailingToggleIconSelected
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_TrailingToggleIconSelected_
+  commentId: Overload:Material.Blazor.MBDecimalField3.TrailingToggleIconSelected
+  fullName: Material.Blazor.MBDecimalField3.TrailingToggleIconSelected
+  nameWithType: MBDecimalField3.TrailingToggleIconSelected
+- uid: Material.Blazor.MBDecimalField3.UnfocusedMagnitude
+  name: UnfocusedMagnitude
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_UnfocusedMagnitude
+  commentId: P:Material.Blazor.MBDecimalField3.UnfocusedMagnitude
+  fullName: Material.Blazor.MBDecimalField3.UnfocusedMagnitude
+  nameWithType: MBDecimalField3.UnfocusedMagnitude
+- uid: Material.Blazor.MBDecimalField3.UnfocusedMagnitude*
+  name: UnfocusedMagnitude
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_UnfocusedMagnitude_
+  commentId: Overload:Material.Blazor.MBDecimalField3.UnfocusedMagnitude
+  fullName: Material.Blazor.MBDecimalField3.UnfocusedMagnitude
+  nameWithType: MBDecimalField3.UnfocusedMagnitude
+- uid: Material.Blazor.MBDecimalField3.ValidationMessageFor
+  name: ValidationMessageFor
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_ValidationMessageFor
+  commentId: P:Material.Blazor.MBDecimalField3.ValidationMessageFor
+  fullName: Material.Blazor.MBDecimalField3.ValidationMessageFor
+  nameWithType: MBDecimalField3.ValidationMessageFor
+- uid: Material.Blazor.MBDecimalField3.ValidationMessageFor*
+  name: ValidationMessageFor
+  href: api/Material.Blazor.MBDecimalField3.html#Material_Blazor_MBDecimalField3_ValidationMessageFor_
+  commentId: Overload:Material.Blazor.MBDecimalField3.ValidationMessageFor
+  fullName: Material.Blazor.MBDecimalField3.ValidationMessageFor
+  nameWithType: MBDecimalField3.ValidationMessageFor
 - uid: Material.Blazor.MBDensity
   name: MBDensity
   href: api/Material.Blazor.MBDensity.html
@@ -3732,6 +4312,366 @@ references:
   commentId: Overload:Material.Blazor.MBDialogButton.{Clone}$
   fullName: Material.Blazor.MBDialogButton.<Clone>$
   nameWithType: MBDialogButton.<Clone>$
+- uid: Material.Blazor.MBDoubleField
+  name: MBDoubleField
+  href: api/Material.Blazor.MBDoubleField.html
+  commentId: T:Material.Blazor.MBDoubleField
+  fullName: Material.Blazor.MBDoubleField
+  nameWithType: MBDoubleField
+- uid: Material.Blazor.MBDoubleField.#ctor
+  name: MBDoubleField()
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField__ctor
+  commentId: M:Material.Blazor.MBDoubleField.#ctor
+  name.vb: New()
+  fullName: Material.Blazor.MBDoubleField.MBDoubleField()
+  fullName.vb: Material.Blazor.MBDoubleField.New()
+  nameWithType: MBDoubleField.MBDoubleField()
+  nameWithType.vb: MBDoubleField.New()
+- uid: Material.Blazor.MBDoubleField.#ctor*
+  name: MBDoubleField
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField__ctor_
+  commentId: Overload:Material.Blazor.MBDoubleField.#ctor
+  name.vb: New
+  fullName: Material.Blazor.MBDoubleField.MBDoubleField
+  fullName.vb: Material.Blazor.MBDoubleField.New
+  nameWithType: MBDoubleField.MBDoubleField
+  nameWithType.vb: MBDoubleField.New
+- uid: Material.Blazor.MBDoubleField.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  name: BuildRenderTree(RenderTreeBuilder)
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
+  commentId: M:Material.Blazor.MBDoubleField.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  fullName: Material.Blazor.MBDoubleField.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  nameWithType: MBDoubleField.BuildRenderTree(RenderTreeBuilder)
+- uid: Material.Blazor.MBDoubleField.BuildRenderTree*
+  name: BuildRenderTree
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_BuildRenderTree_
+  commentId: Overload:Material.Blazor.MBDoubleField.BuildRenderTree
+  fullName: Material.Blazor.MBDoubleField.BuildRenderTree
+  nameWithType: MBDoubleField.BuildRenderTree
+- uid: Material.Blazor.MBDoubleField.DecimalPlaces
+  name: DecimalPlaces
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_DecimalPlaces
+  commentId: P:Material.Blazor.MBDoubleField.DecimalPlaces
+  fullName: Material.Blazor.MBDoubleField.DecimalPlaces
+  nameWithType: MBDoubleField.DecimalPlaces
+- uid: Material.Blazor.MBDoubleField.DecimalPlaces*
+  name: DecimalPlaces
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_DecimalPlaces_
+  commentId: Overload:Material.Blazor.MBDoubleField.DecimalPlaces
+  fullName: Material.Blazor.MBDoubleField.DecimalPlaces
+  nameWithType: MBDoubleField.DecimalPlaces
+- uid: Material.Blazor.MBDoubleField.Density
+  name: Density
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_Density
+  commentId: P:Material.Blazor.MBDoubleField.Density
+  fullName: Material.Blazor.MBDoubleField.Density
+  nameWithType: MBDoubleField.Density
+- uid: Material.Blazor.MBDoubleField.Density*
+  name: Density
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_Density_
+  commentId: Overload:Material.Blazor.MBDoubleField.Density
+  fullName: Material.Blazor.MBDoubleField.Density
+  nameWithType: MBDoubleField.Density
+- uid: Material.Blazor.MBDoubleField.FocusedMagnitude
+  name: FocusedMagnitude
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_FocusedMagnitude
+  commentId: P:Material.Blazor.MBDoubleField.FocusedMagnitude
+  fullName: Material.Blazor.MBDoubleField.FocusedMagnitude
+  nameWithType: MBDoubleField.FocusedMagnitude
+- uid: Material.Blazor.MBDoubleField.FocusedMagnitude*
+  name: FocusedMagnitude
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_FocusedMagnitude_
+  commentId: Overload:Material.Blazor.MBDoubleField.FocusedMagnitude
+  fullName: Material.Blazor.MBDoubleField.FocusedMagnitude
+  nameWithType: MBDoubleField.FocusedMagnitude
+- uid: Material.Blazor.MBDoubleField.Label
+  name: Label
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_Label
+  commentId: P:Material.Blazor.MBDoubleField.Label
+  fullName: Material.Blazor.MBDoubleField.Label
+  nameWithType: MBDoubleField.Label
+- uid: Material.Blazor.MBDoubleField.Label*
+  name: Label
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_Label_
+  commentId: Overload:Material.Blazor.MBDoubleField.Label
+  fullName: Material.Blazor.MBDoubleField.Label
+  nameWithType: MBDoubleField.Label
+- uid: Material.Blazor.MBDoubleField.LeadingIcon
+  name: LeadingIcon
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_LeadingIcon
+  commentId: P:Material.Blazor.MBDoubleField.LeadingIcon
+  fullName: Material.Blazor.MBDoubleField.LeadingIcon
+  nameWithType: MBDoubleField.LeadingIcon
+- uid: Material.Blazor.MBDoubleField.LeadingIcon*
+  name: LeadingIcon
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_LeadingIcon_
+  commentId: Overload:Material.Blazor.MBDoubleField.LeadingIcon
+  fullName: Material.Blazor.MBDoubleField.LeadingIcon
+  nameWithType: MBDoubleField.LeadingIcon
+- uid: Material.Blazor.MBDoubleField.LeadingToggleIcon
+  name: LeadingToggleIcon
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_LeadingToggleIcon
+  commentId: P:Material.Blazor.MBDoubleField.LeadingToggleIcon
+  fullName: Material.Blazor.MBDoubleField.LeadingToggleIcon
+  nameWithType: MBDoubleField.LeadingToggleIcon
+- uid: Material.Blazor.MBDoubleField.LeadingToggleIcon*
+  name: LeadingToggleIcon
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_LeadingToggleIcon_
+  commentId: Overload:Material.Blazor.MBDoubleField.LeadingToggleIcon
+  fullName: Material.Blazor.MBDoubleField.LeadingToggleIcon
+  nameWithType: MBDoubleField.LeadingToggleIcon
+- uid: Material.Blazor.MBDoubleField.LeadingToggleIconButtonLink
+  name: LeadingToggleIconButtonLink
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_LeadingToggleIconButtonLink
+  commentId: P:Material.Blazor.MBDoubleField.LeadingToggleIconButtonLink
+  fullName: Material.Blazor.MBDoubleField.LeadingToggleIconButtonLink
+  nameWithType: MBDoubleField.LeadingToggleIconButtonLink
+- uid: Material.Blazor.MBDoubleField.LeadingToggleIconButtonLink*
+  name: LeadingToggleIconButtonLink
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_LeadingToggleIconButtonLink_
+  commentId: Overload:Material.Blazor.MBDoubleField.LeadingToggleIconButtonLink
+  fullName: Material.Blazor.MBDoubleField.LeadingToggleIconButtonLink
+  nameWithType: MBDoubleField.LeadingToggleIconButtonLink
+- uid: Material.Blazor.MBDoubleField.LeadingToggleIconButtonLinkTarget
+  name: LeadingToggleIconButtonLinkTarget
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_LeadingToggleIconButtonLinkTarget
+  commentId: P:Material.Blazor.MBDoubleField.LeadingToggleIconButtonLinkTarget
+  fullName: Material.Blazor.MBDoubleField.LeadingToggleIconButtonLinkTarget
+  nameWithType: MBDoubleField.LeadingToggleIconButtonLinkTarget
+- uid: Material.Blazor.MBDoubleField.LeadingToggleIconButtonLinkTarget*
+  name: LeadingToggleIconButtonLinkTarget
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_LeadingToggleIconButtonLinkTarget_
+  commentId: Overload:Material.Blazor.MBDoubleField.LeadingToggleIconButtonLinkTarget
+  fullName: Material.Blazor.MBDoubleField.LeadingToggleIconButtonLinkTarget
+  nameWithType: MBDoubleField.LeadingToggleIconButtonLinkTarget
+- uid: Material.Blazor.MBDoubleField.LeadingToggleIconSelected
+  name: LeadingToggleIconSelected
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_LeadingToggleIconSelected
+  commentId: P:Material.Blazor.MBDoubleField.LeadingToggleIconSelected
+  fullName: Material.Blazor.MBDoubleField.LeadingToggleIconSelected
+  nameWithType: MBDoubleField.LeadingToggleIconSelected
+- uid: Material.Blazor.MBDoubleField.LeadingToggleIconSelected*
+  name: LeadingToggleIconSelected
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_LeadingToggleIconSelected_
+  commentId: Overload:Material.Blazor.MBDoubleField.LeadingToggleIconSelected
+  fullName: Material.Blazor.MBDoubleField.LeadingToggleIconSelected
+  nameWithType: MBDoubleField.LeadingToggleIconSelected
+- uid: Material.Blazor.MBDoubleField.Max
+  name: Max
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_Max
+  commentId: P:Material.Blazor.MBDoubleField.Max
+  fullName: Material.Blazor.MBDoubleField.Max
+  nameWithType: MBDoubleField.Max
+- uid: Material.Blazor.MBDoubleField.Max*
+  name: Max
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_Max_
+  commentId: Overload:Material.Blazor.MBDoubleField.Max
+  fullName: Material.Blazor.MBDoubleField.Max
+  nameWithType: MBDoubleField.Max
+- uid: Material.Blazor.MBDoubleField.Min
+  name: Min
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_Min
+  commentId: P:Material.Blazor.MBDoubleField.Min
+  fullName: Material.Blazor.MBDoubleField.Min
+  nameWithType: MBDoubleField.Min
+- uid: Material.Blazor.MBDoubleField.Min*
+  name: Min
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_Min_
+  commentId: Overload:Material.Blazor.MBDoubleField.Min
+  fullName: Material.Blazor.MBDoubleField.Min
+  nameWithType: MBDoubleField.Min
+- uid: Material.Blazor.MBDoubleField.NumericFormat
+  name: NumericFormat
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_NumericFormat
+  commentId: P:Material.Blazor.MBDoubleField.NumericFormat
+  fullName: Material.Blazor.MBDoubleField.NumericFormat
+  nameWithType: MBDoubleField.NumericFormat
+- uid: Material.Blazor.MBDoubleField.NumericFormat*
+  name: NumericFormat
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_NumericFormat_
+  commentId: Overload:Material.Blazor.MBDoubleField.NumericFormat
+  fullName: Material.Blazor.MBDoubleField.NumericFormat
+  nameWithType: MBDoubleField.NumericFormat
+- uid: Material.Blazor.MBDoubleField.NumericSingularFormat
+  name: NumericSingularFormat
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_NumericSingularFormat
+  commentId: P:Material.Blazor.MBDoubleField.NumericSingularFormat
+  fullName: Material.Blazor.MBDoubleField.NumericSingularFormat
+  nameWithType: MBDoubleField.NumericSingularFormat
+- uid: Material.Blazor.MBDoubleField.NumericSingularFormat*
+  name: NumericSingularFormat
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_NumericSingularFormat_
+  commentId: Overload:Material.Blazor.MBDoubleField.NumericSingularFormat
+  fullName: Material.Blazor.MBDoubleField.NumericSingularFormat
+  nameWithType: MBDoubleField.NumericSingularFormat
+- uid: Material.Blazor.MBDoubleField.Prefix
+  name: Prefix
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_Prefix
+  commentId: P:Material.Blazor.MBDoubleField.Prefix
+  fullName: Material.Blazor.MBDoubleField.Prefix
+  nameWithType: MBDoubleField.Prefix
+- uid: Material.Blazor.MBDoubleField.Prefix*
+  name: Prefix
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_Prefix_
+  commentId: Overload:Material.Blazor.MBDoubleField.Prefix
+  fullName: Material.Blazor.MBDoubleField.Prefix
+  nameWithType: MBDoubleField.Prefix
+- uid: Material.Blazor.MBDoubleField.Suffix
+  name: Suffix
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_Suffix
+  commentId: P:Material.Blazor.MBDoubleField.Suffix
+  fullName: Material.Blazor.MBDoubleField.Suffix
+  nameWithType: MBDoubleField.Suffix
+- uid: Material.Blazor.MBDoubleField.Suffix*
+  name: Suffix
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_Suffix_
+  commentId: Overload:Material.Blazor.MBDoubleField.Suffix
+  fullName: Material.Blazor.MBDoubleField.Suffix
+  nameWithType: MBDoubleField.Suffix
+- uid: Material.Blazor.MBDoubleField.SupportingText
+  name: SupportingText
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_SupportingText
+  commentId: P:Material.Blazor.MBDoubleField.SupportingText
+  fullName: Material.Blazor.MBDoubleField.SupportingText
+  nameWithType: MBDoubleField.SupportingText
+- uid: Material.Blazor.MBDoubleField.SupportingText*
+  name: SupportingText
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_SupportingText_
+  commentId: Overload:Material.Blazor.MBDoubleField.SupportingText
+  fullName: Material.Blazor.MBDoubleField.SupportingText
+  nameWithType: MBDoubleField.SupportingText
+- uid: Material.Blazor.MBDoubleField.SupportingTextPersistent
+  name: SupportingTextPersistent
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_SupportingTextPersistent
+  commentId: P:Material.Blazor.MBDoubleField.SupportingTextPersistent
+  fullName: Material.Blazor.MBDoubleField.SupportingTextPersistent
+  nameWithType: MBDoubleField.SupportingTextPersistent
+- uid: Material.Blazor.MBDoubleField.SupportingTextPersistent*
+  name: SupportingTextPersistent
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_SupportingTextPersistent_
+  commentId: Overload:Material.Blazor.MBDoubleField.SupportingTextPersistent
+  fullName: Material.Blazor.MBDoubleField.SupportingTextPersistent
+  nameWithType: MBDoubleField.SupportingTextPersistent
+- uid: Material.Blazor.MBDoubleField.TextAlignStyle
+  name: TextAlignStyle
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_TextAlignStyle
+  commentId: P:Material.Blazor.MBDoubleField.TextAlignStyle
+  fullName: Material.Blazor.MBDoubleField.TextAlignStyle
+  nameWithType: MBDoubleField.TextAlignStyle
+- uid: Material.Blazor.MBDoubleField.TextAlignStyle*
+  name: TextAlignStyle
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_TextAlignStyle_
+  commentId: Overload:Material.Blazor.MBDoubleField.TextAlignStyle
+  fullName: Material.Blazor.MBDoubleField.TextAlignStyle
+  nameWithType: MBDoubleField.TextAlignStyle
+- uid: Material.Blazor.MBDoubleField.TextFieldId
+  name: TextFieldId
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_TextFieldId
+  commentId: P:Material.Blazor.MBDoubleField.TextFieldId
+  fullName: Material.Blazor.MBDoubleField.TextFieldId
+  nameWithType: MBDoubleField.TextFieldId
+- uid: Material.Blazor.MBDoubleField.TextFieldId*
+  name: TextFieldId
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_TextFieldId_
+  commentId: Overload:Material.Blazor.MBDoubleField.TextFieldId
+  fullName: Material.Blazor.MBDoubleField.TextFieldId
+  nameWithType: MBDoubleField.TextFieldId
+- uid: Material.Blazor.MBDoubleField.TextInputStyle
+  name: TextInputStyle
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_TextInputStyle
+  commentId: P:Material.Blazor.MBDoubleField.TextInputStyle
+  fullName: Material.Blazor.MBDoubleField.TextInputStyle
+  nameWithType: MBDoubleField.TextInputStyle
+- uid: Material.Blazor.MBDoubleField.TextInputStyle*
+  name: TextInputStyle
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_TextInputStyle_
+  commentId: Overload:Material.Blazor.MBDoubleField.TextInputStyle
+  fullName: Material.Blazor.MBDoubleField.TextInputStyle
+  nameWithType: MBDoubleField.TextInputStyle
+- uid: Material.Blazor.MBDoubleField.TrailingIcon
+  name: TrailingIcon
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_TrailingIcon
+  commentId: P:Material.Blazor.MBDoubleField.TrailingIcon
+  fullName: Material.Blazor.MBDoubleField.TrailingIcon
+  nameWithType: MBDoubleField.TrailingIcon
+- uid: Material.Blazor.MBDoubleField.TrailingIcon*
+  name: TrailingIcon
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_TrailingIcon_
+  commentId: Overload:Material.Blazor.MBDoubleField.TrailingIcon
+  fullName: Material.Blazor.MBDoubleField.TrailingIcon
+  nameWithType: MBDoubleField.TrailingIcon
+- uid: Material.Blazor.MBDoubleField.TrailingToggleIcon
+  name: TrailingToggleIcon
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_TrailingToggleIcon
+  commentId: P:Material.Blazor.MBDoubleField.TrailingToggleIcon
+  fullName: Material.Blazor.MBDoubleField.TrailingToggleIcon
+  nameWithType: MBDoubleField.TrailingToggleIcon
+- uid: Material.Blazor.MBDoubleField.TrailingToggleIcon*
+  name: TrailingToggleIcon
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_TrailingToggleIcon_
+  commentId: Overload:Material.Blazor.MBDoubleField.TrailingToggleIcon
+  fullName: Material.Blazor.MBDoubleField.TrailingToggleIcon
+  nameWithType: MBDoubleField.TrailingToggleIcon
+- uid: Material.Blazor.MBDoubleField.TrailingToggleIconButtonLink
+  name: TrailingToggleIconButtonLink
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_TrailingToggleIconButtonLink
+  commentId: P:Material.Blazor.MBDoubleField.TrailingToggleIconButtonLink
+  fullName: Material.Blazor.MBDoubleField.TrailingToggleIconButtonLink
+  nameWithType: MBDoubleField.TrailingToggleIconButtonLink
+- uid: Material.Blazor.MBDoubleField.TrailingToggleIconButtonLink*
+  name: TrailingToggleIconButtonLink
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_TrailingToggleIconButtonLink_
+  commentId: Overload:Material.Blazor.MBDoubleField.TrailingToggleIconButtonLink
+  fullName: Material.Blazor.MBDoubleField.TrailingToggleIconButtonLink
+  nameWithType: MBDoubleField.TrailingToggleIconButtonLink
+- uid: Material.Blazor.MBDoubleField.TrailingToggleIconButtonLinkTarget
+  name: TrailingToggleIconButtonLinkTarget
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_TrailingToggleIconButtonLinkTarget
+  commentId: P:Material.Blazor.MBDoubleField.TrailingToggleIconButtonLinkTarget
+  fullName: Material.Blazor.MBDoubleField.TrailingToggleIconButtonLinkTarget
+  nameWithType: MBDoubleField.TrailingToggleIconButtonLinkTarget
+- uid: Material.Blazor.MBDoubleField.TrailingToggleIconButtonLinkTarget*
+  name: TrailingToggleIconButtonLinkTarget
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_TrailingToggleIconButtonLinkTarget_
+  commentId: Overload:Material.Blazor.MBDoubleField.TrailingToggleIconButtonLinkTarget
+  fullName: Material.Blazor.MBDoubleField.TrailingToggleIconButtonLinkTarget
+  nameWithType: MBDoubleField.TrailingToggleIconButtonLinkTarget
+- uid: Material.Blazor.MBDoubleField.TrailingToggleIconSelected
+  name: TrailingToggleIconSelected
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_TrailingToggleIconSelected
+  commentId: P:Material.Blazor.MBDoubleField.TrailingToggleIconSelected
+  fullName: Material.Blazor.MBDoubleField.TrailingToggleIconSelected
+  nameWithType: MBDoubleField.TrailingToggleIconSelected
+- uid: Material.Blazor.MBDoubleField.TrailingToggleIconSelected*
+  name: TrailingToggleIconSelected
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_TrailingToggleIconSelected_
+  commentId: Overload:Material.Blazor.MBDoubleField.TrailingToggleIconSelected
+  fullName: Material.Blazor.MBDoubleField.TrailingToggleIconSelected
+  nameWithType: MBDoubleField.TrailingToggleIconSelected
+- uid: Material.Blazor.MBDoubleField.UnfocusedMagnitude
+  name: UnfocusedMagnitude
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_UnfocusedMagnitude
+  commentId: P:Material.Blazor.MBDoubleField.UnfocusedMagnitude
+  fullName: Material.Blazor.MBDoubleField.UnfocusedMagnitude
+  nameWithType: MBDoubleField.UnfocusedMagnitude
+- uid: Material.Blazor.MBDoubleField.UnfocusedMagnitude*
+  name: UnfocusedMagnitude
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_UnfocusedMagnitude_
+  commentId: Overload:Material.Blazor.MBDoubleField.UnfocusedMagnitude
+  fullName: Material.Blazor.MBDoubleField.UnfocusedMagnitude
+  nameWithType: MBDoubleField.UnfocusedMagnitude
+- uid: Material.Blazor.MBDoubleField.ValidationMessageFor
+  name: ValidationMessageFor
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_ValidationMessageFor
+  commentId: P:Material.Blazor.MBDoubleField.ValidationMessageFor
+  fullName: Material.Blazor.MBDoubleField.ValidationMessageFor
+  nameWithType: MBDoubleField.ValidationMessageFor
+- uid: Material.Blazor.MBDoubleField.ValidationMessageFor*
+  name: ValidationMessageFor
+  href: api/Material.Blazor.MBDoubleField.html#Material_Blazor_MBDoubleField_ValidationMessageFor_
+  commentId: Overload:Material.Blazor.MBDoubleField.ValidationMessageFor
+  fullName: Material.Blazor.MBDoubleField.ValidationMessageFor
+  nameWithType: MBDoubleField.ValidationMessageFor
 - uid: Material.Blazor.MBDoubleField2
   name: MBDoubleField2
   href: api/Material.Blazor.MBDoubleField2.html
@@ -4533,6 +5473,354 @@ references:
   commentId: Overload:Material.Blazor.MBIconWithParameters.OnParametersSetAsync
   fullName: Material.Blazor.MBIconWithParameters.OnParametersSetAsync
   nameWithType: MBIconWithParameters.OnParametersSetAsync
+- uid: Material.Blazor.MBIntField
+  name: MBIntField
+  href: api/Material.Blazor.MBIntField.html
+  commentId: T:Material.Blazor.MBIntField
+  fullName: Material.Blazor.MBIntField
+  nameWithType: MBIntField
+- uid: Material.Blazor.MBIntField.#ctor
+  name: MBIntField()
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField__ctor
+  commentId: M:Material.Blazor.MBIntField.#ctor
+  name.vb: New()
+  fullName: Material.Blazor.MBIntField.MBIntField()
+  fullName.vb: Material.Blazor.MBIntField.New()
+  nameWithType: MBIntField.MBIntField()
+  nameWithType.vb: MBIntField.New()
+- uid: Material.Blazor.MBIntField.#ctor*
+  name: MBIntField
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField__ctor_
+  commentId: Overload:Material.Blazor.MBIntField.#ctor
+  name.vb: New
+  fullName: Material.Blazor.MBIntField.MBIntField
+  fullName.vb: Material.Blazor.MBIntField.New
+  nameWithType: MBIntField.MBIntField
+  nameWithType.vb: MBIntField.New
+- uid: Material.Blazor.MBIntField.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  name: BuildRenderTree(RenderTreeBuilder)
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
+  commentId: M:Material.Blazor.MBIntField.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  fullName: Material.Blazor.MBIntField.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  nameWithType: MBIntField.BuildRenderTree(RenderTreeBuilder)
+- uid: Material.Blazor.MBIntField.BuildRenderTree*
+  name: BuildRenderTree
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_BuildRenderTree_
+  commentId: Overload:Material.Blazor.MBIntField.BuildRenderTree
+  fullName: Material.Blazor.MBIntField.BuildRenderTree
+  nameWithType: MBIntField.BuildRenderTree
+- uid: Material.Blazor.MBIntField.Density
+  name: Density
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_Density
+  commentId: P:Material.Blazor.MBIntField.Density
+  fullName: Material.Blazor.MBIntField.Density
+  nameWithType: MBIntField.Density
+- uid: Material.Blazor.MBIntField.Density*
+  name: Density
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_Density_
+  commentId: Overload:Material.Blazor.MBIntField.Density
+  fullName: Material.Blazor.MBIntField.Density
+  nameWithType: MBIntField.Density
+- uid: Material.Blazor.MBIntField.FocusedMagnitude
+  name: FocusedMagnitude
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_FocusedMagnitude
+  commentId: P:Material.Blazor.MBIntField.FocusedMagnitude
+  fullName: Material.Blazor.MBIntField.FocusedMagnitude
+  nameWithType: MBIntField.FocusedMagnitude
+- uid: Material.Blazor.MBIntField.FocusedMagnitude*
+  name: FocusedMagnitude
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_FocusedMagnitude_
+  commentId: Overload:Material.Blazor.MBIntField.FocusedMagnitude
+  fullName: Material.Blazor.MBIntField.FocusedMagnitude
+  nameWithType: MBIntField.FocusedMagnitude
+- uid: Material.Blazor.MBIntField.Label
+  name: Label
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_Label
+  commentId: P:Material.Blazor.MBIntField.Label
+  fullName: Material.Blazor.MBIntField.Label
+  nameWithType: MBIntField.Label
+- uid: Material.Blazor.MBIntField.Label*
+  name: Label
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_Label_
+  commentId: Overload:Material.Blazor.MBIntField.Label
+  fullName: Material.Blazor.MBIntField.Label
+  nameWithType: MBIntField.Label
+- uid: Material.Blazor.MBIntField.LeadingIcon
+  name: LeadingIcon
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_LeadingIcon
+  commentId: P:Material.Blazor.MBIntField.LeadingIcon
+  fullName: Material.Blazor.MBIntField.LeadingIcon
+  nameWithType: MBIntField.LeadingIcon
+- uid: Material.Blazor.MBIntField.LeadingIcon*
+  name: LeadingIcon
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_LeadingIcon_
+  commentId: Overload:Material.Blazor.MBIntField.LeadingIcon
+  fullName: Material.Blazor.MBIntField.LeadingIcon
+  nameWithType: MBIntField.LeadingIcon
+- uid: Material.Blazor.MBIntField.LeadingToggleIcon
+  name: LeadingToggleIcon
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_LeadingToggleIcon
+  commentId: P:Material.Blazor.MBIntField.LeadingToggleIcon
+  fullName: Material.Blazor.MBIntField.LeadingToggleIcon
+  nameWithType: MBIntField.LeadingToggleIcon
+- uid: Material.Blazor.MBIntField.LeadingToggleIcon*
+  name: LeadingToggleIcon
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_LeadingToggleIcon_
+  commentId: Overload:Material.Blazor.MBIntField.LeadingToggleIcon
+  fullName: Material.Blazor.MBIntField.LeadingToggleIcon
+  nameWithType: MBIntField.LeadingToggleIcon
+- uid: Material.Blazor.MBIntField.LeadingToggleIconButtonLink
+  name: LeadingToggleIconButtonLink
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_LeadingToggleIconButtonLink
+  commentId: P:Material.Blazor.MBIntField.LeadingToggleIconButtonLink
+  fullName: Material.Blazor.MBIntField.LeadingToggleIconButtonLink
+  nameWithType: MBIntField.LeadingToggleIconButtonLink
+- uid: Material.Blazor.MBIntField.LeadingToggleIconButtonLink*
+  name: LeadingToggleIconButtonLink
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_LeadingToggleIconButtonLink_
+  commentId: Overload:Material.Blazor.MBIntField.LeadingToggleIconButtonLink
+  fullName: Material.Blazor.MBIntField.LeadingToggleIconButtonLink
+  nameWithType: MBIntField.LeadingToggleIconButtonLink
+- uid: Material.Blazor.MBIntField.LeadingToggleIconButtonLinkTarget
+  name: LeadingToggleIconButtonLinkTarget
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_LeadingToggleIconButtonLinkTarget
+  commentId: P:Material.Blazor.MBIntField.LeadingToggleIconButtonLinkTarget
+  fullName: Material.Blazor.MBIntField.LeadingToggleIconButtonLinkTarget
+  nameWithType: MBIntField.LeadingToggleIconButtonLinkTarget
+- uid: Material.Blazor.MBIntField.LeadingToggleIconButtonLinkTarget*
+  name: LeadingToggleIconButtonLinkTarget
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_LeadingToggleIconButtonLinkTarget_
+  commentId: Overload:Material.Blazor.MBIntField.LeadingToggleIconButtonLinkTarget
+  fullName: Material.Blazor.MBIntField.LeadingToggleIconButtonLinkTarget
+  nameWithType: MBIntField.LeadingToggleIconButtonLinkTarget
+- uid: Material.Blazor.MBIntField.LeadingToggleIconSelected
+  name: LeadingToggleIconSelected
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_LeadingToggleIconSelected
+  commentId: P:Material.Blazor.MBIntField.LeadingToggleIconSelected
+  fullName: Material.Blazor.MBIntField.LeadingToggleIconSelected
+  nameWithType: MBIntField.LeadingToggleIconSelected
+- uid: Material.Blazor.MBIntField.LeadingToggleIconSelected*
+  name: LeadingToggleIconSelected
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_LeadingToggleIconSelected_
+  commentId: Overload:Material.Blazor.MBIntField.LeadingToggleIconSelected
+  fullName: Material.Blazor.MBIntField.LeadingToggleIconSelected
+  nameWithType: MBIntField.LeadingToggleIconSelected
+- uid: Material.Blazor.MBIntField.Max
+  name: Max
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_Max
+  commentId: P:Material.Blazor.MBIntField.Max
+  fullName: Material.Blazor.MBIntField.Max
+  nameWithType: MBIntField.Max
+- uid: Material.Blazor.MBIntField.Max*
+  name: Max
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_Max_
+  commentId: Overload:Material.Blazor.MBIntField.Max
+  fullName: Material.Blazor.MBIntField.Max
+  nameWithType: MBIntField.Max
+- uid: Material.Blazor.MBIntField.Min
+  name: Min
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_Min
+  commentId: P:Material.Blazor.MBIntField.Min
+  fullName: Material.Blazor.MBIntField.Min
+  nameWithType: MBIntField.Min
+- uid: Material.Blazor.MBIntField.Min*
+  name: Min
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_Min_
+  commentId: Overload:Material.Blazor.MBIntField.Min
+  fullName: Material.Blazor.MBIntField.Min
+  nameWithType: MBIntField.Min
+- uid: Material.Blazor.MBIntField.NumericFormat
+  name: NumericFormat
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_NumericFormat
+  commentId: P:Material.Blazor.MBIntField.NumericFormat
+  fullName: Material.Blazor.MBIntField.NumericFormat
+  nameWithType: MBIntField.NumericFormat
+- uid: Material.Blazor.MBIntField.NumericFormat*
+  name: NumericFormat
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_NumericFormat_
+  commentId: Overload:Material.Blazor.MBIntField.NumericFormat
+  fullName: Material.Blazor.MBIntField.NumericFormat
+  nameWithType: MBIntField.NumericFormat
+- uid: Material.Blazor.MBIntField.NumericSingularFormat
+  name: NumericSingularFormat
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_NumericSingularFormat
+  commentId: P:Material.Blazor.MBIntField.NumericSingularFormat
+  fullName: Material.Blazor.MBIntField.NumericSingularFormat
+  nameWithType: MBIntField.NumericSingularFormat
+- uid: Material.Blazor.MBIntField.NumericSingularFormat*
+  name: NumericSingularFormat
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_NumericSingularFormat_
+  commentId: Overload:Material.Blazor.MBIntField.NumericSingularFormat
+  fullName: Material.Blazor.MBIntField.NumericSingularFormat
+  nameWithType: MBIntField.NumericSingularFormat
+- uid: Material.Blazor.MBIntField.Prefix
+  name: Prefix
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_Prefix
+  commentId: P:Material.Blazor.MBIntField.Prefix
+  fullName: Material.Blazor.MBIntField.Prefix
+  nameWithType: MBIntField.Prefix
+- uid: Material.Blazor.MBIntField.Prefix*
+  name: Prefix
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_Prefix_
+  commentId: Overload:Material.Blazor.MBIntField.Prefix
+  fullName: Material.Blazor.MBIntField.Prefix
+  nameWithType: MBIntField.Prefix
+- uid: Material.Blazor.MBIntField.Suffix
+  name: Suffix
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_Suffix
+  commentId: P:Material.Blazor.MBIntField.Suffix
+  fullName: Material.Blazor.MBIntField.Suffix
+  nameWithType: MBIntField.Suffix
+- uid: Material.Blazor.MBIntField.Suffix*
+  name: Suffix
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_Suffix_
+  commentId: Overload:Material.Blazor.MBIntField.Suffix
+  fullName: Material.Blazor.MBIntField.Suffix
+  nameWithType: MBIntField.Suffix
+- uid: Material.Blazor.MBIntField.SupportingText
+  name: SupportingText
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_SupportingText
+  commentId: P:Material.Blazor.MBIntField.SupportingText
+  fullName: Material.Blazor.MBIntField.SupportingText
+  nameWithType: MBIntField.SupportingText
+- uid: Material.Blazor.MBIntField.SupportingText*
+  name: SupportingText
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_SupportingText_
+  commentId: Overload:Material.Blazor.MBIntField.SupportingText
+  fullName: Material.Blazor.MBIntField.SupportingText
+  nameWithType: MBIntField.SupportingText
+- uid: Material.Blazor.MBIntField.SupportingTextPersistent
+  name: SupportingTextPersistent
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_SupportingTextPersistent
+  commentId: P:Material.Blazor.MBIntField.SupportingTextPersistent
+  fullName: Material.Blazor.MBIntField.SupportingTextPersistent
+  nameWithType: MBIntField.SupportingTextPersistent
+- uid: Material.Blazor.MBIntField.SupportingTextPersistent*
+  name: SupportingTextPersistent
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_SupportingTextPersistent_
+  commentId: Overload:Material.Blazor.MBIntField.SupportingTextPersistent
+  fullName: Material.Blazor.MBIntField.SupportingTextPersistent
+  nameWithType: MBIntField.SupportingTextPersistent
+- uid: Material.Blazor.MBIntField.TextAlignStyle
+  name: TextAlignStyle
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_TextAlignStyle
+  commentId: P:Material.Blazor.MBIntField.TextAlignStyle
+  fullName: Material.Blazor.MBIntField.TextAlignStyle
+  nameWithType: MBIntField.TextAlignStyle
+- uid: Material.Blazor.MBIntField.TextAlignStyle*
+  name: TextAlignStyle
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_TextAlignStyle_
+  commentId: Overload:Material.Blazor.MBIntField.TextAlignStyle
+  fullName: Material.Blazor.MBIntField.TextAlignStyle
+  nameWithType: MBIntField.TextAlignStyle
+- uid: Material.Blazor.MBIntField.TextFieldId
+  name: TextFieldId
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_TextFieldId
+  commentId: P:Material.Blazor.MBIntField.TextFieldId
+  fullName: Material.Blazor.MBIntField.TextFieldId
+  nameWithType: MBIntField.TextFieldId
+- uid: Material.Blazor.MBIntField.TextFieldId*
+  name: TextFieldId
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_TextFieldId_
+  commentId: Overload:Material.Blazor.MBIntField.TextFieldId
+  fullName: Material.Blazor.MBIntField.TextFieldId
+  nameWithType: MBIntField.TextFieldId
+- uid: Material.Blazor.MBIntField.TextInputStyle
+  name: TextInputStyle
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_TextInputStyle
+  commentId: P:Material.Blazor.MBIntField.TextInputStyle
+  fullName: Material.Blazor.MBIntField.TextInputStyle
+  nameWithType: MBIntField.TextInputStyle
+- uid: Material.Blazor.MBIntField.TextInputStyle*
+  name: TextInputStyle
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_TextInputStyle_
+  commentId: Overload:Material.Blazor.MBIntField.TextInputStyle
+  fullName: Material.Blazor.MBIntField.TextInputStyle
+  nameWithType: MBIntField.TextInputStyle
+- uid: Material.Blazor.MBIntField.TrailingIcon
+  name: TrailingIcon
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_TrailingIcon
+  commentId: P:Material.Blazor.MBIntField.TrailingIcon
+  fullName: Material.Blazor.MBIntField.TrailingIcon
+  nameWithType: MBIntField.TrailingIcon
+- uid: Material.Blazor.MBIntField.TrailingIcon*
+  name: TrailingIcon
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_TrailingIcon_
+  commentId: Overload:Material.Blazor.MBIntField.TrailingIcon
+  fullName: Material.Blazor.MBIntField.TrailingIcon
+  nameWithType: MBIntField.TrailingIcon
+- uid: Material.Blazor.MBIntField.TrailingToggleIcon
+  name: TrailingToggleIcon
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_TrailingToggleIcon
+  commentId: P:Material.Blazor.MBIntField.TrailingToggleIcon
+  fullName: Material.Blazor.MBIntField.TrailingToggleIcon
+  nameWithType: MBIntField.TrailingToggleIcon
+- uid: Material.Blazor.MBIntField.TrailingToggleIcon*
+  name: TrailingToggleIcon
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_TrailingToggleIcon_
+  commentId: Overload:Material.Blazor.MBIntField.TrailingToggleIcon
+  fullName: Material.Blazor.MBIntField.TrailingToggleIcon
+  nameWithType: MBIntField.TrailingToggleIcon
+- uid: Material.Blazor.MBIntField.TrailingToggleIconButtonLink
+  name: TrailingToggleIconButtonLink
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_TrailingToggleIconButtonLink
+  commentId: P:Material.Blazor.MBIntField.TrailingToggleIconButtonLink
+  fullName: Material.Blazor.MBIntField.TrailingToggleIconButtonLink
+  nameWithType: MBIntField.TrailingToggleIconButtonLink
+- uid: Material.Blazor.MBIntField.TrailingToggleIconButtonLink*
+  name: TrailingToggleIconButtonLink
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_TrailingToggleIconButtonLink_
+  commentId: Overload:Material.Blazor.MBIntField.TrailingToggleIconButtonLink
+  fullName: Material.Blazor.MBIntField.TrailingToggleIconButtonLink
+  nameWithType: MBIntField.TrailingToggleIconButtonLink
+- uid: Material.Blazor.MBIntField.TrailingToggleIconButtonLinkTarget
+  name: TrailingToggleIconButtonLinkTarget
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_TrailingToggleIconButtonLinkTarget
+  commentId: P:Material.Blazor.MBIntField.TrailingToggleIconButtonLinkTarget
+  fullName: Material.Blazor.MBIntField.TrailingToggleIconButtonLinkTarget
+  nameWithType: MBIntField.TrailingToggleIconButtonLinkTarget
+- uid: Material.Blazor.MBIntField.TrailingToggleIconButtonLinkTarget*
+  name: TrailingToggleIconButtonLinkTarget
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_TrailingToggleIconButtonLinkTarget_
+  commentId: Overload:Material.Blazor.MBIntField.TrailingToggleIconButtonLinkTarget
+  fullName: Material.Blazor.MBIntField.TrailingToggleIconButtonLinkTarget
+  nameWithType: MBIntField.TrailingToggleIconButtonLinkTarget
+- uid: Material.Blazor.MBIntField.TrailingToggleIconSelected
+  name: TrailingToggleIconSelected
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_TrailingToggleIconSelected
+  commentId: P:Material.Blazor.MBIntField.TrailingToggleIconSelected
+  fullName: Material.Blazor.MBIntField.TrailingToggleIconSelected
+  nameWithType: MBIntField.TrailingToggleIconSelected
+- uid: Material.Blazor.MBIntField.TrailingToggleIconSelected*
+  name: TrailingToggleIconSelected
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_TrailingToggleIconSelected_
+  commentId: Overload:Material.Blazor.MBIntField.TrailingToggleIconSelected
+  fullName: Material.Blazor.MBIntField.TrailingToggleIconSelected
+  nameWithType: MBIntField.TrailingToggleIconSelected
+- uid: Material.Blazor.MBIntField.UnfocusedMagnitude
+  name: UnfocusedMagnitude
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_UnfocusedMagnitude
+  commentId: P:Material.Blazor.MBIntField.UnfocusedMagnitude
+  fullName: Material.Blazor.MBIntField.UnfocusedMagnitude
+  nameWithType: MBIntField.UnfocusedMagnitude
+- uid: Material.Blazor.MBIntField.UnfocusedMagnitude*
+  name: UnfocusedMagnitude
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_UnfocusedMagnitude_
+  commentId: Overload:Material.Blazor.MBIntField.UnfocusedMagnitude
+  fullName: Material.Blazor.MBIntField.UnfocusedMagnitude
+  nameWithType: MBIntField.UnfocusedMagnitude
+- uid: Material.Blazor.MBIntField.ValidationMessageFor
+  name: ValidationMessageFor
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_ValidationMessageFor
+  commentId: P:Material.Blazor.MBIntField.ValidationMessageFor
+  fullName: Material.Blazor.MBIntField.ValidationMessageFor
+  nameWithType: MBIntField.ValidationMessageFor
+- uid: Material.Blazor.MBIntField.ValidationMessageFor*
+  name: ValidationMessageFor
+  href: api/Material.Blazor.MBIntField.html#Material_Blazor_MBIntField_ValidationMessageFor_
+  commentId: Overload:Material.Blazor.MBIntField.ValidationMessageFor
+  fullName: Material.Blazor.MBIntField.ValidationMessageFor
+  nameWithType: MBIntField.ValidationMessageFor
 - uid: Material.Blazor.MBIntField2
   name: MBIntField2
   href: api/Material.Blazor.MBIntField2.html
@@ -7338,6 +8626,30 @@ references:
   commentId: Overload:Material.Blazor.MBTextField.ValidationMessageFor
   fullName: Material.Blazor.MBTextField.ValidationMessageFor
   nameWithType: MBTextField.ValidationMessageFor
+- uid: Material.Blazor.MBTextField2
+  name: MBTextField2
+  href: api/Material.Blazor.MBTextField2.html
+  commentId: T:Material.Blazor.MBTextField2
+  fullName: Material.Blazor.MBTextField2
+  nameWithType: MBTextField2
+- uid: Material.Blazor.MBTextField2.#ctor
+  name: MBTextField2()
+  href: api/Material.Blazor.MBTextField2.html#Material_Blazor_MBTextField2__ctor
+  commentId: M:Material.Blazor.MBTextField2.#ctor
+  name.vb: New()
+  fullName: Material.Blazor.MBTextField2.MBTextField2()
+  fullName.vb: Material.Blazor.MBTextField2.New()
+  nameWithType: MBTextField2.MBTextField2()
+  nameWithType.vb: MBTextField2.New()
+- uid: Material.Blazor.MBTextField2.#ctor*
+  name: MBTextField2
+  href: api/Material.Blazor.MBTextField2.html#Material_Blazor_MBTextField2__ctor_
+  commentId: Overload:Material.Blazor.MBTextField2.#ctor
+  name.vb: New
+  fullName: Material.Blazor.MBTextField2.MBTextField2
+  fullName.vb: Material.Blazor.MBTextField2.New
+  nameWithType: MBTextField2.MBTextField2
+  nameWithType.vb: MBTextField2.New
 - uid: Material.Blazor.MBTextInputStyle
   name: MBTextInputStyle
   href: api/Material.Blazor.MBTextInputStyle.html
