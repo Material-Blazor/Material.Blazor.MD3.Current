@@ -3316,6 +3316,21 @@ references:
   commentId: Overload:Material.Blazor.MBDecimalField.NumericSingularFormat
   fullName: Material.Blazor.MBDecimalField.NumericSingularFormat
   nameWithType: MBDecimalField.NumericSingularFormat
+- uid: Material.Blazor.MBDecimalField.OnAfterRenderAsync(System.Boolean)
+  name: OnAfterRenderAsync(bool)
+  href: api/Material.Blazor.MBDecimalField.html#Material_Blazor_MBDecimalField_OnAfterRenderAsync_System_Boolean_
+  commentId: M:Material.Blazor.MBDecimalField.OnAfterRenderAsync(System.Boolean)
+  name.vb: OnAfterRenderAsync(Boolean)
+  fullName: Material.Blazor.MBDecimalField.OnAfterRenderAsync(bool)
+  fullName.vb: Material.Blazor.MBDecimalField.OnAfterRenderAsync(Boolean)
+  nameWithType: MBDecimalField.OnAfterRenderAsync(bool)
+  nameWithType.vb: MBDecimalField.OnAfterRenderAsync(Boolean)
+- uid: Material.Blazor.MBDecimalField.OnAfterRenderAsync*
+  name: OnAfterRenderAsync
+  href: api/Material.Blazor.MBDecimalField.html#Material_Blazor_MBDecimalField_OnAfterRenderAsync_
+  commentId: Overload:Material.Blazor.MBDecimalField.OnAfterRenderAsync
+  fullName: Material.Blazor.MBDecimalField.OnAfterRenderAsync
+  nameWithType: MBDecimalField.OnAfterRenderAsync
 - uid: Material.Blazor.MBDecimalField.OnInitializedAsync
   name: OnInitializedAsync()
   href: api/Material.Blazor.MBDecimalField.html#Material_Blazor_MBDecimalField_OnInitializedAsync
@@ -9457,22 +9472,6 @@ references:
   fullName.vb: Material.Blazor.MD2.MBDataTable(Of TItem).GetKeysFunc
   nameWithType: MBDataTable<TItem>.GetKeysFunc
   nameWithType.vb: MBDataTable(Of TItem).GetKeysFunc
-- uid: Material.Blazor.MD2.MBDataTable`1.HasProgressBar
-  name: HasProgressBar
-  href: api/Material.Blazor.MD2.MBDataTable-1.html#Material_Blazor_MD2_MBDataTable_1_HasProgressBar
-  commentId: P:Material.Blazor.MD2.MBDataTable`1.HasProgressBar
-  fullName: Material.Blazor.MD2.MBDataTable<TItem>.HasProgressBar
-  fullName.vb: Material.Blazor.MD2.MBDataTable(Of TItem).HasProgressBar
-  nameWithType: MBDataTable<TItem>.HasProgressBar
-  nameWithType.vb: MBDataTable(Of TItem).HasProgressBar
-- uid: Material.Blazor.MD2.MBDataTable`1.HasProgressBar*
-  name: HasProgressBar
-  href: api/Material.Blazor.MD2.MBDataTable-1.html#Material_Blazor_MD2_MBDataTable_1_HasProgressBar_
-  commentId: Overload:Material.Blazor.MD2.MBDataTable`1.HasProgressBar
-  fullName: Material.Blazor.MD2.MBDataTable<TItem>.HasProgressBar
-  fullName.vb: Material.Blazor.MD2.MBDataTable(Of TItem).HasProgressBar
-  nameWithType: MBDataTable<TItem>.HasProgressBar
-  nameWithType.vb: MBDataTable(Of TItem).HasProgressBar
 - uid: Material.Blazor.MD2.MBDataTable`1.Items
   name: Items
   href: api/Material.Blazor.MD2.MBDataTable-1.html#Material_Blazor_MD2_MBDataTable_1_Items
@@ -9489,22 +9488,6 @@ references:
   fullName.vb: Material.Blazor.MD2.MBDataTable(Of TItem).Items
   nameWithType: MBDataTable<TItem>.Items
   nameWithType.vb: MBDataTable(Of TItem).Items
-- uid: Material.Blazor.MD2.MBDataTable`1.OnInitializedAsync
-  name: OnInitializedAsync()
-  href: api/Material.Blazor.MD2.MBDataTable-1.html#Material_Blazor_MD2_MBDataTable_1_OnInitializedAsync
-  commentId: M:Material.Blazor.MD2.MBDataTable`1.OnInitializedAsync
-  fullName: Material.Blazor.MD2.MBDataTable<TItem>.OnInitializedAsync()
-  fullName.vb: Material.Blazor.MD2.MBDataTable(Of TItem).OnInitializedAsync()
-  nameWithType: MBDataTable<TItem>.OnInitializedAsync()
-  nameWithType.vb: MBDataTable(Of TItem).OnInitializedAsync()
-- uid: Material.Blazor.MD2.MBDataTable`1.OnInitializedAsync*
-  name: OnInitializedAsync
-  href: api/Material.Blazor.MD2.MBDataTable-1.html#Material_Blazor_MD2_MBDataTable_1_OnInitializedAsync_
-  commentId: Overload:Material.Blazor.MD2.MBDataTable`1.OnInitializedAsync
-  fullName: Material.Blazor.MD2.MBDataTable<TItem>.OnInitializedAsync
-  fullName.vb: Material.Blazor.MD2.MBDataTable(Of TItem).OnInitializedAsync
-  nameWithType: MBDataTable<TItem>.OnInitializedAsync
-  nameWithType.vb: MBDataTable(Of TItem).OnInitializedAsync
 - uid: Material.Blazor.MD2.MBDataTable`1.OnParametersSetAsync
   name: OnParametersSetAsync()
   href: api/Material.Blazor.MD2.MBDataTable-1.html#Material_Blazor_MD2_MBDataTable_1_OnParametersSetAsync
@@ -9521,54 +9504,6 @@ references:
   fullName.vb: Material.Blazor.MD2.MBDataTable(Of TItem).OnParametersSetAsync
   nameWithType: MBDataTable<TItem>.OnParametersSetAsync
   nameWithType.vb: MBDataTable(Of TItem).OnParametersSetAsync
-- uid: Material.Blazor.MD2.MBDataTable`1.Paginator
-  name: Paginator
-  href: api/Material.Blazor.MD2.MBDataTable-1.html#Material_Blazor_MD2_MBDataTable_1_Paginator
-  commentId: P:Material.Blazor.MD2.MBDataTable`1.Paginator
-  fullName: Material.Blazor.MD2.MBDataTable<TItem>.Paginator
-  fullName.vb: Material.Blazor.MD2.MBDataTable(Of TItem).Paginator
-  nameWithType: MBDataTable<TItem>.Paginator
-  nameWithType.vb: MBDataTable(Of TItem).Paginator
-- uid: Material.Blazor.MD2.MBDataTable`1.Paginator*
-  name: Paginator
-  href: api/Material.Blazor.MD2.MBDataTable-1.html#Material_Blazor_MD2_MBDataTable_1_Paginator_
-  commentId: Overload:Material.Blazor.MD2.MBDataTable`1.Paginator
-  fullName: Material.Blazor.MD2.MBDataTable<TItem>.Paginator
-  fullName.vb: Material.Blazor.MD2.MBDataTable(Of TItem).Paginator
-  nameWithType: MBDataTable<TItem>.Paginator
-  nameWithType.vb: MBDataTable(Of TItem).Paginator
-- uid: Material.Blazor.MD2.MBDataTable`1.ShowProgress
-  name: ShowProgress
-  href: api/Material.Blazor.MD2.MBDataTable-1.html#Material_Blazor_MD2_MBDataTable_1_ShowProgress
-  commentId: P:Material.Blazor.MD2.MBDataTable`1.ShowProgress
-  fullName: Material.Blazor.MD2.MBDataTable<TItem>.ShowProgress
-  fullName.vb: Material.Blazor.MD2.MBDataTable(Of TItem).ShowProgress
-  nameWithType: MBDataTable<TItem>.ShowProgress
-  nameWithType.vb: MBDataTable(Of TItem).ShowProgress
-- uid: Material.Blazor.MD2.MBDataTable`1.ShowProgress*
-  name: ShowProgress
-  href: api/Material.Blazor.MD2.MBDataTable-1.html#Material_Blazor_MD2_MBDataTable_1_ShowProgress_
-  commentId: Overload:Material.Blazor.MD2.MBDataTable`1.ShowProgress
-  fullName: Material.Blazor.MD2.MBDataTable<TItem>.ShowProgress
-  fullName.vb: Material.Blazor.MD2.MBDataTable(Of TItem).ShowProgress
-  nameWithType: MBDataTable<TItem>.ShowProgress
-  nameWithType.vb: MBDataTable(Of TItem).ShowProgress
-- uid: Material.Blazor.MD2.MBDataTable`1.StickyHeader
-  name: StickyHeader
-  href: api/Material.Blazor.MD2.MBDataTable-1.html#Material_Blazor_MD2_MBDataTable_1_StickyHeader
-  commentId: P:Material.Blazor.MD2.MBDataTable`1.StickyHeader
-  fullName: Material.Blazor.MD2.MBDataTable<TItem>.StickyHeader
-  fullName.vb: Material.Blazor.MD2.MBDataTable(Of TItem).StickyHeader
-  nameWithType: MBDataTable<TItem>.StickyHeader
-  nameWithType.vb: MBDataTable(Of TItem).StickyHeader
-- uid: Material.Blazor.MD2.MBDataTable`1.StickyHeader*
-  name: StickyHeader
-  href: api/Material.Blazor.MD2.MBDataTable-1.html#Material_Blazor_MD2_MBDataTable_1_StickyHeader_
-  commentId: Overload:Material.Blazor.MD2.MBDataTable`1.StickyHeader
-  fullName: Material.Blazor.MD2.MBDataTable<TItem>.StickyHeader
-  fullName.vb: Material.Blazor.MD2.MBDataTable(Of TItem).StickyHeader
-  nameWithType: MBDataTable<TItem>.StickyHeader
-  nameWithType.vb: MBDataTable(Of TItem).StickyHeader
 - uid: Material.Blazor.MD2.MBDataTable`1.TableHeader
   name: TableHeader
   href: api/Material.Blazor.MD2.MBDataTable-1.html#Material_Blazor_MD2_MBDataTable_1_TableHeader

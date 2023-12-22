@@ -87,7 +87,7 @@
 
   <h1 id="Material_Blazor_MBDecimalField" data-uid="Material.Blazor.MBDecimalField" class="text-break">
     Class MBDecimalField
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,7 +99,7 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MBDecimalField : InputComponent&lt;decimal&gt;, IComponent, IHandleEvent, IHandleAfterRender, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class MBDecimalField : InputComponent&lt;decimal&gt;, IComponent, IHandleEvent, IHandleAfterRender, IDisposable</code></pre>
   </div>
 
 
@@ -131,16 +131,7 @@
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_FormatValueToString__0_">InputComponent&lt;decimal&gt;.FormatValueToString(decimal)</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_OnParametersSetAsync">InputComponent&lt;decimal&gt;.OnParametersSetAsync()</a>
-    </div>
-    <div>
       <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_SetParametersAsync_Microsoft_AspNetCore_Components_ParameterView_">InputComponent&lt;decimal&gt;.SetParametersAsync(ParameterView)</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_TryParseValueFromString_System_String__0__System_String__">InputComponent&lt;decimal&gt;.TryParseValueFromString(string, out decimal, out string)</a>
     </div>
     <div>
       <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_Value">InputComponent&lt;decimal&gt;.Value</a>
@@ -152,34 +143,7 @@
       <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_ValueExpression">InputComponent&lt;decimal&gt;.ValueExpression</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_EditContext">InputComponent&lt;decimal&gt;.EditContext</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_FieldIdentifier">InputComponent&lt;decimal&gt;.FieldIdentifier</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_ComponentValueAsString">InputComponent&lt;decimal&gt;.ComponentValueAsString</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_Dispose_System_Boolean_">ComponentFoundation.Dispose(bool)</a>
-    </div>
-    <div>
       <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_Dispose">ComponentFoundation.Dispose()</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_OnAfterRender_System_Boolean_">ComponentFoundation.OnAfterRender(bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_OnAfterRenderAsync_System_Boolean_">ComponentFoundation.OnAfterRenderAsync(bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_OnInitialized">ComponentFoundation.OnInitialized()</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_OnParametersSet">ComponentFoundation.OnParametersSet()</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_CascadingDefaults">ComponentFoundation.CascadingDefaults</a>
     </div>
     <div>
       <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_UnmatchedAttributes">ComponentFoundation.UnmatchedAttributes</a>
@@ -194,34 +158,13 @@
       <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_class">ComponentFoundation.class</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_ActiveConditionalClasses">ComponentFoundation.ActiveConditionalClasses</a>
-    </div>
-    <div>
       <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_style">ComponentFoundation.style</a>
     </div>
     <div>
       <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_Tooltip">ComponentFoundation.Tooltip</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.statehaschanged">ComponentBase.StateHasChanged()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.shouldrender">ComponentBase.ShouldRender()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.invokeasync#microsoft-aspnetcore-components-componentbase-invokeasync(system-action)">ComponentBase.InvokeAsync(Action)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.invokeasync#microsoft-aspnetcore-components-componentbase-invokeasync(system-func((system-threading-tasks-task)))">ComponentBase.InvokeAsync(Func&lt;Task&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.dispatchexceptionasync">ComponentBase.DispatchExceptionAsync(Exception)</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
@@ -253,7 +196,7 @@
 
   <h3 id="Material_Blazor_MBDecimalField__ctor" data-uid="Material.Blazor.MBDecimalField.#ctor">
   MBDecimalField()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -283,7 +226,7 @@
 
   <h3 id="Material_Blazor_MBDecimalField_DecimalPlaces" data-uid="Material.Blazor.MBDecimalField.DecimalPlaces">
   DecimalPlaces
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -291,7 +234,7 @@
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Parameter]
-public uint DecimalPlaces { get; set; }</code></pre>
+public int DecimalPlaces { get; set; }</code></pre>
   </div>
 
 
@@ -300,7 +243,7 @@ public uint DecimalPlaces { get; set; }</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd></dd>
   </dl>
 
@@ -315,7 +258,7 @@ public uint DecimalPlaces { get; set; }</code></pre>
 
   <h3 id="Material_Blazor_MBDecimalField_Density" data-uid="Material.Blazor.MBDecimalField.Density">
   Density
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -347,7 +290,7 @@ public MBDensity? Density { get; set; }</code></pre>
 
   <h3 id="Material_Blazor_MBDecimalField_FocusedMagnitude" data-uid="Material.Blazor.MBDecimalField.FocusedMagnitude">
   FocusedMagnitude
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -379,7 +322,7 @@ public MBNumericInputMagnitude FocusedMagnitude { get; set; }</code></pre>
 
   <h3 id="Material_Blazor_MBDecimalField_Label" data-uid="Material.Blazor.MBDecimalField.Label">
   Label
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -411,7 +354,7 @@ public string? Label { get; set; }</code></pre>
 
   <h3 id="Material_Blazor_MBDecimalField_LeadingIcon" data-uid="Material.Blazor.MBDecimalField.LeadingIcon">
   LeadingIcon
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -443,7 +386,7 @@ public MBIconDescriptor? LeadingIcon { get; set; }</code></pre>
 
   <h3 id="Material_Blazor_MBDecimalField_LeadingToggleIcon" data-uid="Material.Blazor.MBDecimalField.LeadingToggleIcon">
   LeadingToggleIcon
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -475,7 +418,7 @@ public MBIconDescriptor? LeadingToggleIcon { get; set; }</code></pre>
 
   <h3 id="Material_Blazor_MBDecimalField_LeadingToggleIconButtonLink" data-uid="Material.Blazor.MBDecimalField.LeadingToggleIconButtonLink">
   LeadingToggleIconButtonLink
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -507,7 +450,7 @@ public string LeadingToggleIconButtonLink { get; set; }</code></pre>
 
   <h3 id="Material_Blazor_MBDecimalField_LeadingToggleIconButtonLinkTarget" data-uid="Material.Blazor.MBDecimalField.LeadingToggleIconButtonLinkTarget">
   LeadingToggleIconButtonLinkTarget
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -539,7 +482,7 @@ public string LeadingToggleIconButtonLinkTarget { get; set; }</code></pre>
 
   <h3 id="Material_Blazor_MBDecimalField_LeadingToggleIconSelected" data-uid="Material.Blazor.MBDecimalField.LeadingToggleIconSelected">
   LeadingToggleIconSelected
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -571,7 +514,7 @@ public bool LeadingToggleIconSelected { get; set; }</code></pre>
 
   <h3 id="Material_Blazor_MBDecimalField_Max" data-uid="Material.Blazor.MBDecimalField.Max">
   Max
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -603,7 +546,7 @@ public decimal? Max { get; set; }</code></pre>
 
   <h3 id="Material_Blazor_MBDecimalField_Min" data-uid="Material.Blazor.MBDecimalField.Min">
   Min
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -635,7 +578,7 @@ public decimal? Min { get; set; }</code></pre>
 
   <h3 id="Material_Blazor_MBDecimalField_NumericFormat" data-uid="Material.Blazor.MBDecimalField.NumericFormat">
   NumericFormat
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -667,7 +610,7 @@ public string NumericFormat { get; set; }</code></pre>
 
   <h3 id="Material_Blazor_MBDecimalField_NumericSingularFormat" data-uid="Material.Blazor.MBDecimalField.NumericSingularFormat">
   NumericSingularFormat
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -699,7 +642,7 @@ public string? NumericSingularFormat { get; set; }</code></pre>
 
   <h3 id="Material_Blazor_MBDecimalField_Prefix" data-uid="Material.Blazor.MBDecimalField.Prefix">
   Prefix
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -731,7 +674,7 @@ public string? Prefix { get; set; }</code></pre>
 
   <h3 id="Material_Blazor_MBDecimalField_Suffix" data-uid="Material.Blazor.MBDecimalField.Suffix">
   Suffix
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -763,7 +706,7 @@ public string? Suffix { get; set; }</code></pre>
 
   <h3 id="Material_Blazor_MBDecimalField_SupportingText" data-uid="Material.Blazor.MBDecimalField.SupportingText">
   SupportingText
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -795,7 +738,7 @@ public string SupportingText { get; set; }</code></pre>
 
   <h3 id="Material_Blazor_MBDecimalField_SupportingTextPersistent" data-uid="Material.Blazor.MBDecimalField.SupportingTextPersistent">
   SupportingTextPersistent
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -827,7 +770,7 @@ public bool SupportingTextPersistent { get; set; }</code></pre>
 
   <h3 id="Material_Blazor_MBDecimalField_TextAlignStyle" data-uid="Material.Blazor.MBDecimalField.TextAlignStyle">
   TextAlignStyle
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -859,7 +802,7 @@ public MBTextAlignStyle? TextAlignStyle { get; set; }</code></pre>
 
   <h3 id="Material_Blazor_MBDecimalField_TextFieldId" data-uid="Material.Blazor.MBDecimalField.TextFieldId">
   TextFieldId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -891,7 +834,7 @@ public string TextFieldId { get; set; }</code></pre>
 
   <h3 id="Material_Blazor_MBDecimalField_TextInputStyle" data-uid="Material.Blazor.MBDecimalField.TextInputStyle">
   TextInputStyle
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -923,7 +866,7 @@ public MBTextInputStyle TextInputStyle { get; set; }</code></pre>
 
   <h3 id="Material_Blazor_MBDecimalField_TrailingIcon" data-uid="Material.Blazor.MBDecimalField.TrailingIcon">
   TrailingIcon
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -955,7 +898,7 @@ public MBIconDescriptor? TrailingIcon { get; set; }</code></pre>
 
   <h3 id="Material_Blazor_MBDecimalField_TrailingToggleIcon" data-uid="Material.Blazor.MBDecimalField.TrailingToggleIcon">
   TrailingToggleIcon
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -987,7 +930,7 @@ public MBIconDescriptor? TrailingToggleIcon { get; set; }</code></pre>
 
   <h3 id="Material_Blazor_MBDecimalField_TrailingToggleIconButtonLink" data-uid="Material.Blazor.MBDecimalField.TrailingToggleIconButtonLink">
   TrailingToggleIconButtonLink
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1019,7 +962,7 @@ public string TrailingToggleIconButtonLink { get; set; }</code></pre>
 
   <h3 id="Material_Blazor_MBDecimalField_TrailingToggleIconButtonLinkTarget" data-uid="Material.Blazor.MBDecimalField.TrailingToggleIconButtonLinkTarget">
   TrailingToggleIconButtonLinkTarget
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1051,7 +994,7 @@ public string TrailingToggleIconButtonLinkTarget { get; set; }</code></pre>
 
   <h3 id="Material_Blazor_MBDecimalField_TrailingToggleIconSelected" data-uid="Material.Blazor.MBDecimalField.TrailingToggleIconSelected">
   TrailingToggleIconSelected
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1083,7 +1026,7 @@ public bool TrailingToggleIconSelected { get; set; }</code></pre>
 
   <h3 id="Material_Blazor_MBDecimalField_UnfocusedMagnitude" data-uid="Material.Blazor.MBDecimalField.UnfocusedMagnitude">
   UnfocusedMagnitude
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1115,7 +1058,7 @@ public MBNumericInputMagnitude UnfocusedMagnitude { get; set; }</code></pre>
 
   <h3 id="Material_Blazor_MBDecimalField_ValidationMessageFor" data-uid="Material.Blazor.MBDecimalField.ValidationMessageFor">
   ValidationMessageFor
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1151,7 +1094,7 @@ public Expression&lt;Func&lt;object&gt;&gt; ValidationMessageFor { get; set; }</
 
   <h3 id="Material_Blazor_MBDecimalField_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_" data-uid="Material.Blazor.MBDecimalField.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)">
   BuildRenderTree(RenderTreeBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Renders the component to the supplied <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder">RenderTreeBuilder</a>.</p>
@@ -1159,13 +1102,14 @@ public Expression&lt;Func&lt;object&gt;&gt; ValidationMessageFor { get; set; }</
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void BuildRenderTree(RenderTreeBuilder __builder)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override void BuildRenderTree(RenderTreeBuilder builder)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>__builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder">RenderTreeBuilder</a></dt>
-    <dd></dd>
+    <dt><code>builder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder">RenderTreeBuilder</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder">RenderTreeBuilder</a> that will receive the render output.</p>
+</dd>
   </dl>
 
 
@@ -1179,11 +1123,63 @@ public Expression&lt;Func&lt;object&gt;&gt; ValidationMessageFor { get; set; }</
 
 
 
+  <a id="Material_Blazor_MBDecimalField_OnAfterRenderAsync_" data-uid="Material.Blazor.MBDecimalField.OnAfterRenderAsync*"></a>
+
+  <h3 id="Material_Blazor_MBDecimalField_OnAfterRenderAsync_System_Boolean_" data-uid="Material.Blazor.MBDecimalField.OnAfterRenderAsync(System.Boolean)">
+  OnAfterRenderAsync(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Method invoked after each time the component has been rendered interactively and the UI has finished
+updating (for example, after elements have been added to the browser DOM). Any <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.elementreference">ElementReference</a>
+fields will be populated by the time this runs.</p>
+<p>This method is not invoked during prerendering or server-side rendering, because those processes
+are not attached to any live browser DOM and are already complete before the DOM is updated.</p>
+<p>Note that the component does not automatically re-render after the completion of any returned <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>,
+because that would cause an infinite render loop.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override Task OnAfterRenderAsync(bool firstRender)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>firstRender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Set to <code>true</code> if this is the first time <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.onafterrender">OnAfterRender(bool)</a> has been invoked
+on this component instance; otherwise <code>false</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> representing any asynchronous operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Material_Blazor_MBDecimalField_OnAfterRenderAsync_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.onafterrender">OnAfterRender(bool)</a> and <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.onafterrenderasync">OnAfterRenderAsync(bool)</a> lifecycle methods
+are useful for performing interop, or interacting with values received from <code>@ref</code>.
+Use the <code class="paramref">firstRender</code> parameter to ensure that initialization work is only performed
+once.</p>
+</div>
+
+
+
+
   <a id="Material_Blazor_MBDecimalField_OnInitializedAsync_" data-uid="Material.Blazor.MBDecimalField.OnInitializedAsync*"></a>
 
   <h3 id="Material_Blazor_MBDecimalField_OnInitializedAsync" data-uid="Material.Blazor.MBDecimalField.OnInitializedAsync">
   OnInitializedAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Method invoked when the component is ready to start, having received its
@@ -1219,7 +1215,7 @@ want the component to refresh when that operation is completed.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.razor.cs" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor.MD3/Components/DecimalField/MBDecimalField.cs" class="edit-link">Edit this page</a>
         </div>
 
 
