@@ -51,6 +51,13 @@ __webpack_require__.d(MBMenu_namespaceObject, {
   setToggleMenuOpen: () => (setToggleMenuOpen)
 });
 
+// NAMESPACE OBJECT: ./Components/Tabs/MBTabs.ts
+var MBTabs_namespaceObject = {};
+__webpack_require__.r(MBTabs_namespaceObject);
+__webpack_require__.d(MBTabs_namespaceObject, {
+  setTabsChangeEvent: () => (setTabsChangeEvent)
+});
+
 // NAMESPACE OBJECT: ./Components/TextField/MBTextField.ts
 var MBTextField_namespaceObject = {};
 __webpack_require__.r(MBTextField_namespaceObject);
@@ -14664,6 +14671,7 @@ function setMenuCloseEvent(menuID) {
  * text of that element with the menu-closed event's content.
  */
 function displayCloseEvent(event) {
+  console.log("displayCloseEvent invoked");
   // get the output element from the shadow root
   var root = event.target.getRootNode();
   var outputEl = root.querySelector('.output');
@@ -14693,6 +14701,39 @@ function setToggleMenuOpen(menuButtonID, menuID) {
       toggleMenu(menuElement);
     });
   }
+}
+;// CONCATENATED MODULE: ./Components/Tabs/MBTabs.ts
+// Because of invocation of setTabsChangeEvent in AfterRenderAsync the first change is not detected. The workaround is to
+// lookup the first panel by name
+
+function setTabsChangeEvent(tabsID, firstPanelAriaControlledBy) {
+  var firstPanel = firstPanelAriaControlledBy;
+  var tabsElement = document.getElementById(tabsID);
+  if (tabsElement != null) {
+    console.log("Adding listener for change events");
+    var currentPanel = null;
+    tabsElement.addEventListener('change', function () {
+      var _tabsElement$activeTa;
+      var root = tabsElement.getRootNode();
+      if (currentPanel) {
+        //console.log("currentPanel is not null, direct hide");
+        currentPanel.hidden = true;
+      } else {
+        //console.log("currentPanel is null, looking up first panel by '" + firstPanel + "'");
+        currentPanel = root.querySelector("#".concat(firstPanel));
+        if (currentPanel) {
+          currentPanel.hidden = true;
+        }
+      }
+      ;
+      var panelId = (_tabsElement$activeTa = tabsElement.activeTab) === null || _tabsElement$activeTa === void 0 ? void 0 : _tabsElement$activeTa.getAttribute('aria-controls');
+      currentPanel = root.querySelector("#".concat(panelId));
+      if (currentPanel) {
+        currentPanel.hidden = false;
+      }
+    });
+  }
+  ;
 }
 ;// CONCATENATED MODULE: ./Components/TextField/MBTextField.ts
 function selectFieldContent(textfieldID) {
@@ -22119,6 +22160,7 @@ M.B.MD3 JS
 
 
 
+
 /*
 MWC2 JS
 */
@@ -22130,6 +22172,7 @@ MWC2 JS
 window.MaterialBlazor = {
   MBDialog: MBDialog_namespaceObject,
   MBMenu: MBMenu_namespaceObject,
+  MBTabs: MBTabs_namespaceObject,
   MBTextField: MBTextField_namespaceObject,
   MBCard: MBCard_namespaceObject,
   MBDataTable: MBDataTable_namespaceObject,

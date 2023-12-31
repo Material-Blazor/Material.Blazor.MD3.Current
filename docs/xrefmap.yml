@@ -7962,6 +7962,33 @@ references:
   commentId: Overload:Material.Blazor.MBTabs.BuildRenderTree
   fullName: Material.Blazor.MBTabs.BuildRenderTree
   nameWithType: MBTabs.BuildRenderTree
+- uid: Material.Blazor.MBTabs.IsControllingPanels
+  name: IsControllingPanels
+  href: api/Material.Blazor.MBTabs.html#Material_Blazor_MBTabs_IsControllingPanels
+  commentId: P:Material.Blazor.MBTabs.IsControllingPanels
+  fullName: Material.Blazor.MBTabs.IsControllingPanels
+  nameWithType: MBTabs.IsControllingPanels
+- uid: Material.Blazor.MBTabs.IsControllingPanels*
+  name: IsControllingPanels
+  href: api/Material.Blazor.MBTabs.html#Material_Blazor_MBTabs_IsControllingPanels_
+  commentId: Overload:Material.Blazor.MBTabs.IsControllingPanels
+  fullName: Material.Blazor.MBTabs.IsControllingPanels
+  nameWithType: MBTabs.IsControllingPanels
+- uid: Material.Blazor.MBTabs.OnAfterRenderAsync(System.Boolean)
+  name: OnAfterRenderAsync(bool)
+  href: api/Material.Blazor.MBTabs.html#Material_Blazor_MBTabs_OnAfterRenderAsync_System_Boolean_
+  commentId: M:Material.Blazor.MBTabs.OnAfterRenderAsync(System.Boolean)
+  name.vb: OnAfterRenderAsync(Boolean)
+  fullName: Material.Blazor.MBTabs.OnAfterRenderAsync(bool)
+  fullName.vb: Material.Blazor.MBTabs.OnAfterRenderAsync(Boolean)
+  nameWithType: MBTabs.OnAfterRenderAsync(bool)
+  nameWithType.vb: MBTabs.OnAfterRenderAsync(Boolean)
+- uid: Material.Blazor.MBTabs.OnAfterRenderAsync*
+  name: OnAfterRenderAsync
+  href: api/Material.Blazor.MBTabs.html#Material_Blazor_MBTabs_OnAfterRenderAsync_
+  commentId: Overload:Material.Blazor.MBTabs.OnAfterRenderAsync
+  fullName: Material.Blazor.MBTabs.OnAfterRenderAsync
+  nameWithType: MBTabs.OnAfterRenderAsync
 - uid: Material.Blazor.MBTabs.TabItems
   name: TabItems
   href: api/Material.Blazor.MBTabs.html#Material_Blazor_MBTabs_TabItems
