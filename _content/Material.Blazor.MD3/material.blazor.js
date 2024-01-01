@@ -43,6 +43,17 @@ __webpack_require__.d(MBDialog_namespaceObject, {
   dialogShow: () => (dialogShow)
 });
 
+// NAMESPACE OBJECT: ./Components/Grid/MBGrid.ts
+var MBGrid_namespaceObject = {};
+__webpack_require__.r(MBGrid_namespaceObject);
+__webpack_require__.d(MBGrid_namespaceObject, {
+  getScrollBarWidth: () => (getScrollBarWidth),
+  getTextWidths: () => (getTextWidths),
+  scrollToIndicatedRow: () => (scrollToIndicatedRow),
+  syncScrollByID: () => (syncScrollByID),
+  syncScrollByRef: () => (syncScrollByRef)
+});
+
 // NAMESPACE OBJECT: ./Components/Menu/MBMenu.ts
 var MBMenu_namespaceObject = {};
 __webpack_require__.r(MBMenu_namespaceObject);
@@ -14653,6 +14664,98 @@ function dialogClose(dialogID, dialogValue) {
   var _document$getElementB;
   (_document$getElementB = document.getElementById(dialogID)) === null || _document$getElementB === void 0 || _document$getElementB.close(dialogValue);
 }
+;// CONCATENATED MODULE: ./Components/Grid/MBGrid.ts
+function syncScrollByID(gridHeaderID, gridBodyID) {
+  var headerDiv = document.getElementById(gridHeaderID);
+  var bodyDiv = document.getElementById(gridBodyID);
+  if (headerDiv != null && bodyDiv != null) {
+    headerDiv.scrollLeft = bodyDiv.scrollLeft;
+  }
+}
+function syncScrollByRef(gridHeaderRef, gridBodyRef) {
+  gridHeaderRef.scrollLeft = gridBodyRef.scrollLeft;
+}
+function getScrollBarWidth(className) {
+  var firstDiv = document.createElement("div");
+
+  // Set styles
+  firstDiv.style.position = 'absolute';
+  firstDiv.style.visibility = 'hidden';
+  firstDiv.style.whiteSpace = 'nowrap';
+  firstDiv.style.left = '-9999px';
+
+  // Set the class
+  firstDiv.className = className;
+
+  // Append to the body
+  document.body.appendChild(firstDiv);
+
+  // Create a second div
+  var secondDiv = document.createElement("div");
+
+  // Append it as a child of the first div
+  firstDiv.appendChild(secondDiv);
+
+  // Calculate width
+  var width = firstDiv.offsetWidth - secondDiv.offsetWidth;
+
+  // Remove the divs
+  document.body.removeChild(firstDiv);
+  return width;
+}
+function getTextWidths(className, currentWidths, textToMeasure) {
+  // Create an element
+  var ele = document.createElement('div');
+
+  // Set styles
+  ele.style.position = 'absolute';
+  ele.style.visibility = 'hidden';
+  ele.style.whiteSpace = 'nowrap';
+  ele.style.left = '-9999px';
+
+  // Set the class
+  ele.className = className;
+
+  // Append to the body
+  document.body.appendChild(ele);
+
+  // Log time
+  //    console.log("Prior to for loop in getTextWidths " + new Date().toString());
+
+  for (var i = 0; i < textToMeasure.length; i++) {
+    // Set the text
+    ele.innerText = textToMeasure[i];
+
+    // Get the width
+    var width = window.getComputedStyle(ele).width;
+    var unadornedWidth = width.slice(0, width.indexOf("px"));
+    var numericWidth = parseFloat(unadornedWidth);
+    var indexMod = i % currentWidths.length;
+    if (numericWidth > currentWidths[indexMod]) {
+      currentWidths[indexMod] = numericWidth;
+    }
+  }
+
+  // Log time
+  //    console.log("Completed for loop in getTextWidths " + new Date().toString());
+
+  // Remove the element
+  document.body.removeChild(ele);
+  return currentWidths;
+}
+function scrollToIndicatedRow(rowIdentifier) {
+  console.log("scrollToIndicatedRow: " + rowIdentifier);
+  var row = document.getElementById(rowIdentifier);
+  console.log("scrollToIndicatedRow element: " + row);
+  if (row != null) {
+    console.log("scrollToIndicatedRow scrollIntoView");
+    row.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+    });
+  }
+}
 ;// CONCATENATED MODULE: ./Components/Menu/MBMenu.ts
 //import { MdButton } from '@material/web/button/button';
 
@@ -22161,6 +22264,7 @@ M.B.MD3 JS
 
 
 
+
 /*
 MWC2 JS
 */
@@ -22171,6 +22275,7 @@ MWC2 JS
 
 window.MaterialBlazor = {
   MBDialog: MBDialog_namespaceObject,
+  MBGrid: MBGrid_namespaceObject,
   MBMenu: MBMenu_namespaceObject,
   MBTabs: MBTabs_namespaceObject,
   MBTextField: MBTextField_namespaceObject,
