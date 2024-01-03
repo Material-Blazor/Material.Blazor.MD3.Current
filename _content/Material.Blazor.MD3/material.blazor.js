@@ -59,7 +59,7 @@ var MBMenu_namespaceObject = {};
 __webpack_require__.r(MBMenu_namespaceObject);
 __webpack_require__.d(MBMenu_namespaceObject, {
   setMenuCloseEvent: () => (setMenuCloseEvent),
-  setToggleMenuOpen: () => (setToggleMenuOpen)
+  setMenuEventListeners: () => (setMenuEventListeners)
 });
 
 // NAMESPACE OBJECT: ./Components/Tabs/MBTabs.ts
@@ -3746,10 +3746,16 @@ class FilterChip extends MultiActionChip {
         if (this.disabled) {
             return;
         }
+        // Store prevValue to revert in case `chip.selected` is changed during an
+        // event listener.
+        const prevValue = this.selected;
         this.selected = !this.selected;
         const preventDefault = !redispatchEvent(this, event);
         if (preventDefault) {
-            this.selected = !this.selected;
+            // We should not do `this.selected = !this.selected`, since a client
+            // click listener could change its value. Instead, always revert to the
+            // original value.
+            this.selected = prevValue;
             return;
         }
     }
@@ -14757,24 +14763,34 @@ function scrollToIndicatedRow(rowIdentifier) {
   }
 }
 ;// CONCATENATED MODULE: ./Components/Menu/MBMenu.ts
-//import { MdButton } from '@material/web/button/button';
+//import { MdButton } from '@material/web/button/button.js';
 
 function setMenuCloseEvent(menuID) {
   var menuElement = document.getElementById(menuID);
   if (menuElement != null) {
     console.log("Adding listener for menu-close events");
     menuElement.addEventListener('menu-close', function () {
-      return displayCloseEvent;
+      return displayMenuCloseEvent;
+    });
+    console.log("Adding listener for closed events");
+    menuElement.addEventListener('closed', function () {
+      return displayClosedEvent;
     });
   }
+}
+function displayClosedEvent() {
+  console.log("displayClosedEvent invoked");
+}
+function displayClosingEvent() {
+  console.log("displayClosingEvent invoked");
 }
 
 /**
  * Searches for an element with `class="output"` set on it, and updates the
  * text of that element with the menu-closed event's content.
  */
-function displayCloseEvent(event) {
-  console.log("displayCloseEvent invoked");
+function displayMenuCloseEvent(event) {
+  console.log("displayMenuCloseEvent invoked");
   // get the output element from the shadow root
   var root = event.target.getRootNode();
   var outputEl = root.querySelector('.output');
@@ -14789,20 +14805,52 @@ function displayCloseEvent(event) {
     return stringifyItem(item);
   }).join(",\n      "), "\n    ],\n  },\n  reason: ").concat(JSON.stringify(event.detail.reason), "\n}");
 }
+function displayOpenedEvent() {
+  console.log("displayOpenedEvent invoked");
+}
+function displayOpeningEvent() {
+  console.log("displayOpeningEvent invoked");
+}
+function setMenuEventListeners(menuButtonID, menuID) {
+  var buttonElement = document.getElementById(menuButtonID);
+  var menuElement = document.getElementById(menuID);
+  if (buttonElement != null && menuElement != null) {
+    console.log("Adding listener for button click events");
+    buttonElement.removeEventListener('click', toggleMenu);
+    buttonElement.addEventListener('click', function () {
+      toggleMenu(menuElement);
+    });
+    console.log("Adding listener for menu closed events");
+    menuElement.removeEventListener('closed', displayClosedEvent);
+    menuElement.addEventListener('closed', function () {
+      return displayClosedEvent;
+    });
+    console.log("Adding listener for menu closing events");
+    menuElement.removeEventListener('closing', displayClosingEvent);
+    menuElement.addEventListener('closing', function () {
+      return displayClosingEvent;
+    });
+    console.log("Adding listener for menu-close events");
+    //menuElement.removeEventListener('menu-close', displayMenuCloseEvent);
+    menuElement.addEventListener('menu-close', function () {
+      return displayMenuCloseEvent;
+    });
+    console.log("Adding listener for menu opened events");
+    menuElement.removeEventListener('opened', displayOpenedEvent);
+    menuElement.addEventListener('opened', function () {
+      return displayOpenedEvent;
+    });
+    console.log("Adding listener for menu opening events");
+    menuElement.removeEventListener('opening', displayOpeningEvent);
+    menuElement.addEventListener('opening', function () {
+      return displayOpeningEvent;
+    });
+  }
+}
 function toggleMenu(menuElement) {
   console.log("toggleMenu invoked");
   if (menuElement != null) {
     menuElement.open = !menuElement.open;
-  }
-}
-function setToggleMenuOpen(menuButtonID, menuID) {
-  var buttonElement = document.getElementById(menuButtonID);
-  var menuElement = document.getElementById(menuID);
-  if (buttonElement != null && menuElement != null) {
-    console.log("Adding listener for click events");
-    buttonElement.addEventListener('click', function () {
-      toggleMenu(menuElement);
-    });
   }
 }
 ;// CONCATENATED MODULE: ./Components/Tabs/MBTabs.ts
