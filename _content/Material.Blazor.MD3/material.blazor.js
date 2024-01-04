@@ -58,7 +58,7 @@ __webpack_require__.d(MBGrid_namespaceObject, {
 var MBMenu_namespaceObject = {};
 __webpack_require__.r(MBMenu_namespaceObject);
 __webpack_require__.d(MBMenu_namespaceObject, {
-  setMenuCloseEvent: () => (setMenuCloseEvent),
+  logAfterRenderEvent: () => (logAfterRenderEvent),
   setMenuEventListeners: () => (setMenuEventListeners)
 });
 
@@ -11042,7 +11042,7 @@ class Select extends selectBaseClass {
         }
     }
     handleClick() {
-        this.open = true;
+        this.open = !this.open;
     }
     handleFocus() {
         this.focused = true;
@@ -11173,7 +11173,8 @@ class Select extends selectBaseClass {
      * @return Whether the last selected option has changed.
      */
     selectItem(item) {
-        this.lastSelectedOptionRecords.forEach(([option]) => {
+        const selectedOptions = this.getSelectedOptions() ?? [];
+        selectedOptions.forEach(([option]) => {
             if (item !== option) {
                 option.selected = false;
             }
@@ -12195,13 +12196,13 @@ class Slider extends sliderBaseClass {
             onTop,
             isOverlapping,
         })}">
-      <div class="handleNub"><md-elevation></md-elevation></div>
-      ${when_n(this.labeled, () => this.renderLabel(label))}
       <md-focus-ring part="focus-ring" for=${name}></md-focus-ring>
       <md-ripple
         for=${name}
         class=${name}
         ?disabled=${this.disabled}></md-ripple>
+      <div class="handleNub"><md-elevation></md-elevation></div>
+      ${when_n(this.labeled, () => this.renderLabel(label))}
     </div>`;
     }
     renderInput({ start, value, ariaLabel, ariaValueText, ariaMin, ariaMax, }) {
@@ -14765,18 +14766,8 @@ function scrollToIndicatedRow(rowIdentifier) {
 ;// CONCATENATED MODULE: ./Components/Menu/MBMenu.ts
 //import { MdButton } from '@material/web/button/button.js';
 
-function setMenuCloseEvent(menuID) {
-  var menuElement = document.getElementById(menuID);
-  if (menuElement != null) {
-    console.log("Adding listener for menu-close events");
-    menuElement.addEventListener('menu-close', function () {
-      return displayMenuCloseEvent;
-    });
-    console.log("Adding listener for closed events");
-    menuElement.addEventListener('closed', function () {
-      return displayClosedEvent;
-    });
-  }
+function logAfterRenderEvent() {
+  console.log("Blazor OnAfterRenderAsync event...");
 }
 function displayClosedEvent() {
   console.log("displayClosedEvent invoked");
@@ -14811,40 +14802,45 @@ function displayOpenedEvent() {
 function displayOpeningEvent() {
   console.log("displayOpeningEvent invoked");
 }
-function setMenuEventListeners(menuButtonID, menuID) {
+function setMenuEventListeners(menuButtonID, menuID, isFirstRender) {
   var buttonElement = document.getElementById(menuButtonID);
   var menuElement = document.getElementById(menuID);
   if (buttonElement != null && menuElement != null) {
     console.log("Adding listener for button click events");
-    buttonElement.removeEventListener('click', toggleMenu);
+    if (!isFirstRender) {
+      buttonElement.removeEventListener('click', toggleMenu);
+    }
     buttonElement.addEventListener('click', function () {
       toggleMenu(menuElement);
     });
-    console.log("Adding listener for menu closed events");
-    menuElement.removeEventListener('closed', displayClosedEvent);
-    menuElement.addEventListener('closed', function () {
-      return displayClosedEvent;
-    });
-    console.log("Adding listener for menu closing events");
-    menuElement.removeEventListener('closing', displayClosingEvent);
-    menuElement.addEventListener('closing', function () {
-      return displayClosingEvent;
-    });
+
+    //console.log("Adding listener for menu closed events");
+    //menuElement.removeEventListener('closed', displayClosedEvent);
+    //menuElement.addEventListener('closed', () => displayClosedEvent);
+
+    //console.log("Adding listener for menu closing events");
+    //menuElement.removeEventListener('closing', displayClosingEvent);
+    //menuElement.addEventListener('closing', () => displayClosingEvent);
+
     console.log("Adding listener for menu-close events");
-    //menuElement.removeEventListener('menu-close', displayMenuCloseEvent);
+    if (!isFirstRender) {
+      // TS2769
+      // @ts-expect-error
+      menuElement.removeEventListener('menu-close', displayMenuCloseEvent);
+    }
     menuElement.addEventListener('menu-close', function () {
       return displayMenuCloseEvent;
     });
-    console.log("Adding listener for menu opened events");
-    menuElement.removeEventListener('opened', displayOpenedEvent);
-    menuElement.addEventListener('opened', function () {
-      return displayOpenedEvent;
-    });
-    console.log("Adding listener for menu opening events");
-    menuElement.removeEventListener('opening', displayOpeningEvent);
-    menuElement.addEventListener('opening', function () {
-      return displayOpeningEvent;
-    });
+
+    //console.log("Adding listener for menu opened events");
+    //menuElement.removeEventListener('opened', displayOpenedEvent);
+    //menuElement.addEventListener('opened', () => displayOpenedEvent);
+
+    //console.log("Adding listener for menu opening events");
+    //menuElement.removeEventListener('opening', displayOpeningEvent);
+    //menuElement.addEventListener('opening', () => displayOpeningEvent);
+
+    console.log("...");
   }
 }
 function toggleMenu(menuElement) {
