@@ -13857,6 +13857,10 @@ class TextField extends textFieldBaseClass {
          */
         this.minLength = -1;
         /**
+         * When true, hide the spinner for `type="number"` text fields.
+         */
+        this.noSpinner = false;
+        /**
          * A regular expression that the text field's value must match to pass
          * constraint validation.
          *
@@ -14081,6 +14085,7 @@ class TextField extends textFieldBaseClass {
             'disabled': this.disabled,
             'error': !this.disabled && this.hasError,
             'textarea': this.type === 'textarea',
+            'no-spinner': this.noSpinner,
         };
         return x `
       <span class="text-field ${class_map_e(classes)}">
@@ -14375,6 +14380,9 @@ __decorate([
     property_n({ type: Number })
 ], TextField.prototype, "minLength", void 0);
 __decorate([
+    property_n({ type: Boolean, attribute: 'no-spinner' })
+], TextField.prototype, "noSpinner", void 0);
+__decorate([
     property_n()
 ], TextField.prototype, "pattern", void 0);
 __decorate([
@@ -14446,7 +14454,7 @@ class FilledTextField extends TextField {
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const textfield_internal_shared_styles_css_styles = i `:host{display:inline-flex;outline:none;resize:both;-webkit-tap-highlight-color:rgba(0,0,0,0)}.text-field,.field{width:100%}.text-field{display:inline-flex}.field{cursor:text}.disabled .field{cursor:default}.text-field,.textarea .field{resize:inherit}.icon{color:currentColor;display:flex;fill:currentColor}.icon ::slotted(*){display:flex}[hasstart] .icon.leading{font-size:var(--_leading-icon-size);height:var(--_leading-icon-size);width:var(--_leading-icon-size)}[hasend] .icon.trailing{font-size:var(--_trailing-icon-size);height:var(--_trailing-icon-size);width:var(--_trailing-icon-size)}.input-wrapper{display:flex}.input-wrapper>*{all:inherit;padding:0}.input{caret-color:var(--_caret-color);overflow-x:hidden;text-align:inherit}.input::placeholder{color:currentColor;opacity:1}.input::-webkit-calendar-picker-indicator{display:none}.input::-webkit-search-decoration,.input::-webkit-search-cancel-button{display:none}@media(forced-colors: active){.input{background:none}}:focus-within .input{caret-color:var(--_focus-caret-color)}.error:focus-within .input{caret-color:var(--_error-focus-caret-color)}.text-field:not(.disabled) .prefix{color:var(--_input-text-prefix-color)}.text-field:not(.disabled) .suffix{color:var(--_input-text-suffix-color)}.text-field:not(.disabled) .input::placeholder{color:var(--_input-text-placeholder-color)}.prefix,.suffix{text-wrap:nowrap;width:min-content}.prefix{padding-inline-end:var(--_input-text-prefix-trailing-space)}.suffix{padding-inline-start:var(--_input-text-suffix-leading-space)}/*# sourceMappingURL=shared-styles.css.map */
+const textfield_internal_shared_styles_css_styles = i `:host{display:inline-flex;outline:none;resize:both;-webkit-tap-highlight-color:rgba(0,0,0,0)}.text-field,.field{width:100%}.text-field{display:inline-flex}.field{cursor:text}.disabled .field{cursor:default}.text-field,.textarea .field{resize:inherit}.icon{color:currentColor;display:flex;fill:currentColor}.icon ::slotted(*){display:flex}[hasstart] .icon.leading{font-size:var(--_leading-icon-size);height:var(--_leading-icon-size);width:var(--_leading-icon-size)}[hasend] .icon.trailing{font-size:var(--_trailing-icon-size);height:var(--_trailing-icon-size);width:var(--_trailing-icon-size)}.input-wrapper{display:flex}.input-wrapper>*{all:inherit;padding:0}.input{caret-color:var(--_caret-color);overflow-x:hidden;text-align:inherit}.input::placeholder{color:currentColor;opacity:1}.input::-webkit-calendar-picker-indicator{display:none}.input::-webkit-search-decoration,.input::-webkit-search-cancel-button{display:none}@media(forced-colors: active){.input{background:none}}.no-spinner .input::-webkit-inner-spin-button,.no-spinner .input::-webkit-outer-spin-button{display:none}.no-spinner .input[type=number]{-moz-appearance:textfield}:focus-within .input{caret-color:var(--_focus-caret-color)}.error:focus-within .input{caret-color:var(--_error-focus-caret-color)}.text-field:not(.disabled) .prefix{color:var(--_input-text-prefix-color)}.text-field:not(.disabled) .suffix{color:var(--_input-text-suffix-color)}.text-field:not(.disabled) .input::placeholder{color:var(--_input-text-placeholder-color)}.prefix,.suffix{text-wrap:nowrap;width:min-content}.prefix{padding-inline-end:var(--_input-text-prefix-trailing-space)}.suffix{padding-inline-start:var(--_input-text-suffix-leading-space)}/*# sourceMappingURL=shared-styles.css.map */
 `;
 //# sourceMappingURL=shared-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/textfield/filled-text-field.js
@@ -14829,8 +14837,11 @@ function setMenuEventListeners(menuButtonID, menuID, isFirstRender) {
       menuElement.removeEventListener('menu-close', displayMenuCloseEvent);
     }
     menuElement.addEventListener('menu-close', function () {
-      return displayMenuCloseEvent;
+      displayMenuCloseEvent;
     });
+    menuElement.addEventListener('click', function () {
+      displayMenuCloseEvent;
+    }, true);
 
     //console.log("Adding listener for menu opened events");
     //menuElement.removeEventListener('opened', displayOpenedEvent);
