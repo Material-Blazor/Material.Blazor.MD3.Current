@@ -1928,7 +1928,15 @@ class Button extends buttonBaseClass {
          * Whether to display the icon or not.
          */
         this.hasIcon = false;
+        /**
+         * The default behavior of the button. May be "text", "reset", or "submit"
+         * (default).
+         */
         this.type = 'submit';
+        /**
+         * The value added to a form with the button's name when the button submits a
+         * form.
+         */
         this.value = '';
         this.handleActivationClick = (event) => {
             if (!isActivationClick(event) || !this.buttonElement) {
@@ -2034,7 +2042,7 @@ __decorate([
     property_n()
 ], Button.prototype, "type", void 0);
 __decorate([
-    property_n()
+    property_n({ reflect: true })
 ], Button.prototype, "value", void 0);
 __decorate([
     query_e('.button')
@@ -3058,7 +3066,7 @@ __decorate([
   * SPDX-License-Identifier: Apache-2.0
   */
 
-const checkbox_styles_css_styles = i `:host{--_container-shape: var(--md-checkbox-container-shape, 2px);--_container-size: var(--md-checkbox-container-size, 18px);--_icon-size: var(--md-checkbox-icon-size, 18px);--_selected-container-color: var(--md-checkbox-selected-container-color, var(--md-sys-color-primary, #6750a4));--_selected-disabled-container-color: var(--md-checkbox-selected-disabled-container-color, var(--md-sys-color-on-surface, #1d1b20));--_selected-disabled-container-opacity: var(--md-checkbox-selected-disabled-container-opacity, 0.38);--_selected-disabled-icon-color: var(--md-checkbox-selected-disabled-icon-color, var(--md-sys-color-surface, #fef7ff));--_selected-focus-container-color: var(--md-checkbox-selected-focus-container-color, var(--md-sys-color-primary, #6750a4));--_selected-focus-icon-color: var(--md-checkbox-selected-focus-icon-color, var(--md-sys-color-on-primary, #fff));--_selected-hover-container-color: var(--md-checkbox-selected-hover-container-color, var(--md-sys-color-primary, #6750a4));--_selected-hover-icon-color: var(--md-checkbox-selected-hover-icon-color, var(--md-sys-color-on-primary, #fff));--_selected-hover-state-layer-color: var(--md-checkbox-selected-hover-state-layer-color, var(--md-sys-color-primary, #6750a4));--_selected-hover-state-layer-opacity: var(--md-checkbox-selected-hover-state-layer-opacity, 0.08);--_selected-icon-color: var(--md-checkbox-selected-icon-color, var(--md-sys-color-on-primary, #fff));--_selected-pressed-container-color: var(--md-checkbox-selected-pressed-container-color, var(--md-sys-color-primary, #6750a4));--_selected-pressed-icon-color: var(--md-checkbox-selected-pressed-icon-color, var(--md-sys-color-on-primary, #fff));--_selected-pressed-state-layer-color: var(--md-checkbox-selected-pressed-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--_selected-pressed-state-layer-opacity: var(--md-checkbox-selected-pressed-state-layer-opacity, 0.12);--_state-layer-shape: var(--md-checkbox-state-layer-shape, 9999px);--_state-layer-size: var(--md-checkbox-state-layer-size, 40px);--_disabled-container-opacity: var(--md-checkbox-disabled-container-opacity, 0.38);--_disabled-outline-color: var(--md-checkbox-disabled-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_disabled-outline-width: var(--md-checkbox-disabled-outline-width, 2px);--_focus-outline-color: var(--md-checkbox-focus-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_focus-outline-width: var(--md-checkbox-focus-outline-width, 2px);--_hover-outline-color: var(--md-checkbox-hover-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-outline-width: var(--md-checkbox-hover-outline-width, 2px);--_hover-state-layer-color: var(--md-checkbox-hover-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--_hover-state-layer-opacity: var(--md-checkbox-hover-state-layer-opacity, 0.08);--_outline-color: var(--md-checkbox-outline-color, var(--md-sys-color-on-surface-variant, #49454f));--_outline-width: var(--md-checkbox-outline-width, 2px);--_pressed-outline-color: var(--md-checkbox-pressed-outline-color, var(--md-sys-color-on-surface, #1d1b20));--_pressed-outline-width: var(--md-checkbox-pressed-outline-width, 2px);--_pressed-state-layer-color: var(--md-checkbox-pressed-state-layer-color, var(--md-sys-color-primary, #6750a4));--_pressed-state-layer-opacity: var(--md-checkbox-pressed-state-layer-opacity, 0.12);--_container-shape-start-start: var( --md-checkbox-container-shape-start-start, var(--_container-shape) );--_container-shape-start-end: var( --md-checkbox-container-shape-start-end, var(--_container-shape) );--_container-shape-end-end: var( --md-checkbox-container-shape-end-end, var(--_container-shape) );--_container-shape-end-start: var( --md-checkbox-container-shape-end-start, var(--_container-shape) );border-start-start-radius:var(--_container-shape-start-start);border-start-end-radius:var(--_container-shape-start-end);border-end-end-radius:var(--_container-shape-end-end);border-end-start-radius:var(--_container-shape-end-start);display:inline-flex;height:var(--_container-size);position:relative;vertical-align:top;width:var(--_container-size);-webkit-tap-highlight-color:rgba(0,0,0,0);cursor:pointer}:host([disabled]){cursor:default}:host([touch-target=wrapper]){margin:max(0px,(48px - var(--_container-size))/2)}md-focus-ring{height:44px;inset:unset;width:44px}input{appearance:none;height:48px;margin:0;opacity:0;outline:none;position:absolute;width:48px;z-index:1;cursor:inherit}:host([touch-target=none]) input{height:100%;width:100%}.container{border-radius:inherit;display:flex;height:100%;place-content:center;place-items:center;position:relative;width:100%}.outline,.background,.icon{inset:0;position:absolute}.outline,.background{border-radius:inherit}.outline{border-color:var(--_outline-color);border-style:solid;border-width:var(--_outline-width);box-sizing:border-box}.background{background-color:var(--_selected-container-color)}.background,.icon{opacity:0;transition-duration:150ms,50ms;transition-property:transform,opacity;transition-timing-function:cubic-bezier(0.3, 0, 0.8, 0.15),linear;transform:scale(0.6)}:where(.selected) :is(.background,.icon){opacity:1;transition-duration:350ms,50ms;transition-timing-function:cubic-bezier(0.05, 0.7, 0.1, 1),linear;transform:scale(1)}md-ripple{border-radius:var(--_state-layer-shape);height:var(--_state-layer-size);inset:unset;width:var(--_state-layer-size);--md-ripple-hover-color: var(--_hover-state-layer-color);--md-ripple-hover-opacity: var(--_hover-state-layer-opacity);--md-ripple-pressed-color: var(--_pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity)}.selected md-ripple{--md-ripple-hover-color: var(--_selected-hover-state-layer-color);--md-ripple-hover-opacity: var(--_selected-hover-state-layer-opacity);--md-ripple-pressed-color: var(--_selected-pressed-state-layer-color);--md-ripple-pressed-opacity: var(--_selected-pressed-state-layer-opacity)}.icon{fill:var(--_selected-icon-color);height:var(--_icon-size);width:var(--_icon-size)}.mark.short{height:2px;transition-property:transform,height;width:2px}.mark.long{height:2px;transition-property:transform,width;width:10px}.mark{animation-duration:150ms;animation-timing-function:cubic-bezier(0.3, 0, 0.8, 0.15);transition-duration:150ms;transition-timing-function:cubic-bezier(0.3, 0, 0.8, 0.15)}.selected .mark{animation-duration:350ms;animation-timing-function:cubic-bezier(0.05, 0.7, 0.1, 1);transition-duration:350ms;transition-timing-function:cubic-bezier(0.05, 0.7, 0.1, 1)}.checked .mark,.prev-checked.unselected .mark{transform:scaleY(-1) translate(7px, -14px) rotate(45deg)}.checked .mark.short,.prev-checked.unselected .mark.short{height:5.6568542495px}.checked .mark.long,.prev-checked.unselected .mark.long{width:11.313708499px}.indeterminate .mark,.prev-indeterminate.unselected .mark{transform:scaleY(-1) translate(4px, -10px) rotate(0deg)}.prev-unselected .mark{transition-property:none}.prev-unselected.checked .mark.long{animation-name:prev-unselected-to-checked}@keyframes prev-unselected-to-checked{from{width:0}}:where(:hover) .outline{border-color:var(--_hover-outline-color);border-width:var(--_hover-outline-width)}:where(:hover) .background{background:var(--_selected-hover-container-color)}:where(:hover) .icon{fill:var(--_selected-hover-icon-color)}:where(:focus-within) .outline{border-color:var(--_focus-outline-color);border-width:var(--_focus-outline-width)}:where(:focus-within) .background{background:var(--_selected-focus-container-color)}:where(:focus-within) .icon{fill:var(--_selected-focus-icon-color)}:where(:active) .outline{border-color:var(--_pressed-outline-color);border-width:var(--_pressed-outline-width)}:where(:active) .background{background:var(--_selected-pressed-container-color)}:where(:active) .icon{fill:var(--_selected-pressed-icon-color)}:where(.disabled,.prev-disabled) :is(.background,.icon,.mark){animation-duration:0s;transition-duration:0s}:where(.disabled) .outline{border-color:var(--_disabled-outline-color);border-width:var(--_disabled-outline-width);opacity:var(--_disabled-container-opacity)}:where(.selected.disabled) .outline{visibility:hidden}:where(.selected.disabled) .background{background:var(--_selected-disabled-container-color);opacity:var(--_selected-disabled-container-opacity)}:where(.disabled) .icon{fill:var(--_selected-disabled-icon-color)}@media(forced-colors: active){.background{background-color:CanvasText}.selected.disabled .background{background-color:GrayText;opacity:1}.outline{border-color:CanvasText}.disabled .outline{border-color:GrayText;opacity:1}.icon{fill:Canvas}}/*# sourceMappingURL=checkbox-styles.css.map */
+const checkbox_styles_css_styles = i `:host{border-start-start-radius:var(--md-checkbox-container-shape-start-start, var(--md-checkbox-container-shape, 2px));border-start-end-radius:var(--md-checkbox-container-shape-start-end, var(--md-checkbox-container-shape, 2px));border-end-end-radius:var(--md-checkbox-container-shape-end-end, var(--md-checkbox-container-shape, 2px));border-end-start-radius:var(--md-checkbox-container-shape-end-start, var(--md-checkbox-container-shape, 2px));display:inline-flex;height:var(--md-checkbox-container-size, 18px);position:relative;vertical-align:top;width:var(--md-checkbox-container-size, 18px);-webkit-tap-highlight-color:rgba(0,0,0,0);cursor:pointer}:host([disabled]){cursor:default}:host([touch-target=wrapper]){margin:max(0px,(48px - var(--md-checkbox-container-size, 18px))/2)}md-focus-ring{height:44px;inset:unset;width:44px}input{appearance:none;height:48px;margin:0;opacity:0;outline:none;position:absolute;width:48px;z-index:1;cursor:inherit}:host([touch-target=none]) input{height:100%;width:100%}.container{border-radius:inherit;display:flex;height:100%;place-content:center;place-items:center;position:relative;width:100%}.outline,.background,.icon{inset:0;position:absolute}.outline,.background{border-radius:inherit}.outline{border-color:var(--md-checkbox-outline-color, var(--md-sys-color-on-surface-variant, #49454f));border-style:solid;border-width:var(--md-checkbox-outline-width, 2px);box-sizing:border-box}.background{background-color:var(--md-checkbox-selected-container-color, var(--md-sys-color-primary, #6750a4))}.background,.icon{opacity:0;transition-duration:150ms,50ms;transition-property:transform,opacity;transition-timing-function:cubic-bezier(0.3, 0, 0.8, 0.15),linear;transform:scale(0.6)}:where(.selected) :is(.background,.icon){opacity:1;transition-duration:350ms,50ms;transition-timing-function:cubic-bezier(0.05, 0.7, 0.1, 1),linear;transform:scale(1)}md-ripple{border-radius:var(--md-checkbox-state-layer-shape, 9999px);height:var(--md-checkbox-state-layer-size, 40px);inset:unset;width:var(--md-checkbox-state-layer-size, 40px);--md-ripple-hover-color: var(--md-checkbox-hover-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--md-ripple-hover-opacity: var(--md-checkbox-hover-state-layer-opacity, 0.08);--md-ripple-pressed-color: var(--md-checkbox-pressed-state-layer-color, var(--md-sys-color-primary, #6750a4));--md-ripple-pressed-opacity: var(--md-checkbox-pressed-state-layer-opacity, 0.12)}.selected md-ripple{--md-ripple-hover-color: var(--md-checkbox-selected-hover-state-layer-color, var(--md-sys-color-primary, #6750a4));--md-ripple-hover-opacity: var(--md-checkbox-selected-hover-state-layer-opacity, 0.08);--md-ripple-pressed-color: var(--md-checkbox-selected-pressed-state-layer-color, var(--md-sys-color-on-surface, #1d1b20));--md-ripple-pressed-opacity: var(--md-checkbox-selected-pressed-state-layer-opacity, 0.12)}.icon{fill:var(--md-checkbox-selected-icon-color, var(--md-sys-color-on-primary, #fff));height:var(--md-checkbox-icon-size, 18px);width:var(--md-checkbox-icon-size, 18px)}.mark.short{height:2px;transition-property:transform,height;width:2px}.mark.long{height:2px;transition-property:transform,width;width:10px}.mark{animation-duration:150ms;animation-timing-function:cubic-bezier(0.3, 0, 0.8, 0.15);transition-duration:150ms;transition-timing-function:cubic-bezier(0.3, 0, 0.8, 0.15)}.selected .mark{animation-duration:350ms;animation-timing-function:cubic-bezier(0.05, 0.7, 0.1, 1);transition-duration:350ms;transition-timing-function:cubic-bezier(0.05, 0.7, 0.1, 1)}.checked .mark,.prev-checked.unselected .mark{transform:scaleY(-1) translate(7px, -14px) rotate(45deg)}.checked .mark.short,.prev-checked.unselected .mark.short{height:5.6568542495px}.checked .mark.long,.prev-checked.unselected .mark.long{width:11.313708499px}.indeterminate .mark,.prev-indeterminate.unselected .mark{transform:scaleY(-1) translate(4px, -10px) rotate(0deg)}.prev-unselected .mark{transition-property:none}.prev-unselected.checked .mark.long{animation-name:prev-unselected-to-checked}@keyframes prev-unselected-to-checked{from{width:0}}:where(:hover) .outline{border-color:var(--md-checkbox-hover-outline-color, var(--md-sys-color-on-surface, #1d1b20));border-width:var(--md-checkbox-hover-outline-width, 2px)}:where(:hover) .background{background:var(--md-checkbox-selected-hover-container-color, var(--md-sys-color-primary, #6750a4))}:where(:hover) .icon{fill:var(--md-checkbox-selected-hover-icon-color, var(--md-sys-color-on-primary, #fff))}:where(:focus-within) .outline{border-color:var(--md-checkbox-focus-outline-color, var(--md-sys-color-on-surface, #1d1b20));border-width:var(--md-checkbox-focus-outline-width, 2px)}:where(:focus-within) .background{background:var(--md-checkbox-selected-focus-container-color, var(--md-sys-color-primary, #6750a4))}:where(:focus-within) .icon{fill:var(--md-checkbox-selected-focus-icon-color, var(--md-sys-color-on-primary, #fff))}:where(:active) .outline{border-color:var(--md-checkbox-pressed-outline-color, var(--md-sys-color-on-surface, #1d1b20));border-width:var(--md-checkbox-pressed-outline-width, 2px)}:where(:active) .background{background:var(--md-checkbox-selected-pressed-container-color, var(--md-sys-color-primary, #6750a4))}:where(:active) .icon{fill:var(--md-checkbox-selected-pressed-icon-color, var(--md-sys-color-on-primary, #fff))}:where(.disabled,.prev-disabled) :is(.background,.icon,.mark){animation-duration:0s;transition-duration:0s}:where(.disabled) .outline{border-color:var(--md-checkbox-disabled-outline-color, var(--md-sys-color-on-surface, #1d1b20));border-width:var(--md-checkbox-disabled-outline-width, 2px);opacity:var(--md-checkbox-disabled-container-opacity, 0.38)}:where(.selected.disabled) .outline{visibility:hidden}:where(.selected.disabled) .background{background:var(--md-checkbox-selected-disabled-container-color, var(--md-sys-color-on-surface, #1d1b20));opacity:var(--md-checkbox-selected-disabled-container-opacity, 0.38)}:where(.disabled) .icon{fill:var(--md-checkbox-selected-disabled-icon-color, var(--md-sys-color-surface, #fef7ff))}@media(forced-colors: active){.background{background-color:CanvasText}.selected.disabled .background{background-color:GrayText;opacity:1}.outline{border-color:CanvasText}.disabled .outline{border-color:GrayText;opacity:1}.icon{fill:Canvas}}/*# sourceMappingURL=checkbox-styles.css.map */
 `;
 //# sourceMappingURL=checkbox-styles.css.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/checkbox/checkbox.js
@@ -5624,7 +5632,15 @@ class IconButton extends iconButtonBaseClass {
          * icon is provided.
          */
         this.selected = false;
+        /**
+         * The default behavior of the button. May be "text", "reset", or "submit"
+         * (default).
+         */
         this.type = 'submit';
+        /**
+         * The value added to a form with the button's name when the button submits a
+         * form.
+         */
         this.value = '';
         this.flipIcon = isRtl(this, this.flipIconInRtl);
     }
@@ -5779,7 +5795,7 @@ __decorate([
     property_n()
 ], IconButton.prototype, "type", void 0);
 __decorate([
-    property_n()
+    property_n({ reflect: true })
 ], IconButton.prototype, "value", void 0);
 __decorate([
     state_r()
@@ -10348,6 +10364,7 @@ MdRadio = __decorate([
  * SPDX-License-Identifier: Apache-2.0
  */
 
+
 /**
  * A symbol property used for a callback when validity has been reported.
  */
@@ -10355,6 +10372,8 @@ const onReportValidity = Symbol('onReportValidity');
 // Private symbol members, used to avoid name clashing.
 const privateCleanupFormListeners = Symbol('privateCleanupFormListeners');
 const privateDoNotReportInvalid = Symbol('privateDoNotReportInvalid');
+const privateIsSelfReportingValidity = Symbol('privateIsSelfReportingValidity');
+const privateCallOnReportValidity = Symbol('privateCallOnReportValidity');
 /**
  * Mixes in a callback for constraint validation when validity should be
  * styled and reported to the user.
@@ -10388,7 +10407,7 @@ const privateDoNotReportInvalid = Symbol('privateDoNotReportInvalid');
  * @return The provided class with `OnReportValidity` mixed in.
  */
 function mixinOnReportValidity(base) {
-    var _a, _b;
+    var _a, _b, _c;
     class OnReportValidityElement extends base {
         // Mixins must have a constructor with `...args: any[]`
         // tslint:disable-next-line:no-any
@@ -10403,6 +10422,12 @@ function mixinOnReportValidity(base) {
              * events from `checkValidity()` do not trigger reporting.
              */
             this[_b] = false;
+            /**
+             * Used to determine if the control is reporting validity from itself, or
+             * if a `<form>` is causing the validity report. Forms have different
+             * control focusing behavior.
+             */
+            this[_c] = false;
             if (is_server_o) {
                 return;
             }
@@ -10419,9 +10444,7 @@ function mixinOnReportValidity(base) {
                     // A normal bubbling phase event listener. By adding it here, we
                     // ensure it's the last event listener that is called during the
                     // bubbling phase.
-                    if (!invalidEvent.defaultPrevented) {
-                        this[onReportValidity](invalidEvent);
-                    }
+                    this[privateCallOnReportValidity](invalidEvent);
                 }, { once: true });
             }, {
                 // Listen during the capture phase, which will happen before the
@@ -10438,14 +10461,42 @@ function mixinOnReportValidity(base) {
             return valid;
         }
         reportValidity() {
+            this[privateIsSelfReportingValidity] = true;
             const valid = super.reportValidity();
             // Constructor's invalid listener will handle reporting invalid events.
             if (valid) {
-                this[onReportValidity](null);
+                this[privateCallOnReportValidity](null);
             }
+            this[privateIsSelfReportingValidity] = false;
             return valid;
         }
-        [(_a = privateCleanupFormListeners, _b = privateDoNotReportInvalid, onReportValidity)](invalidEvent) {
+        [(_a = privateCleanupFormListeners, _b = privateDoNotReportInvalid, _c = privateIsSelfReportingValidity, privateCallOnReportValidity)](invalidEvent) {
+            // Since invalid events do not bubble to parent listeners, and because
+            // our invalid listeners are added lazily after other listeners, we can
+            // reliably read `defaultPrevented` synchronously without worrying
+            // about waiting for another listener that could cancel it.
+            const wasCanceled = invalidEvent?.defaultPrevented;
+            if (wasCanceled) {
+                return;
+            }
+            this[onReportValidity](invalidEvent);
+            // If an implementation calls invalidEvent.preventDefault() to stop the
+            // platform popup from displaying, focusing is also prevented, so we need
+            // to manually focus.
+            const implementationCanceledFocus = !wasCanceled && invalidEvent?.defaultPrevented;
+            if (!implementationCanceledFocus) {
+                return;
+            }
+            // The control should be focused when:
+            // - `control.reportValidity()` is called (self-reporting).
+            // - a form is reporting validity for its controls and this is the first
+            //   invalid control.
+            if (this[privateIsSelfReportingValidity] ||
+                isFirstInvalidControlInForm(this[internals].form, this)) {
+                this.focus();
+            }
+        }
+        [onReportValidity](invalidEvent) {
             throw new Error('Implement [onReportValidity]');
         }
         formAssociatedCallback(form) {
@@ -10453,78 +10504,147 @@ function mixinOnReportValidity(base) {
             if (super.formAssociatedCallback) {
                 super.formAssociatedCallback(form);
             }
-            // Clean up previous submit listener
+            // Clean up previous form listeners.
             this[privateCleanupFormListeners].abort();
             if (!form) {
                 return;
             }
             this[privateCleanupFormListeners] = new AbortController();
-            // If the element's form submits, then all controls are valid. This lets
-            // the element remove its error styles that may have been set when
-            // `reportValidity()` was called.
-            form.addEventListener('submit', () => {
-                this[onReportValidity](null);
-            }, {
-                signal: this[privateCleanupFormListeners].signal,
-            });
-            // Inject a callback when `form.reportValidity()` is called and the form
-            // is valid. There isn't an event that is dispatched to alert us (unlike
-            // the 'invalid' event), and we need to remove error styles when
-            // `form.reportValidity()` is called and returns true.
-            let reportedInvalidEventFromForm = false;
-            let formReportValidityCleanup = new AbortController();
-            injectFormReportValidityHooks({
-                form,
-                cleanup: this[privateCleanupFormListeners].signal,
-                beforeReportValidity: () => {
-                    reportedInvalidEventFromForm = false;
-                    this.addEventListener('invalid', (invalidEvent) => {
-                        reportedInvalidEventFromForm = true;
-                        if (!invalidEvent.defaultPrevented) {
-                            this[onReportValidity](invalidEvent);
-                        }
-                    }, { signal: formReportValidityCleanup.signal });
-                },
-                afterReportValidity: () => {
-                    formReportValidityCleanup.abort();
-                    formReportValidityCleanup = new AbortController();
-                    if (reportedInvalidEventFromForm) {
-                        reportedInvalidEventFromForm = false;
-                        return;
-                    }
-                    // Report successful form validation if an invalid event wasn't
-                    // fired.
-                    this[onReportValidity](null);
-                },
-            });
+            // Add a listener that fires when the form runs constraint validation and
+            // the control is valid, so that it may remove its error styles.
+            //
+            // This happens on `form.reportValidity()` and `form.requestSubmit()`
+            // (both when the submit fails and passes).
+            addFormReportValidListener(this, form, () => {
+                this[privateCallOnReportValidity](null);
+            }, this[privateCleanupFormListeners].signal);
         }
     }
     return OnReportValidityElement;
 }
-const FORM_REPORT_VALIDITY_HOOKS = new WeakMap();
-function injectFormReportValidityHooks({ form, beforeReportValidity, afterReportValidity, cleanup, }) {
-    if (!FORM_REPORT_VALIDITY_HOOKS.has(form)) {
-        // Patch form.reportValidity() to add an event target that can be used to
-        // react when the method is called.
-        // We should only patch this method once, since multiple controls and other
-        // forces may want to patch this method. We cannot reliably clean it up by
-        // resetting the method to "superReportValidity", which may be a patched
-        // function.
-        // Instead, we never clean up the patch but add and clean up event listener
-        // hooks once it's patched.
+/**
+ * Add a listener that fires when a form runs constraint validation on a control
+ * and it is valid. This is needed to clear previously invalid styles.
+ *
+ * @param control The control of the form to listen for valid events.
+ * @param form The control's form that can run constraint validation.
+ * @param onControlValid A listener that is called when the form runs constraint
+ *     validation and the control is valid.
+ * @param cleanup A cleanup signal to remove the listener.
+ */
+function addFormReportValidListener(control, form, onControlValid, cleanup) {
+    const validateHooks = getFormValidateHooks(form);
+    // When a form validates its controls, check if an invalid event is dispatched
+    // on the control. If it is not, then inform the control to report its valid
+    // state.
+    let controlFiredInvalid = false;
+    let cleanupInvalidListener;
+    let isNextSubmitFromHook = false;
+    validateHooks.addEventListener('before', () => {
+        isNextSubmitFromHook = true;
+        cleanupInvalidListener = new AbortController();
+        controlFiredInvalid = false;
+        control.addEventListener('invalid', () => {
+            controlFiredInvalid = true;
+        }, {
+            signal: cleanupInvalidListener.signal,
+        });
+    }, { signal: cleanup });
+    validateHooks.addEventListener('after', () => {
+        isNextSubmitFromHook = false;
+        cleanupInvalidListener?.abort();
+        if (controlFiredInvalid) {
+            return;
+        }
+        onControlValid();
+    }, { signal: cleanup });
+    // The above hooks handle imperatively submitting the form, but not
+    // declaratively submitting the form. This happens when:
+    // 1. A non-custom element `<button type="submit">` is clicked.
+    // 2. Enter is pressed on a non-custom element text editable `<input>`.
+    form.addEventListener('submit', () => {
+        // This submit was from `form.requestSubmit()`, which already calls the
+        // listener.
+        if (isNextSubmitFromHook) {
+            return;
+        }
+        onControlValid();
+    }, {
+        signal: cleanup,
+    });
+    // Note: it is a known limitation that we cannot detect if a form tries to
+    // submit declaratively, but fails to do so because an unrelated sibling
+    // control failed its constraint validation.
+    //
+    // Since we cannot detect when that happens, a previously invalid control may
+    // not clear its error styling when it becomes valid again.
+    //
+    // To work around this, call `form.reportValidity()` when submitting a form
+    // declaratively. This can be down on the `<button type="submit">`'s click or
+    // the text editable `<input>`'s 'Enter' keydown.
+}
+const FORM_VALIDATE_HOOKS = new WeakMap();
+/**
+ * Get a hooks `EventTarget` that dispatches 'before' and 'after' events that
+ * fire before a form runs constraint validation and immediately after it
+ * finishes running constraint validation on its controls.
+ *
+ * This happens during `form.reportValidity()` and `form.requestSubmit()`.
+ *
+ * @param form The form to get or set up hooks for.
+ * @return A hooks `EventTarget` to add listeners to.
+ */
+function getFormValidateHooks(form) {
+    if (!FORM_VALIDATE_HOOKS.has(form)) {
+        // Patch form methods to add event listener hooks. These are needed to react
+        // to form behaviors that do not dispatch events, such as a form asking its
+        // controls to report their validity.
+        //
+        // We should only patch the methods once, since multiple controls and other
+        // forces may want to patch this method. We cannot reliably clean it up if
+        // there are multiple patched and re-patched methods referring holding
+        // references to each other.
+        //
+        // Instead, we never clean up the patch but add and clean up event listeners
+        // added to the hooks after the patch.
         const hooks = new EventTarget();
-        const superReportValidity = form.reportValidity;
-        form.reportValidity = function () {
-            hooks.dispatchEvent(new Event('before'));
-            const valid = superReportValidity.call(this);
-            hooks.dispatchEvent(new Event('after'));
-            return valid;
-        };
-        FORM_REPORT_VALIDITY_HOOKS.set(form, hooks);
+        FORM_VALIDATE_HOOKS.set(form, hooks);
+        // Add hooks to support notifying before and after a form has run constraint
+        // validation on its controls.
+        // Note: `form.submit()` does not run constraint validation per spec.
+        for (const methodName of ['reportValidity', 'requestSubmit']) {
+            const superMethod = form[methodName];
+            form[methodName] = function () {
+                hooks.dispatchEvent(new Event('before'));
+                const result = Reflect.apply(superMethod, this, arguments);
+                hooks.dispatchEvent(new Event('after'));
+                return result;
+            };
+        }
     }
-    const hooks = FORM_REPORT_VALIDITY_HOOKS.get(form);
-    hooks.addEventListener('before', beforeReportValidity, { signal: cleanup });
-    hooks.addEventListener('after', afterReportValidity, { signal: cleanup });
+    return FORM_VALIDATE_HOOKS.get(form);
+}
+/**
+ * Checks if a control is the first invalid control in a form.
+ *
+ * @param form The control's form. When `null`, the control doesn't have a form
+ *     and the method returns true.
+ * @param control The control to check.
+ * @return True if there is no form or if the control is the form's first
+ *     invalid control.
+ */
+function isFirstInvalidControlInForm(form, control) {
+    if (!form) {
+        return true;
+    }
+    let firstInvalidControl;
+    for (const element of form.elements) {
+        if (element.matches(':invalid')) {
+            firstInvalidControl = element;
+            break;
+        }
+    }
+    return firstInvalidControl === control;
 }
 //# sourceMappingURL=on-report-validity.js.map
 ;// CONCATENATED MODULE: ./node_modules/@material/web/labs/behaviors/validators/select-validator.js
@@ -10810,15 +10930,8 @@ class Select extends selectBaseClass {
         this.nativeErrorText = '';
     }
     [(select_a = VALUE, onReportValidity)](invalidEvent) {
-        if (invalidEvent?.defaultPrevented) {
-            return;
-        }
-        if (invalidEvent) {
-            // Prevent default pop-up behavior. This also prevents focusing, so we
-            // manually focus.
-            invalidEvent.preventDefault();
-            this.focus();
-        }
+        // Prevent default pop-up behavior.
+        invalidEvent?.preventDefault();
         const prevMessage = this.getErrorText();
         this.nativeError = !!invalidEvent;
         this.nativeErrorText = this.validationMessage;
@@ -10888,7 +11001,7 @@ class Select extends selectBaseClass {
           tabindex=${this.disabled ? '-1' : '0'}
           aria-label=${this.ariaLabel || T}
           aria-describedby="description"
-          aria-expanded=${this.open ? 'true' : T}
+          aria-expanded=${this.open ? 'true' : 'false'}
           aria-controls="listbox"
           class="field"
           label=${this.label}
@@ -13317,7 +13430,9 @@ class Tabs extends lit_element_s {
         await this.updateComplete;
         const { tabs } = this;
         tabToScrollTo ?? (tabToScrollTo = this.activeTab);
-        if (!tabToScrollTo || !tabs.includes(tabToScrollTo)) {
+        if (!tabToScrollTo ||
+            !tabs.includes(tabToScrollTo) ||
+            !this.tabsScrollerElement) {
             return;
         }
         // wait for tabs to render.
@@ -13334,7 +13449,7 @@ class Tabs extends lit_element_s {
         const to = Math.min(min, Math.max(max, scroll));
         // TODO(b/299934312): improve focus smoothness
         const behavior = !this.focusedTab ? 'smooth' : 'instant';
-        this.scrollTo({ behavior, top: 0, left: to });
+        this.tabsScrollerElement.scrollTo({ behavior, top: 0, left: to });
     }
     render() {
         return x `
@@ -13473,6 +13588,9 @@ __decorate([
 __decorate([
     property_n({ type: Boolean, attribute: 'auto-activate' })
 ], Tabs.prototype, "autoActivate", void 0);
+__decorate([
+    query_e('.tabs')
+], Tabs.prototype, "tabsScrollerElement", void 0);
 __decorate([
     query_e('slot')
 ], Tabs.prototype, "slotElement", void 0);
@@ -14302,15 +14420,8 @@ class TextField extends textFieldBaseClass {
         return this.inputOrTextarea;
     }
     [onReportValidity](invalidEvent) {
-        if (invalidEvent?.defaultPrevented) {
-            return;
-        }
-        if (invalidEvent) {
-            // Prevent default pop-up behavior. This also prevents focusing, so we
-            // manually focus.
-            invalidEvent.preventDefault();
-            this.focus();
-        }
+        // Prevent default pop-up behavior.
+        invalidEvent?.preventDefault();
         const prevMessage = this.getErrorText();
         this.nativeError = !!invalidEvent;
         this.nativeErrorText = this.validationMessage;
@@ -14823,15 +14934,16 @@ function setMenuEventListeners(menuButtonID, menuID, isFirstRender) {
     buttonElement.addEventListener('click', function () {
       toggleMenu(menuElement);
     });
-
-    //console.log("Adding listener for menu closed events");
-    //menuElement.removeEventListener('closed', displayClosedEvent);
-    //menuElement.addEventListener('closed', () => displayClosedEvent);
-
-    //console.log("Adding listener for menu closing events");
-    //menuElement.removeEventListener('closing', displayClosingEvent);
-    //menuElement.addEventListener('closing', () => displayClosingEvent);
-
+    console.log("Adding listener for menu closed events");
+    menuElement.removeEventListener('closed', displayClosedEvent);
+    menuElement.addEventListener('closed', function () {
+      return displayClosedEvent;
+    });
+    console.log("Adding listener for menu closing events");
+    menuElement.removeEventListener('closing', displayClosingEvent);
+    menuElement.addEventListener('closing', function () {
+      return displayClosingEvent;
+    });
     console.log("Adding listener for menu-close events");
     if (!isFirstRender) {
       // TS2769
