@@ -23,16 +23,18 @@
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-/* unused harmony exports eventArgsCreatorMenuClose, afterStarted */
+/* unused harmony exports eventArgsCreatorMenuSelectionReport, afterStarted */
 /*
-** MW3 menu-close event arguments
+** MW3 close-menu event arguments
 **
 ** This must match the C# definition found in MBMenuEvents.cs
 */
-function eventArgsCreatorMenuClose(event) {
+function eventArgsCreatorMenuSelectionReport(event) {
+  var target = event.target;
   return {
-    customProperty1: 'any value for property 1',
-    customProperty2: event.srcElement.value
+    menuID: target.id,
+    menuHeadline: target.typeaheadText,
+    reason: JSON.stringify(event.detail.reason)
   };
 }
 
@@ -40,9 +42,10 @@ function eventArgsCreatorMenuClose(event) {
 ** Register all custom events
 */
 function afterStarted(blazor) {
-  blazor.registerCustomEventType('menuclose', {
-    browserEventName: "menu-closeX",
-    createEventArgs: eventArgsCreatorMenuClose
+  console.log("Registering menuselectionreport event");
+  blazor.registerCustomEventType('menuselectionreport', {
+    browserEventName: "close-menu",
+    createEventArgs: eventArgsCreatorMenuSelectionReport
   });
 }
 /******/ })()

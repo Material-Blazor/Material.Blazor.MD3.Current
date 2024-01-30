@@ -1980,10 +1980,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MenuClose.MenuCloseEventArgs.yml",
+      "source_relative_path": "api/Material.Blazor.MenuClose.MenuSelectionReportEventArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Material.Blazor.MenuClose.MenuCloseEventArgs.html"
+          "relative_path": "api/Material.Blazor.MenuClose.MenuSelectionReportEventArgs.html"
         }
       },
       "version": ""
