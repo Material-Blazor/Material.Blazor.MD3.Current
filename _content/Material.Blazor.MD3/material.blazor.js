@@ -14904,12 +14904,12 @@ function displayCloseMenuEvent(event) {
     return stringifyItem(item);
   }).join(",\n      "), "\n    ],\n  },\n  reason: ").concat(JSON.stringify(event.detail.reason), "\n}");
 }
-function setMenuEventListeners(menuButtonID, menuID) {
-  var buttonElement = document.getElementById(menuButtonID);
+function setMenuEventListeners(anchorID, menuID) {
+  var anchorElement = document.getElementById(anchorID);
   var menuElement = document.getElementById(menuID);
-  if (buttonElement != null && menuElement != null) {
-    console.log("Adding listener for button click events");
-    buttonElement.addEventListener('click', function () {
+  if (anchorElement != null && menuElement != null) {
+    console.log("Adding listener for anchor click events");
+    anchorElement.addEventListener('click', function () {
       toggleMenu(menuElement);
     });
   }

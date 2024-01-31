@@ -6913,6 +6913,18 @@ references:
   fullName.vb: Material.Blazor.MBMenu.New
   nameWithType: MBMenu.MBMenu
   nameWithType.vb: MBMenu.New
+- uid: Material.Blazor.MBMenu.AnchorType
+  name: AnchorType
+  href: api/Material.Blazor.MBMenu.html#Material_Blazor_MBMenu_AnchorType
+  commentId: P:Material.Blazor.MBMenu.AnchorType
+  fullName: Material.Blazor.MBMenu.AnchorType
+  nameWithType: MBMenu.AnchorType
+- uid: Material.Blazor.MBMenu.AnchorType*
+  name: AnchorType
+  href: api/Material.Blazor.MBMenu.html#Material_Blazor_MBMenu_AnchorType_
+  commentId: Overload:Material.Blazor.MBMenu.AnchorType
+  fullName: Material.Blazor.MBMenu.AnchorType
+  nameWithType: MBMenu.AnchorType
 - uid: Material.Blazor.MBMenu.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
   name: BuildRenderTree(RenderTreeBuilder)
   href: api/Material.Blazor.MBMenu.html#Material_Blazor_MBMenu_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
@@ -6925,18 +6937,6 @@ references:
   commentId: Overload:Material.Blazor.MBMenu.BuildRenderTree
   fullName: Material.Blazor.MBMenu.BuildRenderTree
   nameWithType: MBMenu.BuildRenderTree
-- uid: Material.Blazor.MBMenu.ButtonIconDescriptor
-  name: ButtonIconDescriptor
-  href: api/Material.Blazor.MBMenu.html#Material_Blazor_MBMenu_ButtonIconDescriptor
-  commentId: P:Material.Blazor.MBMenu.ButtonIconDescriptor
-  fullName: Material.Blazor.MBMenu.ButtonIconDescriptor
-  nameWithType: MBMenu.ButtonIconDescriptor
-- uid: Material.Blazor.MBMenu.ButtonIconDescriptor*
-  name: ButtonIconDescriptor
-  href: api/Material.Blazor.MBMenu.html#Material_Blazor_MBMenu_ButtonIconDescriptor_
-  commentId: Overload:Material.Blazor.MBMenu.ButtonIconDescriptor
-  fullName: Material.Blazor.MBMenu.ButtonIconDescriptor
-  nameWithType: MBMenu.ButtonIconDescriptor
 - uid: Material.Blazor.MBMenu.ButtonIconIsTrailing
   name: ButtonIconIsTrailing
   href: api/Material.Blazor.MBMenu.html#Material_Blazor_MBMenu_ButtonIconIsTrailing
@@ -6985,6 +6985,18 @@ references:
   commentId: Overload:Material.Blazor.MBMenu.ButtonStyle
   fullName: Material.Blazor.MBMenu.ButtonStyle
   nameWithType: MBMenu.ButtonStyle
+- uid: Material.Blazor.MBMenu.IconDescriptor
+  name: IconDescriptor
+  href: api/Material.Blazor.MBMenu.html#Material_Blazor_MBMenu_IconDescriptor
+  commentId: P:Material.Blazor.MBMenu.IconDescriptor
+  fullName: Material.Blazor.MBMenu.IconDescriptor
+  nameWithType: MBMenu.IconDescriptor
+- uid: Material.Blazor.MBMenu.IconDescriptor*
+  name: IconDescriptor
+  href: api/Material.Blazor.MBMenu.html#Material_Blazor_MBMenu_IconDescriptor_
+  commentId: Overload:Material.Blazor.MBMenu.IconDescriptor
+  fullName: Material.Blazor.MBMenu.IconDescriptor
+  nameWithType: MBMenu.IconDescriptor
 - uid: Material.Blazor.MBMenu.MenuItems
   name: MenuItems
   href: api/Material.Blazor.MBMenu.html#Material_Blazor_MBMenu_MenuItems
@@ -7024,6 +7036,24 @@ references:
   commentId: Overload:Material.Blazor.MBMenu.OnAfterRenderAsync
   fullName: Material.Blazor.MBMenu.OnAfterRenderAsync
   nameWithType: MBMenu.OnAfterRenderAsync
+- uid: Material.Blazor.MBMenuAnchorType
+  name: MBMenuAnchorType
+  href: api/Material.Blazor.MBMenuAnchorType.html
+  commentId: T:Material.Blazor.MBMenuAnchorType
+  fullName: Material.Blazor.MBMenuAnchorType
+  nameWithType: MBMenuAnchorType
+- uid: Material.Blazor.MBMenuAnchorType.Button
+  name: Button
+  href: api/Material.Blazor.MBMenuAnchorType.html#Material_Blazor_MBMenuAnchorType_Button
+  commentId: F:Material.Blazor.MBMenuAnchorType.Button
+  fullName: Material.Blazor.MBMenuAnchorType.Button
+  nameWithType: MBMenuAnchorType.Button
+- uid: Material.Blazor.MBMenuAnchorType.Icon
+  name: Icon
+  href: api/Material.Blazor.MBMenuAnchorType.html#Material_Blazor_MBMenuAnchorType_Icon
+  commentId: F:Material.Blazor.MBMenuAnchorType.Icon
+  fullName: Material.Blazor.MBMenuAnchorType.Icon
+  nameWithType: MBMenuAnchorType.Icon
 - uid: Material.Blazor.MBMenuItem
   name: MBMenuItem
   href: api/Material.Blazor.MBMenuItem.html
