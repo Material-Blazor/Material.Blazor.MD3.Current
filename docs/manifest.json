@@ -940,6 +940,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.EventHandlers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.EventHandlers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.HashCode.yml",
       "output": {
         ".html": {
@@ -1870,60 +1880,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MD2.MBDrawer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MD2.MBDrawer.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.MD2.MBIconBearingSelectElement-1.yml",
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MD2.MBIconBearingSelectElement-1.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MD2.MBListDivider.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MD2.MBListDivider.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MD2.MBListItem.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MD2.MBListItem.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MD2.MBMenu.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MD2.MBMenu.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MD2.MBTopAppBar.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MD2.MBTopAppBar.html"
         }
       },
       "version": ""
@@ -1980,30 +1940,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MenuClose.EventHandlers.yml",
+      "source_relative_path": "api/Material.Blazor.MenuSelectionReportEventArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Material.Blazor.MenuClose.EventHandlers.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MenuClose.MenuSelectionReportEventArgs.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MenuClose.MenuSelectionReportEventArgs.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MenuClose.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MenuClose.html"
+          "relative_path": "api/Material.Blazor.MenuSelectionReportEventArgs.html"
         }
       },
       "version": ""
