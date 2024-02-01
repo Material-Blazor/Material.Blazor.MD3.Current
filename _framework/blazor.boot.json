@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Material.Blazor.Website.WebAssembly.MD3",
   "resources": {
-    "hash": "sha256-aftpxLZBtimpRCF1SUkXS9o1csgTwLJe3k2HKX1TLpA=",
+    "hash": "sha256-ad+YRQNX1UkM9AePm7U2FK0G7zEFBlyVCWpaUHenFYQ=",
     "jsModuleNative": {
       "dotnet.native.8.0.1.zuyhfqselc.js": "sha256-ztJ0aqpAzcXsSW7gHNu1PztG9XZk/PJwcXXJhzo5Gaw="
     },
@@ -19,9 +19,9 @@
     "assembly": {
       "GoogleAnalytics.Blazor.wasm": "sha256-9maxHDA0ezDRT79XvPIZi411ySyG96k1lUuuu9NbGEE=",
       "Humanizer.wasm": "sha256-4NbSboZzzP9nikRtXapUZNzOyITt7ht9TNqCIQHr5OE=",
-      "Material.Blazor.MD3.wasm": "sha256-+p4rGdDT5I8pJsK7d3E518KDDn3U5tLBvSJf/S/yPZk=",
-      "Material.Blazor.Website.MD3.wasm": "sha256-Ws+rbzERrVOKKWA60GZw9ao8SRgearZUmmviyO7798w=",
-      "Material.Blazor.Website.WebAssembly.MD3.wasm": "sha256-C+vcCsQ81jBQpumilD6i/A5A3nACUHtG4SoVa4fq0w8=",
+      "Material.Blazor.MD3.wasm": "sha256-5oOx0GSRMTwB81rgk4yxahcEMemErY396WV/d6HIhYc=",
+      "Material.Blazor.Website.MD3.wasm": "sha256-4QptDQ6CR+xJq7iUF57kjkrwA7C1kPtbCUivlwmagA0=",
+      "Material.Blazor.Website.WebAssembly.MD3.wasm": "sha256-ef/5e8cPcJYY9aAnSmrfJGCO1sMchqRpFcL2HIgCi5k=",
       "Microsoft.AspNetCore.Components.Forms.wasm": "sha256-8H8TaGUPCKh+vbEJ3c7JuM4yG44TdUAmBD3FSYQyp2U=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-oTUFYAq6QUt6PVFuA2bbOA5vCS4Igs4ZNerzw6wqf3E=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-eFImG5uQhkUFsqgKuFCztROrFxztDO+VfWp9FPWCOi0=",
@@ -241,10 +241,10 @@
       }
     },
     "libraryInitializers": {
-      "_content/Material.Blazor.MD3/Material.Blazor.MD3.lib.module.js": "sha256-xQS18KnpFV2nAaIV1E5/nHIUaN05S1NwWggmpmCY+rs="
+      "_content/Material.Blazor.MD3/Material.Blazor.MD3.lib.module.js": "sha256-gLpddiMsXAfvxlMeJO05fLyihe28DbdDs2K4/SMl0hw="
     },
     "modulesAfterConfigLoaded": {
-      "../_content/Material.Blazor.MD3/Material.Blazor.MD3.lib.module.js": "sha256-xQS18KnpFV2nAaIV1E5/nHIUaN05S1NwWggmpmCY+rs="
+      "../_content/Material.Blazor.MD3/Material.Blazor.MD3.lib.module.js": "sha256-gLpddiMsXAfvxlMeJO05fLyihe28DbdDs2K4/SMl0hw="
     }
   },
   "cacheBootResources": true,
