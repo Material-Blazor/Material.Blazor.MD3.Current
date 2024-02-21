@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Material.Blazor.Website.WebAssembly.MD3",
   "resources": {
-    "hash": "sha256-ciujCoWhOF9S9bYNu2JVlGcs0sEkl1uYeBg8gJkZ4Ak=",
+    "hash": "sha256-7rra/Ry6uVX3QcdGSOB4PhNRAjIfsQu/12NmGNCoB8I=",
     "jsModuleNative": {
       "dotnet.native.8.0.2.deknxu92gu.js": "sha256-gPMK16QWoJSTxorlZJqcVtbBRTniIQWlLsJN2O4cJHg="
     },
@@ -20,9 +20,9 @@
       "GoogleAnalytics.Blazor.wasm": "sha256-9maxHDA0ezDRT79XvPIZi411ySyG96k1lUuuu9NbGEE=",
       "Humanizer.wasm": "sha256-4NbSboZzzP9nikRtXapUZNzOyITt7ht9TNqCIQHr5OE=",
       "Markdig.wasm": "sha256-cS8JmcPXlc2sz4IqP3OraPF6x1CsQzmTCxCGm4/pBa8=",
-      "Material.Blazor.MD3.wasm": "sha256-CYsgs207n3mQwii4LDmwY0xYvPqEEgkix1HOv7cdpDg=",
-      "Material.Blazor.Website.MD3.wasm": "sha256-jDrIO+5htZvsTjaYizxulSjwZTEU4X85VdcNOUEG1+M=",
-      "Material.Blazor.Website.WebAssembly.MD3.wasm": "sha256-IQywv8yJRzxDcUNskJ0XzKsAVzn2xqqiNWkK7DkDwQY=",
+      "Material.Blazor.MD3.wasm": "sha256-iGtlHwA5bPSw/vnSJ7+7QCN+f/XCD84aOga76Of1vsc=",
+      "Material.Blazor.Website.MD3.wasm": "sha256-gXDTC/Gjofuf611dY3L5w5hcfCfY4EV9xcr9dKQgkZc=",
+      "Material.Blazor.Website.WebAssembly.MD3.wasm": "sha256-sMSmHnJLL82ZyHbW9Tyb2DULTitswu/FTrJ02P4nil8=",
       "Microsoft.AspNetCore.Components.Forms.wasm": "sha256-eiLNsxViYeEoE/vveAMD7rBDRSgVBb2fBIzGUmFkDlg=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-y3MyOLjlSBIp2SPag16sT7fHhm0SP9weOXLsbr8KXzI=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-NcRny6L47d1iadToq9J46MIYlw6xAEcB+UFXyBF8Z0g=",
