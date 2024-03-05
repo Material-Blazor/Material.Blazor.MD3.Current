@@ -11036,7 +11036,6 @@ class Select extends selectBaseClass {
         };
     }
     renderField() {
-        // TODO(b/290078041): add aria-label/describedby
         return static_n `
       <${this.fieldTag}
           aria-haspopup="listbox"
